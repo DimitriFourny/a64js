@@ -23,6 +23,20 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
   const mnemonic =
     decoded.encoding && ["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(decoded.encoding.fileName)
       ? "fmov"
+      : decoded.encoding &&
+          [
+            "mov_mova_z_p_rza.xml",
+            "mov_mova_za_p_rz.xml",
+            "mov_mova_mz2_za.xml",
+            "mov_mova_za2_z.xml",
+            "mov_mova_za4_z.xml",
+            "mov_mova_mz4_za.xml",
+            "mov_mova_mz_za2.xml",
+            "mov_mova_mz_za4.xml",
+            "mov_mova_za_mz2.xml",
+            "mov_mova_za_mz4.xml",
+          ].includes(decoded.encoding.fileName)
+        ? "mov"
       : decoded.mnemonic.toLowerCase();
 
   const operandText = operands.map((operand, index) => {

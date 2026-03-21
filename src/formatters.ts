@@ -57,8 +57,8 @@ function vecReg(index: number, lane?: "b" | "h" | "s" | "d" | "q"): VectorRegist
   return { kind: "vec", index, lane };
 }
 
-function predReg(index: number, mode?: "m" | "z"): PredicateRegisterOperand {
-  return { kind: "pred", index, mode };
+function predReg(index: number, mode?: "m" | "z", lane?: "b" | "h" | "s" | "d"): PredicateRegisterOperand {
+  return { kind: "pred", index, mode, lane };
 }
 
 function labelFromOffset(offset: bigint): Operand {
@@ -209,6 +209,35 @@ function sveLaneFromSize(size: number | undefined): "h" | "s" | "d" {
   return (["h", "s", "d"] as const)[(size ?? 1) - 1] ?? "h";
 }
 
+function sveVectorLaneFromSize(size: number | undefined): "b" | "h" | "s" | "d" {
+  return (["b", "h", "s", "d"] as const)[size ?? 0] ?? "b";
+}
+
+function sveSignedImmediate(value: number, bits: number): bigint {
+  return signExtend(value, bits);
+}
+
+function svePatternName(pattern: number): string | undefined {
+  return (
+    [
+      "pow2",
+      "vl1",
+      "vl2",
+      "vl3",
+      "vl4",
+      "vl5",
+      "vl6",
+      "vl7",
+      "vl8",
+      "vl16",
+      "vl32",
+      "vl64",
+      "vl128",
+      "vl256",
+    ] as const
+  )[pattern];
+}
+
 function expandVfpImmediate(imm8: number, width: 16 | 32 | 64): number {
   const exponentBits = width === 16 ? 5 : width === 32 ? 8 : 11;
   const fractionBits = width - exponentBits - 1;
@@ -252,6 +281,12 @@ function sveMovprfxOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd), vecReg(fields.Zn)];
 }
 
+function svePredicatedMovprfxOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "z"), vecReg(fields.Zn, lane)];
+}
+
 function sveFcpyOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
@@ -262,6 +297,198 @@ function sveFdupOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
   return [vecReg(fields.Zd, lane), sveFloatingImmediate(fields.imm8, fields.size)];
+}
+
+function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const immField = fields.imm5 ?? fields.imm7 ?? 0;
+  const immBits = fields.imm5 !== undefined ? 5 : 7;
+  return [
+    predReg(fields.Pd, undefined, lane),
+    predReg(fields.Pg, "z"),
+    vecReg(fields.Zn, lane),
+    { kind: "imm", value: sveSignedImmediate(immField, immBits), signed: true },
+  ];
+}
+
+function sveIncDecScalarOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const pattern = fields.pattern ?? 0;
+  const multiplier = (fields.imm4 ?? 0) + 1;
+  const ops: Operand[] = [gpReg(64, fields.Rdn, "sp")];
+  const patternName = pattern === 31 ? "all" : svePatternName(pattern);
+
+  if (patternName) {
+    if (!(pattern === 31 && (fields.imm4 ?? 0) === 0)) {
+      ops.push({ kind: "text", text: patternName });
+    }
+  } else if (pattern !== 31) {
+    ops.push({ kind: "imm", value: BigInt(pattern), signed: true });
+  }
+
+  if ((fields.imm4 ?? 0) !== 0) {
+    ops.push({ kind: "text", text: `mul #${multiplier}` });
+  }
+
+  return ops;
+}
+
+function movaLaneFromClassName(className: string): "b" | "h" | "s" | "d" | "q" {
+  switch (className) {
+    case "16-bit":
+      return "h";
+    case "32-bit":
+      return "s";
+    case "64-bit":
+      return "d";
+    case "128-bit":
+      return "q";
+    default:
+      return "b";
+  }
+}
+
+function movaTileIndex(fields: Record<string, number>, fieldName: "ZAn" | "ZAd", className: string): number {
+  return className === "8-bit" ? 0 : (fields[fieldName] ?? 0);
+}
+
+function movaOrientation(fields: Record<string, number>): "h" | "v" {
+  return fields.V === 1 ? "v" : "h";
+}
+
+function movaSingleOffset(fields: Record<string, number>, className: string): number {
+  switch (className) {
+    case "16-bit":
+      return fields.off3 ?? 0;
+    case "32-bit":
+      return fields.off2 ?? 0;
+    case "64-bit":
+      return fields.o1 ?? 0;
+    case "128-bit":
+      return 0;
+    default:
+      return fields.off4 ?? 0;
+  }
+}
+
+function movaSliceRange(fields: Record<string, number>, className: string, count: 2 | 4): [number, number] {
+  if (count === 2) {
+    switch (className) {
+      case "16-bit": {
+        const base = (fields.off2 ?? 0) * 2;
+        return [base, base + 1];
+      }
+      case "32-bit": {
+        const base = (fields.o1 ?? 0) * 2;
+        return [base, base + 1];
+      }
+      case "64-bit":
+        return [0, 1];
+      default: {
+        const base = (fields.off3 ?? 0) * 2;
+        return [base, base + 1];
+      }
+    }
+  }
+
+  switch (className) {
+    case "16-bit": {
+      const base = (fields.o1 ?? 0) * 4;
+      return [base, base + 3];
+    }
+    case "32-bit":
+    case "64-bit":
+      return [0, 3];
+    default: {
+      const base = (fields.off2 ?? 0) * 4;
+      return [base, base + 3];
+    }
+  }
+}
+
+function movaVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" | "d"): string {
+  if (count === 2) {
+    return `{ z${start}.${lane}, z${start + 1}.${lane} }`;
+  }
+  return `{ z${start}.${lane} - z${start + 3}.${lane} }`;
+}
+
+function movaSingleZaText(
+  fields: Record<string, number>,
+  className: string,
+  fieldName: "ZAn" | "ZAd",
+): string {
+  const lane = movaLaneFromClassName(className);
+  const tile = movaTileIndex(fields, fieldName, className);
+  const selector = 12 + (fields.Rs ?? 0);
+  const offset = movaSingleOffset(fields, className);
+  return `za${tile}${movaOrientation(fields)}.${lane}[w${selector}, ${offset}]`;
+}
+
+function movaSliceZaText(
+  fields: Record<string, number>,
+  className: string,
+  fieldName: "ZAn" | "ZAd",
+  count: 2 | 4,
+): string {
+  const lane = movaLaneFromClassName(className);
+  const tile = movaTileIndex(fields, fieldName, className);
+  const selector = 12 + (fields.Rs ?? 0);
+  const [start, end] = movaSliceRange(fields, className, count);
+  return `za${tile}${movaOrientation(fields)}.${lane}[w${selector}, ${start}:${end}]`;
+}
+
+function movaArrayZaText(fields: Record<string, number>, count: 2 | 4): string {
+  return `za.d[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
+}
+
+function movaSingleToVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className;
+  const lane = movaLaneFromClassName(className);
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "text", text: movaSingleZaText(fields, className, "ZAn") }];
+}
+
+function movaVectorToSingleOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className;
+  const lane = movaLaneFromClassName(className);
+  return [{ kind: "text", text: movaSingleZaText(fields, className, "ZAd") }, predReg(fields.Pg, "m"), vecReg(fields.Zn, lane)];
+}
+
+function movaSliceToVectorsOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className;
+  const lane = movaLaneFromClassName(className) as "b" | "h" | "s" | "d";
+  const start = (fields.Zd ?? 0) * count;
+  return [ { kind: "text", text: movaVectorGroupText(start, count, lane) }, { kind: "text", text: movaSliceZaText(fields, className, "ZAn", count) } ];
+}
+
+function movaVectorsToSliceOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className;
+  const lane = movaLaneFromClassName(className) as "b" | "h" | "s" | "d";
+  const start = (fields.Zn ?? 0) * count;
+  return [{ kind: "text", text: movaSliceZaText(fields, className, "ZAd", count) }, { kind: "text", text: movaVectorGroupText(start, count, lane) }];
+}
+
+function movaArrayToVectorsOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
+  const fields = inst.fields!;
+  const start = (fields.Zd ?? 0) * count;
+  return [
+    { kind: "text", text: movaVectorGroupText(start, count, "d") },
+    { kind: "text", text: movaArrayZaText(fields, count) },
+  ];
+}
+
+function movaVectorsToArrayOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
+  const fields = inst.fields!;
+  const start = (fields.Zn ?? 0) * count;
+  return [
+    { kind: "text", text: movaArrayZaText(fields, count) },
+    { kind: "text", text: movaVectorGroupText(start, count, "d") },
+  ];
 }
 
 export function buildOperands(inst: DecodedInstruction): Operand[] {
@@ -279,10 +506,37 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return systemMoveOperands(inst, encoding.mnemonic);
     case "movprfx_z_z.xml":
       return sveMovprfxOperands(inst);
+    case "movprfx_z_p_z.xml":
+      return svePredicatedMovprfxOperands(inst);
     case "fcpy_z_p_i.xml":
       return sveFcpyOperands(inst);
     case "fdup_z_i.xml":
       return sveFdupOperands(inst);
+    case "mov_mova_z_p_rza.xml":
+      return movaSingleToVectorOperands(inst);
+    case "mov_mova_za_p_rz.xml":
+      return movaVectorToSingleOperands(inst);
+    case "mov_mova_mz2_za.xml":
+      return movaSliceToVectorsOperands(inst, 2);
+    case "mov_mova_za2_z.xml":
+      return movaVectorsToSliceOperands(inst, 2);
+    case "mov_mova_za4_z.xml":
+      return movaVectorsToSliceOperands(inst, 4);
+    case "mov_mova_mz4_za.xml":
+      return movaSliceToVectorsOperands(inst, 4);
+    case "mov_mova_mz_za2.xml":
+      return movaArrayToVectorsOperands(inst, 2);
+    case "mov_mova_mz_za4.xml":
+      return movaArrayToVectorsOperands(inst, 4);
+    case "mov_mova_za_mz2.xml":
+      return movaVectorsToArrayOperands(inst, 2);
+    case "mov_mova_za_mz4.xml":
+      return movaVectorsToArrayOperands(inst, 4);
+    case "cmpeq_p_p_zi.xml":
+      return sveCompareImmediateOperands(inst);
+    case "incb_r_rs.xml":
+    case "decb_r_rs.xml":
+      return sveIncDecScalarOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
     case "sub_addsub_imm.xml":
@@ -376,7 +630,8 @@ function formatVectorRegister(register: VectorRegisterOperand): string {
 }
 
 function formatPredicateRegister(register: PredicateRegisterOperand): string {
-  return register.mode ? `p${register.index}/${register.mode}` : `p${register.index}`;
+  const lane = register.lane ? `.${register.lane}` : "";
+  return register.mode ? `p${register.index}${lane}/${register.mode}` : `p${register.index}${lane}`;
 }
 
 function formatFloatingImmediate(value: number): string {
@@ -412,5 +667,7 @@ export function formatOperand(operand: Operand): string {
       return formatPredicateRegister(operand);
     case "fpimm":
       return formatFloatingImmediate(operand.value);
+    case "text":
+      return operand.text;
   }
 }

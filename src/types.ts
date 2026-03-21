@@ -84,12 +84,18 @@ export type VectorRegisterOperand = {
 export type PredicateRegisterOperand = {
   kind: "pred";
   index: number;
+  lane?: "b" | "h" | "s" | "d";
   mode?: "m" | "z";
 };
 
 export type FloatingImmediateOperand = {
   kind: "fpimm";
   value: number;
+};
+
+export type TextOperand = {
+  kind: "text";
+  text: string;
 };
 
 export type Operand =
@@ -100,7 +106,8 @@ export type Operand =
   | SystemRegisterOperand
   | VectorRegisterOperand
   | PredicateRegisterOperand
-  | FloatingImmediateOperand;
+  | FloatingImmediateOperand
+  | TextOperand;
 
 export type DecodeStatus = "ok" | "unknown" | "undefined";
 
