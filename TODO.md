@@ -2,12 +2,20 @@
 
 Current capstone coverage snapshot:
 
-- `224` supported capstone cases
-- `34397` unsupported capstone cases
-- `45` XML instruction files currently listed in `tools/supported-files.ts`
-- `1838` distinct unsupported XML instruction files
-- `1009` capstone source YAML files containing unsupported cases
-- `953` distinct unsupported mnemonics
+- `5829` supported capstone cases
+- `28792` unsupported capstone cases
+- `50` XML instruction files currently listed in `tools/supported-files.ts`
+- `1833` distinct unsupported XML instruction files
+- `980` capstone source YAML files containing unsupported cases
+- `950` distinct unsupported mnemonics
+
+Recently completed families:
+
+- `mrs.xml`: `1789` cases promoted to supported
+- `msr_reg.xml`: `1511`
+- `movprfx_z_z.xml`: `741`
+- `fcpy_z_p_i.xml`: `1040`
+- `fdup_z_i.xml`: `524`
 
 ## What "unsupported" means here
 
@@ -26,8 +34,9 @@ So this TODO is specifically about instructions that already map cleanly to XML 
 Use this after implementing more instruction support:
 
 ```sh
+node tools/generate.ts
 node tools/generate-capstone-tests.ts
-node --test test/capstone.test.ts
+node --test test/*.test.ts
 ```
 
 When an instruction family is actually supported end-to-end, add its XML file to `tools/supported-files.ts`.
@@ -36,45 +45,30 @@ When an instruction family is actually supported end-to-end, add its XML file to
 
 These are the biggest buckets in the current unsupported set and should be the first place to spend time.
 
-### 1. System register instructions
+### 1. Remaining SVE / SME move-copy families
 
-- `mrs.xml`: `1789`
-- `msr_reg.xml`: `1511`
-- Top source files:
-  - `basic-a64-instructions.s.yaml`: `1806`
-  - `armv8.9a-debug-pmu.s.yaml`: `1105`
-  - `trace-regs.s.yaml`: `382`
-  - `armv8r-sysreg.s.yaml`: `285`
-
-Likely outcome: implementing `MRS` and `MSR` support removes a large amount of unsupported baseline A64 coverage quickly.
-
-### 2. SVE / SME move-copy-prefix families
-
-- `fcpy_z_p_i.xml`: `1040`
-- `movprfx_z_z.xml`: `741`
-- `fdup_z_i.xml`: `524`
 - `movprfx_z_p_z.xml`: `331`
 - `mov_mova_z_p_rza.xml`: `240`
 - `mov_mova_za_p_rz.xml`: `240`
 - `mov_mova_mz2_za.xml`: `192`
 - `mov_mova_za2_z.xml`: `192`
 - `mov_mova_za4_z.xml`: `192`
-- Top mnemonics:
-  - `MOVA`: `1380`
-  - `MOVPRFX`: `1072`
-  - `FCPY`: `1040`
-  - `FDUP`: `524`
+- `mov_mova_mz4_za.xml`: `180`
+
+Top mnemonics:
+
+- `MOVA`: `1380`
+- `MOVPRFX`: `331`
 
 Top source files:
 
 - `SME2/mova.s.yaml`: `900`
-- `SVE/fmov.s.yaml`: `538`
-- `SVE/fcpy.s.yaml`: `524`
-- `SVE/fdup.s.yaml`: `516`
 - `SME/mova.s.yaml`: `480`
-- `SVE/mov.s.yaml`: `258`
+- `SVE/mov.s.yaml`: `252`
 
-### 3. SME2 arithmetic / dot-product families
+Likely outcome: implementing the remaining `MOVPRFX` and `MOVA` variants clears the last large move/copy bucket after the recent `MRS`/`MSR` and `FCPY`/`FDUP` work.
+
+### 2. SME2 arithmetic / dot-product families
 
 Top mnemonics:
 
@@ -89,6 +83,14 @@ Top mnemonics:
 - `UMLALL`: `336`
 - `UMLSLL`: `336`
 
+Representative XML files:
+
+- `fadd_za_zw.xml`: `144`
+- `fmla_za_zzv.xml`: `144`
+- `fmla_za_zzi.xml`: `144`
+- `fmla_za_zzw.xml`: `144`
+- `fmls_za_zzv.xml`: `144`
+
 Top source files:
 
 - `SME2/udot.s.yaml`: `433`
@@ -102,46 +104,51 @@ Top source files:
 - `SME2/fmls.s.yaml`: `288`
 - `SME2/sub.s.yaml`: `288`
 
-### 4. Remaining AdvSIMD / FP / misc A64 families
+### 3. Remaining scalar / AdvSIMD cleanup
+
+Notable XML files:
+
+- `incb_r_rs.xml`: `186`
+- `cmpeq_p_p_zi.xml`: `160`
+- `decb_r_rs.xml`: `160`
 
 Notable source files:
 
+- `basic-a64-instructions.s.yaml`: `1180`
 - `neon-simd-misc.s.yaml`: `260`
-- `neon-simd-ldst-multi-elem.s.yaml`: `196`
-- `armv8.2a-dotprod.s.yaml`: `180`
-- `neon-compare-instructions.s.yaml`: `180`
-- `armv8.6a-amvs.s.yaml`: `328`
 
-There is also a sizeable base bucket with no explicit feature gating in the generated feature list: `4235` cases.
+Likely outcome: this bucket is smaller than it looked in the previous snapshot because `MRS`/`MSR` removed a large chunk of baseline A64 fallout.
 
 ## Feature buckets worth prioritizing
 
 Largest unsupported feature sets:
 
-- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `9369`
+- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `7064`
 - `FEAT_SME2`: `5493`
-- no feature gate recorded: `4235`
 - `FEAT_AdvSIMD`: `2058`
 - `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `2030`
 - `FEAT_SME2, FEAT_SME_I16I64`: `1848`
 - `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `1329`
 - `FEAT_SME`: `1258`
+- no feature gate recorded: `935`
 
-Implication: most missing coverage is not classic scalar A64. It is concentrated in SVE, SME, SME2, and related vector/matrix extensions.
+Implication: the remaining work is now even more concentrated in SVE, SME, and SME2 than before.
 
 ## Practical implementation order
 
-Suggested order for a follow-up agent:
+Suggested order for the next follow-up pass:
 
-1. Implement `MRS` / `MSR` support first.
-2. Implement SVE `MOVPRFX`, `FCPY`, and `FDUP`.
-3. Implement SME / SME2 `MOVA` variants.
-4. Implement SME2 `UDOT`, `SDOT`, `ADD`, `SUB`, `FMLA`, and `FMLS`.
-5. Sweep remaining high-count AdvSIMD and miscellaneous A64 families.
-6. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
+1. Implement predicated `MOVPRFX` via `movprfx_z_p_z.xml`.
+2. Implement SME / SME2 `MOVA` variants.
+3. Implement SME2 `UDOT` and `SDOT`.
+4. Implement SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
+5. Sweep the remaining `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families.
+6. Sweep smaller scalar and AdvSIMD leftovers such as `incb_r_rs.xml`, `decb_r_rs.xml`, and compare/misc families.
+7. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
 ## Notes for whoever picks this up
 
 - Do not add XML files to `tools/supported-files.ts` until both `decode()` and `disasm()` behave correctly for that family.
 - The generated capstone file is a useful progress metric, but it is not the full instruction universe. It only covers capstone cases that match Arm XML encodings and currently fall back to `.inst`.
-- The highest-impact work is likely family-by-family support, not one-off instruction fixes.
+- The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
+- The highest-impact work is still family-by-family support, not one-off instruction fixes.
