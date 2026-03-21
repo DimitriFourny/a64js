@@ -1,0 +1,13 @@
+{
+  "name": "a64js",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "a64js": "./src/cli.ts"
+  },
+  "scripts": {
+    "generate": "node tools/generate.ts",
+    "test": "node tools/generate.ts && node --test test/*.test.ts"
+  }
+}
