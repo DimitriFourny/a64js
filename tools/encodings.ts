@@ -123,12 +123,18 @@ function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {
   let match: RegExpExecArray | null;
   while ((match = regex.exec(source)) !== null) {
     const condition = match[1].trim();
-    if (condition.startsWith("!IsFeatureImplemented(")) {
+    if (condition.includes("IsFeatureImplemented(")) {
       continue;
     }
-    const terms = condition.split(/\s*&amp;&amp;\s*|\s*&&\s*/);
+    const terms = condition
+      .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
+      .map((term) => term.trim())
+      .filter((term) => term.length > 0 && !term.includes("IsFeatureImplemented(") && term !== "(" && term !== ")");
+    if (terms.length === 0) {
+      continue;
+    }
     try {
-      guards.push({ all: terms.map((term) => parseGuardTerm(term.trim())) });
+      guards.push({ all: terms.map((term) => parseGuardTerm(term)) });
     } catch (error) {
       if (!options.ignoreUnsupportedGuards) {
         throw error;

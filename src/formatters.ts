@@ -299,6 +299,23 @@ function sveFdupOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd, lane), sveFloatingImmediate(fields.imm8, fields.size)];
 }
 
+function sveDupImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  let imm = Number(signExtend(fields.imm8, 8));
+  if ((fields.sh ?? 0) === 1) {
+    imm <<= 8;
+  }
+  return [vecReg(fields.Zd, lane), { kind: "imm", value: BigInt(imm), signed: true }];
+}
+
+function sveCopyScalarOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const width = fields.size === 3 ? 64 : 32;
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), gpReg(width, fields.Rn, "sp")];
+}
+
 function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
@@ -450,6 +467,13 @@ function movaSingleToVectorOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "text", text: movaSingleZaText(fields, className, "ZAn") }];
 }
 
+function movazSingleToVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className;
+  const lane = movaLaneFromClassName(className);
+  return [vecReg(fields.Zd, lane), { kind: "text", text: movaSingleZaText(fields, className, "ZAn") }];
+}
+
 function movaVectorToSingleOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const className = inst.encoding!.className;
@@ -491,6 +515,126 @@ function movaVectorsToArrayOperands(inst: DecodedInstruction, count: 2 | 4): Ope
   ];
 }
 
+function smeDotGroupCount(className: string): 2 | 4 {
+  return className.includes("Four") ? 4 : 2;
+}
+
+function smeDotAccumulatorLane(inst: DecodedInstruction): "s" | "d" {
+  if (inst.encoding!.fileName.includes("za32")) {
+    return "s";
+  }
+  if (inst.fields?.sz !== undefined) {
+    return inst.fields.sz === 1 ? "d" : "s";
+  }
+  return inst.encoding!.className.includes("64-bit") ? "d" : "s";
+}
+
+function smeDotSourceLane(inst: DecodedInstruction, accLane: "s" | "d"): "b" | "h" {
+  return accLane === "d" || inst.encoding!.fileName.includes("za32") ? "h" : "b";
+}
+
+function smeDotZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "d"): string {
+  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
+}
+
+function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h"): string {
+  const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
+  if (count === 4 && start <= 28) {
+    return `{ ${regs[0]} - ${regs[3]} }`;
+  }
+  return `{ ${regs.join(", ")} }`;
+}
+
+function smeDotIndexedSourceText(fields: Record<string, number>, lane: "b" | "h"): string {
+  const index = fields.i2 ?? fields.i1 ?? 0;
+  return `z${fields.Zm ?? 0}.${lane}[${index}]`;
+}
+
+function smeDotSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
+  const fields = inst.fields!;
+  const count = smeDotGroupCount(inst.encoding!.className);
+  switch (inst.encoding!.fileName) {
+    case "sdot_za32_zzv.xml":
+    case "udot_za32_zzv.xml":
+    case "sdot_za_zzv.xml":
+    case "udot_za_zzv.xml":
+      return fields[fieldName] ?? 0;
+    case "sdot_za32_zzi.xml":
+    case "udot_za32_zzi.xml":
+    case "sdot_za_zzi.xml":
+    case "udot_za_zzi.xml":
+      return fieldName === "Zn" ? (fields.Zn ?? 0) * count : (fields.Zm ?? 0);
+    case "sdot_za32_zzw.xml":
+    case "udot_za32_zzw.xml":
+    case "sdot_za_zzw.xml":
+    case "udot_za_zzw.xml":
+      return (fields[fieldName] ?? 0) * count;
+    default:
+      return fields[fieldName] ?? 0;
+  }
+}
+
+function smeDotOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const count = smeDotGroupCount(inst.encoding!.className);
+  const accLane = smeDotAccumulatorLane(inst);
+  const srcLane = smeDotSourceLane(inst, accLane);
+  const za = { kind: "text", text: smeDotZaText(fields, count, accLane) } satisfies Operand;
+  const first = {
+    kind: "text",
+    text: smeDotVectorGroupText(smeDotSourceStart(inst, "Zn"), count, srcLane),
+  } satisfies Operand;
+
+  switch (inst.encoding!.fileName) {
+    case "sdot_za32_zzv.xml":
+    case "udot_za32_zzv.xml":
+    case "sdot_za_zzv.xml":
+    case "udot_za_zzv.xml":
+      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${srcLane}` }];
+    case "sdot_za32_zzi.xml":
+    case "udot_za32_zzi.xml":
+    case "sdot_za_zzi.xml":
+    case "udot_za_zzi.xml":
+      return [za, first, { kind: "text", text: smeDotIndexedSourceText(fields, srcLane) }];
+    case "sdot_za32_zzw.xml":
+    case "udot_za32_zzw.xml":
+    case "sdot_za_zzw.xml":
+    case "udot_za_zzw.xml":
+      return [
+        za,
+        first,
+        { kind: "text", text: smeDotVectorGroupText(smeDotSourceStart(inst, "Zm"), count, srcLane) },
+      ];
+    default:
+      return [];
+  }
+}
+
+function rprfmOpText(fields: Record<string, number>): string {
+  const operation = (((fields.option ?? 0) >> 2) << 5) | (((fields.option ?? 0) & 1) << 4) | ((fields.S ?? 0) << 3) | ((fields.Rt ?? 0) & 0x7);
+  switch (operation) {
+    case 0:
+      return "pldkeep";
+    case 1:
+      return "pstkeep";
+    case 4:
+      return "pldstrm";
+    case 5:
+      return "pststrm";
+    default:
+      return `#${operation}`;
+  }
+}
+
+function rprfmOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: rprfmOpText(fields) },
+    gpReg(64, fields.Rm, "zr"),
+    { kind: "text", text: `[${formatRegister(gpReg(64, fields.Rn, "sp"))}]` },
+  ];
+}
+
 export function buildOperands(inst: DecodedInstruction): Operand[] {
   const encoding = inst.encoding;
   if (!encoding || !inst.fields) {
@@ -512,8 +656,14 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveFcpyOperands(inst);
     case "fdup_z_i.xml":
       return sveFdupOperands(inst);
+    case "dup_z_i.xml":
+      return sveDupImmediateOperands(inst);
+    case "cpy_z_p_r.xml":
+      return sveCopyScalarOperands(inst);
     case "mov_mova_z_p_rza.xml":
       return movaSingleToVectorOperands(inst);
+    case "movaz_z_rza.xml":
+      return movazSingleToVectorOperands(inst);
     case "mov_mova_za_p_rz.xml":
       return movaVectorToSingleOperands(inst);
     case "mov_mova_mz2_za.xml":
@@ -526,12 +676,29 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return movaSliceToVectorsOperands(inst, 4);
     case "mov_mova_mz_za2.xml":
       return movaArrayToVectorsOperands(inst, 2);
+    case "movaz_mz_za2.xml":
+      return movaArrayToVectorsOperands(inst, 2);
     case "mov_mova_mz_za4.xml":
+      return movaArrayToVectorsOperands(inst, 4);
+    case "movaz_mz_za4.xml":
       return movaArrayToVectorsOperands(inst, 4);
     case "mov_mova_za_mz2.xml":
       return movaVectorsToArrayOperands(inst, 2);
     case "mov_mova_za_mz4.xml":
       return movaVectorsToArrayOperands(inst, 4);
+    case "sdot_za32_zzv.xml":
+    case "sdot_za32_zzi.xml":
+    case "sdot_za32_zzw.xml":
+    case "sdot_za_zzv.xml":
+    case "sdot_za_zzi.xml":
+    case "sdot_za_zzw.xml":
+    case "udot_za32_zzv.xml":
+    case "udot_za32_zzi.xml":
+    case "udot_za32_zzw.xml":
+    case "udot_za_zzv.xml":
+    case "udot_za_zzi.xml":
+    case "udot_za_zzw.xml":
+      return smeDotOperands(inst);
     case "cmpeq_p_p_zi.xml":
       return sveCompareImmediateOperands(inst);
     case "incb_r_rs.xml":
@@ -599,6 +766,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
         return [];
       }
       return [gpReg(64, inst.fields.Rd, "zr")];
+    case "rprfm_reg.xml":
+      return rprfmOperands(inst);
     default:
       return [];
   }

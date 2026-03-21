@@ -28393,6 +28393,1414 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "features": []
   },
   {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 0,
+    "word": 4171253784,
+    "asmText": "rprfm pldkeep, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 1,
+    "word": 4171253785,
+    "asmText": "rprfm pstkeep, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 2,
+    "word": 4171253786,
+    "asmText": "rprfm #2, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 3,
+    "word": 4171253787,
+    "asmText": "rprfm #3, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 4,
+    "word": 4171253788,
+    "asmText": "rprfm pldstrm, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 5,
+    "word": 4171253789,
+    "asmText": "rprfm pststrm, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 6,
+    "word": 4171253790,
+    "asmText": "rprfm #6, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 7,
+    "word": 4171253791,
+    "asmText": "rprfm #7, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 8,
+    "word": 4171257880,
+    "asmText": "rprfm #8, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 9,
+    "word": 4171257881,
+    "asmText": "rprfm #9, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 10,
+    "word": 4171257882,
+    "asmText": "rprfm #10, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 11,
+    "word": 4171257883,
+    "asmText": "rprfm #11, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 12,
+    "word": 4171257884,
+    "asmText": "rprfm #12, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 13,
+    "word": 4171257885,
+    "asmText": "rprfm #13, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 14,
+    "word": 4171257886,
+    "asmText": "rprfm #14, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 15,
+    "word": 4171257887,
+    "asmText": "rprfm #15, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 16,
+    "word": 4171261976,
+    "asmText": "rprfm #16, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 17,
+    "word": 4171261977,
+    "asmText": "rprfm #17, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 18,
+    "word": 4171261978,
+    "asmText": "rprfm #18, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 19,
+    "word": 4171261979,
+    "asmText": "rprfm #19, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 20,
+    "word": 4171261980,
+    "asmText": "rprfm #20, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 21,
+    "word": 4171261981,
+    "asmText": "rprfm #21, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 22,
+    "word": 4171261982,
+    "asmText": "rprfm #22, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 23,
+    "word": 4171261983,
+    "asmText": "rprfm #23, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 24,
+    "word": 4171266072,
+    "asmText": "rprfm #24, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 25,
+    "word": 4171266073,
+    "asmText": "rprfm #25, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 26,
+    "word": 4171266074,
+    "asmText": "rprfm #26, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 27,
+    "word": 4171266075,
+    "asmText": "rprfm #27, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 28,
+    "word": 4171266076,
+    "asmText": "rprfm #28, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 29,
+    "word": 4171266077,
+    "asmText": "rprfm #29, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 30,
+    "word": 4171266078,
+    "asmText": "rprfm #30, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 31,
+    "word": 4171266079,
+    "asmText": "rprfm #31, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 32,
+    "word": 4171286552,
+    "asmText": "rprfm #32, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 33,
+    "word": 4171286553,
+    "asmText": "rprfm #33, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 34,
+    "word": 4171286554,
+    "asmText": "rprfm #34, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 35,
+    "word": 4171286555,
+    "asmText": "rprfm #35, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 36,
+    "word": 4171286556,
+    "asmText": "rprfm #36, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 37,
+    "word": 4171286557,
+    "asmText": "rprfm #37, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 38,
+    "word": 4171286558,
+    "asmText": "rprfm #38, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 39,
+    "word": 4171286559,
+    "asmText": "rprfm #39, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 40,
+    "word": 4171290648,
+    "asmText": "rprfm #40, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 41,
+    "word": 4171290649,
+    "asmText": "rprfm #41, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 42,
+    "word": 4171290650,
+    "asmText": "rprfm #42, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 43,
+    "word": 4171290651,
+    "asmText": "rprfm #43, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 44,
+    "word": 4171290652,
+    "asmText": "rprfm #44, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 45,
+    "word": 4171290653,
+    "asmText": "rprfm #45, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 46,
+    "word": 4171290654,
+    "asmText": "rprfm #46, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 47,
+    "word": 4171290655,
+    "asmText": "rprfm #47, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 48,
+    "word": 4171294744,
+    "asmText": "rprfm #48, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 49,
+    "word": 4171294745,
+    "asmText": "rprfm #49, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 50,
+    "word": 4171294746,
+    "asmText": "rprfm #50, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 51,
+    "word": 4171294747,
+    "asmText": "rprfm #51, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 52,
+    "word": 4171294748,
+    "asmText": "rprfm #52, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 53,
+    "word": 4171294749,
+    "asmText": "rprfm #53, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 54,
+    "word": 4171294750,
+    "asmText": "rprfm #54, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 55,
+    "word": 4171294751,
+    "asmText": "rprfm #55, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 56,
+    "word": 4171298840,
+    "asmText": "rprfm #56, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 57,
+    "word": 4171298841,
+    "asmText": "rprfm #57, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 58,
+    "word": 4171298842,
+    "asmText": "rprfm #58, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 59,
+    "word": 4171298843,
+    "asmText": "rprfm #59, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 60,
+    "word": 4171298844,
+    "asmText": "rprfm #60, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 61,
+    "word": 4171298845,
+    "asmText": "rprfm #61, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 62,
+    "word": 4171298846,
+    "asmText": "rprfm #62, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 63,
+    "word": 4171298847,
+    "asmText": "rprfm #63, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 64,
+    "word": 4171253784,
+    "asmText": "rprfm pldkeep, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 65,
+    "word": 4171253785,
+    "asmText": "rprfm pstkeep, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 66,
+    "word": 4171253786,
+    "asmText": "rprfm #2, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 67,
+    "word": 4171253787,
+    "asmText": "rprfm #3, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 68,
+    "word": 4171253788,
+    "asmText": "rprfm pldstrm, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 69,
+    "word": 4171253789,
+    "asmText": "rprfm pststrm, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 70,
+    "word": 4171253790,
+    "asmText": "rprfm #6, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 71,
+    "word": 4171253791,
+    "asmText": "rprfm #7, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 72,
+    "word": 4171257880,
+    "asmText": "rprfm #8, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 73,
+    "word": 4171257881,
+    "asmText": "rprfm #9, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 74,
+    "word": 4171257882,
+    "asmText": "rprfm #10, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 75,
+    "word": 4171257883,
+    "asmText": "rprfm #11, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 76,
+    "word": 4171257884,
+    "asmText": "rprfm #12, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 77,
+    "word": 4171257885,
+    "asmText": "rprfm #13, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 78,
+    "word": 4171257886,
+    "asmText": "rprfm #14, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 79,
+    "word": 4171257887,
+    "asmText": "rprfm #15, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 80,
+    "word": 4171261976,
+    "asmText": "rprfm #16, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 81,
+    "word": 4171261977,
+    "asmText": "rprfm #17, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 82,
+    "word": 4171261978,
+    "asmText": "rprfm #18, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 83,
+    "word": 4171261979,
+    "asmText": "rprfm #19, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 84,
+    "word": 4171261980,
+    "asmText": "rprfm #20, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 85,
+    "word": 4171261981,
+    "asmText": "rprfm #21, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 86,
+    "word": 4171261982,
+    "asmText": "rprfm #22, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 87,
+    "word": 4171261983,
+    "asmText": "rprfm #23, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 88,
+    "word": 4171266072,
+    "asmText": "rprfm #24, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 89,
+    "word": 4171266073,
+    "asmText": "rprfm #25, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 90,
+    "word": 4171266074,
+    "asmText": "rprfm #26, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 91,
+    "word": 4171266075,
+    "asmText": "rprfm #27, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 92,
+    "word": 4171266076,
+    "asmText": "rprfm #28, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 93,
+    "word": 4171266077,
+    "asmText": "rprfm #29, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 94,
+    "word": 4171266078,
+    "asmText": "rprfm #30, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 95,
+    "word": 4171266079,
+    "asmText": "rprfm #31, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 96,
+    "word": 4171286552,
+    "asmText": "rprfm #32, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 97,
+    "word": 4171286553,
+    "asmText": "rprfm #33, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 98,
+    "word": 4171286554,
+    "asmText": "rprfm #34, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 99,
+    "word": 4171286555,
+    "asmText": "rprfm #35, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 100,
+    "word": 4171286556,
+    "asmText": "rprfm #36, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 101,
+    "word": 4171286557,
+    "asmText": "rprfm #37, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 102,
+    "word": 4171286558,
+    "asmText": "rprfm #38, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 103,
+    "word": 4171286559,
+    "asmText": "rprfm #39, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 104,
+    "word": 4171290648,
+    "asmText": "rprfm #40, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 105,
+    "word": 4171290649,
+    "asmText": "rprfm #41, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 106,
+    "word": 4171290650,
+    "asmText": "rprfm #42, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 107,
+    "word": 4171290651,
+    "asmText": "rprfm #43, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 108,
+    "word": 4171290652,
+    "asmText": "rprfm #44, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 109,
+    "word": 4171290653,
+    "asmText": "rprfm #45, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 110,
+    "word": 4171290654,
+    "asmText": "rprfm #46, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 111,
+    "word": 4171290655,
+    "asmText": "rprfm #47, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 112,
+    "word": 4171294744,
+    "asmText": "rprfm #48, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 113,
+    "word": 4171294745,
+    "asmText": "rprfm #49, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 114,
+    "word": 4171294746,
+    "asmText": "rprfm #50, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 115,
+    "word": 4171294747,
+    "asmText": "rprfm #51, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 116,
+    "word": 4171294748,
+    "asmText": "rprfm #52, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 117,
+    "word": 4171294749,
+    "asmText": "rprfm #53, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 118,
+    "word": 4171294750,
+    "asmText": "rprfm #54, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 119,
+    "word": 4171294751,
+    "asmText": "rprfm #55, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 120,
+    "word": 4171298840,
+    "asmText": "rprfm #56, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 121,
+    "word": 4171298841,
+    "asmText": "rprfm #57, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 122,
+    "word": 4171298842,
+    "asmText": "rprfm #58, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 123,
+    "word": 4171298843,
+    "asmText": "rprfm #59, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 124,
+    "word": 4171298844,
+    "asmText": "rprfm #60, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 125,
+    "word": 4171298845,
+    "asmText": "rprfm #61, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 126,
+    "word": 4171298846,
+    "asmText": "rprfm #62, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
+    "sourceFile": "rprfm.s.yaml",
+    "caseIndex": 127,
+    "word": 4171298847,
+    "asmText": "rprfm #63, x0, [x0]",
+    "encodingFile": "rprfm_reg.xml",
+    "mnemonic": "RPRFM",
+    "features": [
+      "FEAT_RPRFM"
+    ]
+  },
+  {
     "sourceFile": "SME/mova.s.yaml",
     "caseIndex": 0,
     "word": 3221356544,
@@ -43870,6 +45278,11946 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 0,
+    "word": 3244299272,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 1,
+    "word": 3244299272,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 2,
+    "word": 3244643661,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 3,
+    "word": 3244643661,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 4,
+    "word": 3244848559,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 5,
+    "word": 3244848559,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 6,
+    "word": 3245307887,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 7,
+    "word": 3245307887,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 8,
+    "word": 3244299821,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 9,
+    "word": 3244299821,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 10,
+    "word": 3245216809,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 11,
+    "word": 3245216809,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 12,
+    "word": 3244578408,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 13,
+    "word": 3244578408,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 14,
+    "word": 3244430728,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 15,
+    "word": 3244430728,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 16,
+    "word": 3244971049,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 17,
+    "word": 3244971049,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 18,
+    "word": 3245217485,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 19,
+    "word": 3245217485,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 20,
+    "word": 3244389674,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 21,
+    "word": 3244389674,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 22,
+    "word": 3245028751,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 23,
+    "word": 3245028751,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 24,
+    "word": 3243249664,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 25,
+    "word": 3243249664,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 26,
+    "word": 3243595077,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 27,
+    "word": 3243595077,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 28,
+    "word": 3243801991,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 29,
+    "word": 3243801991,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 30,
+    "word": 3244261319,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 31,
+    "word": 3244261319,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 32,
+    "word": 3243253253,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 33,
+    "word": 3243253253,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 34,
+    "word": 3244168193,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 35,
+    "word": 3244168193,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 36,
+    "word": 3243529792,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 37,
+    "word": 3243529792,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 38,
+    "word": 3243383168,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 39,
+    "word": 3243383168,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 40,
+    "word": 3243923457,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 41,
+    "word": 3243923457,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 42,
+    "word": 3244169925,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 43,
+    "word": 3244169925,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 44,
+    "word": 3243341058,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 45,
+    "word": 3243341058,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 46,
+    "word": 3243981191,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 47,
+    "word": 3243981191,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 48,
+    "word": 3252687880,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 49,
+    "word": 3252687880,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 50,
+    "word": 3254015309,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 51,
+    "word": 3254015309,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 52,
+    "word": 3253237135,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 53,
+    "word": 3253237135,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 54,
+    "word": 3254679503,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 55,
+    "word": 3254679503,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 56,
+    "word": 3253736973,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 57,
+    "word": 3253736973,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 58,
+    "word": 3254653961,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 59,
+    "word": 3254653961,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 60,
+    "word": 3254015560,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 61,
+    "word": 3254015560,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 62,
+    "word": 3252819336,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 63,
+    "word": 3252819336,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 64,
+    "word": 3254408201,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 65,
+    "word": 3254408201,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 66,
+    "word": 3254654669,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 67,
+    "word": 3254654669,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 68,
+    "word": 3252712714,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 69,
+    "word": 3252712714,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 70,
+    "word": 3253351823,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 71,
+    "word": 3253351823,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 72,
+    "word": 3240104960,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 73,
+    "word": 3240104960,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 74,
+    "word": 3240449349,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 75,
+    "word": 3240449349,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 76,
+    "word": 3240654247,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 77,
+    "word": 3240654247,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 78,
+    "word": 3241113575,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 79,
+    "word": 3241113575,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 80,
+    "word": 3240105509,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 81,
+    "word": 3240105509,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 82,
+    "word": 3241022497,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 83,
+    "word": 3241022497,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 84,
+    "word": 3240384096,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 85,
+    "word": 3240384096,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 86,
+    "word": 3240236416,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 87,
+    "word": 3240236416,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 88,
+    "word": 3240776737,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 89,
+    "word": 3240776737,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 90,
+    "word": 3241023173,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 91,
+    "word": 3241023173,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 92,
+    "word": 3240195362,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 93,
+    "word": 3240195362,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 94,
+    "word": 3240834439,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 95,
+    "word": 3240834439,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 96,
+    "word": 3243249696,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 97,
+    "word": 3243249696,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 98,
+    "word": 3243595109,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 99,
+    "word": 3243595109,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 100,
+    "word": 3243802023,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 101,
+    "word": 3243802023,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 102,
+    "word": 3244261351,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 103,
+    "word": 3244261351,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 104,
+    "word": 3243253285,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 105,
+    "word": 3243253285,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 106,
+    "word": 3244168225,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 107,
+    "word": 3244168225,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 108,
+    "word": 3243529824,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 109,
+    "word": 3243529824,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 110,
+    "word": 3243383200,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 111,
+    "word": 3243383200,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 112,
+    "word": 3243923489,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 113,
+    "word": 3243923489,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 114,
+    "word": 3244169957,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 115,
+    "word": 3244169957,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 116,
+    "word": 3243341090,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 117,
+    "word": 3243341090,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 118,
+    "word": 3243981223,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 119,
+    "word": 3243981223,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 120,
+    "word": 3248493568,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 121,
+    "word": 3248493568,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 122,
+    "word": 3249820997,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 123,
+    "word": 3249820997,
+    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 124,
+    "word": 3249042823,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 125,
+    "word": 3249042823,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 126,
+    "word": 3250485191,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 127,
+    "word": 3250485191,
+    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 128,
+    "word": 3249542661,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 129,
+    "word": 3249542661,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 130,
+    "word": 3250459649,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 131,
+    "word": 3250459649,
+    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 132,
+    "word": 3249821248,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 133,
+    "word": 3249821248,
+    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 134,
+    "word": 3248625024,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 135,
+    "word": 3248625024,
+    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 136,
+    "word": 3250213889,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 137,
+    "word": 3250213889,
+    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 138,
+    "word": 3250460357,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 139,
+    "word": 3250460357,
+    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 140,
+    "word": 3248518402,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 141,
+    "word": 3248518402,
+    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 142,
+    "word": 3249157511,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 143,
+    "word": 3249157511,
+    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 144,
+    "word": 3244299264,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 145,
+    "word": 3244299264,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 146,
+    "word": 3244643653,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 147,
+    "word": 3244643653,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 148,
+    "word": 3244848551,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 149,
+    "word": 3244848551,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 150,
+    "word": 3245307879,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 151,
+    "word": 3245307879,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 152,
+    "word": 3244299813,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 153,
+    "word": 3244299813,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 154,
+    "word": 3245216801,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 155,
+    "word": 3245216801,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 156,
+    "word": 3244578400,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 157,
+    "word": 3244578400,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 158,
+    "word": 3244430720,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 159,
+    "word": 3244430720,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 160,
+    "word": 3244971041,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 161,
+    "word": 3244971041,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 162,
+    "word": 3245217477,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 163,
+    "word": 3245217477,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 164,
+    "word": 3244389666,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 165,
+    "word": 3244389666,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 166,
+    "word": 3245028743,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 167,
+    "word": 3245028743,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 168,
+    "word": 3251634184,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 169,
+    "word": 3251634184,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 170,
+    "word": 3251979597,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 171,
+    "word": 3251979597,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 172,
+    "word": 3252184463,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 173,
+    "word": 3252184463,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 174,
+    "word": 3252643791,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 175,
+    "word": 3252643791,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 176,
+    "word": 3251635725,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 177,
+    "word": 3251635725,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 178,
+    "word": 3252552713,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 179,
+    "word": 3252552713,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 180,
+    "word": 3251914312,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 181,
+    "word": 3251914312,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 182,
+    "word": 3251765640,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 183,
+    "word": 3251765640,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 184,
+    "word": 3252305929,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 185,
+    "word": 3252305929,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 186,
+    "word": 3252552397,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 187,
+    "word": 3252552397,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 188,
+    "word": 3251725578,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 189,
+    "word": 3251725578,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 190,
+    "word": 3252363663,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 191,
+    "word": 3252363663,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 192,
+    "word": 3252687872,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 193,
+    "word": 3252687872,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 194,
+    "word": 3254015301,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 195,
+    "word": 3254015301,
+    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 196,
+    "word": 3253237127,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 197,
+    "word": 3253237127,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 198,
+    "word": 3254679495,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 199,
+    "word": 3254679495,
+    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 200,
+    "word": 3253736965,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 201,
+    "word": 3253736965,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 202,
+    "word": 3254653953,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 203,
+    "word": 3254653953,
+    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 204,
+    "word": 3254015552,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 205,
+    "word": 3254015552,
+    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 206,
+    "word": 3252819328,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 207,
+    "word": 3252819328,
+    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 208,
+    "word": 3254408193,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 209,
+    "word": 3254408193,
+    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 210,
+    "word": 3254654661,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 211,
+    "word": 3254654661,
+    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 212,
+    "word": 3252712706,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 213,
+    "word": 3252712706,
+    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 214,
+    "word": 3253351815,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 215,
+    "word": 3253351815,
+    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 216,
+    "word": 3245347848,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 217,
+    "word": 3245347848,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 218,
+    "word": 3245692237,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 219,
+    "word": 3245692237,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 220,
+    "word": 3245897135,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 221,
+    "word": 3245897135,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 222,
+    "word": 3246356463,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 223,
+    "word": 3246356463,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 224,
+    "word": 3245348397,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 225,
+    "word": 3245348397,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 226,
+    "word": 3246265385,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 227,
+    "word": 3246265385,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 228,
+    "word": 3245626984,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 229,
+    "word": 3245626984,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 230,
+    "word": 3245479304,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 231,
+    "word": 3245479304,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 232,
+    "word": 3246019625,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 233,
+    "word": 3246019625,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 234,
+    "word": 3246266061,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 235,
+    "word": 3246266061,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 236,
+    "word": 3245438250,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 237,
+    "word": 3245438250,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 238,
+    "word": 3246077327,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 239,
+    "word": 3246077327,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "sdot_za32_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 240,
+    "word": 3243282432,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 241,
+    "word": 3243282432,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 242,
+    "word": 3243627781,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 243,
+    "word": 3243627781,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 244,
+    "word": 3243834759,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 245,
+    "word": 3243834759,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 246,
+    "word": 3244294023,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 247,
+    "word": 3244294023,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 248,
+    "word": 3243286021,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 249,
+    "word": 3243286021,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 250,
+    "word": 3244200961,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 251,
+    "word": 3244200961,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 252,
+    "word": 3243562496,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 253,
+    "word": 3243562496,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 254,
+    "word": 3243415936,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 255,
+    "word": 3243415936,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 256,
+    "word": 3243956225,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 257,
+    "word": 3243956225,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 258,
+    "word": 3244202629,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 259,
+    "word": 3244202629,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 260,
+    "word": 3243373826,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 261,
+    "word": 3243373826,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 262,
+    "word": 3244013959,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 263,
+    "word": 3244013959,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
+    "encodingFile": "sdot_za32_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 264,
+    "word": 3252753416,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 265,
+    "word": 3252753416,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 266,
+    "word": 3254080781,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 267,
+    "word": 3254080781,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 268,
+    "word": 3253302671,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 269,
+    "word": 3253302671,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 270,
+    "word": 3254613903,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 271,
+    "word": 3254613903,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 272,
+    "word": 3253802509,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 273,
+    "word": 3253802509,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 274,
+    "word": 3254588425,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 275,
+    "word": 3254588425,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 276,
+    "word": 3254081032,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 277,
+    "word": 3254081032,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 278,
+    "word": 3252753800,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 279,
+    "word": 3252753800,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 280,
+    "word": 3254342665,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 281,
+    "word": 3254342665,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 282,
+    "word": 3254589069,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 283,
+    "word": 3254589069,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 284,
+    "word": 3252778250,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 285,
+    "word": 3252778250,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 286,
+    "word": 3253286287,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 287,
+    "word": 3253286287,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za32_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 288,
+    "word": 3241153536,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 289,
+    "word": 3241153536,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 290,
+    "word": 3241497925,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 291,
+    "word": 3241497925,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 292,
+    "word": 3241702823,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 293,
+    "word": 3241702823,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 294,
+    "word": 3242162151,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 295,
+    "word": 3242162151,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 296,
+    "word": 3241154085,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 297,
+    "word": 3241154085,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 298,
+    "word": 3242071073,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 299,
+    "word": 3242071073,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 300,
+    "word": 3241432672,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 301,
+    "word": 3241432672,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 302,
+    "word": 3241284992,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 303,
+    "word": 3241284992,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 304,
+    "word": 3241825313,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 305,
+    "word": 3241825313,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 306,
+    "word": 3242071749,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 307,
+    "word": 3242071749,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 308,
+    "word": 3241243938,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 309,
+    "word": 3241243938,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 310,
+    "word": 3241883015,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 311,
+    "word": 3241883015,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 312,
+    "word": 3243282464,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 313,
+    "word": 3243282464,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 314,
+    "word": 3243627813,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 315,
+    "word": 3243627813,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 316,
+    "word": 3243834791,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 317,
+    "word": 3243834791,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 318,
+    "word": 3244294055,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 319,
+    "word": 3244294055,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 320,
+    "word": 3243286053,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 321,
+    "word": 3243286053,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 322,
+    "word": 3244200993,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 323,
+    "word": 3244200993,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 324,
+    "word": 3243562528,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 325,
+    "word": 3243562528,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 326,
+    "word": 3243415968,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 327,
+    "word": 3243415968,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 328,
+    "word": 3243956257,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 329,
+    "word": 3243956257,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 330,
+    "word": 3244202661,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 331,
+    "word": 3244202661,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 332,
+    "word": 3243373858,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 333,
+    "word": 3243373858,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 334,
+    "word": 3244013991,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 335,
+    "word": 3244013991,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 336,
+    "word": 3248559104,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 337,
+    "word": 3248559104,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 338,
+    "word": 3249886469,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 339,
+    "word": 3249886469,
+    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 340,
+    "word": 3249108359,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 341,
+    "word": 3249108359,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 342,
+    "word": 3250419591,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 343,
+    "word": 3250419591,
+    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 344,
+    "word": 3249608197,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 345,
+    "word": 3249608197,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 346,
+    "word": 3250394113,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 347,
+    "word": 3250394113,
+    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 348,
+    "word": 3249886720,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 349,
+    "word": 3249886720,
+    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 350,
+    "word": 3248559488,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 351,
+    "word": 3248559488,
+    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 352,
+    "word": 3250148353,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 353,
+    "word": 3250148353,
+    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 354,
+    "word": 3250394757,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 355,
+    "word": 3250394757,
+    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 356,
+    "word": 3248583938,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 357,
+    "word": 3248583938,
+    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 358,
+    "word": 3249091975,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 359,
+    "word": 3249091975,
+    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 360,
+    "word": 3245347840,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 361,
+    "word": 3245347840,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 362,
+    "word": 3245692229,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 363,
+    "word": 3245692229,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 364,
+    "word": 3245897127,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 365,
+    "word": 3245897127,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 366,
+    "word": 3246356455,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 367,
+    "word": 3246356455,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 368,
+    "word": 3245348389,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 369,
+    "word": 3245348389,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 370,
+    "word": 3246265377,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 371,
+    "word": 3246265377,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 372,
+    "word": 3245626976,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 373,
+    "word": 3245626976,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 374,
+    "word": 3245479296,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 375,
+    "word": 3245479296,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 376,
+    "word": 3246019617,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 377,
+    "word": 3246019617,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 378,
+    "word": 3246266053,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 379,
+    "word": 3246266053,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 380,
+    "word": 3245438242,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 381,
+    "word": 3245438242,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 382,
+    "word": 3246077319,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 383,
+    "word": 3246077319,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "sdot_za_zzv.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 384,
+    "word": 3251666952,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 385,
+    "word": 3251666952,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 386,
+    "word": 3252012301,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 387,
+    "word": 3252012301,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 388,
+    "word": 3252217231,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 389,
+    "word": 3252217231,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 390,
+    "word": 3252676495,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 391,
+    "word": 3252676495,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 392,
+    "word": 3251668493,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 393,
+    "word": 3251668493,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 394,
+    "word": 3252585481,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 395,
+    "word": 3252585481,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 396,
+    "word": 3251947016,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 397,
+    "word": 3251947016,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 398,
+    "word": 3251798408,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 399,
+    "word": 3251798408,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 400,
+    "word": 3252338697,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 401,
+    "word": 3252338697,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 402,
+    "word": 3252585101,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 403,
+    "word": 3252585101,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 404,
+    "word": 3251758346,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 405,
+    "word": 3251758346,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 406,
+    "word": 3252396431,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 407,
+    "word": 3252396431,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
+    "encodingFile": "sdot_za_zzi.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 408,
+    "word": 3252753408,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 409,
+    "word": 3252753408,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 410,
+    "word": 3254080773,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 411,
+    "word": 3254080773,
+    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 412,
+    "word": 3253302663,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 413,
+    "word": 3253302663,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 414,
+    "word": 3254613895,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 415,
+    "word": 3254613895,
+    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 416,
+    "word": 3253802501,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 417,
+    "word": 3253802501,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 418,
+    "word": 3254588417,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 419,
+    "word": 3254588417,
+    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 420,
+    "word": 3254081024,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 421,
+    "word": 3254081024,
+    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 422,
+    "word": 3252753792,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 423,
+    "word": 3252753792,
+    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 424,
+    "word": 3254342657,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 425,
+    "word": 3254342657,
+    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 426,
+    "word": 3254589061,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 427,
+    "word": 3254589061,
+    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 428,
+    "word": 3252778242,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 429,
+    "word": 3252778242,
+    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 430,
+    "word": 3253286279,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/sdot.s.yaml",
+    "caseIndex": 431,
+    "word": 3253286279,
+    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "sdot_za_zzw.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 0,
+    "word": 3244299288,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 1,
+    "word": 3244299288,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 2,
+    "word": 3244643677,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 3,
+    "word": 3244643677,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 4,
+    "word": 3244848575,
+    "asmText": "udot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 5,
+    "word": 3244848575,
+    "asmText": "udot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 6,
+    "word": 3245307903,
+    "asmText": "udot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 7,
+    "word": 3245307903,
+    "asmText": "udot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 8,
+    "word": 3244299837,
+    "asmText": "udot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 9,
+    "word": 3244299837,
+    "asmText": "udot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 10,
+    "word": 3245216825,
+    "asmText": "udot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 11,
+    "word": 3245216825,
+    "asmText": "udot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 12,
+    "word": 3244578424,
+    "asmText": "udot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 13,
+    "word": 3244578424,
+    "asmText": "udot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 14,
+    "word": 3244430744,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 15,
+    "word": 3244430744,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 16,
+    "word": 3244971065,
+    "asmText": "udot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 17,
+    "word": 3244971065,
+    "asmText": "udot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 18,
+    "word": 3245217501,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 19,
+    "word": 3245217501,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 20,
+    "word": 3244389690,
+    "asmText": "udot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 21,
+    "word": 3244389690,
+    "asmText": "udot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 22,
+    "word": 3245028767,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 23,
+    "word": 3245028767,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 24,
+    "word": 3243249680,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 25,
+    "word": 3243249680,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 26,
+    "word": 3243595093,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 27,
+    "word": 3243595093,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 28,
+    "word": 3243802007,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 29,
+    "word": 3243802007,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 30,
+    "word": 3244261335,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 31,
+    "word": 3244261335,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 32,
+    "word": 3243253269,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 33,
+    "word": 3243253269,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 34,
+    "word": 3244168209,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 35,
+    "word": 3244168209,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 36,
+    "word": 3243529808,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 37,
+    "word": 3243529808,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 38,
+    "word": 3243383184,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 39,
+    "word": 3243383184,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 40,
+    "word": 3243923473,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 41,
+    "word": 3243923473,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 42,
+    "word": 3244169941,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 43,
+    "word": 3244169941,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 44,
+    "word": 3243341074,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 45,
+    "word": 3243341074,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 46,
+    "word": 3243981207,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 47,
+    "word": 3243981207,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 48,
+    "word": 3252687896,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 49,
+    "word": 3252687896,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 50,
+    "word": 3254015325,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 51,
+    "word": 3254015325,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 52,
+    "word": 3253237151,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 53,
+    "word": 3253237151,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 54,
+    "word": 3254679519,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 55,
+    "word": 3254679519,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 56,
+    "word": 3253736989,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 57,
+    "word": 3253736989,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 58,
+    "word": 3254653977,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 59,
+    "word": 3254653977,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 60,
+    "word": 3254015576,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 61,
+    "word": 3254015576,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 62,
+    "word": 3252819352,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 63,
+    "word": 3252819352,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 64,
+    "word": 3254408217,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 65,
+    "word": 3254408217,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 66,
+    "word": 3254654685,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 67,
+    "word": 3254654685,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 68,
+    "word": 3252712730,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 69,
+    "word": 3252712730,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 70,
+    "word": 3253351839,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 71,
+    "word": 3253351839,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 72,
+    "word": 3243249712,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 73,
+    "word": 3243249712,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 74,
+    "word": 3243595125,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 75,
+    "word": 3243595125,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 76,
+    "word": 3243802039,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 77,
+    "word": 3243802039,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 78,
+    "word": 3244261367,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 79,
+    "word": 3244261367,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 80,
+    "word": 3243253301,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 81,
+    "word": 3243253301,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 82,
+    "word": 3244168241,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 83,
+    "word": 3244168241,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 84,
+    "word": 3243529840,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 85,
+    "word": 3243529840,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 86,
+    "word": 3243383216,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 87,
+    "word": 3243383216,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 88,
+    "word": 3243923505,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 89,
+    "word": 3243923505,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 90,
+    "word": 3244169973,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 91,
+    "word": 3244169973,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 92,
+    "word": 3243341106,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 93,
+    "word": 3243341106,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 94,
+    "word": 3243981239,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 95,
+    "word": 3243981239,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 96,
+    "word": 3251634200,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 97,
+    "word": 3251634200,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 98,
+    "word": 3251979613,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 99,
+    "word": 3251979613,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 100,
+    "word": 3252184479,
+    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 101,
+    "word": 3252184479,
+    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 102,
+    "word": 3252643807,
+    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 103,
+    "word": 3252643807,
+    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 104,
+    "word": 3251635741,
+    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 105,
+    "word": 3251635741,
+    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 106,
+    "word": 3252552729,
+    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 107,
+    "word": 3252552729,
+    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 108,
+    "word": 3251914328,
+    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 109,
+    "word": 3251914328,
+    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 110,
+    "word": 3251765656,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 111,
+    "word": 3251765656,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 112,
+    "word": 3252305945,
+    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 113,
+    "word": 3252305945,
+    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 114,
+    "word": 3252552413,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 115,
+    "word": 3252552413,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 116,
+    "word": 3251725594,
+    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 117,
+    "word": 3251725594,
+    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 118,
+    "word": 3252363679,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 119,
+    "word": 3252363679,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 120,
+    "word": 3245347864,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 121,
+    "word": 3245347864,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 122,
+    "word": 3245692253,
+    "asmText": "udot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 123,
+    "word": 3245692253,
+    "asmText": "udot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 124,
+    "word": 3245897151,
+    "asmText": "udot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 125,
+    "word": 3245897151,
+    "asmText": "udot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 126,
+    "word": 3246356479,
+    "asmText": "udot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 127,
+    "word": 3246356479,
+    "asmText": "udot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 128,
+    "word": 3245348413,
+    "asmText": "udot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 129,
+    "word": 3245348413,
+    "asmText": "udot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 130,
+    "word": 3246265401,
+    "asmText": "udot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 131,
+    "word": 3246265401,
+    "asmText": "udot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 132,
+    "word": 3245627000,
+    "asmText": "udot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 133,
+    "word": 3245627000,
+    "asmText": "udot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 134,
+    "word": 3245479320,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 135,
+    "word": 3245479320,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 136,
+    "word": 3246019641,
+    "asmText": "udot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 137,
+    "word": 3246019641,
+    "asmText": "udot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 138,
+    "word": 3246266077,
+    "asmText": "udot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 139,
+    "word": 3246266077,
+    "asmText": "udot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 140,
+    "word": 3245438266,
+    "asmText": "udot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 141,
+    "word": 3245438266,
+    "asmText": "udot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 142,
+    "word": 3246077343,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 143,
+    "word": 3246077343,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "udot_za32_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 144,
+    "word": 3243282448,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 145,
+    "word": 3243282448,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 146,
+    "word": 3243627797,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 147,
+    "word": 3243627797,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 148,
+    "word": 3243834775,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 149,
+    "word": 3243834775,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 150,
+    "word": 3244294039,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 151,
+    "word": 3244294039,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 152,
+    "word": 3243286037,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 153,
+    "word": 3243286037,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 154,
+    "word": 3244200977,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 155,
+    "word": 3244200977,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 156,
+    "word": 3243562512,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 157,
+    "word": 3243562512,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 158,
+    "word": 3243415952,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 159,
+    "word": 3243415952,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 160,
+    "word": 3243956241,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 161,
+    "word": 3243956241,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 162,
+    "word": 3244202645,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 163,
+    "word": 3244202645,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 164,
+    "word": 3243373842,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 165,
+    "word": 3243373842,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 166,
+    "word": 3244013975,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 167,
+    "word": 3244013975,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
+    "encodingFile": "udot_za32_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 168,
+    "word": 3252753432,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 169,
+    "word": 3252753432,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 170,
+    "word": 3254080797,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 171,
+    "word": 3254080797,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 172,
+    "word": 3253302687,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 173,
+    "word": 3253302687,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 174,
+    "word": 3254613919,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 175,
+    "word": 3254613919,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 176,
+    "word": 3253802525,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 177,
+    "word": 3253802525,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 178,
+    "word": 3254588441,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 179,
+    "word": 3254588441,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 180,
+    "word": 3254081048,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 181,
+    "word": 3254081048,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 182,
+    "word": 3252753816,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 183,
+    "word": 3252753816,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 184,
+    "word": 3254342681,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 185,
+    "word": 3254342681,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 186,
+    "word": 3254589085,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 187,
+    "word": 3254589085,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 188,
+    "word": 3252778266,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 189,
+    "word": 3252778266,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 190,
+    "word": 3253286303,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 191,
+    "word": 3253286303,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za32_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 192,
+    "word": 3243282480,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 193,
+    "word": 3243282480,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 194,
+    "word": 3243627829,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 195,
+    "word": 3243627829,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 196,
+    "word": 3243834807,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 197,
+    "word": 3243834807,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 198,
+    "word": 3244294071,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 199,
+    "word": 3244294071,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 200,
+    "word": 3243286069,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 201,
+    "word": 3243286069,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 202,
+    "word": 3244201009,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 203,
+    "word": 3244201009,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 204,
+    "word": 3243562544,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 205,
+    "word": 3243562544,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 206,
+    "word": 3243415984,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 207,
+    "word": 3243415984,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 208,
+    "word": 3243956273,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 209,
+    "word": 3243956273,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 210,
+    "word": 3244202677,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 211,
+    "word": 3244202677,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 212,
+    "word": 3243373874,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 213,
+    "word": 3243373874,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 214,
+    "word": 3244014007,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 215,
+    "word": 3244014007,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 216,
+    "word": 3251666968,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 217,
+    "word": 3251666968,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 218,
+    "word": 3252012317,
+    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 219,
+    "word": 3252012317,
+    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 220,
+    "word": 3252217247,
+    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 221,
+    "word": 3252217247,
+    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 222,
+    "word": 3252676511,
+    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 223,
+    "word": 3252676511,
+    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 224,
+    "word": 3251668509,
+    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 225,
+    "word": 3251668509,
+    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 226,
+    "word": 3252585497,
+    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 227,
+    "word": 3252585497,
+    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 228,
+    "word": 3251947032,
+    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 229,
+    "word": 3251947032,
+    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 230,
+    "word": 3251798424,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 231,
+    "word": 3251798424,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 232,
+    "word": 3252338713,
+    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 233,
+    "word": 3252338713,
+    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 234,
+    "word": 3252585117,
+    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 235,
+    "word": 3252585117,
+    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 236,
+    "word": 3251758362,
+    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 237,
+    "word": 3251758362,
+    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 238,
+    "word": 3252396447,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 239,
+    "word": 3252396447,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
+    "encodingFile": "udot_za_zzi.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2 && FEAT_SME_I16I64",
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 240,
+    "word": 3240104976,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 241,
+    "word": 3240104976,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 242,
+    "word": 3240449365,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 243,
+    "word": 3240449365,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 244,
+    "word": 3240654263,
+    "asmText": "udot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 245,
+    "word": 3240654263,
+    "asmText": "udot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 246,
+    "word": 3241113591,
+    "asmText": "udot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 247,
+    "word": 3241113591,
+    "asmText": "udot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 248,
+    "word": 3240105525,
+    "asmText": "udot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 249,
+    "word": 3240105525,
+    "asmText": "udot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 250,
+    "word": 3241022513,
+    "asmText": "udot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 251,
+    "word": 3241022513,
+    "asmText": "udot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 252,
+    "word": 3240384112,
+    "asmText": "udot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 253,
+    "word": 3240384112,
+    "asmText": "udot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 254,
+    "word": 3240236432,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 255,
+    "word": 3240236432,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 256,
+    "word": 3240776753,
+    "asmText": "udot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 257,
+    "word": 3240776753,
+    "asmText": "udot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 258,
+    "word": 3241023189,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 259,
+    "word": 3241023189,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 260,
+    "word": 3240195378,
+    "asmText": "udot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 261,
+    "word": 3240195378,
+    "asmText": "udot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 262,
+    "word": 3240834455,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 263,
+    "word": 3240834455,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 264,
+    "word": 3248493584,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 265,
+    "word": 3248493584,
+    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 266,
+    "word": 3249821013,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 267,
+    "word": 3249821013,
+    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 268,
+    "word": 3249042839,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 269,
+    "word": 3249042839,
+    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 270,
+    "word": 3250485207,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 271,
+    "word": 3250485207,
+    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 272,
+    "word": 3249542677,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 273,
+    "word": 3249542677,
+    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 274,
+    "word": 3250459665,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 275,
+    "word": 3250459665,
+    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 276,
+    "word": 3249821264,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 277,
+    "word": 3249821264,
+    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 278,
+    "word": 3248625040,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 279,
+    "word": 3248625040,
+    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 280,
+    "word": 3250213905,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 281,
+    "word": 3250213905,
+    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 282,
+    "word": 3250460373,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 283,
+    "word": 3250460373,
+    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 284,
+    "word": 3248518418,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 285,
+    "word": 3248518418,
+    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 286,
+    "word": 3249157527,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 287,
+    "word": 3249157527,
+    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 288,
+    "word": 3244299280,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 289,
+    "word": 3244299280,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 290,
+    "word": 3244643669,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 291,
+    "word": 3244643669,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 292,
+    "word": 3244848567,
+    "asmText": "udot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 293,
+    "word": 3244848567,
+    "asmText": "udot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 294,
+    "word": 3245307895,
+    "asmText": "udot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 295,
+    "word": 3245307895,
+    "asmText": "udot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 296,
+    "word": 3244299829,
+    "asmText": "udot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 297,
+    "word": 3244299829,
+    "asmText": "udot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 298,
+    "word": 3245216817,
+    "asmText": "udot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 299,
+    "word": 3245216817,
+    "asmText": "udot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 300,
+    "word": 3244578416,
+    "asmText": "udot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 301,
+    "word": 3244578416,
+    "asmText": "udot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 302,
+    "word": 3244430736,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 303,
+    "word": 3244430736,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 304,
+    "word": 3244971057,
+    "asmText": "udot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 305,
+    "word": 3244971057,
+    "asmText": "udot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 306,
+    "word": 3245217493,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 307,
+    "word": 3245217493,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 308,
+    "word": 3244389682,
+    "asmText": "udot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 309,
+    "word": 3244389682,
+    "asmText": "udot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 310,
+    "word": 3245028759,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 311,
+    "word": 3245028759,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 312,
+    "word": 3245028759,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 313,
+    "word": 3252687888,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 314,
+    "word": 3252687888,
+    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 315,
+    "word": 3254015317,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 316,
+    "word": 3254015317,
+    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 317,
+    "word": 3253237143,
+    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 318,
+    "word": 3253237143,
+    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 319,
+    "word": 3254679511,
+    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 320,
+    "word": 3254679511,
+    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 321,
+    "word": 3253736981,
+    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 322,
+    "word": 3253736981,
+    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 323,
+    "word": 3254653969,
+    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 324,
+    "word": 3254653969,
+    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 325,
+    "word": 3254015568,
+    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 326,
+    "word": 3254015568,
+    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 327,
+    "word": 3252819344,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 328,
+    "word": 3252819344,
+    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 329,
+    "word": 3254408209,
+    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 330,
+    "word": 3254408209,
+    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 331,
+    "word": 3254654677,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 332,
+    "word": 3254654677,
+    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 333,
+    "word": 3252712722,
+    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 334,
+    "word": 3252712722,
+    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 335,
+    "word": 3253351831,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 336,
+    "word": 3253351831,
+    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 337,
+    "word": 3241153552,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 338,
+    "word": 3241153552,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 339,
+    "word": 3241497941,
+    "asmText": "udot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 340,
+    "word": 3241497941,
+    "asmText": "udot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 341,
+    "word": 3241702839,
+    "asmText": "udot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 342,
+    "word": 3241702839,
+    "asmText": "udot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 343,
+    "word": 3242162167,
+    "asmText": "udot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 344,
+    "word": 3242162167,
+    "asmText": "udot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 345,
+    "word": 3241154101,
+    "asmText": "udot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 346,
+    "word": 3241154101,
+    "asmText": "udot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 347,
+    "word": 3242071089,
+    "asmText": "udot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 348,
+    "word": 3242071089,
+    "asmText": "udot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 349,
+    "word": 3241432688,
+    "asmText": "udot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 350,
+    "word": 3241432688,
+    "asmText": "udot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 351,
+    "word": 3241285008,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 352,
+    "word": 3241285008,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 353,
+    "word": 3241825329,
+    "asmText": "udot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 354,
+    "word": 3241825329,
+    "asmText": "udot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 355,
+    "word": 3242071765,
+    "asmText": "udot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 356,
+    "word": 3242071765,
+    "asmText": "udot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 357,
+    "word": 3241243954,
+    "asmText": "udot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 358,
+    "word": 3241243954,
+    "asmText": "udot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 359,
+    "word": 3241883031,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 360,
+    "word": 3241883031,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 361,
+    "word": 3248559120,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 362,
+    "word": 3248559120,
+    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 363,
+    "word": 3249886485,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 364,
+    "word": 3249886485,
+    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 365,
+    "word": 3249108375,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 366,
+    "word": 3249108375,
+    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 367,
+    "word": 3250419607,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 368,
+    "word": 3250419607,
+    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 369,
+    "word": 3249608213,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 370,
+    "word": 3249608213,
+    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 371,
+    "word": 3250394129,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 372,
+    "word": 3250394129,
+    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 373,
+    "word": 3249886736,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 374,
+    "word": 3249886736,
+    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 375,
+    "word": 3248559504,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 376,
+    "word": 3248559504,
+    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 377,
+    "word": 3250148369,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 378,
+    "word": 3250148369,
+    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 379,
+    "word": 3250394773,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 380,
+    "word": 3250394773,
+    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 381,
+    "word": 3248583954,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 382,
+    "word": 3248583954,
+    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 383,
+    "word": 3249091991,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 384,
+    "word": 3249091991,
+    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 385,
+    "word": 3245347856,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 386,
+    "word": 3245347856,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 387,
+    "word": 3245692245,
+    "asmText": "udot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 388,
+    "word": 3245692245,
+    "asmText": "udot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 389,
+    "word": 3245897143,
+    "asmText": "udot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 390,
+    "word": 3245897143,
+    "asmText": "udot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 391,
+    "word": 3246356471,
+    "asmText": "udot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 392,
+    "word": 3246356471,
+    "asmText": "udot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 393,
+    "word": 3245348405,
+    "asmText": "udot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 394,
+    "word": 3245348405,
+    "asmText": "udot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 395,
+    "word": 3246265393,
+    "asmText": "udot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 396,
+    "word": 3246265393,
+    "asmText": "udot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 397,
+    "word": 3245626992,
+    "asmText": "udot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 398,
+    "word": 3245626992,
+    "asmText": "udot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 399,
+    "word": 3245479312,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 400,
+    "word": 3245479312,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 401,
+    "word": 3246019633,
+    "asmText": "udot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 402,
+    "word": 3246019633,
+    "asmText": "udot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 403,
+    "word": 3246266069,
+    "asmText": "udot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 404,
+    "word": 3246266069,
+    "asmText": "udot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 405,
+    "word": 3245438258,
+    "asmText": "udot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 406,
+    "word": 3245438258,
+    "asmText": "udot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 407,
+    "word": 3246077335,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 408,
+    "word": 3246077335,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
+    "encodingFile": "udot_za_zzv.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 409,
+    "word": 3252753424,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 410,
+    "word": 3252753424,
+    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 411,
+    "word": 3254080789,
+    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 412,
+    "word": 3254080789,
+    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 413,
+    "word": 3253302679,
+    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 414,
+    "word": 3253302679,
+    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 415,
+    "word": 3254613911,
+    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 416,
+    "word": 3254613911,
+    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 417,
+    "word": 3253802517,
+    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 418,
+    "word": 3253802517,
+    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 419,
+    "word": 3254588433,
+    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 420,
+    "word": 3254588433,
+    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 421,
+    "word": 3254081040,
+    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 422,
+    "word": 3254081040,
+    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 423,
+    "word": 3252753808,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 424,
+    "word": 3252753808,
+    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 425,
+    "word": 3254342673,
+    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 426,
+    "word": 3254342673,
+    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 427,
+    "word": 3254589077,
+    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 428,
+    "word": 3254589077,
+    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 429,
+    "word": 3252778258,
+    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 430,
+    "word": 3252778258,
+    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 431,
+    "word": 3253286295,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/udot.s.yaml",
+    "caseIndex": 432,
+    "word": 3253286295,
+    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
+    "encodingFile": "udot_za_zzw.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 0,
+    "word": 3221621248,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 0, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 1,
+    "word": 3221621248,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 0, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 2,
+    "word": 3221637716,
+    "asmText": "movaz { z20.d, z21.d }, za.d[w10, 2, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 3,
+    "word": 3221637716,
+    "asmText": "movaz { z20.d, z21.d }, za.d[w10, 2, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 4,
+    "word": 3221646006,
+    "asmText": "movaz { z22.d, z23.d }, za.d[w11, 5, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 5,
+    "word": 3221646006,
+    "asmText": "movaz { z22.d, z23.d }, za.d[w11, 5, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 6,
+    "word": 3221646078,
+    "asmText": "movaz { z30.d, z31.d }, za.d[w11, 7, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 7,
+    "word": 3221646078,
+    "asmText": "movaz { z30.d, z31.d }, za.d[w11, 7, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 8,
+    "word": 3221621284,
+    "asmText": "movaz { z4.d, z5.d }, za.d[w8, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 9,
+    "word": 3221621284,
+    "asmText": "movaz { z4.d, z5.d }, za.d[w8, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 10,
+    "word": 3221621280,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 11,
+    "word": 3221621280,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 12,
+    "word": 3221637752,
+    "asmText": "movaz { z24.d, z25.d }, za.d[w10, 3, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 13,
+    "word": 3221637752,
+    "asmText": "movaz { z24.d, z25.d }, za.d[w10, 3, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 14,
+    "word": 3221621376,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 4, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 15,
+    "word": 3221621376,
+    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 4, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 16,
+    "word": 3221637680,
+    "asmText": "movaz { z16.d, z17.d }, za.d[w10, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 17,
+    "word": 3221637680,
+    "asmText": "movaz { z16.d, z17.d }, za.d[w10, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 18,
+    "word": 3221621468,
+    "asmText": "movaz { z28.d, z29.d }, za.d[w8, 6, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 19,
+    "word": 3221621468,
+    "asmText": "movaz { z28.d, z29.d }, za.d[w8, 6, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 20,
+    "word": 3221645858,
+    "asmText": "movaz { z2.d, z3.d }, za.d[w11, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 21,
+    "word": 3221645858,
+    "asmText": "movaz { z2.d, z3.d }, za.d[w11, 1, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 22,
+    "word": 3221629574,
+    "asmText": "movaz { z6.d, z7.d }, za.d[w9, 4, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 23,
+    "word": 3221629574,
+    "asmText": "movaz { z6.d, z7.d }, za.d[w9, 4, vgx2]",
+    "encodingFile": "movaz_mz_za2.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 24,
+    "word": 3221622272,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 0, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 25,
+    "word": 3221622272,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 0, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 26,
+    "word": 3221638740,
+    "asmText": "movaz { z20.d - z23.d }, za.d[w10, 2, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 27,
+    "word": 3221638740,
+    "asmText": "movaz { z20.d - z23.d }, za.d[w10, 2, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 28,
+    "word": 3221647028,
+    "asmText": "movaz { z20.d - z23.d }, za.d[w11, 5, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 29,
+    "word": 3221647028,
+    "asmText": "movaz { z20.d - z23.d }, za.d[w11, 5, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 30,
+    "word": 3221647100,
+    "asmText": "movaz { z28.d - z31.d }, za.d[w11, 7, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 31,
+    "word": 3221647100,
+    "asmText": "movaz { z28.d - z31.d }, za.d[w11, 7, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 32,
+    "word": 3221622308,
+    "asmText": "movaz { z4.d - z7.d }, za.d[w8, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 33,
+    "word": 3221622308,
+    "asmText": "movaz { z4.d - z7.d }, za.d[w8, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 34,
+    "word": 3221622304,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 35,
+    "word": 3221622304,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 36,
+    "word": 3221638776,
+    "asmText": "movaz { z24.d - z27.d }, za.d[w10, 3, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 37,
+    "word": 3221638776,
+    "asmText": "movaz { z24.d - z27.d }, za.d[w10, 3, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 38,
+    "word": 3221622400,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 4, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 39,
+    "word": 3221622400,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 4, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 40,
+    "word": 3221638704,
+    "asmText": "movaz { z16.d - z19.d }, za.d[w10, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 41,
+    "word": 3221638704,
+    "asmText": "movaz { z16.d - z19.d }, za.d[w10, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 42,
+    "word": 3221622492,
+    "asmText": "movaz { z28.d - z31.d }, za.d[w8, 6, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 43,
+    "word": 3221622492,
+    "asmText": "movaz { z28.d - z31.d }, za.d[w8, 6, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 44,
+    "word": 3221646880,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w11, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 45,
+    "word": 3221646880,
+    "asmText": "movaz { z0.d - z3.d }, za.d[w11, 1, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 46,
+    "word": 3221630596,
+    "asmText": "movaz { z4.d - z7.d }, za.d[w9, 4, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 47,
+    "word": 3221630596,
+    "asmText": "movaz { z4.d - z7.d }, za.d[w9, 4, vgx4]",
+    "encodingFile": "movaz_mz_za4.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 48,
+    "word": 3234005504,
+    "asmText": "movaz z0.q, za0h.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 49,
+    "word": 3234022229,
+    "asmText": "movaz z21.q, za10h.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 50,
+    "word": 3234030519,
+    "asmText": "movaz z23.q, za13h.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 51,
+    "word": 3234030591,
+    "asmText": "movaz z31.q, za15h.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 52,
+    "word": 3234005541,
+    "asmText": "movaz z5.q, za1h.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 53,
+    "word": 3234005537,
+    "asmText": "movaz z1.q, za1h.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 54,
+    "word": 3234022008,
+    "asmText": "movaz z24.q, za3h.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 55,
+    "word": 3234005888,
+    "asmText": "movaz z0.q, za12h.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 56,
+    "word": 3234021937,
+    "asmText": "movaz z17.q, za1h.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 57,
+    "word": 3234005725,
+    "asmText": "movaz z29.q, za6h.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 58,
+    "word": 3234030370,
+    "asmText": "movaz z2.q, za9h.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 59,
+    "word": 3234014087,
+    "asmText": "movaz z7.q, za12h.q[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 60,
+    "word": 3234038272,
+    "asmText": "movaz z0.q, za0v.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 61,
+    "word": 3234054997,
+    "asmText": "movaz z21.q, za10v.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 62,
+    "word": 3234063287,
+    "asmText": "movaz z23.q, za13v.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 63,
+    "word": 3234063359,
+    "asmText": "movaz z31.q, za15v.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 64,
+    "word": 3234038309,
+    "asmText": "movaz z5.q, za1v.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 65,
+    "word": 3234038305,
+    "asmText": "movaz z1.q, za1v.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 66,
+    "word": 3234054776,
+    "asmText": "movaz z24.q, za3v.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 67,
+    "word": 3234038656,
+    "asmText": "movaz z0.q, za12v.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 68,
+    "word": 3234054705,
+    "asmText": "movaz z17.q, za1v.q[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 69,
+    "word": 3234038493,
+    "asmText": "movaz z29.q, za6v.q[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 70,
+    "word": 3234063138,
+    "asmText": "movaz z2.q, za9v.q[w15, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 71,
+    "word": 3234046855,
+    "asmText": "movaz z7.q, za12v.q[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 72,
+    "word": 3225551360,
+    "asmText": "movaz z0.h, za0h.h[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 73,
+    "word": 3225568085,
+    "asmText": "movaz z21.h, za1h.h[w14, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 74,
+    "word": 3225576375,
+    "asmText": "movaz z23.h, za1h.h[w15, 5]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 75,
+    "word": 3225576447,
+    "asmText": "movaz z31.h, za1h.h[w15, 7]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 76,
+    "word": 3225551397,
+    "asmText": "movaz z5.h, za0h.h[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 77,
+    "word": 3225551393,
+    "asmText": "movaz z1.h, za0h.h[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 78,
+    "word": 3225567864,
+    "asmText": "movaz z24.h, za0h.h[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 79,
+    "word": 3225551744,
+    "asmText": "movaz z0.h, za1h.h[w12, 4]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 80,
+    "word": 3225567793,
+    "asmText": "movaz z17.h, za0h.h[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 81,
+    "word": 3225551581,
+    "asmText": "movaz z29.h, za0h.h[w12, 6]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 82,
+    "word": 3225576226,
+    "asmText": "movaz z2.h, za1h.h[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 83,
+    "word": 3225559943,
+    "asmText": "movaz z7.h, za1h.h[w13, 4]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 84,
+    "word": 3225584128,
+    "asmText": "movaz z0.h, za0v.h[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 85,
+    "word": 3225600853,
+    "asmText": "movaz z21.h, za1v.h[w14, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 86,
+    "word": 3225609143,
+    "asmText": "movaz z23.h, za1v.h[w15, 5]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 87,
+    "word": 3225609215,
+    "asmText": "movaz z31.h, za1v.h[w15, 7]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 88,
+    "word": 3225584165,
+    "asmText": "movaz z5.h, za0v.h[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 89,
+    "word": 3225584161,
+    "asmText": "movaz z1.h, za0v.h[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 90,
+    "word": 3225600632,
+    "asmText": "movaz z24.h, za0v.h[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 91,
+    "word": 3225584512,
+    "asmText": "movaz z0.h, za1v.h[w12, 4]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 92,
+    "word": 3225600561,
+    "asmText": "movaz z17.h, za0v.h[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 93,
+    "word": 3225584349,
+    "asmText": "movaz z29.h, za0v.h[w12, 6]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 94,
+    "word": 3225608994,
+    "asmText": "movaz z2.h, za1v.h[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 95,
+    "word": 3225592711,
+    "asmText": "movaz z7.h, za1v.h[w13, 4]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 96,
+    "word": 3229745664,
+    "asmText": "movaz z0.s, za0h.s[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 97,
+    "word": 3229762389,
+    "asmText": "movaz z21.s, za2h.s[w14, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 98,
+    "word": 3229770679,
+    "asmText": "movaz z23.s, za3h.s[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 99,
+    "word": 3229770751,
+    "asmText": "movaz z31.s, za3h.s[w15, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 100,
+    "word": 3229745701,
+    "asmText": "movaz z5.s, za0h.s[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 101,
+    "word": 3229745697,
+    "asmText": "movaz z1.s, za0h.s[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 102,
+    "word": 3229762168,
+    "asmText": "movaz z24.s, za0h.s[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 103,
+    "word": 3229746048,
+    "asmText": "movaz z0.s, za3h.s[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 104,
+    "word": 3229762097,
+    "asmText": "movaz z17.s, za0h.s[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 105,
+    "word": 3229745885,
+    "asmText": "movaz z29.s, za1h.s[w12, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 106,
+    "word": 3229770530,
+    "asmText": "movaz z2.s, za2h.s[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 107,
+    "word": 3229754247,
+    "asmText": "movaz z7.s, za3h.s[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 108,
+    "word": 3229778432,
+    "asmText": "movaz z0.s, za0v.s[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 109,
+    "word": 3229795157,
+    "asmText": "movaz z21.s, za2v.s[w14, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 110,
+    "word": 3229803447,
+    "asmText": "movaz z23.s, za3v.s[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 111,
+    "word": 3229803519,
+    "asmText": "movaz z31.s, za3v.s[w15, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 112,
+    "word": 3229778469,
+    "asmText": "movaz z5.s, za0v.s[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 113,
+    "word": 3229778465,
+    "asmText": "movaz z1.s, za0v.s[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 114,
+    "word": 3229794936,
+    "asmText": "movaz z24.s, za0v.s[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 115,
+    "word": 3229778816,
+    "asmText": "movaz z0.s, za3v.s[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 116,
+    "word": 3229794865,
+    "asmText": "movaz z17.s, za0v.s[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 117,
+    "word": 3229778653,
+    "asmText": "movaz z29.s, za1v.s[w12, 2]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 118,
+    "word": 3229803298,
+    "asmText": "movaz z2.s, za2v.s[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 119,
+    "word": 3229787015,
+    "asmText": "movaz z7.s, za3v.s[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 120,
+    "word": 3233939968,
+    "asmText": "movaz z0.d, za0h.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 121,
+    "word": 3233956693,
+    "asmText": "movaz z21.d, za5h.d[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 122,
+    "word": 3233964983,
+    "asmText": "movaz z23.d, za6h.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 123,
+    "word": 3233965055,
+    "asmText": "movaz z31.d, za7h.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 124,
+    "word": 3233940005,
+    "asmText": "movaz z5.d, za0h.d[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 125,
+    "word": 3233940001,
+    "asmText": "movaz z1.d, za0h.d[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 126,
+    "word": 3233956472,
+    "asmText": "movaz z24.d, za1h.d[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 127,
+    "word": 3233940352,
+    "asmText": "movaz z0.d, za6h.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 128,
+    "word": 3233956401,
+    "asmText": "movaz z17.d, za0h.d[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 129,
+    "word": 3233940189,
+    "asmText": "movaz z29.d, za3h.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 130,
+    "word": 3233964834,
+    "asmText": "movaz z2.d, za4h.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 131,
+    "word": 3233948551,
+    "asmText": "movaz z7.d, za6h.d[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 132,
+    "word": 3233972736,
+    "asmText": "movaz z0.d, za0v.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 133,
+    "word": 3233989461,
+    "asmText": "movaz z21.d, za5v.d[w14, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 134,
+    "word": 3233997751,
+    "asmText": "movaz z23.d, za6v.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 135,
+    "word": 3233997823,
+    "asmText": "movaz z31.d, za7v.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 136,
+    "word": 3233972773,
+    "asmText": "movaz z5.d, za0v.d[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 137,
+    "word": 3233972769,
+    "asmText": "movaz z1.d, za0v.d[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 138,
+    "word": 3233989240,
+    "asmText": "movaz z24.d, za1v.d[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 139,
+    "word": 3233973120,
+    "asmText": "movaz z0.d, za6v.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 140,
+    "word": 3233989169,
+    "asmText": "movaz z17.d, za0v.d[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 141,
+    "word": 3233972957,
+    "asmText": "movaz z29.d, za3v.d[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 142,
+    "word": 3233997602,
+    "asmText": "movaz z2.d, za4v.d[w15, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 143,
+    "word": 3233981319,
+    "asmText": "movaz z7.d, za6v.d[w13, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 144,
+    "word": 3221357056,
+    "asmText": "movaz z0.b, za0h.b[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 145,
+    "word": 3221373781,
+    "asmText": "movaz z21.b, za0h.b[w14, 10]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 146,
+    "word": 3221382071,
+    "asmText": "movaz z23.b, za0h.b[w15, 13]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 147,
+    "word": 3221382143,
+    "asmText": "movaz z31.b, za0h.b[w15, 15]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 148,
+    "word": 3221357093,
+    "asmText": "movaz z5.b, za0h.b[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 149,
+    "word": 3221357089,
+    "asmText": "movaz z1.b, za0h.b[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 150,
+    "word": 3221373560,
+    "asmText": "movaz z24.b, za0h.b[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 151,
+    "word": 3221357440,
+    "asmText": "movaz z0.b, za0h.b[w12, 12]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 152,
+    "word": 3221373489,
+    "asmText": "movaz z17.b, za0h.b[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 153,
+    "word": 3221357277,
+    "asmText": "movaz z29.b, za0h.b[w12, 6]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 154,
+    "word": 3221381922,
+    "asmText": "movaz z2.b, za0h.b[w15, 9]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 155,
+    "word": 3221365639,
+    "asmText": "movaz z7.b, za0h.b[w13, 12]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 156,
+    "word": 3221389824,
+    "asmText": "movaz z0.b, za0v.b[w12, 0]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 157,
+    "word": 3221406549,
+    "asmText": "movaz z21.b, za0v.b[w14, 10]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 158,
+    "word": 3221414839,
+    "asmText": "movaz z23.b, za0v.b[w15, 13]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 159,
+    "word": 3221414911,
+    "asmText": "movaz z31.b, za0v.b[w15, 15]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 160,
+    "word": 3221389861,
+    "asmText": "movaz z5.b, za0v.b[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 161,
+    "word": 3221389857,
+    "asmText": "movaz z1.b, za0v.b[w12, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 162,
+    "word": 3221406328,
+    "asmText": "movaz z24.b, za0v.b[w14, 3]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 163,
+    "word": 3221390208,
+    "asmText": "movaz z0.b, za0v.b[w12, 12]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 164,
+    "word": 3221406257,
+    "asmText": "movaz z17.b, za0v.b[w14, 1]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 165,
+    "word": 3221390045,
+    "asmText": "movaz z29.b, za0v.b[w12, 6]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 166,
+    "word": 3221414690,
+    "asmText": "movaz z2.b, za0v.b[w15, 9]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME2p1/movaz.s.yaml",
+    "caseIndex": 167,
+    "word": 3221398407,
+    "asmText": "movaz z7.b, za0v.b[w13, 12]",
+    "encodingFile": "movaz_z_rza.xml",
+    "mnemonic": "MOVAZ",
+    "features": [
+      "FEAT_SME2p1"
+    ]
+  },
+  {
     "sourceFile": "spe.s.yaml",
     "caseIndex": 0,
     "word": 3575159072,
@@ -47178,6 +60526,110 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 0,
+    "word": 86548480,
+    "asmText": "mov z0.b, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 1,
+    "word": 90742784,
+    "asmText": "mov z0.h, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 2,
+    "word": 94937088,
+    "asmText": "mov z0.s, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 3,
+    "word": 99131392,
+    "asmText": "mov z0.d, p0/m, x0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 4,
+    "word": 86556671,
+    "asmText": "mov z31.b, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 5,
+    "word": 90750975,
+    "asmText": "mov z31.h, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 6,
+    "word": 94945279,
+    "asmText": "mov z31.s, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 7,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 47,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -47191,11 +60643,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 48,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 49,
     "word": 69254367,
     "asmText": "movprfx z31, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 50,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -47256,6 +60734,110 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 59,
+    "word": 86548480,
+    "asmText": "mov z0.b, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 60,
+    "word": 90742784,
+    "asmText": "mov z0.h, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 61,
+    "word": 94937088,
+    "asmText": "mov z0.s, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 62,
+    "word": 99131392,
+    "asmText": "mov z0.d, p0/m, x0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 63,
+    "word": 86556671,
+    "asmText": "mov z31.b, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 64,
+    "word": 90750975,
+    "asmText": "mov z31.h, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 65,
+    "word": 94945279,
+    "asmText": "mov z31.s, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 66,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 106,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -47269,11 +60851,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 107,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 108,
     "word": 69254367,
     "asmText": "movprfx z31, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 109,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -49432,6 +63040,266 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "decw x0, #28",
     "encodingFile": "decb_r_rs.xml",
     "mnemonic": "DECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 8,
+    "word": 624480261,
+    "asmText": "mov z5.b, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 9,
+    "word": 624480229,
+    "asmText": "mov z5.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 10,
+    "word": 624484325,
+    "asmText": "mov z5.b, #-1",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 11,
+    "word": 628674581,
+    "asmText": "mov z21.h, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 14,
+    "word": 628674549,
+    "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 17,
+    "word": 632868885,
+    "asmText": "mov z21.s, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 20,
+    "word": 632868853,
+    "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 23,
+    "word": 637063189,
+    "asmText": "mov z21.d, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 26,
+    "word": 637063157,
+    "asmText": "mov z21.d, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 39,
+    "word": 624480224,
+    "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 50,
+    "word": 624480261,
+    "asmText": "mov z5.b, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 51,
+    "word": 624480229,
+    "asmText": "mov z5.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 52,
+    "word": 624484325,
+    "asmText": "mov z5.b, #-1",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 53,
+    "word": 628674581,
+    "asmText": "mov z21.h, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 56,
+    "word": 628674549,
+    "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 59,
+    "word": 632868885,
+    "asmText": "mov z21.s, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 62,
+    "word": 632868853,
+    "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 65,
+    "word": 637063189,
+    "asmText": "mov z21.d, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 68,
+    "word": 637063157,
+    "asmText": "mov z21.d, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 81,
+    "word": 624480224,
+    "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -75713,6 +89581,279 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 10,
+    "word": 624480261,
+    "asmText": "mov z5.b, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 11,
+    "word": 624480229,
+    "asmText": "mov z5.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 12,
+    "word": 624484325,
+    "asmText": "mov z5.b, #-1",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 13,
+    "word": 628674581,
+    "asmText": "mov z21.h, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 16,
+    "word": 628674549,
+    "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 19,
+    "word": 632868885,
+    "asmText": "mov z21.s, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 22,
+    "word": 632868853,
+    "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 25,
+    "word": 637063189,
+    "asmText": "mov z21.d, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 28,
+    "word": 637063157,
+    "asmText": "mov z21.d, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 61,
+    "word": 624480224,
+    "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 63,
+    "word": 628678469,
+    "asmText": "mov z5.h, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 64,
+    "word": 632872773,
+    "asmText": "mov z5.s, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 65,
+    "word": 637067077,
+    "asmText": "mov z5.d, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 91,
+    "word": 86548480,
+    "asmText": "mov z0.b, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 92,
+    "word": 90742784,
+    "asmText": "mov z0.h, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 93,
+    "word": 94937088,
+    "asmText": "mov z0.s, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 94,
+    "word": 99131392,
+    "asmText": "mov z0.d, p0/m, x0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 95,
+    "word": 86556671,
+    "asmText": "mov z31.b, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 96,
+    "word": 90750975,
+    "asmText": "mov z31.h, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 97,
+    "word": 94945279,
+    "asmText": "mov z31.s, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 98,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 117,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -75726,11 +89867,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 118,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 119,
     "word": 69254367,
     "asmText": "movprfx z31, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 120,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -75791,6 +89958,279 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 139,
+    "word": 624480261,
+    "asmText": "mov z5.b, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 140,
+    "word": 624480229,
+    "asmText": "mov z5.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 141,
+    "word": 624484325,
+    "asmText": "mov z5.b, #-1",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 142,
+    "word": 628674581,
+    "asmText": "mov z21.h, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 145,
+    "word": 628674549,
+    "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 148,
+    "word": 632868885,
+    "asmText": "mov z21.s, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 151,
+    "word": 632868853,
+    "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 154,
+    "word": 637063189,
+    "asmText": "mov z21.d, #-128",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 157,
+    "word": 637063157,
+    "asmText": "mov z21.d, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 190,
+    "word": 624480224,
+    "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 192,
+    "word": 628678469,
+    "asmText": "mov z5.h, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 193,
+    "word": 632872773,
+    "asmText": "mov z5.s, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 194,
+    "word": 637067077,
+    "asmText": "mov z5.d, #-6",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 220,
+    "word": 86548480,
+    "asmText": "mov z0.b, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 221,
+    "word": 90742784,
+    "asmText": "mov z0.h, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 222,
+    "word": 94937088,
+    "asmText": "mov z0.s, p0/m, w0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 223,
+    "word": 99131392,
+    "asmText": "mov z0.d, p0/m, x0",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 224,
+    "word": 86556671,
+    "asmText": "mov z31.b, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 225,
+    "word": 90750975,
+    "asmText": "mov z31.h, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 226,
+    "word": 94945279,
+    "asmText": "mov z31.s, p7/m, wsp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 227,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 246,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -75804,11 +90244,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 247,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 248,
     "word": 69254367,
     "asmText": "movprfx z31, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 249,
+    "word": 99139583,
+    "asmText": "mov z31.d, p7/m, sp",
+    "encodingFile": "cpy_z_p_r.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -147679,1414 +162145,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 0,
-    "word": 4171253784,
-    "asmText": "rprfm pldkeep, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 1,
-    "word": 4171253785,
-    "asmText": "rprfm pstkeep, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 2,
-    "word": 4171253786,
-    "asmText": "rprfm #2, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 3,
-    "word": 4171253787,
-    "asmText": "rprfm #3, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 4,
-    "word": 4171253788,
-    "asmText": "rprfm pldstrm, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 5,
-    "word": 4171253789,
-    "asmText": "rprfm pststrm, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 6,
-    "word": 4171253790,
-    "asmText": "rprfm #6, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 7,
-    "word": 4171253791,
-    "asmText": "rprfm #7, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 8,
-    "word": 4171257880,
-    "asmText": "rprfm #8, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 9,
-    "word": 4171257881,
-    "asmText": "rprfm #9, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 10,
-    "word": 4171257882,
-    "asmText": "rprfm #10, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 11,
-    "word": 4171257883,
-    "asmText": "rprfm #11, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 12,
-    "word": 4171257884,
-    "asmText": "rprfm #12, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 13,
-    "word": 4171257885,
-    "asmText": "rprfm #13, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 14,
-    "word": 4171257886,
-    "asmText": "rprfm #14, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 15,
-    "word": 4171257887,
-    "asmText": "rprfm #15, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 16,
-    "word": 4171261976,
-    "asmText": "rprfm #16, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 17,
-    "word": 4171261977,
-    "asmText": "rprfm #17, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 18,
-    "word": 4171261978,
-    "asmText": "rprfm #18, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 19,
-    "word": 4171261979,
-    "asmText": "rprfm #19, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 20,
-    "word": 4171261980,
-    "asmText": "rprfm #20, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 21,
-    "word": 4171261981,
-    "asmText": "rprfm #21, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 22,
-    "word": 4171261982,
-    "asmText": "rprfm #22, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 23,
-    "word": 4171261983,
-    "asmText": "rprfm #23, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 24,
-    "word": 4171266072,
-    "asmText": "rprfm #24, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 25,
-    "word": 4171266073,
-    "asmText": "rprfm #25, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 26,
-    "word": 4171266074,
-    "asmText": "rprfm #26, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 27,
-    "word": 4171266075,
-    "asmText": "rprfm #27, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 28,
-    "word": 4171266076,
-    "asmText": "rprfm #28, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 29,
-    "word": 4171266077,
-    "asmText": "rprfm #29, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 30,
-    "word": 4171266078,
-    "asmText": "rprfm #30, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 31,
-    "word": 4171266079,
-    "asmText": "rprfm #31, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 32,
-    "word": 4171286552,
-    "asmText": "rprfm #32, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 33,
-    "word": 4171286553,
-    "asmText": "rprfm #33, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 34,
-    "word": 4171286554,
-    "asmText": "rprfm #34, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 35,
-    "word": 4171286555,
-    "asmText": "rprfm #35, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 36,
-    "word": 4171286556,
-    "asmText": "rprfm #36, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 37,
-    "word": 4171286557,
-    "asmText": "rprfm #37, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 38,
-    "word": 4171286558,
-    "asmText": "rprfm #38, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 39,
-    "word": 4171286559,
-    "asmText": "rprfm #39, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 40,
-    "word": 4171290648,
-    "asmText": "rprfm #40, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 41,
-    "word": 4171290649,
-    "asmText": "rprfm #41, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 42,
-    "word": 4171290650,
-    "asmText": "rprfm #42, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 43,
-    "word": 4171290651,
-    "asmText": "rprfm #43, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 44,
-    "word": 4171290652,
-    "asmText": "rprfm #44, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 45,
-    "word": 4171290653,
-    "asmText": "rprfm #45, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 46,
-    "word": 4171290654,
-    "asmText": "rprfm #46, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 47,
-    "word": 4171290655,
-    "asmText": "rprfm #47, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 48,
-    "word": 4171294744,
-    "asmText": "rprfm #48, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 49,
-    "word": 4171294745,
-    "asmText": "rprfm #49, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 50,
-    "word": 4171294746,
-    "asmText": "rprfm #50, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 51,
-    "word": 4171294747,
-    "asmText": "rprfm #51, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 52,
-    "word": 4171294748,
-    "asmText": "rprfm #52, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 53,
-    "word": 4171294749,
-    "asmText": "rprfm #53, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 54,
-    "word": 4171294750,
-    "asmText": "rprfm #54, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 55,
-    "word": 4171294751,
-    "asmText": "rprfm #55, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 56,
-    "word": 4171298840,
-    "asmText": "rprfm #56, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 57,
-    "word": 4171298841,
-    "asmText": "rprfm #57, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 58,
-    "word": 4171298842,
-    "asmText": "rprfm #58, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 59,
-    "word": 4171298843,
-    "asmText": "rprfm #59, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 60,
-    "word": 4171298844,
-    "asmText": "rprfm #60, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 61,
-    "word": 4171298845,
-    "asmText": "rprfm #61, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 62,
-    "word": 4171298846,
-    "asmText": "rprfm #62, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 63,
-    "word": 4171298847,
-    "asmText": "rprfm #63, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 64,
-    "word": 4171253784,
-    "asmText": "rprfm pldkeep, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 65,
-    "word": 4171253785,
-    "asmText": "rprfm pstkeep, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 66,
-    "word": 4171253786,
-    "asmText": "rprfm #2, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 67,
-    "word": 4171253787,
-    "asmText": "rprfm #3, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 68,
-    "word": 4171253788,
-    "asmText": "rprfm pldstrm, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 69,
-    "word": 4171253789,
-    "asmText": "rprfm pststrm, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 70,
-    "word": 4171253790,
-    "asmText": "rprfm #6, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 71,
-    "word": 4171253791,
-    "asmText": "rprfm #7, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 72,
-    "word": 4171257880,
-    "asmText": "rprfm #8, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 73,
-    "word": 4171257881,
-    "asmText": "rprfm #9, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 74,
-    "word": 4171257882,
-    "asmText": "rprfm #10, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 75,
-    "word": 4171257883,
-    "asmText": "rprfm #11, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 76,
-    "word": 4171257884,
-    "asmText": "rprfm #12, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 77,
-    "word": 4171257885,
-    "asmText": "rprfm #13, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 78,
-    "word": 4171257886,
-    "asmText": "rprfm #14, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 79,
-    "word": 4171257887,
-    "asmText": "rprfm #15, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 80,
-    "word": 4171261976,
-    "asmText": "rprfm #16, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 81,
-    "word": 4171261977,
-    "asmText": "rprfm #17, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 82,
-    "word": 4171261978,
-    "asmText": "rprfm #18, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 83,
-    "word": 4171261979,
-    "asmText": "rprfm #19, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 84,
-    "word": 4171261980,
-    "asmText": "rprfm #20, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 85,
-    "word": 4171261981,
-    "asmText": "rprfm #21, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 86,
-    "word": 4171261982,
-    "asmText": "rprfm #22, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 87,
-    "word": 4171261983,
-    "asmText": "rprfm #23, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 88,
-    "word": 4171266072,
-    "asmText": "rprfm #24, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 89,
-    "word": 4171266073,
-    "asmText": "rprfm #25, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 90,
-    "word": 4171266074,
-    "asmText": "rprfm #26, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 91,
-    "word": 4171266075,
-    "asmText": "rprfm #27, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 92,
-    "word": 4171266076,
-    "asmText": "rprfm #28, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 93,
-    "word": 4171266077,
-    "asmText": "rprfm #29, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 94,
-    "word": 4171266078,
-    "asmText": "rprfm #30, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 95,
-    "word": 4171266079,
-    "asmText": "rprfm #31, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 96,
-    "word": 4171286552,
-    "asmText": "rprfm #32, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 97,
-    "word": 4171286553,
-    "asmText": "rprfm #33, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 98,
-    "word": 4171286554,
-    "asmText": "rprfm #34, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 99,
-    "word": 4171286555,
-    "asmText": "rprfm #35, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 100,
-    "word": 4171286556,
-    "asmText": "rprfm #36, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 101,
-    "word": 4171286557,
-    "asmText": "rprfm #37, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 102,
-    "word": 4171286558,
-    "asmText": "rprfm #38, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 103,
-    "word": 4171286559,
-    "asmText": "rprfm #39, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 104,
-    "word": 4171290648,
-    "asmText": "rprfm #40, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 105,
-    "word": 4171290649,
-    "asmText": "rprfm #41, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 106,
-    "word": 4171290650,
-    "asmText": "rprfm #42, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 107,
-    "word": 4171290651,
-    "asmText": "rprfm #43, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 108,
-    "word": 4171290652,
-    "asmText": "rprfm #44, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 109,
-    "word": 4171290653,
-    "asmText": "rprfm #45, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 110,
-    "word": 4171290654,
-    "asmText": "rprfm #46, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 111,
-    "word": 4171290655,
-    "asmText": "rprfm #47, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 112,
-    "word": 4171294744,
-    "asmText": "rprfm #48, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 113,
-    "word": 4171294745,
-    "asmText": "rprfm #49, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 114,
-    "word": 4171294746,
-    "asmText": "rprfm #50, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 115,
-    "word": 4171294747,
-    "asmText": "rprfm #51, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 116,
-    "word": 4171294748,
-    "asmText": "rprfm #52, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 117,
-    "word": 4171294749,
-    "asmText": "rprfm #53, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 118,
-    "word": 4171294750,
-    "asmText": "rprfm #54, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 119,
-    "word": 4171294751,
-    "asmText": "rprfm #55, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 120,
-    "word": 4171298840,
-    "asmText": "rprfm #56, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 121,
-    "word": 4171298841,
-    "asmText": "rprfm #57, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 122,
-    "word": 4171298842,
-    "asmText": "rprfm #58, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 123,
-    "word": 4171298843,
-    "asmText": "rprfm #59, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 124,
-    "word": 4171298844,
-    "asmText": "rprfm #60, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 125,
-    "word": 4171298845,
-    "asmText": "rprfm #61, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 126,
-    "word": 4171298846,
-    "asmText": "rprfm #62, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
-    "sourceFile": "rprfm.s.yaml",
-    "caseIndex": 127,
-    "word": 4171298847,
-    "asmText": "rprfm #63, x0, [x0]",
-    "encodingFile": "rprfm_reg.xml",
-    "mnemonic": "RPRFM",
-    "features": [
-      "FEAT_RPRFM"
-    ]
-  },
-  {
     "sourceFile": "SME/addha-u32.s.yaml",
     "caseIndex": 0,
     "word": 3230662656,
@@ -196370,5046 +209428,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 0,
-    "word": 3244299272,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 1,
-    "word": 3244299272,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 2,
-    "word": 3244643661,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 3,
-    "word": 3244643661,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 4,
-    "word": 3244848559,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 5,
-    "word": 3244848559,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 6,
-    "word": 3245307887,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 7,
-    "word": 3245307887,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 8,
-    "word": 3244299821,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 9,
-    "word": 3244299821,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 10,
-    "word": 3245216809,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 11,
-    "word": 3245216809,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 12,
-    "word": 3244578408,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 13,
-    "word": 3244578408,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 14,
-    "word": 3244430728,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 15,
-    "word": 3244430728,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 16,
-    "word": 3244971049,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 17,
-    "word": 3244971049,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 18,
-    "word": 3245217485,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 19,
-    "word": 3245217485,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 20,
-    "word": 3244389674,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 21,
-    "word": 3244389674,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 22,
-    "word": 3245028751,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 23,
-    "word": 3245028751,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 24,
-    "word": 3243249664,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 25,
-    "word": 3243249664,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 26,
-    "word": 3243595077,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 27,
-    "word": 3243595077,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 28,
-    "word": 3243801991,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 29,
-    "word": 3243801991,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 30,
-    "word": 3244261319,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 31,
-    "word": 3244261319,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 32,
-    "word": 3243253253,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 33,
-    "word": 3243253253,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 34,
-    "word": 3244168193,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 35,
-    "word": 3244168193,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 36,
-    "word": 3243529792,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 37,
-    "word": 3243529792,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 38,
-    "word": 3243383168,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 39,
-    "word": 3243383168,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 40,
-    "word": 3243923457,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 41,
-    "word": 3243923457,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 42,
-    "word": 3244169925,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 43,
-    "word": 3244169925,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 44,
-    "word": 3243341058,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 45,
-    "word": 3243341058,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 46,
-    "word": 3243981191,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 47,
-    "word": 3243981191,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 48,
-    "word": 3252687880,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 49,
-    "word": 3252687880,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 50,
-    "word": 3254015309,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 51,
-    "word": 3254015309,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 52,
-    "word": 3253237135,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 53,
-    "word": 3253237135,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 54,
-    "word": 3254679503,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 55,
-    "word": 3254679503,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 56,
-    "word": 3253736973,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 57,
-    "word": 3253736973,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 58,
-    "word": 3254653961,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 59,
-    "word": 3254653961,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 60,
-    "word": 3254015560,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 61,
-    "word": 3254015560,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 62,
-    "word": 3252819336,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 63,
-    "word": 3252819336,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 64,
-    "word": 3254408201,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 65,
-    "word": 3254408201,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 66,
-    "word": 3254654669,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 67,
-    "word": 3254654669,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 68,
-    "word": 3252712714,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 69,
-    "word": 3252712714,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 70,
-    "word": 3253351823,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 71,
-    "word": 3253351823,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 72,
-    "word": 3240104960,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 73,
-    "word": 3240104960,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 74,
-    "word": 3240449349,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 75,
-    "word": 3240449349,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 76,
-    "word": 3240654247,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 77,
-    "word": 3240654247,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 78,
-    "word": 3241113575,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 79,
-    "word": 3241113575,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 80,
-    "word": 3240105509,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 81,
-    "word": 3240105509,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 82,
-    "word": 3241022497,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 83,
-    "word": 3241022497,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 84,
-    "word": 3240384096,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 85,
-    "word": 3240384096,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 86,
-    "word": 3240236416,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 87,
-    "word": 3240236416,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 88,
-    "word": 3240776737,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 89,
-    "word": 3240776737,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 90,
-    "word": 3241023173,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 91,
-    "word": 3241023173,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 92,
-    "word": 3240195362,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 93,
-    "word": 3240195362,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 94,
-    "word": 3240834439,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 95,
-    "word": 3240834439,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 96,
-    "word": 3243249696,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 97,
-    "word": 3243249696,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 98,
-    "word": 3243595109,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 99,
-    "word": 3243595109,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 100,
-    "word": 3243802023,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 101,
-    "word": 3243802023,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 102,
-    "word": 3244261351,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 103,
-    "word": 3244261351,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 104,
-    "word": 3243253285,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 105,
-    "word": 3243253285,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 106,
-    "word": 3244168225,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 107,
-    "word": 3244168225,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 108,
-    "word": 3243529824,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 109,
-    "word": 3243529824,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 110,
-    "word": 3243383200,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 111,
-    "word": 3243383200,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 112,
-    "word": 3243923489,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 113,
-    "word": 3243923489,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 114,
-    "word": 3244169957,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 115,
-    "word": 3244169957,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 116,
-    "word": 3243341090,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 117,
-    "word": 3243341090,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 118,
-    "word": 3243981223,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 119,
-    "word": 3243981223,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 120,
-    "word": 3248493568,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 121,
-    "word": 3248493568,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 122,
-    "word": 3249820997,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 123,
-    "word": 3249820997,
-    "asmText": "sdot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 124,
-    "word": 3249042823,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 125,
-    "word": 3249042823,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 126,
-    "word": 3250485191,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 127,
-    "word": 3250485191,
-    "asmText": "sdot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 128,
-    "word": 3249542661,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 129,
-    "word": 3249542661,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 130,
-    "word": 3250459649,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 131,
-    "word": 3250459649,
-    "asmText": "sdot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 132,
-    "word": 3249821248,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 133,
-    "word": 3249821248,
-    "asmText": "sdot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 134,
-    "word": 3248625024,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 135,
-    "word": 3248625024,
-    "asmText": "sdot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 136,
-    "word": 3250213889,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 137,
-    "word": 3250213889,
-    "asmText": "sdot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 138,
-    "word": 3250460357,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 139,
-    "word": 3250460357,
-    "asmText": "sdot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 140,
-    "word": 3248518402,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 141,
-    "word": 3248518402,
-    "asmText": "sdot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 142,
-    "word": 3249157511,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 143,
-    "word": 3249157511,
-    "asmText": "sdot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 144,
-    "word": 3244299264,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 145,
-    "word": 3244299264,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 146,
-    "word": 3244643653,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 147,
-    "word": 3244643653,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 148,
-    "word": 3244848551,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 149,
-    "word": 3244848551,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 150,
-    "word": 3245307879,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 151,
-    "word": 3245307879,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 152,
-    "word": 3244299813,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 153,
-    "word": 3244299813,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 154,
-    "word": 3245216801,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 155,
-    "word": 3245216801,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 156,
-    "word": 3244578400,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 157,
-    "word": 3244578400,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 158,
-    "word": 3244430720,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 159,
-    "word": 3244430720,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 160,
-    "word": 3244971041,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 161,
-    "word": 3244971041,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 162,
-    "word": 3245217477,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 163,
-    "word": 3245217477,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 164,
-    "word": 3244389666,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 165,
-    "word": 3244389666,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 166,
-    "word": 3245028743,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 167,
-    "word": 3245028743,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 168,
-    "word": 3251634184,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 169,
-    "word": 3251634184,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 170,
-    "word": 3251979597,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 171,
-    "word": 3251979597,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 172,
-    "word": 3252184463,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 173,
-    "word": 3252184463,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 174,
-    "word": 3252643791,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 175,
-    "word": 3252643791,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 176,
-    "word": 3251635725,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 177,
-    "word": 3251635725,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 178,
-    "word": 3252552713,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 179,
-    "word": 3252552713,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 180,
-    "word": 3251914312,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 181,
-    "word": 3251914312,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 182,
-    "word": 3251765640,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 183,
-    "word": 3251765640,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 184,
-    "word": 3252305929,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 185,
-    "word": 3252305929,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 186,
-    "word": 3252552397,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 187,
-    "word": 3252552397,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 188,
-    "word": 3251725578,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 189,
-    "word": 3251725578,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 190,
-    "word": 3252363663,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 191,
-    "word": 3252363663,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 192,
-    "word": 3252687872,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 193,
-    "word": 3252687872,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 194,
-    "word": 3254015301,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 195,
-    "word": 3254015301,
-    "asmText": "sdot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 196,
-    "word": 3253237127,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 197,
-    "word": 3253237127,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 198,
-    "word": 3254679495,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 199,
-    "word": 3254679495,
-    "asmText": "sdot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 200,
-    "word": 3253736965,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 201,
-    "word": 3253736965,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 202,
-    "word": 3254653953,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 203,
-    "word": 3254653953,
-    "asmText": "sdot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 204,
-    "word": 3254015552,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 205,
-    "word": 3254015552,
-    "asmText": "sdot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 206,
-    "word": 3252819328,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 207,
-    "word": 3252819328,
-    "asmText": "sdot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 208,
-    "word": 3254408193,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 209,
-    "word": 3254408193,
-    "asmText": "sdot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 210,
-    "word": 3254654661,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 211,
-    "word": 3254654661,
-    "asmText": "sdot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 212,
-    "word": 3252712706,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 213,
-    "word": 3252712706,
-    "asmText": "sdot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 214,
-    "word": 3253351815,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 215,
-    "word": 3253351815,
-    "asmText": "sdot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 216,
-    "word": 3245347848,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 217,
-    "word": 3245347848,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 218,
-    "word": 3245692237,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 219,
-    "word": 3245692237,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 220,
-    "word": 3245897135,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 221,
-    "word": 3245897135,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 222,
-    "word": 3246356463,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 223,
-    "word": 3246356463,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 224,
-    "word": 3245348397,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 225,
-    "word": 3245348397,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 226,
-    "word": 3246265385,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 227,
-    "word": 3246265385,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 228,
-    "word": 3245626984,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 229,
-    "word": 3245626984,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 230,
-    "word": 3245479304,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 231,
-    "word": 3245479304,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 232,
-    "word": 3246019625,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 233,
-    "word": 3246019625,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 234,
-    "word": 3246266061,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 235,
-    "word": 3246266061,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 236,
-    "word": 3245438250,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 237,
-    "word": 3245438250,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 238,
-    "word": 3246077327,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 239,
-    "word": 3246077327,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "sdot_za32_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 240,
-    "word": 3243282432,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 241,
-    "word": 3243282432,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 242,
-    "word": 3243627781,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 243,
-    "word": 3243627781,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 244,
-    "word": 3243834759,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 245,
-    "word": 3243834759,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 246,
-    "word": 3244294023,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 247,
-    "word": 3244294023,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 248,
-    "word": 3243286021,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 249,
-    "word": 3243286021,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 250,
-    "word": 3244200961,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 251,
-    "word": 3244200961,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 252,
-    "word": 3243562496,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 253,
-    "word": 3243562496,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 254,
-    "word": 3243415936,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 255,
-    "word": 3243415936,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 256,
-    "word": 3243956225,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 257,
-    "word": 3243956225,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 258,
-    "word": 3244202629,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 259,
-    "word": 3244202629,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 260,
-    "word": 3243373826,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 261,
-    "word": 3243373826,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 262,
-    "word": 3244013959,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 263,
-    "word": 3244013959,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
-    "encodingFile": "sdot_za32_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 264,
-    "word": 3252753416,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 265,
-    "word": 3252753416,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 266,
-    "word": 3254080781,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 267,
-    "word": 3254080781,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 268,
-    "word": 3253302671,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 269,
-    "word": 3253302671,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 270,
-    "word": 3254613903,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 271,
-    "word": 3254613903,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 272,
-    "word": 3253802509,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 273,
-    "word": 3253802509,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 274,
-    "word": 3254588425,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 275,
-    "word": 3254588425,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 276,
-    "word": 3254081032,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 277,
-    "word": 3254081032,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 278,
-    "word": 3252753800,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 279,
-    "word": 3252753800,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 280,
-    "word": 3254342665,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 281,
-    "word": 3254342665,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 282,
-    "word": 3254589069,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 283,
-    "word": 3254589069,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 284,
-    "word": 3252778250,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 285,
-    "word": 3252778250,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 286,
-    "word": 3253286287,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 287,
-    "word": 3253286287,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za32_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 288,
-    "word": 3241153536,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 289,
-    "word": 3241153536,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 290,
-    "word": 3241497925,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 291,
-    "word": 3241497925,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 292,
-    "word": 3241702823,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 293,
-    "word": 3241702823,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 294,
-    "word": 3242162151,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 295,
-    "word": 3242162151,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 296,
-    "word": 3241154085,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 297,
-    "word": 3241154085,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 298,
-    "word": 3242071073,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 299,
-    "word": 3242071073,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 300,
-    "word": 3241432672,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 301,
-    "word": 3241432672,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 302,
-    "word": 3241284992,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 303,
-    "word": 3241284992,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 304,
-    "word": 3241825313,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 305,
-    "word": 3241825313,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 306,
-    "word": 3242071749,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 307,
-    "word": 3242071749,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 308,
-    "word": 3241243938,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 309,
-    "word": 3241243938,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 310,
-    "word": 3241883015,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 311,
-    "word": 3241883015,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 312,
-    "word": 3243282464,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 313,
-    "word": 3243282464,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 314,
-    "word": 3243627813,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 315,
-    "word": 3243627813,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 316,
-    "word": 3243834791,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 317,
-    "word": 3243834791,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 318,
-    "word": 3244294055,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 319,
-    "word": 3244294055,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 320,
-    "word": 3243286053,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 321,
-    "word": 3243286053,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 322,
-    "word": 3244200993,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 323,
-    "word": 3244200993,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 324,
-    "word": 3243562528,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 325,
-    "word": 3243562528,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 326,
-    "word": 3243415968,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 327,
-    "word": 3243415968,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 328,
-    "word": 3243956257,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 329,
-    "word": 3243956257,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 330,
-    "word": 3244202661,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 331,
-    "word": 3244202661,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 332,
-    "word": 3243373858,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 333,
-    "word": 3243373858,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 334,
-    "word": 3244013991,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 335,
-    "word": 3244013991,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 336,
-    "word": 3248559104,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 337,
-    "word": 3248559104,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 338,
-    "word": 3249886469,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 339,
-    "word": 3249886469,
-    "asmText": "sdot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 340,
-    "word": 3249108359,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 341,
-    "word": 3249108359,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 342,
-    "word": 3250419591,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 343,
-    "word": 3250419591,
-    "asmText": "sdot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 344,
-    "word": 3249608197,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 345,
-    "word": 3249608197,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 346,
-    "word": 3250394113,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 347,
-    "word": 3250394113,
-    "asmText": "sdot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 348,
-    "word": 3249886720,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 349,
-    "word": 3249886720,
-    "asmText": "sdot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 350,
-    "word": 3248559488,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 351,
-    "word": 3248559488,
-    "asmText": "sdot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 352,
-    "word": 3250148353,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 353,
-    "word": 3250148353,
-    "asmText": "sdot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 354,
-    "word": 3250394757,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 355,
-    "word": 3250394757,
-    "asmText": "sdot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 356,
-    "word": 3248583938,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 357,
-    "word": 3248583938,
-    "asmText": "sdot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 358,
-    "word": 3249091975,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 359,
-    "word": 3249091975,
-    "asmText": "sdot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 360,
-    "word": 3245347840,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 361,
-    "word": 3245347840,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 362,
-    "word": 3245692229,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 363,
-    "word": 3245692229,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 364,
-    "word": 3245897127,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 365,
-    "word": 3245897127,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 366,
-    "word": 3246356455,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 367,
-    "word": 3246356455,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 368,
-    "word": 3245348389,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 369,
-    "word": 3245348389,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 370,
-    "word": 3246265377,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 371,
-    "word": 3246265377,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 372,
-    "word": 3245626976,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 373,
-    "word": 3245626976,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 374,
-    "word": 3245479296,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 375,
-    "word": 3245479296,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 376,
-    "word": 3246019617,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 377,
-    "word": 3246019617,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 378,
-    "word": 3246266053,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 379,
-    "word": 3246266053,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 380,
-    "word": 3245438242,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 381,
-    "word": 3245438242,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 382,
-    "word": 3246077319,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 383,
-    "word": 3246077319,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "sdot_za_zzv.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 384,
-    "word": 3251666952,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 385,
-    "word": 3251666952,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 386,
-    "word": 3252012301,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 387,
-    "word": 3252012301,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 388,
-    "word": 3252217231,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 389,
-    "word": 3252217231,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 390,
-    "word": 3252676495,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 391,
-    "word": 3252676495,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 392,
-    "word": 3251668493,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 393,
-    "word": 3251668493,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 394,
-    "word": 3252585481,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 395,
-    "word": 3252585481,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 396,
-    "word": 3251947016,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 397,
-    "word": 3251947016,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 398,
-    "word": 3251798408,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 399,
-    "word": 3251798408,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 400,
-    "word": 3252338697,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 401,
-    "word": 3252338697,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 402,
-    "word": 3252585101,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 403,
-    "word": 3252585101,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 404,
-    "word": 3251758346,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 405,
-    "word": 3251758346,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 406,
-    "word": 3252396431,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 407,
-    "word": 3252396431,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
-    "encodingFile": "sdot_za_zzi.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 408,
-    "word": 3252753408,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 409,
-    "word": 3252753408,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 410,
-    "word": 3254080773,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 411,
-    "word": 3254080773,
-    "asmText": "sdot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 412,
-    "word": 3253302663,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 413,
-    "word": 3253302663,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 414,
-    "word": 3254613895,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 415,
-    "word": 3254613895,
-    "asmText": "sdot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 416,
-    "word": 3253802501,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 417,
-    "word": 3253802501,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 418,
-    "word": 3254588417,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 419,
-    "word": 3254588417,
-    "asmText": "sdot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 420,
-    "word": 3254081024,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 421,
-    "word": 3254081024,
-    "asmText": "sdot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 422,
-    "word": 3252753792,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 423,
-    "word": 3252753792,
-    "asmText": "sdot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 424,
-    "word": 3254342657,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 425,
-    "word": 3254342657,
-    "asmText": "sdot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 426,
-    "word": 3254589061,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 427,
-    "word": 3254589061,
-    "asmText": "sdot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 428,
-    "word": 3252778242,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 429,
-    "word": 3252778242,
-    "asmText": "sdot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 430,
-    "word": 3253286279,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/sdot.s.yaml",
-    "caseIndex": 431,
-    "word": 3253286279,
-    "asmText": "sdot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "sdot_za_zzw.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
     "sourceFile": "SME2/sel.s.yaml",
     "caseIndex": 0,
     "word": 3244326912,
@@ -226439,5058 +234457,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "mnemonic": "UCVTF",
     "features": [
       "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 0,
-    "word": 3244299288,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 1,
-    "word": 3244299288,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 2,
-    "word": 3244643677,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 3,
-    "word": 3244643677,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 4,
-    "word": 3244848575,
-    "asmText": "udot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 5,
-    "word": 3244848575,
-    "asmText": "udot za.s[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 6,
-    "word": 3245307903,
-    "asmText": "udot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 7,
-    "word": 3245307903,
-    "asmText": "udot za.s[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 8,
-    "word": 3244299837,
-    "asmText": "udot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 9,
-    "word": 3244299837,
-    "asmText": "udot za.s[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 10,
-    "word": 3245216825,
-    "asmText": "udot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 11,
-    "word": 3245216825,
-    "asmText": "udot za.s[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 12,
-    "word": 3244578424,
-    "asmText": "udot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 13,
-    "word": 3244578424,
-    "asmText": "udot za.s[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 14,
-    "word": 3244430744,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 15,
-    "word": 3244430744,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 16,
-    "word": 3244971065,
-    "asmText": "udot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 17,
-    "word": 3244971065,
-    "asmText": "udot za.s[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 18,
-    "word": 3245217501,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 19,
-    "word": 3245217501,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 20,
-    "word": 3244389690,
-    "asmText": "udot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 21,
-    "word": 3244389690,
-    "asmText": "udot za.s[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 22,
-    "word": 3245028767,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 23,
-    "word": 3245028767,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 24,
-    "word": 3243249680,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 25,
-    "word": 3243249680,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 26,
-    "word": 3243595093,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 27,
-    "word": 3243595093,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 28,
-    "word": 3243802007,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 29,
-    "word": 3243802007,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, z8.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 30,
-    "word": 3244261335,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 31,
-    "word": 3244261335,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, z15.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 32,
-    "word": 3243253269,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 33,
-    "word": 3243253269,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, z0.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 34,
-    "word": 3244168209,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 35,
-    "word": 3244168209,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 36,
-    "word": 3243529808,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 37,
-    "word": 3243529808,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 38,
-    "word": 3243383184,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 39,
-    "word": 3243383184,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, z2.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 40,
-    "word": 3243923473,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 41,
-    "word": 3243923473,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, z10.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 42,
-    "word": 3244169941,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 43,
-    "word": 3244169941,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, z14.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 44,
-    "word": 3243341074,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 45,
-    "word": 3243341074,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 46,
-    "word": 3243981207,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 47,
-    "word": 3243981207,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, z11.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 48,
-    "word": 3252687896,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 49,
-    "word": 3252687896,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 50,
-    "word": 3254015325,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 51,
-    "word": 3254015325,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 52,
-    "word": 3253237151,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 53,
-    "word": 3253237151,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 54,
-    "word": 3254679519,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 55,
-    "word": 3254679519,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 56,
-    "word": 3253736989,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 57,
-    "word": 3253736989,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 58,
-    "word": 3254653977,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 59,
-    "word": 3254653977,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 60,
-    "word": 3254015576,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 61,
-    "word": 3254015576,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 62,
-    "word": 3252819352,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 63,
-    "word": 3252819352,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 64,
-    "word": 3254408217,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 65,
-    "word": 3254408217,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 66,
-    "word": 3254654685,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 67,
-    "word": 3254654685,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 68,
-    "word": 3252712730,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 69,
-    "word": 3252712730,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 70,
-    "word": 3253351839,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 71,
-    "word": 3253351839,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 72,
-    "word": 3243249712,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 73,
-    "word": 3243249712,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 74,
-    "word": 3243595125,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 75,
-    "word": 3243595125,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 76,
-    "word": 3243802039,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 77,
-    "word": 3243802039,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, z8.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 78,
-    "word": 3244261367,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 79,
-    "word": 3244261367,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, z15.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 80,
-    "word": 3243253301,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 81,
-    "word": 3243253301,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, z0.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 82,
-    "word": 3244168241,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 83,
-    "word": 3244168241,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, z14.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 84,
-    "word": 3243529840,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 85,
-    "word": 3243529840,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, z4.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 86,
-    "word": 3243383216,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 87,
-    "word": 3243383216,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 88,
-    "word": 3243923505,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 89,
-    "word": 3243923505,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, z10.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 90,
-    "word": 3244169973,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 91,
-    "word": 3244169973,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 92,
-    "word": 3243341106,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 93,
-    "word": 3243341106,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, z1.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 94,
-    "word": 3243981239,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 95,
-    "word": 3243981239,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 96,
-    "word": 3251634200,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 97,
-    "word": 3251634200,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 98,
-    "word": 3251979613,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 99,
-    "word": 3251979613,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 100,
-    "word": 3252184479,
-    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 101,
-    "word": 3252184479,
-    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, z8.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 102,
-    "word": 3252643807,
-    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 103,
-    "word": 3252643807,
-    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, z15.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 104,
-    "word": 3251635741,
-    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 105,
-    "word": 3251635741,
-    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, z0.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 106,
-    "word": 3252552729,
-    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 107,
-    "word": 3252552729,
-    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, z14.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 108,
-    "word": 3251914328,
-    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 109,
-    "word": 3251914328,
-    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, z4.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 110,
-    "word": 3251765656,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 111,
-    "word": 3251765656,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 112,
-    "word": 3252305945,
-    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 113,
-    "word": 3252305945,
-    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, z10.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 114,
-    "word": 3252552413,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 115,
-    "word": 3252552413,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 116,
-    "word": 3251725594,
-    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 117,
-    "word": 3251725594,
-    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, z1.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 118,
-    "word": 3252363679,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 119,
-    "word": 3252363679,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 120,
-    "word": 3245347864,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 121,
-    "word": 3245347864,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 122,
-    "word": 3245692253,
-    "asmText": "udot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 123,
-    "word": 3245692253,
-    "asmText": "udot za.s[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 124,
-    "word": 3245897151,
-    "asmText": "udot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 125,
-    "word": 3245897151,
-    "asmText": "udot za.s[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 126,
-    "word": 3246356479,
-    "asmText": "udot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 127,
-    "word": 3246356479,
-    "asmText": "udot za.s[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 128,
-    "word": 3245348413,
-    "asmText": "udot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 129,
-    "word": 3245348413,
-    "asmText": "udot za.s[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 130,
-    "word": 3246265401,
-    "asmText": "udot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 131,
-    "word": 3246265401,
-    "asmText": "udot za.s[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 132,
-    "word": 3245627000,
-    "asmText": "udot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 133,
-    "word": 3245627000,
-    "asmText": "udot za.s[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 134,
-    "word": 3245479320,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 135,
-    "word": 3245479320,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 136,
-    "word": 3246019641,
-    "asmText": "udot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 137,
-    "word": 3246019641,
-    "asmText": "udot za.s[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 138,
-    "word": 3246266077,
-    "asmText": "udot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 139,
-    "word": 3246266077,
-    "asmText": "udot za.s[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 140,
-    "word": 3245438266,
-    "asmText": "udot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 141,
-    "word": 3245438266,
-    "asmText": "udot za.s[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 142,
-    "word": 3246077343,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 143,
-    "word": 3246077343,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "udot_za32_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 144,
-    "word": 3243282448,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 145,
-    "word": 3243282448,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 146,
-    "word": 3243627797,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 147,
-    "word": 3243627797,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 148,
-    "word": 3243834775,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 149,
-    "word": 3243834775,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, z8.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 150,
-    "word": 3244294039,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 151,
-    "word": 3244294039,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, z15.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 152,
-    "word": 3243286037,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 153,
-    "word": 3243286037,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, z0.h[3]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 154,
-    "word": 3244200977,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 155,
-    "word": 3244200977,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 156,
-    "word": 3243562512,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 157,
-    "word": 3243562512,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 158,
-    "word": 3243415952,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 159,
-    "word": 3243415952,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, z2.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 160,
-    "word": 3243956241,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 161,
-    "word": 3243956241,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, z10.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 162,
-    "word": 3244202645,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 163,
-    "word": 3244202645,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, z14.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 164,
-    "word": 3243373842,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 165,
-    "word": 3243373842,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 166,
-    "word": 3244013975,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 167,
-    "word": 3244013975,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, z11.h[2]",
-    "encodingFile": "udot_za32_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 168,
-    "word": 3252753432,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 169,
-    "word": 3252753432,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 170,
-    "word": 3254080797,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 171,
-    "word": 3254080797,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 172,
-    "word": 3253302687,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 173,
-    "word": 3253302687,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 174,
-    "word": 3254613919,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 175,
-    "word": 3254613919,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 176,
-    "word": 3253802525,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 177,
-    "word": 3253802525,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 178,
-    "word": 3254588441,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 179,
-    "word": 3254588441,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 180,
-    "word": 3254081048,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 181,
-    "word": 3254081048,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 182,
-    "word": 3252753816,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 183,
-    "word": 3252753816,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 184,
-    "word": 3254342681,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 185,
-    "word": 3254342681,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 186,
-    "word": 3254589085,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 187,
-    "word": 3254589085,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 188,
-    "word": 3252778266,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 189,
-    "word": 3252778266,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 190,
-    "word": 3253286303,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 191,
-    "word": 3253286303,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za32_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 192,
-    "word": 3243282480,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 193,
-    "word": 3243282480,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 194,
-    "word": 3243627829,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 195,
-    "word": 3243627829,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, z5.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 196,
-    "word": 3243834807,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 197,
-    "word": 3243834807,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, z8.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 198,
-    "word": 3244294071,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 199,
-    "word": 3244294071,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, z15.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 200,
-    "word": 3243286069,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 201,
-    "word": 3243286069,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, z0.b[3]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 202,
-    "word": 3244201009,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 203,
-    "word": 3244201009,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, z14.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 204,
-    "word": 3243562544,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 205,
-    "word": 3243562544,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, z4.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 206,
-    "word": 3243415984,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 207,
-    "word": 3243415984,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 208,
-    "word": 3243956273,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 209,
-    "word": 3243956273,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, z10.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 210,
-    "word": 3244202677,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 211,
-    "word": 3244202677,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, z14.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 212,
-    "word": 3243373874,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 213,
-    "word": 3243373874,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, z1.b[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 214,
-    "word": 3244014007,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 215,
-    "word": 3244014007,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b[2]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 216,
-    "word": 3251666968,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 217,
-    "word": 3251666968,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 218,
-    "word": 3252012317,
-    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 219,
-    "word": 3252012317,
-    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, z5.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 220,
-    "word": 3252217247,
-    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 221,
-    "word": 3252217247,
-    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, z8.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 222,
-    "word": 3252676511,
-    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 223,
-    "word": 3252676511,
-    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, z15.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 224,
-    "word": 3251668509,
-    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 225,
-    "word": 3251668509,
-    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, z0.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 226,
-    "word": 3252585497,
-    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 227,
-    "word": 3252585497,
-    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, z14.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 228,
-    "word": 3251947032,
-    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 229,
-    "word": 3251947032,
-    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, z4.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 230,
-    "word": 3251798424,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 231,
-    "word": 3251798424,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 232,
-    "word": 3252338713,
-    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 233,
-    "word": 3252338713,
-    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, z10.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 234,
-    "word": 3252585117,
-    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 235,
-    "word": 3252585117,
-    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, z14.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 236,
-    "word": 3251758362,
-    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 237,
-    "word": 3251758362,
-    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, z1.h[1]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 238,
-    "word": 3252396447,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 239,
-    "word": 3252396447,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h[0]",
-    "encodingFile": "udot_za_zzi.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 240,
-    "word": 3240104976,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 241,
-    "word": 3240104976,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 242,
-    "word": 3240449365,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 243,
-    "word": 3240449365,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, z5.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 244,
-    "word": 3240654263,
-    "asmText": "udot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 245,
-    "word": 3240654263,
-    "asmText": "udot za.s[w11, 7, vgx2], { z13.b, z14.b }, z8.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 246,
-    "word": 3241113591,
-    "asmText": "udot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 247,
-    "word": 3241113591,
-    "asmText": "udot za.s[w11, 7, vgx2], { z31.b, z0.b }, z15.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 248,
-    "word": 3240105525,
-    "asmText": "udot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 249,
-    "word": 3240105525,
-    "asmText": "udot za.s[w8, 5, vgx2], { z17.b, z18.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 250,
-    "word": 3241022513,
-    "asmText": "udot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 251,
-    "word": 3241022513,
-    "asmText": "udot za.s[w8, 1, vgx2], { z1.b, z2.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 252,
-    "word": 3240384112,
-    "asmText": "udot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 253,
-    "word": 3240384112,
-    "asmText": "udot za.s[w10, 0, vgx2], { z19.b, z20.b }, z4.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 254,
-    "word": 3240236432,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 255,
-    "word": 3240236432,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, z2.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 256,
-    "word": 3240776753,
-    "asmText": "udot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 257,
-    "word": 3240776753,
-    "asmText": "udot za.s[w10, 1, vgx2], { z1.b, z2.b }, z10.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 258,
-    "word": 3241023189,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 259,
-    "word": 3241023189,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 260,
-    "word": 3240195378,
-    "asmText": "udot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 261,
-    "word": 3240195378,
-    "asmText": "udot za.s[w11, 2, vgx2], { z9.b, z10.b }, z1.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 262,
-    "word": 3240834455,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 263,
-    "word": 3240834455,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, z11.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 264,
-    "word": 3248493584,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 265,
-    "word": 3248493584,
-    "asmText": "udot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 266,
-    "word": 3249821013,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 267,
-    "word": 3249821013,
-    "asmText": "udot za.s[w10, 5, vgx2], { z10.b, z11.b }, { z20.b, z21.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 268,
-    "word": 3249042839,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 269,
-    "word": 3249042839,
-    "asmText": "udot za.s[w11, 7, vgx2], { z12.b, z13.b }, { z8.b, z9.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 270,
-    "word": 3250485207,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 271,
-    "word": 3250485207,
-    "asmText": "udot za.s[w11, 7, vgx2], { z30.b, z31.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 272,
-    "word": 3249542677,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 273,
-    "word": 3249542677,
-    "asmText": "udot za.s[w8, 5, vgx2], { z16.b, z17.b }, { z16.b, z17.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 274,
-    "word": 3250459665,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 275,
-    "word": 3250459665,
-    "asmText": "udot za.s[w8, 1, vgx2], { z0.b, z1.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 276,
-    "word": 3249821264,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 277,
-    "word": 3249821264,
-    "asmText": "udot za.s[w10, 0, vgx2], { z18.b, z19.b }, { z20.b, z21.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 278,
-    "word": 3248625040,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 279,
-    "word": 3248625040,
-    "asmText": "udot za.s[w8, 0, vgx2], { z12.b, z13.b }, { z2.b, z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 280,
-    "word": 3250213905,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 281,
-    "word": 3250213905,
-    "asmText": "udot za.s[w10, 1, vgx2], { z0.b, z1.b }, { z26.b, z27.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 282,
-    "word": 3250460373,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 283,
-    "word": 3250460373,
-    "asmText": "udot za.s[w8, 5, vgx2], { z22.b, z23.b }, { z30.b, z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 284,
-    "word": 3248518418,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 285,
-    "word": 3248518418,
-    "asmText": "udot za.s[w11, 2, vgx2], { z8.b, z9.b }, { z0.b, z1.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 286,
-    "word": 3249157527,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 287,
-    "word": 3249157527,
-    "asmText": "udot za.s[w9, 7, vgx2], { z12.b, z13.b }, { z10.b, z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 288,
-    "word": 3244299280,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 289,
-    "word": 3244299280,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 290,
-    "word": 3244643669,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 291,
-    "word": 3244643669,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, z5.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 292,
-    "word": 3244848567,
-    "asmText": "udot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 293,
-    "word": 3244848567,
-    "asmText": "udot za.d[w11, 7, vgx2], { z13.h, z14.h }, z8.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 294,
-    "word": 3245307895,
-    "asmText": "udot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 295,
-    "word": 3245307895,
-    "asmText": "udot za.d[w11, 7, vgx2], { z31.h, z0.h }, z15.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 296,
-    "word": 3244299829,
-    "asmText": "udot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 297,
-    "word": 3244299829,
-    "asmText": "udot za.d[w8, 5, vgx2], { z17.h, z18.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 298,
-    "word": 3245216817,
-    "asmText": "udot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 299,
-    "word": 3245216817,
-    "asmText": "udot za.d[w8, 1, vgx2], { z1.h, z2.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 300,
-    "word": 3244578416,
-    "asmText": "udot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 301,
-    "word": 3244578416,
-    "asmText": "udot za.d[w10, 0, vgx2], { z19.h, z20.h }, z4.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 302,
-    "word": 3244430736,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 303,
-    "word": 3244430736,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, z2.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 304,
-    "word": 3244971057,
-    "asmText": "udot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 305,
-    "word": 3244971057,
-    "asmText": "udot za.d[w10, 1, vgx2], { z1.h, z2.h }, z10.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 306,
-    "word": 3245217493,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 307,
-    "word": 3245217493,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 308,
-    "word": 3244389682,
-    "asmText": "udot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 309,
-    "word": 3244389682,
-    "asmText": "udot za.d[w11, 2, vgx2], { z9.h, z10.h }, z1.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 310,
-    "word": 3245028759,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 311,
-    "word": 3245028759,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 312,
-    "word": 3245028759,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, z11.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 313,
-    "word": 3252687888,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 314,
-    "word": 3252687888,
-    "asmText": "udot za.d[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 315,
-    "word": 3254015317,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 316,
-    "word": 3254015317,
-    "asmText": "udot za.d[w10, 5, vgx2], { z10.h, z11.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 317,
-    "word": 3253237143,
-    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 318,
-    "word": 3253237143,
-    "asmText": "udot za.d[w11, 7, vgx2], { z12.h, z13.h }, { z8.h, z9.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 319,
-    "word": 3254679511,
-    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 320,
-    "word": 3254679511,
-    "asmText": "udot za.d[w11, 7, vgx2], { z30.h, z31.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 321,
-    "word": 3253736981,
-    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 322,
-    "word": 3253736981,
-    "asmText": "udot za.d[w8, 5, vgx2], { z16.h, z17.h }, { z16.h, z17.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 323,
-    "word": 3254653969,
-    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 324,
-    "word": 3254653969,
-    "asmText": "udot za.d[w8, 1, vgx2], { z0.h, z1.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 325,
-    "word": 3254015568,
-    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 326,
-    "word": 3254015568,
-    "asmText": "udot za.d[w10, 0, vgx2], { z18.h, z19.h }, { z20.h, z21.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 327,
-    "word": 3252819344,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 328,
-    "word": 3252819344,
-    "asmText": "udot za.d[w8, 0, vgx2], { z12.h, z13.h }, { z2.h, z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 329,
-    "word": 3254408209,
-    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 330,
-    "word": 3254408209,
-    "asmText": "udot za.d[w10, 1, vgx2], { z0.h, z1.h }, { z26.h, z27.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 331,
-    "word": 3254654677,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 332,
-    "word": 3254654677,
-    "asmText": "udot za.d[w8, 5, vgx2], { z22.h, z23.h }, { z30.h, z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 333,
-    "word": 3252712722,
-    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 334,
-    "word": 3252712722,
-    "asmText": "udot za.d[w11, 2, vgx2], { z8.h, z9.h }, { z0.h, z1.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 335,
-    "word": 3253351831,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 336,
-    "word": 3253351831,
-    "asmText": "udot za.d[w9, 7, vgx2], { z12.h, z13.h }, { z10.h, z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 337,
-    "word": 3241153552,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 338,
-    "word": 3241153552,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 339,
-    "word": 3241497941,
-    "asmText": "udot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 340,
-    "word": 3241497941,
-    "asmText": "udot za.s[w10, 5, vgx4], { z10.b - z13.b }, z5.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 341,
-    "word": 3241702839,
-    "asmText": "udot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 342,
-    "word": 3241702839,
-    "asmText": "udot za.s[w11, 7, vgx4], { z13.b - z16.b }, z8.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 343,
-    "word": 3242162167,
-    "asmText": "udot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 344,
-    "word": 3242162167,
-    "asmText": "udot za.s[w11, 7, vgx4], { z31.b, z0.b, z1.b, z2.b }, z15.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 345,
-    "word": 3241154101,
-    "asmText": "udot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 346,
-    "word": 3241154101,
-    "asmText": "udot za.s[w8, 5, vgx4], { z17.b - z20.b }, z0.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 347,
-    "word": 3242071089,
-    "asmText": "udot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 348,
-    "word": 3242071089,
-    "asmText": "udot za.s[w8, 1, vgx4], { z1.b - z4.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 349,
-    "word": 3241432688,
-    "asmText": "udot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 350,
-    "word": 3241432688,
-    "asmText": "udot za.s[w10, 0, vgx4], { z19.b - z22.b }, z4.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 351,
-    "word": 3241285008,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 352,
-    "word": 3241285008,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, z2.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 353,
-    "word": 3241825329,
-    "asmText": "udot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 354,
-    "word": 3241825329,
-    "asmText": "udot za.s[w10, 1, vgx4], { z1.b - z4.b }, z10.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 355,
-    "word": 3242071765,
-    "asmText": "udot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 356,
-    "word": 3242071765,
-    "asmText": "udot za.s[w8, 5, vgx4], { z22.b - z25.b }, z14.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 357,
-    "word": 3241243954,
-    "asmText": "udot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 358,
-    "word": 3241243954,
-    "asmText": "udot za.s[w11, 2, vgx4], { z9.b - z12.b }, z1.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 359,
-    "word": 3241883031,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 360,
-    "word": 3241883031,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, z11.b",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 361,
-    "word": 3248559120,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 362,
-    "word": 3248559120,
-    "asmText": "udot za.s[w8, 0, vgx4], { z0.b - z3.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 363,
-    "word": 3249886485,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 364,
-    "word": 3249886485,
-    "asmText": "udot za.s[w10, 5, vgx4], { z8.b - z11.b }, { z20.b - z23.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 365,
-    "word": 3249108375,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 366,
-    "word": 3249108375,
-    "asmText": "udot za.s[w11, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 367,
-    "word": 3250419607,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 368,
-    "word": 3250419607,
-    "asmText": "udot za.s[w11, 7, vgx4], { z28.b - z31.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 369,
-    "word": 3249608213,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 370,
-    "word": 3249608213,
-    "asmText": "udot za.s[w8, 5, vgx4], { z16.b - z19.b }, { z16.b - z19.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 371,
-    "word": 3250394129,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 372,
-    "word": 3250394129,
-    "asmText": "udot za.s[w8, 1, vgx4], { z0.b - z3.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 373,
-    "word": 3249886736,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 374,
-    "word": 3249886736,
-    "asmText": "udot za.s[w10, 0, vgx4], { z16.b - z19.b }, { z20.b - z23.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 375,
-    "word": 3248559504,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 376,
-    "word": 3248559504,
-    "asmText": "udot za.s[w8, 0, vgx4], { z12.b - z15.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 377,
-    "word": 3250148369,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 378,
-    "word": 3250148369,
-    "asmText": "udot za.s[w10, 1, vgx4], { z0.b - z3.b }, { z24.b - z27.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 379,
-    "word": 3250394773,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 380,
-    "word": 3250394773,
-    "asmText": "udot za.s[w8, 5, vgx4], { z20.b - z23.b }, { z28.b - z31.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 381,
-    "word": 3248583954,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 382,
-    "word": 3248583954,
-    "asmText": "udot za.s[w11, 2, vgx4], { z8.b - z11.b }, { z0.b - z3.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 383,
-    "word": 3249091991,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 384,
-    "word": 3249091991,
-    "asmText": "udot za.s[w9, 7, vgx4], { z12.b - z15.b }, { z8.b - z11.b }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 385,
-    "word": 3245347856,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 386,
-    "word": 3245347856,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 387,
-    "word": 3245692245,
-    "asmText": "udot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 388,
-    "word": 3245692245,
-    "asmText": "udot za.d[w10, 5, vgx4], { z10.h - z13.h }, z5.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 389,
-    "word": 3245897143,
-    "asmText": "udot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 390,
-    "word": 3245897143,
-    "asmText": "udot za.d[w11, 7, vgx4], { z13.h - z16.h }, z8.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 391,
-    "word": 3246356471,
-    "asmText": "udot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 392,
-    "word": 3246356471,
-    "asmText": "udot za.d[w11, 7, vgx4], { z31.h, z0.h, z1.h, z2.h }, z15.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 393,
-    "word": 3245348405,
-    "asmText": "udot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 394,
-    "word": 3245348405,
-    "asmText": "udot za.d[w8, 5, vgx4], { z17.h - z20.h }, z0.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 395,
-    "word": 3246265393,
-    "asmText": "udot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 396,
-    "word": 3246265393,
-    "asmText": "udot za.d[w8, 1, vgx4], { z1.h - z4.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 397,
-    "word": 3245626992,
-    "asmText": "udot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 398,
-    "word": 3245626992,
-    "asmText": "udot za.d[w10, 0, vgx4], { z19.h - z22.h }, z4.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 399,
-    "word": 3245479312,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 400,
-    "word": 3245479312,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, z2.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 401,
-    "word": 3246019633,
-    "asmText": "udot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 402,
-    "word": 3246019633,
-    "asmText": "udot za.d[w10, 1, vgx4], { z1.h - z4.h }, z10.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 403,
-    "word": 3246266069,
-    "asmText": "udot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 404,
-    "word": 3246266069,
-    "asmText": "udot za.d[w8, 5, vgx4], { z22.h - z25.h }, z14.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 405,
-    "word": 3245438258,
-    "asmText": "udot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 406,
-    "word": 3245438258,
-    "asmText": "udot za.d[w11, 2, vgx4], { z9.h - z12.h }, z1.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 407,
-    "word": 3246077335,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 408,
-    "word": 3246077335,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, z11.h",
-    "encodingFile": "udot_za_zzv.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 409,
-    "word": 3252753424,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 410,
-    "word": 3252753424,
-    "asmText": "udot za.d[w8, 0, vgx4], { z0.h - z3.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 411,
-    "word": 3254080789,
-    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 412,
-    "word": 3254080789,
-    "asmText": "udot za.d[w10, 5, vgx4], { z8.h - z11.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 413,
-    "word": 3253302679,
-    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 414,
-    "word": 3253302679,
-    "asmText": "udot za.d[w11, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 415,
-    "word": 3254613911,
-    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 416,
-    "word": 3254613911,
-    "asmText": "udot za.d[w11, 7, vgx4], { z28.h - z31.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 417,
-    "word": 3253802517,
-    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 418,
-    "word": 3253802517,
-    "asmText": "udot za.d[w8, 5, vgx4], { z16.h - z19.h }, { z16.h - z19.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 419,
-    "word": 3254588433,
-    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 420,
-    "word": 3254588433,
-    "asmText": "udot za.d[w8, 1, vgx4], { z0.h - z3.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 421,
-    "word": 3254081040,
-    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 422,
-    "word": 3254081040,
-    "asmText": "udot za.d[w10, 0, vgx4], { z16.h - z19.h }, { z20.h - z23.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 423,
-    "word": 3252753808,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 424,
-    "word": 3252753808,
-    "asmText": "udot za.d[w8, 0, vgx4], { z12.h - z15.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 425,
-    "word": 3254342673,
-    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 426,
-    "word": 3254342673,
-    "asmText": "udot za.d[w10, 1, vgx4], { z0.h - z3.h }, { z24.h - z27.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 427,
-    "word": 3254589077,
-    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 428,
-    "word": 3254589077,
-    "asmText": "udot za.d[w8, 5, vgx4], { z20.h - z23.h }, { z28.h - z31.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 429,
-    "word": 3252778258,
-    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 430,
-    "word": 3252778258,
-    "asmText": "udot za.d[w11, 2, vgx4], { z8.h - z11.h }, { z0.h - z3.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 431,
-    "word": 3253286295,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
-    ]
-  },
-  {
-    "sourceFile": "SME2/udot.s.yaml",
-    "caseIndex": 432,
-    "word": 3253286295,
-    "asmText": "udot za.d[w9, 7, vgx4], { z12.h - z15.h }, { z8.h - z11.h }",
-    "encodingFile": "udot_za_zzw.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
     ]
   },
   {
@@ -256824,1854 +259790,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 0,
-    "word": 3221621248,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 0, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 1,
-    "word": 3221621248,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 0, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 2,
-    "word": 3221637716,
-    "asmText": "movaz { z20.d, z21.d }, za.d[w10, 2, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 3,
-    "word": 3221637716,
-    "asmText": "movaz { z20.d, z21.d }, za.d[w10, 2, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 4,
-    "word": 3221646006,
-    "asmText": "movaz { z22.d, z23.d }, za.d[w11, 5, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 5,
-    "word": 3221646006,
-    "asmText": "movaz { z22.d, z23.d }, za.d[w11, 5, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 6,
-    "word": 3221646078,
-    "asmText": "movaz { z30.d, z31.d }, za.d[w11, 7, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 7,
-    "word": 3221646078,
-    "asmText": "movaz { z30.d, z31.d }, za.d[w11, 7, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 8,
-    "word": 3221621284,
-    "asmText": "movaz { z4.d, z5.d }, za.d[w8, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 9,
-    "word": 3221621284,
-    "asmText": "movaz { z4.d, z5.d }, za.d[w8, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 10,
-    "word": 3221621280,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 11,
-    "word": 3221621280,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 12,
-    "word": 3221637752,
-    "asmText": "movaz { z24.d, z25.d }, za.d[w10, 3, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 13,
-    "word": 3221637752,
-    "asmText": "movaz { z24.d, z25.d }, za.d[w10, 3, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 14,
-    "word": 3221621376,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 4, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 15,
-    "word": 3221621376,
-    "asmText": "movaz { z0.d, z1.d }, za.d[w8, 4, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 16,
-    "word": 3221637680,
-    "asmText": "movaz { z16.d, z17.d }, za.d[w10, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 17,
-    "word": 3221637680,
-    "asmText": "movaz { z16.d, z17.d }, za.d[w10, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 18,
-    "word": 3221621468,
-    "asmText": "movaz { z28.d, z29.d }, za.d[w8, 6, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 19,
-    "word": 3221621468,
-    "asmText": "movaz { z28.d, z29.d }, za.d[w8, 6, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 20,
-    "word": 3221645858,
-    "asmText": "movaz { z2.d, z3.d }, za.d[w11, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 21,
-    "word": 3221645858,
-    "asmText": "movaz { z2.d, z3.d }, za.d[w11, 1, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 22,
-    "word": 3221629574,
-    "asmText": "movaz { z6.d, z7.d }, za.d[w9, 4, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 23,
-    "word": 3221629574,
-    "asmText": "movaz { z6.d, z7.d }, za.d[w9, 4, vgx2]",
-    "encodingFile": "movaz_mz_za2.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 24,
-    "word": 3221622272,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 0, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 25,
-    "word": 3221622272,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 0, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 26,
-    "word": 3221638740,
-    "asmText": "movaz { z20.d - z23.d }, za.d[w10, 2, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 27,
-    "word": 3221638740,
-    "asmText": "movaz { z20.d - z23.d }, za.d[w10, 2, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 28,
-    "word": 3221647028,
-    "asmText": "movaz { z20.d - z23.d }, za.d[w11, 5, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 29,
-    "word": 3221647028,
-    "asmText": "movaz { z20.d - z23.d }, za.d[w11, 5, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 30,
-    "word": 3221647100,
-    "asmText": "movaz { z28.d - z31.d }, za.d[w11, 7, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 31,
-    "word": 3221647100,
-    "asmText": "movaz { z28.d - z31.d }, za.d[w11, 7, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 32,
-    "word": 3221622308,
-    "asmText": "movaz { z4.d - z7.d }, za.d[w8, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 33,
-    "word": 3221622308,
-    "asmText": "movaz { z4.d - z7.d }, za.d[w8, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 34,
-    "word": 3221622304,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 35,
-    "word": 3221622304,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 36,
-    "word": 3221638776,
-    "asmText": "movaz { z24.d - z27.d }, za.d[w10, 3, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 37,
-    "word": 3221638776,
-    "asmText": "movaz { z24.d - z27.d }, za.d[w10, 3, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 38,
-    "word": 3221622400,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 4, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 39,
-    "word": 3221622400,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w8, 4, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 40,
-    "word": 3221638704,
-    "asmText": "movaz { z16.d - z19.d }, za.d[w10, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 41,
-    "word": 3221638704,
-    "asmText": "movaz { z16.d - z19.d }, za.d[w10, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 42,
-    "word": 3221622492,
-    "asmText": "movaz { z28.d - z31.d }, za.d[w8, 6, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 43,
-    "word": 3221622492,
-    "asmText": "movaz { z28.d - z31.d }, za.d[w8, 6, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 44,
-    "word": 3221646880,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w11, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 45,
-    "word": 3221646880,
-    "asmText": "movaz { z0.d - z3.d }, za.d[w11, 1, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 46,
-    "word": 3221630596,
-    "asmText": "movaz { z4.d - z7.d }, za.d[w9, 4, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 47,
-    "word": 3221630596,
-    "asmText": "movaz { z4.d - z7.d }, za.d[w9, 4, vgx4]",
-    "encodingFile": "movaz_mz_za4.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 48,
-    "word": 3234005504,
-    "asmText": "movaz z0.q, za0h.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 49,
-    "word": 3234022229,
-    "asmText": "movaz z21.q, za10h.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 50,
-    "word": 3234030519,
-    "asmText": "movaz z23.q, za13h.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 51,
-    "word": 3234030591,
-    "asmText": "movaz z31.q, za15h.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 52,
-    "word": 3234005541,
-    "asmText": "movaz z5.q, za1h.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 53,
-    "word": 3234005537,
-    "asmText": "movaz z1.q, za1h.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 54,
-    "word": 3234022008,
-    "asmText": "movaz z24.q, za3h.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 55,
-    "word": 3234005888,
-    "asmText": "movaz z0.q, za12h.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 56,
-    "word": 3234021937,
-    "asmText": "movaz z17.q, za1h.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 57,
-    "word": 3234005725,
-    "asmText": "movaz z29.q, za6h.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 58,
-    "word": 3234030370,
-    "asmText": "movaz z2.q, za9h.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 59,
-    "word": 3234014087,
-    "asmText": "movaz z7.q, za12h.q[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 60,
-    "word": 3234038272,
-    "asmText": "movaz z0.q, za0v.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 61,
-    "word": 3234054997,
-    "asmText": "movaz z21.q, za10v.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 62,
-    "word": 3234063287,
-    "asmText": "movaz z23.q, za13v.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 63,
-    "word": 3234063359,
-    "asmText": "movaz z31.q, za15v.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 64,
-    "word": 3234038309,
-    "asmText": "movaz z5.q, za1v.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 65,
-    "word": 3234038305,
-    "asmText": "movaz z1.q, za1v.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 66,
-    "word": 3234054776,
-    "asmText": "movaz z24.q, za3v.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 67,
-    "word": 3234038656,
-    "asmText": "movaz z0.q, za12v.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 68,
-    "word": 3234054705,
-    "asmText": "movaz z17.q, za1v.q[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 69,
-    "word": 3234038493,
-    "asmText": "movaz z29.q, za6v.q[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 70,
-    "word": 3234063138,
-    "asmText": "movaz z2.q, za9v.q[w15, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 71,
-    "word": 3234046855,
-    "asmText": "movaz z7.q, za12v.q[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 72,
-    "word": 3225551360,
-    "asmText": "movaz z0.h, za0h.h[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 73,
-    "word": 3225568085,
-    "asmText": "movaz z21.h, za1h.h[w14, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 74,
-    "word": 3225576375,
-    "asmText": "movaz z23.h, za1h.h[w15, 5]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 75,
-    "word": 3225576447,
-    "asmText": "movaz z31.h, za1h.h[w15, 7]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 76,
-    "word": 3225551397,
-    "asmText": "movaz z5.h, za0h.h[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 77,
-    "word": 3225551393,
-    "asmText": "movaz z1.h, za0h.h[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 78,
-    "word": 3225567864,
-    "asmText": "movaz z24.h, za0h.h[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 79,
-    "word": 3225551744,
-    "asmText": "movaz z0.h, za1h.h[w12, 4]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 80,
-    "word": 3225567793,
-    "asmText": "movaz z17.h, za0h.h[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 81,
-    "word": 3225551581,
-    "asmText": "movaz z29.h, za0h.h[w12, 6]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 82,
-    "word": 3225576226,
-    "asmText": "movaz z2.h, za1h.h[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 83,
-    "word": 3225559943,
-    "asmText": "movaz z7.h, za1h.h[w13, 4]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 84,
-    "word": 3225584128,
-    "asmText": "movaz z0.h, za0v.h[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 85,
-    "word": 3225600853,
-    "asmText": "movaz z21.h, za1v.h[w14, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 86,
-    "word": 3225609143,
-    "asmText": "movaz z23.h, za1v.h[w15, 5]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 87,
-    "word": 3225609215,
-    "asmText": "movaz z31.h, za1v.h[w15, 7]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 88,
-    "word": 3225584165,
-    "asmText": "movaz z5.h, za0v.h[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 89,
-    "word": 3225584161,
-    "asmText": "movaz z1.h, za0v.h[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 90,
-    "word": 3225600632,
-    "asmText": "movaz z24.h, za0v.h[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 91,
-    "word": 3225584512,
-    "asmText": "movaz z0.h, za1v.h[w12, 4]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 92,
-    "word": 3225600561,
-    "asmText": "movaz z17.h, za0v.h[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 93,
-    "word": 3225584349,
-    "asmText": "movaz z29.h, za0v.h[w12, 6]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 94,
-    "word": 3225608994,
-    "asmText": "movaz z2.h, za1v.h[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 95,
-    "word": 3225592711,
-    "asmText": "movaz z7.h, za1v.h[w13, 4]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 96,
-    "word": 3229745664,
-    "asmText": "movaz z0.s, za0h.s[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 97,
-    "word": 3229762389,
-    "asmText": "movaz z21.s, za2h.s[w14, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 98,
-    "word": 3229770679,
-    "asmText": "movaz z23.s, za3h.s[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 99,
-    "word": 3229770751,
-    "asmText": "movaz z31.s, za3h.s[w15, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 100,
-    "word": 3229745701,
-    "asmText": "movaz z5.s, za0h.s[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 101,
-    "word": 3229745697,
-    "asmText": "movaz z1.s, za0h.s[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 102,
-    "word": 3229762168,
-    "asmText": "movaz z24.s, za0h.s[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 103,
-    "word": 3229746048,
-    "asmText": "movaz z0.s, za3h.s[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 104,
-    "word": 3229762097,
-    "asmText": "movaz z17.s, za0h.s[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 105,
-    "word": 3229745885,
-    "asmText": "movaz z29.s, za1h.s[w12, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 106,
-    "word": 3229770530,
-    "asmText": "movaz z2.s, za2h.s[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 107,
-    "word": 3229754247,
-    "asmText": "movaz z7.s, za3h.s[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 108,
-    "word": 3229778432,
-    "asmText": "movaz z0.s, za0v.s[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 109,
-    "word": 3229795157,
-    "asmText": "movaz z21.s, za2v.s[w14, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 110,
-    "word": 3229803447,
-    "asmText": "movaz z23.s, za3v.s[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 111,
-    "word": 3229803519,
-    "asmText": "movaz z31.s, za3v.s[w15, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 112,
-    "word": 3229778469,
-    "asmText": "movaz z5.s, za0v.s[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 113,
-    "word": 3229778465,
-    "asmText": "movaz z1.s, za0v.s[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 114,
-    "word": 3229794936,
-    "asmText": "movaz z24.s, za0v.s[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 115,
-    "word": 3229778816,
-    "asmText": "movaz z0.s, za3v.s[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 116,
-    "word": 3229794865,
-    "asmText": "movaz z17.s, za0v.s[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 117,
-    "word": 3229778653,
-    "asmText": "movaz z29.s, za1v.s[w12, 2]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 118,
-    "word": 3229803298,
-    "asmText": "movaz z2.s, za2v.s[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 119,
-    "word": 3229787015,
-    "asmText": "movaz z7.s, za3v.s[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 120,
-    "word": 3233939968,
-    "asmText": "movaz z0.d, za0h.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 121,
-    "word": 3233956693,
-    "asmText": "movaz z21.d, za5h.d[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 122,
-    "word": 3233964983,
-    "asmText": "movaz z23.d, za6h.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 123,
-    "word": 3233965055,
-    "asmText": "movaz z31.d, za7h.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 124,
-    "word": 3233940005,
-    "asmText": "movaz z5.d, za0h.d[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 125,
-    "word": 3233940001,
-    "asmText": "movaz z1.d, za0h.d[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 126,
-    "word": 3233956472,
-    "asmText": "movaz z24.d, za1h.d[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 127,
-    "word": 3233940352,
-    "asmText": "movaz z0.d, za6h.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 128,
-    "word": 3233956401,
-    "asmText": "movaz z17.d, za0h.d[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 129,
-    "word": 3233940189,
-    "asmText": "movaz z29.d, za3h.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 130,
-    "word": 3233964834,
-    "asmText": "movaz z2.d, za4h.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 131,
-    "word": 3233948551,
-    "asmText": "movaz z7.d, za6h.d[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 132,
-    "word": 3233972736,
-    "asmText": "movaz z0.d, za0v.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 133,
-    "word": 3233989461,
-    "asmText": "movaz z21.d, za5v.d[w14, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 134,
-    "word": 3233997751,
-    "asmText": "movaz z23.d, za6v.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 135,
-    "word": 3233997823,
-    "asmText": "movaz z31.d, za7v.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 136,
-    "word": 3233972773,
-    "asmText": "movaz z5.d, za0v.d[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 137,
-    "word": 3233972769,
-    "asmText": "movaz z1.d, za0v.d[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 138,
-    "word": 3233989240,
-    "asmText": "movaz z24.d, za1v.d[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 139,
-    "word": 3233973120,
-    "asmText": "movaz z0.d, za6v.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 140,
-    "word": 3233989169,
-    "asmText": "movaz z17.d, za0v.d[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 141,
-    "word": 3233972957,
-    "asmText": "movaz z29.d, za3v.d[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 142,
-    "word": 3233997602,
-    "asmText": "movaz z2.d, za4v.d[w15, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 143,
-    "word": 3233981319,
-    "asmText": "movaz z7.d, za6v.d[w13, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 144,
-    "word": 3221357056,
-    "asmText": "movaz z0.b, za0h.b[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 145,
-    "word": 3221373781,
-    "asmText": "movaz z21.b, za0h.b[w14, 10]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 146,
-    "word": 3221382071,
-    "asmText": "movaz z23.b, za0h.b[w15, 13]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 147,
-    "word": 3221382143,
-    "asmText": "movaz z31.b, za0h.b[w15, 15]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 148,
-    "word": 3221357093,
-    "asmText": "movaz z5.b, za0h.b[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 149,
-    "word": 3221357089,
-    "asmText": "movaz z1.b, za0h.b[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 150,
-    "word": 3221373560,
-    "asmText": "movaz z24.b, za0h.b[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 151,
-    "word": 3221357440,
-    "asmText": "movaz z0.b, za0h.b[w12, 12]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 152,
-    "word": 3221373489,
-    "asmText": "movaz z17.b, za0h.b[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 153,
-    "word": 3221357277,
-    "asmText": "movaz z29.b, za0h.b[w12, 6]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 154,
-    "word": 3221381922,
-    "asmText": "movaz z2.b, za0h.b[w15, 9]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 155,
-    "word": 3221365639,
-    "asmText": "movaz z7.b, za0h.b[w13, 12]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 156,
-    "word": 3221389824,
-    "asmText": "movaz z0.b, za0v.b[w12, 0]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 157,
-    "word": 3221406549,
-    "asmText": "movaz z21.b, za0v.b[w14, 10]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 158,
-    "word": 3221414839,
-    "asmText": "movaz z23.b, za0v.b[w15, 13]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 159,
-    "word": 3221414911,
-    "asmText": "movaz z31.b, za0v.b[w15, 15]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 160,
-    "word": 3221389861,
-    "asmText": "movaz z5.b, za0v.b[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 161,
-    "word": 3221389857,
-    "asmText": "movaz z1.b, za0v.b[w12, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 162,
-    "word": 3221406328,
-    "asmText": "movaz z24.b, za0v.b[w14, 3]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 163,
-    "word": 3221390208,
-    "asmText": "movaz z0.b, za0v.b[w12, 12]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 164,
-    "word": 3221406257,
-    "asmText": "movaz z17.b, za0v.b[w14, 1]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 165,
-    "word": 3221390045,
-    "asmText": "movaz z29.b, za0v.b[w12, 6]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 166,
-    "word": 3221414690,
-    "asmText": "movaz z2.b, za0v.b[w15, 9]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
-    "sourceFile": "SME2p1/movaz.s.yaml",
-    "caseIndex": 167,
-    "word": 3221398407,
-    "asmText": "movaz z7.b, za0v.b[w13, 12]",
-    "encodingFile": "movaz_z_rza.xml",
-    "mnemonic": "MOVAZ",
-    "features": [
-      "FEAT_SME2p1"
-    ]
-  },
-  {
     "sourceFile": "SME2p1/zero.s.yaml",
     "caseIndex": 0,
     "word": 3222044672,
@@ -269286,110 +270404,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 0,
-    "word": 86548480,
-    "asmText": "mov z0.b, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 1,
-    "word": 90742784,
-    "asmText": "mov z0.h, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 2,
-    "word": 94937088,
-    "asmText": "mov z0.s, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 3,
-    "word": 99131392,
-    "asmText": "mov z0.d, p0/m, x0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 4,
-    "word": 86556671,
-    "asmText": "mov z31.b, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 5,
-    "word": 90750975,
-    "asmText": "mov z31.h, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 6,
-    "word": 94945279,
-    "asmText": "mov z31.s, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 7,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 8,
     "word": 86016000,
     "asmText": "mov z0.b, p0/m, b0",
@@ -269897,32 +270911,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 48,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 50,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 52,
     "word": 98005013,
     "asmText": "mov z21.d, p7/m, #-32768",
@@ -269966,110 +270954,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 98607076,
     "asmText": "mov z4.d, p7/m, d31",
     "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 59,
-    "word": 86548480,
-    "asmText": "mov z0.b, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 60,
-    "word": 90742784,
-    "asmText": "mov z0.h, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 61,
-    "word": 94937088,
-    "asmText": "mov z0.s, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 62,
-    "word": 99131392,
-    "asmText": "mov z0.d, p0/m, x0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 63,
-    "word": 86556671,
-    "asmText": "mov z31.b, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 64,
-    "word": 90750975,
-    "asmText": "mov z31.h, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 65,
-    "word": 94945279,
-    "asmText": "mov z31.s, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 66,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
     "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -270577,32 +271461,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 98529301,
     "asmText": "mov z21.d, p15/m, #-32768",
     "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 107,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 109,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
     "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -271379,279 +272237,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 8,
-    "word": 624480261,
-    "asmText": "mov z5.b, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 9,
-    "word": 624480229,
-    "asmText": "mov z5.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 10,
-    "word": 624484325,
-    "asmText": "mov z5.b, #-1",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 11,
-    "word": 628674581,
-    "asmText": "mov z21.h, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 12,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 13,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 14,
-    "word": 628674549,
-    "asmText": "mov z21.h, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 15,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 16,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 17,
-    "word": 632868885,
-    "asmText": "mov z21.s, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 18,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 19,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 20,
-    "word": 632868853,
-    "asmText": "mov z21.s, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 21,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 22,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 23,
-    "word": 637063189,
-    "asmText": "mov z21.d, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 24,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 25,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 26,
-    "word": 637063157,
-    "asmText": "mov z21.d, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 27,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 28,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 29,
     "word": 86056960,
     "asmText": "mov z0.b, b0",
@@ -271782,45 +272367,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 39,
-    "word": 624480224,
-    "asmText": "mov z0.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 40,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 41,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 42,
     "word": 85997568,
     "asmText": "mov z0.b, w0",
@@ -271916,279 +272462,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 85998591,
     "asmText": "mov z31.b, wsp",
     "encodingFile": "dup_z_r.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 50,
-    "word": 624480261,
-    "asmText": "mov z5.b, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 51,
-    "word": 624480229,
-    "asmText": "mov z5.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 52,
-    "word": 624484325,
-    "asmText": "mov z5.b, #-1",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 53,
-    "word": 628674581,
-    "asmText": "mov z21.h, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 54,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 55,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 56,
-    "word": 628674549,
-    "asmText": "mov z21.h, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 57,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 58,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 59,
-    "word": 632868885,
-    "asmText": "mov z21.s, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 60,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 61,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 62,
-    "word": 632868853,
-    "asmText": "mov z21.s, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 63,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 64,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 65,
-    "word": 637063189,
-    "asmText": "mov z21.d, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 66,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 67,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 68,
-    "word": 637063157,
-    "asmText": "mov z21.d, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 69,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 70,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -272319,45 +272592,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 99623461,
     "asmText": "mov z5.q, z17.q[3]",
     "encodingFile": "dup_z_zi.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 81,
-    "word": 624480224,
-    "asmText": "mov z0.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 82,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/dup.s.yaml",
-    "caseIndex": 83,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -298539,318 +298773,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 10,
-    "word": 624480261,
-    "asmText": "mov z5.b, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 11,
-    "word": 624480229,
-    "asmText": "mov z5.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 12,
-    "word": 624484325,
-    "asmText": "mov z5.b, #-1",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 13,
-    "word": 628674581,
-    "asmText": "mov z21.h, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 14,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 15,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 16,
-    "word": 628674549,
-    "asmText": "mov z21.h, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 17,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 18,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 19,
-    "word": 632868885,
-    "asmText": "mov z21.s, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 20,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 21,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 22,
-    "word": 632868853,
-    "asmText": "mov z21.s, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 23,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 24,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 25,
-    "word": 637063189,
-    "asmText": "mov z21.d, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 26,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 27,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 28,
-    "word": 637063157,
-    "asmText": "mov z21.d, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 29,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 30,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 31,
-    "word": 628682752,
-    "asmText": "mov z0.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 32,
-    "word": 628686816,
-    "asmText": "mov z0.h, #-256",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 33,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 34,
     "word": 96470464,
     "asmText": "mov z0.h, #32767",
@@ -299202,71 +299124,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 61,
-    "word": 624480224,
-    "asmText": "mov z0.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 62,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 63,
-    "word": 628678469,
-    "asmText": "mov z5.h, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 64,
-    "word": 632872773,
-    "asmText": "mov z5.s, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 65,
-    "word": 637067077,
-    "asmText": "mov z5.d, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 66,
     "word": 84938720,
     "asmText": "mov z0.b, p0/z, #127",
@@ -299592,110 +299449,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 91,
-    "word": 86548480,
-    "asmText": "mov z0.b, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 92,
-    "word": 90742784,
-    "asmText": "mov z0.h, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 93,
-    "word": 94937088,
-    "asmText": "mov z0.s, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 94,
-    "word": 99131392,
-    "asmText": "mov z0.d, p0/m, x0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 95,
-    "word": 86556671,
-    "asmText": "mov z31.b, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 96,
-    "word": 90750975,
-    "asmText": "mov z31.h, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 97,
-    "word": 94945279,
-    "asmText": "mov z31.s, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 98,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 99,
     "word": 86016000,
     "asmText": "mov z0.b, p0/m, b0",
@@ -299914,32 +299667,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 118,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 120,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 122,
     "word": 98005013,
     "asmText": "mov z21.d, p7/m, #-32768",
@@ -300114,318 +299841,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "mnemonic": "ORR",
     "features": [
       "FEAT_SVE || FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 139,
-    "word": 624480261,
-    "asmText": "mov z5.b, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 140,
-    "word": 624480229,
-    "asmText": "mov z5.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 141,
-    "word": 624484325,
-    "asmText": "mov z5.b, #-1",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 142,
-    "word": 628674581,
-    "asmText": "mov z21.h, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 143,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 144,
-    "word": 628682773,
-    "asmText": "mov z21.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 145,
-    "word": 628674549,
-    "asmText": "mov z21.h, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 146,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 147,
-    "word": 628682741,
-    "asmText": "mov z21.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 148,
-    "word": 632868885,
-    "asmText": "mov z21.s, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 149,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 150,
-    "word": 632877077,
-    "asmText": "mov z21.s, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 151,
-    "word": 632868853,
-    "asmText": "mov z21.s, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 152,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 153,
-    "word": 632877045,
-    "asmText": "mov z21.s, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 154,
-    "word": 637063189,
-    "asmText": "mov z21.d, #-128",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 155,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 156,
-    "word": 637071381,
-    "asmText": "mov z21.d, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 157,
-    "word": 637063157,
-    "asmText": "mov z21.d, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 158,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 159,
-    "word": 637071349,
-    "asmText": "mov z21.d, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 160,
-    "word": 628682752,
-    "asmText": "mov z0.h, #-32768",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 161,
-    "word": 628686816,
-    "asmText": "mov z0.h, #-256",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 162,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
     ]
   },
   {
@@ -300781,71 +300196,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 190,
-    "word": 624480224,
-    "asmText": "mov z0.b, #127",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 191,
-    "word": 628682720,
-    "asmText": "mov z0.h, #32512",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 192,
-    "word": 628678469,
-    "asmText": "mov z5.h, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 193,
-    "word": 632872773,
-    "asmText": "mov z5.s, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 194,
-    "word": 637067077,
-    "asmText": "mov z5.d, #-6",
-    "encodingFile": "dup_z_i.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 195,
     "word": 84938720,
     "asmText": "mov z0.b, p0/z, #127",
@@ -301171,110 +300521,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 220,
-    "word": 86548480,
-    "asmText": "mov z0.b, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 221,
-    "word": 90742784,
-    "asmText": "mov z0.h, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 222,
-    "word": 94937088,
-    "asmText": "mov z0.s, p0/m, w0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 223,
-    "word": 99131392,
-    "asmText": "mov z0.d, p0/m, x0",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 224,
-    "word": 86556671,
-    "asmText": "mov z31.b, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 225,
-    "word": 90750975,
-    "asmText": "mov z31.h, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 226,
-    "word": 94945279,
-    "asmText": "mov z31.s, p7/m, wsp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 227,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 228,
     "word": 86016000,
     "asmText": "mov z0.b, p0/m, b0",
@@ -301485,32 +300731,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "mov p15.b, p15/z, p15.b",
     "encodingFile": "and_p_p_pp.xml",
     "mnemonic": "AND",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 247,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 249,
-    "word": 99139583,
-    "asmText": "mov z31.d, p7/m, sp",
-    "encodingFile": "cpy_z_p_r.xml",
-    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",

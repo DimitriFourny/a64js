@@ -2,12 +2,12 @@
 
 Current capstone coverage snapshot:
 
-- `6666` supported capstone cases
-- `26575` unsupported capstone cases
-- `64` XML instruction files currently listed in `tools/supported-files.ts`
-- `1819` distinct unsupported XML instruction files
-- `972` capstone source YAML files containing unsupported cases
-- `943` distinct unsupported mnemonics
+- `9293` supported capstone cases
+- `25268` unsupported capstone cases
+- `82` XML instruction files currently listed in `tools/supported-files.ts`
+- `1801` distinct unsupported XML instruction files
+- `968` capstone source YAML files containing unsupported cases
+- `941` distinct unsupported mnemonics
 
 Recently completed families:
 
@@ -21,6 +21,43 @@ Recently completed families:
 - `cmpeq_p_p_zi.xml`: `160`
 - `decb_r_rs.xml`: `160`
 - `mov_mova_*.xml`: decode/disasm support landed; keep an eye on capstone snapshot accounting separately from the scalar/SVE totals above
+- `movaz_*.xml`, `dup_z_i.xml`, `cpy_z_p_r.xml`, `rprfm_reg.xml`: `442`
+- `sdot_za*.xml`, `sdot_za32*.xml`, `udot_za*.xml`, `udot_za32*.xml`: `865`
+
+## Left To Do Now
+
+Priority order from the current snapshot:
+
+1. SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
+2. SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`.
+3. Remaining move/copy cleanup, especially `cpy_z_o_i.xml` and the `MOVAZ` writeback-side families.
+4. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
+
+Highest-value remaining XML files right now:
+
+- `fadd_za_zw.xml`: `144`
+- `fmla_za_zzv.xml`: `144`
+- `fmla_za_zzi.xml`: `144`
+- `fmla_za_zzw.xml`: `144`
+- `fmls_za_zzv.xml`: `144`
+- `fmls_za_zzi.xml`: `144`
+- `fmls_za_zzw.xml`: `144`
+- `fsub_za_zw.xml`: `143`
+- `add_za_zzw.xml`: `120`
+- `smlall_za_zzi.xml`: `120`
+
+Highest-value remaining source files right now:
+
+- `basic-a64-instructions.s.yaml`: `1180`
+- `SME2/add.s.yaml`: `343`
+- `SME2/smlall.s.yaml`: `336`
+- `SME2/smlsll.s.yaml`: `336`
+- `SME2/umlall.s.yaml`: `336`
+- `SME2/umlsll.s.yaml`: `336`
+- `SME2/fmla.s.yaml`: `288`
+- `SME2/fmls.s.yaml`: `288`
+- `SME2/sub.s.yaml`: `288`
+- `neon-simd-misc.s.yaml`: `260`
 
 ## What "unsupported" means here
 
@@ -54,8 +91,6 @@ These are the biggest buckets in the current unsupported set and should be the f
 
 Top mnemonics:
 
-- `UDOT`: `573`
-- `SDOT`: `536`
 - `ADD`: `475`
 - `FMLA`: `470`
 - `FMLS`: `470`
@@ -75,8 +110,6 @@ Representative XML files:
 
 Top source files:
 
-- `SME2/udot.s.yaml`: `433`
-- `SME2/sdot.s.yaml`: `432`
 - `SME2/add.s.yaml`: `343`
 - `SME2/smlall.s.yaml`: `336`
 - `SME2/smlsll.s.yaml`: `336`
@@ -86,26 +119,26 @@ Top source files:
 - `SME2/fmls.s.yaml`: `288`
 - `SME2/sub.s.yaml`: `288`
 
-Likely outcome: implementing `UDOT` / `SDOT`, then `ADD` / `SUB` / `FMLA` / `FMLS`, clears the biggest remaining SME2 concentration.
+Likely outcome: implementing `ADD` / `SUB` / `FMLA` / `FMLS`, then the `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families, clears the biggest remaining SME2 concentration.
 
 ### 2. Remaining move/copy and adjacent SVE cleanup
 
 Notable XML files:
 
-- `movaz_z_rza.xml`: `120`
-- `movaz_mz_za2.xml`: `24`
-- `movaz_mz_za4.xml`: `24`
-- `dup_z_i.xml`: `106`
-- `cpy_z_p_r.xml`: `96`
+- `cpy_z_o_i.xml`: `96`
+- `movaz_za_rz.xml`: `88`
+- `movaz_za2_z.xml`: `32`
+- `movaz_za4_z.xml`: `32`
+- `movaz_za_mz2.xml`: `32`
 
 Notable source files:
 
-- `SVE/mov.s.yaml`: `246`
-- `SME2p1/movaz.s.yaml`: `168`
-- `SVE/dup.s.yaml`: `106`
+- `SVE/mov.s.yaml`: `150`
+- `SME2p1/movaz.s.yaml`: `152`
 - `SVE/cpy.s.yaml`: `96`
+- `SVE/dup.s.yaml`: `64`
 
-Likely outcome: this is now mostly the `MOVAZ` follow-up plus a few smaller SVE move/dup/copy aliases rather than the earlier `MOVPRFX` / `MOVA` backlog.
+Likely outcome: this is now the remaining `MOVAZ` writeback-side follow-up plus `cpy_z_o_i.xml`; the earlier `MOVPRFX` / `MOVA` / `DUP` / `CPY` read-side backlog is largely cleared.
 
 ### 3. Remaining scalar / AdvSIMD cleanup
 
@@ -119,22 +152,22 @@ Notable source files:
 
 Notable XML files:
 
-- `rprfm_reg.xml`: `128`
-- `dup_z_i.xml`: `106`
 - `sqrdmlah_advsimd_elt.xml`: `96`
 - `sqrdmlsh_advsimd_elt.xml`: `96`
+- `sqrdmlah_advsimd_vec.xml`: `84`
+- `sqrdmlsh_advsimd_vec.xml`: `84`
 
-Likely outcome: this is the remaining baseline cleanup after the recent system-register, scalar count, and compare work.
+Likely outcome: this is the remaining baseline cleanup after the recent system-register, move/copy, scalar count, and compare work.
 
 ## Feature buckets worth prioritizing
 
 Largest unsupported feature sets:
 
-- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `6227`
-- `FEAT_SME2`: `4593`
+- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `6081`
+- `FEAT_SME2`: `4209`
 - `FEAT_AdvSIMD`: `2058`
 - `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `2030`
-- `FEAT_SME2, FEAT_SME_I16I64`: `1848`
+- `FEAT_SME2, FEAT_SME_I16I64`: `1463`
 - `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `1329`
 - no feature gate recorded: `935`
 - `FEAT_SME`: `778`
@@ -147,11 +180,11 @@ Implication: the remaining work is now even more concentrated in SVE, SME, and S
 
 Suggested order for the next follow-up pass:
 
-1. Implement SME2 `UDOT` and `SDOT`.
-2. Implement SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
-3. Sweep the remaining `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families.
-4. Clean up remaining move/copy aliases, especially `MOVAZ`, `DUP`, and `CPY`.
-5. Sweep the remaining AdvSIMD / baseline A64 leftovers such as `rprfm_reg.xml`, compare/misc families, and dot-product/vector-element cases.
+1. Implement SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
+2. Sweep the remaining `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families.
+3. Clean up the remaining move/copy aliases, especially the `MOVAZ` writeback-side families and `cpy_z_o_i.xml`.
+4. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
+5. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
 6. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
 ## Notes for whoever picks this up
