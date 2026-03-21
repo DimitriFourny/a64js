@@ -20,6 +20,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return `b.${operands[0].suffix} ${formatOperand(operands[1])}`;
   }
 
+  const mnemonic =
+    decoded.encoding && ["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(decoded.encoding.fileName)
+      ? "fmov"
+      : decoded.mnemonic.toLowerCase();
+
   const operandText = operands.map((operand, index) => {
     if (
       decoded.encoding &&
@@ -45,7 +50,5 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return formatOperand(operand);
   });
 
-  return operandText.length === 0
-    ? decoded.mnemonic.toLowerCase()
-    : `${decoded.mnemonic.toLowerCase()} ${operandText.join(", ")}`;
+  return operandText.length === 0 ? mnemonic : `${mnemonic} ${operandText.join(", ")}`;
 }

@@ -1,4 +1,12 @@
-import type { DecodedInstruction, GeneratedEncoding, Operand, RegisterName } from "./types.ts";
+import type {
+  DecodedInstruction,
+  GeneratedEncoding,
+  Operand,
+  PredicateRegisterOperand,
+  RegisterName,
+  SystemRegisterOperand,
+  VectorRegisterOperand,
+} from "./types.ts";
 
 const COND_NAMES = [
   "eq",
@@ -39,6 +47,18 @@ function widthFromSf(sf: number | undefined): 32 | 64 {
 
 function gpReg(width: 32 | 64, index: number, zeroName: "zr" | "sp" = "zr"): RegisterName {
   return reg(width, index, zeroName);
+}
+
+function sysReg(op0: number, op1: number, CRn: number, CRm: number, op2: number): SystemRegisterOperand {
+  return { kind: "sysreg", op0, op1, CRn, CRm, op2 };
+}
+
+function vecReg(index: number, lane?: "b" | "h" | "s" | "d" | "q"): VectorRegisterOperand {
+  return { kind: "vec", index, lane };
+}
+
+function predReg(index: number, mode?: "m" | "z"): PredicateRegisterOperand {
+  return { kind: "pred", index, mode };
 }
 
 function labelFromOffset(offset: bigint): Operand {
@@ -178,6 +198,72 @@ function adcOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function systemMoveOperands(inst: DecodedInstruction, mnemonic: string): Operand[] {
+  const fields = inst.fields!;
+  const systemRegister = sysReg(2 + (fields.o0 ?? 0), fields.op1 ?? 0, fields.CRn ?? 0, fields.CRm ?? 0, fields.op2 ?? 0);
+  const xt = gpReg(64, fields.Rt, "zr");
+  return mnemonic === "MRS" ? [xt, systemRegister] : [systemRegister, xt];
+}
+
+function sveLaneFromSize(size: number | undefined): "h" | "s" | "d" {
+  return (["h", "s", "d"] as const)[(size ?? 1) - 1] ?? "h";
+}
+
+function expandVfpImmediate(imm8: number, width: 16 | 32 | 64): number {
+  const exponentBits = width === 16 ? 5 : width === 32 ? 8 : 11;
+  const fractionBits = width - exponentBits - 1;
+  const sign = (imm8 >>> 7) & 1;
+  const immBit6 = (imm8 >>> 6) & 1;
+  const exponent =
+    (((immBit6 ^ 1) & 1) << (exponentBits - 1)) |
+    (((immBit6 === 1 ? 1 : 0) * ((1 << (exponentBits - 3)) - 1)) << 2) |
+    ((imm8 >>> 4) & 0x3);
+  const fraction = (imm8 & 0xf) << (fractionBits - 4);
+
+  if (width === 16) {
+    const half = (sign << 15) | (exponent << 10) | fraction;
+    const halfExponent = (half >>> 10) & 0x1f;
+    const halfFraction = half & 0x3ff;
+    if (halfExponent === 0) {
+      return (sign ? -1 : 1) * 2 ** -14 * (halfFraction / 2 ** 10);
+    }
+    return (sign ? -1 : 1) * 2 ** (halfExponent - 15) * (1 + halfFraction / 2 ** 10);
+  }
+
+  const buffer = new ArrayBuffer(width / 8);
+  const view = new DataView(buffer);
+  if (width === 32) {
+    view.setUint32(0, ((sign << 31) | (exponent << 23) | fraction) >>> 0);
+    return view.getFloat32(0);
+  }
+
+  const bits = (BigInt(sign) << 63n) | (BigInt(exponent) << 52n) | BigInt(fraction);
+  view.setBigUint64(0, bits);
+  return view.getFloat64(0);
+}
+
+function sveFloatingImmediate(imm8: number, size: number | undefined): Operand {
+  const width = (size === 1 ? 16 : size === 2 ? 32 : 64) as 16 | 32 | 64;
+  return { kind: "fpimm", value: expandVfpImmediate(imm8, width) };
+}
+
+function sveMovprfxOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [vecReg(fields.Zd), vecReg(fields.Zn)];
+}
+
+function sveFcpyOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveLaneFromSize(fields.size);
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), sveFloatingImmediate(fields.imm8, fields.size)];
+}
+
+function sveFdupOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveLaneFromSize(fields.size);
+  return [vecReg(fields.Zd, lane), sveFloatingImmediate(fields.imm8, fields.size)];
+}
+
 export function buildOperands(inst: DecodedInstruction): Operand[] {
   const encoding = inst.encoding;
   if (!encoding || !inst.fields) {
@@ -188,6 +274,15 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "adc.xml":
     case "adcs.xml":
       return adcOperands(inst);
+    case "mrs.xml":
+    case "msr_reg.xml":
+      return systemMoveOperands(inst, encoding.mnemonic);
+    case "movprfx_z_z.xml":
+      return sveMovprfxOperands(inst);
+    case "fcpy_z_p_i.xml":
+      return sveFcpyOperands(inst);
+    case "fdup_z_i.xml":
+      return sveFdupOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
     case "sub_addsub_imm.xml":
@@ -276,6 +371,19 @@ export function formatRegister(register: RegisterName): string {
   return `${prefix}${register.index}`;
 }
 
+function formatVectorRegister(register: VectorRegisterOperand): string {
+  return register.lane ? `z${register.index}.${register.lane}` : `z${register.index}`;
+}
+
+function formatPredicateRegister(register: PredicateRegisterOperand): string {
+  return register.mode ? `p${register.index}/${register.mode}` : `p${register.index}`;
+}
+
+function formatFloatingImmediate(value: number): string {
+  const normalized = Object.is(value, -0) ? 0 : value;
+  return `#${normalized.toFixed(8)}`;
+}
+
 export function formatOperand(operand: Operand): string {
   switch (operand.kind) {
     case "reg":
@@ -296,6 +404,13 @@ export function formatOperand(operand: Operand): string {
       return `.+0x${operand.offset.toString(16)}`;
     case "cond":
       return operand.suffix;
+    case "sysreg":
+      return `S${operand.op0}_${operand.op1}_C${operand.CRn}_C${operand.CRm}_${operand.op2}`;
+    case "vec":
+      return formatVectorRegister(operand);
+    case "pred":
+      return formatPredicateRegister(operand);
+    case "fpimm":
+      return formatFloatingImmediate(operand.value);
   }
 }
-

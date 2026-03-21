@@ -66,7 +66,41 @@ export type ConditionOperand = {
   suffix: string;
 };
 
-export type Operand = RegisterName | ImmediateOperand | LabelOperand | ConditionOperand;
+export type SystemRegisterOperand = {
+  kind: "sysreg";
+  op0: number;
+  op1: number;
+  CRn: number;
+  CRm: number;
+  op2: number;
+};
+
+export type VectorRegisterOperand = {
+  kind: "vec";
+  index: number;
+  lane?: "b" | "h" | "s" | "d" | "q";
+};
+
+export type PredicateRegisterOperand = {
+  kind: "pred";
+  index: number;
+  mode?: "m" | "z";
+};
+
+export type FloatingImmediateOperand = {
+  kind: "fpimm";
+  value: number;
+};
+
+export type Operand =
+  | RegisterName
+  | ImmediateOperand
+  | LabelOperand
+  | ConditionOperand
+  | SystemRegisterOperand
+  | VectorRegisterOperand
+  | PredicateRegisterOperand
+  | FloatingImmediateOperand;
 
 export type DecodeStatus = "ok" | "unknown" | "undefined";
 
