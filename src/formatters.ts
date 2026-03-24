@@ -342,6 +342,74 @@ function sveCopyScalarVectorOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "text", text: `${lane}${fields.Vn ?? 0}` }];
 }
 
+function advsimdLaneFromSize(size: number | undefined): "h" | "s" {
+  return size === 2 ? "s" : "h";
+}
+
+function advsimdArrangementFromSizeQ(size: number | undefined, q: number | undefined): "4h" | "8h" | "2s" | "4s" {
+  const lane = advsimdLaneFromSize(size);
+  const count = lane === "h" ? (q === 1 ? 8 : 4) : q === 1 ? 4 : 2;
+  return `${count}${lane}`;
+}
+
+function advsimdScalarRegisterText(index: number, size: number | undefined): string {
+  return `${advsimdLaneFromSize(size)}${index}`;
+}
+
+function advsimdVectorRegisterText(index: number, size: number | undefined, q: number | undefined): string {
+  return `v${index}.${advsimdArrangementFromSizeQ(size, q)}`;
+}
+
+function advsimdByElementSourceIndex(fields: Record<string, number>, size: number | undefined): number {
+  return size === 2 ? (((fields.M ?? 0) << 4) | (fields.Rm ?? 0)) : (fields.Rm ?? 0);
+}
+
+function advsimdByElementIndex(fields: Record<string, number>, size: number | undefined): number {
+  if (size === 2) {
+    return ((fields.H ?? 0) << 1) | (fields.L ?? 0);
+  }
+  return ((fields.H ?? 0) << 2) | ((fields.L ?? 0) << 1) | (fields.M ?? 0);
+}
+
+function advsimdSaturatingRoundingDoublingMultiplyOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = fields.size;
+  const lane = advsimdLaneFromSize(size);
+
+  if (inst.encoding!.className === "Scalar") {
+    if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+      return [
+        { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+        { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size) },
+        { kind: "text", text: advsimdScalarRegisterText(fields.Rm ?? 0, size) },
+      ];
+    }
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size) },
+      { kind: "text", text: `v${advsimdByElementSourceIndex(fields, size)}.${lane}[${advsimdByElementIndex(fields, size)}]` },
+    ];
+  }
+
+  if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+    return [
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, size, fields.Q) },
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rm ?? 0, size, fields.Q) },
+    ];
+  }
+
+  if (inst.encoding!.fileName.endsWith("_elt.xml")) {
+    return [
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, size, fields.Q) },
+      { kind: "text", text: `v${advsimdByElementSourceIndex(fields, size)}.${lane}[${advsimdByElementIndex(fields, size)}]` },
+    ];
+  }
+
+  return [];
+}
+
 function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
@@ -906,6 +974,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveCopyScalarOperands(inst);
     case "cpy_z_p_v.xml":
       return sveCopyScalarVectorOperands(inst);
+    case "sqrdmlah_advsimd_vec.xml":
+    case "sqrdmlah_advsimd_elt.xml":
+    case "sqrdmlsh_advsimd_vec.xml":
+    case "sqrdmlsh_advsimd_elt.xml":
+      return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
     case "mov_mova_z_p_rza.xml":
       return movaSingleToVectorOperands(inst);
     case "movaz_z_rza.xml":

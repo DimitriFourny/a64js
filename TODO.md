@@ -4,13 +4,14 @@ Current capstone coverage snapshot:
 
 - `12619` supported capstone cases
 - `22002` unsupported capstone cases
-- `111` XML instruction files currently listed in `tools/supported-files.ts`
+- `115` XML instruction files currently listed in `tools/supported-files.ts`
 - `1772` distinct unsupported XML instruction files
 - `954` capstone source YAML files containing unsupported cases
 - `936` distinct unsupported mnemonics
 
 Recently completed families:
 
+- AdvSIMD `SQRDMLAH` / `SQRDMLSH` (vector and by-element): 4 XML files promoted to supported
 - SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`: `1344` cases promoted to supported
 - SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`: `1750` cases promoted to supported
 - `mrs.xml`: `1789` cases promoted to supported
@@ -31,14 +32,16 @@ Recently completed families:
 
 Priority order from the current snapshot:
 
-1. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
+1. AdvSIMD cleanup around the remaining dot-product/vector-element families and adjacent multi-element load/store cleanup.
 
 Highest-value remaining XML files right now:
 
-- `sqrdmlah_advsimd_elt.xml`: `96`
-- `sqrdmlsh_advsimd_elt.xml`: `96`
-- `sqrdmlah_advsimd_vec.xml`: `84`
-- `sqrdmlsh_advsimd_vec.xml`: `84`
+- `ld1_advsimd_mult.xml`: `88`
+- `st1_advsimd_mult.xml`: `88`
+- `udot_advsimd_elt.xml`: `72`
+- `sdot_advsimd_elt.xml`: `36`
+- `sdot_advsimd_vec.xml`: `36`
+- `udot_advsimd_vec.xml`: `36`
 
 Highest-value remaining source files right now:
 
@@ -47,7 +50,6 @@ Highest-value remaining source files right now:
 - `neon-simd-ldst-multi-elem.s.yaml`: `196`
 - `armv8.2a-dotprod.s.yaml`: `180`
 - `neon-compare-instructions.s.yaml`: `180`
-- `SME2/bfmlal.s.yaml`: `168`
 
 ## What "unsupported" means here
 
@@ -89,10 +91,12 @@ Notable source files:
 
 Notable XML files:
 
-- `sqrdmlah_advsimd_elt.xml`: `96`
-- `sqrdmlsh_advsimd_elt.xml`: `96`
-- `sqrdmlah_advsimd_vec.xml`: `84`
-- `sqrdmlsh_advsimd_vec.xml`: `84`
+- `ld1_advsimd_mult.xml`: `88`
+- `st1_advsimd_mult.xml`: `88`
+- `udot_advsimd_elt.xml`: `72`
+- `sdot_advsimd_elt.xml`: `36`
+- `sdot_advsimd_vec.xml`: `36`
+- `udot_advsimd_vec.xml`: `36`
 
 Likely outcome: this is the remaining baseline cleanup after the recent system-register, move/copy, scalar count, and compare work.
 
@@ -117,7 +121,7 @@ Implication: the remaining work is now even more concentrated in SVE, SME, and S
 
 Suggested order for the next follow-up pass:
 
-1. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
+1. Sweep the remaining AdvSIMD / baseline A64 leftovers such as multi-element load/store, compare/misc, and dot-product/vector-element cases.
 2. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
 3. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
