@@ -271,6 +271,1986 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "features": []
   },
   {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 0,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 1,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 2,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 3,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 4,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 5,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 6,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 7,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 8,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 9,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 10,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 11,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 12,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 13,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 14,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 15,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 16,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 17,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 18,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 19,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 20,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 21,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 22,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 23,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 24,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 25,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 26,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 27,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 28,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 29,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 30,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 31,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 32,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 33,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 34,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 35,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 36,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 37,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 38,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 39,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 40,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 41,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 42,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 43,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 44,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 45,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 46,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 47,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 48,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 49,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 50,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 51,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 52,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 53,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 54,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 55,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 56,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 57,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 58,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 59,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 60,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 61,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 62,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 63,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 64,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 65,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 66,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 67,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 68,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 69,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 70,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 71,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 72,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 73,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 74,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 75,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 76,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 77,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 78,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 79,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 80,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 81,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 82,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 83,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 84,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 85,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 86,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 87,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 88,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 89,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 90,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 91,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 92,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 93,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 94,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 95,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 96,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 97,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 98,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 99,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 100,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 101,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 102,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 103,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 104,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 105,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 106,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 107,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 108,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 109,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 110,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 111,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 112,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 113,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 114,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 115,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 116,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 117,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 118,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 119,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 120,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 121,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 122,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 123,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 124,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 125,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 126,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 127,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 128,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 129,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 130,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 131,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 132,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 133,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 134,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 135,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 136,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 137,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 138,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 139,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 140,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 141,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 142,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 143,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 144,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 145,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 146,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 147,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 148,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 149,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 150,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 151,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 152,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 153,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 154,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 155,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 156,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 157,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 158,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 159,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 160,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 161,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 162,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 163,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 164,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 165,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 166,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 167,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 168,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 169,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 170,
+    "word": 780309536,
+    "asmText": "udot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 171,
+    "word": 243438624,
+    "asmText": "sdot v0.2s, v1.8b, v2.8b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 172,
+    "word": 1854051360,
+    "asmText": "udot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "udot_advsimd_vec.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 173,
+    "word": 1317180448,
+    "asmText": "sdot v0.4s, v1.16b, v2.16b",
+    "encodingFile": "sdot_advsimd_vec.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 174,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 175,
+    "word": 262332448,
+    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 176,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 177,
+    "word": 1336076320,
+    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
+    "encodingFile": "sdot_advsimd_elt.xml",
+    "mnemonic": "SDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 178,
+    "word": 797106208,
+    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
+    "sourceFile": "armv8.2a-dotprod.s.yaml",
+    "caseIndex": 179,
+    "word": 1870850080,
+    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
+    "encodingFile": "udot_advsimd_elt.xml",
+    "mnemonic": "UDOT",
+    "features": [
+      "FEAT_DotProd"
+    ]
+  },
+  {
     "sourceFile": "armv8.3a-ID_ISAR6_EL1.s.yaml",
     "caseIndex": 0,
     "word": 3577217760,
@@ -27095,6 +29075,1942 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "encodingFile": "msr_reg.xml",
     "mnemonic": "MSR",
     "features": []
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 0,
+    "word": 1275097088,
+    "asmText": "st1 { v0.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 1,
+    "word": 1275098607,
+    "asmText": "st1 { v15.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 2,
+    "word": 1275100159,
+    "asmText": "st1 { v31.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 3,
+    "word": 1275100160,
+    "asmText": "st1 { v0.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 4,
+    "word": 201355264,
+    "asmText": "st1 { v0.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 5,
+    "word": 201356783,
+    "asmText": "st1 { v15.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 6,
+    "word": 201358335,
+    "asmText": "st1 { v31.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 7,
+    "word": 201358336,
+    "asmText": "st1 { v0.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 8,
+    "word": 1275109376,
+    "asmText": "st1 { v0.16b, v1.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 9,
+    "word": 1275110895,
+    "asmText": "st1 { v15.8h, v16.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 10,
+    "word": 1275112447,
+    "asmText": "st1 { v31.4s, v0.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 11,
+    "word": 1275112448,
+    "asmText": "st1 { v0.2d, v1.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 12,
+    "word": 201367552,
+    "asmText": "st1 { v0.8b, v1.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 13,
+    "word": 201369071,
+    "asmText": "st1 { v15.4h, v16.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 14,
+    "word": 201370623,
+    "asmText": "st1 { v31.2s, v0.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 15,
+    "word": 201370624,
+    "asmText": "st1 { v0.1d, v1.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 16,
+    "word": 1275109376,
+    "asmText": "st1 { v0.16b, v1.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 17,
+    "word": 1275110895,
+    "asmText": "st1 { v15.8h, v16.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 18,
+    "word": 1275112447,
+    "asmText": "st1 { v31.4s, v0.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 19,
+    "word": 1275112448,
+    "asmText": "st1 { v0.2d, v1.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 20,
+    "word": 201367552,
+    "asmText": "st1 { v0.8b, v1.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 21,
+    "word": 201369071,
+    "asmText": "st1 { v15.4h, v16.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 22,
+    "word": 201370623,
+    "asmText": "st1 { v31.2s, v0.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 23,
+    "word": 201370624,
+    "asmText": "st1 { v0.1d, v1.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 24,
+    "word": 1275092992,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 25,
+    "word": 1275094511,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 26,
+    "word": 1275096063,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 27,
+    "word": 1275096064,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 28,
+    "word": 201351168,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 29,
+    "word": 201352687,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 30,
+    "word": 201354239,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 31,
+    "word": 201354240,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 32,
+    "word": 1275092992,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 33,
+    "word": 1275094511,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 34,
+    "word": 1275096063,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 35,
+    "word": 1275096064,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 36,
+    "word": 201351168,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 37,
+    "word": 201352687,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 38,
+    "word": 201354239,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 39,
+    "word": 201354240,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 40,
+    "word": 1275076608,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 41,
+    "word": 1275078127,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 42,
+    "word": 1275079679,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 43,
+    "word": 1275079680,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 44,
+    "word": 201334784,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 45,
+    "word": 201336303,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 46,
+    "word": 201337855,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 47,
+    "word": 201337856,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 48,
+    "word": 1275076608,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 49,
+    "word": 1275078127,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 50,
+    "word": 1275079679,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 51,
+    "word": 1275079680,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 52,
+    "word": 201334784,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 53,
+    "word": 201336303,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 54,
+    "word": 201337855,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 55,
+    "word": 201337856,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 98,
+    "word": 1279291392,
+    "asmText": "ld1 { v0.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 99,
+    "word": 1279292911,
+    "asmText": "ld1 { v15.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 100,
+    "word": 1279294463,
+    "asmText": "ld1 { v31.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 101,
+    "word": 1279294464,
+    "asmText": "ld1 { v0.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 102,
+    "word": 205549568,
+    "asmText": "ld1 { v0.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 103,
+    "word": 205551087,
+    "asmText": "ld1 { v15.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 104,
+    "word": 205552639,
+    "asmText": "ld1 { v31.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 105,
+    "word": 205552640,
+    "asmText": "ld1 { v0.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 106,
+    "word": 1279303680,
+    "asmText": "ld1 { v0.16b, v1.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 107,
+    "word": 1279305199,
+    "asmText": "ld1 { v15.8h, v16.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 108,
+    "word": 1279306751,
+    "asmText": "ld1 { v31.4s, v0.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 109,
+    "word": 1279306752,
+    "asmText": "ld1 { v0.2d, v1.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 110,
+    "word": 205561856,
+    "asmText": "ld1 { v0.8b, v1.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 111,
+    "word": 205563375,
+    "asmText": "ld1 { v15.4h, v16.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 112,
+    "word": 205564927,
+    "asmText": "ld1 { v31.2s, v0.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 113,
+    "word": 205564928,
+    "asmText": "ld1 { v0.1d, v1.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 114,
+    "word": 1279303680,
+    "asmText": "ld1 { v0.16b, v1.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 115,
+    "word": 1279305199,
+    "asmText": "ld1 { v15.8h, v16.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 116,
+    "word": 1279306751,
+    "asmText": "ld1 { v31.4s, v0.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 117,
+    "word": 1279306752,
+    "asmText": "ld1 { v0.2d, v1.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 118,
+    "word": 205561856,
+    "asmText": "ld1 { v0.8b, v1.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 119,
+    "word": 205563375,
+    "asmText": "ld1 { v15.4h, v16.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 120,
+    "word": 205564927,
+    "asmText": "ld1 { v31.2s, v0.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 121,
+    "word": 205564928,
+    "asmText": "ld1 { v0.1d, v1.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 122,
+    "word": 1279287296,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 123,
+    "word": 1279288815,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 124,
+    "word": 1279290367,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 125,
+    "word": 1279290368,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 126,
+    "word": 205545472,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 127,
+    "word": 205546991,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 128,
+    "word": 205548543,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 129,
+    "word": 205548544,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 130,
+    "word": 1279287296,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 131,
+    "word": 1279288815,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 132,
+    "word": 1279290367,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 133,
+    "word": 1279290368,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 134,
+    "word": 205545472,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 135,
+    "word": 205546991,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 136,
+    "word": 205548543,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 137,
+    "word": 205548544,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 138,
+    "word": 1279270912,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 139,
+    "word": 1279272431,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 140,
+    "word": 1279273983,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 141,
+    "word": 1279273984,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 142,
+    "word": 205529088,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 143,
+    "word": 205530607,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 144,
+    "word": 205532159,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 145,
+    "word": 205532160,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 146,
+    "word": 1279270912,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 147,
+    "word": 1279272431,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 148,
+    "word": 1279273983,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 149,
+    "word": 1279273984,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 150,
+    "word": 205529088,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 151,
+    "word": 205530607,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 152,
+    "word": 205532159,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
+    "caseIndex": 153,
+    "word": 205532160,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 0,
+    "word": 1287745536,
+    "asmText": "ld1 { v0.16b }, [x0], x1",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 1,
+    "word": 1287812591,
+    "asmText": "ld1 { v15.8h }, [x15], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 2,
+    "word": 1289714687,
+    "asmText": "ld1 { v31.4s }, [sp], #16",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 3,
+    "word": 1289714688,
+    "asmText": "ld1 { v0.2d }, [x0], #16",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 4,
+    "word": 214069248,
+    "asmText": "ld1 { v0.8b }, [x0], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 5,
+    "word": 214136303,
+    "asmText": "ld1 { v15.4h }, [x15], x3",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 6,
+    "word": 215972863,
+    "asmText": "ld1 { v31.2s }, [sp], #8",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 7,
+    "word": 215972864,
+    "asmText": "ld1 { v0.1d }, [x0], #8",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 8,
+    "word": 1287757824,
+    "asmText": "ld1 { v0.16b, v1.16b }, [x0], x1",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 9,
+    "word": 1287824879,
+    "asmText": "ld1 { v15.8h, v16.8h }, [x15], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 10,
+    "word": 1289726975,
+    "asmText": "ld1 { v31.4s, v0.4s }, [sp], #32",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 11,
+    "word": 1289726976,
+    "asmText": "ld1 { v0.2d, v1.2d }, [x0], #32",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 12,
+    "word": 214081536,
+    "asmText": "ld1 { v0.8b, v1.8b }, [x0], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 13,
+    "word": 214148591,
+    "asmText": "ld1 { v15.4h, v16.4h }, [x15], x3",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 14,
+    "word": 215985151,
+    "asmText": "ld1 { v31.2s, v0.2s }, [sp], #16",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 15,
+    "word": 215985152,
+    "asmText": "ld1 { v0.1d, v1.1d }, [x0], #16",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 16,
+    "word": 1287741440,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0], x1",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 17,
+    "word": 1287808495,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 18,
+    "word": 1289710591,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp], #48",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 19,
+    "word": 1289710592,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0], #48",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 20,
+    "word": 214065152,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 21,
+    "word": 214132207,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15], x3",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 22,
+    "word": 215968767,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp], #24",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 23,
+    "word": 215968768,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0], #24",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 24,
+    "word": 1287725056,
+    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 25,
+    "word": 1287792111,
+    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 26,
+    "word": 1289694207,
+    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 27,
+    "word": 1289694208,
+    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 28,
+    "word": 214114304,
+    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 29,
+    "word": 214181359,
+    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 30,
+    "word": 215952383,
+    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 31,
+    "word": 215952384,
+    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0], #32",
+    "encodingFile": "ld1_advsimd_mult.xml",
+    "mnemonic": "LD1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 53,
+    "word": 1283551232,
+    "asmText": "st1 { v0.16b }, [x0], x1",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 54,
+    "word": 1283618287,
+    "asmText": "st1 { v15.8h }, [x15], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 55,
+    "word": 1285520383,
+    "asmText": "st1 { v31.4s }, [sp], #16",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 56,
+    "word": 1285520384,
+    "asmText": "st1 { v0.2d }, [x0], #16",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 57,
+    "word": 209874944,
+    "asmText": "st1 { v0.8b }, [x0], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 58,
+    "word": 209941999,
+    "asmText": "st1 { v15.4h }, [x15], x3",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 59,
+    "word": 211778559,
+    "asmText": "st1 { v31.2s }, [sp], #8",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 60,
+    "word": 211778560,
+    "asmText": "st1 { v0.1d }, [x0], #8",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 61,
+    "word": 1283563520,
+    "asmText": "st1 { v0.16b, v1.16b }, [x0], x1",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 62,
+    "word": 1283630575,
+    "asmText": "st1 { v15.8h, v16.8h }, [x15], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 63,
+    "word": 1285532671,
+    "asmText": "st1 { v31.4s, v0.4s }, [sp], #32",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 64,
+    "word": 1285532672,
+    "asmText": "st1 { v0.2d, v1.2d }, [x0], #32",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 65,
+    "word": 209887232,
+    "asmText": "st1 { v0.8b, v1.8b }, [x0], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 66,
+    "word": 209954287,
+    "asmText": "st1 { v15.4h, v16.4h }, [x15], x3",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 67,
+    "word": 211790847,
+    "asmText": "st1 { v31.2s, v0.2s }, [sp], #16",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 68,
+    "word": 211790848,
+    "asmText": "st1 { v0.1d, v1.1d }, [x0], #16",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 69,
+    "word": 1283547136,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0], x1",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 70,
+    "word": 1283614191,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 71,
+    "word": 1285516287,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp], #48",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 72,
+    "word": 1285516288,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0], #48",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 73,
+    "word": 209870848,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 74,
+    "word": 209937903,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15], x3",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 75,
+    "word": 211774463,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp], #24",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 76,
+    "word": 211774464,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0], #24",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 77,
+    "word": 1283530752,
+    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 78,
+    "word": 1283597807,
+    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 79,
+    "word": 1285499903,
+    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 80,
+    "word": 1285499904,
+    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 81,
+    "word": 209920000,
+    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 82,
+    "word": 209987055,
+    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 83,
+    "word": 211758079,
+    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 84,
+    "word": 211758080,
+    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0], #32",
+    "encodingFile": "st1_advsimd_mult.xml",
+    "mnemonic": "ST1",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
   },
   {
     "sourceFile": "ras-extension.s.yaml",
@@ -131481,6 +135397,1527 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 0,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 1,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 2,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 3,
+    "word": 71302112,
+    "asmText": "sqdecb x0, all, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 4,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 5,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 6,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 7,
+    "word": 70253536,
+    "asmText": "sqdecb x0, w0, all, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 8,
+    "word": 69269504,
+    "asmText": "sqdecb x0, w0, pow2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 9,
+    "word": 70252544,
+    "asmText": "sqdecb x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 10,
+    "word": 70318080,
+    "asmText": "sqdecb x0, pow2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 11,
+    "word": 70318112,
+    "asmText": "sqdecb x0, vl1",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 12,
+    "word": 70318144,
+    "asmText": "sqdecb x0, vl2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 13,
+    "word": 70318176,
+    "asmText": "sqdecb x0, vl3",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 14,
+    "word": 70318208,
+    "asmText": "sqdecb x0, vl4",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 15,
+    "word": 70318240,
+    "asmText": "sqdecb x0, vl5",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 16,
+    "word": 70318272,
+    "asmText": "sqdecb x0, vl6",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 17,
+    "word": 70318304,
+    "asmText": "sqdecb x0, vl7",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 18,
+    "word": 70318336,
+    "asmText": "sqdecb x0, vl8",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 19,
+    "word": 70318368,
+    "asmText": "sqdecb x0, vl16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 20,
+    "word": 70318400,
+    "asmText": "sqdecb x0, vl32",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 21,
+    "word": 70318432,
+    "asmText": "sqdecb x0, vl64",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 22,
+    "word": 70318464,
+    "asmText": "sqdecb x0, vl128",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 23,
+    "word": 70318496,
+    "asmText": "sqdecb x0, vl256",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 24,
+    "word": 70318528,
+    "asmText": "sqdecb x0, #14",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 25,
+    "word": 70318560,
+    "asmText": "sqdecb x0, #15",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 26,
+    "word": 70318592,
+    "asmText": "sqdecb x0, #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 27,
+    "word": 70318624,
+    "asmText": "sqdecb x0, #17",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 28,
+    "word": 70318656,
+    "asmText": "sqdecb x0, #18",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 29,
+    "word": 70318688,
+    "asmText": "sqdecb x0, #19",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 30,
+    "word": 70318720,
+    "asmText": "sqdecb x0, #20",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 31,
+    "word": 70318752,
+    "asmText": "sqdecb x0, #21",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 32,
+    "word": 70318784,
+    "asmText": "sqdecb x0, #22",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 33,
+    "word": 70318816,
+    "asmText": "sqdecb x0, #23",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 34,
+    "word": 70318848,
+    "asmText": "sqdecb x0, #24",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 35,
+    "word": 70318880,
+    "asmText": "sqdecb x0, #25",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 36,
+    "word": 70318912,
+    "asmText": "sqdecb x0, #26",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 37,
+    "word": 70318944,
+    "asmText": "sqdecb x0, #27",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 38,
+    "word": 70318976,
+    "asmText": "sqdecb x0, #28",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 39,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 40,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 41,
+    "word": 70319072,
+    "asmText": "sqdecb x0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 42,
+    "word": 71302112,
+    "asmText": "sqdecb x0, all, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 43,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 44,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 45,
+    "word": 69270496,
+    "asmText": "sqdecb x0, w0",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 46,
+    "word": 70253536,
+    "asmText": "sqdecb x0, w0, all, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 47,
+    "word": 69269504,
+    "asmText": "sqdecb x0, w0, pow2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 48,
+    "word": 70252544,
+    "asmText": "sqdecb x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 49,
+    "word": 70318080,
+    "asmText": "sqdecb x0, pow2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 50,
+    "word": 70318112,
+    "asmText": "sqdecb x0, vl1",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 51,
+    "word": 70318144,
+    "asmText": "sqdecb x0, vl2",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 52,
+    "word": 70318176,
+    "asmText": "sqdecb x0, vl3",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 53,
+    "word": 70318208,
+    "asmText": "sqdecb x0, vl4",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 54,
+    "word": 70318240,
+    "asmText": "sqdecb x0, vl5",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 55,
+    "word": 70318272,
+    "asmText": "sqdecb x0, vl6",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 56,
+    "word": 70318304,
+    "asmText": "sqdecb x0, vl7",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 57,
+    "word": 70318336,
+    "asmText": "sqdecb x0, vl8",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 58,
+    "word": 70318368,
+    "asmText": "sqdecb x0, vl16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 59,
+    "word": 70318400,
+    "asmText": "sqdecb x0, vl32",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 60,
+    "word": 70318432,
+    "asmText": "sqdecb x0, vl64",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 61,
+    "word": 70318464,
+    "asmText": "sqdecb x0, vl128",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 62,
+    "word": 70318496,
+    "asmText": "sqdecb x0, vl256",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 63,
+    "word": 70318528,
+    "asmText": "sqdecb x0, #14",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 64,
+    "word": 70318560,
+    "asmText": "sqdecb x0, #15",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 65,
+    "word": 70318592,
+    "asmText": "sqdecb x0, #16",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 66,
+    "word": 70318624,
+    "asmText": "sqdecb x0, #17",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 67,
+    "word": 70318656,
+    "asmText": "sqdecb x0, #18",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 68,
+    "word": 70318688,
+    "asmText": "sqdecb x0, #19",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 69,
+    "word": 70318720,
+    "asmText": "sqdecb x0, #20",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 70,
+    "word": 70318752,
+    "asmText": "sqdecb x0, #21",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 71,
+    "word": 70318784,
+    "asmText": "sqdecb x0, #22",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 72,
+    "word": 70318816,
+    "asmText": "sqdecb x0, #23",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 73,
+    "word": 70318848,
+    "asmText": "sqdecb x0, #24",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 74,
+    "word": 70318880,
+    "asmText": "sqdecb x0, #25",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 75,
+    "word": 70318912,
+    "asmText": "sqdecb x0, #26",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 76,
+    "word": 70318944,
+    "asmText": "sqdecb x0, #27",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecb.s.yaml",
+    "caseIndex": 77,
+    "word": 70318976,
+    "asmText": "sqdecb x0, #28",
+    "encodingFile": "sqdecb_r_rs.xml",
+    "mnemonic": "SQDECB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 0,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 1,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 2,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 3,
+    "word": 83885024,
+    "asmText": "sqdecd x0, all, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 4,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 5,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 6,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 7,
+    "word": 82836448,
+    "asmText": "sqdecd x0, w0, all, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 8,
+    "word": 81852416,
+    "asmText": "sqdecd x0, w0, pow2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 9,
+    "word": 82835456,
+    "asmText": "sqdecd x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 16,
+    "word": 82900992,
+    "asmText": "sqdecd x0, pow2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 17,
+    "word": 82901024,
+    "asmText": "sqdecd x0, vl1",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 18,
+    "word": 82901056,
+    "asmText": "sqdecd x0, vl2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 19,
+    "word": 82901088,
+    "asmText": "sqdecd x0, vl3",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 20,
+    "word": 82901120,
+    "asmText": "sqdecd x0, vl4",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 21,
+    "word": 82901152,
+    "asmText": "sqdecd x0, vl5",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 22,
+    "word": 82901184,
+    "asmText": "sqdecd x0, vl6",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 23,
+    "word": 82901216,
+    "asmText": "sqdecd x0, vl7",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 24,
+    "word": 82901248,
+    "asmText": "sqdecd x0, vl8",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 25,
+    "word": 82901280,
+    "asmText": "sqdecd x0, vl16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 26,
+    "word": 82901312,
+    "asmText": "sqdecd x0, vl32",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 27,
+    "word": 82901344,
+    "asmText": "sqdecd x0, vl64",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 28,
+    "word": 82901376,
+    "asmText": "sqdecd x0, vl128",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 29,
+    "word": 82901408,
+    "asmText": "sqdecd x0, vl256",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 30,
+    "word": 82901440,
+    "asmText": "sqdecd x0, #14",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 31,
+    "word": 82901472,
+    "asmText": "sqdecd x0, #15",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 32,
+    "word": 82901504,
+    "asmText": "sqdecd x0, #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 33,
+    "word": 82901536,
+    "asmText": "sqdecd x0, #17",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 34,
+    "word": 82901568,
+    "asmText": "sqdecd x0, #18",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 35,
+    "word": 82901600,
+    "asmText": "sqdecd x0, #19",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 36,
+    "word": 82901632,
+    "asmText": "sqdecd x0, #20",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 37,
+    "word": 82901664,
+    "asmText": "sqdecd x0, #21",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 38,
+    "word": 82901696,
+    "asmText": "sqdecd x0, #22",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 39,
+    "word": 82901728,
+    "asmText": "sqdecd x0, #23",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 40,
+    "word": 82901760,
+    "asmText": "sqdecd x0, #24",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 41,
+    "word": 82901792,
+    "asmText": "sqdecd x0, #25",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 42,
+    "word": 82901824,
+    "asmText": "sqdecd x0, #26",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 43,
+    "word": 82901856,
+    "asmText": "sqdecd x0, #27",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 44,
+    "word": 82901888,
+    "asmText": "sqdecd x0, #28",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
     "sourceFile": "SVE/sqdecd.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
@@ -131513,6 +136950,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 51,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 52,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 53,
+    "word": 82901984,
+    "asmText": "sqdecd x0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 54,
+    "word": 83885024,
+    "asmText": "sqdecd x0, all, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 55,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 56,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 57,
+    "word": 81853408,
+    "asmText": "sqdecd x0, w0",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 58,
+    "word": 82836448,
+    "asmText": "sqdecd x0, w0, all, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 59,
+    "word": 81852416,
+    "asmText": "sqdecd x0, w0, pow2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 60,
+    "word": 82835456,
+    "asmText": "sqdecd x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 67,
+    "word": 82900992,
+    "asmText": "sqdecd x0, pow2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 68,
+    "word": 82901024,
+    "asmText": "sqdecd x0, vl1",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 69,
+    "word": 82901056,
+    "asmText": "sqdecd x0, vl2",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 70,
+    "word": 82901088,
+    "asmText": "sqdecd x0, vl3",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 71,
+    "word": 82901120,
+    "asmText": "sqdecd x0, vl4",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 72,
+    "word": 82901152,
+    "asmText": "sqdecd x0, vl5",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 73,
+    "word": 82901184,
+    "asmText": "sqdecd x0, vl6",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 74,
+    "word": 82901216,
+    "asmText": "sqdecd x0, vl7",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 75,
+    "word": 82901248,
+    "asmText": "sqdecd x0, vl8",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 76,
+    "word": 82901280,
+    "asmText": "sqdecd x0, vl16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 77,
+    "word": 82901312,
+    "asmText": "sqdecd x0, vl32",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 78,
+    "word": 82901344,
+    "asmText": "sqdecd x0, vl64",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 79,
+    "word": 82901376,
+    "asmText": "sqdecd x0, vl128",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 80,
+    "word": 82901408,
+    "asmText": "sqdecd x0, vl256",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 81,
+    "word": 82901440,
+    "asmText": "sqdecd x0, #14",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 82,
+    "word": 82901472,
+    "asmText": "sqdecd x0, #15",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 83,
+    "word": 82901504,
+    "asmText": "sqdecd x0, #16",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 84,
+    "word": 82901536,
+    "asmText": "sqdecd x0, #17",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 85,
+    "word": 82901568,
+    "asmText": "sqdecd x0, #18",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 86,
+    "word": 82901600,
+    "asmText": "sqdecd x0, #19",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 87,
+    "word": 82901632,
+    "asmText": "sqdecd x0, #20",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 88,
+    "word": 82901664,
+    "asmText": "sqdecd x0, #21",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 89,
+    "word": 82901696,
+    "asmText": "sqdecd x0, #22",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 90,
+    "word": 82901728,
+    "asmText": "sqdecd x0, #23",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 91,
+    "word": 82901760,
+    "asmText": "sqdecd x0, #24",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 92,
+    "word": 82901792,
+    "asmText": "sqdecd x0, #25",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 93,
+    "word": 82901824,
+    "asmText": "sqdecd x0, #26",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 94,
+    "word": 82901856,
+    "asmText": "sqdecd x0, #27",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecd.s.yaml",
+    "caseIndex": 95,
+    "word": 82901888,
+    "asmText": "sqdecd x0, #28",
+    "encodingFile": "sqdecd_r_rs.xml",
+    "mnemonic": "SQDECD",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -131560,6 +137504,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 0,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 1,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 2,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 3,
+    "word": 75496416,
+    "asmText": "sqdech x0, all, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 4,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 5,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 6,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 7,
+    "word": 74447840,
+    "asmText": "sqdech x0, w0, all, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 8,
+    "word": 73463808,
+    "asmText": "sqdech x0, w0, pow2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 9,
+    "word": 74446848,
+    "asmText": "sqdech x0, w0, pow2, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 16,
+    "word": 74512384,
+    "asmText": "sqdech x0, pow2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 17,
+    "word": 74512416,
+    "asmText": "sqdech x0, vl1",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 18,
+    "word": 74512448,
+    "asmText": "sqdech x0, vl2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 19,
+    "word": 74512480,
+    "asmText": "sqdech x0, vl3",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 20,
+    "word": 74512512,
+    "asmText": "sqdech x0, vl4",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 21,
+    "word": 74512544,
+    "asmText": "sqdech x0, vl5",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 22,
+    "word": 74512576,
+    "asmText": "sqdech x0, vl6",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 23,
+    "word": 74512608,
+    "asmText": "sqdech x0, vl7",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 24,
+    "word": 74512640,
+    "asmText": "sqdech x0, vl8",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 25,
+    "word": 74512672,
+    "asmText": "sqdech x0, vl16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 26,
+    "word": 74512704,
+    "asmText": "sqdech x0, vl32",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 27,
+    "word": 74512736,
+    "asmText": "sqdech x0, vl64",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 28,
+    "word": 74512768,
+    "asmText": "sqdech x0, vl128",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 29,
+    "word": 74512800,
+    "asmText": "sqdech x0, vl256",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 30,
+    "word": 74512832,
+    "asmText": "sqdech x0, #14",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 31,
+    "word": 74512864,
+    "asmText": "sqdech x0, #15",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 32,
+    "word": 74512896,
+    "asmText": "sqdech x0, #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 33,
+    "word": 74512928,
+    "asmText": "sqdech x0, #17",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 34,
+    "word": 74512960,
+    "asmText": "sqdech x0, #18",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 35,
+    "word": 74512992,
+    "asmText": "sqdech x0, #19",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 36,
+    "word": 74513024,
+    "asmText": "sqdech x0, #20",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 37,
+    "word": 74513056,
+    "asmText": "sqdech x0, #21",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 38,
+    "word": 74513088,
+    "asmText": "sqdech x0, #22",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 39,
+    "word": 74513120,
+    "asmText": "sqdech x0, #23",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 40,
+    "word": 74513152,
+    "asmText": "sqdech x0, #24",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 41,
+    "word": 74513184,
+    "asmText": "sqdech x0, #25",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 42,
+    "word": 74513216,
+    "asmText": "sqdech x0, #26",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 43,
+    "word": 74513248,
+    "asmText": "sqdech x0, #27",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 44,
+    "word": 74513280,
+    "asmText": "sqdech x0, #28",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -131591,6 +138042,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 51,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 52,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 53,
+    "word": 74513376,
+    "asmText": "sqdech x0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 54,
+    "word": 75496416,
+    "asmText": "sqdech x0, all, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 55,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 56,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 57,
+    "word": 73464800,
+    "asmText": "sqdech x0, w0",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 58,
+    "word": 74447840,
+    "asmText": "sqdech x0, w0, all, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 59,
+    "word": 73463808,
+    "asmText": "sqdech x0, w0, pow2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 60,
+    "word": 74446848,
+    "asmText": "sqdech x0, w0, pow2, mul #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 67,
+    "word": 74512384,
+    "asmText": "sqdech x0, pow2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 68,
+    "word": 74512416,
+    "asmText": "sqdech x0, vl1",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 69,
+    "word": 74512448,
+    "asmText": "sqdech x0, vl2",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 70,
+    "word": 74512480,
+    "asmText": "sqdech x0, vl3",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 71,
+    "word": 74512512,
+    "asmText": "sqdech x0, vl4",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 72,
+    "word": 74512544,
+    "asmText": "sqdech x0, vl5",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 73,
+    "word": 74512576,
+    "asmText": "sqdech x0, vl6",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 74,
+    "word": 74512608,
+    "asmText": "sqdech x0, vl7",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 75,
+    "word": 74512640,
+    "asmText": "sqdech x0, vl8",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 76,
+    "word": 74512672,
+    "asmText": "sqdech x0, vl16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 77,
+    "word": 74512704,
+    "asmText": "sqdech x0, vl32",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 78,
+    "word": 74512736,
+    "asmText": "sqdech x0, vl64",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 79,
+    "word": 74512768,
+    "asmText": "sqdech x0, vl128",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 80,
+    "word": 74512800,
+    "asmText": "sqdech x0, vl256",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 81,
+    "word": 74512832,
+    "asmText": "sqdech x0, #14",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 82,
+    "word": 74512864,
+    "asmText": "sqdech x0, #15",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 83,
+    "word": 74512896,
+    "asmText": "sqdech x0, #16",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 84,
+    "word": 74512928,
+    "asmText": "sqdech x0, #17",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 85,
+    "word": 74512960,
+    "asmText": "sqdech x0, #18",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 86,
+    "word": 74512992,
+    "asmText": "sqdech x0, #19",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 87,
+    "word": 74513024,
+    "asmText": "sqdech x0, #20",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 88,
+    "word": 74513056,
+    "asmText": "sqdech x0, #21",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 89,
+    "word": 74513088,
+    "asmText": "sqdech x0, #22",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 90,
+    "word": 74513120,
+    "asmText": "sqdech x0, #23",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 91,
+    "word": 74513152,
+    "asmText": "sqdech x0, #24",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 92,
+    "word": 74513184,
+    "asmText": "sqdech x0, #25",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 93,
+    "word": 74513216,
+    "asmText": "sqdech x0, #26",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 94,
+    "word": 74513248,
+    "asmText": "sqdech x0, #27",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdech.s.yaml",
+    "caseIndex": 95,
+    "word": 74513280,
+    "asmText": "sqdech x0, #28",
+    "encodingFile": "sqdech_r_rs.xml",
+    "mnemonic": "SQDECH",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -131664,6 +138622,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 0,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 1,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 2,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 3,
+    "word": 79690720,
+    "asmText": "sqdecw x0, all, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 4,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 5,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 6,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 7,
+    "word": 78642144,
+    "asmText": "sqdecw x0, w0, all, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 8,
+    "word": 77658112,
+    "asmText": "sqdecw x0, w0, pow2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 9,
+    "word": 78641152,
+    "asmText": "sqdecw x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 16,
+    "word": 78706688,
+    "asmText": "sqdecw x0, pow2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 17,
+    "word": 78706720,
+    "asmText": "sqdecw x0, vl1",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 18,
+    "word": 78706752,
+    "asmText": "sqdecw x0, vl2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 19,
+    "word": 78706784,
+    "asmText": "sqdecw x0, vl3",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 20,
+    "word": 78706816,
+    "asmText": "sqdecw x0, vl4",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 21,
+    "word": 78706848,
+    "asmText": "sqdecw x0, vl5",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 22,
+    "word": 78706880,
+    "asmText": "sqdecw x0, vl6",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 23,
+    "word": 78706912,
+    "asmText": "sqdecw x0, vl7",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 24,
+    "word": 78706944,
+    "asmText": "sqdecw x0, vl8",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 25,
+    "word": 78706976,
+    "asmText": "sqdecw x0, vl16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 26,
+    "word": 78707008,
+    "asmText": "sqdecw x0, vl32",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 27,
+    "word": 78707040,
+    "asmText": "sqdecw x0, vl64",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 28,
+    "word": 78707072,
+    "asmText": "sqdecw x0, vl128",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 29,
+    "word": 78707104,
+    "asmText": "sqdecw x0, vl256",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 30,
+    "word": 78707136,
+    "asmText": "sqdecw x0, #14",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 31,
+    "word": 78707168,
+    "asmText": "sqdecw x0, #15",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 32,
+    "word": 78707200,
+    "asmText": "sqdecw x0, #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 33,
+    "word": 78707232,
+    "asmText": "sqdecw x0, #17",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 34,
+    "word": 78707264,
+    "asmText": "sqdecw x0, #18",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 35,
+    "word": 78707296,
+    "asmText": "sqdecw x0, #19",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 36,
+    "word": 78707328,
+    "asmText": "sqdecw x0, #20",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 37,
+    "word": 78707360,
+    "asmText": "sqdecw x0, #21",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 38,
+    "word": 78707392,
+    "asmText": "sqdecw x0, #22",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 39,
+    "word": 78707424,
+    "asmText": "sqdecw x0, #23",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 40,
+    "word": 78707456,
+    "asmText": "sqdecw x0, #24",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 41,
+    "word": 78707488,
+    "asmText": "sqdecw x0, #25",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 42,
+    "word": 78707520,
+    "asmText": "sqdecw x0, #26",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 43,
+    "word": 78707552,
+    "asmText": "sqdecw x0, #27",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 44,
+    "word": 78707584,
+    "asmText": "sqdecw x0, #28",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -131695,6 +139160,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 51,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 52,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 53,
+    "word": 78707680,
+    "asmText": "sqdecw x0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 54,
+    "word": 79690720,
+    "asmText": "sqdecw x0, all, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 55,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 56,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 57,
+    "word": 77659104,
+    "asmText": "sqdecw x0, w0",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 58,
+    "word": 78642144,
+    "asmText": "sqdecw x0, w0, all, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 59,
+    "word": 77658112,
+    "asmText": "sqdecw x0, w0, pow2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 60,
+    "word": 78641152,
+    "asmText": "sqdecw x0, w0, pow2, mul #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 67,
+    "word": 78706688,
+    "asmText": "sqdecw x0, pow2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 68,
+    "word": 78706720,
+    "asmText": "sqdecw x0, vl1",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 69,
+    "word": 78706752,
+    "asmText": "sqdecw x0, vl2",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 70,
+    "word": 78706784,
+    "asmText": "sqdecw x0, vl3",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 71,
+    "word": 78706816,
+    "asmText": "sqdecw x0, vl4",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 72,
+    "word": 78706848,
+    "asmText": "sqdecw x0, vl5",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 73,
+    "word": 78706880,
+    "asmText": "sqdecw x0, vl6",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 74,
+    "word": 78706912,
+    "asmText": "sqdecw x0, vl7",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 75,
+    "word": 78706944,
+    "asmText": "sqdecw x0, vl8",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 76,
+    "word": 78706976,
+    "asmText": "sqdecw x0, vl16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 77,
+    "word": 78707008,
+    "asmText": "sqdecw x0, vl32",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 78,
+    "word": 78707040,
+    "asmText": "sqdecw x0, vl64",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 79,
+    "word": 78707072,
+    "asmText": "sqdecw x0, vl128",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 80,
+    "word": 78707104,
+    "asmText": "sqdecw x0, vl256",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 81,
+    "word": 78707136,
+    "asmText": "sqdecw x0, #14",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 82,
+    "word": 78707168,
+    "asmText": "sqdecw x0, #15",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 83,
+    "word": 78707200,
+    "asmText": "sqdecw x0, #16",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 84,
+    "word": 78707232,
+    "asmText": "sqdecw x0, #17",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 85,
+    "word": 78707264,
+    "asmText": "sqdecw x0, #18",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 86,
+    "word": 78707296,
+    "asmText": "sqdecw x0, #19",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 87,
+    "word": 78707328,
+    "asmText": "sqdecw x0, #20",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 88,
+    "word": 78707360,
+    "asmText": "sqdecw x0, #21",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 89,
+    "word": 78707392,
+    "asmText": "sqdecw x0, #22",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 90,
+    "word": 78707424,
+    "asmText": "sqdecw x0, #23",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 91,
+    "word": 78707456,
+    "asmText": "sqdecw x0, #24",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 92,
+    "word": 78707488,
+    "asmText": "sqdecw x0, #25",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 93,
+    "word": 78707520,
+    "asmText": "sqdecw x0, #26",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 94,
+    "word": 78707552,
+    "asmText": "sqdecw x0, #27",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqdecw.s.yaml",
+    "caseIndex": 95,
+    "word": 78707584,
+    "asmText": "sqdecw x0, #28",
+    "encodingFile": "sqdecw_r_rs.xml",
+    "mnemonic": "SQDECW",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -131741,6 +139713,1527 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 0,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 1,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 2,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 3,
+    "word": 71300064,
+    "asmText": "sqincb x0, all, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 4,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 5,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 6,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 7,
+    "word": 70251488,
+    "asmText": "sqincb x0, w0, all, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 8,
+    "word": 69267456,
+    "asmText": "sqincb x0, w0, pow2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 9,
+    "word": 70250496,
+    "asmText": "sqincb x0, w0, pow2, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 10,
+    "word": 70316032,
+    "asmText": "sqincb x0, pow2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 11,
+    "word": 70316064,
+    "asmText": "sqincb x0, vl1",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 12,
+    "word": 70316096,
+    "asmText": "sqincb x0, vl2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 13,
+    "word": 70316128,
+    "asmText": "sqincb x0, vl3",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 14,
+    "word": 70316160,
+    "asmText": "sqincb x0, vl4",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 15,
+    "word": 70316192,
+    "asmText": "sqincb x0, vl5",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 16,
+    "word": 70316224,
+    "asmText": "sqincb x0, vl6",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 17,
+    "word": 70316256,
+    "asmText": "sqincb x0, vl7",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 18,
+    "word": 70316288,
+    "asmText": "sqincb x0, vl8",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 19,
+    "word": 70316320,
+    "asmText": "sqincb x0, vl16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 20,
+    "word": 70316352,
+    "asmText": "sqincb x0, vl32",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 21,
+    "word": 70316384,
+    "asmText": "sqincb x0, vl64",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 22,
+    "word": 70316416,
+    "asmText": "sqincb x0, vl128",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 23,
+    "word": 70316448,
+    "asmText": "sqincb x0, vl256",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 24,
+    "word": 70316480,
+    "asmText": "sqincb x0, #14",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 25,
+    "word": 70316512,
+    "asmText": "sqincb x0, #15",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 26,
+    "word": 70316544,
+    "asmText": "sqincb x0, #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 27,
+    "word": 70316576,
+    "asmText": "sqincb x0, #17",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 28,
+    "word": 70316608,
+    "asmText": "sqincb x0, #18",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 29,
+    "word": 70316640,
+    "asmText": "sqincb x0, #19",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 30,
+    "word": 70316672,
+    "asmText": "sqincb x0, #20",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 31,
+    "word": 70316704,
+    "asmText": "sqincb x0, #21",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 32,
+    "word": 70316736,
+    "asmText": "sqincb x0, #22",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 33,
+    "word": 70316768,
+    "asmText": "sqincb x0, #23",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 34,
+    "word": 70316800,
+    "asmText": "sqincb x0, #24",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 35,
+    "word": 70316832,
+    "asmText": "sqincb x0, #25",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 36,
+    "word": 70316864,
+    "asmText": "sqincb x0, #26",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 37,
+    "word": 70316896,
+    "asmText": "sqincb x0, #27",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 38,
+    "word": 70316928,
+    "asmText": "sqincb x0, #28",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 39,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 40,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 41,
+    "word": 70317024,
+    "asmText": "sqincb x0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 42,
+    "word": 71300064,
+    "asmText": "sqincb x0, all, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 43,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 44,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 45,
+    "word": 69268448,
+    "asmText": "sqincb x0, w0",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 46,
+    "word": 70251488,
+    "asmText": "sqincb x0, w0, all, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 47,
+    "word": 69267456,
+    "asmText": "sqincb x0, w0, pow2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 48,
+    "word": 70250496,
+    "asmText": "sqincb x0, w0, pow2, mul #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 49,
+    "word": 70316032,
+    "asmText": "sqincb x0, pow2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 50,
+    "word": 70316064,
+    "asmText": "sqincb x0, vl1",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 51,
+    "word": 70316096,
+    "asmText": "sqincb x0, vl2",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 52,
+    "word": 70316128,
+    "asmText": "sqincb x0, vl3",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 53,
+    "word": 70316160,
+    "asmText": "sqincb x0, vl4",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 54,
+    "word": 70316192,
+    "asmText": "sqincb x0, vl5",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 55,
+    "word": 70316224,
+    "asmText": "sqincb x0, vl6",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 56,
+    "word": 70316256,
+    "asmText": "sqincb x0, vl7",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 57,
+    "word": 70316288,
+    "asmText": "sqincb x0, vl8",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 58,
+    "word": 70316320,
+    "asmText": "sqincb x0, vl16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 59,
+    "word": 70316352,
+    "asmText": "sqincb x0, vl32",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 60,
+    "word": 70316384,
+    "asmText": "sqincb x0, vl64",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 61,
+    "word": 70316416,
+    "asmText": "sqincb x0, vl128",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 62,
+    "word": 70316448,
+    "asmText": "sqincb x0, vl256",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 63,
+    "word": 70316480,
+    "asmText": "sqincb x0, #14",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 64,
+    "word": 70316512,
+    "asmText": "sqincb x0, #15",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 65,
+    "word": 70316544,
+    "asmText": "sqincb x0, #16",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 66,
+    "word": 70316576,
+    "asmText": "sqincb x0, #17",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 67,
+    "word": 70316608,
+    "asmText": "sqincb x0, #18",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 68,
+    "word": 70316640,
+    "asmText": "sqincb x0, #19",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 69,
+    "word": 70316672,
+    "asmText": "sqincb x0, #20",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 70,
+    "word": 70316704,
+    "asmText": "sqincb x0, #21",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 71,
+    "word": 70316736,
+    "asmText": "sqincb x0, #22",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 72,
+    "word": 70316768,
+    "asmText": "sqincb x0, #23",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 73,
+    "word": 70316800,
+    "asmText": "sqincb x0, #24",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 74,
+    "word": 70316832,
+    "asmText": "sqincb x0, #25",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 75,
+    "word": 70316864,
+    "asmText": "sqincb x0, #26",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 76,
+    "word": 70316896,
+    "asmText": "sqincb x0, #27",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincb.s.yaml",
+    "caseIndex": 77,
+    "word": 70316928,
+    "asmText": "sqincb x0, #28",
+    "encodingFile": "sqincb_r_rs.xml",
+    "mnemonic": "SQINCB",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 0,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 1,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 2,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 3,
+    "word": 83882976,
+    "asmText": "sqincd x0, all, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 4,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 5,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 6,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 7,
+    "word": 82834400,
+    "asmText": "sqincd x0, w0, all, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 8,
+    "word": 81850368,
+    "asmText": "sqincd x0, w0, pow2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 9,
+    "word": 82833408,
+    "asmText": "sqincd x0, w0, pow2, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 16,
+    "word": 82898944,
+    "asmText": "sqincd x0, pow2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 17,
+    "word": 82898976,
+    "asmText": "sqincd x0, vl1",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 18,
+    "word": 82899008,
+    "asmText": "sqincd x0, vl2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 19,
+    "word": 82899040,
+    "asmText": "sqincd x0, vl3",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 20,
+    "word": 82899072,
+    "asmText": "sqincd x0, vl4",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 21,
+    "word": 82899104,
+    "asmText": "sqincd x0, vl5",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 22,
+    "word": 82899136,
+    "asmText": "sqincd x0, vl6",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 23,
+    "word": 82899168,
+    "asmText": "sqincd x0, vl7",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 24,
+    "word": 82899200,
+    "asmText": "sqincd x0, vl8",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 25,
+    "word": 82899232,
+    "asmText": "sqincd x0, vl16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 26,
+    "word": 82899264,
+    "asmText": "sqincd x0, vl32",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 27,
+    "word": 82899296,
+    "asmText": "sqincd x0, vl64",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 28,
+    "word": 82899328,
+    "asmText": "sqincd x0, vl128",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 29,
+    "word": 82899360,
+    "asmText": "sqincd x0, vl256",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 30,
+    "word": 82899392,
+    "asmText": "sqincd x0, #14",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 31,
+    "word": 82899424,
+    "asmText": "sqincd x0, #15",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 32,
+    "word": 82899456,
+    "asmText": "sqincd x0, #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 33,
+    "word": 82899488,
+    "asmText": "sqincd x0, #17",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 34,
+    "word": 82899520,
+    "asmText": "sqincd x0, #18",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 35,
+    "word": 82899552,
+    "asmText": "sqincd x0, #19",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 36,
+    "word": 82899584,
+    "asmText": "sqincd x0, #20",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 37,
+    "word": 82899616,
+    "asmText": "sqincd x0, #21",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 38,
+    "word": 82899648,
+    "asmText": "sqincd x0, #22",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 39,
+    "word": 82899680,
+    "asmText": "sqincd x0, #23",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 40,
+    "word": 82899712,
+    "asmText": "sqincd x0, #24",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 41,
+    "word": 82899744,
+    "asmText": "sqincd x0, #25",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 42,
+    "word": 82899776,
+    "asmText": "sqincd x0, #26",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 43,
+    "word": 82899808,
+    "asmText": "sqincd x0, #27",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 44,
+    "word": 82899840,
+    "asmText": "sqincd x0, #28",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
     "sourceFile": "SVE/sqincd.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
@@ -131773,6 +141266,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 51,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 52,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 53,
+    "word": 82899936,
+    "asmText": "sqincd x0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 54,
+    "word": 83882976,
+    "asmText": "sqincd x0, all, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 55,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 56,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 57,
+    "word": 81851360,
+    "asmText": "sqincd x0, w0",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 58,
+    "word": 82834400,
+    "asmText": "sqincd x0, w0, all, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 59,
+    "word": 81850368,
+    "asmText": "sqincd x0, w0, pow2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 60,
+    "word": 82833408,
+    "asmText": "sqincd x0, w0, pow2, mul #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 67,
+    "word": 82898944,
+    "asmText": "sqincd x0, pow2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 68,
+    "word": 82898976,
+    "asmText": "sqincd x0, vl1",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 69,
+    "word": 82899008,
+    "asmText": "sqincd x0, vl2",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 70,
+    "word": 82899040,
+    "asmText": "sqincd x0, vl3",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 71,
+    "word": 82899072,
+    "asmText": "sqincd x0, vl4",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 72,
+    "word": 82899104,
+    "asmText": "sqincd x0, vl5",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 73,
+    "word": 82899136,
+    "asmText": "sqincd x0, vl6",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 74,
+    "word": 82899168,
+    "asmText": "sqincd x0, vl7",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 75,
+    "word": 82899200,
+    "asmText": "sqincd x0, vl8",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 76,
+    "word": 82899232,
+    "asmText": "sqincd x0, vl16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 77,
+    "word": 82899264,
+    "asmText": "sqincd x0, vl32",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 78,
+    "word": 82899296,
+    "asmText": "sqincd x0, vl64",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 79,
+    "word": 82899328,
+    "asmText": "sqincd x0, vl128",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 80,
+    "word": 82899360,
+    "asmText": "sqincd x0, vl256",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 81,
+    "word": 82899392,
+    "asmText": "sqincd x0, #14",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 82,
+    "word": 82899424,
+    "asmText": "sqincd x0, #15",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 83,
+    "word": 82899456,
+    "asmText": "sqincd x0, #16",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 84,
+    "word": 82899488,
+    "asmText": "sqincd x0, #17",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 85,
+    "word": 82899520,
+    "asmText": "sqincd x0, #18",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 86,
+    "word": 82899552,
+    "asmText": "sqincd x0, #19",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 87,
+    "word": 82899584,
+    "asmText": "sqincd x0, #20",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 88,
+    "word": 82899616,
+    "asmText": "sqincd x0, #21",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 89,
+    "word": 82899648,
+    "asmText": "sqincd x0, #22",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 90,
+    "word": 82899680,
+    "asmText": "sqincd x0, #23",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 91,
+    "word": 82899712,
+    "asmText": "sqincd x0, #24",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 92,
+    "word": 82899744,
+    "asmText": "sqincd x0, #25",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 93,
+    "word": 82899776,
+    "asmText": "sqincd x0, #26",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 94,
+    "word": 82899808,
+    "asmText": "sqincd x0, #27",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincd.s.yaml",
+    "caseIndex": 95,
+    "word": 82899840,
+    "asmText": "sqincd x0, #28",
+    "encodingFile": "sqincd_r_rs.xml",
+    "mnemonic": "SQINCD",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -131820,6 +141820,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 0,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 1,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 2,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 3,
+    "word": 75494368,
+    "asmText": "sqinch x0, all, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 4,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 5,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 6,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 7,
+    "word": 74445792,
+    "asmText": "sqinch x0, w0, all, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 8,
+    "word": 73461760,
+    "asmText": "sqinch x0, w0, pow2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 9,
+    "word": 74444800,
+    "asmText": "sqinch x0, w0, pow2, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 16,
+    "word": 74510336,
+    "asmText": "sqinch x0, pow2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 17,
+    "word": 74510368,
+    "asmText": "sqinch x0, vl1",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 18,
+    "word": 74510400,
+    "asmText": "sqinch x0, vl2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 19,
+    "word": 74510432,
+    "asmText": "sqinch x0, vl3",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 20,
+    "word": 74510464,
+    "asmText": "sqinch x0, vl4",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 21,
+    "word": 74510496,
+    "asmText": "sqinch x0, vl5",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 22,
+    "word": 74510528,
+    "asmText": "sqinch x0, vl6",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 23,
+    "word": 74510560,
+    "asmText": "sqinch x0, vl7",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 24,
+    "word": 74510592,
+    "asmText": "sqinch x0, vl8",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 25,
+    "word": 74510624,
+    "asmText": "sqinch x0, vl16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 26,
+    "word": 74510656,
+    "asmText": "sqinch x0, vl32",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 27,
+    "word": 74510688,
+    "asmText": "sqinch x0, vl64",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 28,
+    "word": 74510720,
+    "asmText": "sqinch x0, vl128",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 29,
+    "word": 74510752,
+    "asmText": "sqinch x0, vl256",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 30,
+    "word": 74510784,
+    "asmText": "sqinch x0, #14",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 31,
+    "word": 74510816,
+    "asmText": "sqinch x0, #15",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 32,
+    "word": 74510848,
+    "asmText": "sqinch x0, #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 33,
+    "word": 74510880,
+    "asmText": "sqinch x0, #17",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 34,
+    "word": 74510912,
+    "asmText": "sqinch x0, #18",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 35,
+    "word": 74510944,
+    "asmText": "sqinch x0, #19",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 36,
+    "word": 74510976,
+    "asmText": "sqinch x0, #20",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 37,
+    "word": 74511008,
+    "asmText": "sqinch x0, #21",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 38,
+    "word": 74511040,
+    "asmText": "sqinch x0, #22",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 39,
+    "word": 74511072,
+    "asmText": "sqinch x0, #23",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 40,
+    "word": 74511104,
+    "asmText": "sqinch x0, #24",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 41,
+    "word": 74511136,
+    "asmText": "sqinch x0, #25",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 42,
+    "word": 74511168,
+    "asmText": "sqinch x0, #26",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 43,
+    "word": 74511200,
+    "asmText": "sqinch x0, #27",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 44,
+    "word": 74511232,
+    "asmText": "sqinch x0, #28",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -131851,6 +142358,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 51,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 52,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 53,
+    "word": 74511328,
+    "asmText": "sqinch x0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 54,
+    "word": 75494368,
+    "asmText": "sqinch x0, all, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 55,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 56,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 57,
+    "word": 73462752,
+    "asmText": "sqinch x0, w0",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 58,
+    "word": 74445792,
+    "asmText": "sqinch x0, w0, all, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 59,
+    "word": 73461760,
+    "asmText": "sqinch x0, w0, pow2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 60,
+    "word": 74444800,
+    "asmText": "sqinch x0, w0, pow2, mul #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 67,
+    "word": 74510336,
+    "asmText": "sqinch x0, pow2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 68,
+    "word": 74510368,
+    "asmText": "sqinch x0, vl1",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 69,
+    "word": 74510400,
+    "asmText": "sqinch x0, vl2",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 70,
+    "word": 74510432,
+    "asmText": "sqinch x0, vl3",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 71,
+    "word": 74510464,
+    "asmText": "sqinch x0, vl4",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 72,
+    "word": 74510496,
+    "asmText": "sqinch x0, vl5",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 73,
+    "word": 74510528,
+    "asmText": "sqinch x0, vl6",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 74,
+    "word": 74510560,
+    "asmText": "sqinch x0, vl7",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 75,
+    "word": 74510592,
+    "asmText": "sqinch x0, vl8",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 76,
+    "word": 74510624,
+    "asmText": "sqinch x0, vl16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 77,
+    "word": 74510656,
+    "asmText": "sqinch x0, vl32",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 78,
+    "word": 74510688,
+    "asmText": "sqinch x0, vl64",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 79,
+    "word": 74510720,
+    "asmText": "sqinch x0, vl128",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 80,
+    "word": 74510752,
+    "asmText": "sqinch x0, vl256",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 81,
+    "word": 74510784,
+    "asmText": "sqinch x0, #14",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 82,
+    "word": 74510816,
+    "asmText": "sqinch x0, #15",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 83,
+    "word": 74510848,
+    "asmText": "sqinch x0, #16",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 84,
+    "word": 74510880,
+    "asmText": "sqinch x0, #17",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 85,
+    "word": 74510912,
+    "asmText": "sqinch x0, #18",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 86,
+    "word": 74510944,
+    "asmText": "sqinch x0, #19",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 87,
+    "word": 74510976,
+    "asmText": "sqinch x0, #20",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 88,
+    "word": 74511008,
+    "asmText": "sqinch x0, #21",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 89,
+    "word": 74511040,
+    "asmText": "sqinch x0, #22",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 90,
+    "word": 74511072,
+    "asmText": "sqinch x0, #23",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 91,
+    "word": 74511104,
+    "asmText": "sqinch x0, #24",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 92,
+    "word": 74511136,
+    "asmText": "sqinch x0, #25",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 93,
+    "word": 74511168,
+    "asmText": "sqinch x0, #26",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 94,
+    "word": 74511200,
+    "asmText": "sqinch x0, #27",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqinch.s.yaml",
+    "caseIndex": 95,
+    "word": 74511232,
+    "asmText": "sqinch x0, #28",
+    "encodingFile": "sqinch_r_rs.xml",
+    "mnemonic": "SQINCH",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -131924,6 +142938,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 0,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 1,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 2,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 3,
+    "word": 79688672,
+    "asmText": "sqincw x0, all, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 4,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 5,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 6,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 7,
+    "word": 78640096,
+    "asmText": "sqincw x0, w0, all, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 8,
+    "word": 77656064,
+    "asmText": "sqincw x0, w0, pow2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 9,
+    "word": 78639104,
+    "asmText": "sqincw x0, w0, pow2, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 16,
+    "word": 78704640,
+    "asmText": "sqincw x0, pow2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 17,
+    "word": 78704672,
+    "asmText": "sqincw x0, vl1",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 18,
+    "word": 78704704,
+    "asmText": "sqincw x0, vl2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 19,
+    "word": 78704736,
+    "asmText": "sqincw x0, vl3",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 20,
+    "word": 78704768,
+    "asmText": "sqincw x0, vl4",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 21,
+    "word": 78704800,
+    "asmText": "sqincw x0, vl5",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 22,
+    "word": 78704832,
+    "asmText": "sqincw x0, vl6",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 23,
+    "word": 78704864,
+    "asmText": "sqincw x0, vl7",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 24,
+    "word": 78704896,
+    "asmText": "sqincw x0, vl8",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 25,
+    "word": 78704928,
+    "asmText": "sqincw x0, vl16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 26,
+    "word": 78704960,
+    "asmText": "sqincw x0, vl32",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 27,
+    "word": 78704992,
+    "asmText": "sqincw x0, vl64",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 28,
+    "word": 78705024,
+    "asmText": "sqincw x0, vl128",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 29,
+    "word": 78705056,
+    "asmText": "sqincw x0, vl256",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 30,
+    "word": 78705088,
+    "asmText": "sqincw x0, #14",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 31,
+    "word": 78705120,
+    "asmText": "sqincw x0, #15",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 32,
+    "word": 78705152,
+    "asmText": "sqincw x0, #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 33,
+    "word": 78705184,
+    "asmText": "sqincw x0, #17",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 34,
+    "word": 78705216,
+    "asmText": "sqincw x0, #18",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 35,
+    "word": 78705248,
+    "asmText": "sqincw x0, #19",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 36,
+    "word": 78705280,
+    "asmText": "sqincw x0, #20",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 37,
+    "word": 78705312,
+    "asmText": "sqincw x0, #21",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 38,
+    "word": 78705344,
+    "asmText": "sqincw x0, #22",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 39,
+    "word": 78705376,
+    "asmText": "sqincw x0, #23",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 40,
+    "word": 78705408,
+    "asmText": "sqincw x0, #24",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 41,
+    "word": 78705440,
+    "asmText": "sqincw x0, #25",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 42,
+    "word": 78705472,
+    "asmText": "sqincw x0, #26",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 43,
+    "word": 78705504,
+    "asmText": "sqincw x0, #27",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 44,
+    "word": 78705536,
+    "asmText": "sqincw x0, #28",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
     "caseIndex": 45,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -131955,6 +143476,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 51,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 52,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 53,
+    "word": 78705632,
+    "asmText": "sqincw x0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 54,
+    "word": 79688672,
+    "asmText": "sqincw x0, all, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 55,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 56,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 57,
+    "word": 77657056,
+    "asmText": "sqincw x0, w0",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 58,
+    "word": 78640096,
+    "asmText": "sqincw x0, w0, all, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 59,
+    "word": 77656064,
+    "asmText": "sqincw x0, w0, pow2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 60,
+    "word": 78639104,
+    "asmText": "sqincw x0, w0, pow2, mul #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 67,
+    "word": 78704640,
+    "asmText": "sqincw x0, pow2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 68,
+    "word": 78704672,
+    "asmText": "sqincw x0, vl1",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 69,
+    "word": 78704704,
+    "asmText": "sqincw x0, vl2",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 70,
+    "word": 78704736,
+    "asmText": "sqincw x0, vl3",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 71,
+    "word": 78704768,
+    "asmText": "sqincw x0, vl4",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 72,
+    "word": 78704800,
+    "asmText": "sqincw x0, vl5",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 73,
+    "word": 78704832,
+    "asmText": "sqincw x0, vl6",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 74,
+    "word": 78704864,
+    "asmText": "sqincw x0, vl7",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 75,
+    "word": 78704896,
+    "asmText": "sqincw x0, vl8",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 76,
+    "word": 78704928,
+    "asmText": "sqincw x0, vl16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 77,
+    "word": 78704960,
+    "asmText": "sqincw x0, vl32",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 78,
+    "word": 78704992,
+    "asmText": "sqincw x0, vl64",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 79,
+    "word": 78705024,
+    "asmText": "sqincw x0, vl128",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 80,
+    "word": 78705056,
+    "asmText": "sqincw x0, vl256",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 81,
+    "word": 78705088,
+    "asmText": "sqincw x0, #14",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 82,
+    "word": 78705120,
+    "asmText": "sqincw x0, #15",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 83,
+    "word": 78705152,
+    "asmText": "sqincw x0, #16",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 84,
+    "word": 78705184,
+    "asmText": "sqincw x0, #17",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 85,
+    "word": 78705216,
+    "asmText": "sqincw x0, #18",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 86,
+    "word": 78705248,
+    "asmText": "sqincw x0, #19",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 87,
+    "word": 78705280,
+    "asmText": "sqincw x0, #20",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 88,
+    "word": 78705312,
+    "asmText": "sqincw x0, #21",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 89,
+    "word": 78705344,
+    "asmText": "sqincw x0, #22",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 90,
+    "word": 78705376,
+    "asmText": "sqincw x0, #23",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 91,
+    "word": 78705408,
+    "asmText": "sqincw x0, #24",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 92,
+    "word": 78705440,
+    "asmText": "sqincw x0, #25",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 93,
+    "word": 78705472,
+    "asmText": "sqincw x0, #26",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 94,
+    "word": 78705504,
+    "asmText": "sqincw x0, #27",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/sqincw.s.yaml",
+    "caseIndex": 95,
+    "word": 78705536,
+    "asmText": "sqincw x0, #28",
+    "encodingFile": "sqincw_r_rs.xml",
+    "mnemonic": "SQINCW",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -142672,1986 +154700,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "encodingFile": "at_sys.xml",
     "mnemonic": "SYS",
     "features": []
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 0,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 1,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 2,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 3,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 4,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 5,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 6,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 7,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 8,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 9,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 10,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 11,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 12,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 13,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 14,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 15,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 16,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 17,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 18,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 19,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 20,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 21,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 22,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 23,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 24,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 25,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 26,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 27,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 28,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 29,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 30,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 31,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 32,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 33,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 34,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 35,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 36,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 37,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 38,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 39,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 40,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 41,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 42,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 43,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 44,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 45,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 46,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 47,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 48,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 49,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 50,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 51,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 52,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 53,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 54,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 55,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 56,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 57,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 58,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 59,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 60,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 61,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 62,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 63,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 64,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 65,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 66,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 67,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 68,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 69,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 70,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 71,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 72,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 73,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 74,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 75,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 76,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 77,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 78,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 79,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 80,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 81,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 82,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 83,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 84,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 85,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 86,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 87,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 88,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 89,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 90,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 91,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 92,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 93,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 94,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 95,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 96,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 97,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 98,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 99,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 100,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 101,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 102,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 103,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 104,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 105,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 106,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 107,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 108,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 109,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 110,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 111,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 112,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 113,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 114,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 115,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 116,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 117,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 118,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 119,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 120,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 121,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 122,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 123,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 124,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 125,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 126,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 127,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 128,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 129,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 130,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 131,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 132,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 133,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 134,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 135,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 136,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 137,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 138,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 139,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 140,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 141,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 142,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 143,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 144,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 145,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 146,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 147,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 148,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 149,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 150,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 151,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 152,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 153,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 154,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 155,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 156,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 157,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 158,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 159,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 160,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 161,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 162,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 163,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 164,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 165,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 166,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 167,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 168,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 169,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 170,
-    "word": 780309536,
-    "asmText": "udot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 171,
-    "word": 243438624,
-    "asmText": "sdot v0.2s, v1.8b, v2.8b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 172,
-    "word": 1854051360,
-    "asmText": "udot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "udot_advsimd_vec.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 173,
-    "word": 1317180448,
-    "asmText": "sdot v0.4s, v1.16b, v2.16b",
-    "encodingFile": "sdot_advsimd_vec.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 174,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 175,
-    "word": 262332448,
-    "asmText": "sdot v0.2s, v1.8b, v2.4b[1]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 176,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 177,
-    "word": 1336076320,
-    "asmText": "sdot v0.4s, v1.16b, v2.4b[3]",
-    "encodingFile": "sdot_advsimd_elt.xml",
-    "mnemonic": "SDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 178,
-    "word": 797106208,
-    "asmText": "udot v0.2s, v1.8b, v2.4b[0]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
-  },
-  {
-    "sourceFile": "armv8.2a-dotprod.s.yaml",
-    "caseIndex": 179,
-    "word": 1870850080,
-    "asmText": "udot v0.4s, v1.16b, v2.4b[2]",
-    "encodingFile": "udot_advsimd_elt.xml",
-    "mnemonic": "UDOT",
-    "features": [
-      "FEAT_DotProd"
-    ]
   },
   {
     "sourceFile": "armv8.2a-persistent-memory.s.yaml",
@@ -192224,622 +202272,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 0,
-    "word": 1275097088,
-    "asmText": "st1 { v0.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 1,
-    "word": 1275098607,
-    "asmText": "st1 { v15.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 2,
-    "word": 1275100159,
-    "asmText": "st1 { v31.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 3,
-    "word": 1275100160,
-    "asmText": "st1 { v0.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 4,
-    "word": 201355264,
-    "asmText": "st1 { v0.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 5,
-    "word": 201356783,
-    "asmText": "st1 { v15.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 6,
-    "word": 201358335,
-    "asmText": "st1 { v31.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 7,
-    "word": 201358336,
-    "asmText": "st1 { v0.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 8,
-    "word": 1275109376,
-    "asmText": "st1 { v0.16b, v1.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 9,
-    "word": 1275110895,
-    "asmText": "st1 { v15.8h, v16.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 10,
-    "word": 1275112447,
-    "asmText": "st1 { v31.4s, v0.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 11,
-    "word": 1275112448,
-    "asmText": "st1 { v0.2d, v1.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 12,
-    "word": 201367552,
-    "asmText": "st1 { v0.8b, v1.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 13,
-    "word": 201369071,
-    "asmText": "st1 { v15.4h, v16.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 14,
-    "word": 201370623,
-    "asmText": "st1 { v31.2s, v0.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 15,
-    "word": 201370624,
-    "asmText": "st1 { v0.1d, v1.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 16,
-    "word": 1275109376,
-    "asmText": "st1 { v0.16b, v1.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 17,
-    "word": 1275110895,
-    "asmText": "st1 { v15.8h, v16.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 18,
-    "word": 1275112447,
-    "asmText": "st1 { v31.4s, v0.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 19,
-    "word": 1275112448,
-    "asmText": "st1 { v0.2d, v1.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 20,
-    "word": 201367552,
-    "asmText": "st1 { v0.8b, v1.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 21,
-    "word": 201369071,
-    "asmText": "st1 { v15.4h, v16.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 22,
-    "word": 201370623,
-    "asmText": "st1 { v31.2s, v0.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 23,
-    "word": 201370624,
-    "asmText": "st1 { v0.1d, v1.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 24,
-    "word": 1275092992,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 25,
-    "word": 1275094511,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 26,
-    "word": 1275096063,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 27,
-    "word": 1275096064,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 28,
-    "word": 201351168,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 29,
-    "word": 201352687,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 30,
-    "word": 201354239,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 31,
-    "word": 201354240,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 32,
-    "word": 1275092992,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 33,
-    "word": 1275094511,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 34,
-    "word": 1275096063,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 35,
-    "word": 1275096064,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 36,
-    "word": 201351168,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 37,
-    "word": 201352687,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 38,
-    "word": 201354239,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 39,
-    "word": 201354240,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 40,
-    "word": 1275076608,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 41,
-    "word": 1275078127,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 42,
-    "word": 1275079679,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 43,
-    "word": 1275079680,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 44,
-    "word": 201334784,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 45,
-    "word": 201336303,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 46,
-    "word": 201337855,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 47,
-    "word": 201337856,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 48,
-    "word": 1275076608,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 49,
-    "word": 1275078127,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 50,
-    "word": 1275079679,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 51,
-    "word": 1275079680,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 52,
-    "word": 201334784,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 53,
-    "word": 201336303,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 54,
-    "word": 201337855,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 55,
-    "word": 201337856,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
     "caseIndex": 56,
     "word": 1275101184,
     "asmText": "st2 { v0.16b, v1.16b }, [x0]",
@@ -193296,622 +202728,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "st4 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
     "encodingFile": "st4_advsimd_mult.xml",
     "mnemonic": "ST4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 98,
-    "word": 1279291392,
-    "asmText": "ld1 { v0.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 99,
-    "word": 1279292911,
-    "asmText": "ld1 { v15.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 100,
-    "word": 1279294463,
-    "asmText": "ld1 { v31.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 101,
-    "word": 1279294464,
-    "asmText": "ld1 { v0.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 102,
-    "word": 205549568,
-    "asmText": "ld1 { v0.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 103,
-    "word": 205551087,
-    "asmText": "ld1 { v15.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 104,
-    "word": 205552639,
-    "asmText": "ld1 { v31.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 105,
-    "word": 205552640,
-    "asmText": "ld1 { v0.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 106,
-    "word": 1279303680,
-    "asmText": "ld1 { v0.16b, v1.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 107,
-    "word": 1279305199,
-    "asmText": "ld1 { v15.8h, v16.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 108,
-    "word": 1279306751,
-    "asmText": "ld1 { v31.4s, v0.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 109,
-    "word": 1279306752,
-    "asmText": "ld1 { v0.2d, v1.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 110,
-    "word": 205561856,
-    "asmText": "ld1 { v0.8b, v1.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 111,
-    "word": 205563375,
-    "asmText": "ld1 { v15.4h, v16.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 112,
-    "word": 205564927,
-    "asmText": "ld1 { v31.2s, v0.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 113,
-    "word": 205564928,
-    "asmText": "ld1 { v0.1d, v1.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 114,
-    "word": 1279303680,
-    "asmText": "ld1 { v0.16b, v1.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 115,
-    "word": 1279305199,
-    "asmText": "ld1 { v15.8h, v16.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 116,
-    "word": 1279306751,
-    "asmText": "ld1 { v31.4s, v0.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 117,
-    "word": 1279306752,
-    "asmText": "ld1 { v0.2d, v1.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 118,
-    "word": 205561856,
-    "asmText": "ld1 { v0.8b, v1.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 119,
-    "word": 205563375,
-    "asmText": "ld1 { v15.4h, v16.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 120,
-    "word": 205564927,
-    "asmText": "ld1 { v31.2s, v0.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 121,
-    "word": 205564928,
-    "asmText": "ld1 { v0.1d, v1.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 122,
-    "word": 1279287296,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 123,
-    "word": 1279288815,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 124,
-    "word": 1279290367,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 125,
-    "word": 1279290368,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 126,
-    "word": 205545472,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 127,
-    "word": 205546991,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 128,
-    "word": 205548543,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 129,
-    "word": 205548544,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 130,
-    "word": 1279287296,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 131,
-    "word": 1279288815,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 132,
-    "word": 1279290367,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 133,
-    "word": 1279290368,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 134,
-    "word": 205545472,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 135,
-    "word": 205546991,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 136,
-    "word": 205548543,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 137,
-    "word": 205548544,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 138,
-    "word": 1279270912,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 139,
-    "word": 1279272431,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 140,
-    "word": 1279273983,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 141,
-    "word": 1279273984,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 142,
-    "word": 205529088,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 143,
-    "word": 205530607,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 144,
-    "word": 205532159,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 145,
-    "word": 205532160,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 146,
-    "word": 1279270912,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 147,
-    "word": 1279272431,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 148,
-    "word": 1279273983,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 149,
-    "word": 1279273984,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 150,
-    "word": 205529088,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 151,
-    "word": 205530607,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 152,
-    "word": 205532159,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-ldst-multi-elem.s.yaml",
-    "caseIndex": 153,
-    "word": 205532160,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0]",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -198744,358 +207560,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 0,
-    "word": 1287745536,
-    "asmText": "ld1 { v0.16b }, [x0], x1",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 1,
-    "word": 1287812591,
-    "asmText": "ld1 { v15.8h }, [x15], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 2,
-    "word": 1289714687,
-    "asmText": "ld1 { v31.4s }, [sp], #16",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 3,
-    "word": 1289714688,
-    "asmText": "ld1 { v0.2d }, [x0], #16",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 4,
-    "word": 214069248,
-    "asmText": "ld1 { v0.8b }, [x0], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 5,
-    "word": 214136303,
-    "asmText": "ld1 { v15.4h }, [x15], x3",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 6,
-    "word": 215972863,
-    "asmText": "ld1 { v31.2s }, [sp], #8",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 7,
-    "word": 215972864,
-    "asmText": "ld1 { v0.1d }, [x0], #8",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 8,
-    "word": 1287757824,
-    "asmText": "ld1 { v0.16b, v1.16b }, [x0], x1",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 9,
-    "word": 1287824879,
-    "asmText": "ld1 { v15.8h, v16.8h }, [x15], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 10,
-    "word": 1289726975,
-    "asmText": "ld1 { v31.4s, v0.4s }, [sp], #32",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 11,
-    "word": 1289726976,
-    "asmText": "ld1 { v0.2d, v1.2d }, [x0], #32",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 12,
-    "word": 214081536,
-    "asmText": "ld1 { v0.8b, v1.8b }, [x0], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 13,
-    "word": 214148591,
-    "asmText": "ld1 { v15.4h, v16.4h }, [x15], x3",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 14,
-    "word": 215985151,
-    "asmText": "ld1 { v31.2s, v0.2s }, [sp], #16",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 15,
-    "word": 215985152,
-    "asmText": "ld1 { v0.1d, v1.1d }, [x0], #16",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 16,
-    "word": 1287741440,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b }, [x0], x1",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 17,
-    "word": 1287808495,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h }, [x15], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 18,
-    "word": 1289710591,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s }, [sp], #48",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 19,
-    "word": 1289710592,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d }, [x0], #48",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 20,
-    "word": 214065152,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b }, [x0], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 21,
-    "word": 214132207,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h }, [x15], x3",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 22,
-    "word": 215968767,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s }, [sp], #24",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 23,
-    "word": 215968768,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d }, [x0], #24",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 24,
-    "word": 1287725056,
-    "asmText": "ld1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 25,
-    "word": 1287792111,
-    "asmText": "ld1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 26,
-    "word": 1289694207,
-    "asmText": "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 27,
-    "word": 1289694208,
-    "asmText": "ld1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 28,
-    "word": 214114304,
-    "asmText": "ld1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 29,
-    "word": 214181359,
-    "asmText": "ld1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 30,
-    "word": 215952383,
-    "asmText": "ld1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 31,
-    "word": 215952384,
-    "asmText": "ld1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0], #32",
-    "encodingFile": "ld1_advsimd_mult.xml",
-    "mnemonic": "LD1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
     "caseIndex": 32,
     "word": 1287749632,
     "asmText": "ld2 { v0.16b, v1.16b }, [x0], x1",
@@ -199321,358 +207785,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "ld4 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
     "encodingFile": "ld4_advsimd_mult.xml",
     "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 53,
-    "word": 1283551232,
-    "asmText": "st1 { v0.16b }, [x0], x1",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 54,
-    "word": 1283618287,
-    "asmText": "st1 { v15.8h }, [x15], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 55,
-    "word": 1285520383,
-    "asmText": "st1 { v31.4s }, [sp], #16",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 56,
-    "word": 1285520384,
-    "asmText": "st1 { v0.2d }, [x0], #16",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 57,
-    "word": 209874944,
-    "asmText": "st1 { v0.8b }, [x0], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 58,
-    "word": 209941999,
-    "asmText": "st1 { v15.4h }, [x15], x3",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 59,
-    "word": 211778559,
-    "asmText": "st1 { v31.2s }, [sp], #8",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 60,
-    "word": 211778560,
-    "asmText": "st1 { v0.1d }, [x0], #8",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 61,
-    "word": 1283563520,
-    "asmText": "st1 { v0.16b, v1.16b }, [x0], x1",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 62,
-    "word": 1283630575,
-    "asmText": "st1 { v15.8h, v16.8h }, [x15], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 63,
-    "word": 1285532671,
-    "asmText": "st1 { v31.4s, v0.4s }, [sp], #32",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 64,
-    "word": 1285532672,
-    "asmText": "st1 { v0.2d, v1.2d }, [x0], #32",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 65,
-    "word": 209887232,
-    "asmText": "st1 { v0.8b, v1.8b }, [x0], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 66,
-    "word": 209954287,
-    "asmText": "st1 { v15.4h, v16.4h }, [x15], x3",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 67,
-    "word": 211790847,
-    "asmText": "st1 { v31.2s, v0.2s }, [sp], #16",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 68,
-    "word": 211790848,
-    "asmText": "st1 { v0.1d, v1.1d }, [x0], #16",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 69,
-    "word": 1283547136,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b }, [x0], x1",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 70,
-    "word": 1283614191,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h }, [x15], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 71,
-    "word": 1285516287,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s }, [sp], #48",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 72,
-    "word": 1285516288,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d }, [x0], #48",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 73,
-    "word": 209870848,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b }, [x0], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 74,
-    "word": 209937903,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h }, [x15], x3",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 75,
-    "word": 211774463,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s }, [sp], #24",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 76,
-    "word": 211774464,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d }, [x0], #24",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 77,
-    "word": 1283530752,
-    "asmText": "st1 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 78,
-    "word": 1283597807,
-    "asmText": "st1 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 79,
-    "word": 1285499903,
-    "asmText": "st1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 80,
-    "word": 1285499904,
-    "asmText": "st1 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 81,
-    "word": 209920000,
-    "asmText": "st1 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 82,
-    "word": 209987055,
-    "asmText": "st1 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 83,
-    "word": 211758079,
-    "asmText": "st1 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 84,
-    "word": 211758080,
-    "asmText": "st1 { v0.1d, v1.1d, v2.1d, v3.1d }, [x0], #32",
-    "encodingFile": "st1_advsimd_mult.xml",
-    "mnemonic": "ST1",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -313833,1150 +321945,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 0,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 1,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 2,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 3,
-    "word": 71302112,
-    "asmText": "sqdecb x0, all, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 4,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 5,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 6,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 7,
-    "word": 70253536,
-    "asmText": "sqdecb x0, w0, all, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 8,
-    "word": 69269504,
-    "asmText": "sqdecb x0, w0, pow2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 9,
-    "word": 70252544,
-    "asmText": "sqdecb x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 10,
-    "word": 70318080,
-    "asmText": "sqdecb x0, pow2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 11,
-    "word": 70318112,
-    "asmText": "sqdecb x0, vl1",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 12,
-    "word": 70318144,
-    "asmText": "sqdecb x0, vl2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 13,
-    "word": 70318176,
-    "asmText": "sqdecb x0, vl3",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 14,
-    "word": 70318208,
-    "asmText": "sqdecb x0, vl4",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 15,
-    "word": 70318240,
-    "asmText": "sqdecb x0, vl5",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 16,
-    "word": 70318272,
-    "asmText": "sqdecb x0, vl6",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 17,
-    "word": 70318304,
-    "asmText": "sqdecb x0, vl7",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 18,
-    "word": 70318336,
-    "asmText": "sqdecb x0, vl8",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 19,
-    "word": 70318368,
-    "asmText": "sqdecb x0, vl16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 20,
-    "word": 70318400,
-    "asmText": "sqdecb x0, vl32",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 21,
-    "word": 70318432,
-    "asmText": "sqdecb x0, vl64",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 22,
-    "word": 70318464,
-    "asmText": "sqdecb x0, vl128",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 23,
-    "word": 70318496,
-    "asmText": "sqdecb x0, vl256",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 24,
-    "word": 70318528,
-    "asmText": "sqdecb x0, #14",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 25,
-    "word": 70318560,
-    "asmText": "sqdecb x0, #15",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 26,
-    "word": 70318592,
-    "asmText": "sqdecb x0, #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 27,
-    "word": 70318624,
-    "asmText": "sqdecb x0, #17",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 28,
-    "word": 70318656,
-    "asmText": "sqdecb x0, #18",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 29,
-    "word": 70318688,
-    "asmText": "sqdecb x0, #19",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 30,
-    "word": 70318720,
-    "asmText": "sqdecb x0, #20",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 31,
-    "word": 70318752,
-    "asmText": "sqdecb x0, #21",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 32,
-    "word": 70318784,
-    "asmText": "sqdecb x0, #22",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 33,
-    "word": 70318816,
-    "asmText": "sqdecb x0, #23",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 34,
-    "word": 70318848,
-    "asmText": "sqdecb x0, #24",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 35,
-    "word": 70318880,
-    "asmText": "sqdecb x0, #25",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 36,
-    "word": 70318912,
-    "asmText": "sqdecb x0, #26",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 37,
-    "word": 70318944,
-    "asmText": "sqdecb x0, #27",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 38,
-    "word": 70318976,
-    "asmText": "sqdecb x0, #28",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 39,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 40,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 41,
-    "word": 70319072,
-    "asmText": "sqdecb x0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 42,
-    "word": 71302112,
-    "asmText": "sqdecb x0, all, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 43,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 44,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 45,
-    "word": 69270496,
-    "asmText": "sqdecb x0, w0",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 46,
-    "word": 70253536,
-    "asmText": "sqdecb x0, w0, all, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 47,
-    "word": 69269504,
-    "asmText": "sqdecb x0, w0, pow2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 48,
-    "word": 70252544,
-    "asmText": "sqdecb x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 49,
-    "word": 70318080,
-    "asmText": "sqdecb x0, pow2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 50,
-    "word": 70318112,
-    "asmText": "sqdecb x0, vl1",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 51,
-    "word": 70318144,
-    "asmText": "sqdecb x0, vl2",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 52,
-    "word": 70318176,
-    "asmText": "sqdecb x0, vl3",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 53,
-    "word": 70318208,
-    "asmText": "sqdecb x0, vl4",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 54,
-    "word": 70318240,
-    "asmText": "sqdecb x0, vl5",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 55,
-    "word": 70318272,
-    "asmText": "sqdecb x0, vl6",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 56,
-    "word": 70318304,
-    "asmText": "sqdecb x0, vl7",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 57,
-    "word": 70318336,
-    "asmText": "sqdecb x0, vl8",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 58,
-    "word": 70318368,
-    "asmText": "sqdecb x0, vl16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 59,
-    "word": 70318400,
-    "asmText": "sqdecb x0, vl32",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 60,
-    "word": 70318432,
-    "asmText": "sqdecb x0, vl64",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 61,
-    "word": 70318464,
-    "asmText": "sqdecb x0, vl128",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 62,
-    "word": 70318496,
-    "asmText": "sqdecb x0, vl256",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 63,
-    "word": 70318528,
-    "asmText": "sqdecb x0, #14",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 64,
-    "word": 70318560,
-    "asmText": "sqdecb x0, #15",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 65,
-    "word": 70318592,
-    "asmText": "sqdecb x0, #16",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 66,
-    "word": 70318624,
-    "asmText": "sqdecb x0, #17",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 67,
-    "word": 70318656,
-    "asmText": "sqdecb x0, #18",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 68,
-    "word": 70318688,
-    "asmText": "sqdecb x0, #19",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 69,
-    "word": 70318720,
-    "asmText": "sqdecb x0, #20",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 70,
-    "word": 70318752,
-    "asmText": "sqdecb x0, #21",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 71,
-    "word": 70318784,
-    "asmText": "sqdecb x0, #22",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 72,
-    "word": 70318816,
-    "asmText": "sqdecb x0, #23",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 73,
-    "word": 70318848,
-    "asmText": "sqdecb x0, #24",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 74,
-    "word": 70318880,
-    "asmText": "sqdecb x0, #25",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 75,
-    "word": 70318912,
-    "asmText": "sqdecb x0, #26",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 76,
-    "word": 70318944,
-    "asmText": "sqdecb x0, #27",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecb.s.yaml",
-    "caseIndex": 77,
-    "word": 70318976,
-    "asmText": "sqdecb x0, #28",
-    "encodingFile": "sqdecb_r_rs.xml",
-    "mnemonic": "SQDECB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 0,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 1,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 2,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 3,
-    "word": 83885024,
-    "asmText": "sqdecd x0, all, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 4,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 5,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 6,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 7,
-    "word": 82836448,
-    "asmText": "sqdecd x0, w0, all, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 8,
-    "word": 81852416,
-    "asmText": "sqdecd x0, w0, pow2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 9,
-    "word": 82835456,
-    "asmText": "sqdecd x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
     "sourceFile": "SVE/sqdecd.s.yaml",
     "caseIndex": 10,
     "word": 81841120,
@@ -315056,383 +322024,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 16,
-    "word": 82900992,
-    "asmText": "sqdecd x0, pow2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 17,
-    "word": 82901024,
-    "asmText": "sqdecd x0, vl1",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 18,
-    "word": 82901056,
-    "asmText": "sqdecd x0, vl2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 19,
-    "word": 82901088,
-    "asmText": "sqdecd x0, vl3",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 20,
-    "word": 82901120,
-    "asmText": "sqdecd x0, vl4",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 21,
-    "word": 82901152,
-    "asmText": "sqdecd x0, vl5",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 22,
-    "word": 82901184,
-    "asmText": "sqdecd x0, vl6",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 23,
-    "word": 82901216,
-    "asmText": "sqdecd x0, vl7",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 24,
-    "word": 82901248,
-    "asmText": "sqdecd x0, vl8",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 25,
-    "word": 82901280,
-    "asmText": "sqdecd x0, vl16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 26,
-    "word": 82901312,
-    "asmText": "sqdecd x0, vl32",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 27,
-    "word": 82901344,
-    "asmText": "sqdecd x0, vl64",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 28,
-    "word": 82901376,
-    "asmText": "sqdecd x0, vl128",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 29,
-    "word": 82901408,
-    "asmText": "sqdecd x0, vl256",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 30,
-    "word": 82901440,
-    "asmText": "sqdecd x0, #14",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 31,
-    "word": 82901472,
-    "asmText": "sqdecd x0, #15",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 32,
-    "word": 82901504,
-    "asmText": "sqdecd x0, #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 33,
-    "word": 82901536,
-    "asmText": "sqdecd x0, #17",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 34,
-    "word": 82901568,
-    "asmText": "sqdecd x0, #18",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 35,
-    "word": 82901600,
-    "asmText": "sqdecd x0, #19",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 36,
-    "word": 82901632,
-    "asmText": "sqdecd x0, #20",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 37,
-    "word": 82901664,
-    "asmText": "sqdecd x0, #21",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 38,
-    "word": 82901696,
-    "asmText": "sqdecd x0, #22",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 39,
-    "word": 82901728,
-    "asmText": "sqdecd x0, #23",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 40,
-    "word": 82901760,
-    "asmText": "sqdecd x0, #24",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 41,
-    "word": 82901792,
-    "asmText": "sqdecd x0, #25",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 42,
-    "word": 82901824,
-    "asmText": "sqdecd x0, #26",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 43,
-    "word": 82901856,
-    "asmText": "sqdecd x0, #27",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 44,
-    "word": 82901888,
-    "asmText": "sqdecd x0, #28",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
     "caseIndex": 46,
     "word": 81841120,
     "asmText": "sqdecd z0.d",
@@ -315463,136 +322054,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 81840128,
     "asmText": "sqdecd z0.d, pow2",
     "encodingFile": "sqdecd_z_zs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 51,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 52,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 53,
-    "word": 82901984,
-    "asmText": "sqdecd x0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 54,
-    "word": 83885024,
-    "asmText": "sqdecd x0, all, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 55,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 56,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 57,
-    "word": 81853408,
-    "asmText": "sqdecd x0, w0",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 58,
-    "word": 82836448,
-    "asmText": "sqdecd x0, w0, all, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 59,
-    "word": 81852416,
-    "asmText": "sqdecd x0, w0, pow2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 60,
-    "word": 82835456,
-    "asmText": "sqdecd x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecd_r_rs.xml",
     "mnemonic": "SQDECD",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -315671,383 +322132,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 82823168,
     "asmText": "sqdecd z0.d, pow2, mul #16",
     "encodingFile": "sqdecd_z_zs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 67,
-    "word": 82900992,
-    "asmText": "sqdecd x0, pow2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 68,
-    "word": 82901024,
-    "asmText": "sqdecd x0, vl1",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 69,
-    "word": 82901056,
-    "asmText": "sqdecd x0, vl2",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 70,
-    "word": 82901088,
-    "asmText": "sqdecd x0, vl3",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 71,
-    "word": 82901120,
-    "asmText": "sqdecd x0, vl4",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 72,
-    "word": 82901152,
-    "asmText": "sqdecd x0, vl5",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 73,
-    "word": 82901184,
-    "asmText": "sqdecd x0, vl6",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 74,
-    "word": 82901216,
-    "asmText": "sqdecd x0, vl7",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 75,
-    "word": 82901248,
-    "asmText": "sqdecd x0, vl8",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 76,
-    "word": 82901280,
-    "asmText": "sqdecd x0, vl16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 77,
-    "word": 82901312,
-    "asmText": "sqdecd x0, vl32",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 78,
-    "word": 82901344,
-    "asmText": "sqdecd x0, vl64",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 79,
-    "word": 82901376,
-    "asmText": "sqdecd x0, vl128",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 80,
-    "word": 82901408,
-    "asmText": "sqdecd x0, vl256",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 81,
-    "word": 82901440,
-    "asmText": "sqdecd x0, #14",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 82,
-    "word": 82901472,
-    "asmText": "sqdecd x0, #15",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 83,
-    "word": 82901504,
-    "asmText": "sqdecd x0, #16",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 84,
-    "word": 82901536,
-    "asmText": "sqdecd x0, #17",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 85,
-    "word": 82901568,
-    "asmText": "sqdecd x0, #18",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 86,
-    "word": 82901600,
-    "asmText": "sqdecd x0, #19",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 87,
-    "word": 82901632,
-    "asmText": "sqdecd x0, #20",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 88,
-    "word": 82901664,
-    "asmText": "sqdecd x0, #21",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 89,
-    "word": 82901696,
-    "asmText": "sqdecd x0, #22",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 90,
-    "word": 82901728,
-    "asmText": "sqdecd x0, #23",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 91,
-    "word": 82901760,
-    "asmText": "sqdecd x0, #24",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 92,
-    "word": 82901792,
-    "asmText": "sqdecd x0, #25",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 93,
-    "word": 82901824,
-    "asmText": "sqdecd x0, #26",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 94,
-    "word": 82901856,
-    "asmText": "sqdecd x0, #27",
-    "encodingFile": "sqdecd_r_rs.xml",
-    "mnemonic": "SQDECD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecd.s.yaml",
-    "caseIndex": 95,
-    "word": 82901888,
-    "asmText": "sqdecd x0, #28",
-    "encodingFile": "sqdecd_r_rs.xml",
     "mnemonic": "SQDECD",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -316096,136 +322180,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 0,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 1,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 2,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 3,
-    "word": 75496416,
-    "asmText": "sqdech x0, all, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 4,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 5,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 6,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 7,
-    "word": 74447840,
-    "asmText": "sqdech x0, w0, all, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 8,
-    "word": 73463808,
-    "asmText": "sqdech x0, w0, pow2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 9,
-    "word": 74446848,
-    "asmText": "sqdech x0, w0, pow2, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
     "caseIndex": 10,
     "word": 73452512,
     "asmText": "sqdech z0.h",
@@ -316304,383 +322258,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 16,
-    "word": 74512384,
-    "asmText": "sqdech x0, pow2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 17,
-    "word": 74512416,
-    "asmText": "sqdech x0, vl1",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 18,
-    "word": 74512448,
-    "asmText": "sqdech x0, vl2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 19,
-    "word": 74512480,
-    "asmText": "sqdech x0, vl3",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 20,
-    "word": 74512512,
-    "asmText": "sqdech x0, vl4",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 21,
-    "word": 74512544,
-    "asmText": "sqdech x0, vl5",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 22,
-    "word": 74512576,
-    "asmText": "sqdech x0, vl6",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 23,
-    "word": 74512608,
-    "asmText": "sqdech x0, vl7",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 24,
-    "word": 74512640,
-    "asmText": "sqdech x0, vl8",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 25,
-    "word": 74512672,
-    "asmText": "sqdech x0, vl16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 26,
-    "word": 74512704,
-    "asmText": "sqdech x0, vl32",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 27,
-    "word": 74512736,
-    "asmText": "sqdech x0, vl64",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 28,
-    "word": 74512768,
-    "asmText": "sqdech x0, vl128",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 29,
-    "word": 74512800,
-    "asmText": "sqdech x0, vl256",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 30,
-    "word": 74512832,
-    "asmText": "sqdech x0, #14",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 31,
-    "word": 74512864,
-    "asmText": "sqdech x0, #15",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 32,
-    "word": 74512896,
-    "asmText": "sqdech x0, #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 33,
-    "word": 74512928,
-    "asmText": "sqdech x0, #17",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 34,
-    "word": 74512960,
-    "asmText": "sqdech x0, #18",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 35,
-    "word": 74512992,
-    "asmText": "sqdech x0, #19",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 36,
-    "word": 74513024,
-    "asmText": "sqdech x0, #20",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 37,
-    "word": 74513056,
-    "asmText": "sqdech x0, #21",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 38,
-    "word": 74513088,
-    "asmText": "sqdech x0, #22",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 39,
-    "word": 74513120,
-    "asmText": "sqdech x0, #23",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 40,
-    "word": 74513152,
-    "asmText": "sqdech x0, #24",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 41,
-    "word": 74513184,
-    "asmText": "sqdech x0, #25",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 42,
-    "word": 74513216,
-    "asmText": "sqdech x0, #26",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 43,
-    "word": 74513248,
-    "asmText": "sqdech x0, #27",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 44,
-    "word": 74513280,
-    "asmText": "sqdech x0, #28",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
     "caseIndex": 46,
     "word": 73452512,
     "asmText": "sqdech z0.h",
@@ -316711,136 +322288,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 73451520,
     "asmText": "sqdech z0.h, pow2",
     "encodingFile": "sqdech_z_zs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 51,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 52,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 53,
-    "word": 74513376,
-    "asmText": "sqdech x0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 54,
-    "word": 75496416,
-    "asmText": "sqdech x0, all, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 55,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 56,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 57,
-    "word": 73464800,
-    "asmText": "sqdech x0, w0",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 58,
-    "word": 74447840,
-    "asmText": "sqdech x0, w0, all, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 59,
-    "word": 73463808,
-    "asmText": "sqdech x0, w0, pow2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 60,
-    "word": 74446848,
-    "asmText": "sqdech x0, w0, pow2, mul #16",
-    "encodingFile": "sqdech_r_rs.xml",
     "mnemonic": "SQDECH",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -316919,383 +322366,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 74434560,
     "asmText": "sqdech z0.h, pow2, mul #16",
     "encodingFile": "sqdech_z_zs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 67,
-    "word": 74512384,
-    "asmText": "sqdech x0, pow2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 68,
-    "word": 74512416,
-    "asmText": "sqdech x0, vl1",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 69,
-    "word": 74512448,
-    "asmText": "sqdech x0, vl2",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 70,
-    "word": 74512480,
-    "asmText": "sqdech x0, vl3",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 71,
-    "word": 74512512,
-    "asmText": "sqdech x0, vl4",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 72,
-    "word": 74512544,
-    "asmText": "sqdech x0, vl5",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 73,
-    "word": 74512576,
-    "asmText": "sqdech x0, vl6",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 74,
-    "word": 74512608,
-    "asmText": "sqdech x0, vl7",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 75,
-    "word": 74512640,
-    "asmText": "sqdech x0, vl8",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 76,
-    "word": 74512672,
-    "asmText": "sqdech x0, vl16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 77,
-    "word": 74512704,
-    "asmText": "sqdech x0, vl32",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 78,
-    "word": 74512736,
-    "asmText": "sqdech x0, vl64",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 79,
-    "word": 74512768,
-    "asmText": "sqdech x0, vl128",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 80,
-    "word": 74512800,
-    "asmText": "sqdech x0, vl256",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 81,
-    "word": 74512832,
-    "asmText": "sqdech x0, #14",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 82,
-    "word": 74512864,
-    "asmText": "sqdech x0, #15",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 83,
-    "word": 74512896,
-    "asmText": "sqdech x0, #16",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 84,
-    "word": 74512928,
-    "asmText": "sqdech x0, #17",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 85,
-    "word": 74512960,
-    "asmText": "sqdech x0, #18",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 86,
-    "word": 74512992,
-    "asmText": "sqdech x0, #19",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 87,
-    "word": 74513024,
-    "asmText": "sqdech x0, #20",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 88,
-    "word": 74513056,
-    "asmText": "sqdech x0, #21",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 89,
-    "word": 74513088,
-    "asmText": "sqdech x0, #22",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 90,
-    "word": 74513120,
-    "asmText": "sqdech x0, #23",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 91,
-    "word": 74513152,
-    "asmText": "sqdech x0, #24",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 92,
-    "word": 74513184,
-    "asmText": "sqdech x0, #25",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 93,
-    "word": 74513216,
-    "asmText": "sqdech x0, #26",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 94,
-    "word": 74513248,
-    "asmText": "sqdech x0, #27",
-    "encodingFile": "sqdech_r_rs.xml",
-    "mnemonic": "SQDECH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdech.s.yaml",
-    "caseIndex": 95,
-    "word": 74513280,
-    "asmText": "sqdech x0, #28",
-    "encodingFile": "sqdech_r_rs.xml",
     "mnemonic": "SQDECH",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -317734,136 +322804,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 0,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 1,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 2,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 3,
-    "word": 79690720,
-    "asmText": "sqdecw x0, all, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 4,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 5,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 6,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 7,
-    "word": 78642144,
-    "asmText": "sqdecw x0, w0, all, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 8,
-    "word": 77658112,
-    "asmText": "sqdecw x0, w0, pow2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 9,
-    "word": 78641152,
-    "asmText": "sqdecw x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
     "caseIndex": 10,
     "word": 77646816,
     "asmText": "sqdecw z0.s",
@@ -317942,383 +322882,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 16,
-    "word": 78706688,
-    "asmText": "sqdecw x0, pow2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 17,
-    "word": 78706720,
-    "asmText": "sqdecw x0, vl1",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 18,
-    "word": 78706752,
-    "asmText": "sqdecw x0, vl2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 19,
-    "word": 78706784,
-    "asmText": "sqdecw x0, vl3",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 20,
-    "word": 78706816,
-    "asmText": "sqdecw x0, vl4",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 21,
-    "word": 78706848,
-    "asmText": "sqdecw x0, vl5",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 22,
-    "word": 78706880,
-    "asmText": "sqdecw x0, vl6",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 23,
-    "word": 78706912,
-    "asmText": "sqdecw x0, vl7",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 24,
-    "word": 78706944,
-    "asmText": "sqdecw x0, vl8",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 25,
-    "word": 78706976,
-    "asmText": "sqdecw x0, vl16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 26,
-    "word": 78707008,
-    "asmText": "sqdecw x0, vl32",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 27,
-    "word": 78707040,
-    "asmText": "sqdecw x0, vl64",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 28,
-    "word": 78707072,
-    "asmText": "sqdecw x0, vl128",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 29,
-    "word": 78707104,
-    "asmText": "sqdecw x0, vl256",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 30,
-    "word": 78707136,
-    "asmText": "sqdecw x0, #14",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 31,
-    "word": 78707168,
-    "asmText": "sqdecw x0, #15",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 32,
-    "word": 78707200,
-    "asmText": "sqdecw x0, #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 33,
-    "word": 78707232,
-    "asmText": "sqdecw x0, #17",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 34,
-    "word": 78707264,
-    "asmText": "sqdecw x0, #18",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 35,
-    "word": 78707296,
-    "asmText": "sqdecw x0, #19",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 36,
-    "word": 78707328,
-    "asmText": "sqdecw x0, #20",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 37,
-    "word": 78707360,
-    "asmText": "sqdecw x0, #21",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 38,
-    "word": 78707392,
-    "asmText": "sqdecw x0, #22",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 39,
-    "word": 78707424,
-    "asmText": "sqdecw x0, #23",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 40,
-    "word": 78707456,
-    "asmText": "sqdecw x0, #24",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 41,
-    "word": 78707488,
-    "asmText": "sqdecw x0, #25",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 42,
-    "word": 78707520,
-    "asmText": "sqdecw x0, #26",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 43,
-    "word": 78707552,
-    "asmText": "sqdecw x0, #27",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 44,
-    "word": 78707584,
-    "asmText": "sqdecw x0, #28",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
     "caseIndex": 46,
     "word": 77646816,
     "asmText": "sqdecw z0.s",
@@ -318349,136 +322912,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 77645824,
     "asmText": "sqdecw z0.s, pow2",
     "encodingFile": "sqdecw_z_zs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 51,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 52,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 53,
-    "word": 78707680,
-    "asmText": "sqdecw x0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 54,
-    "word": 79690720,
-    "asmText": "sqdecw x0, all, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 55,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 56,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 57,
-    "word": 77659104,
-    "asmText": "sqdecw x0, w0",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 58,
-    "word": 78642144,
-    "asmText": "sqdecw x0, w0, all, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 59,
-    "word": 77658112,
-    "asmText": "sqdecw x0, w0, pow2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 60,
-    "word": 78641152,
-    "asmText": "sqdecw x0, w0, pow2, mul #16",
-    "encodingFile": "sqdecw_r_rs.xml",
     "mnemonic": "SQDECW",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -318566,383 +322999,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 67,
-    "word": 78706688,
-    "asmText": "sqdecw x0, pow2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 68,
-    "word": 78706720,
-    "asmText": "sqdecw x0, vl1",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 69,
-    "word": 78706752,
-    "asmText": "sqdecw x0, vl2",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 70,
-    "word": 78706784,
-    "asmText": "sqdecw x0, vl3",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 71,
-    "word": 78706816,
-    "asmText": "sqdecw x0, vl4",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 72,
-    "word": 78706848,
-    "asmText": "sqdecw x0, vl5",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 73,
-    "word": 78706880,
-    "asmText": "sqdecw x0, vl6",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 74,
-    "word": 78706912,
-    "asmText": "sqdecw x0, vl7",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 75,
-    "word": 78706944,
-    "asmText": "sqdecw x0, vl8",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 76,
-    "word": 78706976,
-    "asmText": "sqdecw x0, vl16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 77,
-    "word": 78707008,
-    "asmText": "sqdecw x0, vl32",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 78,
-    "word": 78707040,
-    "asmText": "sqdecw x0, vl64",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 79,
-    "word": 78707072,
-    "asmText": "sqdecw x0, vl128",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 80,
-    "word": 78707104,
-    "asmText": "sqdecw x0, vl256",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 81,
-    "word": 78707136,
-    "asmText": "sqdecw x0, #14",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 82,
-    "word": 78707168,
-    "asmText": "sqdecw x0, #15",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 83,
-    "word": 78707200,
-    "asmText": "sqdecw x0, #16",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 84,
-    "word": 78707232,
-    "asmText": "sqdecw x0, #17",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 85,
-    "word": 78707264,
-    "asmText": "sqdecw x0, #18",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 86,
-    "word": 78707296,
-    "asmText": "sqdecw x0, #19",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 87,
-    "word": 78707328,
-    "asmText": "sqdecw x0, #20",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 88,
-    "word": 78707360,
-    "asmText": "sqdecw x0, #21",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 89,
-    "word": 78707392,
-    "asmText": "sqdecw x0, #22",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 90,
-    "word": 78707424,
-    "asmText": "sqdecw x0, #23",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 91,
-    "word": 78707456,
-    "asmText": "sqdecw x0, #24",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 92,
-    "word": 78707488,
-    "asmText": "sqdecw x0, #25",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 93,
-    "word": 78707520,
-    "asmText": "sqdecw x0, #26",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 94,
-    "word": 78707552,
-    "asmText": "sqdecw x0, #27",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
-    "caseIndex": 95,
-    "word": 78707584,
-    "asmText": "sqdecw x0, #28",
-    "encodingFile": "sqdecw_r_rs.xml",
-    "mnemonic": "SQDECW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqdecw.s.yaml",
     "caseIndex": 97,
     "word": 77646816,
     "asmText": "sqdecw z0.s",
@@ -318981,1150 +323037,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 0,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 1,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 2,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 3,
-    "word": 71300064,
-    "asmText": "sqincb x0, all, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 4,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 5,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 6,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 7,
-    "word": 70251488,
-    "asmText": "sqincb x0, w0, all, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 8,
-    "word": 69267456,
-    "asmText": "sqincb x0, w0, pow2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 9,
-    "word": 70250496,
-    "asmText": "sqincb x0, w0, pow2, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 10,
-    "word": 70316032,
-    "asmText": "sqincb x0, pow2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 11,
-    "word": 70316064,
-    "asmText": "sqincb x0, vl1",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 12,
-    "word": 70316096,
-    "asmText": "sqincb x0, vl2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 13,
-    "word": 70316128,
-    "asmText": "sqincb x0, vl3",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 14,
-    "word": 70316160,
-    "asmText": "sqincb x0, vl4",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 15,
-    "word": 70316192,
-    "asmText": "sqincb x0, vl5",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 16,
-    "word": 70316224,
-    "asmText": "sqincb x0, vl6",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 17,
-    "word": 70316256,
-    "asmText": "sqincb x0, vl7",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 18,
-    "word": 70316288,
-    "asmText": "sqincb x0, vl8",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 19,
-    "word": 70316320,
-    "asmText": "sqincb x0, vl16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 20,
-    "word": 70316352,
-    "asmText": "sqincb x0, vl32",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 21,
-    "word": 70316384,
-    "asmText": "sqincb x0, vl64",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 22,
-    "word": 70316416,
-    "asmText": "sqincb x0, vl128",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 23,
-    "word": 70316448,
-    "asmText": "sqincb x0, vl256",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 24,
-    "word": 70316480,
-    "asmText": "sqincb x0, #14",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 25,
-    "word": 70316512,
-    "asmText": "sqincb x0, #15",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 26,
-    "word": 70316544,
-    "asmText": "sqincb x0, #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 27,
-    "word": 70316576,
-    "asmText": "sqincb x0, #17",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 28,
-    "word": 70316608,
-    "asmText": "sqincb x0, #18",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 29,
-    "word": 70316640,
-    "asmText": "sqincb x0, #19",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 30,
-    "word": 70316672,
-    "asmText": "sqincb x0, #20",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 31,
-    "word": 70316704,
-    "asmText": "sqincb x0, #21",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 32,
-    "word": 70316736,
-    "asmText": "sqincb x0, #22",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 33,
-    "word": 70316768,
-    "asmText": "sqincb x0, #23",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 34,
-    "word": 70316800,
-    "asmText": "sqincb x0, #24",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 35,
-    "word": 70316832,
-    "asmText": "sqincb x0, #25",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 36,
-    "word": 70316864,
-    "asmText": "sqincb x0, #26",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 37,
-    "word": 70316896,
-    "asmText": "sqincb x0, #27",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 38,
-    "word": 70316928,
-    "asmText": "sqincb x0, #28",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 39,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 40,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 41,
-    "word": 70317024,
-    "asmText": "sqincb x0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 42,
-    "word": 71300064,
-    "asmText": "sqincb x0, all, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 43,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 44,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 45,
-    "word": 69268448,
-    "asmText": "sqincb x0, w0",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 46,
-    "word": 70251488,
-    "asmText": "sqincb x0, w0, all, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 47,
-    "word": 69267456,
-    "asmText": "sqincb x0, w0, pow2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 48,
-    "word": 70250496,
-    "asmText": "sqincb x0, w0, pow2, mul #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 49,
-    "word": 70316032,
-    "asmText": "sqincb x0, pow2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 50,
-    "word": 70316064,
-    "asmText": "sqincb x0, vl1",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 51,
-    "word": 70316096,
-    "asmText": "sqincb x0, vl2",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 52,
-    "word": 70316128,
-    "asmText": "sqincb x0, vl3",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 53,
-    "word": 70316160,
-    "asmText": "sqincb x0, vl4",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 54,
-    "word": 70316192,
-    "asmText": "sqincb x0, vl5",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 55,
-    "word": 70316224,
-    "asmText": "sqincb x0, vl6",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 56,
-    "word": 70316256,
-    "asmText": "sqincb x0, vl7",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 57,
-    "word": 70316288,
-    "asmText": "sqincb x0, vl8",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 58,
-    "word": 70316320,
-    "asmText": "sqincb x0, vl16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 59,
-    "word": 70316352,
-    "asmText": "sqincb x0, vl32",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 60,
-    "word": 70316384,
-    "asmText": "sqincb x0, vl64",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 61,
-    "word": 70316416,
-    "asmText": "sqincb x0, vl128",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 62,
-    "word": 70316448,
-    "asmText": "sqincb x0, vl256",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 63,
-    "word": 70316480,
-    "asmText": "sqincb x0, #14",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 64,
-    "word": 70316512,
-    "asmText": "sqincb x0, #15",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 65,
-    "word": 70316544,
-    "asmText": "sqincb x0, #16",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 66,
-    "word": 70316576,
-    "asmText": "sqincb x0, #17",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 67,
-    "word": 70316608,
-    "asmText": "sqincb x0, #18",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 68,
-    "word": 70316640,
-    "asmText": "sqincb x0, #19",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 69,
-    "word": 70316672,
-    "asmText": "sqincb x0, #20",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 70,
-    "word": 70316704,
-    "asmText": "sqincb x0, #21",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 71,
-    "word": 70316736,
-    "asmText": "sqincb x0, #22",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 72,
-    "word": 70316768,
-    "asmText": "sqincb x0, #23",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 73,
-    "word": 70316800,
-    "asmText": "sqincb x0, #24",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 74,
-    "word": 70316832,
-    "asmText": "sqincb x0, #25",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 75,
-    "word": 70316864,
-    "asmText": "sqincb x0, #26",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 76,
-    "word": 70316896,
-    "asmText": "sqincb x0, #27",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincb.s.yaml",
-    "caseIndex": 77,
-    "word": 70316928,
-    "asmText": "sqincb x0, #28",
-    "encodingFile": "sqincb_r_rs.xml",
-    "mnemonic": "SQINCB",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 0,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 1,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 2,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 3,
-    "word": 83882976,
-    "asmText": "sqincd x0, all, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 4,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 5,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 6,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 7,
-    "word": 82834400,
-    "asmText": "sqincd x0, w0, all, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 8,
-    "word": 81850368,
-    "asmText": "sqincd x0, w0, pow2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 9,
-    "word": 82833408,
-    "asmText": "sqincd x0, w0, pow2, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
     "sourceFile": "SVE/sqincd.s.yaml",
     "caseIndex": 10,
     "word": 81839072,
@@ -320204,383 +323116,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 16,
-    "word": 82898944,
-    "asmText": "sqincd x0, pow2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 17,
-    "word": 82898976,
-    "asmText": "sqincd x0, vl1",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 18,
-    "word": 82899008,
-    "asmText": "sqincd x0, vl2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 19,
-    "word": 82899040,
-    "asmText": "sqincd x0, vl3",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 20,
-    "word": 82899072,
-    "asmText": "sqincd x0, vl4",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 21,
-    "word": 82899104,
-    "asmText": "sqincd x0, vl5",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 22,
-    "word": 82899136,
-    "asmText": "sqincd x0, vl6",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 23,
-    "word": 82899168,
-    "asmText": "sqincd x0, vl7",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 24,
-    "word": 82899200,
-    "asmText": "sqincd x0, vl8",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 25,
-    "word": 82899232,
-    "asmText": "sqincd x0, vl16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 26,
-    "word": 82899264,
-    "asmText": "sqincd x0, vl32",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 27,
-    "word": 82899296,
-    "asmText": "sqincd x0, vl64",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 28,
-    "word": 82899328,
-    "asmText": "sqincd x0, vl128",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 29,
-    "word": 82899360,
-    "asmText": "sqincd x0, vl256",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 30,
-    "word": 82899392,
-    "asmText": "sqincd x0, #14",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 31,
-    "word": 82899424,
-    "asmText": "sqincd x0, #15",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 32,
-    "word": 82899456,
-    "asmText": "sqincd x0, #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 33,
-    "word": 82899488,
-    "asmText": "sqincd x0, #17",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 34,
-    "word": 82899520,
-    "asmText": "sqincd x0, #18",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 35,
-    "word": 82899552,
-    "asmText": "sqincd x0, #19",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 36,
-    "word": 82899584,
-    "asmText": "sqincd x0, #20",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 37,
-    "word": 82899616,
-    "asmText": "sqincd x0, #21",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 38,
-    "word": 82899648,
-    "asmText": "sqincd x0, #22",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 39,
-    "word": 82899680,
-    "asmText": "sqincd x0, #23",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 40,
-    "word": 82899712,
-    "asmText": "sqincd x0, #24",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 41,
-    "word": 82899744,
-    "asmText": "sqincd x0, #25",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 42,
-    "word": 82899776,
-    "asmText": "sqincd x0, #26",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 43,
-    "word": 82899808,
-    "asmText": "sqincd x0, #27",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 44,
-    "word": 82899840,
-    "asmText": "sqincd x0, #28",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
     "caseIndex": 46,
     "word": 81839072,
     "asmText": "sqincd z0.d",
@@ -320611,136 +323146,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 81838080,
     "asmText": "sqincd z0.d, pow2",
     "encodingFile": "sqincd_z_zs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 51,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 52,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 53,
-    "word": 82899936,
-    "asmText": "sqincd x0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 54,
-    "word": 83882976,
-    "asmText": "sqincd x0, all, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 55,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 56,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 57,
-    "word": 81851360,
-    "asmText": "sqincd x0, w0",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 58,
-    "word": 82834400,
-    "asmText": "sqincd x0, w0, all, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 59,
-    "word": 81850368,
-    "asmText": "sqincd x0, w0, pow2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 60,
-    "word": 82833408,
-    "asmText": "sqincd x0, w0, pow2, mul #16",
-    "encodingFile": "sqincd_r_rs.xml",
     "mnemonic": "SQINCD",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -320819,383 +323224,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 82821120,
     "asmText": "sqincd z0.d, pow2, mul #16",
     "encodingFile": "sqincd_z_zs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 67,
-    "word": 82898944,
-    "asmText": "sqincd x0, pow2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 68,
-    "word": 82898976,
-    "asmText": "sqincd x0, vl1",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 69,
-    "word": 82899008,
-    "asmText": "sqincd x0, vl2",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 70,
-    "word": 82899040,
-    "asmText": "sqincd x0, vl3",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 71,
-    "word": 82899072,
-    "asmText": "sqincd x0, vl4",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 72,
-    "word": 82899104,
-    "asmText": "sqincd x0, vl5",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 73,
-    "word": 82899136,
-    "asmText": "sqincd x0, vl6",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 74,
-    "word": 82899168,
-    "asmText": "sqincd x0, vl7",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 75,
-    "word": 82899200,
-    "asmText": "sqincd x0, vl8",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 76,
-    "word": 82899232,
-    "asmText": "sqincd x0, vl16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 77,
-    "word": 82899264,
-    "asmText": "sqincd x0, vl32",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 78,
-    "word": 82899296,
-    "asmText": "sqincd x0, vl64",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 79,
-    "word": 82899328,
-    "asmText": "sqincd x0, vl128",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 80,
-    "word": 82899360,
-    "asmText": "sqincd x0, vl256",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 81,
-    "word": 82899392,
-    "asmText": "sqincd x0, #14",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 82,
-    "word": 82899424,
-    "asmText": "sqincd x0, #15",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 83,
-    "word": 82899456,
-    "asmText": "sqincd x0, #16",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 84,
-    "word": 82899488,
-    "asmText": "sqincd x0, #17",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 85,
-    "word": 82899520,
-    "asmText": "sqincd x0, #18",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 86,
-    "word": 82899552,
-    "asmText": "sqincd x0, #19",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 87,
-    "word": 82899584,
-    "asmText": "sqincd x0, #20",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 88,
-    "word": 82899616,
-    "asmText": "sqincd x0, #21",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 89,
-    "word": 82899648,
-    "asmText": "sqincd x0, #22",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 90,
-    "word": 82899680,
-    "asmText": "sqincd x0, #23",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 91,
-    "word": 82899712,
-    "asmText": "sqincd x0, #24",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 92,
-    "word": 82899744,
-    "asmText": "sqincd x0, #25",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 93,
-    "word": 82899776,
-    "asmText": "sqincd x0, #26",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 94,
-    "word": 82899808,
-    "asmText": "sqincd x0, #27",
-    "encodingFile": "sqincd_r_rs.xml",
-    "mnemonic": "SQINCD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincd.s.yaml",
-    "caseIndex": 95,
-    "word": 82899840,
-    "asmText": "sqincd x0, #28",
-    "encodingFile": "sqincd_r_rs.xml",
     "mnemonic": "SQINCD",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -321244,136 +323272,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 0,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 1,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 2,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 3,
-    "word": 75494368,
-    "asmText": "sqinch x0, all, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 4,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 5,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 6,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 7,
-    "word": 74445792,
-    "asmText": "sqinch x0, w0, all, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 8,
-    "word": 73461760,
-    "asmText": "sqinch x0, w0, pow2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 9,
-    "word": 74444800,
-    "asmText": "sqinch x0, w0, pow2, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
     "caseIndex": 10,
     "word": 73450464,
     "asmText": "sqinch z0.h",
@@ -321452,383 +323350,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 16,
-    "word": 74510336,
-    "asmText": "sqinch x0, pow2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 17,
-    "word": 74510368,
-    "asmText": "sqinch x0, vl1",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 18,
-    "word": 74510400,
-    "asmText": "sqinch x0, vl2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 19,
-    "word": 74510432,
-    "asmText": "sqinch x0, vl3",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 20,
-    "word": 74510464,
-    "asmText": "sqinch x0, vl4",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 21,
-    "word": 74510496,
-    "asmText": "sqinch x0, vl5",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 22,
-    "word": 74510528,
-    "asmText": "sqinch x0, vl6",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 23,
-    "word": 74510560,
-    "asmText": "sqinch x0, vl7",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 24,
-    "word": 74510592,
-    "asmText": "sqinch x0, vl8",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 25,
-    "word": 74510624,
-    "asmText": "sqinch x0, vl16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 26,
-    "word": 74510656,
-    "asmText": "sqinch x0, vl32",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 27,
-    "word": 74510688,
-    "asmText": "sqinch x0, vl64",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 28,
-    "word": 74510720,
-    "asmText": "sqinch x0, vl128",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 29,
-    "word": 74510752,
-    "asmText": "sqinch x0, vl256",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 30,
-    "word": 74510784,
-    "asmText": "sqinch x0, #14",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 31,
-    "word": 74510816,
-    "asmText": "sqinch x0, #15",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 32,
-    "word": 74510848,
-    "asmText": "sqinch x0, #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 33,
-    "word": 74510880,
-    "asmText": "sqinch x0, #17",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 34,
-    "word": 74510912,
-    "asmText": "sqinch x0, #18",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 35,
-    "word": 74510944,
-    "asmText": "sqinch x0, #19",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 36,
-    "word": 74510976,
-    "asmText": "sqinch x0, #20",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 37,
-    "word": 74511008,
-    "asmText": "sqinch x0, #21",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 38,
-    "word": 74511040,
-    "asmText": "sqinch x0, #22",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 39,
-    "word": 74511072,
-    "asmText": "sqinch x0, #23",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 40,
-    "word": 74511104,
-    "asmText": "sqinch x0, #24",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 41,
-    "word": 74511136,
-    "asmText": "sqinch x0, #25",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 42,
-    "word": 74511168,
-    "asmText": "sqinch x0, #26",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 43,
-    "word": 74511200,
-    "asmText": "sqinch x0, #27",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 44,
-    "word": 74511232,
-    "asmText": "sqinch x0, #28",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
     "caseIndex": 46,
     "word": 73450464,
     "asmText": "sqinch z0.h",
@@ -321859,136 +323380,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 73449472,
     "asmText": "sqinch z0.h, pow2",
     "encodingFile": "sqinch_z_zs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 51,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 52,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 53,
-    "word": 74511328,
-    "asmText": "sqinch x0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 54,
-    "word": 75494368,
-    "asmText": "sqinch x0, all, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 55,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 56,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 57,
-    "word": 73462752,
-    "asmText": "sqinch x0, w0",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 58,
-    "word": 74445792,
-    "asmText": "sqinch x0, w0, all, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 59,
-    "word": 73461760,
-    "asmText": "sqinch x0, w0, pow2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 60,
-    "word": 74444800,
-    "asmText": "sqinch x0, w0, pow2, mul #16",
-    "encodingFile": "sqinch_r_rs.xml",
     "mnemonic": "SQINCH",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -322067,383 +323458,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 74432512,
     "asmText": "sqinch z0.h, pow2, mul #16",
     "encodingFile": "sqinch_z_zs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 67,
-    "word": 74510336,
-    "asmText": "sqinch x0, pow2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 68,
-    "word": 74510368,
-    "asmText": "sqinch x0, vl1",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 69,
-    "word": 74510400,
-    "asmText": "sqinch x0, vl2",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 70,
-    "word": 74510432,
-    "asmText": "sqinch x0, vl3",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 71,
-    "word": 74510464,
-    "asmText": "sqinch x0, vl4",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 72,
-    "word": 74510496,
-    "asmText": "sqinch x0, vl5",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 73,
-    "word": 74510528,
-    "asmText": "sqinch x0, vl6",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 74,
-    "word": 74510560,
-    "asmText": "sqinch x0, vl7",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 75,
-    "word": 74510592,
-    "asmText": "sqinch x0, vl8",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 76,
-    "word": 74510624,
-    "asmText": "sqinch x0, vl16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 77,
-    "word": 74510656,
-    "asmText": "sqinch x0, vl32",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 78,
-    "word": 74510688,
-    "asmText": "sqinch x0, vl64",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 79,
-    "word": 74510720,
-    "asmText": "sqinch x0, vl128",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 80,
-    "word": 74510752,
-    "asmText": "sqinch x0, vl256",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 81,
-    "word": 74510784,
-    "asmText": "sqinch x0, #14",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 82,
-    "word": 74510816,
-    "asmText": "sqinch x0, #15",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 83,
-    "word": 74510848,
-    "asmText": "sqinch x0, #16",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 84,
-    "word": 74510880,
-    "asmText": "sqinch x0, #17",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 85,
-    "word": 74510912,
-    "asmText": "sqinch x0, #18",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 86,
-    "word": 74510944,
-    "asmText": "sqinch x0, #19",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 87,
-    "word": 74510976,
-    "asmText": "sqinch x0, #20",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 88,
-    "word": 74511008,
-    "asmText": "sqinch x0, #21",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 89,
-    "word": 74511040,
-    "asmText": "sqinch x0, #22",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 90,
-    "word": 74511072,
-    "asmText": "sqinch x0, #23",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 91,
-    "word": 74511104,
-    "asmText": "sqinch x0, #24",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 92,
-    "word": 74511136,
-    "asmText": "sqinch x0, #25",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 93,
-    "word": 74511168,
-    "asmText": "sqinch x0, #26",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 94,
-    "word": 74511200,
-    "asmText": "sqinch x0, #27",
-    "encodingFile": "sqinch_r_rs.xml",
-    "mnemonic": "SQINCH",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqinch.s.yaml",
-    "caseIndex": 95,
-    "word": 74511232,
-    "asmText": "sqinch x0, #28",
-    "encodingFile": "sqinch_r_rs.xml",
     "mnemonic": "SQINCH",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -322882,136 +323896,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 0,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 1,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 2,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 3,
-    "word": 79688672,
-    "asmText": "sqincw x0, all, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 4,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 5,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 6,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 7,
-    "word": 78640096,
-    "asmText": "sqincw x0, w0, all, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 8,
-    "word": 77656064,
-    "asmText": "sqincw x0, w0, pow2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 9,
-    "word": 78639104,
-    "asmText": "sqincw x0, w0, pow2, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
     "caseIndex": 10,
     "word": 77644768,
     "asmText": "sqincw z0.s",
@@ -323090,383 +323974,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 16,
-    "word": 78704640,
-    "asmText": "sqincw x0, pow2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 17,
-    "word": 78704672,
-    "asmText": "sqincw x0, vl1",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 18,
-    "word": 78704704,
-    "asmText": "sqincw x0, vl2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 19,
-    "word": 78704736,
-    "asmText": "sqincw x0, vl3",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 20,
-    "word": 78704768,
-    "asmText": "sqincw x0, vl4",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 21,
-    "word": 78704800,
-    "asmText": "sqincw x0, vl5",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 22,
-    "word": 78704832,
-    "asmText": "sqincw x0, vl6",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 23,
-    "word": 78704864,
-    "asmText": "sqincw x0, vl7",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 24,
-    "word": 78704896,
-    "asmText": "sqincw x0, vl8",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 25,
-    "word": 78704928,
-    "asmText": "sqincw x0, vl16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 26,
-    "word": 78704960,
-    "asmText": "sqincw x0, vl32",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 27,
-    "word": 78704992,
-    "asmText": "sqincw x0, vl64",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 28,
-    "word": 78705024,
-    "asmText": "sqincw x0, vl128",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 29,
-    "word": 78705056,
-    "asmText": "sqincw x0, vl256",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 30,
-    "word": 78705088,
-    "asmText": "sqincw x0, #14",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 31,
-    "word": 78705120,
-    "asmText": "sqincw x0, #15",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 32,
-    "word": 78705152,
-    "asmText": "sqincw x0, #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 33,
-    "word": 78705184,
-    "asmText": "sqincw x0, #17",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 34,
-    "word": 78705216,
-    "asmText": "sqincw x0, #18",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 35,
-    "word": 78705248,
-    "asmText": "sqincw x0, #19",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 36,
-    "word": 78705280,
-    "asmText": "sqincw x0, #20",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 37,
-    "word": 78705312,
-    "asmText": "sqincw x0, #21",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 38,
-    "word": 78705344,
-    "asmText": "sqincw x0, #22",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 39,
-    "word": 78705376,
-    "asmText": "sqincw x0, #23",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 40,
-    "word": 78705408,
-    "asmText": "sqincw x0, #24",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 41,
-    "word": 78705440,
-    "asmText": "sqincw x0, #25",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 42,
-    "word": 78705472,
-    "asmText": "sqincw x0, #26",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 43,
-    "word": 78705504,
-    "asmText": "sqincw x0, #27",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 44,
-    "word": 78705536,
-    "asmText": "sqincw x0, #28",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
     "caseIndex": 46,
     "word": 77644768,
     "asmText": "sqincw z0.s",
@@ -323497,136 +324004,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 77643776,
     "asmText": "sqincw z0.s, pow2",
     "encodingFile": "sqincw_z_zs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 51,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 52,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 53,
-    "word": 78705632,
-    "asmText": "sqincw x0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 54,
-    "word": 79688672,
-    "asmText": "sqincw x0, all, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 55,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 56,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 57,
-    "word": 77657056,
-    "asmText": "sqincw x0, w0",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 58,
-    "word": 78640096,
-    "asmText": "sqincw x0, w0, all, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 59,
-    "word": 77656064,
-    "asmText": "sqincw x0, w0, pow2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 60,
-    "word": 78639104,
-    "asmText": "sqincw x0, w0, pow2, mul #16",
-    "encodingFile": "sqincw_r_rs.xml",
     "mnemonic": "SQINCW",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -323705,383 +324082,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "word": 78626816,
     "asmText": "sqincw z0.s, pow2, mul #16",
     "encodingFile": "sqincw_z_zs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 67,
-    "word": 78704640,
-    "asmText": "sqincw x0, pow2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 68,
-    "word": 78704672,
-    "asmText": "sqincw x0, vl1",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 69,
-    "word": 78704704,
-    "asmText": "sqincw x0, vl2",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 70,
-    "word": 78704736,
-    "asmText": "sqincw x0, vl3",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 71,
-    "word": 78704768,
-    "asmText": "sqincw x0, vl4",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 72,
-    "word": 78704800,
-    "asmText": "sqincw x0, vl5",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 73,
-    "word": 78704832,
-    "asmText": "sqincw x0, vl6",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 74,
-    "word": 78704864,
-    "asmText": "sqincw x0, vl7",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 75,
-    "word": 78704896,
-    "asmText": "sqincw x0, vl8",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 76,
-    "word": 78704928,
-    "asmText": "sqincw x0, vl16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 77,
-    "word": 78704960,
-    "asmText": "sqincw x0, vl32",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 78,
-    "word": 78704992,
-    "asmText": "sqincw x0, vl64",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 79,
-    "word": 78705024,
-    "asmText": "sqincw x0, vl128",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 80,
-    "word": 78705056,
-    "asmText": "sqincw x0, vl256",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 81,
-    "word": 78705088,
-    "asmText": "sqincw x0, #14",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 82,
-    "word": 78705120,
-    "asmText": "sqincw x0, #15",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 83,
-    "word": 78705152,
-    "asmText": "sqincw x0, #16",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 84,
-    "word": 78705184,
-    "asmText": "sqincw x0, #17",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 85,
-    "word": 78705216,
-    "asmText": "sqincw x0, #18",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 86,
-    "word": 78705248,
-    "asmText": "sqincw x0, #19",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 87,
-    "word": 78705280,
-    "asmText": "sqincw x0, #20",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 88,
-    "word": 78705312,
-    "asmText": "sqincw x0, #21",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 89,
-    "word": 78705344,
-    "asmText": "sqincw x0, #22",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 90,
-    "word": 78705376,
-    "asmText": "sqincw x0, #23",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 91,
-    "word": 78705408,
-    "asmText": "sqincw x0, #24",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 92,
-    "word": 78705440,
-    "asmText": "sqincw x0, #25",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 93,
-    "word": 78705472,
-    "asmText": "sqincw x0, #26",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 94,
-    "word": 78705504,
-    "asmText": "sqincw x0, #27",
-    "encodingFile": "sqincw_r_rs.xml",
-    "mnemonic": "SQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/sqincw.s.yaml",
-    "caseIndex": 95,
-    "word": 78705536,
-    "asmText": "sqincw x0, #28",
-    "encodingFile": "sqincw_r_rs.xml",
     "mnemonic": "SQINCW",
     "features": [
       "FEAT_SVE || FEAT_SME",

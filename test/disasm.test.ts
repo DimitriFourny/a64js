@@ -83,6 +83,14 @@ test("decodes SVE INCB and DECB scalar patterns", () => {
   assert.equal(disasm(0x043fe7e0, undefined, options), "decb x0, all, mul #16");
 });
 
+test("decodes signed SVE scalar saturating INCB and DECB forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(70317024, undefined, options), "sqincb x0");
+  assert.equal(disasm(69268448, undefined, options), "sqincb x0, w0");
+  assert.equal(disasm(70319072, undefined, options), "sqdecb x0");
+  assert.equal(disasm(69270496, undefined, options), "sqdecb x0, w0");
+});
+
 test("decodes SME MOVA aliases", () => {
   assert.equal(disasm(0xc0020000, undefined, { features: ["FEAT_SME"] }), "mov z0.b, p0/m, za0h.b[w12, 0]");
   assert.equal(disasm(0xc0000000, undefined, { features: ["FEAT_SME"] }), "mov za0h.b[w12, 0], p0/m, z0.b");
@@ -93,6 +101,21 @@ test("decodes SME2 MOVA multi-vector aliases", () => {
   assert.equal(disasm(0xc0440000, undefined, { features: ["FEAT_SME2"] }), "mov za0h.h[w12, 0:1], { z0.h, z1.h }");
   assert.equal(disasm(0xc0060800, undefined, { features: ["FEAT_SME2"] }), "mov { z0.d, z1.d }, za.d[w8, 0, vgx2]");
   assert.equal(disasm(0xc0040800, undefined, { features: ["FEAT_SME2"] }), "mov za.d[w8, 0, vgx2], { z0.d, z1.d }");
+});
+
+test("decodes AdvSIMD multiple-structure LD1/ST1", () => {
+  const options = { features: ["FEAT_AdvSIMD"] };
+  assert.equal(disasm(0x4c007000, undefined, options), "st1 { v0.16b }, [x0]");
+  assert.equal(disasm(0x4c407000, undefined, options), "ld1 { v0.16b }, [x0]");
+  assert.equal(disasm(0x4c402bff, undefined, options), "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]");
+});
+
+test("decodes AdvSIMD dot-product vector and lane forms", () => {
+  const options = { features: ["FEAT_DotProd"] };
+  assert.equal(disasm(0x2e829420, undefined, options), "udot v0.2s, v1.8b, v2.8b");
+  assert.equal(disasm(0x0e829420, undefined, options), "sdot v0.2s, v1.8b, v2.8b");
+  assert.equal(disasm(0x6e829420, undefined, options), "udot v0.4s, v1.16b, v2.16b");
+  assert.equal(disasm(0x4fa2e820, undefined, options), "sdot v0.4s, v1.16b, v2.4b[3]");
 });
 
 test("marks feature-gated PAuth instructions undefined when features are disabled", () => {

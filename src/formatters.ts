@@ -342,13 +342,31 @@ function sveCopyScalarVectorOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "text", text: `${lane}${fields.Vn ?? 0}` }];
 }
 
-function advsimdLaneFromSize(size: number | undefined): "h" | "s" {
-  return size === 2 ? "s" : "h";
+function advsimdLaneFromSize(size: number | undefined): "b" | "h" | "s" | "d" {
+  switch (size ?? 0) {
+    case 0:
+      return "b";
+    case 1:
+      return "h";
+    case 2:
+      return "s";
+    case 3:
+      return "d";
+    default:
+      return "b";
+  }
 }
 
-function advsimdArrangementFromSizeQ(size: number | undefined, q: number | undefined): "4h" | "8h" | "2s" | "4s" {
+function advsimdArrangementFromSizeQ(
+  size: number | undefined,
+  q: number | undefined,
+): "8b" | "16b" | "4h" | "8h" | "2s" | "4s" | "1d" | "2d" {
   const lane = advsimdLaneFromSize(size);
-  const count = lane === "h" ? (q === 1 ? 8 : 4) : q === 1 ? 4 : 2;
+  const count =
+    lane === "b" ? (q === 1 ? 16 : 8) :
+    lane === "h" ? (q === 1 ? 8 : 4) :
+    lane === "s" ? (q === 1 ? 4 : 2) :
+    q === 1 ? 2 : 1;
   return `${count}${lane}`;
 }
 
@@ -358,6 +376,41 @@ function advsimdScalarRegisterText(index: number, size: number | undefined): str
 
 function advsimdVectorRegisterText(index: number, size: number | undefined, q: number | undefined): string {
   return `v${index}.${advsimdArrangementFromSizeQ(size, q)}`;
+}
+
+function advsimdDotProductSourceText(index: number, q: number | undefined): string {
+  return `v${index}.${q === 1 ? "16b" : "8b"}`;
+}
+
+function advsimdStructureRegisterCount(encodingId: string): 1 | 2 | 3 | 4 {
+  const match = /_(?:R|I)([1-4])_/.exec(encodingId);
+  if (!match) {
+    return 1;
+  }
+  return Number(match[1]) as 1 | 2 | 3 | 4;
+}
+
+function advsimdStructureRegisterGroupText(
+  start: number,
+  count: 1 | 2 | 3 | 4,
+  size: number | undefined,
+  q: number | undefined,
+): string {
+  const arrangement = advsimdArrangementFromSizeQ(size, q);
+  const registers = Array.from({ length: count }, (_, index) => `v${(start + index) & 31}.${arrangement}`);
+  return `{ ${registers.join(", ")} }`;
+}
+
+function advsimdStructureMemoryText(base: number, postIndex: number | undefined, count: 1 | 2 | 3 | 4, q: number | undefined): string {
+  const baseText = formatRegister(gpReg(64, base, "sp"));
+  if (postIndex === undefined) {
+    return `[${baseText}]`;
+  }
+  if (postIndex === 31) {
+    const amount = BigInt(count * (8 << (q ?? 0)));
+    return `[${baseText}], #${amount.toString()}`;
+  }
+  return `[${baseText}], ${formatRegister(gpReg(64, postIndex, "zr"))}`;
 }
 
 function advsimdByElementSourceIndex(fields: Record<string, number>, size: number | undefined): number {
@@ -410,6 +463,42 @@ function advsimdSaturatingRoundingDoublingMultiplyOperands(inst: DecodedInstruct
   return [];
 }
 
+function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = fields.size;
+
+  if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+    return [
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+      { kind: "text", text: advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q) },
+      { kind: "text", text: advsimdDotProductSourceText(fields.Rm ?? 0, fields.Q) },
+    ];
+  }
+
+  if (inst.encoding!.fileName.endsWith("_elt.xml")) {
+    return [
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+      { kind: "text", text: advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q) },
+      {
+        kind: "text",
+        text: `v${advsimdByElementSourceIndex(fields, size)}.4b[${advsimdByElementIndex(fields, size)}]`,
+      },
+    ];
+  }
+
+  return [];
+}
+
+function advsimdMultipleStructureOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
+  const regCount = advsimdStructureRegisterCount(encodingId);
+  const start = fields.Rt ?? 0;
+  const registers = advsimdStructureRegisterGroupText(start, regCount, fields.size, fields.Q);
+  const memory = advsimdStructureMemoryText(fields.Rn ?? 0, fields.Rm, regCount, fields.Q);
+  return [{ kind: "text", text: registers }, { kind: "text", text: memory }];
+}
+
 function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
@@ -428,6 +517,9 @@ function sveIncDecScalarOperands(inst: DecodedInstruction): Operand[] {
   const pattern = fields.pattern ?? 0;
   const multiplier = (fields.imm4 ?? 0) + 1;
   const ops: Operand[] = [gpReg(64, fields.Rdn, "sp")];
+  if (inst.encoding!.className === "32-bit") {
+    ops.push(gpReg(32, fields.Rdn, "sp"));
+  }
   const patternName = pattern === 31 ? "all" : svePatternName(pattern);
 
   if (patternName) {
@@ -979,6 +1071,14 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sqrdmlsh_advsimd_vec.xml":
     case "sqrdmlsh_advsimd_elt.xml":
       return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
+    case "sdot_advsimd_vec.xml":
+    case "sdot_advsimd_elt.xml":
+    case "udot_advsimd_vec.xml":
+    case "udot_advsimd_elt.xml":
+      return advsimdDotProductOperands(inst);
+    case "ld1_advsimd_mult.xml":
+    case "st1_advsimd_mult.xml":
+      return advsimdMultipleStructureOperands(inst);
     case "mov_mova_z_p_rza.xml":
       return movaSingleToVectorOperands(inst);
     case "movaz_z_rza.xml":
@@ -1050,6 +1150,14 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveCompareImmediateOperands(inst);
     case "incb_r_rs.xml":
     case "decb_r_rs.xml":
+    case "sqincb_r_rs.xml":
+    case "sqincd_r_rs.xml":
+    case "sqinch_r_rs.xml":
+    case "sqincw_r_rs.xml":
+    case "sqdecb_r_rs.xml":
+    case "sqdecd_r_rs.xml":
+    case "sqdech_r_rs.xml":
+    case "sqdecw_r_rs.xml":
       return sveIncDecScalarOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
@@ -1134,10 +1242,13 @@ export function resolvePcRelativeOperands(operands: Operand[], pc: bigint | unde
 }
 
 export function formatRegister(register: RegisterName): string {
-  const prefix = register.width === 64 ? "x" : "w";
   if (register.index === 31) {
-    return `${prefix}${register.zeroName}`;
+    if (register.zeroName === "sp") {
+      return register.width === 64 ? "sp" : "wsp";
+    }
+    return register.width === 64 ? "xzr" : "wzr";
   }
+  const prefix = register.width === 64 ? "x" : "w";
   return `${prefix}${register.index}`;
 }
 
