@@ -554,9 +554,143 @@ function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s
   return `{ ${regs.join(", ")} }`;
 }
 
-function smeIndexedSourceText(fields: Record<string, number>, lane: "s" | "h" | "d"): string {
-  const index = fields.i3h !== undefined || fields.i3l !== undefined ? ((fields.i3h ?? 0) << 3) | (fields.i3l ?? 0) : fields.i2 ?? fields.i1 ?? 0;
-  return `z${fields.Zm ?? 0}.${lane}[${index}]`;
+function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" | "h" | "d"): string {
+  const fields = inst.fields!;
+  const encodingFields = inst.encoding!.fields;
+  const widthByName = new Map(encodingFields.map((field) => [field.name, field.width] as const));
+
+  const i4h = fields.i4h;
+  const i4l = fields.i4l;
+  if (i4h !== undefined || i4l !== undefined) {
+    const lowWidth = widthByName.get("i4l") ?? 0;
+    return `z${fields.Zm ?? 0}.${lane}[${((i4h ?? 0) << lowWidth) | (i4l ?? 0)}]`;
+  }
+
+  const i3h = fields.i3h;
+  const i3l = fields.i3l;
+  if (i3h !== undefined || i3l !== undefined) {
+    const lowWidth = widthByName.get("i3l") ?? 0;
+    return `z${fields.Zm ?? 0}.${lane}[${((i3h ?? 0) << lowWidth) | (i3l ?? 0)}]`;
+  }
+
+  return `z${fields.Zm ?? 0}.${lane}[${((fields.i2 ?? 0) << 1) | (fields.i1 ?? 0)}]`;
+}
+
+function smeLongArithmeticLane(inst: DecodedInstruction): "s" | "d" {
+  return inst.fields?.sz === 1 ? "d" : "s";
+}
+
+function smeLongArithmeticSourceLane(accLane: "s" | "d"): "b" | "h" {
+  return accLane === "d" ? "h" : "b";
+}
+
+function smeLongArithmeticZaText(fields: Record<string, number>, lane: "s" | "d"): string {
+  const start = 4 * (fields.off2 ?? fields.o1 ?? 0);
+  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 3}]`;
+}
+
+function smeLongArithmeticGroupSize(encodingId: string): 1 | 2 | 4 {
+  if (encodingId.includes("4x")) {
+    return 4;
+  }
+  if (encodingId.includes("2x")) {
+    return 2;
+  }
+  return 1;
+}
+
+function smeLongArithmeticSecondSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
+  const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
+  const sourceStart = fields.Zm ?? 0;
+
+  if (encodingId.includes("_zzi_")) {
+    return { kind: "text", text: smeIndexedSourceText(inst, lane) };
+  }
+
+  if (!encodingId.includes("_zzw_")) {
+    return { kind: "text", text: `z${sourceStart}.${lane}` };
+  }
+
+  const groupSize = smeLongArithmeticGroupSize(encodingId);
+  return { kind: "text", text: smeDotVectorGroupText(sourceStart, groupSize, lane) };
+}
+
+function smeLongArithmeticFirstSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
+  const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
+  const sourceStart = fields.Zn ?? 0;
+  const groupSize = smeLongArithmeticGroupSize(encodingId);
+
+  if (encodingId.includes("_zzi_")) {
+    return { kind: "text", text: smeLongArithmeticGroupSize(encodingId) === 1
+      ? `z${sourceStart}.${lane}`
+      : smeDotVectorGroupText(sourceStart, groupSize, lane) };
+  }
+
+  if (groupSize === 1) {
+    return { kind: "text", text: `z${sourceStart}.${lane}` };
+  }
+  return { kind: "text", text: smeDotVectorGroupText(sourceStart, groupSize, lane) };
+}
+
+function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = smeLongArithmeticLane(inst);
+  const srcLane = smeLongArithmeticSourceLane(lane);
+  const za = { kind: "text", text: smeLongArithmeticZaText(fields, lane) } satisfies Operand;
+  const first = smeLongArithmeticFirstSource(inst, srcLane);
+  const second = smeLongArithmeticSecondSource(inst, srcLane);
+
+  switch (inst.encoding!.encodingId) {
+    case "smlall_za_zzv_1":
+    case "smlall_za_zzv_2x1":
+    case "smlall_za_zzv_4x1":
+    case "smlsll_za_zzv_1":
+    case "smlsll_za_zzv_2x1":
+    case "smlsll_za_zzv_4x1":
+    case "umlall_za_zzv_1":
+    case "umlall_za_zzv_2x1":
+    case "umlall_za_zzv_4x1":
+    case "umlsll_za_zzv_1":
+    case "umlsll_za_zzv_2x1":
+    case "umlsll_za_zzv_4x1":
+    case "smlall_za_zzi_s":
+    case "smlall_za_zzi_d":
+    case "smlall_za_zzi_s2xi":
+    case "smlall_za_zzi_d2xi":
+    case "smlall_za_zzi_s4xi":
+    case "smlall_za_zzi_d4xi":
+    case "smlsll_za_zzi_s":
+    case "smlsll_za_zzi_d":
+    case "smlsll_za_zzi_s2xi":
+    case "smlsll_za_zzi_d2xi":
+    case "smlsll_za_zzi_s4xi":
+    case "smlsll_za_zzi_d4xi":
+    case "umlall_za_zzi_s":
+    case "umlall_za_zzi_d":
+    case "umlall_za_zzi_s2xi":
+    case "umlall_za_zzi_d2xi":
+    case "umlall_za_zzi_s4xi":
+    case "umlall_za_zzi_d4xi":
+    case "umlsll_za_zzi_s":
+    case "umlsll_za_zzi_d":
+    case "umlsll_za_zzi_s2xi":
+    case "umlsll_za_zzi_d2xi":
+    case "umlsll_za_zzi_s4xi":
+    case "umlsll_za_zzi_d4xi":
+    case "smlall_za_zzw_2x2":
+    case "smlall_za_zzw_4x4":
+    case "smlsll_za_zzw_2x2":
+    case "smlsll_za_zzw_4x4":
+    case "umlall_za_zzw_2x2":
+    case "umlall_za_zzw_4x4":
+    case "umlsll_za_zzw_2x2":
+    case "umlsll_za_zzw_4x4":
+      return [za, first, second];
+    default:
+      return [];
+  }
 }
 
 function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
@@ -617,7 +751,7 @@ function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
       return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
     case "fmla_za_zzi.xml":
     case "fmls_za_zzi.xml":
-      return [za, first, { kind: "text", text: smeIndexedSourceText(fields, lane) }];
+      return [za, first, { kind: "text", text: smeIndexedSourceText(inst, lane) }];
     case "fmla_za_zzw.xml":
     case "fmls_za_zzw.xml":
       return [
@@ -675,7 +809,7 @@ function smeDotOperands(inst: DecodedInstruction): Operand[] {
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
     case "udot_za_zzi.xml":
-      return [za, first, { kind: "text", text: smeIndexedSourceText(fields, srcLane) }];
+      return [za, first, { kind: "text", text: smeIndexedSourceText(inst, srcLane) }];
     case "sdot_za32_zzw.xml":
     case "udot_za32_zzw.xml":
     case "sdot_za_zzw.xml":
@@ -781,6 +915,19 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fmls_za_zzi.xml":
     case "fmls_za_zzw.xml":
       return smeArithmeticOperands(inst);
+    case "smlall_za_zzi.xml":
+    case "smlall_za_zzv.xml":
+    case "smlall_za_zzw.xml":
+    case "smlsll_za_zzi.xml":
+    case "smlsll_za_zzv.xml":
+    case "smlsll_za_zzw.xml":
+    case "umlall_za_zzi.xml":
+    case "umlall_za_zzv.xml":
+    case "umlall_za_zzw.xml":
+    case "umlsll_za_zzi.xml":
+    case "umlsll_za_zzv.xml":
+    case "umlsll_za_zzw.xml":
+      return smeLongArithmeticOperands(inst);
     case "sdot_za32_zzv.xml":
     case "sdot_za32_zzi.xml":
     case "sdot_za32_zzw.xml":
