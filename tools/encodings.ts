@@ -134,7 +134,17 @@ function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {
       continue;
     }
     try {
-      guards.push({ all: terms.map((term) => parseGuardTerm(term)) });
+      const parsedTerms = terms.flatMap((term) => {
+        if (term.trim() === "size::sh == '001'") {
+          return [
+            { kind: "eq", field: "size", mask: 0b11, lsb: 0, value: 0 },
+            { kind: "eq", field: "sh", mask: 0b1, lsb: 0, value: 1 },
+          ];
+        }
+
+        return [parseGuardTerm(term)];
+      });
+      guards.push({ all: parsedTerms });
     } catch (error) {
       if (!options.ignoreUnsupportedGuards) {
         throw error;

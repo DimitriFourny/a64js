@@ -97565,6 +97565,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 8,
+    "word": 86016000,
+    "asmText": "mov z0.b, p0/m, b0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 9,
+    "word": 86024191,
+    "asmText": "mov z31.b, p7/m, b31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 10,
+    "word": 90210304,
+    "asmText": "mov z0.h, p0/m, h0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 11,
+    "word": 90218495,
+    "asmText": "mov z31.h, p7/m, h31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 12,
+    "word": 94404608,
+    "asmText": "mov z0.s, p0/m, s0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 13,
+    "word": 94412799,
+    "asmText": "mov z31.s, p7/m, s31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 14,
+    "word": 98598912,
+    "asmText": "mov z0.d, p0/m, d0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 15,
+    "word": 98607103,
+    "asmText": "mov z31.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 16,
+    "word": 84938757,
+    "asmText": "mov z5.b, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 17,
+    "word": 84938725,
+    "asmText": "mov z5.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 18,
+    "word": 84942821,
+    "asmText": "mov z5.b, p0/z, #-1",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 19,
+    "word": 89133077,
+    "asmText": "mov z21.h, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 20,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 21,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 22,
+    "word": 89133045,
+    "asmText": "mov z21.h, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 23,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 24,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 25,
+    "word": 93327381,
+    "asmText": "mov z21.s, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 26,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 27,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 28,
+    "word": 93327349,
+    "asmText": "mov z21.s, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 29,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 30,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 31,
+    "word": 97521685,
+    "asmText": "mov z21.d, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 32,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 33,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 34,
+    "word": 97521653,
+    "asmText": "mov z21.d, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 35,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 36,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 37,
+    "word": 84938720,
+    "asmText": "mov z0.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 38,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 39,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 40,
+    "word": 85938181,
+    "asmText": "mov z5.b, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 41,
+    "word": 90132501,
+    "asmText": "mov z21.h, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 42,
+    "word": 90140693,
+    "asmText": "mov z21.h, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 43,
+    "word": 94326805,
+    "asmText": "mov z21.s, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 44,
+    "word": 94334997,
+    "asmText": "mov z21.s, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 45,
+    "word": 98521109,
+    "asmText": "mov z21.d, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 46,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 47,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -97630,11 +98137,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 52,
+    "word": 98005013,
+    "asmText": "mov z21.d, p7/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 53,
     "word": 69255061,
     "asmText": "movprfx z21, z28",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 54,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -97656,11 +98189,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 56,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 57,
     "word": 69254340,
     "asmText": "movprfx z4, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 58,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -97773,6 +98332,513 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 67,
+    "word": 86016000,
+    "asmText": "mov z0.b, p0/m, b0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 68,
+    "word": 86024191,
+    "asmText": "mov z31.b, p7/m, b31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 69,
+    "word": 90210304,
+    "asmText": "mov z0.h, p0/m, h0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 70,
+    "word": 90218495,
+    "asmText": "mov z31.h, p7/m, h31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 71,
+    "word": 94404608,
+    "asmText": "mov z0.s, p0/m, s0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 72,
+    "word": 94412799,
+    "asmText": "mov z31.s, p7/m, s31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 73,
+    "word": 98598912,
+    "asmText": "mov z0.d, p0/m, d0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 74,
+    "word": 98607103,
+    "asmText": "mov z31.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 75,
+    "word": 84938757,
+    "asmText": "mov z5.b, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 76,
+    "word": 84938725,
+    "asmText": "mov z5.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 77,
+    "word": 84942821,
+    "asmText": "mov z5.b, p0/z, #-1",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 78,
+    "word": 89133077,
+    "asmText": "mov z21.h, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 79,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 80,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 81,
+    "word": 89133045,
+    "asmText": "mov z21.h, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 82,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 83,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 84,
+    "word": 93327381,
+    "asmText": "mov z21.s, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 85,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 86,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 87,
+    "word": 93327349,
+    "asmText": "mov z21.s, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 88,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 89,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 90,
+    "word": 97521685,
+    "asmText": "mov z21.d, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 91,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 92,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 93,
+    "word": 97521653,
+    "asmText": "mov z21.d, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 94,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 95,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 96,
+    "word": 84938720,
+    "asmText": "mov z0.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 97,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 98,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 99,
+    "word": 85938181,
+    "asmText": "mov z5.b, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 100,
+    "word": 90132501,
+    "asmText": "mov z21.h, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 101,
+    "word": 90140693,
+    "asmText": "mov z21.h, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 102,
+    "word": 94326805,
+    "asmText": "mov z21.s, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 103,
+    "word": 94334997,
+    "asmText": "mov z21.s, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 104,
+    "word": 98521109,
+    "asmText": "mov z21.d, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 105,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 106,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -97838,11 +98904,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 111,
+    "word": 98005013,
+    "asmText": "mov z21.d, p7/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 112,
     "word": 69255061,
     "asmText": "movprfx z21, z28",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 113,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -97864,11 +98956,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 115,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
     "caseIndex": 116,
     "word": 69254340,
     "asmText": "movprfx z4, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/cpy.s.yaml",
+    "caseIndex": 117,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -100035,9 +101153,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 12,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 13,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 14,
     "word": 628674549,
     "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 15,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 16,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -100061,9 +101231,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 18,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 19,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 20,
     "word": 632868853,
     "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 21,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 22,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -100087,6 +101309,32 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 24,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 25,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 26,
     "word": 637063157,
     "asmText": "mov z21.d, #127",
@@ -100100,9 +101348,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 27,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 28,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 39,
     "word": 624480224,
     "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 40,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 41,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -100165,9 +101465,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 54,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 55,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 56,
     "word": 628674549,
     "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 57,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 58,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -100191,9 +101543,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 60,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 61,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 62,
     "word": 632868853,
     "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 63,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 64,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -100217,6 +101621,32 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 66,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 67,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 68,
     "word": 637063157,
     "asmText": "mov z21.d, #127",
@@ -100230,9 +101660,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 69,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 70,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
     "caseIndex": 81,
     "word": 624480224,
     "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 82,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/dup.s.yaml",
+    "caseIndex": 83,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126568,9 +128050,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 14,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 15,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 16,
     "word": 628674549,
     "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 17,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 18,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126594,9 +128128,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 20,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 21,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 22,
     "word": 632868853,
     "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 23,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 24,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126620,6 +128206,32 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 26,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 27,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 28,
     "word": 637063157,
     "asmText": "mov z21.d, #127",
@@ -126633,9 +128245,360 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 29,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 30,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 31,
+    "word": 628682752,
+    "asmText": "mov z0.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 32,
+    "word": 628686816,
+    "asmText": "mov z0.h, #-256",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 33,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 40,
+    "word": 84938757,
+    "asmText": "mov z5.b, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 41,
+    "word": 84938725,
+    "asmText": "mov z5.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 42,
+    "word": 84942821,
+    "asmText": "mov z5.b, p0/z, #-1",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 43,
+    "word": 89133077,
+    "asmText": "mov z21.h, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 44,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 45,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 46,
+    "word": 89133045,
+    "asmText": "mov z21.h, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 47,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 48,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 49,
+    "word": 93327381,
+    "asmText": "mov z21.s, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 50,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 51,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 52,
+    "word": 93327349,
+    "asmText": "mov z21.s, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 53,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 54,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 55,
+    "word": 97521685,
+    "asmText": "mov z21.d, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 56,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 57,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 58,
+    "word": 97521653,
+    "asmText": "mov z21.d, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 59,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 60,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 61,
     "word": 624480224,
     "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 62,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126677,6 +128640,136 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "mov z5.d, #-6",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 66,
+    "word": 84938720,
+    "asmText": "mov z0.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 67,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 68,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 69,
+    "word": 85938181,
+    "asmText": "mov z5.b, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 70,
+    "word": 90132501,
+    "asmText": "mov z21.h, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 71,
+    "word": 90140693,
+    "asmText": "mov z21.h, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 72,
+    "word": 94326805,
+    "asmText": "mov z21.s, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 73,
+    "word": 94334997,
+    "asmText": "mov z21.s, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 74,
+    "word": 98521109,
+    "asmText": "mov z21.d, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 75,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -126789,6 +128882,110 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 99,
+    "word": 86016000,
+    "asmText": "mov z0.b, p0/m, b0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 100,
+    "word": 86024191,
+    "asmText": "mov z31.b, p7/m, b31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 101,
+    "word": 90210304,
+    "asmText": "mov z0.h, p0/m, h0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 102,
+    "word": 90218495,
+    "asmText": "mov z31.h, p7/m, h31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 103,
+    "word": 94404608,
+    "asmText": "mov z0.s, p0/m, s0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 104,
+    "word": 94412799,
+    "asmText": "mov z31.s, p7/m, s31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 105,
+    "word": 98598912,
+    "asmText": "mov z0.d, p0/m, d0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 106,
+    "word": 98607103,
+    "asmText": "mov z31.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 117,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -126854,11 +129051,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 122,
+    "word": 98005013,
+    "asmText": "mov z21.d, p7/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 123,
     "word": 69255061,
     "asmText": "movprfx z21, z28",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 124,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -126880,11 +129103,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 126,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 127,
     "word": 69254340,
     "asmText": "movprfx z4, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 128,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -126945,9 +129194,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 143,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 144,
+    "word": 628682773,
+    "asmText": "mov z21.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 145,
     "word": 628674549,
     "asmText": "mov z21.h, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 146,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 147,
+    "word": 628682741,
+    "asmText": "mov z21.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126971,9 +129272,61 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 149,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 150,
+    "word": 632877077,
+    "asmText": "mov z21.s, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 151,
     "word": 632868853,
     "asmText": "mov z21.s, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 152,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 153,
+    "word": 632877045,
+    "asmText": "mov z21.s, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -126997,6 +129350,32 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 155,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 156,
+    "word": 637071381,
+    "asmText": "mov z21.d, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 157,
     "word": 637063157,
     "asmText": "mov z21.d, #127",
@@ -127010,9 +129389,360 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 158,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 159,
+    "word": 637071349,
+    "asmText": "mov z21.d, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 160,
+    "word": 628682752,
+    "asmText": "mov z0.h, #-32768",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 161,
+    "word": 628686816,
+    "asmText": "mov z0.h, #-256",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 162,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 169,
+    "word": 84938757,
+    "asmText": "mov z5.b, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 170,
+    "word": 84938725,
+    "asmText": "mov z5.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 171,
+    "word": 84942821,
+    "asmText": "mov z5.b, p0/z, #-1",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 172,
+    "word": 89133077,
+    "asmText": "mov z21.h, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 173,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 174,
+    "word": 89141269,
+    "asmText": "mov z21.h, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 175,
+    "word": 89133045,
+    "asmText": "mov z21.h, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 176,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 177,
+    "word": 89141237,
+    "asmText": "mov z21.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 178,
+    "word": 93327381,
+    "asmText": "mov z21.s, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 179,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 180,
+    "word": 93335573,
+    "asmText": "mov z21.s, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 181,
+    "word": 93327349,
+    "asmText": "mov z21.s, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 182,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 183,
+    "word": 93335541,
+    "asmText": "mov z21.s, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 184,
+    "word": 97521685,
+    "asmText": "mov z21.d, p0/z, #-128",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 185,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 186,
+    "word": 97529877,
+    "asmText": "mov z21.d, p0/z, #-32768",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 187,
+    "word": 97521653,
+    "asmText": "mov z21.d, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 188,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 189,
+    "word": 97529845,
+    "asmText": "mov z21.d, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 190,
     "word": 624480224,
     "asmText": "mov z0.b, #127",
+    "encodingFile": "dup_z_i.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 191,
+    "word": 628682720,
+    "asmText": "mov z0.h, #32512",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
     "features": [
@@ -127054,6 +129784,136 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "mov z5.d, #-6",
     "encodingFile": "dup_z_i.xml",
     "mnemonic": "DUP",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 195,
+    "word": 84938720,
+    "asmText": "mov z0.b, p0/z, #127",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 196,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 197,
+    "word": 89141216,
+    "asmText": "mov z0.h, p0/z, #32512",
+    "encodingFile": "cpy_z_o_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 198,
+    "word": 85938181,
+    "asmText": "mov z5.b, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 199,
+    "word": 90132501,
+    "asmText": "mov z21.h, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 200,
+    "word": 90140693,
+    "asmText": "mov z21.h, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 201,
+    "word": 94326805,
+    "asmText": "mov z21.s, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 202,
+    "word": 94334997,
+    "asmText": "mov z21.s, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 203,
+    "word": 98521109,
+    "asmText": "mov z21.d, p15/m, #-128",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 204,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -127166,6 +130026,110 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 228,
+    "word": 86016000,
+    "asmText": "mov z0.b, p0/m, b0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 229,
+    "word": 86024191,
+    "asmText": "mov z31.b, p7/m, b31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 230,
+    "word": 90210304,
+    "asmText": "mov z0.h, p0/m, h0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 231,
+    "word": 90218495,
+    "asmText": "mov z31.h, p7/m, h31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 232,
+    "word": 94404608,
+    "asmText": "mov z0.s, p0/m, s0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 233,
+    "word": 94412799,
+    "asmText": "mov z31.s, p7/m, s31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 234,
+    "word": 98598912,
+    "asmText": "mov z0.d, p0/m, d0",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 235,
+    "word": 98607103,
+    "asmText": "mov z31.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 246,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -127231,11 +130195,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 251,
+    "word": 98005013,
+    "asmText": "mov z21.d, p7/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 252,
     "word": 69255061,
     "asmText": "movprfx z21, z28",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 253,
+    "word": 98529301,
+    "asmText": "mov z21.d, p15/m, #-32768",
+    "encodingFile": "cpy_z_p_i.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -127257,11 +130247,37 @@ export const SUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 255,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 256,
     "word": 69254340,
     "asmText": "movprfx z4, z6",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/mov.s.yaml",
+    "caseIndex": 257,
+    "word": 98607076,
+    "asmText": "mov z4.d, p7/m, d31",
+    "encodingFile": "cpy_z_p_v.xml",
+    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -270403,1124 +273419,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     ]
   },
   {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 8,
-    "word": 86016000,
-    "asmText": "mov z0.b, p0/m, b0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 9,
-    "word": 86024191,
-    "asmText": "mov z31.b, p7/m, b31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 10,
-    "word": 90210304,
-    "asmText": "mov z0.h, p0/m, h0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 11,
-    "word": 90218495,
-    "asmText": "mov z31.h, p7/m, h31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 12,
-    "word": 94404608,
-    "asmText": "mov z0.s, p0/m, s0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 13,
-    "word": 94412799,
-    "asmText": "mov z31.s, p7/m, s31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 14,
-    "word": 98598912,
-    "asmText": "mov z0.d, p0/m, d0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 15,
-    "word": 98607103,
-    "asmText": "mov z31.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 16,
-    "word": 84938757,
-    "asmText": "mov z5.b, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 17,
-    "word": 84938725,
-    "asmText": "mov z5.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 18,
-    "word": 84942821,
-    "asmText": "mov z5.b, p0/z, #-1",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 19,
-    "word": 89133077,
-    "asmText": "mov z21.h, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 20,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 21,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 22,
-    "word": 89133045,
-    "asmText": "mov z21.h, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 23,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 24,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 25,
-    "word": 93327381,
-    "asmText": "mov z21.s, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 26,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 27,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 28,
-    "word": 93327349,
-    "asmText": "mov z21.s, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 29,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 30,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 31,
-    "word": 97521685,
-    "asmText": "mov z21.d, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 32,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 33,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 34,
-    "word": 97521653,
-    "asmText": "mov z21.d, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 35,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 36,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 37,
-    "word": 84938720,
-    "asmText": "mov z0.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 38,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 39,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 40,
-    "word": 85938181,
-    "asmText": "mov z5.b, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 41,
-    "word": 90132501,
-    "asmText": "mov z21.h, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 42,
-    "word": 90140693,
-    "asmText": "mov z21.h, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 43,
-    "word": 94326805,
-    "asmText": "mov z21.s, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 44,
-    "word": 94334997,
-    "asmText": "mov z21.s, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 45,
-    "word": 98521109,
-    "asmText": "mov z21.d, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 46,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 52,
-    "word": 98005013,
-    "asmText": "mov z21.d, p7/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 54,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 56,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 58,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 67,
-    "word": 86016000,
-    "asmText": "mov z0.b, p0/m, b0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 68,
-    "word": 86024191,
-    "asmText": "mov z31.b, p7/m, b31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 69,
-    "word": 90210304,
-    "asmText": "mov z0.h, p0/m, h0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 70,
-    "word": 90218495,
-    "asmText": "mov z31.h, p7/m, h31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 71,
-    "word": 94404608,
-    "asmText": "mov z0.s, p0/m, s0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 72,
-    "word": 94412799,
-    "asmText": "mov z31.s, p7/m, s31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 73,
-    "word": 98598912,
-    "asmText": "mov z0.d, p0/m, d0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 74,
-    "word": 98607103,
-    "asmText": "mov z31.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 75,
-    "word": 84938757,
-    "asmText": "mov z5.b, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 76,
-    "word": 84938725,
-    "asmText": "mov z5.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 77,
-    "word": 84942821,
-    "asmText": "mov z5.b, p0/z, #-1",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 78,
-    "word": 89133077,
-    "asmText": "mov z21.h, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 79,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 80,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 81,
-    "word": 89133045,
-    "asmText": "mov z21.h, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 82,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 83,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 84,
-    "word": 93327381,
-    "asmText": "mov z21.s, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 85,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 86,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 87,
-    "word": 93327349,
-    "asmText": "mov z21.s, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 88,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 89,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 90,
-    "word": 97521685,
-    "asmText": "mov z21.d, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 91,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 92,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 93,
-    "word": 97521653,
-    "asmText": "mov z21.d, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 94,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 95,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 96,
-    "word": 84938720,
-    "asmText": "mov z0.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 97,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 98,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 99,
-    "word": 85938181,
-    "asmText": "mov z5.b, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 100,
-    "word": 90132501,
-    "asmText": "mov z21.h, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 101,
-    "word": 90140693,
-    "asmText": "mov z21.h, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 102,
-    "word": 94326805,
-    "asmText": "mov z21.s, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 103,
-    "word": 94334997,
-    "asmText": "mov z21.s, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 104,
-    "word": 98521109,
-    "asmText": "mov z21.d, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 105,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 111,
-    "word": 98005013,
-    "asmText": "mov z21.d, p7/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 113,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 115,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/cpy.s.yaml",
-    "caseIndex": 117,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
     "sourceFile": "SVE/ctermeq.s.yaml",
     "caseIndex": 0,
     "word": 633283520,
@@ -298851,409 +300749,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 40,
-    "word": 84938757,
-    "asmText": "mov z5.b, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 41,
-    "word": 84938725,
-    "asmText": "mov z5.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 42,
-    "word": 84942821,
-    "asmText": "mov z5.b, p0/z, #-1",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 43,
-    "word": 89133077,
-    "asmText": "mov z21.h, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 44,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 45,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 46,
-    "word": 89133045,
-    "asmText": "mov z21.h, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 47,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 48,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 49,
-    "word": 93327381,
-    "asmText": "mov z21.s, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 50,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 51,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 52,
-    "word": 93327349,
-    "asmText": "mov z21.s, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 53,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 54,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 55,
-    "word": 97521685,
-    "asmText": "mov z21.d, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 56,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 57,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 58,
-    "word": 97521653,
-    "asmText": "mov z21.d, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 59,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 60,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 66,
-    "word": 84938720,
-    "asmText": "mov z0.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 67,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 68,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 69,
-    "word": 85938181,
-    "asmText": "mov z5.b, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 70,
-    "word": 90132501,
-    "asmText": "mov z21.h, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 71,
-    "word": 90140693,
-    "asmText": "mov z21.h, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 72,
-    "word": 94326805,
-    "asmText": "mov z21.s, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 73,
-    "word": 94334997,
-    "asmText": "mov z21.s, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 74,
-    "word": 98521109,
-    "asmText": "mov z21.d, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 75,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 76,
     "word": 86056960,
     "asmText": "mov z0.b, b0",
@@ -299449,110 +300944,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 99,
-    "word": 86016000,
-    "asmText": "mov z0.b, p0/m, b0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 100,
-    "word": 86024191,
-    "asmText": "mov z31.b, p7/m, b31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 101,
-    "word": 90210304,
-    "asmText": "mov z0.h, p0/m, h0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 102,
-    "word": 90218495,
-    "asmText": "mov z31.h, p7/m, h31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 103,
-    "word": 94404608,
-    "asmText": "mov z0.s, p0/m, s0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 104,
-    "word": 94412799,
-    "asmText": "mov z31.s, p7/m, s31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 105,
-    "word": 98598912,
-    "asmText": "mov z0.d, p0/m, d0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 106,
-    "word": 98607103,
-    "asmText": "mov z31.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 107,
     "word": 620773904,
     "asmText": "mov p0.b, p0/m, p0.b",
@@ -299659,58 +301050,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "mov p15.b, p15/z, p15.b",
     "encodingFile": "and_p_p_pp.xml",
     "mnemonic": "AND",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 122,
-    "word": 98005013,
-    "asmText": "mov z21.d, p7/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 124,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 126,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 128,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -299923,409 +301262,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 169,
-    "word": 84938757,
-    "asmText": "mov z5.b, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 170,
-    "word": 84938725,
-    "asmText": "mov z5.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 171,
-    "word": 84942821,
-    "asmText": "mov z5.b, p0/z, #-1",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 172,
-    "word": 89133077,
-    "asmText": "mov z21.h, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 173,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 174,
-    "word": 89141269,
-    "asmText": "mov z21.h, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 175,
-    "word": 89133045,
-    "asmText": "mov z21.h, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 176,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 177,
-    "word": 89141237,
-    "asmText": "mov z21.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 178,
-    "word": 93327381,
-    "asmText": "mov z21.s, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 179,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 180,
-    "word": 93335573,
-    "asmText": "mov z21.s, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 181,
-    "word": 93327349,
-    "asmText": "mov z21.s, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 182,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 183,
-    "word": 93335541,
-    "asmText": "mov z21.s, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 184,
-    "word": 97521685,
-    "asmText": "mov z21.d, p0/z, #-128",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 185,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 186,
-    "word": 97529877,
-    "asmText": "mov z21.d, p0/z, #-32768",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 187,
-    "word": 97521653,
-    "asmText": "mov z21.d, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 188,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 189,
-    "word": 97529845,
-    "asmText": "mov z21.d, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 195,
-    "word": 84938720,
-    "asmText": "mov z0.b, p0/z, #127",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 196,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 197,
-    "word": 89141216,
-    "asmText": "mov z0.h, p0/z, #32512",
-    "encodingFile": "cpy_z_o_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 198,
-    "word": 85938181,
-    "asmText": "mov z5.b, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 199,
-    "word": 90132501,
-    "asmText": "mov z21.h, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 200,
-    "word": 90140693,
-    "asmText": "mov z21.h, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 201,
-    "word": 94326805,
-    "asmText": "mov z21.s, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 202,
-    "word": 94334997,
-    "asmText": "mov z21.s, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 203,
-    "word": 98521109,
-    "asmText": "mov z21.d, p15/m, #-128",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 204,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 205,
     "word": 86056960,
     "asmText": "mov z0.b, b0",
@@ -300521,110 +301457,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
   },
   {
     "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 228,
-    "word": 86016000,
-    "asmText": "mov z0.b, p0/m, b0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 229,
-    "word": 86024191,
-    "asmText": "mov z31.b, p7/m, b31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 230,
-    "word": 90210304,
-    "asmText": "mov z0.h, p0/m, h0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 231,
-    "word": 90218495,
-    "asmText": "mov z31.h, p7/m, h31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 232,
-    "word": 94404608,
-    "asmText": "mov z0.s, p0/m, s0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 233,
-    "word": 94412799,
-    "asmText": "mov z31.s, p7/m, s31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 234,
-    "word": 98598912,
-    "asmText": "mov z0.d, p0/m, d0",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 235,
-    "word": 98607103,
-    "asmText": "mov z31.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
     "caseIndex": 236,
     "word": 620773904,
     "asmText": "mov p0.b, p0/m, p0.b",
@@ -300731,58 +301563,6 @@ export const UNSUPPORTED_CAPSTONE_CASES: GeneratedCapstoneCase[] = [
     "asmText": "mov p15.b, p15/z, p15.b",
     "encodingFile": "and_p_p_pp.xml",
     "mnemonic": "AND",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 251,
-    "word": 98005013,
-    "asmText": "mov z21.d, p7/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 253,
-    "word": 98529301,
-    "asmText": "mov z21.d, p15/m, #-32768",
-    "encodingFile": "cpy_z_p_i.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 255,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/mov.s.yaml",
-    "caseIndex": 257,
-    "word": 98607076,
-    "asmText": "mov z4.d, p7/m, d31",
-    "encodingFile": "cpy_z_p_v.xml",
-    "mnemonic": "CPY",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",

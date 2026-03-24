@@ -2,12 +2,12 @@
 
 Current capstone coverage snapshot:
 
-- `12387` supported capstone cases
-- `22174` unsupported capstone cases
-- `108` XML instruction files currently listed in `tools/supported-files.ts`
-- `1775` distinct unsupported XML instruction files
-- `955` capstone source YAML files containing unsupported cases
-- `937` distinct unsupported mnemonics
+- `12619` supported capstone cases
+- `22002` unsupported capstone cases
+- `111` XML instruction files currently listed in `tools/supported-files.ts`
+- `1772` distinct unsupported XML instruction files
+- `954` capstone source YAML files containing unsupported cases
+- `936` distinct unsupported mnemonics
 
 Recently completed families:
 
@@ -22,6 +22,7 @@ Recently completed families:
 - `incb_r_rs.xml`: `186`
 - `cmpeq_p_p_zi.xml`: `160`
 - `decb_r_rs.xml`: `160`
+- CPY immediate forms (`cpy_z_o_i.xml`, `cpy_z_p_i.xml`, `cpy_z_p_v.xml`): `172` cases promoted to supported
 - `mov_mova_*.xml`: decode/disasm support landed; keep an eye on capstone snapshot accounting separately from the scalar/SVE totals above
 - `movaz_*.xml`, `dup_z_i.xml`, `cpy_z_p_r.xml`, `rprfm_reg.xml`: `442`
 - `sdot_za*.xml`, `sdot_za32*.xml`, `udot_za*.xml`, `udot_za32*.xml`: `865`
@@ -30,16 +31,14 @@ Recently completed families:
 
 Priority order from the current snapshot:
 
-1. Remaining move/copy cleanup, especially `cpy_z_o_i.xml` and the `MOVAZ` writeback-side families.
-2. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
+1. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
 
 Highest-value remaining XML files right now:
 
-- `cpy_z_o_i.xml`: `96`
-- `movaz_za_rz.xml`: `88`
-- `movaz_za2_z.xml`: `32`
-- `movaz_za4_z.xml`: `32`
-- `movaz_za_mz2.xml`: `32`
+- `sqrdmlah_advsimd_elt.xml`: `96`
+- `sqrdmlsh_advsimd_elt.xml`: `96`
+- `sqrdmlah_advsimd_vec.xml`: `84`
+- `sqrdmlsh_advsimd_vec.xml`: `84`
 
 Highest-value remaining source files right now:
 
@@ -78,26 +77,7 @@ When an instruction family is actually supported end-to-end, add its XML file to
 
 These are the biggest buckets in the current unsupported set and should be the first place to spend time.
 
-### 1. Remaining move/copy and adjacent SVE cleanup
-
-Notable XML files:
-
-- `cpy_z_o_i.xml`: `96`
-- `movaz_za_rz.xml`: `88`
-- `movaz_za2_z.xml`: `32`
-- `movaz_za4_z.xml`: `32`
-- `movaz_za_mz2.xml`: `32`
-
-Notable source files:
-
-- `SVE/mov.s.yaml`: `150`
-- `SME2p1/movaz.s.yaml`: `152`
-- `SVE/cpy.s.yaml`: `96`
-- `SVE/dup.s.yaml`: `64`
-
-Likely outcome: this is now the remaining `MOVAZ` writeback-side follow-up plus `cpy_z_o_i.xml`; the earlier `MOVPRFX` / `MOVA` / `DUP` / `CPY` read-side backlog is largely cleared.
-
-### 2. Remaining scalar / AdvSIMD cleanup
+### 1. Remaining scalar / AdvSIMD cleanup
 
 Notable source files:
 
@@ -137,10 +117,9 @@ Implication: the remaining work is now even more concentrated in SVE, SME, and S
 
 Suggested order for the next follow-up pass:
 
-1. Clean up the remaining move/copy aliases, especially the `MOVAZ` writeback-side families and `cpy_z_o_i.xml`.
-2. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
-3. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
-4. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
+1. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
+2. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
+3. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
 ## Notes for whoever picks this up
 

@@ -309,11 +309,37 @@ function sveDupImmediateOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd, lane), { kind: "imm", value: BigInt(imm), signed: true }];
 }
 
+function sveCopyImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  let imm = Number(signExtend(fields.imm8, 8));
+  if ((fields.sh ?? 0) === 1) {
+    imm <<= 8;
+  }
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "z"), { kind: "imm", value: BigInt(imm), signed: true }];
+}
+
+function sveCopyMergingImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  let imm = Number(signExtend(fields.imm8, 8));
+  if ((fields.sh ?? 0) === 1) {
+    imm <<= 8;
+  }
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "imm", value: BigInt(imm), signed: true }];
+}
+
 function sveCopyScalarOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
   const width = fields.size === 3 ? 64 : 32;
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), gpReg(width, fields.Rn, "sp")];
+}
+
+function sveCopyScalarVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "m"), { kind: "text", text: `${lane}${fields.Vn ?? 0}` }];
 }
 
 function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -872,8 +898,14 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveFdupOperands(inst);
     case "dup_z_i.xml":
       return sveDupImmediateOperands(inst);
+    case "cpy_z_o_i.xml":
+      return sveCopyImmediateOperands(inst);
+    case "cpy_z_p_i.xml":
+      return sveCopyMergingImmediateOperands(inst);
     case "cpy_z_p_r.xml":
       return sveCopyScalarOperands(inst);
+    case "cpy_z_p_v.xml":
+      return sveCopyScalarVectorOperands(inst);
     case "mov_mova_z_p_rza.xml":
       return movaSingleToVectorOperands(inst);
     case "movaz_z_rza.xml":
