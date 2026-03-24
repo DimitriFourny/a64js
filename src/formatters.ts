@@ -537,7 +537,16 @@ function smeDotZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | 
   return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
 }
 
-function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h"): string {
+function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
+  const sz = inst.fields?.sz ?? 0;
+  return inst.encoding!.mnemonic.startsWith("F") ? (sz === 1 ? "d" : "h") : sz === 1 ? "d" : "s";
+}
+
+function smeZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "h" | "d"): string {
+  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
+}
+
+function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" | "d"): string {
   const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
   if (count === 4 && start <= 28) {
     return `{ ${regs[0]} - ${regs[3]} }`;
@@ -545,9 +554,80 @@ function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h"): st
   return `{ ${regs.join(", ")} }`;
 }
 
-function smeDotIndexedSourceText(fields: Record<string, number>, lane: "b" | "h"): string {
-  const index = fields.i2 ?? fields.i1 ?? 0;
+function smeIndexedSourceText(fields: Record<string, number>, lane: "s" | "h" | "d"): string {
+  const index = fields.i3h !== undefined || fields.i3l !== undefined ? ((fields.i3h ?? 0) << 3) | (fields.i3l ?? 0) : fields.i2 ?? fields.i1 ?? 0;
   return `z${fields.Zm ?? 0}.${lane}[${index}]`;
+}
+
+function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
+  const fields = inst.fields!;
+  const count = smeDotGroupCount(inst.encoding!.className);
+  switch (inst.encoding!.fileName) {
+    case "add_za_zzv.xml":
+    case "sub_za_zzv.xml":
+    case "add_za_zzw.xml":
+    case "sub_za_zzw.xml":
+    case "add_za_zw.xml":
+    case "sub_za_zw.xml":
+    case "fmla_za_zzw.xml":
+    case "fmls_za_zzw.xml":
+      return (fields[fieldName] ?? 0) * count;
+    case "fadd_za_zw.xml":
+    case "fsub_za_zw.xml":
+      return (fields.Zm ?? 0) * count;
+    case "fmla_za_zzv.xml":
+    case "fmls_za_zzv.xml":
+      return fields[fieldName] ?? 0;
+    case "fmla_za_zzi.xml":
+    case "fmls_za_zzi.xml":
+      return fieldName === "Zn" ? (fields.Zn ?? 0) * count : (fields.Zm ?? 0);
+    default:
+      return fields[fieldName] ?? 0;
+  }
+}
+
+function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const count = smeDotGroupCount(inst.encoding!.className);
+  const lane = smeAccumulatorLane(inst);
+  const za = { kind: "text", text: smeZaText(fields, count, lane) } satisfies Operand;
+  const first = {
+    kind: "text",
+    text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zn"), count, lane),
+  } satisfies Operand;
+
+  switch (inst.encoding!.fileName) {
+    case "add_za_zzv.xml":
+    case "sub_za_zzv.xml":
+      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
+    case "add_za_zw.xml":
+    case "sub_za_zw.xml":
+    case "add_za_zzw.xml":
+    case "sub_za_zzw.xml":
+      return [
+        za,
+        first,
+        { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) },
+      ];
+    case "fadd_za_zw.xml":
+    case "fsub_za_zw.xml":
+      return [za, { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) }];
+    case "fmla_za_zzv.xml":
+    case "fmls_za_zzv.xml":
+      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
+    case "fmla_za_zzi.xml":
+    case "fmls_za_zzi.xml":
+      return [za, first, { kind: "text", text: smeIndexedSourceText(fields, lane) }];
+    case "fmla_za_zzw.xml":
+    case "fmls_za_zzw.xml":
+      return [
+        za,
+        first,
+        { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) },
+      ];
+    default:
+      return [];
+  }
 }
 
 function smeDotSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
@@ -579,7 +659,7 @@ function smeDotOperands(inst: DecodedInstruction): Operand[] {
   const count = smeDotGroupCount(inst.encoding!.className);
   const accLane = smeDotAccumulatorLane(inst);
   const srcLane = smeDotSourceLane(inst, accLane);
-  const za = { kind: "text", text: smeDotZaText(fields, count, accLane) } satisfies Operand;
+  const za = { kind: "text", text: smeZaText(fields, count, accLane) } satisfies Operand;
   const first = {
     kind: "text",
     text: smeDotVectorGroupText(smeDotSourceStart(inst, "Zn"), count, srcLane),
@@ -595,7 +675,7 @@ function smeDotOperands(inst: DecodedInstruction): Operand[] {
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
     case "udot_za_zzi.xml":
-      return [za, first, { kind: "text", text: smeDotIndexedSourceText(fields, srcLane) }];
+      return [za, first, { kind: "text", text: smeIndexedSourceText(fields, srcLane) }];
     case "sdot_za32_zzw.xml":
     case "udot_za32_zzw.xml":
     case "sdot_za_zzw.xml":
@@ -686,6 +766,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return movaVectorsToArrayOperands(inst, 2);
     case "mov_mova_za_mz4.xml":
       return movaVectorsToArrayOperands(inst, 4);
+    case "add_za_zzv.xml":
+    case "sub_za_zzv.xml":
+    case "add_za_zw.xml":
+    case "sub_za_zw.xml":
+    case "add_za_zzw.xml":
+    case "sub_za_zzw.xml":
+    case "fadd_za_zw.xml":
+    case "fsub_za_zw.xml":
+    case "fmla_za_zzv.xml":
+    case "fmla_za_zzi.xml":
+    case "fmla_za_zzw.xml":
+    case "fmls_za_zzv.xml":
+    case "fmls_za_zzi.xml":
+    case "fmls_za_zzw.xml":
+      return smeArithmeticOperands(inst);
     case "sdot_za32_zzv.xml":
     case "sdot_za32_zzi.xml":
     case "sdot_za32_zzw.xml":

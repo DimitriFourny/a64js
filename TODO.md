@@ -2,15 +2,16 @@
 
 Current capstone coverage snapshot:
 
-- `9293` supported capstone cases
-- `25268` unsupported capstone cases
-- `82` XML instruction files currently listed in `tools/supported-files.ts`
-- `1801` distinct unsupported XML instruction files
-- `968` capstone source YAML files containing unsupported cases
+- `11043` supported capstone cases
+- `23518` unsupported capstone cases
+- `91` XML instruction files currently listed in `tools/supported-files.ts`
+- `1787` distinct unsupported XML instruction files
+- `959` capstone source YAML files containing unsupported cases
 - `941` distinct unsupported mnemonics
 
 Recently completed families:
 
+- SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`: `1750` cases promoted to supported
 - `mrs.xml`: `1789` cases promoted to supported
 - `msr_reg.xml`: `1511`
 - `movprfx_z_z.xml`: `741`
@@ -28,36 +29,37 @@ Recently completed families:
 
 Priority order from the current snapshot:
 
-1. SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
-2. SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`.
-3. Remaining move/copy cleanup, especially `cpy_z_o_i.xml` and the `MOVAZ` writeback-side families.
-4. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
+1. SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`.
+2. Remaining move/copy cleanup, especially `cpy_z_o_i.xml` and the `MOVAZ` writeback-side families.
+3. AdvSIMD cleanup around `sqrdmlah_*`, `sqrdmlsh_*`, and remaining dot-product/vector-element families.
 
 Highest-value remaining XML files right now:
 
-- `fadd_za_zw.xml`: `144`
-- `fmla_za_zzv.xml`: `144`
-- `fmla_za_zzi.xml`: `144`
-- `fmla_za_zzw.xml`: `144`
-- `fmls_za_zzv.xml`: `144`
-- `fmls_za_zzi.xml`: `144`
-- `fmls_za_zzw.xml`: `144`
-- `fsub_za_zw.xml`: `143`
-- `add_za_zzw.xml`: `120`
 - `smlall_za_zzi.xml`: `120`
+- `smlall_za_zzv.xml`: `120`
+- `smlsll_za_zzi.xml`: `120`
+- `smlsll_za_zzv.xml`: `120`
+- `umlall_za_zzi.xml`: `120`
+- `umlall_za_zzv.xml`: `120`
+- `umlsll_za_zzi.xml`: `120`
+- `umlsll_za_zzv.xml`: `120`
+- `cpy_z_o_i.xml`: `96`
+- `smlall_za_zzw.xml`: `96`
+- `smlsll_za_zzw.xml`: `96`
+- `umlall_za_zzw.xml`: `96`
 
 Highest-value remaining source files right now:
 
 - `basic-a64-instructions.s.yaml`: `1180`
-- `SME2/add.s.yaml`: `343`
 - `SME2/smlall.s.yaml`: `336`
 - `SME2/smlsll.s.yaml`: `336`
 - `SME2/umlall.s.yaml`: `336`
 - `SME2/umlsll.s.yaml`: `336`
-- `SME2/fmla.s.yaml`: `288`
-- `SME2/fmls.s.yaml`: `288`
-- `SME2/sub.s.yaml`: `288`
 - `neon-simd-misc.s.yaml`: `260`
+- `neon-simd-ldst-multi-elem.s.yaml`: `196`
+- `armv8.2a-dotprod.s.yaml`: `180`
+- `neon-compare-instructions.s.yaml`: `180`
+- `SME2/bfmlal.s.yaml`: `168`
 
 ## What "unsupported" means here
 
@@ -87,14 +89,10 @@ When an instruction family is actually supported end-to-end, add its XML file to
 
 These are the biggest buckets in the current unsupported set and should be the first place to spend time.
 
-### 1. SME2 arithmetic / dot-product families
+### 1. SME2 `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL`
 
 Top mnemonics:
 
-- `ADD`: `475`
-- `FMLA`: `470`
-- `FMLS`: `470`
-- `SUB`: `411`
 - `SMLALL`: `336`
 - `SMLSLL`: `336`
 - `UMLALL`: `336`
@@ -102,24 +100,27 @@ Top mnemonics:
 
 Representative XML files:
 
-- `fadd_za_zw.xml`: `144`
-- `fmla_za_zzv.xml`: `144`
-- `fmla_za_zzi.xml`: `144`
-- `fmla_za_zzw.xml`: `144`
-- `fmls_za_zzv.xml`: `144`
+- `smlall_za_zzi.xml`: `120`
+- `smlall_za_zzv.xml`: `120`
+- `smlsll_za_zzi.xml`: `120`
+- `smlsll_za_zzv.xml`: `120`
+- `umlall_za_zzi.xml`: `120`
+- `umlall_za_zzv.xml`: `120`
+- `umlsll_za_zzi.xml`: `120`
+- `umlsll_za_zzv.xml`: `120`
 
 Top source files:
 
-- `SME2/add.s.yaml`: `343`
 - `SME2/smlall.s.yaml`: `336`
 - `SME2/smlsll.s.yaml`: `336`
 - `SME2/umlall.s.yaml`: `336`
 - `SME2/umlsll.s.yaml`: `336`
-- `SME2/fmla.s.yaml`: `288`
-- `SME2/fmls.s.yaml`: `288`
-- `SME2/sub.s.yaml`: `288`
+- `SME2/bfmlal.s.yaml`: `168`
+- `SME2/bfmlsl.s.yaml`: `168`
+- `SME2/fmlal.s.yaml`: `168`
+- `SME2/fmlsl.s.yaml`: `168`
 
-Likely outcome: implementing `ADD` / `SUB` / `FMLA` / `FMLS`, then the `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families, clears the biggest remaining SME2 concentration.
+Likely outcome: implementing this bucket should clear the next large SME2 concentration, followed by the remaining multiply-long SME2 families (`FMLAL`, `FMLSL`, `SMLAL`, `SMLSL`, `UMLAL`, `UMLSL`, `BFMLAL`, `BFMLSL`).
 
 ### 2. Remaining move/copy and adjacent SVE cleanup
 
@@ -180,12 +181,11 @@ Implication: the remaining work is now even more concentrated in SVE, SME, and S
 
 Suggested order for the next follow-up pass:
 
-1. Implement SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`.
-2. Sweep the remaining `SMLALL` / `SMLSLL` / `UMLALL` / `UMLSLL` families.
-3. Clean up the remaining move/copy aliases, especially the `MOVAZ` writeback-side families and `cpy_z_o_i.xml`.
-4. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
-5. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
-6. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
+1. Implement SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`.
+2. Clean up the remaining move/copy aliases, especially the `MOVAZ` writeback-side families and `cpy_z_o_i.xml`.
+3. Sweep the remaining AdvSIMD / baseline A64 leftovers such as compare/misc families and dot-product/vector-element cases.
+4. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
+5. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
 ## Notes for whoever picks this up
 
