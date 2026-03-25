@@ -1,0 +1,88 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "add_za_zw",
+    "encodingId": "add_za_zw_4x4",
+    "mnemonic": "ADD",
+    "className": "Four ZA single-vectors",
+    "fileName": "add_za_zw.xml",
+    "mask": 4290747512,
+    "value": 3248561168,
+    "bitCount": 23,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 7,
+        "width": 3
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "add_za_zw",
+    "encodingId": "add_za_zw_2x2",
+    "mnemonic": "ADD",
+    "className": "Two ZA single-vectors",
+    "fileName": "add_za_zw.xml",
+    "mask": 4290747448,
+    "value": 3248495632,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 6,
+        "width": 4
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ],
+    "guards": []
+  }
+];

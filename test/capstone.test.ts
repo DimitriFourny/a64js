@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { decode, disasm } from "../src/index.ts";
-import { SUPPORTED_CAPSTONE_CASES, UNSUPPORTED_CAPSTONE_CASES } from "./generated/capstone-cases.generated.ts";
+import { SUPPORTED_CAPSTONE_CASES, UNSUPPORTED_CAPSTONE_CASES } from "./generated/capstone/index.generated.ts";
 
 function formatWord(word: number): string {
   return `0x${word.toString(16).padStart(8, "0")}`;

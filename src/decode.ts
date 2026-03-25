@@ -1,6 +1,6 @@
 import { buildOperands } from "./formatters.ts";
 import type { DecodeOptions, DecodedInstruction, GeneratedEncoding, GuardCheck } from "./types.ts";
-import { ENCODINGS } from "./generated/isa.generated.ts";
+import { ENCODINGS } from "./generated/isa/index.generated.ts";
 
 function extractField(word: number, lsb: number, width: number): number {
   if (width === 32) {

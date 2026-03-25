@@ -1,0 +1,118 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "umlall_za_zzw",
+    "encodingId": "umlall_za_zzw_4x4",
+    "mnemonic": "UMLALL",
+    "className": "Four ZA quad-vectors",
+    "fileName": "umlall_za_zzw.xml",
+    "mask": 4288912510,
+    "value": 3248554000,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 18,
+        "width": 3
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 7,
+        "width": 3
+      },
+      {
+        "name": "U",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "op",
+        "lsb": 2,
+        "width": 1
+      },
+      {
+        "name": "o1",
+        "lsb": 0,
+        "width": 1
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "umlall_za_zzw",
+    "encodingId": "umlall_za_zzw_2x2",
+    "mnemonic": "UMLALL",
+    "className": "Two ZA quad-vectors",
+    "fileName": "umlall_za_zzw.xml",
+    "mask": 4288781374,
+    "value": 3248488464,
+    "bitCount": 20,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 17,
+        "width": 4
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 6,
+        "width": 4
+      },
+      {
+        "name": "U",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "op",
+        "lsb": 2,
+        "width": 1
+      },
+      {
+        "name": "o1",
+        "lsb": 0,
+        "width": 1
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_I16I64"
+    ],
+    "guards": []
+  }
+];

@@ -73,7 +73,7 @@ Highest-value remaining source files right now:
 
 ## What "unsupported" means here
 
-This repository generates `test/generated/capstone-cases.generated.ts` via `tools/generate-capstone-tests.ts`.
+This repository keeps committed capstone fixtures under `test/generated/capstone/`, split by source YAML file.
 
 A case is counted as `unsupported` only when all of the following are true:
 
@@ -83,13 +83,12 @@ A case is counted as `unsupported` only when all of the following are true:
 
 So this TODO is specifically about instructions that already map cleanly to XML encodings, but are not yet implemented and promoted into the supported set.
 
-## Regenerate the snapshot
+## Refresh generated ISA data
 
 Use this after implementing more instruction support:
 
 ```sh
 bun tools/generate.ts
-bun tools/generate-capstone-tests.ts
 bun test
 ```
 

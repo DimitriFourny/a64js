@@ -1,0 +1,190 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "fmls_za_zzw",
+    "encodingId": "fmls_za_zzw_4x4_16",
+    "mnemonic": "FMLS",
+    "className": "Four ZA single-vectors of half-precision elements",
+    "fileName": "fmls_za_zzw.xml",
+    "mask": 4293106808,
+    "value": 3248558104,
+    "bitCount": 21,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 18,
+        "width": 3
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 7,
+        "width": 3
+      },
+      {
+        "name": "S",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME_F16F16"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "fmls_za_zzw",
+    "encodingId": "fmls_za_zzw_4x4",
+    "mnemonic": "FMLS",
+    "className": "Four ZA single-vectors",
+    "fileName": "fmls_za_zzw.xml",
+    "mask": 4288912504,
+    "value": 3248560136,
+    "bitCount": 20,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 18,
+        "width": 3
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 7,
+        "width": 3
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_F64F64"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "fmls_za_zzw",
+    "encodingId": "fmls_za_zzw_2x2_16",
+    "mnemonic": "FMLS",
+    "className": "Two ZA single-vectors of half-precision elements",
+    "fileName": "fmls_za_zzw.xml",
+    "mask": 4292975672,
+    "value": 3248492568,
+    "bitCount": 19,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 17,
+        "width": 4
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 6,
+        "width": 4
+      },
+      {
+        "name": "S",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME_F16F16"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "fmls_za_zzw",
+    "encodingId": "fmls_za_zzw_2x2",
+    "mnemonic": "FMLS",
+    "className": "Two ZA single-vectors",
+    "fileName": "fmls_za_zzw.xml",
+    "mask": 4288781368,
+    "value": 3248494600,
+    "bitCount": 18,
+    "fields": [
+      {
+        "name": "sz",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 17,
+        "width": 4
+      },
+      {
+        "name": "Rv",
+        "lsb": 13,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 6,
+        "width": 4
+      },
+      {
+        "name": "S",
+        "lsb": 3,
+        "width": 1
+      },
+      {
+        "name": "off3",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME2",
+      "FEAT_SME_F64F64"
+    ],
+    "guards": []
+  }
+];

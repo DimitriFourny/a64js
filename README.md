@@ -47,8 +47,7 @@ bun run test
 Run only the capstone corpus tests:
 
 ```bash
-node tools/generate-capstone-tests.ts
-node --test test/capstone.test.ts
+bun test test/capstone.test.ts
 ```
 
 ## Library Usage
@@ -142,10 +141,12 @@ CLI options:
 - [`src/format.ts`](/home/df0/a64js/src/format.ts): assembly formatting
 - [`src/cli.ts`](/home/df0/a64js/src/cli.ts): CLI entrypoint
 - [`tools/generate.ts`](/home/df0/a64js/tools/generate.ts): XML-to-generated-table pipeline
-- [`tools/generate-capstone-tests.ts`](/home/df0/a64js/tools/generate-capstone-tests.ts): capstone corpus classifier and fixture generator
-- [`src/generated/isa.generated.ts`](/home/df0/a64js/src/generated/isa.generated.ts): generated encoding data
-- [`test/capstone.test.ts`](/home/df0/a64js/test/capstone.test.ts): generated capstone corpus assertions
+- [`src/generated/isa/index.generated.ts`](/home/df0/a64js/src/generated/isa/index.generated.ts): generated ISA index across per-XML shards
+- [`test/generated/capstone/index.generated.ts`](/home/df0/a64js/test/generated/capstone/index.generated.ts): committed capstone fixture index across per-YAML shards
+- [`test/capstone.test.ts`](/home/df0/a64js/test/capstone.test.ts): capstone corpus assertions
 
 ## Source Data
 
-Instruction metadata is derived from the ARM A-profile XML reference files committed in this repository. The generator turns a supported subset of those XML descriptions into the encoding table used at runtime.
+Instruction metadata is derived from the ARM A-profile XML reference files committed in this repository. `bun run generate` turns a supported subset of those XML descriptions into the sharded encoding table used at runtime.
+
+Capstone fixtures under `test/generated/capstone/` are committed snapshots split by source YAML file. They are not regenerated as part of the normal test workflow.
