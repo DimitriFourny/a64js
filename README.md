@@ -149,4 +149,4 @@ CLI options:
 
 Instruction metadata is derived from the ARM A-profile XML reference files committed in this repository. `bun run generate` turns a supported subset of those XML descriptions into the sharded encoding table used at runtime.
 
-Capstone fixtures under `test/generated/capstone/` are committed snapshots split by source YAML file. They are not regenerated as part of the normal test workflow.
+Capstone fixtures under `test/generated/capstone/` are committed snapshots split by source YAML file. They are the only capstone corpus tracked in this repository and are not regenerated as part of the normal test workflow.
