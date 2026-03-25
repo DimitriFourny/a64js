@@ -7,7 +7,7 @@
     "a64js": "./src/cli.ts"
   },
   "scripts": {
-    "generate": "node tools/generate.ts && node tools/generate-capstone-tests.ts",
-    "test": "node tools/generate.ts && node tools/generate-capstone-tests.ts && node --test test/*.test.ts"
+    "generate": "bun tools/generate.ts && bun tools/generate-capstone-tests.ts",
+    "test": "bun tools/generate.ts && bun tools/generate-capstone-tests.ts && bun test"
   }
 }
