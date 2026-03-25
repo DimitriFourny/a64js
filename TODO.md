@@ -36,6 +36,34 @@ bun test
 
 ## Ready
 
+Priority rule:
+
+- prefer the most-used and most broadly expected instruction families first
+- use the capstone snapshot and `basic-a64-instructions.s.yaml` volume as the default tie-breaker
+- only take niche SME/SVE/AdvSIMD work ahead of scalar/core A64 work when it clearly removes a larger unsupported batch
+
+### Scalar load/store immediate and unscaled family
+
+Scope:
+
+- implement the common scalar general-purpose load/store families before narrower architectural cleanup
+- cover the immediate and unscaled forms as one coherent batch instead of one mnemonic at a time
+- include shared decode/disasm operand handling for base-plus-immediate addressing with `sp`
+- promote the matching XML files into `tools/supported-files.ts` only after the family is correct end-to-end
+
+Anchors:
+
+- `basic-a64-instructions.s.yaml`: highest-value remaining source file at `1180` unsupported cases
+- primary XML families include `ldr_imm_gen.xml`, `str_imm_gen.xml`, `ldur_gen.xml`, `stur_gen.xml`
+- adjacent scalar families likely worth batching if operand logic is shared: `ldrb_imm.xml`, `ldrh_imm.xml`, `strb_imm.xml`, `strh_imm.xml`, `ldrsw_imm.xml`
+
+Done when:
+
+- the targeted scalar load/store XML families decode correctly
+- `disasm()` renders canonical base-plus-immediate forms like `ldr w8, [sp, #0x3c]` instead of `.inst`
+- supported-file entries and generated fixtures are updated together
+- tests pass after regeneration
+
 ### SME2 BF16 subtraction completion
 
 Scope:
@@ -141,6 +169,7 @@ Implication:
 
 - the remaining work is still concentrated in SVE, SME, SME2, and AdvSIMD
 - the next highest-value batches are family work, not one-off instruction fixes
+- the first priority should still be common scalar/core A64 families from `basic-a64-instructions.s.yaml` when they have large unsupported batches
 
 ## Meaning Of "Unsupported"
 
