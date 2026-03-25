@@ -1,5 +1,111 @@
 # Instruction Support TODO
 
+This file is a work queue, not a scratchpad. Each Codex run should take one `Ready` work item, finish it end-to-end, then update this file before stopping.
+
+## Workflow
+
+### Execution rule
+
+Pick exactly one work item from `Ready`, unless a task is already listed under `In Progress`.
+
+### What a work item must contain
+
+- one coherent instruction family or cleanup batch
+- enough scope to justify a full implementation pass
+- concrete XML and/or source-YAML anchors
+- a short `Done when` checklist
+
+### What to do during a Codex run
+
+1. Claim one work item by moving it to `In Progress`.
+2. Implement decode/disasm support for the whole batch, not a single encoding unless the item explicitly says so.
+3. Update `tools/supported-files.ts` only when the family works end-to-end.
+4. Run the relevant generation and test commands.
+5. Move the item to `Done` with a short result note, or to `Blocked` with the reason.
+
+### Refresh commands
+
+```sh
+bun tools/generate.ts
+bun test
+```
+
+## In Progress
+
+- None.
+
+## Ready
+
+### SME2 BF16 subtraction completion
+
+Scope:
+
+- finish the remaining SME2 BF16 subtraction family work
+- cover the outstanding decode/disasm paths as a single batch
+- promote the matching XML files into `tools/supported-files.ts` only after the family is correct end-to-end
+
+Anchors:
+
+- primary theme from the current unsupported backlog: remaining SME2 BF16 subtraction work
+- likely impact is concentrated in `basic-a64-instructions.s.yaml` and related BF16 XML families
+
+Done when:
+
+- the remaining SME2 BF16 subtraction XML families decode correctly
+- `disasm()` no longer falls back to `.inst` for the newly supported capstone cases
+- supported-file entries and generated fixtures are updated together
+- tests pass after regeneration
+
+### SVE predicate and compare cleanup batch
+
+Scope:
+
+- finish the remaining SVE predicate/compare cleanup left after the recent `cmpeq`, `ptrue`, `ptrues`, `frinta`, and scalar prefetch work
+- treat related XML families as one batch where they share operand/guard behavior
+
+Anchors:
+
+- current backlog note: remaining SVE predicate cleanup
+- highest-value source files still include `neon-compare-instructions.s.yaml` and other SVE-heavy capstone shards
+
+Done when:
+
+- the targeted predicate/compare XML families are implemented as a coherent batch
+- feature guards still behave correctly in `decode()`
+- regenerated fixtures and tests reflect the reduction in `.inst` fallbacks
+
+### AdvSIMD high-volume cleanup batch
+
+Scope:
+
+- attack the remaining high-count AdvSIMD backlog as a family-oriented batch instead of one XML at a time
+- prioritize shared formatter/operand patterns before isolated one-off instructions
+
+Anchors:
+
+- `neon-simd-misc.s.yaml`: `260`
+- `neon-simd-shift.s.yaml`: `159`
+- `neon-3vdiff.s.yaml`: `142`
+- `neon-simd-ldst-one-elem.s.yaml`: `128`
+
+Done when:
+
+- at least one coherent AdvSIMD family group is fully promoted to supported
+- the work item records which XML families were completed
+- generation and tests pass
+
+## Blocked
+
+- None.
+
+## Done
+
+Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
+
+- None yet in this workflow format.
+
+## Snapshot
+
 Current capstone coverage snapshot:
 
 - `17763` supported capstone cases
@@ -9,56 +115,6 @@ Current capstone coverage snapshot:
 - `896` capstone source YAML files containing unsupported cases
 - `911` distinct unsupported mnemonics
 
-Recently completed families:
-
-- `ldiapp.xml`: `48` capstone cases promoted to supported across the LRCPC3 ordered register-pair load family
-- SVE signed saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
-- SVE unsigned saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
-- SME ZA tile-slice contiguous loads/stores: `484` capstone cases promoted to supported across `ld1{b,h,w,d,q}_za_p_rrr.xml`, `st1{b,h,w,d,q}_za_p_rrr.xml`, and the matching `apple_proprietary` snapshot aliases
-- SVE scalar count (`cntb_r_s.xml`): `48` capstone cases promoted to supported across `CNTB`, `CNTH`, `CNTW`, and `CNTD`
-- AdvSIMD `UDOT` / `SDOT` vector and by-element: `176` cases promoted to supported across 4 XML files
-- AdvSIMD `SQRDMLAH` / `SQRDMLSH` (vector and by-element): 4 XML files promoted to supported
-- SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`: `1344` cases promoted to supported
-- SME2 `SMLAL`, `SMLSL`, and `UMLAL`: support landed for the 16-bit-to-32-bit long multiply-accumulate family across `*_za_zzi.xml`, `*_za_zzv.xml`, and `*_za_zzw.xml`
-- SME2 `BFMLAL`, `BFMLSL`, `FMLAL`, and `FMLSL`: `672` cases promoted out of the unsupported capstone set across 12 XML files
-- SME2 `BFADD`, `BFMLA`, and `BFMLS`: `336` capstone cases promoted to supported across `bfadd_za_zw.xml`, `bfmla_za_{zzi,zzv,zzw}.xml`, and `bfmls_za_{zzi,zzv,zzw}.xml`
-- SME2 `BFSUB`: `48` capstone cases promoted to supported across `bfsub_za_zw.xml`
-- SME2 `SUMLALL`, `USMLALL`, and `UMLSL`: mixed-sign long multiply-accumulate support landed across `sumlall_za_{zzi,zzv}.xml`, `usmlall_za_{zzi,zzv,zzw}.xml`, and `umlsl_za_{zzi,zzv,zzw}.xml`
-- SVE scalar-plus-immediate prefetch (`prfb_i_p_bi.xml`, `prfd_i_p_bi.xml`, `prfh_i_p_bi.xml`, `prfw_i_p_bi.xml`): support landed; regenerate the capstone snapshot to record the new totals
-- SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`: `1750` cases promoted to supported
-- `mrs.xml`: `1789` cases promoted to supported
-- `msr_reg.xml`: `1511`
-- `movprfx_z_z.xml`: `741`
-- `fcpy_z_p_i.xml`: `1040`
-- `fdup_z_i.xml`: `524`
-- `movprfx_z_p_z.xml`: `331`
-- `incb_r_rs.xml`: `186`
-- `cmpeq_p_p_zi.xml`: `160`
-- `decb_r_rs.xml`: `160`
-- CPY immediate forms (`cpy_z_o_i.xml`, `cpy_z_p_i.xml`, `cpy_z_p_v.xml`): `172` cases promoted to supported
-- `mov_mova_*.xml`: decode/disasm support landed; keep an eye on capstone snapshot accounting separately from the scalar/SVE totals above
-- `movaz_*.xml`, `dup_z_i.xml`, `cpy_z_p_r.xml`, `rprfm_reg.xml`: `442`
-- `sdot_za*.xml`, `sdot_za32*.xml`, `udot_za*.xml`, `udot_za32*.xml`: `865`
-- `cmpeq_p_p_zz.xml`: `80` capstone cases promoted to supported across the SVE vector compare family
-- `cmpeq_p_p_zw.xml`: `60` capstone cases promoted to supported across the SVE wide-element compare family
-- `ptrue_p_s.xml`, `ptrues_p_s.xml`: `160` capstone cases promoted to supported across the SVE predicate-initialization family
-- `frinta_z_p_z.xml`: `70` capstone cases promoted to supported across the SVE predicated FRINT* family
-- `mrrs.xml`, `msrr.xml`: `132` capstone cases promoted to supported across the 128-bit system-register move family
-- `ldapr.xml`: `68` capstone cases promoted to supported across the RCpc load-acquire family
-- SME2 `BFDOT` (`bfdot_za_zzi.xml`, `bfdot_za_zzv.xml`, `bfdot_za_zzw.xml`): `144` capstone cases promoted to supported
-- SME2 `FDOT` (`fdot_za_zzi.xml`, `fdot_za_zzv.xml`, `fdot_za_zzw.xml`): `144` capstone cases promoted to supported
-- SME2 `SUDOT` / `USDOT`: `240` capstone cases promoted to supported across `sudot_za_{zzi,zzv}.xml` and `usdot_za_{zzi,zzv,zzw}.xml`
-- `dup_z_zi.xml`: `50` capstone cases promoted to supported across the SVE indexed DUP / `mov` alias family
-- Scalar `FCMP` / `FCMPE` (`fcmp_float.xml`, `fcmpe_float.xml`): `10` capstone cases promoted to supported across `basic-a64-instructions.s.yaml` and `a64-ignored-fields.txt.yaml`
-
-## Left To Do Now
-
-Priority order from the current snapshot:
-
-1. Remaining SME2 BF16 subtraction work, plus SVE predicate cleanup.
-
-Highest-value remaining XML files right now:
-
 Highest-value remaining source files right now:
 
 - `basic-a64-instructions.s.yaml`: `1180`
@@ -67,48 +123,6 @@ Highest-value remaining source files right now:
 - `neon-simd-shift.s.yaml`: `159`
 - `neon-3vdiff.s.yaml`: `142`
 - `neon-simd-ldst-one-elem.s.yaml`: `128`
-
-## What "unsupported" means here
-
-This repository keeps committed capstone fixtures under `test/generated/capstone/`, split by source YAML file.
-
-A case is counted as `unsupported` only when all of the following are true:
-
-1. The instruction word matches an Arm XML encoding.
-2. That XML file is **not** in `tools/supported-files.ts`.
-3. `disasm()` still falls back to raw `.inst 0x...`.
-
-So this TODO is specifically about instructions that already map cleanly to XML encodings, but are not yet implemented and promoted into the supported set.
-
-## Refresh generated ISA data
-
-Use this after implementing more instruction support:
-
-```sh
-bun tools/generate.ts
-bun test
-```
-
-When an instruction family is actually supported end-to-end, add its XML file to `tools/supported-files.ts`.
-
-## Highest-volume missing areas
-
-These are the biggest buckets in the current unsupported set and should be the first place to spend time.
-
-### 1. Remaining SME2 BF16 / SVE cleanup
-
-Notable source files:
-
-- `basic-a64-instructions.s.yaml`: `1180`
-- `neon-simd-misc.s.yaml`: `260`
-- `neon-compare-instructions.s.yaml`: `180`
-- `neon-simd-shift.s.yaml`: `159`
-
-Notable XML files:
-
-Likely outcome: the remaining baseline work is now concentrated in the remaining SME2 BF16 subtraction backlog and the remaining SVE predicate/compare cleanup.
-
-## Feature buckets worth prioritizing
 
 Largest unsupported feature sets:
 
@@ -123,20 +137,71 @@ Largest unsupported feature sets:
 - `FEAT_SME_B16B16`: `408`
 - `FEAT_SVE`: `392`
 
-Implication: the remaining work is still heavily concentrated in SVE, SME, and SME2, with the ZA tile-slice load/store bucket now removed from that backlog.
+Implication:
 
-## Practical implementation order
+- the remaining work is still concentrated in SVE, SME, SME2, and AdvSIMD
+- the next highest-value batches are family work, not one-off instruction fixes
 
-Suggested order for the next follow-up pass:
+## Meaning Of "Unsupported"
 
-1. Finish the remaining SME2 BF16 subtraction families next, then return to the SVE predicate/compare leftovers.
-2. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
-3. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
+This repository keeps committed capstone fixtures under `test/generated/capstone/`, split by source YAML file.
 
-## Notes for whoever picks this up
+A case is counted as `unsupported` only when all of the following are true:
+
+1. The instruction word matches an Arm XML encoding.
+2. That XML file is not in `tools/supported-files.ts`.
+3. `disasm()` still falls back to raw `.inst 0x...`.
+
+So this TODO tracks instructions that already map cleanly to XML encodings, but are not yet promoted into the supported set.
+
+## Working Notes
 
 - Do not add XML files to `tools/supported-files.ts` until both `decode()` and `disasm()` behave correctly for that family.
-- The generated capstone file is a useful progress metric, but it is not the full instruction universe. It only covers capstone cases that match Arm XML encodings and currently fall back to `.inst`.
+- The generated capstone corpus is a progress metric, not the whole instruction universe.
 - The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
-- The current branch also has local `MOVA` alias support wired in `decode()` / `disasm()`. If capstone snapshot accounting does not move as expected for those files, verify the XML/case mapping before assuming the formatter is wrong.
-- The highest-impact work is still family-by-family support, not one-off instruction fixes. `ldapr.xml`, `ldiapp.xml`, `frinta_z_p_z.xml`, the SVE scalar-plus-immediate prefetch family, `cmpeq_p_p_zw.xml`, `cntb_r_s.xml`, the SME ZA tile-slice contiguous load/store family, the SME2 `BFDOT` family, the SME2 `FDOT` family, the SME2 mixed-sign `SUDOT` / `USDOT` family, the SME2 `BFADD` / `BFMLA` / `BFMLS` family, the SME2 `BFMLAL` / `BFMLSL` / `FMLAL` / `FMLSL` families, the SME2 `SMLAL` / `SMLSL` / `UMLAL` family, and the SME2 mixed-sign `SUMLALL` / `USMLALL` / `UMLSL` families are now promoted; the remaining highest-value work is concentrated in SME2 BF16 subtraction work and SVE cleanup.
+- `tools/encodings.ts` needs to tolerate feature terms inside larger guard expressions; keep that in mind when working on mixed-guard XMLs.
+- If `MOVA`-related capstone accounting does not move as expected, verify the XML-to-case mapping before assuming the formatter is wrong.
+
+## Completed Families
+
+Recently completed families and batches:
+
+- `ldiapp.xml`: `48` capstone cases promoted to supported across the LRCPC3 ordered register-pair load family
+- SVE signed saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
+- SVE unsigned saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
+- SME ZA tile-slice contiguous loads/stores: `484` capstone cases promoted to supported across `ld1{b,h,w,d,q}_za_p_rrr.xml`, `st1{b,h,w,d,q}_za_p_rrr.xml`, and the matching `apple_proprietary` snapshot aliases
+- SVE scalar count (`cntb_r_s.xml`): `48` capstone cases promoted to supported across `CNTB`, `CNTH`, `CNTW`, and `CNTD`
+- AdvSIMD `UDOT` / `SDOT` vector and by-element: `176` cases promoted to supported across 4 XML files
+- AdvSIMD `SQRDMLAH` / `SQRDMLSH` vector and by-element: 4 XML files promoted to supported
+- SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`: `1344` cases promoted to supported
+- SME2 `SMLAL`, `SMLSL`, and `UMLAL`: support landed for the 16-bit-to-32-bit long multiply-accumulate family across `*_za_zzi.xml`, `*_za_zzv.xml`, and `*_za_zzw.xml`
+- SME2 `BFMLAL`, `BFMLSL`, `FMLAL`, and `FMLSL`: `672` cases promoted out of the unsupported capstone set across 12 XML files
+- SME2 `BFADD`, `BFMLA`, and `BFMLS`: `336` capstone cases promoted to supported across `bfadd_za_zw.xml`, `bfmla_za_{zzi,zzv,zzw}.xml`, and `bfmls_za_{zzi,zzv,zzw}.xml`
+- SME2 `BFSUB`: `48` capstone cases promoted to supported across `bfsub_za_zw.xml`
+- SME2 `SUMLALL`, `USMLALL`, and `UMLSL`: mixed-sign long multiply-accumulate support landed across `sumlall_za_{zzi,zzv}.xml`, `usmlall_za_{zzi,zzv,zzw}.xml`, and `umlsl_za_{zzi,zzv,zzw}.xml`
+- SVE scalar-plus-immediate prefetch (`prfb_i_p_bi.xml`, `prfd_i_p_bi.xml`, `prfh_i_p_bi.xml`, `prfw_i_p_bi.xml`): support landed; regenerate the capstone snapshot to record the new totals
+- SME2 `ADD`, `SUB`, `FMLA`, and `FMLS`: `1750` cases promoted to supported
+- `mrs.xml`: `1789` cases promoted to supported
+- `msr_reg.xml`: `1511` capstone cases promoted to supported
+- `movprfx_z_z.xml`: `741` capstone cases promoted to supported
+- `fcpy_z_p_i.xml`: `1040` capstone cases promoted to supported
+- `fdup_z_i.xml`: `524` capstone cases promoted to supported
+- `movprfx_z_p_z.xml`: `331` capstone cases promoted to supported
+- `incb_r_rs.xml`: `186` capstone cases promoted to supported
+- `cmpeq_p_p_zi.xml`: `160` capstone cases promoted to supported
+- `decb_r_rs.xml`: `160` capstone cases promoted to supported
+- CPY immediate forms (`cpy_z_o_i.xml`, `cpy_z_p_i.xml`, `cpy_z_p_v.xml`): `172` cases promoted to supported
+- `mov_mova_*.xml`: decode/disasm support landed; capstone snapshot accounting should be tracked separately from scalar/SVE totals
+- `movaz_*.xml`, `dup_z_i.xml`, `cpy_z_p_r.xml`, `rprfm_reg.xml`: `442` capstone cases promoted to supported
+- `sdot_za*.xml`, `sdot_za32*.xml`, `udot_za*.xml`, `udot_za32*.xml`: `865` capstone cases promoted to supported
+- `cmpeq_p_p_zz.xml`: `80` capstone cases promoted to supported across the SVE vector compare family
+- `cmpeq_p_p_zw.xml`: `60` capstone cases promoted to supported across the SVE wide-element compare family
+- `ptrue_p_s.xml`, `ptrues_p_s.xml`: `160` capstone cases promoted to supported across the SVE predicate-initialization family
+- `frinta_z_p_z.xml`: `70` capstone cases promoted to supported across the SVE predicated FRINT* family
+- `mrrs.xml`, `msrr.xml`: `132` capstone cases promoted to supported across the 128-bit system-register move family
+- `ldapr.xml`: `68` capstone cases promoted to supported across the RCpc load-acquire family
+- SME2 `BFDOT` (`bfdot_za_zzi.xml`, `bfdot_za_zzv.xml`, `bfdot_za_zzw.xml`): `144` capstone cases promoted to supported
+- SME2 `FDOT` (`fdot_za_zzi.xml`, `fdot_za_zzv.xml`, `fdot_za_zzw.xml`): `144` capstone cases promoted to supported
+- SME2 `SUDOT` / `USDOT`: `240` capstone cases promoted to supported across `sudot_za_{zzi,zzv}.xml` and `usdot_za_{zzi,zzv,zzw}.xml`
+- `dup_z_zi.xml`: `50` capstone cases promoted to supported across the SVE indexed DUP / `mov` alias family
+- Scalar `FCMP` / `FCMPE` (`fcmp_float.xml`, `fcmpe_float.xml`): `10` capstone cases promoted to supported across `basic-a64-instructions.s.yaml` and `a64-ignored-fields.txt.yaml`
