@@ -1,6 +1,116 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 8,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 9,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 10,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 11,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 12,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 13,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 14,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 15,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 16,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 17,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
     "caseIndex": 22,
     "word": 2579500003,
     "asmText": "ldapr w3, [sp], #4",
@@ -45,6 +155,116 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 52,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 53,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 54,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 55,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 56,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 57,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 58,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 59,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 60,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 61,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
     "caseIndex": 66,
     "word": 2579500003,
     "asmText": "ldapr w3, [sp], #4",
@@ -83,6 +303,116 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x3, [x15], #8",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 96,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 97,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 98,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 99,
+    "word": 2571373212,
+    "asmText": "ldiapp w28, w4, [x20], #8",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 100,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 101,
+    "word": 3645180605,
+    "asmText": "ldiapp x29, x5, [x21], #16",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 102,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 103,
+    "word": 2571508734,
+    "asmText": "ldiapp w30, w6, [sp]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 104,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
+    "features": [
+      "FEAT_LRCPC3"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
+    "caseIndex": 105,
+    "word": 3645315839,
+    "asmText": "ldiapp xzr, x7, [x23]",
+    "encodingFile": "ldiapp.xml",
+    "mnemonic": "LDIAPP",
     "features": [
       "FEAT_LRCPC3"
     ]
@@ -218,116 +548,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "stilp x27, x3, [sp]",
     "encodingFile": "stilp.xml",
     "mnemonic": "STILP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 8,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 9,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 10,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 11,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 12,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 13,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 14,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 15,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 16,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 17,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
     "features": [
       "FEAT_LRCPC3"
     ]
@@ -700,116 +920,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 52,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 53,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 54,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 55,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 56,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 57,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 58,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 59,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 60,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 61,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
     "caseIndex": 62,
     "word": 2575305187,
     "asmText": "stlr w3, [x15, #-4]!",
@@ -1170,116 +1280,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "stilp x27, x3, [sp]",
     "encodingFile": "stilp.xml",
     "mnemonic": "STILP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 96,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 97,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 98,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 99,
-    "word": 2571373212,
-    "asmText": "ldiapp w28, w4, [x20], #8",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 100,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 101,
-    "word": 3645180605,
-    "asmText": "ldiapp x29, x5, [x21], #16",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 102,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 103,
-    "word": 2571508734,
-    "asmText": "ldiapp w30, w6, [sp]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 104,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
-    "features": [
-      "FEAT_LRCPC3"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-lrcpc3.s.yaml",
-    "caseIndex": 105,
-    "word": 3645315839,
-    "asmText": "ldiapp xzr, x7, [x23]",
-    "encodingFile": "ldiapp.xml",
-    "mnemonic": "LDIAPP",
     "features": [
       "FEAT_LRCPC3"
     ]

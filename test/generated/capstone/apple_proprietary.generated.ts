@@ -1,4 +1,27 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
+export const SUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "apple_proprietary.yaml",
+    "caseIndex": 8,
+    "word": 3759153152,
+    "asmText": "stzi x0",
+    "encodingFile": "ld1b_za_p_rrr.xml",
+    "mnemonic": "LD1B",
+    "features": [
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "apple_proprietary.yaml",
+    "caseIndex": 16,
+    "word": 3759218688,
+    "asmText": "fma16 x0",
+    "encodingFile": "ld1b_za_p_rrr.xml",
+    "mnemonic": "LD1B",
+    "features": [
+      "FEAT_SME"
+    ]
+  }
+];
 
 export const UNSUPPORTED_CAPSTONE_CASES = [
   {
@@ -28,17 +51,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "apple_proprietary.yaml",
-    "caseIndex": 8,
-    "word": 3759153152,
-    "asmText": "stzi x0",
-    "encodingFile": "ld1b_za_p_rrr.xml",
-    "mnemonic": "LD1B",
-    "features": [
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "apple_proprietary.yaml",
     "caseIndex": 14,
     "word": 2685476864,
     "asmText": "fms32 x0",
@@ -48,17 +60,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
-    ]
-  },
-  {
-    "sourceFile": "apple_proprietary.yaml",
-    "caseIndex": 16,
-    "word": 3759218688,
-    "asmText": "fma16 x0",
-    "encodingFile": "ld1b_za_p_rrr.xml",
-    "mnemonic": "LD1B",
-    "features": [
-      "FEAT_SME"
     ]
   },
   {

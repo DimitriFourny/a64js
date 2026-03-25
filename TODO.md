@@ -2,17 +2,20 @@
 
 Current capstone coverage snapshot:
 
-- `17183` supported capstone cases
-- `17390` unsupported capstone cases
-- `190` XML instruction files currently listed in `tools/supported-files.ts`
-- `1697` distinct unsupported XML instruction files
-- `910` capstone source YAML files containing unsupported cases
-- `915` distinct unsupported mnemonics
+- `17763` supported capstone cases
+- `16858` unsupported capstone cases
+- `201` XML instruction files currently listed in `tools/supported-files.ts`
+- `1686` distinct unsupported XML instruction files
+- `896` capstone source YAML files containing unsupported cases
+- `911` distinct unsupported mnemonics
 
 Recently completed families:
 
+- `ldiapp.xml`: `48` capstone cases promoted to supported across the LRCPC3 ordered register-pair load family
 - SVE signed saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
 - SVE unsigned saturating scalar inc/dec: `624` cases promoted to supported across 8 XML files
+- SME ZA tile-slice contiguous loads/stores: `484` capstone cases promoted to supported across `ld1{b,h,w,d,q}_za_p_rrr.xml`, `st1{b,h,w,d,q}_za_p_rrr.xml`, and the matching `apple_proprietary` snapshot aliases
+- SVE scalar count (`cntb_r_s.xml`): `48` capstone cases promoted to supported across `CNTB`, `CNTH`, `CNTW`, and `CNTD`
 - AdvSIMD `UDOT` / `SDOT` vector and by-element: `176` cases promoted to supported across 4 XML files
 - AdvSIMD `SQRDMLAH` / `SQRDMLSH` (vector and by-element): 4 XML files promoted to supported
 - SME2 `SMLALL`, `SMLSLL`, `UMLALL`, and `UMLSLL`: `1344` cases promoted to supported
@@ -43,22 +46,18 @@ Recently completed families:
 - `mrrs.xml`, `msrr.xml`: `132` capstone cases promoted to supported across the 128-bit system-register move family
 - `ldapr.xml`: `68` capstone cases promoted to supported across the RCpc load-acquire family
 - SME2 `BFDOT` (`bfdot_za_zzi.xml`, `bfdot_za_zzv.xml`, `bfdot_za_zzw.xml`): `144` capstone cases promoted to supported
+- SME2 `FDOT` (`fdot_za_zzi.xml`, `fdot_za_zzv.xml`, `fdot_za_zzw.xml`): `144` capstone cases promoted to supported
+- SME2 `SUDOT` / `USDOT`: `240` capstone cases promoted to supported across `sudot_za_{zzi,zzv}.xml` and `usdot_za_{zzi,zzv,zzw}.xml`
 - `dup_z_zi.xml`: `50` capstone cases promoted to supported across the SVE indexed DUP / `mov` alias family
+- Scalar `FCMP` / `FCMPE` (`fcmp_float.xml`, `fcmpe_float.xml`): `10` capstone cases promoted to supported across `basic-a64-instructions.s.yaml` and `a64-ignored-fields.txt.yaml`
 
 ## Left To Do Now
 
 Priority order from the current snapshot:
 
-1. Remaining SME2 BF16 subtraction/dot-product work plus ZA tile loads and SVE scalar/predicate cleanup.
+1. Remaining SME2 BF16 subtraction work, plus SVE predicate cleanup.
 
 Highest-value remaining XML files right now:
-
-- `ld1b_za_p_rrr.xml`: `52`
-- `cntb_r_s.xml`: `48`
-- `fdot_za_zzi.xml`: `48`
-- `fdot_za_zzv.xml`: `48`
-- `fdot_za_zzw.xml`: `48`
-- `ld1d_za_p_rrr.xml`: `48`
 
 Highest-value remaining source files right now:
 
@@ -66,8 +65,6 @@ Highest-value remaining source files right now:
 - `neon-simd-misc.s.yaml`: `260`
 - `neon-compare-instructions.s.yaml`: `180`
 - `neon-simd-shift.s.yaml`: `159`
-- `SME2/fdot.s.yaml`: `144`
-- `SME2/usdot.s.yaml`: `144`
 - `neon-3vdiff.s.yaml`: `142`
 - `neon-simd-ldst-one-elem.s.yaml`: `128`
 
@@ -109,13 +106,7 @@ Notable source files:
 
 Notable XML files:
 
-- `ld1b_za_p_rrr.xml`: `52`
-- `bfadd_za_zw.xml`: `48`
-- `bfmla_za_zzi.xml`: `48`
-- `bfmla_za_zzv.xml`: `48`
-- `bfmla_za_zzw.xml`: `48`
-
-Likely outcome: the remaining baseline work is now concentrated in SME2 BF16 subtraction/dot-product families, ZA tile loads, and the remaining SVE predicate/compare cleanup.
+Likely outcome: the remaining baseline work is now concentrated in the remaining SME2 BF16 subtraction backlog and the remaining SVE predicate/compare cleanup.
 
 ## Feature buckets worth prioritizing
 
@@ -132,13 +123,13 @@ Largest unsupported feature sets:
 - `FEAT_SME_B16B16`: `408`
 - `FEAT_SVE`: `392`
 
-Implication: the remaining work is now even more concentrated in SVE, SME, and SME2 than before.
+Implication: the remaining work is still heavily concentrated in SVE, SME, and SME2, with the ZA tile-slice load/store bucket now removed from that backlog.
 
 ## Practical implementation order
 
 Suggested order for the next follow-up pass:
 
-1. Sweep the remaining SME2 BF16 subtraction/dot-product families and ZA tile-load families next, then return to the SVE predicate/compare leftovers.
+1. Finish the remaining SME2 BF16 subtraction families next, then return to the SVE predicate/compare leftovers.
 2. Keep an eye on XMLs with mixed feature/decode guards; `tools/encodings.ts` now needs to tolerate feature terms appearing inside larger guard expressions.
 3. After each family, update `tools/supported-files.ts`, regenerate capstone cases, and rerun tests.
 
@@ -148,4 +139,4 @@ Suggested order for the next follow-up pass:
 - The generated capstone file is a useful progress metric, but it is not the full instruction universe. It only covers capstone cases that match Arm XML encodings and currently fall back to `.inst`.
 - The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
 - The current branch also has local `MOVA` alias support wired in `decode()` / `disasm()`. If capstone snapshot accounting does not move as expected for those files, verify the XML/case mapping before assuming the formatter is wrong.
-- The highest-impact work is still family-by-family support, not one-off instruction fixes. `ldapr.xml`, `frinta_z_p_z.xml`, the SVE scalar-plus-immediate prefetch family, `cmpeq_p_p_zw.xml`, the SME2 `BFDOT` family, the SME2 `BFADD` / `BFMLA` / `BFMLS` family, the SME2 `BFMLAL` / `BFMLSL` / `FMLAL` / `FMLSL` families, the SME2 `SMLAL` / `SMLSL` / `UMLAL` family, and the SME2 mixed-sign `SUMLALL` / `USMLALL` / `UMLSL` families are now promoted; the remaining highest-value work is concentrated in SME2 BF16 subtraction/dot-product work, ZA tile loads, and SVE cleanup.
+- The highest-impact work is still family-by-family support, not one-off instruction fixes. `ldapr.xml`, `ldiapp.xml`, `frinta_z_p_z.xml`, the SVE scalar-plus-immediate prefetch family, `cmpeq_p_p_zw.xml`, `cntb_r_s.xml`, the SME ZA tile-slice contiguous load/store family, the SME2 `BFDOT` family, the SME2 `FDOT` family, the SME2 mixed-sign `SUDOT` / `USDOT` family, the SME2 `BFADD` / `BFMLA` / `BFMLS` family, the SME2 `BFMLAL` / `BFMLSL` / `FMLAL` / `FMLSL` families, the SME2 `SMLAL` / `SMLSL` / `UMLAL` family, and the SME2 mixed-sign `SUMLALL` / `USMLALL` / `UMLSL` families are now promoted; the remaining highest-value work is concentrated in SME2 BF16 subtraction work and SVE cleanup.

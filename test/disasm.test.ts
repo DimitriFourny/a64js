@@ -87,6 +87,18 @@ test("decodes SVE FDUP using the FMOV alias", () => {
   assert.equal(disasm(0x2579d800, undefined, { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] }), "fmov z0.h, #-0.12500000");
 });
 
+test("decodes scalar FCMP and FCMPE forms", () => {
+  const options = { features: ["FEAT_FP", "FEAT_FP16"] };
+  assert.equal(disasm(505749600, undefined, options), "fcmp s3, s5");
+  assert.equal(disasm(505422824, undefined, options), "fcmp s31, #0.0");
+  assert.equal(disasm(510402688, undefined, options), "fcmp d4, d12");
+  assert.equal(disasm(509616872, undefined, options), "fcmp d23, #0.0");
+  assert.equal(disasm(507388848, undefined, options), "fcmpe s29, s30");
+  assert.equal(disasm(505422328, undefined, options), "fcmpe s15, #0.0");
+  assert.equal(disasm(511058768, undefined, options), "fcmpe d26, d22");
+  assert.equal(disasm(509617080, undefined, options), "fcmpe d29, #0.0");
+});
+
 test("decodes SVE compare immediate", () => {
   assert.equal(disasm(0x25108000, undefined, { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] }), "cmpeq p0.b, p0/z, z0.b, #-16");
 });
@@ -137,6 +149,27 @@ test("decodes SVE INCB and DECB scalar patterns", () => {
   assert.equal(disasm(0x0430e3e0, undefined, options), "incb x0");
   assert.equal(disasm(0x0430e400, undefined, options), "decb x0, pow2");
   assert.equal(disasm(0x043fe7e0, undefined, options), "decb x0, all, mul #16");
+});
+
+test("decodes SVE CNTB/CNTH/CNTW/CNTD scalar count patterns", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(69264352, undefined, options), "cntb x0");
+  assert.equal(disasm(73458656, undefined, options), "cnth x0");
+  assert.equal(disasm(77652960, undefined, options), "cntw x0");
+  assert.equal(disasm(81847264, undefined, options), "cntd x0");
+  assert.equal(disasm(70247392, undefined, options), "cntb x0, all, mul #16");
+  assert.equal(disasm(69263360, undefined, options), "cntb x0, pow2");
+  assert.equal(disasm(69264256, undefined, options), "cntb x0, #28");
+});
+
+test("decodes SME ZA tile-slice load/store operands", () => {
+  const options = { features: ["FEAT_SME"] };
+  assert.equal(disasm(3758096384, undefined, options), "ld1b {za0h.b[w12, 0]}, p0/z, [x0, x0]");
+  assert.equal(disasm(3758129152, undefined, options), "ld1b {za0v.b[w12, 0]}, p0/z, [x0, x0]");
+  assert.equal(disasm(3772077381, undefined, options), "ld1d {za2h.d[w14, 1]}, p5/z, [x10, x21, lsl #3]");
+  assert.equal(disasm(3788854597, undefined, options), "ld1q {za5h.q[w14, 0]}, p5/z, [x10, x21, lsl #4]");
+  assert.equal(disasm(3769346439, undefined, options), "st1w {za1v.s[w13, 3]}, p2, [x12, x11, lsl #2]");
+  assert.equal(disasm(3774840815, undefined, options), "st1d {za7h.d[w15, 1]}, p7, [sp]");
 });
 
 test("decodes signed SVE scalar saturating INCB and DECB forms", () => {
@@ -229,6 +262,22 @@ test("decodes SME2 BFDOT dot-product forms", () => {
   assert.equal(disasm(3248492560, undefined, options), "bfdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }");
 });
 
+test("decodes SME2 FDOT dot-product forms", () => {
+  const options = { features: ["FEAT_SME2"] };
+  assert.equal(disasm(3240103936, undefined, options), "fdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3243249672, undefined, options), "fdot za.s[w8, 0, vgx2], { z0.h, z1.h }, z0.h[0]");
+  assert.equal(disasm(3248492544, undefined, options), "fdot za.s[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }");
+});
+
+test("decodes SME2 SUDOT and USDOT mixed-sign dot-product forms", () => {
+  const options = { features: ["FEAT_SME2"] };
+  assert.equal(disasm(3240104984, undefined, options), "sudot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b");
+  assert.equal(disasm(3243249720, undefined, options), "sudot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]");
+  assert.equal(disasm(3240104968, undefined, options), "usdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b");
+  assert.equal(disasm(3243249704, undefined, options), "usdot za.s[w8, 0, vgx2], { z0.b, z1.b }, z0.b[0]");
+  assert.equal(disasm(3248493576, undefined, options), "usdot za.s[w8, 0, vgx2], { z0.b, z1.b }, { z0.b, z1.b }");
+});
+
 test("decodes SME2 BFADD/BFMLA/BFMLS BF16 arithmetic forms", () => {
   const options = { features: ["FEAT_SME_B16B16"] };
   assert.equal(disasm(3252952064, undefined, options), "bfadd za.h[w8, 0, vgx2], { z0.h, z1.h }");
@@ -243,6 +292,14 @@ test("decodes SME2 BFSUB BF16 arithmetic forms", () => {
   const options = { features: ["FEAT_SME_B16B16"] };
   assert.equal(disasm(3252952072, undefined, options), "bfsub za.h[w8, 0, vgx2], { z0.h, z1.h }");
   assert.equal(disasm(3253043087, undefined, options), "bfsub za.h[w11, 7, vgx4], { z28.h - z31.h }");
+});
+
+test("decodes LDIAPP ordered register-pair loads", () => {
+  const options = { features: ["FEAT_LRCPC3"] };
+  assert.equal(disasm(2571373212, undefined, options), "ldiapp w28, w4, [x20], #8");
+  assert.equal(disasm(3645180605, undefined, options), "ldiapp x29, x5, [x21], #16");
+  assert.equal(disasm(2571508734, undefined, options), "ldiapp w30, w6, [sp]");
+  assert.equal(disasm(3645315839, undefined, options), "ldiapp xzr, x7, [x23]");
 });
 
 test("decodes AdvSIMD multiple-structure LD1/ST1", () => {

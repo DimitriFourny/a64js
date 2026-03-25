@@ -7072,6 +7072,102 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ret.xml",
     "mnemonic": "RET",
     "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 686,
+    "word": 505749600,
+    "asmText": "fcmp s3, s5",
+    "encodingFile": "fcmp_float.xml",
+    "mnemonic": "FCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 687,
+    "word": 505422824,
+    "asmText": "fcmp s31, #0.0",
+    "encodingFile": "fcmp_float.xml",
+    "mnemonic": "FCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 688,
+    "word": 507388848,
+    "asmText": "fcmpe s29, s30",
+    "encodingFile": "fcmpe_float.xml",
+    "mnemonic": "FCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 689,
+    "word": 505422328,
+    "asmText": "fcmpe s15, #0.0",
+    "encodingFile": "fcmpe_float.xml",
+    "mnemonic": "FCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 690,
+    "word": 510402688,
+    "asmText": "fcmp d4, d12",
+    "encodingFile": "fcmp_float.xml",
+    "mnemonic": "FCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 691,
+    "word": 509616872,
+    "asmText": "fcmp d23, #0.0",
+    "encodingFile": "fcmp_float.xml",
+    "mnemonic": "FCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 692,
+    "word": 511058768,
+    "asmText": "fcmpe d26, d22",
+    "encodingFile": "fcmpe_float.xml",
+    "mnemonic": "FCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 693,
+    "word": 509617080,
+    "asmText": "fcmpe d29, #0.0",
+    "encodingFile": "fcmpe_float.xml",
+    "mnemonic": "FCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
   }
 ];
 
@@ -10909,102 +11005,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "extr.xml",
     "mnemonic": "EXTR",
     "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 686,
-    "word": 505749600,
-    "asmText": "fcmp s3, s5",
-    "encodingFile": "fcmp_float.xml",
-    "mnemonic": "FCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 687,
-    "word": 505422824,
-    "asmText": "fcmp s31, #0.0",
-    "encodingFile": "fcmp_float.xml",
-    "mnemonic": "FCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 688,
-    "word": 507388848,
-    "asmText": "fcmpe s29, s30",
-    "encodingFile": "fcmpe_float.xml",
-    "mnemonic": "FCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 689,
-    "word": 505422328,
-    "asmText": "fcmpe s15, #0.0",
-    "encodingFile": "fcmpe_float.xml",
-    "mnemonic": "FCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 690,
-    "word": 510402688,
-    "asmText": "fcmp d4, d12",
-    "encodingFile": "fcmp_float.xml",
-    "mnemonic": "FCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 691,
-    "word": 509616872,
-    "asmText": "fcmp d23, #0.0",
-    "encodingFile": "fcmp_float.xml",
-    "mnemonic": "FCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 692,
-    "word": 511058768,
-    "asmText": "fcmpe d26, d22",
-    "encodingFile": "fcmpe_float.xml",
-    "mnemonic": "FCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 693,
-    "word": 509617080,
-    "asmText": "fcmpe d29, #0.0",
-    "encodingFile": "fcmpe_float.xml",
-    "mnemonic": "FCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
