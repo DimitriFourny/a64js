@@ -23,7 +23,10 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
   const mnemonic =
     decoded.encoding && ["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(decoded.encoding.fileName)
       ? "fmov"
-      : decoded.encoding && ["dup_z_i.xml", "cpy_z_p_r.xml", "cpy_z_o_i.xml", "cpy_z_p_i.xml", "cpy_z_p_v.xml"].includes(decoded.encoding.fileName)
+      : decoded.encoding &&
+          ["dup_z_i.xml", "dup_z_zi.xml", "cpy_z_p_r.xml", "cpy_z_o_i.xml", "cpy_z_p_i.xml", "cpy_z_p_v.xml"].includes(
+            decoded.encoding.fileName,
+          )
         ? "mov"
       : decoded.encoding &&
           [

@@ -205,6 +205,24 @@ function systemMoveOperands(inst: DecodedInstruction, mnemonic: string): Operand
   return mnemonic === "MRS" ? [xt, systemRegister] : [systemRegister, xt];
 }
 
+function systemMove128Operands(inst: DecodedInstruction, mnemonic: string): Operand[] {
+  const fields = inst.fields!;
+  const systemRegister = sysReg(2 + (fields.o0 ?? 0), fields.op1 ?? 0, fields.CRn ?? 0, fields.CRm ?? 0, fields.op2 ?? 0);
+  const xt = gpReg(64, fields.Rt, "zr");
+  const xt2 = gpReg(64, (fields.Rt + 1) & 31, "zr");
+  return mnemonic === "MRRS" ? [xt, xt2, systemRegister] : [systemRegister, xt, xt2];
+}
+
+function ldaprOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = (fields.size ?? 0) === 3 ? 64 : 32;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const memory = inst.encoding!.encodingId.includes("writeback")
+    ? `[${base}], #${width / 8}`
+    : `[${base}]`;
+  return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: memory }];
+}
+
 function sveLaneFromSize(size: number | undefined): "h" | "s" | "d" {
   return (["h", "s", "d"] as const)[(size ?? 1) - 1] ?? "h";
 }
@@ -234,6 +252,23 @@ function svePatternName(pattern: number): string | undefined {
       "vl64",
       "vl128",
       "vl256",
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      "mul4",
+      "mul3",
     ] as const
   )[pattern];
 }
@@ -297,6 +332,36 @@ function sveFdupOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
   return [vecReg(fields.Zd, lane), sveFloatingImmediate(fields.imm8, fields.size)];
+}
+
+function sveDupIndexedLane(tsz: number): { lane: "b" | "h" | "s" | "d" | "q"; lsb: number } {
+  const lowestBit = tsz & -tsz;
+  switch (lowestBit) {
+    case 1:
+      return { lane: "b", lsb: 0 };
+    case 2:
+      return { lane: "h", lsb: 1 };
+    case 4:
+      return { lane: "s", lsb: 2 };
+    case 8:
+      return { lane: "d", lsb: 3 };
+    case 16:
+      return { lane: "q", lsb: 4 };
+    default:
+      return { lane: "b", lsb: 0 };
+  }
+}
+
+function sveDupIndexedOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const encodedImm = ((fields.imm2 ?? 0) << 5) | (fields.tsz ?? 0);
+  const { lane, lsb } = sveDupIndexedLane(fields.tsz ?? 0);
+  const index = encodedImm >> (lsb + 1);
+  const source =
+    encodedImm !== 0 && (encodedImm & (encodedImm - 1)) === 0
+      ? `${lane}${fields.Zn ?? 0}`
+      : `z${fields.Zn ?? 0}.${lane}[${index}]`;
+  return [vecReg(fields.Zd, lane), { kind: "text", text: source }];
 }
 
 function sveDupImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -512,12 +577,35 @@ function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function sveCompareVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [
+    predReg(fields.Pd, undefined, lane),
+    predReg(fields.Pg, "z"),
+    vecReg(fields.Zn, lane),
+    vecReg(fields.Zm, lane),
+  ];
+}
+
+function sveCompareWideVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [
+    predReg(fields.Pd, undefined, lane),
+    predReg(fields.Pg, "z"),
+    vecReg(fields.Zn, lane),
+    vecReg(fields.Zm, "d"),
+  ];
+}
+
 function sveIncDecScalarOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const pattern = fields.pattern ?? 0;
   const multiplier = (fields.imm4 ?? 0) + 1;
-  const ops: Operand[] = [gpReg(64, fields.Rdn, "sp")];
-  if (inst.encoding!.className === "32-bit") {
+  const isUnsignedScalar32 = inst.encoding!.className === "32-bit" && inst.encoding!.mnemonic.startsWith("UQ");
+  const ops: Operand[] = [gpReg(isUnsignedScalar32 ? 32 : 64, fields.Rdn, "sp")];
+  if (inst.encoding!.className === "32-bit" && !isUnsignedScalar32) {
     ops.push(gpReg(32, fields.Rdn, "sp"));
   }
   const patternName = pattern === 31 ? "all" : svePatternName(pattern);
@@ -535,6 +623,74 @@ function sveIncDecScalarOperands(inst: DecodedInstruction): Operand[] {
   }
 
   return ops;
+}
+
+function svePtrueOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const pattern = fields.pattern ?? 31;
+  const ops: Operand[] = [predReg(fields.Pd, undefined, lane)];
+  const patternName = pattern === 31 ? "all" : svePatternName(pattern);
+
+  if (patternName) {
+    if (pattern !== 31) {
+      ops.push({ kind: "text", text: patternName });
+    }
+  } else if (pattern !== 31) {
+    ops.push({ kind: "imm", value: BigInt(pattern), signed: false });
+  }
+
+  return ops;
+}
+
+function svePredicatedUnaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveLaneFromSize(fields.size);
+  const mode = inst.encoding!.encodingId.endsWith("_z") ? "z" : "m";
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, mode), vecReg(fields.Zn, lane)];
+}
+
+function svePrefetchOpText(prfop: number): string {
+  switch (prfop) {
+    case 0:
+      return "pldl1keep";
+    case 1:
+      return "pldl1strm";
+    case 2:
+      return "pldl2keep";
+    case 3:
+      return "pldl2strm";
+    case 4:
+      return "pldl3keep";
+    case 5:
+      return "pldl3strm";
+    case 8:
+      return "pstl1keep";
+    case 9:
+      return "pstl1strm";
+    case 10:
+      return "pstl2keep";
+    case 11:
+      return "pstl2strm";
+    case 12:
+      return "pstl3keep";
+    case 13:
+      return "pstl3strm";
+    default:
+      return `#${prfop}`;
+  }
+}
+
+function sveScalarImmediatePrefetchOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const imm = Number(signExtend(fields.imm6 ?? 0, 6));
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const memory = imm === 0 ? `[${base}]` : `[${base}, #${imm}, mul vl]`;
+  return [
+    { kind: "text", text: svePrefetchOpText(fields.prfop ?? 0) },
+    predReg(fields.Pg),
+    { kind: "text", text: memory },
+  ];
 }
 
 function movaLaneFromClassName(className: string): "b" | "h" | "s" | "d" | "q" {
@@ -716,7 +872,9 @@ function smeDotAccumulatorLane(inst: DecodedInstruction): "s" | "d" {
 }
 
 function smeDotSourceLane(inst: DecodedInstruction, accLane: "s" | "d"): "b" | "h" {
-  return accLane === "d" || inst.encoding!.fileName.includes("za32") ? "h" : "b";
+  return accLane === "d" || inst.encoding!.fileName.includes("za32") || inst.encoding!.fileName.startsWith("bfdot_")
+    ? "h"
+    : "b";
 }
 
 function smeDotZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "d"): string {
@@ -724,6 +882,9 @@ function smeDotZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | 
 }
 
 function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
+  if (inst.encoding!.mnemonic.startsWith("BF")) {
+    return "h";
+  }
   const sz = inst.fields?.sz ?? 0;
   return inst.encoding!.mnemonic.startsWith("F") ? (sz === 1 ? "d" : "h") : sz === 1 ? "d" : "s";
 }
@@ -763,6 +924,18 @@ function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" | "h" | 
 }
 
 function smeLongArithmeticLane(inst: DecodedInstruction): "s" | "d" {
+  switch (inst.encoding!.fileName) {
+    case "smlal_za_zzi.xml":
+    case "smlal_za_zzv.xml":
+    case "smlal_za_zzw.xml":
+    case "smlsl_za_zzi.xml":
+    case "smlsl_za_zzv.xml":
+    case "smlsl_za_zzw.xml":
+    case "umlal_za_zzi.xml":
+    case "umlal_za_zzv.xml":
+    case "umlal_za_zzw.xml":
+      return "s";
+  }
   return inst.fields?.sz === 1 ? "d" : "s";
 }
 
@@ -770,9 +943,48 @@ function smeLongArithmeticSourceLane(accLane: "s" | "d"): "b" | "h" {
   return accLane === "d" ? "h" : "b";
 }
 
-function smeLongArithmeticZaText(fields: Record<string, number>, lane: "s" | "d"): string {
+function smeFloatLongArithmeticLane(): "s" {
+  return "s";
+}
+
+function smeFloatLongArithmeticZaText(inst: DecodedInstruction): string {
+  const fields = inst.fields!;
+  const start = 2 * (fields.off3 ?? fields.off2 ?? 0);
+  const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
+  const vgx = groupSize === 1 ? "" : `, vgx${groupSize}`;
+  return `za.s[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 1}${vgx}]`;
+}
+
+function smeFloatLongArithmeticSourceLane(): "h" {
+  return "h";
+}
+
+function smeLongArithmeticZaText(inst: DecodedInstruction, lane: "s" | "d"): string {
+  const fields = inst.fields!;
   const start = 4 * (fields.off2 ?? fields.o1 ?? 0);
-  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 3}]`;
+  const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
+  const vgx = groupSize === 1 ? "" : `, vgx${groupSize}`;
+  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 3}${vgx}]`;
+}
+
+function smeInt16LongArithmeticFiles(fileName: string): boolean {
+  switch (fileName) {
+    case "smlal_za_zzi.xml":
+    case "smlal_za_zzv.xml":
+    case "smlal_za_zzw.xml":
+    case "smlsl_za_zzi.xml":
+    case "smlsl_za_zzv.xml":
+    case "smlsl_za_zzw.xml":
+    case "umlal_za_zzi.xml":
+    case "umlal_za_zzv.xml":
+    case "umlal_za_zzw.xml":
+    case "umlsl_za_zzi.xml":
+    case "umlsl_za_zzv.xml":
+    case "umlsl_za_zzw.xml":
+      return true;
+    default:
+      return false;
+  }
 }
 
 function smeLongArithmeticGroupSize(encodingId: string): 1 | 2 | 4 {
@@ -823,56 +1035,151 @@ function smeLongArithmeticFirstSource(inst: DecodedInstruction, lane: "b" | "h")
 function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = smeLongArithmeticLane(inst);
-  const srcLane = smeLongArithmeticSourceLane(lane);
-  const za = { kind: "text", text: smeLongArithmeticZaText(fields, lane) } satisfies Operand;
+  const srcLane = smeInt16LongArithmeticFiles(inst.encoding!.fileName) ? "h" : smeLongArithmeticSourceLane(lane);
+  const za = {
+    kind: "text",
+    text: smeInt16LongArithmeticFiles(inst.encoding!.fileName)
+      ? smeFloatLongArithmeticZaText(inst)
+      : smeLongArithmeticZaText(inst, lane),
+  } satisfies Operand;
   const first = smeLongArithmeticFirstSource(inst, srcLane);
   const second = smeLongArithmeticSecondSource(inst, srcLane);
 
   switch (inst.encoding!.encodingId) {
+    case "smlal_za_zzv_1":
+    case "smlal_za_zzv_2x1":
+    case "smlal_za_zzv_4x1":
     case "smlall_za_zzv_1":
     case "smlall_za_zzv_2x1":
     case "smlall_za_zzv_4x1":
+    case "smlsl_za_zzv_1":
+    case "smlsl_za_zzv_2x1":
+    case "smlsl_za_zzv_4x1":
     case "smlsll_za_zzv_1":
     case "smlsll_za_zzv_2x1":
     case "smlsll_za_zzv_4x1":
+    case "umlal_za_zzv_1":
+    case "umlal_za_zzv_2x1":
+    case "umlal_za_zzv_4x1":
     case "umlall_za_zzv_1":
     case "umlall_za_zzv_2x1":
     case "umlall_za_zzv_4x1":
+    case "umlsl_za_zzv_1":
+    case "umlsl_za_zzv_2x1":
+    case "umlsl_za_zzv_4x1":
     case "umlsll_za_zzv_1":
     case "umlsll_za_zzv_2x1":
     case "umlsll_za_zzv_4x1":
+    case "sumlall_za_zzv_s2x1":
+    case "sumlall_za_zzv_s4x1":
+    case "usmlall_za_zzv_s":
+    case "usmlall_za_zzv_s2x1":
+    case "usmlall_za_zzv_s4x1":
+    case "smlal_za_zzi_1":
+    case "smlal_za_zzi_2xi":
+    case "smlal_za_zzi_4xi":
     case "smlall_za_zzi_s":
     case "smlall_za_zzi_d":
     case "smlall_za_zzi_s2xi":
     case "smlall_za_zzi_d2xi":
     case "smlall_za_zzi_s4xi":
     case "smlall_za_zzi_d4xi":
+    case "smlsl_za_zzi_1":
+    case "smlsl_za_zzi_2xi":
+    case "smlsl_za_zzi_4xi":
     case "smlsll_za_zzi_s":
     case "smlsll_za_zzi_d":
     case "smlsll_za_zzi_s2xi":
     case "smlsll_za_zzi_d2xi":
     case "smlsll_za_zzi_s4xi":
     case "smlsll_za_zzi_d4xi":
+    case "umlal_za_zzi_1":
+    case "umlal_za_zzi_2xi":
+    case "umlal_za_zzi_4xi":
     case "umlall_za_zzi_s":
     case "umlall_za_zzi_d":
     case "umlall_za_zzi_s2xi":
     case "umlall_za_zzi_d2xi":
     case "umlall_za_zzi_s4xi":
     case "umlall_za_zzi_d4xi":
+    case "umlsl_za_zzi_1":
+    case "umlsl_za_zzi_2xi":
+    case "umlsl_za_zzi_4xi":
     case "umlsll_za_zzi_s":
     case "umlsll_za_zzi_d":
     case "umlsll_za_zzi_s2xi":
     case "umlsll_za_zzi_d2xi":
     case "umlsll_za_zzi_s4xi":
     case "umlsll_za_zzi_d4xi":
+    case "sumlall_za_zzi_s":
+    case "sumlall_za_zzi_s2xi":
+    case "sumlall_za_zzi_s4xi":
+    case "usmlall_za_zzi_s":
+    case "usmlall_za_zzi_s2xi":
+    case "usmlall_za_zzi_s4xi":
+    case "smlal_za_zzw_2x2":
+    case "smlal_za_zzw_4x4":
     case "smlall_za_zzw_2x2":
     case "smlall_za_zzw_4x4":
+    case "smlsl_za_zzw_2x2":
+    case "smlsl_za_zzw_4x4":
     case "smlsll_za_zzw_2x2":
     case "smlsll_za_zzw_4x4":
+    case "umlal_za_zzw_2x2":
+    case "umlal_za_zzw_4x4":
     case "umlall_za_zzw_2x2":
     case "umlall_za_zzw_4x4":
+    case "umlsl_za_zzw_2x2":
+    case "umlsl_za_zzw_4x4":
     case "umlsll_za_zzw_2x2":
     case "umlsll_za_zzw_4x4":
+    case "usmlall_za_zzw_s2x2":
+    case "usmlall_za_zzw_s4x4":
+      return [za, first, second];
+    default:
+      return [];
+  }
+}
+
+function smeFloatLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
+  const srcLane = smeFloatLongArithmeticSourceLane();
+  const za = { kind: "text", text: smeFloatLongArithmeticZaText(inst) } satisfies Operand;
+  const first = smeLongArithmeticFirstSource(inst, srcLane);
+  const second = smeLongArithmeticSecondSource(inst, srcLane);
+
+  switch (inst.encoding!.encodingId) {
+    case "bfmlal_za_zzv_1":
+    case "bfmlal_za_zzv_2x1":
+    case "bfmlal_za_zzv_4x1":
+    case "bfmlal_za_zzi_1":
+    case "bfmlal_za_zzi_2xi":
+    case "bfmlal_za_zzi_4xi":
+    case "bfmlal_za_zzw_2x2":
+    case "bfmlal_za_zzw_4x4":
+    case "bfmlsl_za_zzv_1":
+    case "bfmlsl_za_zzv_2x1":
+    case "bfmlsl_za_zzv_4x1":
+    case "bfmlsl_za_zzi_1":
+    case "bfmlsl_za_zzi_2xi":
+    case "bfmlsl_za_zzi_4xi":
+    case "bfmlsl_za_zzw_2x2":
+    case "bfmlsl_za_zzw_4x4":
+    case "fmlal_za_zzv_1":
+    case "fmlal_za_zzv_2x1":
+    case "fmlal_za_zzv_4x1":
+    case "fmlal_za_zzi_1":
+    case "fmlal_za_zzi_2xi":
+    case "fmlal_za_zzi_4xi":
+    case "fmlal_za_zzw_2x2":
+    case "fmlal_za_zzw_4x4":
+    case "fmlsl_za_zzv_1":
+    case "fmlsl_za_zzv_2x1":
+    case "fmlsl_za_zzv_4x1":
+    case "fmlsl_za_zzi_1":
+    case "fmlsl_za_zzi_2xi":
+    case "fmlsl_za_zzi_4xi":
+    case "fmlsl_za_zzw_2x2":
+    case "fmlsl_za_zzw_4x4":
       return [za, first, second];
     default:
       return [];
@@ -891,15 +1198,23 @@ function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Z
     case "sub_za_zw.xml":
     case "fmla_za_zzw.xml":
     case "fmls_za_zzw.xml":
+    case "bfmla_za_zzw.xml":
+    case "bfmls_za_zzw.xml":
       return (fields[fieldName] ?? 0) * count;
     case "fadd_za_zw.xml":
     case "fsub_za_zw.xml":
+    case "bfadd_za_zw.xml":
+    case "bfsub_za_zw.xml":
       return (fields.Zm ?? 0) * count;
     case "fmla_za_zzv.xml":
     case "fmls_za_zzv.xml":
+    case "bfmla_za_zzv.xml":
+    case "bfmls_za_zzv.xml":
       return fields[fieldName] ?? 0;
     case "fmla_za_zzi.xml":
     case "fmls_za_zzi.xml":
+    case "bfmla_za_zzi.xml":
+    case "bfmls_za_zzi.xml":
       return fieldName === "Zn" ? (fields.Zn ?? 0) * count : (fields.Zm ?? 0);
     default:
       return fields[fieldName] ?? 0;
@@ -931,15 +1246,23 @@ function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
       ];
     case "fadd_za_zw.xml":
     case "fsub_za_zw.xml":
+    case "bfadd_za_zw.xml":
+    case "bfsub_za_zw.xml":
       return [za, { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) }];
     case "fmla_za_zzv.xml":
     case "fmls_za_zzv.xml":
+    case "bfmla_za_zzv.xml":
+    case "bfmls_za_zzv.xml":
       return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
     case "fmla_za_zzi.xml":
     case "fmls_za_zzi.xml":
+    case "bfmla_za_zzi.xml":
+    case "bfmls_za_zzi.xml":
       return [za, first, { kind: "text", text: smeIndexedSourceText(inst, lane) }];
     case "fmla_za_zzw.xml":
     case "fmls_za_zzw.xml":
+    case "bfmla_za_zzw.xml":
+    case "bfmls_za_zzw.xml":
       return [
         za,
         first,
@@ -954,16 +1277,19 @@ function smeDotSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): nu
   const fields = inst.fields!;
   const count = smeDotGroupCount(inst.encoding!.className);
   switch (inst.encoding!.fileName) {
+    case "bfdot_za_zzv.xml":
     case "sdot_za32_zzv.xml":
     case "udot_za32_zzv.xml":
     case "sdot_za_zzv.xml":
     case "udot_za_zzv.xml":
       return fields[fieldName] ?? 0;
+    case "bfdot_za_zzi.xml":
     case "sdot_za32_zzi.xml":
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
     case "udot_za_zzi.xml":
       return fieldName === "Zn" ? (fields.Zn ?? 0) * count : (fields.Zm ?? 0);
+    case "bfdot_za_zzw.xml":
     case "sdot_za32_zzw.xml":
     case "udot_za32_zzw.xml":
     case "sdot_za_zzw.xml":
@@ -986,16 +1312,19 @@ function smeDotOperands(inst: DecodedInstruction): Operand[] {
   } satisfies Operand;
 
   switch (inst.encoding!.fileName) {
+    case "bfdot_za_zzv.xml":
     case "sdot_za32_zzv.xml":
     case "udot_za32_zzv.xml":
     case "sdot_za_zzv.xml":
     case "udot_za_zzv.xml":
       return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${srcLane}` }];
+    case "bfdot_za_zzi.xml":
     case "sdot_za32_zzi.xml":
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
     case "udot_za_zzi.xml":
       return [za, first, { kind: "text", text: smeIndexedSourceText(inst, srcLane) }];
+    case "bfdot_za_zzw.xml":
     case "sdot_za32_zzw.xml":
     case "udot_za32_zzw.xml":
     case "sdot_za_zzw.xml":
@@ -1048,6 +1377,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "mrs.xml":
     case "msr_reg.xml":
       return systemMoveOperands(inst, encoding.mnemonic);
+    case "mrrs.xml":
+    case "msrr.xml":
+      return systemMove128Operands(inst, encoding.mnemonic);
+    case "ldapr.xml":
+      return ldaprOperands(inst);
     case "movprfx_z_z.xml":
       return sveMovprfxOperands(inst);
     case "movprfx_z_p_z.xml":
@@ -1056,6 +1390,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveFcpyOperands(inst);
     case "fdup_z_i.xml":
       return sveFdupOperands(inst);
+    case "dup_z_zi.xml":
+      return sveDupIndexedOperands(inst);
     case "dup_z_i.xml":
       return sveDupImmediateOperands(inst);
     case "cpy_z_o_i.xml":
@@ -1113,26 +1449,64 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sub_za_zzw.xml":
     case "fadd_za_zw.xml":
     case "fsub_za_zw.xml":
+    case "bfadd_za_zw.xml":
+    case "bfsub_za_zw.xml":
     case "fmla_za_zzv.xml":
     case "fmla_za_zzi.xml":
     case "fmla_za_zzw.xml":
     case "fmls_za_zzv.xml":
     case "fmls_za_zzi.xml":
     case "fmls_za_zzw.xml":
+    case "bfmla_za_zzv.xml":
+    case "bfmla_za_zzi.xml":
+    case "bfmla_za_zzw.xml":
+    case "bfmls_za_zzv.xml":
+    case "bfmls_za_zzi.xml":
+    case "bfmls_za_zzw.xml":
       return smeArithmeticOperands(inst);
     case "smlall_za_zzi.xml":
     case "smlall_za_zzv.xml":
     case "smlall_za_zzw.xml":
+    case "smlal_za_zzi.xml":
+    case "smlal_za_zzv.xml":
+    case "smlal_za_zzw.xml":
+    case "smlsl_za_zzi.xml":
+    case "smlsl_za_zzv.xml":
+    case "smlsl_za_zzw.xml":
     case "smlsll_za_zzi.xml":
     case "smlsll_za_zzv.xml":
     case "smlsll_za_zzw.xml":
+    case "umlal_za_zzi.xml":
+    case "umlal_za_zzv.xml":
+    case "umlal_za_zzw.xml":
     case "umlall_za_zzi.xml":
     case "umlall_za_zzv.xml":
     case "umlall_za_zzw.xml":
+    case "umlsl_za_zzi.xml":
+    case "umlsl_za_zzv.xml":
+    case "umlsl_za_zzw.xml":
     case "umlsll_za_zzi.xml":
     case "umlsll_za_zzv.xml":
     case "umlsll_za_zzw.xml":
+    case "sumlall_za_zzi.xml":
+    case "sumlall_za_zzv.xml":
+    case "usmlall_za_zzi.xml":
+    case "usmlall_za_zzv.xml":
+    case "usmlall_za_zzw.xml":
       return smeLongArithmeticOperands(inst);
+    case "bfmlal_za_zzi.xml":
+    case "bfmlal_za_zzv.xml":
+    case "bfmlal_za_zzw.xml":
+    case "bfmlsl_za_zzi.xml":
+    case "bfmlsl_za_zzv.xml":
+    case "bfmlsl_za_zzw.xml":
+    case "fmlal_za_zzi.xml":
+    case "fmlal_za_zzv.xml":
+    case "fmlal_za_zzw.xml":
+    case "fmlsl_za_zzi.xml":
+    case "fmlsl_za_zzv.xml":
+    case "fmlsl_za_zzw.xml":
+      return smeFloatLongArithmeticOperands(inst);
     case "sdot_za32_zzv.xml":
     case "sdot_za32_zzi.xml":
     case "sdot_za32_zzw.xml":
@@ -1145,19 +1519,44 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "udot_za_zzv.xml":
     case "udot_za_zzi.xml":
     case "udot_za_zzw.xml":
+    case "bfdot_za_zzv.xml":
+    case "bfdot_za_zzi.xml":
+    case "bfdot_za_zzw.xml":
       return smeDotOperands(inst);
     case "cmpeq_p_p_zi.xml":
       return sveCompareImmediateOperands(inst);
+    case "cmpeq_p_p_zz.xml":
+      return sveCompareVectorOperands(inst);
+    case "cmpeq_p_p_zw.xml":
+      return sveCompareWideVectorOperands(inst);
+    case "ptrue_p_s.xml":
+    case "ptrues_p_s.xml":
+      return svePtrueOperands(inst);
+    case "frinta_z_p_z.xml":
+      return svePredicatedUnaryOperands(inst);
+    case "prfb_i_p_bi.xml":
+    case "prfd_i_p_bi.xml":
+    case "prfh_i_p_bi.xml":
+    case "prfw_i_p_bi.xml":
+      return sveScalarImmediatePrefetchOperands(inst);
     case "incb_r_rs.xml":
     case "decb_r_rs.xml":
     case "sqincb_r_rs.xml":
     case "sqincd_r_rs.xml":
     case "sqinch_r_rs.xml":
     case "sqincw_r_rs.xml":
+    case "uqincb_r_rs.xml":
+    case "uqincd_r_rs.xml":
+    case "uqinch_r_rs.xml":
+    case "uqincw_r_rs.xml":
     case "sqdecb_r_rs.xml":
     case "sqdecd_r_rs.xml":
     case "sqdech_r_rs.xml":
     case "sqdecw_r_rs.xml":
+    case "uqdecb_r_rs.xml":
+    case "uqdecd_r_rs.xml":
+    case "uqdech_r_rs.xml":
+    case "uqdecw_r_rs.xml":
       return sveIncDecScalarOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
