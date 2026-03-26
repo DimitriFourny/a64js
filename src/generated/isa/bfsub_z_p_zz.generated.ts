@@ -1,0 +1,45 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "bfsub_z_p_zz",
+    "encodingId": "bfsub_z_p_zz_",
+    "mnemonic": "BFSUB",
+    "className": "SVE2",
+    "fileName": "bfsub_z_p_zz.xml",
+    "mask": 4294959104,
+    "value": 1694597120,
+    "bitCount": 19,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "opc",
+        "lsb": 16,
+        "width": 4
+      },
+      {
+        "name": "Pg",
+        "lsb": 10,
+        "width": 3
+      },
+      {
+        "name": "Zm",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zdn",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_SVE_B16B16"
+    ],
+    "guards": []
+  }
+];

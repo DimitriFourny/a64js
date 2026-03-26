@@ -42,89 +42,13 @@ Priority rule:
 - use the capstone snapshot and `basic-a64-instructions.s.yaml` volume as the default tie-breaker
 - only take niche SME/SVE/AdvSIMD work ahead of scalar/core A64 work when it clearly removes a larger unsupported batch
 
-### Scalar load/store immediate and unscaled family
-
-Scope:
-
-- implement the common scalar general-purpose load/store families before narrower architectural cleanup
-- cover the immediate and unscaled forms as one coherent batch instead of one mnemonic at a time
-- include shared decode/disasm operand handling for base-plus-immediate addressing with `sp`
-- promote the matching XML files into `tools/supported-files.ts` only after the family is correct end-to-end
-
-Anchors:
-
-- `basic-a64-instructions.s.yaml`: highest-value remaining source file at `1180` unsupported cases
-- primary XML families include `ldr_imm_gen.xml`, `str_imm_gen.xml`, `ldur_gen.xml`, `stur_gen.xml`
-- adjacent scalar families likely worth batching if operand logic is shared: `ldrb_imm.xml`, `ldrh_imm.xml`, `strb_imm.xml`, `strh_imm.xml`, `ldrsw_imm.xml`
-
-Done when:
-
-- the targeted scalar load/store XML families decode correctly
-- `disasm()` renders canonical base-plus-immediate forms like `ldr w8, [sp, #0x3c]` instead of `.inst`
-- supported-file entries and generated fixtures are updated together
-- tests pass after regeneration
-
-### SME2 BF16 subtraction completion
-
-Scope:
-
-- finish the remaining SME2 BF16 subtraction family work
-- cover the outstanding decode/disasm paths as a single batch
-- promote the matching XML files into `tools/supported-files.ts` only after the family is correct end-to-end
-
-Anchors:
-
-- primary theme from the current unsupported backlog: remaining SME2 BF16 subtraction work
-- likely impact is concentrated in `basic-a64-instructions.s.yaml` and related BF16 XML families
-
-Done when:
-
-- the remaining SME2 BF16 subtraction XML families decode correctly
-- `disasm()` no longer falls back to `.inst` for the newly supported capstone cases
-- supported-file entries and generated fixtures are updated together
-- tests pass after regeneration
-
-### SVE predicate and compare cleanup batch
-
-Scope:
-
-- finish the remaining SVE predicate/compare cleanup left after the recent `cmpeq`, `ptrue`, `ptrues`, `frinta`, and scalar prefetch work
-- treat related XML families as one batch where they share operand/guard behavior
-
-Anchors:
-
-- current backlog note: remaining SVE predicate cleanup
-- highest-value source files still include `neon-compare-instructions.s.yaml` and other SVE-heavy capstone shards
-
-Done when:
-
-- the targeted predicate/compare XML families are implemented as a coherent batch
-- feature guards still behave correctly in `decode()`
-- regenerated fixtures and tests reflect the reduction in `.inst` fallbacks
-
-### AdvSIMD high-volume cleanup batch
-
-Scope:
-
-- attack the remaining high-count AdvSIMD backlog as a family-oriented batch instead of one XML at a time
-- prioritize shared formatter/operand patterns before isolated one-off instructions
-
-Anchors:
-
-- `neon-simd-misc.s.yaml`: `260`
-- `neon-simd-shift.s.yaml`: `159`
-- `neon-3vdiff.s.yaml`: `142`
-- `neon-simd-ldst-one-elem.s.yaml`: `128`
-
-Done when:
-
-- at least one coherent AdvSIMD family group is fully promoted to supported
-- the work item records which XML families were completed
-- generation and tests pass
-
 ## Blocked
 
-- None.
+- Workflow queue is currently exhausted: `Ready` contains no work items and `In Progress` is empty, while the remaining named batches are already blocked by the stale capstone fixture failure at `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`, so no item can be claimed under the execution rule for this run.
+- AdvSIMD high-volume cleanup batch: claimed under the current workflow, but before any new family promotion could be validated, `bun tools/generate.ts` succeeded while `bun test` still failed on the pre-existing stale capstone fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`; the repository also does not expose a local capstone snapshot-refresh workflow under the normal commands, so newly promoted AdvSIMD XML families cannot be validated end-to-end right now.
+- SVE predicate-control cleanup batch: decode/disasm support for `brka_p_p_p.xml`, `brkb_p_p_p.xml`, `brkn_p_p_pp.xml`, `brkns_p_p_pp.xml`, `brkpa_p_p_pp.xml`, `brkpas_p_p_pp.xml`, `brkpb_p_p_pp.xml`, `brkpbs_p_p_pp.xml`, `ptest_p_p.xml`, `rdffr_p_f.xml`, `rdffr_p_p_f.xml`, and `rdffrs_p_p_f.xml` is implemented locally; `bun tools/generate.ts` succeeds and direct disasm coverage passes, but `bun test` is still blocked by the pre-existing stale capstone fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`, so the batch cannot be validated end-to-end under the current workflow.
+- SME2 BF16 subtraction completion: decode/disasm support for `bfsub_z_{p_zz,zz}.xml` and `bfmls_z_{p_zzz,zzzi}.xml` is implemented locally, `bun tools/generate.ts` succeeds, and direct disasm coverage passes, but the committed capstone fixtures under `test/generated/capstone/` do not refresh from the available workflow; `bun test` therefore cannot validate the batch end-to-end because those snapshots remain stale and the suite still fails on the pre-existing scalar load/store stale-fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`.
+- Scalar load/store immediate and unscaled family: decode/disasm support and `tools/supported-files.ts` promotion are implemented locally, and `bun tools/generate.ts` succeeds, but the committed capstone fixtures under `test/generated/capstone/` are stale and the repo does not contain a local snapshot-refresh workflow/script to regenerate them; `bun test` therefore fails in `test/capstone.test.ts` on newly supported cases such as `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`.
 
 ## Done
 

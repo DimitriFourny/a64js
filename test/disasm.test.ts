@@ -49,6 +49,23 @@ test("decodes LDAPR base-register and post-index forms", () => {
   assert.equal(disasm(0xd9c009e3, undefined, { features: ["FEAT_LRCPC3"] }), "ldapr x3, [x15], #8");
 });
 
+test("decodes scalar load/store immediate and unscaled forms", () => {
+  assert.equal(disasm(4181723124), "ldr x20, [sp, #0x8]");
+  assert.equal(disasm(3107980365), "ldr w13, [x2, #0x4]");
+  assert.equal(disasm(4177527806), "str x30, [sp]");
+  assert.equal(disasm(3107978388), "str w20, [x4, #0x3ffc]");
+  assert.equal(disasm(3112174754), "ldrsw x2, [x5, #0x4]");
+  assert.equal(disasm(2034237570), "ldrh w2, [x4]");
+  assert.equal(disasm(960619642), "ldrb w26, [x3, #0x79]");
+  assert.equal(disasm(2030050644), "strh w20, [x10, #0xe]");
+  assert.equal(disasm(960494711), "strb w23, [x3, #0xfff]");
+  assert.equal(disasm(3092247532), "ldur w12, [sp, #0xff]");
+  assert.equal(disasm(3088056336), "stur w16, [x0, #-0x100]");
+  assert.equal(disasm(3092250611), "ldr w19, [sp, #0xff]!");
+  assert.equal(disasm(3088054259), "str w19, [sp], #0xff");
+  assert.equal(disasm(3088059797), "str w21, [x12, #-0x100]!");
+});
+
 test("decodes PACIASP from XML-generated data", () => {
   const decoded = decode(0xd503233f, FEATURES);
   assert.equal(decoded.status, "ok");
@@ -85,6 +102,14 @@ test("decodes SVE FCPY using the FMOV alias", () => {
 
 test("decodes SVE FDUP using the FMOV alias", () => {
   assert.equal(disasm(0x2579d800, undefined, { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] }), "fmov z0.h, #-0.12500000");
+});
+
+test("decodes SVE BF16 subtraction forms", () => {
+  const options = { features: ["FEAT_SVE_B16B16"] };
+  assert.equal(disasm(1694600631, undefined, options), "bfsub z23.h, p3/m, z23.h, z13.h");
+  assert.equal(disasm(1695024567, undefined, options), "bfsub z23.h, z13.h, z8.h");
+  assert.equal(disasm(1697131959, undefined, options), "bfmls z23.h, p3/m, z13.h, z8.h");
+  assert.equal(disasm(1684540855, undefined, options), "bfmls z23.h, z13.h, z0.h[5]");
 });
 
 test("decodes scalar FCMP and FCMPE forms", () => {
@@ -125,6 +150,27 @@ test("decodes PTRUES predicate patterns", () => {
   const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
   assert.equal(disasm(630842279, undefined, options), "ptrues p7.s, mul4");
   assert.equal(disasm(630842343, undefined, options), "ptrues p7.s");
+});
+
+test("decodes SVE predicate break and test forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(621837808, undefined, options), "brka p0.b, p15/m, p15.b");
+  assert.equal(disasm(621837792, undefined, options), "brka p0.b, p15/z, p15.b");
+  assert.equal(disasm(630226416, undefined, options), "brkb p0.b, p15/m, p15.b");
+  assert.equal(disasm(622361632, undefined, options), "brkn p0.b, p15/z, p1.b, p0.b");
+  assert.equal(disasm(626555936, undefined, options), "brkns p0.b, p15/z, p1.b, p0.b");
+  assert.equal(disasm(620952608, undefined, options), "brkpa p0.b, p15/z, p1.b, p2.b");
+  assert.equal(disasm(625146912, undefined, options), "brkpas p0.b, p15/z, p1.b, p2.b");
+  assert.equal(disasm(620952624, undefined, options), "brkpb p0.b, p15/z, p1.b, p2.b");
+  assert.equal(disasm(625146928, undefined, options), "brkpbs p0.b, p15/z, p1.b, p2.b");
+  assert.equal(disasm(626064384, undefined, options), "ptest p15, p0.b");
+});
+
+test("decodes RDFFR predicate forms", () => {
+  const options = { features: ["FEAT_SVE"] };
+  assert.equal(disasm(622456832, undefined, options), "rdffr p0.b");
+  assert.equal(disasm(622391296, undefined, options), "rdffr p0.b, p0/z");
+  assert.equal(disasm(626585600, undefined, options), "rdffrs p0.b, p0/z");
 });
 
 test("decodes SVE predicated FRINT* unary forms", () => {

@@ -236,6 +236,68 @@ function ldiappOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function formatSignedHexImmediate(value: bigint): string {
+  if (value < 0) {
+    return `#-0x${(-value).toString(16)}`;
+  }
+  return `#0x${value.toString(16)}`;
+}
+
+function scalarLoadStoreRegisterWidth(fileName: string, size: number | undefined): 32 | 64 {
+  switch (fileName) {
+    case "ldr_imm_gen.xml":
+    case "str_imm_gen.xml":
+    case "ldur_gen.xml":
+    case "stur_gen.xml":
+      return size === 3 ? 64 : 32;
+    case "ldrsw_imm.xml":
+      return 64;
+    default:
+      return 32;
+  }
+}
+
+function scalarLoadStoreImmediateScale(fileName: string, size: number | undefined): bigint {
+  switch (fileName) {
+    case "ldr_imm_gen.xml":
+    case "str_imm_gen.xml":
+      return 1n << BigInt(size ?? 0);
+    case "ldrh_imm.xml":
+    case "strh_imm.xml":
+      return 2n;
+    case "ldrsw_imm.xml":
+      return 4n;
+    default:
+      return 1n;
+  }
+}
+
+function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
+  const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+
+  if (fields.imm12 !== undefined) {
+    const offset = BigInt(fields.imm12) * scalarLoadStoreImmediateScale(inst.encoding!.fileName, fields.size);
+    return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
+  }
+
+  const offset = signExtend(fields.imm9 ?? 0, 9);
+  if (encodingId.includes("immpost")) {
+    return `[${base}], ${formatSignedHexImmediate(offset)}`;
+  }
+  if (encodingId.includes("immpre")) {
+    return `[${base}, ${formatSignedHexImmediate(offset)}]!`;
+  }
+  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
+}
+
+function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
+  return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+}
+
 function sveLaneFromSize(size: number | undefined): "h" | "s" | "d" {
   return (["h", "s", "d"] as const)[(size ?? 1) - 1] ?? "h";
 }
@@ -727,11 +789,98 @@ function svePtruePredicateCounterOperands(inst: DecodedInstruction): Operand[] {
   return [{ kind: "text", text: svePredicateCounterText(fields.PNd, lane) }];
 }
 
+function svePredicateBreakOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+
+  return [
+    predReg(fields.Pd ?? 0, undefined, "b"),
+    predReg(fields.Pg ?? 0, (fields.M ?? 0) === 1 ? "m" : "z"),
+    predReg(fields.Pn ?? 0, undefined, "b"),
+  ];
+}
+
+function svePredicateBreakPropagationOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const pdm = fields.Pdm ?? 0;
+
+  return [
+    predReg(pdm, undefined, "b"),
+    predReg(fields.Pg ?? 0, "z"),
+    predReg(fields.Pn ?? 0, undefined, "b"),
+    predReg(pdm, undefined, "b"),
+  ];
+}
+
+function svePredicateBreakPairOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+
+  return [
+    predReg(fields.Pd ?? 0, undefined, "b"),
+    predReg(fields.Pg ?? 0, "z"),
+    predReg(fields.Pn ?? 0, undefined, "b"),
+    predReg(fields.Pm ?? 0, undefined, "b"),
+  ];
+}
+
+function svePredicateTestOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [predReg(fields.Pg ?? 0), predReg(fields.Pn ?? 0, undefined, "b")];
+}
+
+function sveRdffrOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+
+  switch (inst.encoding!.fileName) {
+    case "rdffr_p_f.xml":
+      return [predReg(fields.Pd ?? 0, undefined, "b")];
+    case "rdffr_p_p_f.xml":
+    case "rdffrs_p_p_f.xml":
+      return [predReg(fields.Pd ?? 0, undefined, "b"), predReg(fields.Pg ?? 0, "z")];
+    default:
+      return [];
+  }
+}
+
 function svePredicatedUnaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
   const mode = inst.encoding!.encodingId.endsWith("_z") ? "z" : "m";
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, mode), vecReg(fields.Zn, lane)];
+}
+
+function sveBfSubOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveLaneFromSize(fields.size);
+
+  switch (inst.encoding!.fileName) {
+    case "bfsub_z_p_zz.xml":
+      return [
+        vecReg(fields.Zdn ?? 0, lane),
+        predReg(fields.Pg ?? 0, "m"),
+        vecReg(fields.Zdn ?? 0, lane),
+        vecReg(fields.Zm ?? 0, lane),
+      ];
+    case "bfsub_z_zz.xml":
+      return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+    default:
+      return [];
+  }
+}
+
+function sveBfmlsOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveLaneFromSize(fields.size);
+  const dest = vecReg(fields.Zda ?? 0, lane);
+  const first = vecReg(fields.Zn ?? 0, lane);
+
+  switch (inst.encoding!.fileName) {
+    case "bfmls_z_p_zzz.xml":
+      return [dest, predReg(fields.Pg ?? 0, "m"), first, vecReg(fields.Zm ?? 0, lane)];
+    case "bfmls_z_zzzi.xml":
+      return [dest, first, { kind: "text", text: smeIndexedSourceText(inst, lane) }];
+    default:
+      return [];
+  }
 }
 
 function svePrefetchOpText(prfop: number): string {
@@ -1561,6 +1710,16 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcmp_float.xml":
     case "fcmpe_float.xml":
       return scalarFpCompareOperands(inst);
+    case "ldr_imm_gen.xml":
+    case "str_imm_gen.xml":
+    case "ldur_gen.xml":
+    case "stur_gen.xml":
+    case "ldrb_imm.xml":
+    case "ldrh_imm.xml":
+    case "strb_imm.xml":
+    case "strh_imm.xml":
+    case "ldrsw_imm.xml":
+      return scalarLoadStoreOperands(inst);
     case "dup_z_zi.xml":
       return sveDupIndexedOperands(inst);
     case "dup_z_i.xml":
@@ -1724,8 +1883,31 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return svePtrueOperands(inst);
     case "ptrue_pn_i.xml":
       return svePtruePredicateCounterOperands(inst);
+    case "brka_p_p_p.xml":
+    case "brkb_p_p_p.xml":
+      return svePredicateBreakOperands(inst);
+    case "brkn_p_p_pp.xml":
+    case "brkns_p_p_pp.xml":
+      return svePredicateBreakPropagationOperands(inst);
+    case "brkpa_p_p_pp.xml":
+    case "brkpas_p_p_pp.xml":
+    case "brkpb_p_p_pp.xml":
+    case "brkpbs_p_p_pp.xml":
+      return svePredicateBreakPairOperands(inst);
+    case "ptest_p_p.xml":
+      return svePredicateTestOperands(inst);
+    case "rdffr_p_f.xml":
+    case "rdffr_p_p_f.xml":
+    case "rdffrs_p_p_f.xml":
+      return sveRdffrOperands(inst);
     case "frinta_z_p_z.xml":
       return svePredicatedUnaryOperands(inst);
+    case "bfsub_z_p_zz.xml":
+    case "bfsub_z_zz.xml":
+      return sveBfSubOperands(inst);
+    case "bfmls_z_p_zzz.xml":
+    case "bfmls_z_zzzi.xml":
+      return sveBfmlsOperands(inst);
     case "prfb_i_p_bi.xml":
     case "prfd_i_p_bi.xml":
     case "prfh_i_p_bi.xml":
