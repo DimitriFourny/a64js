@@ -24,6 +24,8 @@ type ParseEncodingFileOptions = {
   ignoreUnsupportedGuards?: boolean;
 };
 
+type FieldWidthMap = Map<string, number>;
+
 function parseBoxBits(box: any): BoxBits {
   const width = Number(box.attrs.width ?? "1");
   const cells = children(box, "c");
@@ -96,7 +98,43 @@ function computeMaskValue(bits: BoxBits): { mask: number; value: number; bitCoun
   return { mask: mask >>> 0, value: value >>> 0, bitCount };
 }
 
-function parseGuardTerm(term: string): GuardCheck {
+function parseGuardTerm(term: string, fieldWidths: FieldWidthMap): GuardCheck {
+  const concatMatch = /^([A-Za-z0-9_:\[\]]+)\s*(==|!=)\s*'([01x ]+)'$/.exec(term.trim());
+  if (concatMatch && concatMatch[1].includes("::")) {
+    const parts = concatMatch[1].split("::").map((part) => {
+      const slice = /^([A-Za-z0-9_]+)(?:\[(\d+)(?::(\d+))?\])?$/.exec(part.trim());
+      if (!slice) {
+        throw new Error(`unsupported guard term: ${term}`);
+      }
+      const width = fieldWidths.get(slice[1]);
+      if (width === undefined) {
+        throw new Error(`unknown guard field width: ${slice[1]}`);
+      }
+      const msb = slice[2] ? Number(slice[2]) : width - 1;
+      const lsb = slice[3] ? Number(slice[3]) : slice[2] ? Number(slice[2]) : 0;
+      return {
+        field: slice[1],
+        msb,
+        lsb,
+      };
+    });
+    const literal = concatMatch[3].replaceAll(" ", "");
+    return {
+      kind: concatMatch[2] === "==" ? "eq_concat" : "ne_concat",
+      parts,
+      value: Number.parseInt(literal.replaceAll("x", "0"), 2),
+    };
+  }
+
+  const fieldCompareMatch = /^([A-Za-z0-9_]+)\s*(==|!=)\s*([A-Za-z0-9_]+)$/.exec(term.trim());
+  if (fieldCompareMatch) {
+    return {
+      kind: fieldCompareMatch[2] === "==" ? "eq_field" : "ne_field",
+      field: fieldCompareMatch[1],
+      otherField: fieldCompareMatch[3],
+    };
+  }
+
   const sliceMatch = /([A-Za-z0-9_]+)\[(\d+)\]\s*(==|!=)\s*'([01])'/.exec(term);
   if (sliceMatch) {
     const field = sliceMatch[1];
@@ -125,7 +163,7 @@ function parseGuardTerm(term: string): GuardCheck {
   return { kind: operator, field, mask, lsb: 0, value };
 }
 
-function parseGuardTermAlternatives(term: string): GuardCheck[][] {
+function parseGuardTermAlternatives(term: string, fieldWidths: FieldWidthMap): GuardCheck[][] {
   const trimmed = term.trim();
 
   if (trimmed === "size::sh == '001'") {
@@ -151,14 +189,55 @@ function parseGuardTermAlternatives(term: string): GuardCheck[][] {
     }]);
   }
 
-  return [[parseGuardTerm(trimmed)]];
+  return [[parseGuardTerm(trimmed, fieldWidths)]];
 }
 
-function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {}): Guard[] {
+function invertGuardCheck(check: GuardCheck): GuardCheck {
+  switch (check.kind) {
+    case "eq":
+      return { ...check, kind: "ne" };
+    case "ne":
+      return { ...check, kind: "eq" };
+    case "eq_field":
+      return { ...check, kind: "ne_field" };
+    case "ne_field":
+      return { ...check, kind: "eq_field" };
+    case "eq_concat":
+      return { ...check, kind: "ne_concat" };
+    case "ne_concat":
+      return { ...check, kind: "eq_concat" };
+  }
+}
+
+function parseValidGuardTermAlternatives(term: string, fieldWidths: FieldWidthMap): GuardCheck[][] {
+  const trimmed = term.trim();
+  const inMatch = /^([A-Za-z0-9_]+)\s+IN\s+\{(.+)\}$/.exec(trimmed);
+  if (inMatch) {
+    const field = inMatch[1];
+    const values = inMatch[2]
+      .split(",")
+      .map((value) => value.trim().replace(/^'+|'+$/g, ""))
+      .filter((value) => value.length > 0);
+    return [[
+      ...values.map((value) => ({
+        kind: "ne" as const,
+        field,
+        mask: value.startsWith("0x") ? -1 : ((1 << value.length) - 1) >>> 0,
+        lsb: 0,
+        value: value.startsWith("0x") ? Number.parseInt(value, 16) : Number.parseInt(value.replaceAll("x", "0"), 2),
+      })),
+    ]];
+  }
+
+  return parseGuardTermAlternatives(trimmed, fieldWidths).map((alternative) => alternative.map(invertGuardCheck));
+}
+
+function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: ParseEncodingFileOptions = {}): Guard[] {
   const guards: Guard[] = [];
+  const decodePreamble = source.split(/\nlet\s+/)[0] ?? source;
   const regex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
   let match: RegExpExecArray | null;
-  while ((match = regex.exec(source)) !== null) {
+  while ((match = regex.exec(decodePreamble)) !== null) {
     const condition = match[1].trim();
     if (condition.includes("IsFeatureImplemented(")) {
       continue;
@@ -173,7 +252,7 @@ function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {
     try {
       let alternatives: GuardCheck[][] = [[]];
       for (const term of terms) {
-        const termAlternatives = parseGuardTermAlternatives(term);
+        const termAlternatives = parseGuardTermAlternatives(term, fieldWidths);
         alternatives = alternatives.flatMap((existing) => termAlternatives.map((next) => [...existing, ...next]));
       }
       guards.push(...alternatives.map((all) => ({ all })));
@@ -241,11 +320,12 @@ export async function parseEncodingFile(
       continue;
     }
     const base = parseDiagram(regdiagram);
+    const fieldWidths = new Map(base.fields.map((field) => [field.name, field.width]));
     const psSection = firstChild(iclass, "ps_section");
     const decodePs = psSection ? children(psSection, "ps")[0] : undefined;
     const decodeText = decodePs ? children(decodePs, "pstext")[0]?.children.map((child) => (typeof child === "string" ? child : "")).join("") ?? "" : "";
     const features = collectFeatures(iclass, decodeText);
-    const guards = parseDecodeGuards(decodeText, options);
+    const guards = parseDecodeGuards(decodeText, fieldWidths, options);
     const className = iclass.attrs.name ?? "";
 
     for (const encoding of children(iclass, "encoding")) {
