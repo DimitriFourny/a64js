@@ -2,6 +2,7 @@ import { mkdir, rm, writeFile } from "node:fs/promises";
 import { basename, join } from "node:path";
 import type { GeneratedEncoding } from "../src/types.ts";
 import { parseEncodingFile } from "./encodings.ts";
+import { generateCapstoneFixtures } from "./generate-capstone.ts";
 import { SUPPORTED_FILES, XML_ROOT } from "./supported-files.ts";
 
 function bitCount(value: number): number {
@@ -95,6 +96,7 @@ async function main(): Promise<void> {
   }
 
   await writeFile(join(outputRoot, "index.generated.ts"), renderIndexModule(ordered, aliases, indexesByFile), "utf8");
+  await generateCapstoneFixtures();
   process.stdout.write(`generated ${encodings.length} encodings\n`);
 }
 

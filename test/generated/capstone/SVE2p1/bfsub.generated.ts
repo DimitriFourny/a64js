@@ -14,6 +14,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/bfsub.s.yaml",
+    "caseIndex": 1,
+    "word": 1694600631,
+    "asmText": "bfsub z23.h, p3/m, z23.h, z13.h",
+    "encodingFile": "bfsub_z_p_zz.xml",
+    "mnemonic": "BFSUB",
+    "features": [
+      "FEAT_SVE_B16B16"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/bfsub.s.yaml",
     "caseIndex": 2,
     "word": 69255159,
     "asmText": "movprfx z23, z31",
@@ -23,20 +34,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE2p1/bfsub.s.yaml",
-    "caseIndex": 1,
-    "word": 1694600631,
-    "asmText": "bfsub z23.h, p3/m, z23.h, z13.h",
-    "encodingFile": "bfsub_z_p_zz.xml",
-    "mnemonic": "BFSUB",
-    "features": [
-      "FEAT_SVE_B16B16"
     ]
   },
   {
@@ -139,3 +136,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

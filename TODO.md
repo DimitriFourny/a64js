@@ -57,32 +57,31 @@ Priority rule:
 
 ## Blocked
 
-- Capstone fixture refresh debt: `bun test` still fails in `test/capstone.test.ts` on the pre-existing stale unsupported entry `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`, because `stur_gen.xml` now decodes as supported while the committed `UNSUPPORTED_CAPSTONE_CASES` snapshot still expects `.inst`; this does not prevent queueing new `Ready` work, but it does block end-to-end green validation until the fixture refresh workflow is exposed or the snapshot is updated.
-- AdvSIMD high-volume cleanup batch: claimed under the current workflow, but before any new family promotion could be validated, `bun tools/generate.ts` succeeded while `bun test` still failed on the pre-existing stale capstone fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`; the repository also does not expose a local capstone snapshot-refresh workflow under the normal commands, so newly promoted AdvSIMD XML families cannot be validated end-to-end right now.
-- SVE predicate-control cleanup batch: decode/disasm support for `brka_p_p_p.xml`, `brkb_p_p_p.xml`, `brkn_p_p_pp.xml`, `brkns_p_p_pp.xml`, `brkpa_p_p_pp.xml`, `brkpas_p_p_pp.xml`, `brkpb_p_p_pp.xml`, `brkpbs_p_p_pp.xml`, `ptest_p_p.xml`, `rdffr_p_f.xml`, `rdffr_p_p_f.xml`, and `rdffrs_p_p_f.xml` is implemented locally; `bun tools/generate.ts` succeeds and direct disasm coverage passes, but `bun test` is still blocked by the pre-existing stale capstone fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`, so the batch cannot be validated end-to-end under the current workflow.
-- SME2 BF16 subtraction completion: decode/disasm support for `bfsub_z_{p_zz,zz}.xml` and `bfmls_z_{p_zzz,zzzi}.xml` is implemented locally, `bun tools/generate.ts` succeeds, and direct disasm coverage passes, but the committed capstone fixtures under `test/generated/capstone/` do not refresh from the available workflow; `bun test` therefore cannot validate the batch end-to-end because those snapshots remain stale and the suite still fails on the pre-existing scalar load/store stale-fixture case `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`.
-- Scalar load/store immediate and unscaled family: decode/disasm support and `tools/supported-files.ts` promotion are implemented locally, and `bun tools/generate.ts` succeeds, but the committed capstone fixtures under `test/generated/capstone/` are stale and the repo does not contain a local snapshot-refresh workflow/script to regenerate them; `bun test` therefore fails in `test/capstone.test.ts` on newly supported cases such as `basic-a64-instructions.s.yaml#909 STUR 0xb8100010`.
+- None.
 
 ## Done
 
 Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
 
-- None yet in this workflow format.
+- Capstone fixture refresh workflow: `bun tools/generate.ts` now refreshes the committed `test/generated/capstone/` shards from the tracked corpus, clearing the stale `basic-a64-instructions.s.yaml#909 STUR 0xb8100010` blocker and restoring end-to-end green validation under `bun test`.
+- SVE predicate-control cleanup batch: `42` capstone cases promoted to supported across `brka_p_p_p.xml`, `brkb_p_p_p.xml`, `brkn_p_p_pp.xml`, `brkns_p_p_pp.xml`, `brkpa_p_p_pp.xml`, `brkpas_p_p_pp.xml`, `brkpb_p_p_pp.xml`, `brkpbs_p_p_pp.xml`, `ptest_p_p.xml`, `rdffr_p_f.xml`, `rdffr_p_p_f.xml`, and `rdffrs_p_p_f.xml`.
+- SME2 BF16 subtraction completion: `21` capstone cases promoted to supported across `bfsub_z_{p_zz,zz}.xml` and `bfmls_z_{p_zzz,zzzi}.xml`.
+- Scalar load/store immediate and unscaled family: `57` capstone cases promoted to supported across `stur_gen.xml`, `ldur_gen.xml`, `str_imm_gen.xml`, `ldrb_imm.xml`, `ldrh_imm.xml`, `strb_imm.xml`, `strh_imm.xml`, and `ldrsw_imm.xml`.
 
 ## Snapshot
 
 Current capstone coverage snapshot:
 
-- `17763` supported capstone cases
-- `16858` unsupported capstone cases
-- `201` XML instruction files currently listed in `tools/supported-files.ts`
-- `1686` distinct unsupported XML instruction files
-- `896` capstone source YAML files containing unsupported cases
-- `911` distinct unsupported mnemonics
+- `19051` supported capstone cases
+- `15506` unsupported capstone cases
+- `262` XML instruction files currently listed in `tools/supported-files.ts`
+- `1621` distinct unsupported XML instruction files
+- `861` capstone source YAML files containing unsupported cases
+- `885` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `basic-a64-instructions.s.yaml`: `1180`
+- `basic-a64-instructions.s.yaml`: `1093`
 - `neon-simd-misc.s.yaml`: `260`
 - `neon-compare-instructions.s.yaml`: `180`
 - `neon-simd-shift.s.yaml`: `159`
@@ -91,16 +90,16 @@ Highest-value remaining source files right now:
 
 Largest unsupported feature sets:
 
-- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `4111`
-- `FEAT_SME2`: `2253`
-- `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `2030`
+- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `3773`
+- `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `1950`
 - `FEAT_AdvSIMD`: `1882`
-- `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `1329`
-- no feature gate recorded: `935`
-- `FEAT_SME`: `778`
+- `FEAT_SME2`: `1725`
+- no feature gate recorded: `856`
+- `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `785`
 - `FEAT_SVE2p1 || FEAT_SME2p1, FEAT_SVE2p1, FEAT_SME2p1`: `774`
-- `FEAT_SME_B16B16`: `408`
-- `FEAT_SVE`: `392`
+- `FEAT_SVE`: `386`
+- `FEAT_SME`: `294`
+- `FEAT_AdvSIMD && FEAT_FP16, FEAT_AdvSIMD, FEAT_FP16`: `179`
 
 Implication:
 
@@ -124,6 +123,7 @@ So this TODO tracks instructions that already map cleanly to XML encodings, but 
 
 - Do not add XML files to `tools/supported-files.ts` until both `decode()` and `disasm()` behave correctly for that family.
 - The generated capstone corpus is a progress metric, not the whole instruction universe.
+- `bun tools/generate.ts` now refreshes the committed capstone shards by repartitioning the tracked corpus against the current `tools/supported-files.ts` set.
 - The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
 - `tools/encodings.ts` needs to tolerate feature terms inside larger guard expressions; keep that in mind when working on mixed-guard XMLs.
 - If `MOVA`-related capstone accounting does not move as expected, verify the XML-to-case mapping before assuming the formatter is wrong.
