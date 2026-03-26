@@ -42,13 +42,6 @@ Priority rule:
 - use the capstone snapshot and `basic-a64-instructions.s.yaml` volume as the default tie-breaker
 - only take niche SME/SVE/AdvSIMD work ahead of scalar/core A64 work when it clearly removes a larger unsupported batch
 
-- AdvSIMD miscellaneous unary/saturating batch from `neon-simd-misc.s.yaml`: cover the unsupported unary and saturating vector operations across `suqadd_advsimd.xml`, `usqadd_advsimd.xml`, `sqabs_advsimd.xml`, `sqneg_advsimd.xml`, `abs_advsimd.xml`, `neg_advsimd.xml`, `rev64_advsimd.xml`, `saddlp_advsimd.xml`, `uaddlp_advsimd.xml`, `sadalp_advsimd.xml`, `uadalp_advsimd.xml`, and `cls_advsimd.xml`. Done when: lane arrangements and saturating/absolute/accumulate mnemonics render correctly across vector widths; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
-- AdvSIMD immediate-shift family from `neon-simd-shift.s.yaml`: implement the main vector shift batch across `sshr_advsimd.xml`, `ushr_advsimd.xml`, `ssra_advsimd.xml`, `usra_advsimd.xml`, `srshr_advsimd.xml`, `urshr_advsimd.xml`, `srsra_advsimd.xml`, `ursra_advsimd.xml`, `sri_advsimd.xml`, `sli_advsimd.xml`, `sqshlu_advsimd.xml`, and `sqshl_advsimd_imm.xml`. Done when: immediate ranges and arrangement-dependent mnemonics render correctly for all supported lane widths; the whole shift batch is promoted in `tools/supported-files.ts`; generation and tests pass.
-- AdvSIMD widening long/arithmetic batch from `neon-3vdiff.s.yaml`: implement the core widening arithmetic family across `saddl_advsimd.xml`, `uaddl_advsimd.xml`, `ssubl_advsimd.xml`, `usubl_advsimd.xml`, `sabal_advsimd.xml`, `uabal_advsimd.xml`, `sabdl_advsimd.xml`, `uabdl_advsimd.xml`, `smlal_advsimd_vec.xml`, `umlal_advsimd_vec.xml`, `smlsl_advsimd_vec.xml`, and `umlsl_advsimd_vec.xml`. Done when: widening/add-sub/absolute-difference/long multiply-accumulate vector forms decode and disassemble with correct arrangements; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
-- AdvSIMD single-structure load/store batch from `neon-simd-ldst-one-elem.s.yaml`: implement the one-element and replicate load/store family across `ld1r_advsimd.xml`, `ld2r_advsimd.xml`, `ld3r_advsimd.xml`, `ld4r_advsimd.xml`, `ld1_advsimd_sngl.xml`, `ld2_advsimd_sngl.xml`, `ld3_advsimd_sngl.xml`, `ld4_advsimd_sngl.xml`, `st1_advsimd_sngl.xml`, `st2_advsimd_sngl.xml`, `st3_advsimd_sngl.xml`, and `st4_advsimd_sngl.xml`. Done when: lane index syntax, structure lists, replicate forms, and post-index formatting all match expected assembly; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
-- AdvSIMD by-element multiply/MLA batch from `neon-2velem.s.yaml`: implement the remaining by-element arithmetic family across `mla_advsimd_elt.xml`, `mls_advsimd_elt.xml`, `fmla_advsimd_elt.xml`, `fmls_advsimd_elt.xml`, `fmul_advsimd_elt.xml`, `fmulx_advsimd_elt.xml`, `smlal_advsimd_elt.xml`, `smlsl_advsimd_elt.xml`, `sqdmlal_advsimd_elt.xml`, `umlal_advsimd_elt.xml`, `umlsl_advsimd_elt.xml`, and `sqdmlsl_advsimd_elt.xml`. Done when: indexed-lane operands and long/saturating by-element arithmetic disassemble correctly; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
-- RCpc/RCpc3 load-store batch from `armv8.4a-ldst.s.yaml` and `armv8.9a-lrcpc3.s.yaml`: implement the remaining ordered/unprivileged memory families across `ldapursb.xml`, `ldapursh.xml`, `ldapur_gen.xml`, `ldapurb.xml`, `ldapurh.xml`, `ldapursw.xml`, `stlur_gen.xml`, `stlurb.xml`, `stlurh.xml`, `stilp.xml`, `stlur_fpsimd.xml`, `ldapur_fpsimd.xml`, `stlr.xml`, `stl1_advsimd_sngl.xml`, and `ldap1_advsimd_sngl.xml`. Done when: RCpc, RCpc3, unprivileged acquire, and release/store variants render with correct addressing and operand syntax across GPR, FP/SIMD, and single-structure forms; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
-- MTE instruction batch from `armv8.5a-mte.s.yaml`: implement the remaining memory-tagging family across `stgp.xml`, `stg.xml`, `stzg.xml`, `st2g.xml`, `stz2g.xml`, `irg.xml`, `addg.xml`, `subg.xml`, `gmi.xml`, `cmpp_subps.xml`, `ldg.xml`, and `ldgm.xml`. Done when: tag store/load, pointer-generation, and comparison forms disassemble with correct immediate/address syntax; the family is promoted in `tools/supported-files.ts`; generation and tests pass.
 
 
 ## Blocked
@@ -59,6 +52,13 @@ Priority rule:
 
 Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
 
+- RCpc/RCpc3 load-store batch from `armv8.4a-ldst.s.yaml` and `armv8.9a-lrcpc3.s.yaml`: `274` capstone cases promoted across `ldapursb.xml`, `ldapursh.xml`, `ldapur_gen.xml`, `ldapurb.xml`, `ldapurh.xml`, `ldapursw.xml`, `stlur_gen.xml`, `stlurb.xml`, `stlurh.xml`, `stilp.xml`, `stlur_fpsimd.xml`, `ldapur_fpsimd.xml`, `stlr.xml`, `stl1_advsimd_sngl.xml`, and `ldap1_advsimd_sngl.xml`, covering decimal unscaled offsets, `STLR`/`STILP` writeback syntax, FP/SIMD ordered accesses, and RCpc3 single-lane AdvSIMD forms.
+- AdvSIMD single-structure load/store batch from `neon-simd-ldst-one-elem.s.yaml`: `128` capstone cases promoted across `ld1r_advsimd.xml`, `ld2r_advsimd.xml`, `ld3r_advsimd.xml`, `ld4r_advsimd.xml`, `ld1_advsimd_sngl.xml`, `ld2_advsimd_sngl.xml`, `ld3_advsimd_sngl.xml`, `ld4_advsimd_sngl.xml`, `st1_advsimd_sngl.xml`, `st2_advsimd_sngl.xml`, `st3_advsimd_sngl.xml`, and `st4_advsimd_sngl.xml`, covering lane-index rendering, structure register lists, replicate forms, and immediate/register post-index formatting.
+- MTE instruction batch from `armv8.5a-mte.s.yaml`: `108` capstone cases promoted across `stgp.xml`, `stg.xml`, `stzg.xml`, `st2g.xml`, `stz2g.xml`, `irg.xml`, `addg.xml`, `subg.xml`, `gmi.xml`, `cmpp_subps.xml`, `ldg.xml`, and `ldgm.xml`, covering tag load/store addressing, pointer-generation immediates, optional `IRG` operands, and `SUBPS` comparison-form decoding via the alias XML.
+- AdvSIMD by-element multiply/MLA batch from `neon-2velem.s.yaml`: `126` capstone cases promoted across `mla_advsimd_elt.xml`, `mls_advsimd_elt.xml`, `fmla_advsimd_elt.xml`, `fmls_advsimd_elt.xml`, `fmul_advsimd_elt.xml`, `fmulx_advsimd_elt.xml`, `smlal_advsimd_elt.xml`, `smlsl_advsimd_elt.xml`, `sqdmlal_advsimd_elt.xml`, `umlal_advsimd_elt.xml`, `umlsl_advsimd_elt.xml`, and `sqdmlsl_advsimd_elt.xml`, covering indexed-lane scalar/vector multiply-accumulate forms plus long and saturating `*2` upper-half rendering.
+- AdvSIMD widening long/arithmetic batch from `neon-3vdiff.s.yaml`: `72` capstone cases promoted across `saddl_advsimd.xml`, `uaddl_advsimd.xml`, `ssubl_advsimd.xml`, `usubl_advsimd.xml`, `sabal_advsimd.xml`, `uabal_advsimd.xml`, `sabdl_advsimd.xml`, `uabdl_advsimd.xml`, `smlal_advsimd_vec.xml`, `umlal_advsimd_vec.xml`, `smlsl_advsimd_vec.xml`, and `umlsl_advsimd_vec.xml`, covering widening add/sub, absolute-difference accumulate, and long multiply-accumulate vector forms with correct upper-half `*2` mnemonic rendering.
+- AdvSIMD immediate-shift family from `neon-simd-shift.s.yaml`: `102` capstone cases promoted across `sshr_advsimd.xml`, `ushr_advsimd.xml`, `ssra_advsimd.xml`, `usra_advsimd.xml`, `srshr_advsimd.xml`, `urshr_advsimd.xml`, `srsra_advsimd.xml`, `ursra_advsimd.xml`, `sri_advsimd.xml`, `sli_advsimd.xml`, `sqshlu_advsimd.xml`, and `sqshl_advsimd_imm.xml`, covering scalar/vector immediate-range decoding plus a generator guard fix for the family’s `immh != 0000` overlap cases.
+- AdvSIMD miscellaneous unary/saturating batch from `neon-simd-misc.s.yaml`: `96` capstone cases promoted across `suqadd_advsimd.xml`, `usqadd_advsimd.xml`, `sqabs_advsimd.xml`, `sqneg_advsimd.xml`, `abs_advsimd.xml`, `neg_advsimd.xml`, `rev64_advsimd.xml`, `saddlp_advsimd.xml`, `uaddlp_advsimd.xml`, `sadalp_advsimd.xml`, `uadalp_advsimd.xml`, and `cls_advsimd.xml`, covering vector unary/pairwise-long formatting plus the shared scalar unary cases carried by those XML families.
 - AdvSIMD compare family from `neon-compare-instructions.s.yaml`: `222` capstone cases promoted across the vector/scalar compare batch, covering integer register/zero compares plus floating register/zero compares through `cm{eq,ge,gt,hi,hs,le,lt}_advsimd*.xml` and `fcm{eq,ge,gt,le,lt}_advsimd*.xml`.
 - Scalar multiply-long and FP move leftovers from `basic-a64-instructions.s.yaml`: `52` capstone cases promoted across `mneg_msub.xml`, `smaddl.xml`, `smsubl.xml`, `umaddl.xml`, `umsubl.xml`, `smulh.xml`, `umulh.xml`, `fmov_float_gen.xml`, and `fmov_float_imm.xml`, with the related `SMULL`/`SMNEGL`/`UMULL`/`UMNEGL` alias XMLs promoted alongside the base family.
 - Core scalar alias and bit-manipulation cleanup from `basic-a64-instructions.s.yaml`: `48` capstone cases promoted across `cset_csinc.xml`, `csetm_csinv.xml`, `tst_ands_log_imm.xml`, `ands_log_imm.xml`, `extr.xml`, `rev.xml`, `lsl_lslv.xml`, `lsr_lsrv.xml`, `asr_asrv.xml`, and `ror_rorv.xml`, covering `CSET`/`CSETM`, `TST`, `EXTR`/`ROR`, `REV`, and variable-shift register aliases.
@@ -82,33 +82,33 @@ Use one line per completed work item with a concise outcome note. Keep detailed 
 
 Current capstone coverage snapshot:
 
-- `20214` supported capstone cases
-- `14343` unsupported capstone cases
-- `382` XML instruction files currently listed in `tools/supported-files.ts`
-- `1504` distinct unsupported XML instruction files
-- `854` capstone source YAML files containing unsupported cases
-- `845` distinct unsupported mnemonics
+- `21109` supported capstone cases
+- `13448` unsupported capstone cases
+- `469` XML instruction files currently listed in `tools/supported-files.ts`
+- `1417` distinct unsupported XML instruction files
+- `846` capstone source YAML files containing unsupported cases
+- `798` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `neon-simd-misc.s.yaml`: `260`
-- `basic-a64-instructions.s.yaml`: `216`
-- `neon-simd-shift.s.yaml`: `159`
-- `neon-3vdiff.s.yaml`: `142`
-- `neon-simd-ldst-one-elem.s.yaml`: `128`
-- `neon-2velem.s.yaml`: `120`
+- `basic-a64-instructions.s.yaml`: `214`
+- `neon-simd-misc.s.yaml`: `182`
+- `SVE/add.s.yaml`: `98`
+- `SVE/sub.s.yaml`: `98`
+- `neon-simd-ldst-multi-elem.s.yaml`: `84`
+- `SVE2p1/pmov.s.yaml`: `80`
 
 Largest unsupported feature sets:
 
 - `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `3773`
 - `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `1950`
 - `FEAT_SME2`: `1725`
-- `FEAT_AdvSIMD`: `1703`
+- `FEAT_AdvSIMD`: `1191`
 - `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `785`
 - `FEAT_SVE2p1 || FEAT_SME2p1, FEAT_SVE2p1, FEAT_SME2p1`: `774`
 - `FEAT_SVE`: `386`
 - `FEAT_SME`: `294`
-- no feature gate recorded: `166`
+- no feature gate recorded: `164`
 - `FEAT_SVE || FEAT_SME`: `152`
 
 Implication:
@@ -142,6 +142,10 @@ So this TODO tracks instructions that already map cleanly to XML encodings, but 
 
 Recently completed families and batches:
 
+- RCpc/RCpc3 load-store batch: `274` capstone cases promoted across `ldapursb.xml`, `ldapursh.xml`, `ldapur_gen.xml`, `ldapurb.xml`, `ldapurh.xml`, `ldapursw.xml`, `stlur_gen.xml`, `stlurb.xml`, `stlurh.xml`, `stilp.xml`, `stlur_fpsimd.xml`, `ldapur_fpsimd.xml`, `stlr.xml`, `stl1_advsimd_sngl.xml`, and `ldap1_advsimd_sngl.xml`, with decimal unscaled offsets, ordered writeback forms, FP/SIMD RCpc3 accesses, and single-lane AdvSIMD RCpc3 formatting
+- AdvSIMD single-structure load/store batch: `128` capstone cases promoted across `ld1r_advsimd.xml`, `ld2r_advsimd.xml`, `ld3r_advsimd.xml`, `ld4r_advsimd.xml`, `ld1_advsimd_sngl.xml`, `ld2_advsimd_sngl.xml`, `ld3_advsimd_sngl.xml`, `ld4_advsimd_sngl.xml`, `st1_advsimd_sngl.xml`, `st2_advsimd_sngl.xml`, `st3_advsimd_sngl.xml`, and `st4_advsimd_sngl.xml`, with lane-index formatting, structure register lists, replicate arrangements, and immediate/register post-index rendering
+- MTE instruction batch: `108` capstone cases promoted across `stgp.xml`, `stg.xml`, `stzg.xml`, `st2g.xml`, `stz2g.xml`, `irg.xml`, `addg.xml`, `subg.xml`, `gmi.xml`, `cmpp_subps.xml`, `ldg.xml`, and `ldgm.xml`, with scaled tag-memory addressing, immediate-tag arithmetic, optional `IRG` operand elision, and `SUBPS` comparison-form decoding through the alias XML
+- AdvSIMD immediate-shift family: `102` capstone cases promoted across `sshr_advsimd.xml`, `ushr_advsimd.xml`, `ssra_advsimd.xml`, `usra_advsimd.xml`, `srshr_advsimd.xml`, `urshr_advsimd.xml`, `srsra_advsimd.xml`, `ursra_advsimd.xml`, `sri_advsimd.xml`, `sli_advsimd.xml`, `sqshlu_advsimd.xml`, and `sqshl_advsimd_imm.xml`, with scalar/vector immediate-shift formatting plus an XML-constraint guard fix preventing `immh == 0000` overlaps from decoding as supported shift instructions
 - AdvSIMD compare family: `222` capstone cases promoted across `cmeq_advsimd_{reg,zero}.xml`, `cm{ge,gt}_advsimd_{reg,zero}.xml`, `cm{hi,hs,le,lt}_advsimd.xml`, `fcmeq_advsimd_{reg,zero}.xml`, `fcm{ge,gt}_advsimd_{reg,zero}.xml`, and `fcm{le,lt}_advsimd.xml`, with shared scalar/vector compare operand formatting and a decode-guard generation fix in `tools/encodings.ts` restoring the intended `EndOfDecode(...)` handling.
 - Scalar multiply-long and FP move leftovers: `52` capstone cases promoted across `mneg_msub.xml`, `smaddl.xml`, `smsubl.xml`, `umaddl.xml`, `umsubl.xml`, `smulh.xml`, `umulh.xml`, `fmov_float_gen.xml`, and `fmov_float_imm.xml`, with `MNEG`, `SMULL`, `SMNEGL`, `UMULL`, and `UMNEGL` alias formatting plus scalar `FMOV` general/immediate operand rendering
 - Core scalar alias and bit-manipulation cleanup: `48` capstone cases promoted across `cset_csinc.xml`, `csetm_csinv.xml`, `tst_ands_log_imm.xml`, `ands_log_imm.xml`, `extr.xml`, `rev.xml`, `lsl_lslv.xml`, `lsr_lsrv.xml`, `asr_asrv.xml`, and `ror_rorv.xml`, with architectural alias rendering for `CSET` / `CSETM` / `TST` / `ROR` and scalar `REV` plus variable-shift register forms

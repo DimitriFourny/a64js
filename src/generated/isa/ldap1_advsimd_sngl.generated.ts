@@ -1,0 +1,67 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "LDAP1_advsimd_sngl",
+    "encodingId": "LDAP1_asisdlso_D1",
+    "mnemonic": "LDAP1",
+    "className": "64-bit",
+    "fileName": "ldap1_advsimd_sngl.xml",
+    "mask": 3221224448,
+    "value": 222397440,
+    "bitCount": 21,
+    "fields": [
+      {
+        "name": "Q",
+        "lsb": 30,
+        "width": 1
+      },
+      {
+        "name": "L",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "R",
+        "lsb": 21,
+        "width": 1
+      },
+      {
+        "name": "o2",
+        "lsb": 16,
+        "width": 1
+      },
+      {
+        "name": "opcode",
+        "lsb": 13,
+        "width": 3
+      },
+      {
+        "name": "S",
+        "lsb": 12,
+        "width": 1
+      },
+      {
+        "name": "size",
+        "lsb": 10,
+        "width": 2
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rt",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_AdvSIMD && FEAT_LRCPC3",
+      "FEAT_AdvSIMD",
+      "FEAT_LRCPC3"
+    ],
+    "guards": []
+  }
+];

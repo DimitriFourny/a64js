@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-scalar-shift-imm.s.yaml",
     "caseIndex": 0,
@@ -91,17 +89,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 8,
-    "word": 1598838087,
-    "asmText": "shl d7, d10, #12",
-    "encodingFile": "shl_advsimd.xml",
-    "mnemonic": "SHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
     "caseIndex": 9,
     "word": 1594848875,
     "asmText": "sqshl b11, b19, #7",
@@ -140,50 +127,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "sqshl d15, d16, #51",
     "encodingFile": "sqshl_advsimd_imm.xml",
     "mnemonic": "SQSHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 13,
-    "word": 2131654130,
-    "asmText": "uqshl b18, b15, #6",
-    "encodingFile": "uqshl_advsimd_imm.xml",
-    "mnemonic": "UQSHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 14,
-    "word": 2132244043,
-    "asmText": "uqshl h11, h18, #7",
-    "encodingFile": "uqshl_advsimd_imm.xml",
-    "mnemonic": "UQSHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 15,
-    "word": 2134013550,
-    "asmText": "uqshl s14, s19, #18",
-    "encodingFile": "uqshl_advsimd_imm.xml",
-    "mnemonic": "UQSHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 16,
-    "word": 2136176015,
-    "asmText": "uqshl d15, d12, #19",
-    "encodingFile": "uqshl_advsimd_imm.xml",
-    "mnemonic": "UQSHL",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -250,6 +193,64 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "sli d10, d14, #12",
     "encodingFile": "sli_advsimd.xml",
     "mnemonic": "SLI",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 8,
+    "word": 1598838087,
+    "asmText": "shl d7, d10, #12",
+    "encodingFile": "shl_advsimd.xml",
+    "mnemonic": "SHL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 13,
+    "word": 2131654130,
+    "asmText": "uqshl b18, b15, #6",
+    "encodingFile": "uqshl_advsimd_imm.xml",
+    "mnemonic": "UQSHL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 14,
+    "word": 2132244043,
+    "asmText": "uqshl h11, h18, #7",
+    "encodingFile": "uqshl_advsimd_imm.xml",
+    "mnemonic": "UQSHL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 15,
+    "word": 2134013550,
+    "asmText": "uqshl s14, s19, #18",
+    "encodingFile": "uqshl_advsimd_imm.xml",
+    "mnemonic": "UQSHL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 16,
+    "word": 2136176015,
+    "asmText": "uqshl d15, d12, #19",
+    "encodingFile": "uqshl_advsimd_imm.xml",
+    "mnemonic": "UQSHL",
     "features": [
       "FEAT_AdvSIMD"
     ]

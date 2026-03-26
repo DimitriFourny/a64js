@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-simd-misc.s.yaml",
     "caseIndex": 0,
@@ -63,72 +61,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "rev64 v4.2s, v0.2s",
     "encodingFile": "rev64_advsimd.xml",
     "mnemonic": "REV64",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 6,
-    "word": 1847593982,
-    "asmText": "rev32 v30.16b, v31.16b",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 7,
-    "word": 1851787492,
-    "asmText": "rev32 v4.8h, v7.8h",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 8,
-    "word": 773851189,
-    "asmText": "rev32 v21.8b, v1.8b",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 9,
-    "word": 778045728,
-    "asmText": "rev32 v0.4h, v9.4h",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 10,
-    "word": 1310727166,
-    "asmText": "rev16 v30.16b, v31.16b",
-    "encodingFile": "rev16_advsimd.xml",
-    "mnemonic": "REV16",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 11,
-    "word": 236984373,
-    "asmText": "rev16 v21.8b, v1.8b",
-    "encodingFile": "rev16_advsimd.xml",
-    "mnemonic": "REV16",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -921,6 +853,75 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "cls v4.2s, v0.2s",
     "encodingFile": "cls_advsimd.xml",
     "mnemonic": "CLS",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 6,
+    "word": 1847593982,
+    "asmText": "rev32 v30.16b, v31.16b",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 7,
+    "word": 1851787492,
+    "asmText": "rev32 v4.8h, v7.8h",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 8,
+    "word": 773851189,
+    "asmText": "rev32 v21.8b, v1.8b",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 9,
+    "word": 778045728,
+    "asmText": "rev32 v0.4h, v9.4h",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 10,
+    "word": 1310727166,
+    "asmText": "rev16 v30.16b, v31.16b",
+    "encodingFile": "rev16_advsimd.xml",
+    "mnemonic": "REV16",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 11,
+    "word": 236984373,
+    "asmText": "rev16 v21.8b, v1.8b",
+    "encodingFile": "rev16_advsimd.xml",
+    "mnemonic": "REV16",
     "features": [
       "FEAT_AdvSIMD"
     ]

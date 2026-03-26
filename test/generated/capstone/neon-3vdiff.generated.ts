@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-3vdiff.s.yaml",
     "caseIndex": 0,
@@ -792,7 +790,10 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
-  },
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-3vdiff.s.yaml",
     "caseIndex": 72,

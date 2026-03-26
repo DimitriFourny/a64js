@@ -1,0 +1,174 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "STLR",
+    "encodingId": "STLR_32S_ldapstl_writeback",
+    "mnemonic": "STLR",
+    "className": "Pre-index",
+    "fileName": "stlr.xml",
+    "mask": 4294966272,
+    "value": 2575304704,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 30,
+        "width": 2
+      },
+      {
+        "name": "L",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rt",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_LRCPC3"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "STLR",
+    "encodingId": "STLR_64S_ldapstl_writeback",
+    "mnemonic": "STLR",
+    "className": "Pre-index",
+    "fileName": "stlr.xml",
+    "mask": 4294966272,
+    "value": 3649046528,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 30,
+        "width": 2
+      },
+      {
+        "name": "L",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rt",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_LRCPC3"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "STLR",
+    "encodingId": "STLR_SL32_ldstord",
+    "mnemonic": "STLR",
+    "className": "No offset",
+    "fileName": "stlr.xml",
+    "mask": 4292902912,
+    "value": 2290122752,
+    "bitCount": 12,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 30,
+        "width": 2
+      },
+      {
+        "name": "L",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rs",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "o0",
+        "lsb": 15,
+        "width": 1
+      },
+      {
+        "name": "Rt2",
+        "lsb": 10,
+        "width": 5
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rt",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [],
+    "guards": []
+  },
+  {
+    "instructionId": "STLR",
+    "encodingId": "STLR_SL64_ldstord",
+    "mnemonic": "STLR",
+    "className": "No offset",
+    "fileName": "stlr.xml",
+    "mask": 4292902912,
+    "value": 3363864576,
+    "bitCount": 12,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 30,
+        "width": 2
+      },
+      {
+        "name": "L",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Rs",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "o0",
+        "lsb": 15,
+        "width": 1
+      },
+      {
+        "name": "Rt2",
+        "lsb": 10,
+        "width": 5
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rt",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [],
+    "guards": []
+  }
+];

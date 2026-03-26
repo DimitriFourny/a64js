@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-2velem.s.yaml",
     "caseIndex": 0,
@@ -759,72 +757,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 68,
-    "word": 258113568,
-    "asmText": "mul v0.4h, v1.4h, v2.h[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 69,
-    "word": 1331855392,
-    "asmText": "mul v0.8h, v1.8h, v2.h[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 70,
-    "word": 260212768,
-    "asmText": "mul v0.2s, v1.2s, v2.s[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 71,
-    "word": 261523488,
-    "asmText": "mul v0.2s, v1.2s, v22.s[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 72,
-    "word": 1333954592,
-    "asmText": "mul v0.4s, v1.4s, v2.s[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
-    "caseIndex": 73,
-    "word": 1335265312,
-    "asmText": "mul v0.4s, v1.4s, v22.s[2]",
-    "encodingFile": "mul_advsimd_elt.xml",
-    "mnemonic": "MUL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-2velem.s.yaml",
     "caseIndex": 74,
     "word": 253923360,
     "asmText": "fmul v0.4h, v1.4h, v2.h[2]",
@@ -1003,6 +935,75 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "fmulx v0.2d, v1.2d, v22.d[1]",
     "encodingFile": "fmulx_advsimd_elt.xml",
     "mnemonic": "FMULX",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 68,
+    "word": 258113568,
+    "asmText": "mul v0.4h, v1.4h, v2.h[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 69,
+    "word": 1331855392,
+    "asmText": "mul v0.8h, v1.8h, v2.h[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 70,
+    "word": 260212768,
+    "asmText": "mul v0.2s, v1.2s, v2.s[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 71,
+    "word": 261523488,
+    "asmText": "mul v0.2s, v1.2s, v22.s[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 72,
+    "word": 1333954592,
+    "asmText": "mul v0.4s, v1.4s, v2.s[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-2velem.s.yaml",
+    "caseIndex": 73,
+    "word": 1335265312,
+    "asmText": "mul v0.4s, v1.4s, v22.s[2]",
+    "encodingFile": "mul_advsimd_elt.xml",
+    "mnemonic": "MUL",
     "features": [
       "FEAT_AdvSIMD"
     ]

@@ -633,6 +633,71 @@ function ldiappOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function rcpcUnscaledMemoryText(inst: DecodedInstruction): string {
+  const fields = inst.fields!;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const offset = signExtend(fields.imm9 ?? 0, 9);
+  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+}
+
+function rcpcGeneralUnscaledWidth(fileName: string, fields: Record<string, number>): 32 | 64 {
+  switch (fileName) {
+    case "ldapursw.xml":
+      return 64;
+    case "ldapursb.xml":
+    case "ldapursh.xml":
+      return (fields.opc ?? 0) === 0b10 ? 64 : 32;
+    case "stlur_gen.xml":
+    case "ldapur_gen.xml":
+    case "stlr.xml":
+      return (fields.size ?? 0) === 0b11 ? 64 : 32;
+    default:
+      return 32;
+  }
+}
+
+function rcpcUnscaledOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fileName = inst.encoding!.fileName;
+  const memory = rcpcUnscaledMemoryText(inst);
+
+  if (fileName === "stlur_fpsimd.xml" || fileName === "ldapur_fpsimd.xml") {
+    return [
+      { kind: "text", text: fpSimdRegisterText(fields.size, fields.opc, fields.Rt) },
+      { kind: "text", text: memory },
+    ];
+  }
+
+  return [
+    gpReg(rcpcGeneralUnscaledWidth(fileName, fields), fields.Rt, "zr"),
+    { kind: "text", text: memory },
+  ];
+}
+
+function stlrOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = rcpcGeneralUnscaledWidth(inst.encoding!.fileName, fields);
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const offset = width === 64 ? -8n : -4n;
+  const memory = inst.encoding!.encodingId.includes("writeback")
+    ? `[${base}, ${formatSignedDecimalImmediate(offset)}]!`
+    : `[${base}]`;
+  return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: memory }];
+}
+
+function stilpOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = (fields.size ?? 0) === 0b11 ? 64 : 32;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const offset = width === 64 ? -16n : -8n;
+  const memory = ((fields.opc2 ?? 0) & 1) === 0 ? `[${base}, ${formatSignedDecimalImmediate(offset)}]!` : `[${base}]`;
+  return [
+    gpReg(width, fields.Rt, "zr"),
+    gpReg(width, fields.Rt2, "zr"),
+    { kind: "text", text: memory },
+  ];
+}
+
 function formatSignedHexImmediate(value: bigint): string {
   if (value < 0) {
     return `#-0x${(-value).toString(16)}`;
@@ -874,6 +939,90 @@ function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   }
   const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
   return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+}
+
+function mteTagOffset(value: number | undefined, bits: number): bigint {
+  return signExtend(value ?? 0, bits) * 16n;
+}
+
+function mteTagMemoryText(inst: DecodedInstruction, offsetField: "imm9" | "simm7", bits: number): string {
+  const fields = inst.fields!;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const offset = mteTagOffset(fields[offsetField], bits);
+  const encodingId = inst.encoding!.encodingId;
+
+  if (encodingId.includes("post")) {
+    return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
+  }
+  if (encodingId.includes("pre")) {
+    return `[${base}, ${formatSignedDecimalImmediate(offset)}]!`;
+  }
+  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+}
+
+function mteTagStoreOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rt, "sp"),
+    { kind: "text", text: mteTagMemoryText(inst, "imm9", 9) },
+  ];
+}
+
+function mteTagLoadOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rt, "zr"),
+    { kind: "text", text: mteTagMemoryText(inst, "imm9", 9) },
+  ];
+}
+
+function mteTagPairStoreOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rt, "zr"),
+    gpReg(64, fields.Rt2, "zr"),
+    { kind: "text", text: mteTagMemoryText(inst, "simm7", 7) },
+  ];
+}
+
+function mteInsertRandomTagOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const ops: Operand[] = [
+    gpReg(64, fields.Rd, "sp"),
+    gpReg(64, fields.Rn, "sp"),
+  ];
+  if ((fields.Rm ?? 31) !== 31) {
+    ops.push(gpReg(64, fields.Rm, "zr"));
+  }
+  return ops;
+}
+
+function mteAddSubTagOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rd, "sp"),
+    gpReg(64, fields.Rn, "sp"),
+    { kind: "text", text: `#${((fields.imm6 ?? 0) << 4)}` },
+    { kind: "text", text: `#${fields.imm4 ?? 0}` },
+  ];
+}
+
+function mteTagMaskInsertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rd, "zr"),
+    gpReg(64, fields.Rn, "sp"),
+    gpReg(64, fields.Rm, "zr"),
+  ];
+}
+
+function mteSubtractPointerOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rd, "zr"),
+    gpReg(64, fields.Rn, "sp"),
+    gpReg(64, fields.Rm, "sp"),
+  ];
 }
 
 function sveLaneFromSize(size: number | undefined): "h" | "s" | "d" {
@@ -1192,8 +1341,107 @@ function advsimdVectorRegisterText(index: number, size: number | undefined, q: n
   return `v${index}.${advsimdArrangementFromSizeQ(size, q)}`;
 }
 
+function highestSetBitNZ(value: number | undefined): number {
+  const n = value ?? 0;
+  return n === 0 ? 0 : 31 - Math.clz32(n);
+}
+
+function advsimdScalarRegisterFromImmh(index: number, immh: number | undefined): string {
+  return advsimdScalarRegisterText(index, highestSetBitNZ(immh));
+}
+
+function advsimdVectorRegisterFromImmh(index: number, immh: number | undefined, q: number | undefined): string {
+  return advsimdVectorRegisterText(index, highestSetBitNZ(immh), q);
+}
+
+function advsimdImmediateShiftOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fileName = inst.encoding!.fileName;
+  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+  const immh = fields.immh ?? 0;
+  const imm = (immh << 3) | (fields.immb ?? 0);
+  const isLeftShift =
+    fileName === "sqshl_advsimd_imm.xml" ||
+    fileName === "sqshlu_advsimd.xml" ||
+    fileName === "sli_advsimd.xml";
+  const esize = isScalar && (fileName !== "sqshl_advsimd_imm.xml" && fileName !== "sqshlu_advsimd.xml")
+    ? 64
+    : 8 << highestSetBitNZ(immh);
+  const shift = isLeftShift ? imm - esize : (esize * 2) - imm;
+
+  const registerText = isScalar
+    ? (fileName === "sqshl_advsimd_imm.xml" || fileName === "sqshlu_advsimd.xml"
+      ? (index: number) => advsimdScalarRegisterFromImmh(index, immh)
+      : (index: number) => advsimdScalarRegisterText(index, 3))
+    : (index: number) => advsimdVectorRegisterFromImmh(index, immh, fields.Q);
+
+  return [
+    { kind: "text", text: registerText(fields.Rd ?? 0) },
+    { kind: "text", text: registerText(fields.Rn ?? 0) },
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
 function advsimdDotProductSourceText(index: number, q: number | undefined): string {
   return `v${index}.${q === 1 ? "16b" : "8b"}`;
+}
+
+function advsimdUnaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+
+  if (isScalar) {
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, fields.size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, fields.size) },
+    ];
+  }
+
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, fields.size, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, fields.size, fields.Q) },
+  ];
+}
+
+function advsimdPairwiseLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, (fields.size ?? 0) + 1, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, fields.size, fields.Q) },
+  ];
+}
+
+function advsimdLongDestArrangement(size: number | undefined): "8h" | "4s" | "2d" {
+  switch (size ?? 0) {
+    case 0:
+      return "8h";
+    case 1:
+      return "4s";
+    default:
+      return "2d";
+  }
+}
+
+function advsimdLongSourceArrangement(size: number | undefined, q: number | undefined): "8b" | "16b" | "4h" | "8h" | "2s" | "4s" {
+  if ((size ?? 0) === 0) {
+    return q === 1 ? "16b" : "8b";
+  }
+  if ((size ?? 0) === 1) {
+    return q === 1 ? "8h" : "4h";
+  }
+  return q === 1 ? "4s" : "2s";
+}
+
+function advsimdWideningThreeRegOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = advsimdLongDestArrangement(fields.size);
+  const sourceArrangement = advsimdLongSourceArrangement(fields.size, fields.Q);
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${sourceArrangement}` },
+  ];
 }
 
 function advsimdStructureRegisterCount(encodingId: string): 1 | 2 | 3 | 4 {
@@ -1227,6 +1475,95 @@ function advsimdStructureMemoryText(base: number, postIndex: number | undefined,
   return `[${baseText}], ${formatRegister(gpReg(64, postIndex, "zr"))}`;
 }
 
+function advsimdSingleStructureRegisterCount(fileName: string): 1 | 2 | 3 | 4 {
+  const match = /^(?:ld|st)([1-4])r?_advsimd(?:_sngl)?\.xml$/.exec(fileName);
+  if (!match) {
+    return 1;
+  }
+  return Number(match[1]) as 1 | 2 | 3 | 4;
+}
+
+function advsimdSingleStructureElementSize(fileName: string, encodingId: string, fields: Record<string, number>): number {
+  if (fileName.endsWith("_sngl.xml")) {
+    if (encodingId.includes("_B")) {
+      return 0;
+    }
+    if (encodingId.includes("_H")) {
+      return 1;
+    }
+    if (encodingId.includes("_S")) {
+      return 2;
+    }
+    if (encodingId.includes("_D")) {
+      return 3;
+    }
+  }
+
+  return fields.size ?? 0;
+}
+
+function advsimdSingleStructureLaneIndex(size: number, fields: Record<string, number>): number {
+  const q = fields.Q ?? 0;
+  const s = fields.S ?? 0;
+  const encodedSize = fields.size ?? 0;
+
+  switch (size) {
+    case 0:
+      return (q << 3) | (s << 2) | encodedSize;
+    case 1:
+      return (q << 2) | (s << 1) | (encodedSize >> 1);
+    case 2:
+      return (q << 1) | s;
+    case 3:
+      return q;
+    default:
+      return 0;
+  }
+}
+
+function advsimdSingleStructureRegistersText(start: number, count: 1 | 2 | 3 | 4, lane: "b" | "h" | "s" | "d", laneIndex: number): string {
+  const registers = Array.from({ length: count }, (_, index) => `v${(start + index) & 31}.${lane}`);
+  return `{ ${registers.join(", ")} }[${laneIndex}]`;
+}
+
+function advsimdSingleStructureMemoryText(
+  base: number,
+  postIndex: number | undefined,
+  count: 1 | 2 | 3 | 4,
+  elementSize: number,
+): string {
+  const baseText = formatRegister(gpReg(64, base, "sp"));
+  if (postIndex === undefined) {
+    return `[${baseText}]`;
+  }
+  if (postIndex === 31) {
+    const amount = BigInt(count << elementSize);
+    return `[${baseText}], #${amount.toString()}`;
+  }
+  return `[${baseText}], ${formatRegister(gpReg(64, postIndex, "zr"))}`;
+}
+
+function advsimdSingleStructureOperands(inst: DecodedInstruction): Operand[] {
+  const encoding = inst.encoding!;
+  const fields = inst.fields!;
+  const fileName = encoding.fileName;
+  const count = advsimdSingleStructureRegisterCount(fileName);
+  const elementSize = advsimdSingleStructureElementSize(fileName, encoding.encodingId, fields);
+  const start = fields.Rt ?? 0;
+
+  if (fileName.endsWith("r_advsimd.xml")) {
+    const registers = advsimdStructureRegisterGroupText(start, count, elementSize, fields.Q);
+    const memory = advsimdSingleStructureMemoryText(fields.Rn ?? 0, fields.Rm, count, elementSize);
+    return [{ kind: "text", text: registers }, { kind: "text", text: memory }];
+  }
+
+  const lane = advsimdLaneFromSize(elementSize);
+  const laneIndex = advsimdSingleStructureLaneIndex(elementSize, fields);
+  const registers = advsimdSingleStructureRegistersText(start, count, lane, laneIndex);
+  const memory = advsimdSingleStructureMemoryText(fields.Rn ?? 0, fields.Rm, count, elementSize);
+  return [{ kind: "text", text: registers }, { kind: "text", text: memory }];
+}
+
 function advsimdByElementSourceIndex(fields: Record<string, number>, size: number | undefined): number {
   return size === 2 ? (((fields.M ?? 0) << 4) | (fields.Rm ?? 0)) : (fields.Rm ?? 0);
 }
@@ -1236,6 +1573,98 @@ function advsimdByElementIndex(fields: Record<string, number>, size: number | un
     return ((fields.H ?? 0) << 1) | (fields.L ?? 0);
   }
   return ((fields.H ?? 0) << 2) | ((fields.L ?? 0) << 1) | (fields.M ?? 0);
+}
+
+function advsimdFpByElementLane(inst: DecodedInstruction): "h" | "s" | "d" {
+  const className = inst.encoding!.className.toLowerCase();
+  if (className.includes("half")) {
+    return "h";
+  }
+  return (inst.fields!.sz ?? 0) === 1 ? "d" : "s";
+}
+
+function advsimdFpByElementVectorArrangement(inst: DecodedInstruction): "4h" | "8h" | "2s" | "4s" | "2d" {
+  const lane = advsimdFpByElementLane(inst);
+  const q = inst.fields!.Q ?? 0;
+  if (lane === "h") {
+    return q === 1 ? "8h" : "4h";
+  }
+  if (lane === "s") {
+    return q === 1 ? "4s" : "2s";
+  }
+  return "2d";
+}
+
+function advsimdFpByElementSourceIndex(inst: DecodedInstruction): number {
+  const className = inst.encoding!.className.toLowerCase();
+  const fields = inst.fields!;
+  return className.includes("half") ? (fields.Rm ?? 0) : (((fields.M ?? 0) << 4) | (fields.Rm ?? 0));
+}
+
+function advsimdFpByElementIndex(inst: DecodedInstruction): number {
+  const className = inst.encoding!.className.toLowerCase();
+  const fields = inst.fields!;
+  if (className.includes("half")) {
+    return ((fields.H ?? 0) << 2) | ((fields.L ?? 0) << 1) | (fields.M ?? 0);
+  }
+  return (fields.sz ?? 0) === 1 ? (fields.H ?? 0) : (((fields.H ?? 0) << 1) | (fields.L ?? 0));
+}
+
+function advsimdByElementMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fileName = inst.encoding!.fileName;
+
+  if (fileName === "mla_advsimd_elt.xml" || fileName === "mls_advsimd_elt.xml") {
+    const lane = advsimdLaneFromSize(fields.size);
+    return [
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, fields.size, fields.Q) },
+      { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, fields.size, fields.Q) },
+      { kind: "text", text: `v${advsimdByElementSourceIndex(fields, fields.size)}.${lane}[${advsimdByElementIndex(fields, fields.size)}]` },
+    ];
+  }
+
+  const lane = advsimdFpByElementLane(inst);
+  const sourceIndex = advsimdFpByElementSourceIndex(inst);
+  const elementIndex = advsimdFpByElementIndex(inst);
+  const className = inst.encoding!.className.toLowerCase();
+
+  if (className.includes("scalar")) {
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, lane === "h" ? 1 : lane === "s" ? 2 : 3) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, lane === "h" ? 1 : lane === "s" ? 2 : 3) },
+      { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+    ];
+  }
+
+  const arrangement = advsimdFpByElementVectorArrangement(inst);
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+  ];
+}
+
+function advsimdByElementLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = fields.size;
+  const lane = advsimdLaneFromSize(size);
+  const sourceIndex = advsimdByElementSourceIndex(fields, size);
+  const elementIndex = advsimdByElementIndex(fields, size);
+
+  if (inst.encoding!.className.toLowerCase().includes("scalar")) {
+    const destSize = (size ?? 0) + 1;
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, destSize) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size) },
+      { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+    ];
+  }
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${advsimdLongDestArrangement(size)}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${advsimdLongSourceArrangement(size, fields.Q)}` },
+    { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+  ];
 }
 
 function advsimdSaturatingRoundingDoublingMultiplyOperands(inst: DecodedInstruction): Operand[] {
@@ -2471,6 +2900,22 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return ldaprOperands(inst);
     case "ldiapp.xml":
       return ldiappOperands(inst);
+    case "ldapursb.xml":
+    case "ldapursh.xml":
+    case "ldapur_gen.xml":
+    case "ldapurb.xml":
+    case "ldapurh.xml":
+    case "ldapursw.xml":
+    case "stlur_gen.xml":
+    case "stlurb.xml":
+    case "stlurh.xml":
+    case "stlur_fpsimd.xml":
+    case "ldapur_fpsimd.xml":
+      return rcpcUnscaledOperands(inst);
+    case "stlr.xml":
+      return stlrOperands(inst);
+    case "stilp.xml":
+      return stilpOperands(inst);
     case "movprfx_z_z.xml":
       return sveMovprfxOperands(inst);
     case "movprfx_z_p_z.xml":
@@ -2604,6 +3049,20 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sqrdmlsh_advsimd_vec.xml":
     case "sqrdmlsh_advsimd_elt.xml":
       return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
+    case "mla_advsimd_elt.xml":
+    case "mls_advsimd_elt.xml":
+    case "fmla_advsimd_elt.xml":
+    case "fmls_advsimd_elt.xml":
+    case "fmul_advsimd_elt.xml":
+    case "fmulx_advsimd_elt.xml":
+      return advsimdByElementMultiplyAccumulateOperands(inst);
+    case "smlal_advsimd_elt.xml":
+    case "smlsl_advsimd_elt.xml":
+    case "sqdmlal_advsimd_elt.xml":
+    case "umlal_advsimd_elt.xml":
+    case "umlsl_advsimd_elt.xml":
+    case "sqdmlsl_advsimd_elt.xml":
+      return advsimdByElementLongOperands(inst);
     case "sdot_advsimd_vec.xml":
     case "sdot_advsimd_elt.xml":
     case "udot_advsimd_vec.xml":
@@ -2628,6 +3087,61 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcmle_advsimd.xml":
     case "fcmlt_advsimd.xml":
       return advsimdCompareOperands(inst);
+    case "suqadd_advsimd.xml":
+    case "usqadd_advsimd.xml":
+    case "sqabs_advsimd.xml":
+    case "sqneg_advsimd.xml":
+    case "abs_advsimd.xml":
+    case "neg_advsimd.xml":
+    case "rev64_advsimd.xml":
+    case "cls_advsimd.xml":
+      return advsimdUnaryOperands(inst);
+    case "saddlp_advsimd.xml":
+    case "uaddlp_advsimd.xml":
+    case "sadalp_advsimd.xml":
+    case "uadalp_advsimd.xml":
+      return advsimdPairwiseLongOperands(inst);
+    case "saddl_advsimd.xml":
+    case "uaddl_advsimd.xml":
+    case "ssubl_advsimd.xml":
+    case "usubl_advsimd.xml":
+    case "sabal_advsimd.xml":
+    case "uabal_advsimd.xml":
+    case "sabdl_advsimd.xml":
+    case "uabdl_advsimd.xml":
+    case "smlal_advsimd_vec.xml":
+    case "umlal_advsimd_vec.xml":
+    case "smlsl_advsimd_vec.xml":
+    case "umlsl_advsimd_vec.xml":
+      return advsimdWideningThreeRegOperands(inst);
+    case "sshr_advsimd.xml":
+    case "ushr_advsimd.xml":
+    case "ssra_advsimd.xml":
+    case "usra_advsimd.xml":
+    case "srshr_advsimd.xml":
+    case "urshr_advsimd.xml":
+    case "srsra_advsimd.xml":
+    case "ursra_advsimd.xml":
+    case "sri_advsimd.xml":
+    case "sli_advsimd.xml":
+    case "sqshlu_advsimd.xml":
+    case "sqshl_advsimd_imm.xml":
+      return advsimdImmediateShiftOperands(inst);
+    case "ld1r_advsimd.xml":
+    case "ld2r_advsimd.xml":
+    case "ld3r_advsimd.xml":
+    case "ld4r_advsimd.xml":
+    case "ld1_advsimd_sngl.xml":
+    case "ld2_advsimd_sngl.xml":
+    case "ld3_advsimd_sngl.xml":
+    case "ld4_advsimd_sngl.xml":
+    case "st1_advsimd_sngl.xml":
+    case "st2_advsimd_sngl.xml":
+    case "st3_advsimd_sngl.xml":
+    case "st4_advsimd_sngl.xml":
+    case "stl1_advsimd_sngl.xml":
+    case "ldap1_advsimd_sngl.xml":
+      return advsimdSingleStructureOperands(inst);
     case "ld1_advsimd_mult.xml":
     case "st1_advsimd_mult.xml":
       return advsimdMultipleStructureOperands(inst);
@@ -2844,6 +3358,25 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "whilels_pn_rr.xml":
     case "whilelt_pn_rr.xml":
       return sveWhileCompareOperands(inst);
+    case "irg.xml":
+      return mteInsertRandomTagOperands(inst);
+    case "addg.xml":
+    case "subg.xml":
+      return mteAddSubTagOperands(inst);
+    case "gmi.xml":
+      return mteTagMaskInsertOperands(inst);
+    case "stg.xml":
+    case "stzg.xml":
+    case "st2g.xml":
+    case "stz2g.xml":
+      return mteTagStoreOperands(inst);
+    case "stgp.xml":
+      return mteTagPairStoreOperands(inst);
+    case "cmpp_subps.xml":
+      return mteSubtractPointerOperands(inst);
+    case "ldg.xml":
+    case "ldgm.xml":
+      return mteTagLoadOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
     case "sub_addsub_imm.xml":

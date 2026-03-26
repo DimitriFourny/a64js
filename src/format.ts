@@ -22,6 +22,27 @@ const BITFIELD_FILES = new Set([
   "uxth_ubfm.xml",
 ]);
 
+const ADVSIMD_WIDENING_LONG_FILES = new Set([
+  "saddl_advsimd.xml",
+  "uaddl_advsimd.xml",
+  "ssubl_advsimd.xml",
+  "usubl_advsimd.xml",
+  "sabal_advsimd.xml",
+  "uabal_advsimd.xml",
+  "sabdl_advsimd.xml",
+  "uabdl_advsimd.xml",
+  "smlal_advsimd_vec.xml",
+  "umlal_advsimd_vec.xml",
+  "smlsl_advsimd_vec.xml",
+  "umlsl_advsimd_vec.xml",
+  "smlal_advsimd_elt.xml",
+  "smlsl_advsimd_elt.xml",
+  "sqdmlal_advsimd_elt.xml",
+  "umlal_advsimd_elt.xml",
+  "umlsl_advsimd_elt.xml",
+  "sqdmlsl_advsimd_elt.xml",
+]);
+
 function formatUnknown(word: number): string {
   return `.inst 0x${(word >>> 0).toString(16).padStart(8, "0")}`;
 }
@@ -395,6 +416,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
             "mov_mova_za_mz4.xml",
           ].includes(decoded.encoding.fileName)
         ? "mov"
+      : decoded.encoding &&
+          decoded.fields &&
+          ADVSIMD_WIDENING_LONG_FILES.has(decoded.encoding.fileName) &&
+          (decoded.fields.Q ?? 0) === 1
+        ? `${decoded.mnemonic.toLowerCase()}2`
       : decoded.mnemonic.toLowerCase();
 
   const operandText = operands.map((operand, index) => {

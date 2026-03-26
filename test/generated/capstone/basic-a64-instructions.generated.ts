@@ -6405,6 +6405,24 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 900,
+    "word": 2292186175,
+    "asmText": "stlr wzr, [x1]",
+    "encodingFile": "stlr.xml",
+    "mnemonic": "STLR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 901,
+    "word": 3365928030,
+    "asmText": "stlr x30, [x2]",
+    "encodingFile": "stlr.xml",
+    "mnemonic": "STLR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 909,
     "word": 3088056336,
     "asmText": "stur w16, [x0, #-256]",
@@ -17583,24 +17601,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "stlrh w28, [x0]",
     "encodingFile": "stlrh.xml",
     "mnemonic": "STLRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 900,
-    "word": 2292186175,
-    "asmText": "stlr wzr, [x1]",
-    "encodingFile": "stlr.xml",
-    "mnemonic": "STLR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 901,
-    "word": 3365928030,
-    "asmText": "stlr x30, [x2]",
-    "encodingFile": "stlr.xml",
-    "mnemonic": "STLR",
     "features": []
   },
   {

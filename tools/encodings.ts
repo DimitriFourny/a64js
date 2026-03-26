@@ -14,6 +14,10 @@ type FieldShape = {
 type BaseDiagram = {
   bits: BoxBits;
   fields: FieldShape[];
+  constraints: Array<{
+    field: string;
+    expression: string;
+  }>;
 };
 
 export type ParsedEncoding = GeneratedEncoding & {
@@ -25,6 +29,21 @@ type ParseEncodingFileOptions = {
 };
 
 type FieldWidthMap = Map<string, number>;
+
+const ADVSIMD_IMMEDIATE_SHIFT_CONSTRAINT_FILES = new Set([
+  "sshr_advsimd.xml",
+  "ushr_advsimd.xml",
+  "ssra_advsimd.xml",
+  "usra_advsimd.xml",
+  "srshr_advsimd.xml",
+  "urshr_advsimd.xml",
+  "srsra_advsimd.xml",
+  "ursra_advsimd.xml",
+  "sri_advsimd.xml",
+  "sli_advsimd.xml",
+  "sqshlu_advsimd.xml",
+  "sqshl_advsimd_imm.xml",
+]);
 
 function parseBoxBits(box: any): BoxBits {
   const width = Number(box.attrs.width ?? "1");
@@ -60,6 +79,7 @@ function applyBox(bits: BoxBits, hibit: number, width: number, values: BoxBits):
 function parseDiagram(node: any): BaseDiagram {
   const bits: BoxBits = new Array(32).fill("x");
   const fields: FieldShape[] = [];
+  const constraints: BaseDiagram["constraints"] = [];
 
   for (const box of children(node, "box")) {
     const hibit = Number(box.attrs.hibit);
@@ -69,10 +89,13 @@ function parseDiagram(node: any): BaseDiagram {
     applyBox(bits, hibit, width, values);
     if (name) {
       fields.push({ name, lsb: hibit - width + 1, width });
+      if (typeof box.attrs.constraint === "string" && box.attrs.constraint.trim().length > 0) {
+        constraints.push({ field: name, expression: box.attrs.constraint.trim() });
+      }
     }
   }
 
-  return { bits, fields };
+  return { bits, fields, constraints };
 }
 
 function cloneBits(bits: BoxBits): BoxBits {
@@ -126,7 +149,7 @@ function parseGuardTerm(term: string, fieldWidths: FieldWidthMap): GuardCheck {
     };
   }
 
-  const fieldCompareMatch = /^([A-Za-z0-9_]+)\s*(==|!=)\s*([A-Za-z0-9_]+)$/.exec(term.trim());
+  const fieldCompareMatch = /^([A-Za-z0-9_]+)\s*(==|!=)\s*([A-Za-z_][A-Za-z0-9_]*)$/.exec(term.trim());
   if (fieldCompareMatch) {
     return {
       kind: fieldCompareMatch[2] === "==" ? "eq_field" : "ne_field",
@@ -326,6 +349,20 @@ export async function parseEncodingFile(
     const decodeText = decodePs ? children(decodePs, "pstext")[0]?.children.map((child) => (typeof child === "string" ? child : "")).join("") ?? "" : "";
     const features = collectFeatures(iclass, decodeText);
     const guards = parseDecodeGuards(decodeText, fieldWidths, options);
+    for (const constraint of base.constraints) {
+      if (!ADVSIMD_IMMEDIATE_SHIFT_CONSTRAINT_FILES.has(fileName) || constraint.field !== "immh") {
+        continue;
+      }
+      const term = `${constraint.field} ${constraint.expression}`;
+      try {
+        const alternatives = parseValidGuardTermAlternatives(term, fieldWidths);
+        guards.push(...alternatives.map((all) => ({ all })));
+      } catch (error) {
+        if (!options.ignoreUnsupportedGuards) {
+          throw error;
+        }
+      }
+    }
     const className = iclass.attrs.name ?? "";
 
     for (const encoding of children(iclass, "encoding")) {
