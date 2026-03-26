@@ -1,0 +1,181 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "FMOV_float_imm",
+    "encodingId": "FMOV_D_floatimm",
+    "mnemonic": "FMOV",
+    "className": "Floating point constant in 8 bits",
+    "fileName": "fmov_float_imm.xml",
+    "mask": 4292878304,
+    "value": 509612032,
+    "bitCount": 19,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "imm8",
+        "lsb": 13,
+        "width": 8
+      },
+      {
+        "name": "imm5",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_imm",
+    "encodingId": "FMOV_H_floatimm",
+    "mnemonic": "FMOV",
+    "className": "Floating point constant in 8 bits",
+    "fileName": "fmov_float_imm.xml",
+    "mask": 4292878304,
+    "value": 518000640,
+    "bitCount": 19,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "imm8",
+        "lsb": 13,
+        "width": 8
+      },
+      {
+        "name": "imm5",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_imm",
+    "encodingId": "FMOV_S_floatimm",
+    "mnemonic": "FMOV",
+    "className": "Floating point constant in 8 bits",
+    "fileName": "fmov_float_imm.xml",
+    "mask": 4292878304,
+    "value": 505417728,
+    "bitCount": 19,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "imm8",
+        "lsb": 13,
+        "width": 8
+      },
+      {
+        "name": "imm5",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  }
+];

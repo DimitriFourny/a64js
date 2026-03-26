@@ -126,19 +126,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "guards": [
-      {
-        "all": [
-          {
-            "kind": "eq",
-            "field": "Z",
-            "mask": 1,
-            "lsb": 0,
-            "value": 0
-          }
-        ]
-      }
-    ]
+    "guards": []
   },
   {
     "instructionId": "PACIA",
@@ -184,18 +172,6 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "guards": [
-      {
-        "all": [
-          {
-            "kind": "eq",
-            "field": "Z",
-            "mask": 1,
-            "lsb": 0,
-            "value": 0
-          }
-        ]
-      }
-    ]
+    "guards": []
   }
 ];

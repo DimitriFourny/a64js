@@ -18,6 +18,23 @@ function extractFields(word: number, encoding: GeneratedEncoding): Record<string
 }
 
 function guardCheckMatches(fields: Record<string, number>, guard: GuardCheck): boolean {
+  if (guard.kind === "eq_field" || guard.kind === "ne_field") {
+    const actual = fields[guard.field] ?? 0;
+    const expected = fields[guard.otherField] ?? 0;
+    return guard.kind === "eq_field" ? actual === expected : actual !== expected;
+  }
+
+  if (guard.kind === "eq_concat" || guard.kind === "ne_concat") {
+    let actual = 0;
+    for (const part of guard.parts) {
+      const raw = fields[part.field] ?? 0;
+      const width = part.msb - part.lsb + 1;
+      const value = (raw >>> part.lsb) & ((1 << width) - 1);
+      actual = (actual << width) | value;
+    }
+    return guard.kind === "eq_concat" ? actual === guard.value : actual !== guard.value;
+  }
+
   const raw = fields[guard.field] ?? 0;
   const actual = guard.mask === -1 ? raw : (raw & guard.mask) >>> guard.lsb;
 
@@ -141,11 +158,17 @@ function isUnsupportedConditionalSelectAlias(
   );
 }
 
-function isUnsupportedMultiplyAlias(
+function isMultiplyAliasOverlap(
   encoding: GeneratedEncoding,
   fields: Record<string, number>,
 ): boolean {
-  return encoding.fileName === "msub.xml" && fields.Ra === 31;
+  return (
+    (encoding.fileName === "msub.xml" && fields.Ra === 31) ||
+    (encoding.fileName === "smaddl.xml" && fields.Ra === 31) ||
+    (encoding.fileName === "smsubl.xml" && fields.Ra === 31) ||
+    (encoding.fileName === "umaddl.xml" && fields.Ra === 31) ||
+    (encoding.fileName === "umsubl.xml" && fields.Ra === 31)
+  );
 }
 
 function isUnsupportedLogicalImmediateAlias(
@@ -200,7 +223,6 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     const fields = extractFields(word, encoding);
     if (
       isUnsupportedConditionalSelectAlias(encoding, fields) ||
-      isUnsupportedMultiplyAlias(encoding, fields) ||
       isUnsupportedLogicalImmediateAlias(encoding, fields) ||
       isUnsupportedBarrierAlias(encoding, fields) ||
       isUnsupportedSystemInstructionOverlap(encoding, fields)
@@ -210,6 +232,9 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
         word,
       };
     }
+    if (isMultiplyAliasOverlap(encoding, fields)) {
+      continue;
+    }
     for (const guard of encoding.guards) {
       if (guard.all.every((check) => guardCheckMatches(fields, check))) {
         return {
@@ -218,7 +243,7 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
           encoding,
           mnemonic: encoding.mnemonic,
           fields,
-          errors: [`decode guard failed for ${guard.field}`],
+          errors: ["decode guard failed"],
         };
       }
     }

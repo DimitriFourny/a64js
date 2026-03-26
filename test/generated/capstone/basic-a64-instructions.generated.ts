@@ -3840,6 +3840,42 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 544,
+    "word": 446633955,
+    "asmText": "cset w3, eq",
+    "encodingFile": "cset_csinc.xml",
+    "mnemonic": "CSINC",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 545,
+    "word": 2594129897,
+    "asmText": "cset x9, pl",
+    "encodingFile": "cset_csinc.xml",
+    "mnemonic": "CSINC",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 546,
+    "word": 1520370676,
+    "asmText": "csetm w20, ne",
+    "encodingFile": "csetm_csinv.xml",
+    "mnemonic": "CSINV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 547,
+    "word": 3667899390,
+    "asmText": "csetm x30, ge",
+    "encodingFile": "csetm_csinv.xml",
+    "mnemonic": "CSINV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 548,
     "word": 444978339,
     "asmText": "cinc w3, w5, gt",
@@ -3853,6 +3889,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "word": 444908703,
     "asmText": "cinc wzr, w4, le",
     "encodingFile": "cinc_csinc.xml",
+    "mnemonic": "CSINC",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 550,
+    "word": 446670825,
+    "asmText": "cset w9, lt",
+    "encodingFile": "cset_csinc.xml",
     "mnemonic": "CSINC",
     "features": []
   },
@@ -3876,6 +3921,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 553,
+    "word": 2594154473,
+    "asmText": "cset x9, lt",
+    "encodingFile": "cset_csinc.xml",
+    "mnemonic": "CSINC",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 554,
     "word": 1518719139,
     "asmText": "cinv w3, w5, gt",
@@ -3894,6 +3948,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 556,
+    "word": 1520411625,
+    "asmText": "csetm w9, lt",
+    "encodingFile": "csetm_csinv.xml",
+    "mnemonic": "CSINV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 557,
     "word": 3666202787,
     "asmText": "cinv x3, x5, gt",
@@ -3907,6 +3970,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "word": 3666133151,
     "asmText": "cinv xzr, x4, le",
     "encodingFile": "cinv_csinv.xml",
+    "mnemonic": "CSINV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 559,
+    "word": 3667895273,
+    "asmText": "csetm x9, lt",
+    "encodingFile": "csetm_csinv.xml",
     "mnemonic": "CSINV",
     "features": []
   },
@@ -3962,6 +4034,204 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "cneg x9, xzr, lt",
     "encodingFile": "cneg_csneg.xml",
     "mnemonic": "CSNEG",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 570,
+    "word": 1522534418,
+    "asmText": "rev w18, w0",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 573,
+    "word": 3670019158,
+    "asmText": "rev x22, x2",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 574,
+    "word": 3670020082,
+    "asmText": "rev x18, xzr",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 575,
+    "word": 1522535399,
+    "asmText": "rev w7, wzr",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 581,
+    "word": 3670020086,
+    "asmText": "rev x22, xzr",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 582,
+    "word": 3670019469,
+    "asmText": "rev x13, x12",
+    "encodingFile": "rev.xml",
+    "mnemonic": "REV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 587,
+    "word": 449651083,
+    "asmText": "lsl w11, w12, w13",
+    "encodingFile": "lsl_lslv.xml",
+    "mnemonic": "LSLV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 588,
+    "word": 2597331438,
+    "asmText": "lsl x14, x15, x16",
+    "encodingFile": "lsl_lslv.xml",
+    "mnemonic": "LSLV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 589,
+    "word": 450045521,
+    "asmText": "lsr w17, w18, w19",
+    "encodingFile": "lsr_lsrv.xml",
+    "mnemonic": "LSRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 590,
+    "word": 2597725876,
+    "asmText": "lsr x20, x21, x22",
+    "encodingFile": "lsr_lsrv.xml",
+    "mnemonic": "LSRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 591,
+    "word": 450439959,
+    "asmText": "asr w23, w24, w25",
+    "encodingFile": "asr_asrv.xml",
+    "mnemonic": "ASRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 592,
+    "word": 2598120314,
+    "asmText": "asr x26, x27, x28",
+    "encodingFile": "asr_asrv.xml",
+    "mnemonic": "ASRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 593,
+    "word": 448932896,
+    "asmText": "ror w0, w1, w2",
+    "encodingFile": "ror_rorv.xml",
+    "mnemonic": "RORV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 594,
+    "word": 2596613251,
+    "asmText": "ror x3, x4, x5",
+    "encodingFile": "ror_rorv.xml",
+    "mnemonic": "RORV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 595,
+    "word": 449323238,
+    "asmText": "lsl w6, w7, w8",
+    "encodingFile": "lsl_lslv.xml",
+    "mnemonic": "LSLV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 596,
+    "word": 2597003593,
+    "asmText": "lsl x9, x10, x11",
+    "encodingFile": "lsl_lslv.xml",
+    "mnemonic": "LSLV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 597,
+    "word": 449717676,
+    "asmText": "lsr w12, w13, w14",
+    "encodingFile": "lsr_lsrv.xml",
+    "mnemonic": "LSRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 598,
+    "word": 2597398031,
+    "asmText": "lsr x15, x16, x17",
+    "encodingFile": "lsr_lsrv.xml",
+    "mnemonic": "LSRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 599,
+    "word": 450112114,
+    "asmText": "asr w18, w19, w20",
+    "encodingFile": "asr_asrv.xml",
+    "mnemonic": "ASRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 600,
+    "word": 2597792469,
+    "asmText": "asr x21, x22, x23",
+    "encodingFile": "asr_asrv.xml",
+    "mnemonic": "ASRV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 601,
+    "word": 450506552,
+    "asmText": "ror w24, w25, w26",
+    "encodingFile": "ror_rorv.xml",
+    "mnemonic": "RORV",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 602,
+    "word": 2598186907,
+    "asmText": "ror x27, x28, x29",
+    "encodingFile": "ror_rorv.xml",
+    "mnemonic": "RORV",
     "features": []
   },
   {
@@ -4092,6 +4362,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 617,
+    "word": 453442724,
+    "asmText": "mneg w4, w5, w6",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 618,
     "word": 2600964193,
     "asmText": "msub x1, x3, x7, x4",
@@ -4124,6 +4403,267 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "msub x19, x30, xzr, x29",
     "encodingFile": "msub.xml",
     "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 622,
+    "word": 2600926372,
+    "asmText": "mneg x4, x5, x6",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 623,
+    "word": 2602706083,
+    "asmText": "smaddl x3, w5, w2, x9",
+    "encodingFile": "smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 624,
+    "word": 2603299167,
+    "asmText": "smaddl xzr, w10, w11, x12",
+    "encodingFile": "smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 625,
+    "word": 2603499501,
+    "asmText": "smaddl x13, wzr, w14, x15",
+    "encodingFile": "smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 626,
+    "word": 2604616240,
+    "asmText": "smaddl x16, w17, wzr, x18",
+    "encodingFile": "smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 627,
+    "word": 2603974291,
+    "asmText": "smull x19, w20, w21",
+    "encodingFile": "smull_smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 628,
+    "word": 2602738851,
+    "asmText": "smsubl x3, w5, w2, x9",
+    "encodingFile": "smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 629,
+    "word": 2603331935,
+    "asmText": "smsubl xzr, w10, w11, x12",
+    "encodingFile": "smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 630,
+    "word": 2603532269,
+    "asmText": "smsubl x13, wzr, w14, x15",
+    "encodingFile": "smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 631,
+    "word": 2604649008,
+    "asmText": "smsubl x16, w17, wzr, x18",
+    "encodingFile": "smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 632,
+    "word": 2604007059,
+    "asmText": "smnegl x19, w20, w21",
+    "encodingFile": "smnegl_smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 633,
+    "word": 2611094691,
+    "asmText": "umaddl x3, w5, w2, x9",
+    "encodingFile": "umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 634,
+    "word": 2611687775,
+    "asmText": "umaddl xzr, w10, w11, x12",
+    "encodingFile": "umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 635,
+    "word": 2611888109,
+    "asmText": "umaddl x13, wzr, w14, x15",
+    "encodingFile": "umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 636,
+    "word": 2613004848,
+    "asmText": "umaddl x16, w17, wzr, x18",
+    "encodingFile": "umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 637,
+    "word": 2612362899,
+    "asmText": "umull x19, w20, w21",
+    "encodingFile": "umull_umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 638,
+    "word": 2611127459,
+    "asmText": "umsubl x3, w5, w2, x9",
+    "encodingFile": "umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 639,
+    "word": 2611720543,
+    "asmText": "umsubl xzr, w10, w11, x12",
+    "encodingFile": "umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 640,
+    "word": 2611920877,
+    "asmText": "umsubl x13, wzr, w14, x15",
+    "encodingFile": "umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 641,
+    "word": 2613037616,
+    "asmText": "umsubl x16, w17, wzr, x18",
+    "encodingFile": "umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 642,
+    "word": 2612395667,
+    "asmText": "umnegl x19, w20, w21",
+    "encodingFile": "umnegl_umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 643,
+    "word": 2606530494,
+    "asmText": "smulh x30, x29, x28",
+    "encodingFile": "smulh.xml",
+    "mnemonic": "SMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 644,
+    "word": 2606399359,
+    "asmText": "smulh xzr, x27, x26",
+    "encodingFile": "smulh.xml",
+    "mnemonic": "SMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 645,
+    "word": 2606268409,
+    "asmText": "smulh x25, xzr, x24",
+    "encodingFile": "smulh.xml",
+    "mnemonic": "SMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 646,
+    "word": 2606726871,
+    "asmText": "smulh x23, x22, xzr",
+    "encodingFile": "smulh.xml",
+    "mnemonic": "SMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 647,
+    "word": 2614919102,
+    "asmText": "umulh x30, x29, x28",
+    "encodingFile": "umulh.xml",
+    "mnemonic": "UMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 648,
+    "word": 2614787967,
+    "asmText": "umulh xzr, x27, x26",
+    "encodingFile": "umulh.xml",
+    "mnemonic": "UMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 649,
+    "word": 2614657017,
+    "asmText": "umulh x25, xzr, x24",
+    "encodingFile": "umulh.xml",
+    "mnemonic": "UMULH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 650,
+    "word": 2615115479,
+    "asmText": "umulh x23, x22, xzr",
+    "encodingFile": "umulh.xml",
+    "mnemonic": "UMULH",
     "features": []
   },
   {
@@ -4196,6 +4736,141 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "mul x19, x20, xzr",
     "encodingFile": "mul_madd.xml",
     "mnemonic": "MADD",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 659,
+    "word": 454557397,
+    "asmText": "mneg w21, w22, w23",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 660,
+    "word": 454688543,
+    "asmText": "mneg wzr, w24, w25",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 661,
+    "word": 454819834,
+    "asmText": "mneg w26, wzr, w27",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 662,
+    "word": 455081916,
+    "asmText": "mneg w28, w29, wzr",
+    "encodingFile": "mneg_msub.xml",
+    "mnemonic": "MSUB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 663,
+    "word": 2603711915,
+    "asmText": "smull x11, w13, w17",
+    "encodingFile": "smull_smaddl.xml",
+    "mnemonic": "SMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 664,
+    "word": 2612100523,
+    "asmText": "umull x11, w13, w17",
+    "encodingFile": "umull_umaddl.xml",
+    "mnemonic": "UMADDL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 665,
+    "word": 2603744683,
+    "asmText": "smnegl x11, w13, w17",
+    "encodingFile": "smnegl_smsubl.xml",
+    "mnemonic": "SMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 666,
+    "word": 2612133291,
+    "asmText": "umnegl x11, w13, w17",
+    "encodingFile": "umnegl_umsubl.xml",
+    "mnemonic": "UMSUBL",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 679,
+    "word": 327614627,
+    "asmText": "extr w3, w5, w7, #0",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 680,
+    "word": 328301995,
+    "asmText": "extr w11, w13, w17, #31",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 681,
+    "word": 2479307939,
+    "asmText": "extr x3, x5, x7, #15",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 682,
+    "word": 2480012715,
+    "asmText": "extr x11, x13, x17, #63",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 683,
+    "word": 2480366323,
+    "asmText": "ror x19, x23, #24",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 684,
+    "word": 2480930813,
+    "asmText": "ror x29, xzr, #63",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 685,
+    "word": 328039849,
+    "asmText": "ror w9, w13, #31",
+    "encodingFile": "extr.xml",
+    "mnemonic": "EXTR",
     "features": []
   },
   {
@@ -4296,6 +4971,1440 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 694,
+    "word": 507446304,
+    "asmText": "fccmp s1, s31, #0, eq",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 695,
+    "word": 505422959,
+    "asmText": "fccmp s3, s0, #15, hs",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 696,
+    "word": 506406893,
+    "asmText": "fccmp s31, s15, #13, hs",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 697,
+    "word": 511694112,
+    "asmText": "fccmp d9, d31, #0, le",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 698,
+    "word": 509658223,
+    "asmText": "fccmp d3, d0, #15, gt",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 699,
+    "word": 509941735,
+    "asmText": "fccmp d31, d5, #7, ne",
+    "encodingFile": "fccmp_float.xml",
+    "mnemonic": "FCCMP",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 700,
+    "word": 507446320,
+    "asmText": "fccmpe s1, s31, #0, eq",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 701,
+    "word": 505422975,
+    "asmText": "fccmpe s3, s0, #15, hs",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 702,
+    "word": 506406909,
+    "asmText": "fccmpe s31, s15, #13, hs",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 703,
+    "word": 511694128,
+    "asmText": "fccmpe d9, d31, #0, le",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 704,
+    "word": 509658239,
+    "asmText": "fccmpe d3, d0, #15, gt",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 705,
+    "word": 509941751,
+    "asmText": "fccmpe d31, d5, #7, ne",
+    "encodingFile": "fccmpe_float.xml",
+    "mnemonic": "FCCMPE",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 712,
+    "word": 505594152,
+    "asmText": "fcvt d8, s9",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 713,
+    "word": 505659754,
+    "asmText": "fcvt h10, s11",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 725,
+    "word": 509755688,
+    "asmText": "fcvt s8, d9",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 726,
+    "word": 509854058,
+    "asmText": "fcvt h10, d11",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 734,
+    "word": 518144890,
+    "asmText": "fcvt s26, h27",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 735,
+    "word": 518177724,
+    "asmText": "fcvt d28, h29",
+    "encodingFile": "fcvt_float.xml",
+    "mnemonic": "FCVT",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 762,
+    "word": 504954019,
+    "asmText": "fcvtzs w3, s5, #1",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 763,
+    "word": 504942239,
+    "asmText": "fcvtzs wzr, s20, #13",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 764,
+    "word": 504922131,
+    "asmText": "fcvtzs w19, s0, #32",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 765,
+    "word": 2652437667,
+    "asmText": "fcvtzs x3, s5, #1",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 766,
+    "word": 2652393420,
+    "asmText": "fcvtzs x12, s30, #45",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 767,
+    "word": 2652373011,
+    "asmText": "fcvtzs x19, s0, #64",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 768,
+    "word": 509148323,
+    "asmText": "fcvtzs w3, d5, #1",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 769,
+    "word": 509136543,
+    "asmText": "fcvtzs wzr, d20, #13",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 770,
+    "word": 509116435,
+    "asmText": "fcvtzs w19, d0, #32",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 771,
+    "word": 2656631971,
+    "asmText": "fcvtzs x3, d5, #1",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 772,
+    "word": 2656587724,
+    "asmText": "fcvtzs x12, d30, #45",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 773,
+    "word": 2656567315,
+    "asmText": "fcvtzs x19, d0, #64",
+    "encodingFile": "fcvtzs_float_fix.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 774,
+    "word": 505019555,
+    "asmText": "fcvtzu w3, s5, #1",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 775,
+    "word": 505007775,
+    "asmText": "fcvtzu wzr, s20, #13",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 776,
+    "word": 504987667,
+    "asmText": "fcvtzu w19, s0, #32",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 777,
+    "word": 2652503203,
+    "asmText": "fcvtzu x3, s5, #1",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 778,
+    "word": 2652458956,
+    "asmText": "fcvtzu x12, s30, #45",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 779,
+    "word": 2652438547,
+    "asmText": "fcvtzu x19, s0, #64",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 780,
+    "word": 509213859,
+    "asmText": "fcvtzu w3, d5, #1",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 781,
+    "word": 509202079,
+    "asmText": "fcvtzu wzr, d20, #13",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 782,
+    "word": 509181971,
+    "asmText": "fcvtzu w19, d0, #32",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 783,
+    "word": 2656697507,
+    "asmText": "fcvtzu x3, d5, #1",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 784,
+    "word": 2656653260,
+    "asmText": "fcvtzu x12, d30, #45",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 785,
+    "word": 2656632851,
+    "asmText": "fcvtzu x19, d0, #64",
+    "encodingFile": "fcvtzu_float_fix.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 786,
+    "word": 503512695,
+    "asmText": "scvtf s23, w19, #1",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 787,
+    "word": 503493631,
+    "asmText": "scvtf s31, wzr, #20",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 788,
+    "word": 503480334,
+    "asmText": "scvtf s14, w0, #32",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 789,
+    "word": 2650996343,
+    "asmText": "scvtf s23, x19, #1",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 790,
+    "word": 2650977279,
+    "asmText": "scvtf s31, xzr, #20",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 791,
+    "word": 2650931214,
+    "asmText": "scvtf s14, x0, #64",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 792,
+    "word": 507706999,
+    "asmText": "scvtf d23, w19, #1",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 793,
+    "word": 507687935,
+    "asmText": "scvtf d31, wzr, #20",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 794,
+    "word": 507674638,
+    "asmText": "scvtf d14, w0, #32",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 795,
+    "word": 2655190647,
+    "asmText": "scvtf d23, x19, #1",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 796,
+    "word": 2655171583,
+    "asmText": "scvtf d31, xzr, #20",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 797,
+    "word": 2655125518,
+    "asmText": "scvtf d14, x0, #64",
+    "encodingFile": "scvtf_float_fix.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 798,
+    "word": 503578231,
+    "asmText": "ucvtf s23, w19, #1",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 799,
+    "word": 503559167,
+    "asmText": "ucvtf s31, wzr, #20",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 800,
+    "word": 503545870,
+    "asmText": "ucvtf s14, w0, #32",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 801,
+    "word": 2651061879,
+    "asmText": "ucvtf s23, x19, #1",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 802,
+    "word": 2651042815,
+    "asmText": "ucvtf s31, xzr, #20",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 803,
+    "word": 2650996750,
+    "asmText": "ucvtf s14, x0, #64",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 804,
+    "word": 507772535,
+    "asmText": "ucvtf d23, w19, #1",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 805,
+    "word": 507753471,
+    "asmText": "ucvtf d31, wzr, #20",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 806,
+    "word": 507740174,
+    "asmText": "ucvtf d14, w0, #32",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 807,
+    "word": 2655256183,
+    "asmText": "ucvtf d23, x19, #1",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 808,
+    "word": 2655237119,
+    "asmText": "ucvtf d31, xzr, #20",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 809,
+    "word": 2655191054,
+    "asmText": "ucvtf d14, x0, #64",
+    "encodingFile": "ucvtf_float_fix.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 810,
+    "word": 505414627,
+    "asmText": "fcvtns w3, s31",
+    "encodingFile": "fcvtns_float.xml",
+    "mnemonic": "FCVTNS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 811,
+    "word": 2652897695,
+    "asmText": "fcvtns xzr, s12",
+    "encodingFile": "fcvtns_float.xml",
+    "mnemonic": "FCVTNS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 812,
+    "word": 505479583,
+    "asmText": "fcvtnu wzr, s12",
+    "encodingFile": "fcvtnu_float.xml",
+    "mnemonic": "FCVTNU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 813,
+    "word": 2652962816,
+    "asmText": "fcvtnu x0, s0",
+    "encodingFile": "fcvtnu_float.xml",
+    "mnemonic": "FCVTNU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 814,
+    "word": 505938239,
+    "asmText": "fcvtps wzr, s9",
+    "encodingFile": "fcvtps_float.xml",
+    "mnemonic": "FCVTPS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 815,
+    "word": 2653422220,
+    "asmText": "fcvtps x12, s20",
+    "encodingFile": "fcvtps_float.xml",
+    "mnemonic": "FCVTPS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 816,
+    "word": 506004222,
+    "asmText": "fcvtpu w30, s23",
+    "encodingFile": "fcvtpu_float.xml",
+    "mnemonic": "FCVTPU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 817,
+    "word": 2653487229,
+    "asmText": "fcvtpu x29, s3",
+    "encodingFile": "fcvtpu_float.xml",
+    "mnemonic": "FCVTPU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 818,
+    "word": 506462306,
+    "asmText": "fcvtms w2, s3",
+    "encodingFile": "fcvtms_float.xml",
+    "mnemonic": "FCVTMS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 819,
+    "word": 2653946020,
+    "asmText": "fcvtms x4, s5",
+    "encodingFile": "fcvtms_float.xml",
+    "mnemonic": "FCVTMS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 820,
+    "word": 506527974,
+    "asmText": "fcvtmu w6, s7",
+    "encodingFile": "fcvtmu_float.xml",
+    "mnemonic": "FCVTMU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 821,
+    "word": 2654011688,
+    "asmText": "fcvtmu x8, s9",
+    "encodingFile": "fcvtmu_float.xml",
+    "mnemonic": "FCVTMU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 822,
+    "word": 506986858,
+    "asmText": "fcvtzs w10, s11",
+    "encodingFile": "fcvtzs_float_int.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 823,
+    "word": 2654470572,
+    "asmText": "fcvtzs x12, s13",
+    "encodingFile": "fcvtzs_float_int.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 824,
+    "word": 507052526,
+    "asmText": "fcvtzu w14, s15",
+    "encodingFile": "fcvtzu_float_int.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 825,
+    "word": 2654536207,
+    "asmText": "fcvtzu x15, s16",
+    "encodingFile": "fcvtzu_float_int.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 826,
+    "word": 505545297,
+    "asmText": "scvtf s17, w18",
+    "encodingFile": "scvtf_float_int.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 827,
+    "word": 2653029011,
+    "asmText": "scvtf s19, x20",
+    "encodingFile": "scvtf_float_int.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 828,
+    "word": 505610965,
+    "asmText": "ucvtf s21, w22",
+    "encodingFile": "ucvtf_float_int.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 829,
+    "word": 2653029143,
+    "asmText": "scvtf s23, x24",
+    "encodingFile": "scvtf_float_int.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 834,
+    "word": 509608931,
+    "asmText": "fcvtns w3, d31",
+    "encodingFile": "fcvtns_float.xml",
+    "mnemonic": "FCVTNS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 835,
+    "word": 2657091999,
+    "asmText": "fcvtns xzr, d12",
+    "encodingFile": "fcvtns_float.xml",
+    "mnemonic": "FCVTNS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 836,
+    "word": 509673887,
+    "asmText": "fcvtnu wzr, d12",
+    "encodingFile": "fcvtnu_float.xml",
+    "mnemonic": "FCVTNU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 837,
+    "word": 2657157120,
+    "asmText": "fcvtnu x0, d0",
+    "encodingFile": "fcvtnu_float.xml",
+    "mnemonic": "FCVTNU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 838,
+    "word": 510132543,
+    "asmText": "fcvtps wzr, d9",
+    "encodingFile": "fcvtps_float.xml",
+    "mnemonic": "FCVTPS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 839,
+    "word": 2657616524,
+    "asmText": "fcvtps x12, d20",
+    "encodingFile": "fcvtps_float.xml",
+    "mnemonic": "FCVTPS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 840,
+    "word": 510198526,
+    "asmText": "fcvtpu w30, d23",
+    "encodingFile": "fcvtpu_float.xml",
+    "mnemonic": "FCVTPU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 841,
+    "word": 2657681533,
+    "asmText": "fcvtpu x29, d3",
+    "encodingFile": "fcvtpu_float.xml",
+    "mnemonic": "FCVTPU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 842,
+    "word": 510656610,
+    "asmText": "fcvtms w2, d3",
+    "encodingFile": "fcvtms_float.xml",
+    "mnemonic": "FCVTMS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 843,
+    "word": 2658140324,
+    "asmText": "fcvtms x4, d5",
+    "encodingFile": "fcvtms_float.xml",
+    "mnemonic": "FCVTMS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 844,
+    "word": 510722278,
+    "asmText": "fcvtmu w6, d7",
+    "encodingFile": "fcvtmu_float.xml",
+    "mnemonic": "FCVTMU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 845,
+    "word": 2658205992,
+    "asmText": "fcvtmu x8, d9",
+    "encodingFile": "fcvtmu_float.xml",
+    "mnemonic": "FCVTMU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 846,
+    "word": 511181162,
+    "asmText": "fcvtzs w10, d11",
+    "encodingFile": "fcvtzs_float_int.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 847,
+    "word": 2658664876,
+    "asmText": "fcvtzs x12, d13",
+    "encodingFile": "fcvtzs_float_int.xml",
+    "mnemonic": "FCVTZS",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 848,
+    "word": 511246830,
+    "asmText": "fcvtzu w14, d15",
+    "encodingFile": "fcvtzu_float_int.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 849,
+    "word": 2658730511,
+    "asmText": "fcvtzu x15, d16",
+    "encodingFile": "fcvtzu_float_int.xml",
+    "mnemonic": "FCVTZU",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 850,
+    "word": 509739601,
+    "asmText": "scvtf d17, w18",
+    "encodingFile": "scvtf_float_int.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 851,
+    "word": 2657223315,
+    "asmText": "scvtf d19, x20",
+    "encodingFile": "scvtf_float_int.xml",
+    "mnemonic": "SCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 852,
+    "word": 509805269,
+    "asmText": "ucvtf d21, w22",
+    "encodingFile": "ucvtf_float_int.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 853,
+    "word": 2657288983,
+    "asmText": "ucvtf d23, x24",
+    "encodingFile": "ucvtf_float_int.xml",
+    "mnemonic": "UCVTF",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 858,
+    "word": 505807139,
+    "asmText": "fmov w3, s9",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 859,
+    "word": 505872489,
+    "asmText": "fmov s9, w3",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 860,
+    "word": 2657485812,
+    "asmText": "fmov x20, d31",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 861,
+    "word": 2657550817,
+    "asmText": "fmov d1, x15",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 862,
+    "word": 2662203779,
+    "asmText": "fmov x3, v12.d[1]",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 863,
+    "word": 2662269537,
+    "asmText": "fmov v1.d[1], x19",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 864,
+    "word": 2662269923,
+    "asmText": "fmov v3.d[1], xzr",
+    "encodingFile": "fmov_float_gen.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 865,
+    "word": 505942018,
+    "asmText": "fmov s2, #0.12500000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 866,
+    "word": 506335235,
+    "asmText": "fmov s3, #1.00000000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 867,
+    "word": 510005278,
+    "asmText": "fmov d30, #16.00000000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 868,
+    "word": 506343428,
+    "asmText": "fmov s4, #1.06250000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 869,
+    "word": 510652426,
+    "asmText": "fmov d10, #1.93750000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 870,
+    "word": 507383820,
+    "asmText": "fmov s12, #-1.00000000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 871,
+    "word": 509882384,
+    "asmText": "fmov d16, #8.50000000",
+    "encodingFile": "fmov_float_imm.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 909,
     "word": 3088056336,
     "asmText": "stur w16, [x0, #-256]",
@@ -4329,6 +6438,116 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldur_gen.xml",
     "mnemonic": "LDUR",
     "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 922,
+    "word": 1006638048,
+    "asmText": "stur b0, [sp, #1]",
+    "encodingFile": "stur_fpsimd.xml",
+    "mnemonic": "STUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 923,
+    "word": 2082468236,
+    "asmText": "stur h12, [x12, #-1]",
+    "encodingFile": "stur_fpsimd.xml",
+    "mnemonic": "STUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 924,
+    "word": 3155161103,
+    "asmText": "stur s15, [x0, #255]",
+    "encodingFile": "stur_fpsimd.xml",
+    "mnemonic": "STUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 925,
+    "word": 4227961023,
+    "asmText": "stur d31, [x5, #25]",
+    "encodingFile": "stur_fpsimd.xml",
+    "mnemonic": "STUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 926,
+    "word": 1015021737,
+    "asmText": "stur q9, [x5]",
+    "encodingFile": "stur_fpsimd.xml",
+    "mnemonic": "STUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 927,
+    "word": 1010828259,
+    "asmText": "ldur b3, [sp]",
+    "encodingFile": "ldur_fpsimd.xml",
+    "mnemonic": "LDUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 928,
+    "word": 2085617797,
+    "asmText": "ldur h5, [x4, #-256]",
+    "encodingFile": "ldur_fpsimd.xml",
+    "mnemonic": "LDUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 929,
+    "word": 3160404359,
+    "asmText": "ldur s7, [x12, #-1]",
+    "encodingFile": "ldur_fpsimd.xml",
+    "mnemonic": "LDUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 930,
+    "word": 4232069739,
+    "asmText": "ldur d11, [x19, #4]",
+    "encodingFile": "ldur_fpsimd.xml",
+    "mnemonic": "LDUR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 931,
+    "word": 1019224109,
+    "asmText": "ldur q13, [x1, #2]",
+    "encodingFile": "ldur_fpsimd.xml",
+    "mnemonic": "LDUR",
+    "features": [
+      "FEAT_FP"
+    ]
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
@@ -4771,6 +6990,105 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_FP"
     ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 980,
+    "word": 946170851,
+    "asmText": "ldrb w3, [sp, x5]",
+    "encodingFile": "ldrb_reg.xml",
+    "mnemonic": "LDRB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 981,
+    "word": 946240361,
+    "asmText": "ldrb w9, [x27, x6, lsl #0]",
+    "encodingFile": "ldrb_reg.xml",
+    "mnemonic": "LDRB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 983,
+    "word": 946072491,
+    "asmText": "ldrb w11, [x29, x3, sxtx]",
+    "encodingFile": "ldrb_reg.xml",
+    "mnemonic": "LDRB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 985,
+    "word": 946228046,
+    "asmText": "ldrb w14, [x26, w6, uxtw]",
+    "encodingFile": "ldrb_reg.xml",
+    "mnemonic": "LDRB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 987,
+    "word": 946457329,
+    "asmText": "ldrb w17, [x23, w9, sxtw]",
+    "encodingFile": "ldrb_reg.xml",
+    "mnemonic": "LDRB",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 991,
+    "word": 2020047818,
+    "asmText": "ldrh w10, [x30, x7, lsl #1]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 993,
+    "word": 2021649292,
+    "asmText": "ldrh w12, [x28, xzr, sxtx]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 995,
+    "word": 2019969870,
+    "asmText": "ldrh w14, [x26, w6, uxtw]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 996,
+    "word": 2020035375,
+    "asmText": "ldrh w15, [x25, w7, uxtw]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 998,
+    "word": 2020199153,
+    "asmText": "ldrh w17, [x23, w9, sxtw]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 999,
+    "word": 2020264658,
+    "asmText": "ldrh w18, [x22, w10, sxtw]",
+    "encodingFile": "ldrh_reg.xml",
+    "mnemonic": "LDRH",
+    "features": []
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
@@ -6987,6 +9305,115 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1248,
+    "word": 675289059,
+    "asmText": "ldnp w3, w5, [sp]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1250,
+    "word": 677412834,
+    "asmText": "ldnp w2, wzr, [sp, #-256]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1251,
+    "word": 675326953,
+    "asmText": "ldnp w9, w10, [sp, #4]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1252,
+    "word": 2824860757,
+    "asmText": "ldnp x21, x29, [x2, #504]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1253,
+    "word": 2824887414,
+    "asmText": "ldnp x22, x23, [x3, #-512]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1254,
+    "word": 2822825112,
+    "asmText": "ldnp x24, x25, [x4, #8]",
+    "encodingFile": "ldnp_gen.xml",
+    "mnemonic": "LDNP",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1256,
+    "word": 740322299,
+    "asmText": "stnp s27, s26, [sp, #-256]",
+    "encodingFile": "stnp_fpsimd.xml",
+    "mnemonic": "STNP",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1258,
+    "word": 1814009123,
+    "asmText": "stnp d3, d5, [x9, #504]",
+    "encodingFile": "stnp_fpsimd.xml",
+    "mnemonic": "STNP",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1259,
+    "word": 1814048071,
+    "asmText": "stnp d7, d11, [x10, #-512]",
+    "encodingFile": "stnp_fpsimd.xml",
+    "mnemonic": "STNP",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1261,
+    "word": 2885687267,
+    "asmText": "stnp q3, q5, [sp]",
+    "encodingFile": "stnp_fpsimd.xml",
+    "mnemonic": "STNP",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1262,
+    "word": 2887766001,
+    "asmText": "stnp q17, q19, [sp, #1008]",
+    "encodingFile": "stnp_fpsimd.xml",
+    "mnemonic": "STNP",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1264,
     "word": 839925027,
     "asmText": "orr w3, w9, #0xffff0000",
@@ -7064,6 +9491,51 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "eor w16, w17, #0x81818181",
     "encodingFile": "eor_log_imm.xml",
     "mnemonic": "EOR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1273,
+    "word": 1912792671,
+    "asmText": "tst w18, #0xcccccccc",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1274,
+    "word": 1912661651,
+    "asmText": "ands w19, w20, #0x33333333",
+    "encodingFile": "ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1275,
+    "word": 1912727253,
+    "asmText": "ands w21, w22, #0x99999999",
+    "encodingFile": "ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1276,
+    "word": 1912729727,
+    "asmText": "tst w3, #0xaaaaaaaa",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1277,
+    "word": 1912665087,
+    "asmText": "tst wzr, #0x55555555",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
     "features": []
   },
   {
@@ -7176,6 +9648,51 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1290,
+    "word": 4060276319,
+    "asmText": "tst x18, #0xcccccccccccccccc",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1291,
+    "word": 4060145299,
+    "asmText": "ands x19, x20, #0x3333333333333333",
+    "encodingFile": "ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1292,
+    "word": 4060210901,
+    "asmText": "ands x21, x22, #0x9999999999999999",
+    "encodingFile": "ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1293,
+    "word": 4060213375,
+    "asmText": "tst x3, #0xaaaaaaaaaaaaaaaa",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1294,
+    "word": 4060148735,
+    "asmText": "tst xzr, #0x5555555555555555",
+    "encodingFile": "tst_ands_log_imm.xml",
+    "mnemonic": "ANDS",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1297,
     "word": 303986786,
     "asmText": "and w2, w3, #0xfffffffd",
@@ -7199,6 +9716,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "eor w16, w17, #0xfffffff9",
     "encodingFile": "eor_log_imm.xml",
     "mnemonic": "EOR",
+    "features": []
+  },
+  {
+    "sourceFile": "basic-a64-instructions.s.yaml",
+    "caseIndex": 1300,
+    "word": 1914465939,
+    "asmText": "ands w19, w20, #0xfffffff0",
+    "encodingFile": "ands_log_imm.xml",
+    "mnemonic": "ANDS",
     "features": []
   },
   {
@@ -13866,78 +16392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
 export const UNSUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 544,
-    "word": 446633955,
-    "asmText": "cset w3, eq",
-    "encodingFile": "cset_csinc.xml",
-    "mnemonic": "CSINC",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 545,
-    "word": 2594129897,
-    "asmText": "cset x9, pl",
-    "encodingFile": "cset_csinc.xml",
-    "mnemonic": "CSINC",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 546,
-    "word": 1520370676,
-    "asmText": "csetm w20, ne",
-    "encodingFile": "csetm_csinv.xml",
-    "mnemonic": "CSINV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 547,
-    "word": 3667899390,
-    "asmText": "csetm x30, ge",
-    "encodingFile": "csetm_csinv.xml",
-    "mnemonic": "CSINV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 550,
-    "word": 446670825,
-    "asmText": "cset w9, lt",
-    "encodingFile": "cset_csinc.xml",
-    "mnemonic": "CSINC",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 553,
-    "word": 2594154473,
-    "asmText": "cset x9, lt",
-    "encodingFile": "cset_csinc.xml",
-    "mnemonic": "CSINC",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 556,
-    "word": 1520411625,
-    "asmText": "csetm w9, lt",
-    "encodingFile": "csetm_csinv.xml",
-    "mnemonic": "CSINV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 559,
-    "word": 3667895273,
-    "asmText": "csetm x9, lt",
-    "encodingFile": "csetm_csinv.xml",
-    "mnemonic": "CSINV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 566,
     "word": 1522532576,
     "asmText": "rbit w0, w7",
@@ -13974,15 +16428,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 570,
-    "word": 1522534418,
-    "asmText": "rev w18, w0",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 571,
     "word": 3670018100,
     "asmText": "rev32 x20, x1",
@@ -13997,33 +16442,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "rev32 x20, xzr",
     "encodingFile": "rev32_int.xml",
     "mnemonic": "REV32",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 573,
-    "word": 3670019158,
-    "asmText": "rev x22, x2",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 574,
-    "word": 3670020082,
-    "asmText": "rev x18, xzr",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 575,
-    "word": 1522535399,
-    "asmText": "rev w7, wzr",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
     "features": []
   },
   {
@@ -14073,24 +16491,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 581,
-    "word": 3670020086,
-    "asmText": "rev x22, xzr",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 582,
-    "word": 3670019469,
-    "asmText": "rev x13, x12",
-    "encodingFile": "rev.xml",
-    "mnemonic": "REV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 583,
     "word": 449448160,
     "asmText": "udiv w0, w7, w10",
@@ -14123,492 +16523,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "sdiv x13, x2, x1",
     "encodingFile": "sdiv.xml",
     "mnemonic": "SDIV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 587,
-    "word": 449651083,
-    "asmText": "lsl w11, w12, w13",
-    "encodingFile": "lsl_lslv.xml",
-    "mnemonic": "LSLV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 588,
-    "word": 2597331438,
-    "asmText": "lsl x14, x15, x16",
-    "encodingFile": "lsl_lslv.xml",
-    "mnemonic": "LSLV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 589,
-    "word": 450045521,
-    "asmText": "lsr w17, w18, w19",
-    "encodingFile": "lsr_lsrv.xml",
-    "mnemonic": "LSRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 590,
-    "word": 2597725876,
-    "asmText": "lsr x20, x21, x22",
-    "encodingFile": "lsr_lsrv.xml",
-    "mnemonic": "LSRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 591,
-    "word": 450439959,
-    "asmText": "asr w23, w24, w25",
-    "encodingFile": "asr_asrv.xml",
-    "mnemonic": "ASRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 592,
-    "word": 2598120314,
-    "asmText": "asr x26, x27, x28",
-    "encodingFile": "asr_asrv.xml",
-    "mnemonic": "ASRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 593,
-    "word": 448932896,
-    "asmText": "ror w0, w1, w2",
-    "encodingFile": "ror_rorv.xml",
-    "mnemonic": "RORV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 594,
-    "word": 2596613251,
-    "asmText": "ror x3, x4, x5",
-    "encodingFile": "ror_rorv.xml",
-    "mnemonic": "RORV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 595,
-    "word": 449323238,
-    "asmText": "lsl w6, w7, w8",
-    "encodingFile": "lsl_lslv.xml",
-    "mnemonic": "LSLV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 596,
-    "word": 2597003593,
-    "asmText": "lsl x9, x10, x11",
-    "encodingFile": "lsl_lslv.xml",
-    "mnemonic": "LSLV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 597,
-    "word": 449717676,
-    "asmText": "lsr w12, w13, w14",
-    "encodingFile": "lsr_lsrv.xml",
-    "mnemonic": "LSRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 598,
-    "word": 2597398031,
-    "asmText": "lsr x15, x16, x17",
-    "encodingFile": "lsr_lsrv.xml",
-    "mnemonic": "LSRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 599,
-    "word": 450112114,
-    "asmText": "asr w18, w19, w20",
-    "encodingFile": "asr_asrv.xml",
-    "mnemonic": "ASRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 600,
-    "word": 2597792469,
-    "asmText": "asr x21, x22, x23",
-    "encodingFile": "asr_asrv.xml",
-    "mnemonic": "ASRV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 601,
-    "word": 450506552,
-    "asmText": "ror w24, w25, w26",
-    "encodingFile": "ror_rorv.xml",
-    "mnemonic": "RORV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 602,
-    "word": 2598186907,
-    "asmText": "ror x27, x28, x29",
-    "encodingFile": "ror_rorv.xml",
-    "mnemonic": "RORV",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 617,
-    "word": 453442724,
-    "asmText": "mneg w4, w5, w6",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 622,
-    "word": 2600926372,
-    "asmText": "mneg x4, x5, x6",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 623,
-    "word": 2602706083,
-    "asmText": "smaddl x3, w5, w2, x9",
-    "encodingFile": "smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 624,
-    "word": 2603299167,
-    "asmText": "smaddl xzr, w10, w11, x12",
-    "encodingFile": "smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 625,
-    "word": 2603499501,
-    "asmText": "smaddl x13, wzr, w14, x15",
-    "encodingFile": "smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 626,
-    "word": 2604616240,
-    "asmText": "smaddl x16, w17, wzr, x18",
-    "encodingFile": "smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 627,
-    "word": 2603974291,
-    "asmText": "smull x19, w20, w21",
-    "encodingFile": "smull_smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 628,
-    "word": 2602738851,
-    "asmText": "smsubl x3, w5, w2, x9",
-    "encodingFile": "smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 629,
-    "word": 2603331935,
-    "asmText": "smsubl xzr, w10, w11, x12",
-    "encodingFile": "smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 630,
-    "word": 2603532269,
-    "asmText": "smsubl x13, wzr, w14, x15",
-    "encodingFile": "smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 631,
-    "word": 2604649008,
-    "asmText": "smsubl x16, w17, wzr, x18",
-    "encodingFile": "smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 632,
-    "word": 2604007059,
-    "asmText": "smnegl x19, w20, w21",
-    "encodingFile": "smnegl_smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 633,
-    "word": 2611094691,
-    "asmText": "umaddl x3, w5, w2, x9",
-    "encodingFile": "umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 634,
-    "word": 2611687775,
-    "asmText": "umaddl xzr, w10, w11, x12",
-    "encodingFile": "umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 635,
-    "word": 2611888109,
-    "asmText": "umaddl x13, wzr, w14, x15",
-    "encodingFile": "umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 636,
-    "word": 2613004848,
-    "asmText": "umaddl x16, w17, wzr, x18",
-    "encodingFile": "umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 637,
-    "word": 2612362899,
-    "asmText": "umull x19, w20, w21",
-    "encodingFile": "umull_umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 638,
-    "word": 2611127459,
-    "asmText": "umsubl x3, w5, w2, x9",
-    "encodingFile": "umsubl.xml",
-    "mnemonic": "UMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 639,
-    "word": 2611720543,
-    "asmText": "umsubl xzr, w10, w11, x12",
-    "encodingFile": "umsubl.xml",
-    "mnemonic": "UMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 640,
-    "word": 2611920877,
-    "asmText": "umsubl x13, wzr, w14, x15",
-    "encodingFile": "umsubl.xml",
-    "mnemonic": "UMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 641,
-    "word": 2613037616,
-    "asmText": "umsubl x16, w17, wzr, x18",
-    "encodingFile": "umsubl.xml",
-    "mnemonic": "UMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 642,
-    "word": 2612395667,
-    "asmText": "umnegl x19, w20, w21",
-    "encodingFile": "umnegl_umsubl.xml",
-    "mnemonic": "UMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 643,
-    "word": 2606530494,
-    "asmText": "smulh x30, x29, x28",
-    "encodingFile": "smulh.xml",
-    "mnemonic": "SMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 644,
-    "word": 2606399359,
-    "asmText": "smulh xzr, x27, x26",
-    "encodingFile": "smulh.xml",
-    "mnemonic": "SMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 645,
-    "word": 2606268409,
-    "asmText": "smulh x25, xzr, x24",
-    "encodingFile": "smulh.xml",
-    "mnemonic": "SMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 646,
-    "word": 2606726871,
-    "asmText": "smulh x23, x22, xzr",
-    "encodingFile": "smulh.xml",
-    "mnemonic": "SMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 647,
-    "word": 2614919102,
-    "asmText": "umulh x30, x29, x28",
-    "encodingFile": "umulh.xml",
-    "mnemonic": "UMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 648,
-    "word": 2614787967,
-    "asmText": "umulh xzr, x27, x26",
-    "encodingFile": "umulh.xml",
-    "mnemonic": "UMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 649,
-    "word": 2614657017,
-    "asmText": "umulh x25, xzr, x24",
-    "encodingFile": "umulh.xml",
-    "mnemonic": "UMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 650,
-    "word": 2615115479,
-    "asmText": "umulh x23, x22, xzr",
-    "encodingFile": "umulh.xml",
-    "mnemonic": "UMULH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 659,
-    "word": 454557397,
-    "asmText": "mneg w21, w22, w23",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 660,
-    "word": 454688543,
-    "asmText": "mneg wzr, w24, w25",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 661,
-    "word": 454819834,
-    "asmText": "mneg w26, wzr, w27",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 662,
-    "word": 455081916,
-    "asmText": "mneg w28, w29, wzr",
-    "encodingFile": "mneg_msub.xml",
-    "mnemonic": "MSUB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 663,
-    "word": 2603711915,
-    "asmText": "smull x11, w13, w17",
-    "encodingFile": "smull_smaddl.xml",
-    "mnemonic": "SMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 664,
-    "word": 2612100523,
-    "asmText": "umull x11, w13, w17",
-    "encodingFile": "umull_umaddl.xml",
-    "mnemonic": "UMADDL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 665,
-    "word": 2603744683,
-    "asmText": "smnegl x11, w13, w17",
-    "encodingFile": "smnegl_smsubl.xml",
-    "mnemonic": "SMSUBL",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 666,
-    "word": 2612133291,
-    "asmText": "umnegl x11, w13, w17",
-    "encodingFile": "umnegl_umsubl.xml",
-    "mnemonic": "UMSUBL",
     "features": []
   },
   {
@@ -14725,213 +16639,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 679,
-    "word": 327614627,
-    "asmText": "extr w3, w5, w7, #0",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 680,
-    "word": 328301995,
-    "asmText": "extr w11, w13, w17, #31",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 681,
-    "word": 2479307939,
-    "asmText": "extr x3, x5, x7, #15",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 682,
-    "word": 2480012715,
-    "asmText": "extr x11, x13, x17, #63",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 683,
-    "word": 2480366323,
-    "asmText": "ror x19, x23, #24",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 684,
-    "word": 2480930813,
-    "asmText": "ror x29, xzr, #63",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 685,
-    "word": 328039849,
-    "asmText": "ror w9, w13, #31",
-    "encodingFile": "extr.xml",
-    "mnemonic": "EXTR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 694,
-    "word": 507446304,
-    "asmText": "fccmp s1, s31, #0, eq",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 695,
-    "word": 505422959,
-    "asmText": "fccmp s3, s0, #15, hs",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 696,
-    "word": 506406893,
-    "asmText": "fccmp s31, s15, #13, hs",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 697,
-    "word": 511694112,
-    "asmText": "fccmp d9, d31, #0, le",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 698,
-    "word": 509658223,
-    "asmText": "fccmp d3, d0, #15, gt",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 699,
-    "word": 509941735,
-    "asmText": "fccmp d31, d5, #7, ne",
-    "encodingFile": "fccmp_float.xml",
-    "mnemonic": "FCCMP",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 700,
-    "word": 507446320,
-    "asmText": "fccmpe s1, s31, #0, eq",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 701,
-    "word": 505422975,
-    "asmText": "fccmpe s3, s0, #15, hs",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 702,
-    "word": 506406909,
-    "asmText": "fccmpe s31, s15, #13, hs",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 703,
-    "word": 511694128,
-    "asmText": "fccmpe d9, d31, #0, le",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 704,
-    "word": 509658239,
-    "asmText": "fccmpe d3, d0, #15, gt",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 705,
-    "word": 509941751,
-    "asmText": "fccmpe d31, d5, #7, ne",
-    "encodingFile": "fccmpe_float.xml",
-    "mnemonic": "FCCMPE",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 706,
     "word": 506027651,
     "asmText": "fcsel s3, s20, s9, pl",
@@ -15000,28 +16707,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_FP",
       "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 712,
-    "word": 505594152,
-    "asmText": "fcvt d8, s9",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 713,
-    "word": 505659754,
-    "asmText": "fcvt h10, s11",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
     ]
   },
   {
@@ -15158,28 +16843,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 725,
-    "word": 509755688,
-    "asmText": "fcvt s8, d9",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 726,
-    "word": 509854058,
-    "asmText": "fcvt h10, d11",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 727,
     "word": 509886892,
     "asmText": "frintn d12, d13",
@@ -15260,28 +16923,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_FP",
       "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 734,
-    "word": 518144890,
-    "asmText": "fcvt s26, h27",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 735,
-    "word": 518177724,
-    "asmText": "fcvt d28, h29",
-    "encodingFile": "fcvt_float.xml",
-    "mnemonic": "FCVT",
-    "features": [
-      "FEAT_FP"
     ]
   },
   {
@@ -15598,822 +17239,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 762,
-    "word": 504954019,
-    "asmText": "fcvtzs w3, s5, #1",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 763,
-    "word": 504942239,
-    "asmText": "fcvtzs wzr, s20, #13",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 764,
-    "word": 504922131,
-    "asmText": "fcvtzs w19, s0, #32",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 765,
-    "word": 2652437667,
-    "asmText": "fcvtzs x3, s5, #1",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 766,
-    "word": 2652393420,
-    "asmText": "fcvtzs x12, s30, #45",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 767,
-    "word": 2652373011,
-    "asmText": "fcvtzs x19, s0, #64",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 768,
-    "word": 509148323,
-    "asmText": "fcvtzs w3, d5, #1",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 769,
-    "word": 509136543,
-    "asmText": "fcvtzs wzr, d20, #13",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 770,
-    "word": 509116435,
-    "asmText": "fcvtzs w19, d0, #32",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 771,
-    "word": 2656631971,
-    "asmText": "fcvtzs x3, d5, #1",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 772,
-    "word": 2656587724,
-    "asmText": "fcvtzs x12, d30, #45",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 773,
-    "word": 2656567315,
-    "asmText": "fcvtzs x19, d0, #64",
-    "encodingFile": "fcvtzs_float_fix.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 774,
-    "word": 505019555,
-    "asmText": "fcvtzu w3, s5, #1",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 775,
-    "word": 505007775,
-    "asmText": "fcvtzu wzr, s20, #13",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 776,
-    "word": 504987667,
-    "asmText": "fcvtzu w19, s0, #32",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 777,
-    "word": 2652503203,
-    "asmText": "fcvtzu x3, s5, #1",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 778,
-    "word": 2652458956,
-    "asmText": "fcvtzu x12, s30, #45",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 779,
-    "word": 2652438547,
-    "asmText": "fcvtzu x19, s0, #64",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 780,
-    "word": 509213859,
-    "asmText": "fcvtzu w3, d5, #1",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 781,
-    "word": 509202079,
-    "asmText": "fcvtzu wzr, d20, #13",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 782,
-    "word": 509181971,
-    "asmText": "fcvtzu w19, d0, #32",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 783,
-    "word": 2656697507,
-    "asmText": "fcvtzu x3, d5, #1",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 784,
-    "word": 2656653260,
-    "asmText": "fcvtzu x12, d30, #45",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 785,
-    "word": 2656632851,
-    "asmText": "fcvtzu x19, d0, #64",
-    "encodingFile": "fcvtzu_float_fix.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 786,
-    "word": 503512695,
-    "asmText": "scvtf s23, w19, #1",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 787,
-    "word": 503493631,
-    "asmText": "scvtf s31, wzr, #20",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 788,
-    "word": 503480334,
-    "asmText": "scvtf s14, w0, #32",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 789,
-    "word": 2650996343,
-    "asmText": "scvtf s23, x19, #1",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 790,
-    "word": 2650977279,
-    "asmText": "scvtf s31, xzr, #20",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 791,
-    "word": 2650931214,
-    "asmText": "scvtf s14, x0, #64",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 792,
-    "word": 507706999,
-    "asmText": "scvtf d23, w19, #1",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 793,
-    "word": 507687935,
-    "asmText": "scvtf d31, wzr, #20",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 794,
-    "word": 507674638,
-    "asmText": "scvtf d14, w0, #32",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 795,
-    "word": 2655190647,
-    "asmText": "scvtf d23, x19, #1",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 796,
-    "word": 2655171583,
-    "asmText": "scvtf d31, xzr, #20",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 797,
-    "word": 2655125518,
-    "asmText": "scvtf d14, x0, #64",
-    "encodingFile": "scvtf_float_fix.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 798,
-    "word": 503578231,
-    "asmText": "ucvtf s23, w19, #1",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 799,
-    "word": 503559167,
-    "asmText": "ucvtf s31, wzr, #20",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 800,
-    "word": 503545870,
-    "asmText": "ucvtf s14, w0, #32",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 801,
-    "word": 2651061879,
-    "asmText": "ucvtf s23, x19, #1",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 802,
-    "word": 2651042815,
-    "asmText": "ucvtf s31, xzr, #20",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 803,
-    "word": 2650996750,
-    "asmText": "ucvtf s14, x0, #64",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 804,
-    "word": 507772535,
-    "asmText": "ucvtf d23, w19, #1",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 805,
-    "word": 507753471,
-    "asmText": "ucvtf d31, wzr, #20",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 806,
-    "word": 507740174,
-    "asmText": "ucvtf d14, w0, #32",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 807,
-    "word": 2655256183,
-    "asmText": "ucvtf d23, x19, #1",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 808,
-    "word": 2655237119,
-    "asmText": "ucvtf d31, xzr, #20",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 809,
-    "word": 2655191054,
-    "asmText": "ucvtf d14, x0, #64",
-    "encodingFile": "ucvtf_float_fix.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 810,
-    "word": 505414627,
-    "asmText": "fcvtns w3, s31",
-    "encodingFile": "fcvtns_float.xml",
-    "mnemonic": "FCVTNS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 811,
-    "word": 2652897695,
-    "asmText": "fcvtns xzr, s12",
-    "encodingFile": "fcvtns_float.xml",
-    "mnemonic": "FCVTNS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 812,
-    "word": 505479583,
-    "asmText": "fcvtnu wzr, s12",
-    "encodingFile": "fcvtnu_float.xml",
-    "mnemonic": "FCVTNU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 813,
-    "word": 2652962816,
-    "asmText": "fcvtnu x0, s0",
-    "encodingFile": "fcvtnu_float.xml",
-    "mnemonic": "FCVTNU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 814,
-    "word": 505938239,
-    "asmText": "fcvtps wzr, s9",
-    "encodingFile": "fcvtps_float.xml",
-    "mnemonic": "FCVTPS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 815,
-    "word": 2653422220,
-    "asmText": "fcvtps x12, s20",
-    "encodingFile": "fcvtps_float.xml",
-    "mnemonic": "FCVTPS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 816,
-    "word": 506004222,
-    "asmText": "fcvtpu w30, s23",
-    "encodingFile": "fcvtpu_float.xml",
-    "mnemonic": "FCVTPU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 817,
-    "word": 2653487229,
-    "asmText": "fcvtpu x29, s3",
-    "encodingFile": "fcvtpu_float.xml",
-    "mnemonic": "FCVTPU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 818,
-    "word": 506462306,
-    "asmText": "fcvtms w2, s3",
-    "encodingFile": "fcvtms_float.xml",
-    "mnemonic": "FCVTMS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 819,
-    "word": 2653946020,
-    "asmText": "fcvtms x4, s5",
-    "encodingFile": "fcvtms_float.xml",
-    "mnemonic": "FCVTMS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 820,
-    "word": 506527974,
-    "asmText": "fcvtmu w6, s7",
-    "encodingFile": "fcvtmu_float.xml",
-    "mnemonic": "FCVTMU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 821,
-    "word": 2654011688,
-    "asmText": "fcvtmu x8, s9",
-    "encodingFile": "fcvtmu_float.xml",
-    "mnemonic": "FCVTMU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 822,
-    "word": 506986858,
-    "asmText": "fcvtzs w10, s11",
-    "encodingFile": "fcvtzs_float_int.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 823,
-    "word": 2654470572,
-    "asmText": "fcvtzs x12, s13",
-    "encodingFile": "fcvtzs_float_int.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 824,
-    "word": 507052526,
-    "asmText": "fcvtzu w14, s15",
-    "encodingFile": "fcvtzu_float_int.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 825,
-    "word": 2654536207,
-    "asmText": "fcvtzu x15, s16",
-    "encodingFile": "fcvtzu_float_int.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 826,
-    "word": 505545297,
-    "asmText": "scvtf s17, w18",
-    "encodingFile": "scvtf_float_int.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 827,
-    "word": 2653029011,
-    "asmText": "scvtf s19, x20",
-    "encodingFile": "scvtf_float_int.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 828,
-    "word": 505610965,
-    "asmText": "ucvtf s21, w22",
-    "encodingFile": "ucvtf_float_int.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 829,
-    "word": 2653029143,
-    "asmText": "scvtf s23, x24",
-    "encodingFile": "scvtf_float_int.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 830,
     "word": 505676633,
     "asmText": "fcvtas w25, s26",
@@ -16462,246 +17287,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 834,
-    "word": 509608931,
-    "asmText": "fcvtns w3, d31",
-    "encodingFile": "fcvtns_float.xml",
-    "mnemonic": "FCVTNS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 835,
-    "word": 2657091999,
-    "asmText": "fcvtns xzr, d12",
-    "encodingFile": "fcvtns_float.xml",
-    "mnemonic": "FCVTNS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 836,
-    "word": 509673887,
-    "asmText": "fcvtnu wzr, d12",
-    "encodingFile": "fcvtnu_float.xml",
-    "mnemonic": "FCVTNU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 837,
-    "word": 2657157120,
-    "asmText": "fcvtnu x0, d0",
-    "encodingFile": "fcvtnu_float.xml",
-    "mnemonic": "FCVTNU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 838,
-    "word": 510132543,
-    "asmText": "fcvtps wzr, d9",
-    "encodingFile": "fcvtps_float.xml",
-    "mnemonic": "FCVTPS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 839,
-    "word": 2657616524,
-    "asmText": "fcvtps x12, d20",
-    "encodingFile": "fcvtps_float.xml",
-    "mnemonic": "FCVTPS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 840,
-    "word": 510198526,
-    "asmText": "fcvtpu w30, d23",
-    "encodingFile": "fcvtpu_float.xml",
-    "mnemonic": "FCVTPU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 841,
-    "word": 2657681533,
-    "asmText": "fcvtpu x29, d3",
-    "encodingFile": "fcvtpu_float.xml",
-    "mnemonic": "FCVTPU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 842,
-    "word": 510656610,
-    "asmText": "fcvtms w2, d3",
-    "encodingFile": "fcvtms_float.xml",
-    "mnemonic": "FCVTMS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 843,
-    "word": 2658140324,
-    "asmText": "fcvtms x4, d5",
-    "encodingFile": "fcvtms_float.xml",
-    "mnemonic": "FCVTMS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 844,
-    "word": 510722278,
-    "asmText": "fcvtmu w6, d7",
-    "encodingFile": "fcvtmu_float.xml",
-    "mnemonic": "FCVTMU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 845,
-    "word": 2658205992,
-    "asmText": "fcvtmu x8, d9",
-    "encodingFile": "fcvtmu_float.xml",
-    "mnemonic": "FCVTMU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 846,
-    "word": 511181162,
-    "asmText": "fcvtzs w10, d11",
-    "encodingFile": "fcvtzs_float_int.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 847,
-    "word": 2658664876,
-    "asmText": "fcvtzs x12, d13",
-    "encodingFile": "fcvtzs_float_int.xml",
-    "mnemonic": "FCVTZS",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 848,
-    "word": 511246830,
-    "asmText": "fcvtzu w14, d15",
-    "encodingFile": "fcvtzu_float_int.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 849,
-    "word": 2658730511,
-    "asmText": "fcvtzu x15, d16",
-    "encodingFile": "fcvtzu_float_int.xml",
-    "mnemonic": "FCVTZU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 850,
-    "word": 509739601,
-    "asmText": "scvtf d17, w18",
-    "encodingFile": "scvtf_float_int.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 851,
-    "word": 2657223315,
-    "asmText": "scvtf d19, x20",
-    "encodingFile": "scvtf_float_int.xml",
-    "mnemonic": "SCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 852,
-    "word": 509805269,
-    "asmText": "ucvtf d21, w22",
-    "encodingFile": "ucvtf_float_int.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 853,
-    "word": 2657288983,
-    "asmText": "ucvtf d23, x24",
-    "encodingFile": "ucvtf_float_int.xml",
-    "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 854,
     "word": 509870937,
     "asmText": "fcvtas w25, d26",
@@ -16743,174 +17328,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "fcvtau xzr, d0",
     "encodingFile": "fcvtau_float.xml",
     "mnemonic": "FCVTAU",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 858,
-    "word": 505807139,
-    "asmText": "fmov w3, s9",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 859,
-    "word": 505872489,
-    "asmText": "fmov s9, w3",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 860,
-    "word": 2657485812,
-    "asmText": "fmov x20, d31",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 861,
-    "word": 2657550817,
-    "asmText": "fmov d1, x15",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 862,
-    "word": 2662203779,
-    "asmText": "fmov x3, v12.d[1]",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 863,
-    "word": 2662269537,
-    "asmText": "fmov v1.d[1], x19",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 864,
-    "word": 2662269923,
-    "asmText": "fmov v3.d[1], xzr",
-    "encodingFile": "fmov_float_gen.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 865,
-    "word": 505942018,
-    "asmText": "fmov s2, #0.12500000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 866,
-    "word": 506335235,
-    "asmText": "fmov s3, #1.00000000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 867,
-    "word": 510005278,
-    "asmText": "fmov d30, #16.00000000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 868,
-    "word": 506343428,
-    "asmText": "fmov s4, #1.06250000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 869,
-    "word": 510652426,
-    "asmText": "fmov d10, #1.93750000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 870,
-    "word": 507383820,
-    "asmText": "fmov s12, #-1.00000000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 871,
-    "word": 509882384,
-    "asmText": "fmov d16, #8.50000000",
-    "encodingFile": "fmov_float_imm.xml",
-    "mnemonic": "FMOV",
     "features": [
       "FEAT_FP",
       "FEAT_FP16"
@@ -17332,148 +17749,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 922,
-    "word": 1006638048,
-    "asmText": "stur b0, [sp, #1]",
-    "encodingFile": "stur_fpsimd.xml",
-    "mnemonic": "STUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 923,
-    "word": 2082468236,
-    "asmText": "stur h12, [x12, #-1]",
-    "encodingFile": "stur_fpsimd.xml",
-    "mnemonic": "STUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 924,
-    "word": 3155161103,
-    "asmText": "stur s15, [x0, #255]",
-    "encodingFile": "stur_fpsimd.xml",
-    "mnemonic": "STUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 925,
-    "word": 4227961023,
-    "asmText": "stur d31, [x5, #25]",
-    "encodingFile": "stur_fpsimd.xml",
-    "mnemonic": "STUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 926,
-    "word": 1015021737,
-    "asmText": "stur q9, [x5]",
-    "encodingFile": "stur_fpsimd.xml",
-    "mnemonic": "STUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 927,
-    "word": 1010828259,
-    "asmText": "ldur b3, [sp]",
-    "encodingFile": "ldur_fpsimd.xml",
-    "mnemonic": "LDUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 928,
-    "word": 2085617797,
-    "asmText": "ldur h5, [x4, #-256]",
-    "encodingFile": "ldur_fpsimd.xml",
-    "mnemonic": "LDUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 929,
-    "word": 3160404359,
-    "asmText": "ldur s7, [x12, #-1]",
-    "encodingFile": "ldur_fpsimd.xml",
-    "mnemonic": "LDUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 930,
-    "word": 4232069739,
-    "asmText": "ldur d11, [x19, #4]",
-    "encodingFile": "ldur_fpsimd.xml",
-    "mnemonic": "LDUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 931,
-    "word": 1019224109,
-    "asmText": "ldur q13, [x1, #2]",
-    "encodingFile": "ldur_fpsimd.xml",
-    "mnemonic": "LDUR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 980,
-    "word": 946170851,
-    "asmText": "ldrb w3, [sp, x5]",
-    "encodingFile": "ldrb_reg.xml",
-    "mnemonic": "LDRB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 981,
-    "word": 946240361,
-    "asmText": "ldrb w9, [x27, x6, lsl #0]",
-    "encodingFile": "ldrb_reg.xml",
-    "mnemonic": "LDRB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 982,
     "word": 954690506,
     "asmText": "ldrsb w10, [x30, x7]",
     "encodingFile": "ldrsb_reg.xml",
     "mnemonic": "LDRSB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 983,
-    "word": 946072491,
-    "asmText": "ldrb w11, [x29, x3, sxtx]",
-    "encodingFile": "ldrb_reg.xml",
-    "mnemonic": "LDRB",
     "features": []
   },
   {
@@ -17487,29 +17767,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 985,
-    "word": 946228046,
-    "asmText": "ldrb w14, [x26, w6, uxtw]",
-    "encodingFile": "ldrb_reg.xml",
-    "mnemonic": "LDRB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 986,
     "word": 954686255,
     "asmText": "ldrsb w15, [x25, w7, uxtw #0]",
     "encodingFile": "ldrsb_reg.xml",
     "mnemonic": "LDRSB",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 987,
-    "word": 946457329,
-    "asmText": "ldrb w17, [x23, w9, sxtw]",
-    "encodingFile": "ldrb_reg.xml",
-    "mnemonic": "LDRB",
     "features": []
   },
   {
@@ -17541,29 +17803,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 991,
-    "word": 2020047818,
-    "asmText": "ldrh w10, [x30, x7, lsl #1]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 992,
     "word": 2015620011,
     "asmText": "strh w11, [x29, x3, sxtx]",
     "encodingFile": "strh_reg.xml",
     "mnemonic": "STRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 993,
-    "word": 2021649292,
-    "asmText": "ldrh w12, [x28, xzr, sxtx]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
     "features": []
   },
   {
@@ -17577,47 +17821,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 995,
-    "word": 2019969870,
-    "asmText": "ldrh w14, [x26, w6, uxtw]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 996,
-    "word": 2020035375,
-    "asmText": "ldrh w15, [x25, w7, uxtw]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 997,
     "word": 2028493584,
     "asmText": "ldrsh w16, [x24, w8, uxtw #1]",
     "encodingFile": "ldrsh_reg.xml",
     "mnemonic": "LDRSH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 998,
-    "word": 2020199153,
-    "asmText": "ldrh w17, [x23, w9, sxtw]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 999,
-    "word": 2020264658,
-    "asmText": "ldrh w18, [x22, w10, sxtw]",
-    "encodingFile": "ldrh_reg.xml",
-    "mnemonic": "LDRH",
     "features": []
   },
   {
@@ -17847,15 +18055,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1248,
-    "word": 675289059,
-    "asmText": "ldnp w3, w5, [sp]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1249,
     "word": 673163263,
     "asmText": "stnp wzr, w9, [sp, #252]",
@@ -17865,67 +18064,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1250,
-    "word": 677412834,
-    "asmText": "ldnp w2, wzr, [sp, #-256]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1251,
-    "word": 675326953,
-    "asmText": "ldnp w9, w10, [sp, #4]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1252,
-    "word": 2824860757,
-    "asmText": "ldnp x21, x29, [x2, #504]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1253,
-    "word": 2824887414,
-    "asmText": "ldnp x22, x23, [x3, #-512]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1254,
-    "word": 2822825112,
-    "asmText": "ldnp x24, x25, [x4, #8]",
-    "encodingFile": "ldnp_gen.xml",
-    "mnemonic": "LDNP",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1255,
     "word": 744485885,
     "asmText": "ldnp s29, s28, [sp, #252]",
     "encodingFile": "ldnp_fpsimd.xml",
     "mnemonic": "LDNP",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1256,
-    "word": 740322299,
-    "asmText": "stnp s27, s26, [sp, #-256]",
-    "encodingFile": "stnp_fpsimd.xml",
-    "mnemonic": "STNP",
     "features": [
       "FEAT_FP"
     ]
@@ -17943,55 +18086,11 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1258,
-    "word": 1814009123,
-    "asmText": "stnp d3, d5, [x9, #504]",
-    "encodingFile": "stnp_fpsimd.xml",
-    "mnemonic": "STNP",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1259,
-    "word": 1814048071,
-    "asmText": "stnp d7, d11, [x10, #-512]",
-    "encodingFile": "stnp_fpsimd.xml",
-    "mnemonic": "STNP",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1260,
     "word": 1820299202,
     "asmText": "ldnp d2, d3, [x30, #-8]",
     "encodingFile": "ldnp_fpsimd.xml",
     "mnemonic": "LDNP",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1261,
-    "word": 2885687267,
-    "asmText": "stnp q3, q5, [sp]",
-    "encodingFile": "stnp_fpsimd.xml",
-    "mnemonic": "STNP",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1262,
-    "word": 2887766001,
-    "asmText": "stnp q17, q19, [sp, #1008]",
-    "encodingFile": "stnp_fpsimd.xml",
-    "mnemonic": "STNP",
     "features": [
       "FEAT_FP"
     ]
@@ -18009,96 +18108,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1273,
-    "word": 1912792671,
-    "asmText": "tst w18, #0xcccccccc",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1274,
-    "word": 1912661651,
-    "asmText": "ands w19, w20, #0x33333333",
-    "encodingFile": "ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1275,
-    "word": 1912727253,
-    "asmText": "ands w21, w22, #0x99999999",
-    "encodingFile": "ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1276,
-    "word": 1912729727,
-    "asmText": "tst w3, #0xaaaaaaaa",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1277,
-    "word": 1912665087,
-    "asmText": "tst wzr, #0x55555555",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1290,
-    "word": 4060276319,
-    "asmText": "tst x18, #0xcccccccccccccccc",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1291,
-    "word": 4060145299,
-    "asmText": "ands x19, x20, #0x3333333333333333",
-    "encodingFile": "ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1292,
-    "word": 4060210901,
-    "asmText": "ands x21, x22, #0x9999999999999999",
-    "encodingFile": "ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1293,
-    "word": 4060213375,
-    "asmText": "tst x3, #0xaaaaaaaaaaaaaaaa",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1294,
-    "word": 4060148735,
-    "asmText": "tst xzr, #0x5555555555555555",
-    "encodingFile": "tst_ands_log_imm.xml",
-    "mnemonic": "ANDS",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
     "caseIndex": 1295,
     "word": 838897635,
     "asmText": "mov w3, #983055",
@@ -18113,15 +18122,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "mov x10, #-6148914691236517206",
     "encodingFile": "mov_orr_log_imm.xml",
     "mnemonic": "ORR",
-    "features": []
-  },
-  {
-    "sourceFile": "basic-a64-instructions.s.yaml",
-    "caseIndex": 1300,
-    "word": 1914465939,
-    "asmText": "ands w19, w20, #0xfffffff0",
-    "encodingFile": "ands_log_imm.xml",
-    "mnemonic": "ANDS",
     "features": []
   },
   {

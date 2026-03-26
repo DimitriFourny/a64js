@@ -1,0 +1,804 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_32H_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 518389760,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_32S_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 505806848,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_64D_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2657484800,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_64H_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2665873408,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_64VX_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2662203392,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_D64_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2657550336,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_H32_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 518455296,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_H64_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2665938944,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_S32_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 505872384,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FMOV_float_gen",
+    "encodingId": "FMOV_V64I_float2int",
+    "mnemonic": "FMOV",
+    "className": "Floating-point",
+    "fileName": "fmov_float_gen.xml",
+    "mask": 4294966272,
+    "value": 2662268928,
+    "bitCount": 22,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "rmode",
+        "lsb": 19,
+        "width": 2
+      },
+      {
+        "name": "opcode",
+        "lsb": 16,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "ne_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          }
+        ]
+      }
+    ]
+  }
+];

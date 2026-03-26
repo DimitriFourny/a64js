@@ -72,6 +72,12 @@ test("decodes core scalar memory pair, signed-load, register-offset, and prfm fo
   assert.equal(disasm(1765845993), "ldpsw x9, x10, [sp, #4]");
   assert.equal(disasm(3093789642), "ldr w10, [x30, x7, lsl #2]");
   assert.equal(disasm(3093556139), "ldr w11, [x29, x3, sxtx]");
+  assert.equal(disasm(946072491), "ldrb w11, [x29, x3, sxtx]");
+  assert.equal(disasm(2020047818), "ldrh w10, [x30, x7, lsl #1]");
+  assert.equal(disasm(675326953), "ldnp w9, w10, [sp, #4]");
+  assert.equal(disasm(740322299, undefined, { features: ["FEAT_FP"] }), "stnp s27, s26, [sp, #-256]");
+  assert.equal(disasm(1006638048, undefined, { features: ["FEAT_FP"] }), "stur b0, [sp, #1]");
+  assert.equal(disasm(1019224109, undefined, { features: ["FEAT_FP"] }), "ldur q13, [x1, #2]");
   assert.equal(disasm(947919970), "ldrsb x2, [x3, #1]!");
   assert.equal(disasm(2025856098), "ldrsh w2, [x3, #1]!");
   assert.equal(disasm(4185917408), "prfm pldl1keep, [sp, #8]");
@@ -122,6 +128,10 @@ test("decodes bitfield and shift-immediate aliases", () => {
 test("decodes conditional select forms and aliases", () => {
   assert.equal(disasm(445845505), "csel w1, w0, w19, ne");
   assert.equal(disasm(2592482277), "csel x5, xzr, x6, hs");
+  assert.equal(disasm(446633955), "cset w3, eq");
+  assert.equal(disasm(2594129897), "cset x9, pl");
+  assert.equal(disasm(1520370676), "csetm w20, ne");
+  assert.equal(disasm(3667899390), "csetm x30, ge");
   assert.equal(disasm(445846529), "csinc w1, w0, w19, ne");
   assert.equal(disasm(444978339), "cinc w3, w5, gt");
   assert.equal(disasm(1519587329), "csinv w1, w0, w19, ne");
@@ -146,8 +156,25 @@ test("decodes integer datapath multiply and logical forms", () => {
   assert.equal(disasm(2325741191), "and x7, x20, xzr, asr #63");
   assert.equal(disasm(839925027), "orr w3, w9, #0xffff0000");
   assert.equal(disasm(302024683), "and w11, wzr, #0x30003");
+  assert.equal(disasm(1912661651), "ands w19, w20, #0x33333333");
+  assert.equal(disasm(4060145299), "ands x19, x20, #0x3333333333333333");
+  assert.equal(disasm(1912792671), "tst w18, #0xcccccccc");
+  assert.equal(disasm(4060213375), "tst x3, #0xaaaaaaaaaaaaaaaa");
   assert.equal(disasm(1375979715), "eor w3, w6, #0xe0e0e0e0");
   assert.equal(disasm(1377662512), "eor w16, w17, #0xfffffff9");
+});
+
+test("decodes scalar bit-manipulation aliases and data movement leftovers", () => {
+  assert.equal(disasm(1522534418), "rev w18, w0");
+  assert.equal(disasm(3670019158), "rev x22, x2");
+  assert.equal(disasm(449651083), "lsl w11, w12, w13");
+  assert.equal(disasm(2597725876), "lsr x20, x21, x22");
+  assert.equal(disasm(450439959), "asr w23, w24, w25");
+  assert.equal(disasm(2596613251), "ror x3, x4, x5");
+  assert.equal(disasm(327614627), "extr w3, w5, w7, #0");
+  assert.equal(disasm(2479307939), "extr x3, x5, x7, #15");
+  assert.equal(disasm(2480366323), "ror x19, x23, #24");
+  assert.equal(disasm(328039849), "ror w9, w13, #31");
 });
 
 test("decodes barrier and cache/TLB maintenance system instructions", () => {
@@ -165,6 +192,18 @@ test("decodes barrier and cache/TLB maintenance system instructions", () => {
   assert.equal(disasm(3574104863), "tlbi vmalle1is");
   assert.equal(disasm(3574367199), "tlbi vmalls12e1is");
   assert.equal(disasm(3574305316), "sys #3, c9, c2, #1, x4");
+});
+
+test("decodes AdvSIMD compare register and zero forms", () => {
+  const advsimdFp16Options = { features: ["FEAT_AdvSIMD && FEAT_FP16", "FEAT_AdvSIMD", "FEAT_FP16"] };
+  assert.equal(disasm(1848131553, undefined, { features: ["FEAT_AdvSIMD"] }), "cmhs v1.16b, v31.16b, v8.16b");
+  assert.equal(disasm(1591773876, undefined, { features: ["FEAT_AdvSIMD"] }), "cmgt d20, d21, #0");
+  assert.equal(disasm(2128648884, undefined, { features: ["FEAT_AdvSIMD"] }), "cmle d20, d21, #0");
+  assert.equal(disasm(2130087604, undefined, { features: ["FEAT_AdvSIMD"] }), "cmeq d20, d21, d22");
+  assert.equal(disasm(2118919530, undefined, advsimdFp16Options), "fcmge h10, h11, h12");
+  assert.equal(disasm(2130233706, undefined, advsimdFp16Options), "fcmge h10, h11, #0.0");
+  assert.equal(disasm(1315300445, undefined, { features: ["FEAT_AdvSIMD"] }), "fcmeq v29.2d, v2.2d, v5.2d");
+  assert.equal(disasm(1319168143, undefined, { features: ["FEAT_AdvSIMD"] }), "fcmlt v15.4s, v4.4s, #0.0");
 });
 
 test("decodes PACIASP from XML-generated data", () => {
@@ -223,6 +262,46 @@ test("decodes scalar FCMP and FCMPE forms", () => {
   assert.equal(disasm(505422328, undefined, options), "fcmpe s15, #0.0");
   assert.equal(disasm(511058768, undefined, options), "fcmpe d26, d22");
   assert.equal(disasm(509617080, undefined, options), "fcmpe d29, #0.0");
+});
+
+test("decodes scalar FP conditional compare and convert families", () => {
+  const options = { features: ["FEAT_FP", "FEAT_FP16"] };
+  assert.equal(disasm(507446304, undefined, options), "fccmp s1, s31, #0, eq");
+  assert.equal(disasm(509941751, undefined, options), "fccmpe d31, d5, #7, ne");
+  assert.equal(disasm(505594152, undefined, options), "fcvt d8, s9");
+  assert.equal(disasm(509854058, undefined, options), "fcvt h10, d11");
+  assert.equal(disasm(505414627, undefined, options), "fcvtns w3, s31");
+  assert.equal(disasm(2654011688, undefined, options), "fcvtmu x8, s9");
+  assert.equal(disasm(506986858, undefined, options), "fcvtzs w10, s11");
+  assert.equal(disasm(507052526, undefined, options), "fcvtzu w14, s15");
+  assert.equal(disasm(2657288983, undefined, options), "ucvtf d23, x24");
+  assert.equal(disasm(504942239, undefined, options), "fcvtzs wzr, s20, #13");
+  assert.equal(disasm(2652458956, undefined, options), "fcvtzu x12, s30, #45");
+  assert.equal(disasm(503480334, undefined, options), "scvtf s14, w0, #32");
+  assert.equal(disasm(2651042815, undefined, options), "ucvtf s31, xzr, #20");
+});
+
+test("decodes scalar multiply-long, high, and FMOV families", () => {
+  const fpOptions = { features: ["FEAT_FP", "FEAT_FP16"] };
+  assert.equal(disasm(453442724), "mneg w4, w5, w6");
+  assert.equal(disasm(2602706083), "smaddl x3, w5, w2, x9");
+  assert.equal(disasm(2603974291), "smull x19, w20, w21");
+  assert.equal(disasm(2602738851), "smsubl x3, w5, w2, x9");
+  assert.equal(disasm(2604007059), "smnegl x19, w20, w21");
+  assert.equal(disasm(2611094691), "umaddl x3, w5, w2, x9");
+  assert.equal(disasm(2612362899), "umull x19, w20, w21");
+  assert.equal(disasm(2611127459), "umsubl x3, w5, w2, x9");
+  assert.equal(disasm(2612395667), "umnegl x19, w20, w21");
+  assert.equal(disasm(2606530494), "smulh x30, x29, x28");
+  assert.equal(disasm(2614919102), "umulh x30, x29, x28");
+  assert.equal(disasm(505807139, undefined, fpOptions), "fmov w3, s9");
+  assert.equal(disasm(505872489, undefined, fpOptions), "fmov s9, w3");
+  assert.equal(disasm(2657485812, undefined, fpOptions), "fmov x20, d31");
+  assert.equal(disasm(2657550817, undefined, fpOptions), "fmov d1, x15");
+  assert.equal(disasm(2662203779, undefined, fpOptions), "fmov x3, v12.d[1]");
+  assert.equal(disasm(2662269537, undefined, fpOptions), "fmov v1.d[1], x19");
+  assert.equal(disasm(505942018, undefined, fpOptions), "fmov s2, #0.12500000");
+  assert.equal(disasm(510652426, undefined, fpOptions), "fmov d10, #1.93750000");
 });
 
 test("decodes SVE compare immediate", () => {

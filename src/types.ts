@@ -14,6 +14,34 @@ export type GuardCheck =
       mask: number;
       lsb: number;
       value: number;
+    }
+  | {
+      kind: "eq_field";
+      field: string;
+      otherField: string;
+    }
+  | {
+      kind: "ne_field";
+      field: string;
+      otherField: string;
+    }
+  | {
+      kind: "eq_concat";
+      parts: Array<{
+        field: string;
+        msb: number;
+        lsb: number;
+      }>;
+      value: number;
+    }
+  | {
+      kind: "ne_concat";
+      parts: Array<{
+        field: string;
+        msb: number;
+        lsb: number;
+      }>;
+      value: number;
     };
 
 export type Guard = {

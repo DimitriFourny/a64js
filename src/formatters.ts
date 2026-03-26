@@ -269,8 +269,43 @@ function threeSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function oneSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [gpReg(width, fields.Rd, "zr"), gpReg(width, fields.Rn, "zr")];
+}
+
+function twoSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+  ];
+}
+
 function mulAliasOperands(inst: DecodedInstruction): Operand[] {
   return threeSourceIntegerOperands(inst).slice(0, 3);
+}
+
+function scalarMultiplyLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rd, "zr"),
+    gpReg(32, fields.Rn, "zr"),
+    gpReg(32, fields.Rm, "zr"),
+    gpReg(64, fields.Ra, "zr"),
+  ];
+}
+
+function scalarMultiplyLongAliasOperands(inst: DecodedInstruction): Operand[] {
+  return scalarMultiplyLongOperands(inst).slice(0, 3);
+}
+
+function multiplyHighOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [gpReg(64, fields.Rd, "zr"), gpReg(64, fields.Rn, "zr"), gpReg(64, fields.Rm, "zr")];
 }
 
 function logicalShiftedRegisterOperands(inst: DecodedInstruction): Operand[] {
@@ -345,8 +380,12 @@ function logicalImmediateOperands(inst: DecodedInstruction): Operand[] {
     return [];
   }
 
+  if (inst.encoding!.fileName === "tst_ands_log_imm.xml") {
+    return [gpReg(width, fields.Rn, "zr"), { kind: "imm", value: imm }];
+  }
+
   return [
-    gpReg(width, fields.Rd, "sp"),
+    gpReg(width, fields.Rd, "zr"),
     gpReg(width, fields.Rn, "zr"),
     { kind: "imm", value: imm },
   ];
@@ -371,6 +410,17 @@ function bitfieldImmediateOperands(inst: DecodedInstruction): Operand[] {
     gpReg(width, fields.Rn, "zr"),
     { kind: "imm", value: BigInt(fields.immr ?? 0) },
     { kind: "imm", value: BigInt(fields.imms ?? 0) },
+  ];
+}
+
+function extractRegisterOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+    { kind: "text", text: `#${fields.imms ?? 0}` },
   ];
 }
 
@@ -645,10 +695,13 @@ function isFpSimdLoadStore(fileName: string): boolean {
   switch (fileName) {
     case "ldr_imm_fpsimd.xml":
     case "str_imm_fpsimd.xml":
+    case "ldur_fpsimd.xml":
+    case "stur_fpsimd.xml":
     case "ldr_reg_fpsimd.xml":
     case "str_reg_fpsimd.xml":
     case "ldp_fpsimd.xml":
     case "stp_fpsimd.xml":
+    case "stnp_fpsimd.xml":
       return true;
     default:
       return false;
@@ -701,7 +754,13 @@ function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
   const encodingId = inst.encoding!.encodingId;
   const base = formatRegister(gpReg(64, fields.Rn, "sp"));
 
-  if (inst.encoding!.fileName === "ldr_reg_gen.xml" || inst.encoding!.fileName === "ldr_reg_fpsimd.xml" || inst.encoding!.fileName === "str_reg_fpsimd.xml") {
+  if (
+    inst.encoding!.fileName === "ldr_reg_gen.xml" ||
+    inst.encoding!.fileName === "ldrb_reg.xml" ||
+    inst.encoding!.fileName === "ldrh_reg.xml" ||
+    inst.encoding!.fileName === "ldr_reg_fpsimd.xml" ||
+    inst.encoding!.fileName === "str_reg_fpsimd.xml"
+  ) {
     return scalarRegisterOffsetMemoryText(inst);
   }
 
@@ -747,7 +806,11 @@ function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
   if (inst.encoding!.fileName === "ldpsw.xml") {
     return signExtend(fields.imm7 ?? 0, 7) * 4n;
   }
-  if (inst.encoding!.fileName === "ldp_fpsimd.xml" || inst.encoding!.fileName === "stp_fpsimd.xml") {
+  if (
+    inst.encoding!.fileName === "ldp_fpsimd.xml" ||
+    inst.encoding!.fileName === "stp_fpsimd.xml" ||
+    inst.encoding!.fileName === "stnp_fpsimd.xml"
+  ) {
     const scale = (fields.opc ?? 0) === 2 ? 16n : (fields.opc ?? 0) === 1 ? 8n : 4n;
     return signExtend(fields.imm7 ?? 0, 7) * scale;
   }
@@ -772,7 +835,11 @@ function pairLoadStoreMemoryText(inst: DecodedInstruction): string {
 
 function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  if (inst.encoding!.fileName === "ldp_fpsimd.xml" || inst.encoding!.fileName === "stp_fpsimd.xml") {
+  if (
+    inst.encoding!.fileName === "ldp_fpsimd.xml" ||
+    inst.encoding!.fileName === "stp_fpsimd.xml" ||
+    inst.encoding!.fileName === "stnp_fpsimd.xml"
+  ) {
     return [
       { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt) },
       { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt2) },
@@ -862,34 +929,17 @@ function svePatternName(pattern: number): string | undefined {
 function expandVfpImmediate(imm8: number, width: 16 | 32 | 64): number {
   const exponentBits = width === 16 ? 5 : width === 32 ? 8 : 11;
   const fractionBits = width - exponentBits - 1;
+  const exponentBias = width === 16 ? 15 : width === 32 ? 127 : 1023;
   const sign = (imm8 >>> 7) & 1;
   const immBit6 = (imm8 >>> 6) & 1;
   const exponent =
     (((immBit6 ^ 1) & 1) << (exponentBits - 1)) |
     (((immBit6 === 1 ? 1 : 0) * ((1 << (exponentBits - 3)) - 1)) << 2) |
     ((imm8 >>> 4) & 0x3);
-  const fraction = (imm8 & 0xf) << (fractionBits - 4);
-
-  if (width === 16) {
-    const half = (sign << 15) | (exponent << 10) | fraction;
-    const halfExponent = (half >>> 10) & 0x1f;
-    const halfFraction = half & 0x3ff;
-    if (halfExponent === 0) {
-      return (sign ? -1 : 1) * 2 ** -14 * (halfFraction / 2 ** 10);
-    }
-    return (sign ? -1 : 1) * 2 ** (halfExponent - 15) * (1 + halfFraction / 2 ** 10);
-  }
-
-  const buffer = new ArrayBuffer(width / 8);
-  const view = new DataView(buffer);
-  if (width === 32) {
-    view.setUint32(0, ((sign << 31) | (exponent << 23) | fraction) >>> 0);
-    return view.getFloat32(0);
-  }
-
-  const bits = (BigInt(sign) << 63n) | (BigInt(exponent) << 52n) | BigInt(fraction);
-  view.setBigUint64(0, bits);
-  return view.getFloat64(0);
+  const fraction = (imm8 & 0xf) * 2 ** (fractionBits - 4);
+  const magnitude =
+    exponent === 0 ? 2 ** (1 - exponentBias) * (fraction / 2 ** fractionBits) : 2 ** (exponent - exponentBias) * (1 + fraction / 2 ** fractionBits);
+  return (sign ? -1 : 1) * magnitude;
 }
 
 function sveFloatingImmediate(imm8: number, size: number | undefined): Operand {
@@ -908,14 +958,106 @@ function scalarFpLaneFromFtype(ftype: number | undefined): "h" | "s" | "d" {
   }
 }
 
+function scalarFpRegisterText(index: number, lane: "h" | "s" | "d"): string {
+  return `${lane}${index}`;
+}
+
 function scalarFpCompareOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = scalarFpLaneFromFtype(fields.ftype);
-  const lhs = { kind: "text", text: `${lane}${fields.Rn}` } satisfies Operand;
+  const lhs = { kind: "text", text: scalarFpRegisterText(fields.Rn, lane) } satisfies Operand;
   if (((fields.opc ?? 0) & 1) === 1) {
     return [lhs, { kind: "text", text: "#0.0" }];
   }
-  return [lhs, { kind: "text", text: `${lane}${fields.Rm}` }];
+  return [lhs, { kind: "text", text: scalarFpRegisterText(fields.Rm, lane) }];
+}
+
+function scalarFpConditionalCompareOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = scalarFpLaneFromFtype(fields.ftype);
+  return [
+    { kind: "text", text: scalarFpRegisterText(fields.Rn, lane) },
+    { kind: "text", text: scalarFpRegisterText(fields.Rm, lane) },
+    { kind: "text", text: `#${fields.nzcv ?? 0}` },
+    conditionOperand(fields.cond),
+  ];
+}
+
+function scalarFpConvertPrecisionOperands(inst: DecodedInstruction): Operand[] {
+  const encodingId = inst.encoding!.encodingId;
+  const match = /^FCVT_([HSD])([HSD])_/.exec(encodingId);
+  if (!match) {
+    return [];
+  }
+
+  const destLane = match[1].toLowerCase() as "h" | "s" | "d";
+  const sourceLane = match[2].toLowerCase() as "h" | "s" | "d";
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: scalarFpRegisterText(fields.Rd, destLane) },
+    { kind: "text", text: scalarFpRegisterText(fields.Rn, sourceLane) },
+  ];
+}
+
+function scalarFpMoveGeneralOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  switch (inst.encoding!.encodingId) {
+    case "FMOV_32H_float2int":
+      return [gpReg(32, fields.Rd, "zr"), { kind: "text", text: scalarFpRegisterText(fields.Rn, "h") }];
+    case "FMOV_64H_float2int":
+      return [gpReg(64, fields.Rd, "zr"), { kind: "text", text: scalarFpRegisterText(fields.Rn, "h") }];
+    case "FMOV_H32_float2int":
+      return [{ kind: "text", text: scalarFpRegisterText(fields.Rd, "h") }, gpReg(32, fields.Rn, "zr")];
+    case "FMOV_S32_float2int":
+      return [{ kind: "text", text: scalarFpRegisterText(fields.Rd, "s") }, gpReg(32, fields.Rn, "zr")];
+    case "FMOV_32S_float2int":
+      return [gpReg(32, fields.Rd, "zr"), { kind: "text", text: scalarFpRegisterText(fields.Rn, "s") }];
+    case "FMOV_H64_float2int":
+      return [{ kind: "text", text: scalarFpRegisterText(fields.Rd, "h") }, gpReg(64, fields.Rn, "zr")];
+    case "FMOV_D64_float2int":
+      return [{ kind: "text", text: scalarFpRegisterText(fields.Rd, "d") }, gpReg(64, fields.Rn, "zr")];
+    case "FMOV_V64I_float2int":
+      return [{ kind: "text", text: `v${fields.Rd}.d[1]` }, gpReg(64, fields.Rn, "zr")];
+    case "FMOV_64D_float2int":
+      return [gpReg(64, fields.Rd, "zr"), { kind: "text", text: scalarFpRegisterText(fields.Rn, "d") }];
+    case "FMOV_64VX_float2int":
+      return [gpReg(64, fields.Rd, "zr"), { kind: "text", text: `v${fields.Rn}.d[1]` }];
+    default:
+      return [];
+  }
+}
+
+function scalarFpMoveImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = scalarFpLaneFromFtype(fields.ftype);
+  const width = lane === "h" ? 16 : lane === "s" ? 32 : 64;
+  return [{ kind: "text", text: scalarFpRegisterText(fields.Rd, lane) }, { kind: "fpimm", value: expandVfpImmediate(fields.imm8 ?? 0, width) }];
+}
+
+function scalarFpToIntegerOperands(inst: DecodedInstruction, fixedPoint = false): Operand[] {
+  const fields = inst.fields!;
+  const lane = scalarFpLaneFromFtype(fields.ftype);
+  const ops: Operand[] = [
+    gpReg(widthFromSf(fields.sf), fields.Rd, "zr"),
+    { kind: "text", text: scalarFpRegisterText(fields.Rn, lane) },
+  ];
+  if (fixedPoint) {
+    ops.push({ kind: "text", text: `#${64 - (fields.scale ?? 0)}` });
+  }
+  return ops;
+}
+
+function scalarIntegerToFpOperands(inst: DecodedInstruction, fixedPoint = false): Operand[] {
+  const fields = inst.fields!;
+  const lane = scalarFpLaneFromFtype(fields.ftype);
+  const ops: Operand[] = [
+    { kind: "text", text: scalarFpRegisterText(fields.Rd, lane) },
+    gpReg(widthFromSf(fields.sf), fields.Rn, "zr"),
+  ];
+  if (fixedPoint) {
+    ops.push({ kind: "text", text: `#${64 - (fields.scale ?? 0)}` });
+  }
+  return ops;
 }
 
 function sveMovprfxOperands(inst: DecodedInstruction): Operand[] {
@@ -1169,6 +1311,92 @@ function advsimdMultipleStructureOperands(inst: DecodedInstruction): Operand[] {
   const registers = advsimdStructureRegisterGroupText(start, regCount, fields.size, fields.Q);
   const memory = advsimdStructureMemoryText(fields.Rn ?? 0, fields.Rm, regCount, fields.Q);
   return [{ kind: "text", text: registers }, { kind: "text", text: memory }];
+}
+
+function advsimdFpCompareLane(inst: DecodedInstruction): "h" | "s" | "d" {
+  const className = inst.encoding!.className.toLowerCase();
+  if (className.includes("half")) {
+    return "h";
+  }
+  return (inst.fields!.sz ?? 0) === 1 ? "d" : "s";
+}
+
+function advsimdFpCompareVectorArrangement(inst: DecodedInstruction): "4h" | "8h" | "2s" | "4s" | "2d" {
+  const lane = advsimdFpCompareLane(inst);
+  const q = inst.fields!.Q ?? 0;
+  if (lane === "h") {
+    return q === 1 ? "8h" : "4h";
+  }
+  if (lane === "s") {
+    return q === 1 ? "4s" : "2s";
+  }
+  return "2d";
+}
+
+function advsimdCompareOperands(inst: DecodedInstruction): Operand[] {
+  const encoding = inst.encoding!;
+  const fields = inst.fields!;
+  const fileName = encoding.fileName;
+  const className = encoding.className.toLowerCase();
+  const isFloat = fileName.startsWith("fcm");
+  const isScalar = className.includes("scalar");
+  const isZeroForm =
+    fileName.includes("_zero") ||
+    fileName === "cmle_advsimd.xml" ||
+    fileName === "cmlt_advsimd.xml" ||
+    fileName === "fcmle_advsimd.xml" ||
+    fileName === "fcmlt_advsimd.xml";
+
+  if (isFloat) {
+    const lane = advsimdFpCompareLane(inst);
+    const destination = isScalar
+      ? scalarFpRegisterText(fields.Rd ?? 0, lane)
+      : `v${fields.Rd ?? 0}.${advsimdFpCompareVectorArrangement(inst)}`;
+    const source = isScalar
+      ? scalarFpRegisterText(fields.Rn ?? 0, lane)
+      : `v${fields.Rn ?? 0}.${advsimdFpCompareVectorArrangement(inst)}`;
+
+    if (isZeroForm) {
+      return [
+        { kind: "text", text: destination },
+        { kind: "text", text: source },
+        { kind: "text", text: "#0.0" },
+      ];
+    }
+
+    const other = isScalar
+      ? scalarFpRegisterText(fields.Rm ?? 0, lane)
+      : `v${fields.Rm ?? 0}.${advsimdFpCompareVectorArrangement(inst)}`;
+    return [
+      { kind: "text", text: destination },
+      { kind: "text", text: source },
+      { kind: "text", text: other },
+    ];
+  }
+
+  const destination = isScalar
+    ? advsimdScalarRegisterText(fields.Rd ?? 0, fields.size)
+    : advsimdVectorRegisterText(fields.Rd ?? 0, fields.size, fields.Q);
+  const source = isScalar
+    ? advsimdScalarRegisterText(fields.Rn ?? 0, fields.size)
+    : advsimdVectorRegisterText(fields.Rn ?? 0, fields.size, fields.Q);
+
+  if (isZeroForm) {
+    return [
+      { kind: "text", text: destination },
+      { kind: "text", text: source },
+      { kind: "text", text: "#0" },
+    ];
+  }
+
+  const other = isScalar
+    ? advsimdScalarRegisterText(fields.Rm ?? 0, fields.size)
+    : advsimdVectorRegisterText(fields.Rm ?? 0, fields.size, fields.Q);
+  return [
+    { kind: "text", text: destination },
+    { kind: "text", text: source },
+    { kind: "text", text: other },
+  ];
 }
 
 function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -2209,6 +2437,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return threeSourceIntegerOperands(inst);
     case "mul_madd.xml":
       return mulAliasOperands(inst);
+    case "mneg_msub.xml":
+      return twoSourceIntegerOperands(inst);
+    case "smaddl.xml":
+    case "smsubl.xml":
+    case "umaddl.xml":
+    case "umsubl.xml":
+      return scalarMultiplyLongOperands(inst);
+    case "smull_smaddl.xml":
+    case "smnegl_smsubl.xml":
+    case "umull_umaddl.xml":
+    case "umnegl_umsubl.xml":
+      return scalarMultiplyLongAliasOperands(inst);
+    case "smulh.xml":
+    case "umulh.xml":
+      return multiplyHighOperands(inst);
     case "mrs.xml":
     case "msr_reg.xml":
       return systemMoveOperands(inst, encoding.mnemonic);
@@ -2239,9 +2482,38 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcmp_float.xml":
     case "fcmpe_float.xml":
       return scalarFpCompareOperands(inst);
+    case "fccmp_float.xml":
+    case "fccmpe_float.xml":
+      return scalarFpConditionalCompareOperands(inst);
+    case "fcvt_float.xml":
+      return scalarFpConvertPrecisionOperands(inst);
+    case "fmov_float_gen.xml":
+      return scalarFpMoveGeneralOperands(inst);
+    case "fmov_float_imm.xml":
+      return scalarFpMoveImmediateOperands(inst);
+    case "fcvtns_float.xml":
+    case "fcvtnu_float.xml":
+    case "fcvtps_float.xml":
+    case "fcvtpu_float.xml":
+    case "fcvtms_float.xml":
+    case "fcvtmu_float.xml":
+    case "fcvtzs_float_int.xml":
+    case "fcvtzu_float_int.xml":
+      return scalarFpToIntegerOperands(inst);
+    case "fcvtzs_float_fix.xml":
+    case "fcvtzu_float_fix.xml":
+      return scalarFpToIntegerOperands(inst, true);
+    case "scvtf_float_int.xml":
+    case "ucvtf_float_int.xml":
+      return scalarIntegerToFpOperands(inst);
+    case "scvtf_float_fix.xml":
+    case "ucvtf_float_fix.xml":
+      return scalarIntegerToFpOperands(inst, true);
     case "and_log_shift.xml":
       return logicalShiftedRegisterOperands(inst);
     case "and_log_imm.xml":
+    case "ands_log_imm.xml":
+    case "tst_ands_log_imm.xml":
     case "orr_log_imm.xml":
     case "eor_log_imm.xml":
       return logicalImmediateOperands(inst);
@@ -2249,11 +2521,15 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "str_imm_gen.xml":
     case "ldur_gen.xml":
     case "stur_gen.xml":
+    case "ldur_fpsimd.xml":
+    case "stur_fpsimd.xml":
     case "ldrb_imm.xml":
     case "ldrh_imm.xml":
     case "strb_imm.xml":
     case "strh_imm.xml":
     case "ldr_reg_gen.xml":
+    case "ldrb_reg.xml":
+    case "ldrh_reg.xml":
     case "ldr_imm_fpsimd.xml":
     case "str_imm_fpsimd.xml":
     case "ldr_reg_fpsimd.xml":
@@ -2267,6 +2543,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "cinc_csinc.xml":
     case "cinv_csinv.xml":
     case "cneg_csneg.xml":
+    case "cset_csinc.xml":
+    case "csetm_csinv.xml":
       return conditionalSelectOperands(inst);
     case "ccmp_imm.xml":
     case "ccmn_imm.xml":
@@ -2294,8 +2572,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uxth_ubfm.xml":
       return bitfieldImmediateOperands(inst);
     case "ldp_gen.xml":
+    case "ldnp_gen.xml":
     case "ldp_fpsimd.xml":
     case "stp_fpsimd.xml":
+    case "stnp_fpsimd.xml":
     case "ldpsw.xml":
       return pairLoadStoreOperands(inst);
     case "dup_z_zi.xml":
@@ -2310,6 +2590,15 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveCopyScalarOperands(inst);
     case "cpy_z_p_v.xml":
       return sveCopyScalarVectorOperands(inst);
+    case "extr.xml":
+      return extractRegisterOperands(inst);
+    case "rev.xml":
+      return oneSourceIntegerOperands(inst);
+    case "lsl_lslv.xml":
+    case "lsr_lsrv.xml":
+    case "asr_asrv.xml":
+    case "ror_rorv.xml":
+      return twoSourceIntegerOperands(inst);
     case "sqrdmlah_advsimd_vec.xml":
     case "sqrdmlah_advsimd_elt.xml":
     case "sqrdmlsh_advsimd_vec.xml":
@@ -2320,6 +2609,25 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "udot_advsimd_vec.xml":
     case "udot_advsimd_elt.xml":
       return advsimdDotProductOperands(inst);
+    case "cmeq_advsimd_reg.xml":
+    case "cmeq_advsimd_zero.xml":
+    case "cmge_advsimd_reg.xml":
+    case "cmge_advsimd_zero.xml":
+    case "cmgt_advsimd_reg.xml":
+    case "cmgt_advsimd_zero.xml":
+    case "cmhi_advsimd.xml":
+    case "cmhs_advsimd.xml":
+    case "cmle_advsimd.xml":
+    case "cmlt_advsimd.xml":
+    case "fcmeq_advsimd_reg.xml":
+    case "fcmeq_advsimd_zero.xml":
+    case "fcmge_advsimd_reg.xml":
+    case "fcmge_advsimd_zero.xml":
+    case "fcmgt_advsimd_reg.xml":
+    case "fcmgt_advsimd_zero.xml":
+    case "fcmle_advsimd.xml":
+    case "fcmlt_advsimd.xml":
+      return advsimdCompareOperands(inst);
     case "ld1_advsimd_mult.xml":
     case "st1_advsimd_mult.xml":
       return advsimdMultipleStructureOperands(inst);

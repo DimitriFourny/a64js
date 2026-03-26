@@ -46,14 +46,23 @@ function formatConditionalSelect(decoded: DecodedInstruction): string | null {
     return null;
   }
 
-  if (!["csel.xml", "cinc_csinc.xml", "cinv_csinv.xml", "cneg_csneg.xml"].includes(fileName)) {
+  if (!["csel.xml", "cinc_csinc.xml", "cinv_csinv.xml", "cneg_csneg.xml", "cset_csinc.xml", "csetm_csinv.xml"].includes(fileName)) {
     return null;
   }
 
   const rd = formatOperand(operands[0]);
+  const encodedCond = operands[3].code & 0xf;
+
+  if (fileName === "cset_csinc.xml") {
+    return `cset ${rd}, ${conditionSuffix(invertConditionCode(encodedCond))}`;
+  }
+
+  if (fileName === "csetm_csinv.xml") {
+    return `csetm ${rd}, ${conditionSuffix(invertConditionCode(encodedCond))}`;
+  }
+
   const rn = formatOperand(operands[1]);
   const rm = formatOperand(operands[2]);
-  const encodedCond = operands[3].code & 0xf;
 
   if (fileName === "csel.xml") {
     return `csel ${rd}, ${rn}, ${rm}, ${conditionSuffix(encodedCond)}`;
@@ -71,6 +80,17 @@ function formatConditionalSelect(decoded: DecodedInstruction): string | null {
   }
 
   return sameSource ? `cneg ${rd}, ${rn}, ${aliasCond}` : `csneg ${rd}, ${rn}, ${rm}, ${conditionSuffix(encodedCond)}`;
+}
+
+function formatLogicalImmediateAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+
+  if (fileName !== "tst_ands_log_imm.xml" || operands.length !== 2) {
+    return null;
+  }
+
+  return `tst ${formatOperand(operands[0])}, ${formatOperand(operands[1])}`;
 }
 
 function formatSubtractWithCarryAlias(decoded: DecodedInstruction): string | null {
@@ -94,6 +114,72 @@ function formatMultiplyAlias(decoded: DecodedInstruction): string | null {
   }
 
   return `mul ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
+}
+
+function formatMultiplyLongAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+
+  const mnemonicByFile = new Map([
+    ["mneg_msub.xml", "mneg"],
+    ["smull_smaddl.xml", "smull"],
+    ["smnegl_smsubl.xml", "smnegl"],
+    ["umull_umaddl.xml", "umull"],
+    ["umnegl_umsubl.xml", "umnegl"],
+  ]);
+  const mnemonic = fileName ? mnemonicByFile.get(fileName) : undefined;
+  if (!mnemonic) {
+    return null;
+  }
+
+  if (operands.length !== 3) {
+    return null;
+  }
+
+  return `${mnemonic} ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
+}
+
+function formatExtractAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+  const fields = decoded.fields;
+
+  if (fileName !== "extr.xml" || !fields || operands.length !== 4) {
+    return null;
+  }
+
+  const rd = formatOperand(operands[0]);
+  const rn = formatOperand(operands[1]);
+  const rm = formatOperand(operands[2]);
+  const lsb = fields.imms ?? 0;
+
+  if (fields.Rn === fields.Rm) {
+    return `ror ${rd}, ${rn}, #${lsb}`;
+  }
+
+  return `extr ${rd}, ${rn}, ${rm}, #${lsb}`;
+}
+
+function formatVariableShiftAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+
+  if (!fileName || operands.length !== 3) {
+    return null;
+  }
+
+  const mnemonicByFile = new Map([
+    ["lsl_lslv.xml", "lsl"],
+    ["lsr_lsrv.xml", "lsr"],
+    ["asr_asrv.xml", "asr"],
+    ["ror_rorv.xml", "ror"],
+  ]);
+  const mnemonic = mnemonicByFile.get(fileName);
+  if (!mnemonic) {
+    return null;
+  }
+
+  return `${mnemonic} ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
 }
 
 function formatBarrierInstruction(decoded: DecodedInstruction): string | null {
@@ -234,9 +320,29 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return multiplyAlias;
   }
 
+  const multiplyLongAlias = formatMultiplyLongAlias({ ...decoded, operands });
+  if (multiplyLongAlias) {
+    return multiplyLongAlias;
+  }
+
+  const logicalImmediateAlias = formatLogicalImmediateAlias({ ...decoded, operands });
+  if (logicalImmediateAlias) {
+    return logicalImmediateAlias;
+  }
+
   const subtractWithCarryAlias = formatSubtractWithCarryAlias({ ...decoded, operands });
   if (subtractWithCarryAlias) {
     return subtractWithCarryAlias;
+  }
+
+  const extractAlias = formatExtractAlias({ ...decoded, operands });
+  if (extractAlias) {
+    return extractAlias;
+  }
+
+  const variableShiftAlias = formatVariableShiftAlias({ ...decoded, operands });
+  if (variableShiftAlias) {
+    return variableShiftAlias;
   }
 
   const barrierInstruction = formatBarrierInstruction({ ...decoded, operands });
