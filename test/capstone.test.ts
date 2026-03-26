@@ -11,6 +11,10 @@ function describeCase(capstoneCase: (typeof SUPPORTED_CAPSTONE_CASES)[number]): 
   return `${capstoneCase.sourceFile}#${capstoneCase.caseIndex} ${capstoneCase.mnemonic} ${formatWord(capstoneCase.word)}`;
 }
 
+console.log(
+  `capstone coverage snapshot: ${SUPPORTED_CAPSTONE_CASES.length} supported, ${UNSUPPORTED_CAPSTONE_CASES.length} unsupported`,
+);
+
 test("supported capstone cases decode through supported XML encodings", () => {
   for (const capstoneCase of SUPPORTED_CAPSTONE_CASES) {
     const decoded = decode(capstoneCase.word, { features: capstoneCase.features });
