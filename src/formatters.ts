@@ -11,8 +11,8 @@ import type {
 const COND_NAMES = [
   "eq",
   "ne",
-  "cs",
-  "cc",
+  "hs",
+  "lo",
   "mi",
   "pl",
   "vs",
@@ -26,6 +26,124 @@ const COND_NAMES = [
   "al",
   "nv",
 ] as const;
+
+const BARRIER_OPTION_NAMES = new Map<number, string>([
+  [0b0001, "oshld"],
+  [0b0010, "oshst"],
+  [0b0011, "osh"],
+  [0b0101, "nshld"],
+  [0b0110, "nshst"],
+  [0b0111, "nsh"],
+  [0b1001, "ishld"],
+  [0b1010, "ishst"],
+  [0b1011, "ish"],
+  [0b1101, "ld"],
+  [0b1110, "st"],
+  [0b1111, "sy"],
+]);
+
+type SystemAlias = {
+  mnemonic: "at" | "dc" | "ic" | "tlbi";
+  op: string;
+  hasRegister: boolean;
+};
+
+const AT_SYSTEM_ALIASES = new Map<string, SystemAlias>([
+  ["0:7:8:0", { mnemonic: "at", op: "s1e1r", hasRegister: true }],
+  ["0:7:8:1", { mnemonic: "at", op: "s1e1w", hasRegister: true }],
+  ["0:7:8:2", { mnemonic: "at", op: "s1e0r", hasRegister: true }],
+  ["0:7:8:3", { mnemonic: "at", op: "s1e0w", hasRegister: true }],
+  ["0:7:9:0", { mnemonic: "at", op: "s1e1rp", hasRegister: true }],
+  ["0:7:9:1", { mnemonic: "at", op: "s1e1wp", hasRegister: true }],
+  ["0:7:9:2", { mnemonic: "at", op: "s1e1a", hasRegister: true }],
+  ["4:7:8:0", { mnemonic: "at", op: "s1e2r", hasRegister: true }],
+  ["4:7:8:1", { mnemonic: "at", op: "s1e2w", hasRegister: true }],
+  ["4:7:8:4", { mnemonic: "at", op: "s12e1r", hasRegister: true }],
+  ["4:7:8:5", { mnemonic: "at", op: "s12e1w", hasRegister: true }],
+  ["4:7:8:6", { mnemonic: "at", op: "s12e0r", hasRegister: true }],
+  ["4:7:8:7", { mnemonic: "at", op: "s12e0w", hasRegister: true }],
+  ["4:7:9:2", { mnemonic: "at", op: "s1e2a", hasRegister: true }],
+  ["6:7:8:0", { mnemonic: "at", op: "s1e3r", hasRegister: true }],
+  ["6:7:8:1", { mnemonic: "at", op: "s1e3w", hasRegister: true }],
+  ["6:7:9:2", { mnemonic: "at", op: "s1e3a", hasRegister: true }],
+]);
+
+const DC_SYSTEM_ALIASES = new Map<string, SystemAlias>([
+  ["0:7:1:0", { mnemonic: "ic", op: "ialluis", hasRegister: false }],
+  ["0:7:5:0", { mnemonic: "ic", op: "iallu", hasRegister: false }],
+  ["3:7:5:1", { mnemonic: "ic", op: "ivau", hasRegister: true }],
+  ["0:7:6:1", { mnemonic: "dc", op: "ivac", hasRegister: true }],
+  ["0:7:6:2", { mnemonic: "dc", op: "isw", hasRegister: true }],
+  ["0:7:6:3", { mnemonic: "dc", op: "igvac", hasRegister: true }],
+  ["0:7:6:4", { mnemonic: "dc", op: "igsw", hasRegister: true }],
+  ["0:7:6:5", { mnemonic: "dc", op: "igdvac", hasRegister: true }],
+  ["0:7:6:6", { mnemonic: "dc", op: "igdsw", hasRegister: true }],
+  ["0:7:10:2", { mnemonic: "dc", op: "csw", hasRegister: true }],
+  ["0:7:10:4", { mnemonic: "dc", op: "cgsw", hasRegister: true }],
+  ["0:7:10:6", { mnemonic: "dc", op: "cgdsw", hasRegister: true }],
+  ["0:7:14:2", { mnemonic: "dc", op: "cisw", hasRegister: true }],
+  ["0:7:14:4", { mnemonic: "dc", op: "cigsw", hasRegister: true }],
+  ["0:7:14:6", { mnemonic: "dc", op: "cigdsw", hasRegister: true }],
+  ["3:7:4:1", { mnemonic: "dc", op: "zva", hasRegister: true }],
+  ["3:7:4:3", { mnemonic: "dc", op: "gva", hasRegister: true }],
+  ["3:7:4:4", { mnemonic: "dc", op: "gzva", hasRegister: true }],
+  ["3:7:10:1", { mnemonic: "dc", op: "cvac", hasRegister: true }],
+  ["3:7:10:3", { mnemonic: "dc", op: "cgvac", hasRegister: true }],
+  ["3:7:10:5", { mnemonic: "dc", op: "cgdvac", hasRegister: true }],
+  ["3:7:11:1", { mnemonic: "dc", op: "cvau", hasRegister: true }],
+  ["3:7:12:1", { mnemonic: "dc", op: "cvap", hasRegister: true }],
+  ["3:7:12:3", { mnemonic: "dc", op: "cgvap", hasRegister: true }],
+  ["3:7:12:5", { mnemonic: "dc", op: "cgdvap", hasRegister: true }],
+  ["3:7:13:1", { mnemonic: "dc", op: "cvadp", hasRegister: true }],
+  ["3:7:13:3", { mnemonic: "dc", op: "cgvadp", hasRegister: true }],
+  ["3:7:13:5", { mnemonic: "dc", op: "cgdvadp", hasRegister: true }],
+  ["3:7:14:1", { mnemonic: "dc", op: "civac", hasRegister: true }],
+  ["3:7:14:3", { mnemonic: "dc", op: "cigvac", hasRegister: true }],
+  ["3:7:14:5", { mnemonic: "dc", op: "cigdvac", hasRegister: true }],
+  ["4:7:14:0", { mnemonic: "dc", op: "cipae", hasRegister: true }],
+  ["4:7:14:7", { mnemonic: "dc", op: "cigdpae", hasRegister: true }],
+]);
+
+const TLBI_SYSTEM_ALIASES = new Map<string, SystemAlias>([
+  ["0:8:3:0", { mnemonic: "tlbi", op: "vmalle1is", hasRegister: false }],
+  ["0:8:3:1", { mnemonic: "tlbi", op: "vae1is", hasRegister: true }],
+  ["0:8:3:2", { mnemonic: "tlbi", op: "aside1is", hasRegister: true }],
+  ["0:8:3:3", { mnemonic: "tlbi", op: "vaae1is", hasRegister: true }],
+  ["0:8:3:5", { mnemonic: "tlbi", op: "vale1is", hasRegister: true }],
+  ["0:8:3:7", { mnemonic: "tlbi", op: "vaale1is", hasRegister: true }],
+  ["0:8:7:0", { mnemonic: "tlbi", op: "vmalle1", hasRegister: false }],
+  ["0:8:7:1", { mnemonic: "tlbi", op: "vae1", hasRegister: true }],
+  ["0:8:7:2", { mnemonic: "tlbi", op: "aside1", hasRegister: true }],
+  ["0:8:7:3", { mnemonic: "tlbi", op: "vaae1", hasRegister: true }],
+  ["0:8:7:5", { mnemonic: "tlbi", op: "vale1", hasRegister: true }],
+  ["0:8:7:7", { mnemonic: "tlbi", op: "vaale1", hasRegister: true }],
+  ["4:8:0:1", { mnemonic: "tlbi", op: "ipas2e1is", hasRegister: true }],
+  ["4:8:0:5", { mnemonic: "tlbi", op: "ipas2le1is", hasRegister: true }],
+  ["4:8:2:2", { mnemonic: "tlbi", op: "vmallws2e1is", hasRegister: false }],
+  ["4:8:3:0", { mnemonic: "tlbi", op: "alle2is", hasRegister: false }],
+  ["4:8:3:1", { mnemonic: "tlbi", op: "vae2is", hasRegister: true }],
+  ["4:8:3:4", { mnemonic: "tlbi", op: "alle1is", hasRegister: false }],
+  ["4:8:3:5", { mnemonic: "tlbi", op: "vale2is", hasRegister: true }],
+  ["4:8:3:6", { mnemonic: "tlbi", op: "vmalls12e1is", hasRegister: false }],
+  ["4:8:4:1", { mnemonic: "tlbi", op: "ipas2e1", hasRegister: true }],
+  ["4:8:4:5", { mnemonic: "tlbi", op: "ipas2le1", hasRegister: true }],
+  ["4:8:5:2", { mnemonic: "tlbi", op: "vmallws2e1os", hasRegister: false }],
+  ["4:8:6:2", { mnemonic: "tlbi", op: "vmallws2e1", hasRegister: false }],
+  ["4:8:7:0", { mnemonic: "tlbi", op: "alle2", hasRegister: false }],
+  ["4:8:7:1", { mnemonic: "tlbi", op: "vae2", hasRegister: true }],
+  ["4:8:7:4", { mnemonic: "tlbi", op: "alle1", hasRegister: false }],
+  ["4:8:7:5", { mnemonic: "tlbi", op: "vale2", hasRegister: true }],
+  ["4:8:7:6", { mnemonic: "tlbi", op: "vmalls12e1", hasRegister: false }],
+  ["4:9:2:2", { mnemonic: "tlbi", op: "vmallws2e1isnxs", hasRegister: false }],
+  ["4:9:5:2", { mnemonic: "tlbi", op: "vmallws2e1osnxs", hasRegister: false }],
+  ["4:9:6:2", { mnemonic: "tlbi", op: "vmallws2e1nxs", hasRegister: false }],
+  ["6:8:3:0", { mnemonic: "tlbi", op: "alle3is", hasRegister: false }],
+  ["6:8:3:1", { mnemonic: "tlbi", op: "vae3is", hasRegister: true }],
+  ["6:8:7:0", { mnemonic: "tlbi", op: "alle3", hasRegister: false }],
+  ["6:8:7:1", { mnemonic: "tlbi", op: "vae3", hasRegister: true }],
+  ["6:8:7:5", { mnemonic: "tlbi", op: "vale3", hasRegister: true }],
+  ["6:8:3:5", { mnemonic: "tlbi", op: "vale3is", hasRegister: true }],
+]);
 
 function signExtend(value: number, bits: number): bigint {
   const mask = (1n << BigInt(bits)) - 1n;
@@ -102,6 +220,138 @@ function addSubShiftedOperands(inst: DecodedInstruction): Operand[] {
   return ops;
 }
 
+function addSubExtendedPreferredLsl(width: 32 | 64, option: number, rd: number | undefined, rn: number): boolean {
+  if (width === 32) {
+    return option === 2 && (rd === 31 || rn === 31);
+  }
+  return option === 3 && (rd === 31 || rn === 31);
+}
+
+function addSubExtendedOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  const fileName = inst.encoding!.fileName;
+  const isAlias = fileName === "cmn_adds_addsub_ext.xml" || fileName === "cmp_subs_addsub_ext.xml";
+  const option = fields.option ?? 0;
+  const shift = fields.imm3 ?? 0;
+  const sourceWidth = width === 32 ? 32 : option === 3 || option === 7 ? 64 : 32;
+  const extendNames = ["uxtb", "uxth", "uxtw", "uxtx", "sxtb", "sxth", "sxtw", "sxtx"] as const;
+  const ops: Operand[] = [];
+
+  if (!isAlias) {
+    const rdZero = fileName === "add_addsub_ext.xml" || fileName === "sub_addsub_ext.xml" ? "sp" : "zr";
+    ops.push(gpReg(width, fields.Rd, rdZero));
+  }
+
+  ops.push(gpReg(width, fields.Rn, "sp"));
+  ops.push(gpReg(sourceWidth, fields.Rm, "zr"));
+
+  if (addSubExtendedPreferredLsl(width, option, fields.Rd, fields.Rn)) {
+    if (shift !== 0) {
+      ops.push({ kind: "text", text: `lsl #${shift}` });
+    }
+    return ops;
+  }
+
+  const extend = extendNames[option] ?? "uxtb";
+  ops.push({ kind: "text", text: shift === 0 ? extend : `${extend} #${shift}` });
+  return ops;
+}
+
+function threeSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+    gpReg(width, fields.Ra, "zr"),
+  ];
+}
+
+function mulAliasOperands(inst: DecodedInstruction): Operand[] {
+  return threeSourceIntegerOperands(inst).slice(0, 3);
+}
+
+function logicalShiftedRegisterOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  const shiftType = (["lsl", "lsr", "asr", "ror"] as const)[fields.shift ?? 0] ?? "lsl";
+  const shiftAmount = fields.imm6 ?? 0;
+  const ops: Operand[] = [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+  ];
+
+  if (shiftAmount !== 0 || shiftType !== "lsl") {
+    ops.push({ kind: "text", text: `${shiftType} #${shiftAmount}` });
+  }
+
+  return ops;
+}
+
+function highestSetBit(value: number): number {
+  for (let bit = 31; bit >= 0; bit -= 1) {
+    if (((value >>> bit) & 1) === 1) {
+      return bit;
+    }
+  }
+  return -1;
+}
+
+function rotateRight(value: bigint, shift: number, width: number): bigint {
+  const normalizedShift = ((shift % width) + width) % width;
+  const mask = (1n << BigInt(width)) - 1n;
+  if (normalizedShift === 0) {
+    return value & mask;
+  }
+  return ((value >> BigInt(normalizedShift)) | (value << BigInt(width - normalizedShift))) & mask;
+}
+
+function decodeLogicalImmediate(fields: Record<string, number>, width: 32 | 64): bigint | null {
+  const n = fields.N ?? 0;
+  const immr = fields.immr ?? 0;
+  const imms = fields.imms ?? 0;
+  const len = highestSetBit((n << 6) | ((~imms) & 0x3f));
+
+  if (len < 1) {
+    return null;
+  }
+
+  const size = 1 << len;
+  const levels = size - 1;
+  const s = imms & levels;
+  const r = immr & levels;
+
+  if (s === levels) {
+    return null;
+  }
+
+  const element = rotateRight((1n << BigInt(s + 1)) - 1n, r, size);
+  let value = 0n;
+  for (let offset = 0; offset < width; offset += size) {
+    value |= element << BigInt(offset);
+  }
+  return value;
+}
+
+function logicalImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  const imm = decodeLogicalImmediate(fields, width);
+
+  if (imm === null) {
+    return [];
+  }
+
+  return [
+    gpReg(width, fields.Rd, "sp"),
+    gpReg(width, fields.Rn, "zr"),
+    { kind: "imm", value: imm },
+  ];
+}
+
 function moveWideOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const width = widthFromSf(fields.sf);
@@ -111,6 +361,17 @@ function moveWideOperands(inst: DecodedInstruction): Operand[] {
     { kind: "imm", value: BigInt(fields.imm16), shift },
   ];
   return ops;
+}
+
+function bitfieldImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    { kind: "imm", value: BigInt(fields.immr ?? 0) },
+    { kind: "imm", value: BigInt(fields.imms ?? 0) },
+  ];
 }
 
 function branchOffsetOperand(inst: DecodedInstruction, field: "imm26" | "imm19" | "imm14"): Operand[] {
@@ -181,11 +442,35 @@ function labelFromImm16Negative(inst: DecodedInstruction): Operand[] {
   return [{ kind: "label", offset: -offset }];
 }
 
+export function conditionSuffix(code: number): string {
+  return COND_NAMES[code & 0xf] ?? "nv";
+}
+
+export function invertConditionCode(code: number): number {
+  const normalized = code & 0xf;
+  return normalized >= 0xe ? normalized : normalized ^ 1;
+}
+
+function conditionOperand(code: number): Operand {
+  const normalized = code & 0xf;
+  return { kind: "cond", code: normalized, suffix: conditionSuffix(normalized) };
+}
+
 function bCondOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const offset = signExtend(fields.imm19 << 2, 21);
-  const cond = fields.cond & 0xf;
-  return [{ kind: "cond", code: cond, suffix: COND_NAMES[cond] }, labelFromOffset(offset)];
+  return [conditionOperand(fields.cond), labelFromOffset(offset)];
+}
+
+function conditionalSelectOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+    conditionOperand(fields.cond),
+  ];
 }
 
 function adcOperands(inst: DecodedInstruction): Operand[] {
@@ -211,6 +496,46 @@ function systemMove128Operands(inst: DecodedInstruction, mnemonic: string): Oper
   const xt = gpReg(64, fields.Rt, "zr");
   const xt2 = gpReg(64, (fields.Rt + 1) & 31, "zr");
   return mnemonic === "MRRS" ? [xt, xt2, systemRegister] : [systemRegister, xt, xt2];
+}
+
+function systemAliasKey(fields: Record<string, number>): string {
+  return `${fields.op1 ?? 0}:${fields.CRn ?? 0}:${fields.CRm ?? 0}:${fields.op2 ?? 0}`;
+}
+
+function barrierOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const option = BARRIER_OPTION_NAMES.get(fields.CRm ?? 0) ?? `#${fields.CRm ?? 0}`;
+  return [{ kind: "text", text: option }];
+}
+
+function rawSysOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const ops: Operand[] = [
+    { kind: "text", text: `#${fields.op1 ?? 0}` },
+    { kind: "text", text: `c${fields.CRn ?? 0}` },
+    { kind: "text", text: `c${fields.CRm ?? 0}` },
+    { kind: "text", text: `#${fields.op2 ?? 0}` },
+  ];
+  if ((fields.Rt ?? 31) !== 31) {
+    ops.push(gpReg(64, fields.Rt, "zr"));
+  }
+  return ops;
+}
+
+function systemInstructionAliasOperands(inst: DecodedInstruction, aliases: Map<string, SystemAlias>): Operand[] {
+  const fields = inst.fields!;
+  const alias = aliases.get(systemAliasKey(fields));
+  if (!alias) {
+    return rawSysOperands(inst);
+  }
+
+  const ops: Operand[] = [{ kind: "text", text: alias.op }];
+  if (alias.hasRegister) {
+    ops.push(gpReg(64, fields.Rt, "zr"));
+  }
+  return alias.mnemonic === "dc" || alias.mnemonic === "ic"
+    ? [{ kind: "text", text: alias.mnemonic }, ...ops]
+    : ops;
 }
 
 function ldaprOperands(inst: DecodedInstruction): Operand[] {
@@ -243,6 +568,23 @@ function formatSignedHexImmediate(value: bigint): string {
   return `#0x${value.toString(16)}`;
 }
 
+function formatSignedDecimalImmediate(value: bigint): string {
+  return `#${value.toString()}`;
+}
+
+function prfmOpText(value: number): string {
+  const accessNames = ["pld", "pli", "pst", "ir"];
+  const levelNames = ["l1", "l2", "l3", "slc"];
+  const policyNames = ["keep", "strm"];
+  const accessName = accessNames[value >> 3];
+  const levelName = levelNames[(value >> 1) & 0x3];
+  const policyName = policyNames[value & 0x1];
+  if (!accessName || !levelName || !policyName) {
+    return `#${value}`;
+  }
+  return `${accessName}${levelName}${policyName}`;
+}
+
 function scalarLoadStoreRegisterWidth(fileName: string, size: number | undefined): 32 | 64 {
   switch (fileName) {
     case "ldr_imm_gen.xml":
@@ -265,11 +607,32 @@ function scalarLoadStoreImmediateScale(fileName: string, size: number | undefine
     case "ldrh_imm.xml":
     case "strh_imm.xml":
       return 2n;
+    case "ldrsh_imm.xml":
+      return 2n;
     case "ldrsw_imm.xml":
       return 4n;
+    case "prfm_imm.xml":
+      return 8n;
     default:
       return 1n;
   }
+}
+
+function scalarRegisterOffsetMemoryText(inst: DecodedInstruction): string {
+  const fields = inst.fields!;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const option = fields.option ?? 0;
+  const shift = fields.S === 1 ? (fields.size ?? 0) : 0;
+  const indexWidth = (option & 1) === 0 ? 32 : 64;
+  const index = formatRegister(gpReg(indexWidth === 32 ? 32 : 64, fields.Rm, "zr"));
+
+  if (option === 3 && shift === 0) {
+    return `[${base}, ${index}]`;
+  }
+
+  const extendNames = ["uxtb", "uxth", "uxtw", "lsl", "sxtb", "sxth", "sxtw", "sxtx"] as const;
+  const extend = extendNames[option] ?? "lsl";
+  return shift === 0 ? `[${base}, ${index}, ${extend}]` : `[${base}, ${index}, ${extend} #${shift}]`;
 }
 
 function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
@@ -277,12 +640,28 @@ function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
   const encodingId = inst.encoding!.encodingId;
   const base = formatRegister(gpReg(64, fields.Rn, "sp"));
 
+  if (inst.encoding!.fileName === "ldr_reg_gen.xml") {
+    return scalarRegisterOffsetMemoryText(inst);
+  }
+
   if (fields.imm12 !== undefined) {
     const offset = BigInt(fields.imm12) * scalarLoadStoreImmediateScale(inst.encoding!.fileName, fields.size);
+    if (inst.encoding!.fileName === "prfm_imm.xml") {
+      return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+    }
     return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
   }
 
   const offset = signExtend(fields.imm9 ?? 0, 9);
+  if (inst.encoding!.fileName === "ldrsb_imm.xml" || inst.encoding!.fileName === "ldrsh_imm.xml") {
+    if (encodingId.includes("immpost")) {
+      return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
+    }
+    if (encodingId.includes("immpre")) {
+      return `[${base}, ${formatSignedDecimalImmediate(offset)}]!`;
+    }
+    return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+  }
   if (encodingId.includes("immpost")) {
     return `[${base}], ${formatSignedHexImmediate(offset)}`;
   }
@@ -292,8 +671,52 @@ function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
   return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
 }
 
+function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
+  const fields = inst.fields!;
+  if (inst.encoding!.fileName === "ldpsw.xml") {
+    return signExtend(fields.imm7 ?? 0, 7) * 4n;
+  }
+  const width = (fields.opc ?? 0) === 2 ? 64 : 32;
+  return signExtend(fields.imm7 ?? 0, 7) * BigInt(width / 8);
+}
+
+function pairLoadStoreMemoryText(inst: DecodedInstruction): string {
+  const fields = inst.fields!;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  const offset = pairLoadStoreScaledImmediate(inst);
+  const encodingId = inst.encoding!.encodingId;
+
+  if (encodingId.includes("_post")) {
+    return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
+  }
+  if (encodingId.includes("_pre")) {
+    return `[${base}, ${formatSignedDecimalImmediate(offset)}]!`;
+  }
+  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+}
+
+function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = inst.encoding!.fileName === "ldpsw.xml" ? 64 : (fields.opc ?? 0) === 2 ? 64 : 32;
+  return [
+    gpReg(width, fields.Rt, "zr"),
+    gpReg(width, fields.Rt2, "zr"),
+    { kind: "text", text: pairLoadStoreMemoryText(inst) },
+  ];
+}
+
 function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
+  if (inst.encoding!.fileName === "prfm_imm.xml") {
+    return [
+      { kind: "text", text: prfmOpText(fields.Rt) },
+      { kind: "text", text: scalarLoadStoreMemoryText(inst) },
+    ];
+  }
+  if (inst.encoding!.fileName === "ldrsb_imm.xml" || inst.encoding!.fileName === "ldrsh_imm.xml") {
+    const width: 32 | 64 = (fields.opc ?? 0) === 2 ? 64 : 32;
+    return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+  }
   const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
   return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
 }
@@ -1689,12 +2112,26 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "adc.xml":
     case "adcs.xml":
       return adcOperands(inst);
+    case "madd.xml":
+    case "msub.xml":
+      return threeSourceIntegerOperands(inst);
+    case "mul_madd.xml":
+      return mulAliasOperands(inst);
     case "mrs.xml":
     case "msr_reg.xml":
       return systemMoveOperands(inst, encoding.mnemonic);
     case "mrrs.xml":
     case "msrr.xml":
       return systemMove128Operands(inst, encoding.mnemonic);
+    case "dmb.xml":
+    case "dsb.xml":
+      return barrierOperands(inst);
+    case "at_sys.xml":
+      return systemInstructionAliasOperands(inst, AT_SYSTEM_ALIASES);
+    case "dc_sys.xml":
+      return systemInstructionAliasOperands(inst, DC_SYSTEM_ALIASES);
+    case "tlbi_sys.xml":
+      return systemInstructionAliasOperands(inst, TLBI_SYSTEM_ALIASES);
     case "ldapr.xml":
       return ldaprOperands(inst);
     case "ldiapp.xml":
@@ -1710,6 +2147,12 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcmp_float.xml":
     case "fcmpe_float.xml":
       return scalarFpCompareOperands(inst);
+    case "and_log_shift.xml":
+      return logicalShiftedRegisterOperands(inst);
+    case "and_log_imm.xml":
+    case "orr_log_imm.xml":
+    case "eor_log_imm.xml":
+      return logicalImmediateOperands(inst);
     case "ldr_imm_gen.xml":
     case "str_imm_gen.xml":
     case "ldur_gen.xml":
@@ -1718,8 +2161,39 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ldrh_imm.xml":
     case "strb_imm.xml":
     case "strh_imm.xml":
+    case "ldr_reg_gen.xml":
+    case "ldrsb_imm.xml":
+    case "ldrsh_imm.xml":
     case "ldrsw_imm.xml":
+    case "prfm_imm.xml":
       return scalarLoadStoreOperands(inst);
+    case "csel.xml":
+    case "cinc_csinc.xml":
+    case "cinv_csinv.xml":
+    case "cneg_csneg.xml":
+      return conditionalSelectOperands(inst);
+    case "bfm.xml":
+    case "bfi_bfm.xml":
+    case "bfc_bfm.xml":
+    case "bfxil_bfm.xml":
+    case "sbfm.xml":
+    case "asr_sbfm.xml":
+    case "sbfiz_sbfm.xml":
+    case "sbfx_sbfm.xml":
+    case "sxtb_sbfm.xml":
+    case "sxth_sbfm.xml":
+    case "sxtw_sbfm.xml":
+    case "ubfm.xml":
+    case "lsl_ubfm.xml":
+    case "lsr_ubfm.xml":
+    case "ubfiz_ubfm.xml":
+    case "ubfx_ubfm.xml":
+    case "uxtb_ubfm.xml":
+    case "uxth_ubfm.xml":
+      return bitfieldImmediateOperands(inst);
+    case "ldp_gen.xml":
+    case "ldpsw.xml":
+      return pairLoadStoreOperands(inst);
     case "dup_z_zi.xml":
       return sveDupIndexedOperands(inst);
     case "dup_z_i.xml":
@@ -1968,6 +2442,13 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sub_addsub_shift.xml":
     case "subs_addsub_shift.xml":
       return addSubShiftedOperands(inst);
+    case "add_addsub_ext.xml":
+    case "adds_addsub_ext.xml":
+    case "sub_addsub_ext.xml":
+    case "subs_addsub_ext.xml":
+    case "cmn_adds_addsub_ext.xml":
+    case "cmp_subs_addsub_ext.xml":
+      return addSubExtendedOperands(inst);
     case "movz.xml":
     case "movn.xml":
     case "movk.xml":

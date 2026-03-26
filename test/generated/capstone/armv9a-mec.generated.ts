@@ -136,6 +136,24 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv9a-mec.s.yaml",
+    "caseIndex": 15,
+    "word": 3574365920,
+    "asmText": "dc cigdpae, x0",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv9a-mec.s.yaml",
+    "caseIndex": 16,
+    "word": 3574365696,
+    "asmText": "dc cipae, x0",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv9a-mec.s.yaml",
     "caseIndex": 17,
     "word": 3577522400,
     "asmText": "mrs x0, MECIDR_EL2",
@@ -268,27 +286,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "msr_reg.xml",
     "mnemonic": "MSR",
     "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv9a-mec.s.yaml",
-    "caseIndex": 15,
-    "word": 3574365920,
-    "asmText": "dc cigdpae, x0",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv9a-mec.s.yaml",
-    "caseIndex": 16,
-    "word": 3574365696,
-    "asmText": "dc cipae, x0",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
   },
   {
     "sourceFile": "armv9a-mec.s.yaml",
@@ -309,3 +306,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": []
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

@@ -1,6 +1,15 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "arm64-nv-cond.s.yaml",
+    "caseIndex": 1,
+    "word": 2592141312,
+    "asmText": "csel x0, x0, x0, nv",
+    "encodingFile": "csel.xml",
+    "mnemonic": "CSEL",
+    "features": []
+  },
+  {
+    "sourceFile": "arm64-nv-cond.s.yaml",
     "caseIndex": 3,
     "word": 1409286159,
     "asmText": "b.nv #0",
@@ -22,15 +31,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_FP",
       "FEAT_FP16"
     ]
-  },
-  {
-    "sourceFile": "arm64-nv-cond.s.yaml",
-    "caseIndex": 1,
-    "word": 2592141312,
-    "asmText": "csel x0, x0, x0, nv",
-    "encodingFile": "csel.xml",
-    "mnemonic": "CSEL",
-    "features": []
   },
   {
     "sourceFile": "arm64-nv-cond.s.yaml",

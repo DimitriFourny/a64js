@@ -113,8 +113,45 @@ function parseGuardTerm(term: string): GuardCheck {
   const operator = match[2] === "==" ? "eq" : "ne";
   const literal = match[4];
   const value = literal.startsWith("0x") ? Number.parseInt(literal, 16) : Number.parseInt(literal.replaceAll("x", "0"), 2);
-  const mask = literal.startsWith("0x") ? -1 : ((1 << literal.length) - 1) >>> 0;
+  const mask = literal.startsWith("0x")
+    ? -1
+    : Number.parseInt(
+        literal
+          .replaceAll("0", "1")
+          .replaceAll("1", "1")
+          .replaceAll("x", "0"),
+        2,
+      ) >>> 0;
   return { kind: operator, field, mask, lsb: 0, value };
+}
+
+function parseGuardTermAlternatives(term: string): GuardCheck[][] {
+  const trimmed = term.trim();
+
+  if (trimmed === "size::sh == '001'") {
+    return [[
+      { kind: "eq", field: "size", mask: 0b11, lsb: 0, value: 0 },
+      { kind: "eq", field: "sh", mask: 0b1, lsb: 0, value: 1 },
+    ]];
+  }
+
+  const inMatch = /^([A-Za-z0-9_]+)\s+IN\s+\{(.+)\}$/.exec(trimmed);
+  if (inMatch) {
+    const field = inMatch[1];
+    const values = inMatch[2]
+      .split(",")
+      .map((value) => value.trim().replace(/^'+|'+$/g, ""))
+      .filter((value) => value.length > 0);
+    return values.map((value) => [{
+      kind: "eq",
+      field,
+      mask: value.startsWith("0x") ? -1 : ((1 << value.length) - 1) >>> 0,
+      lsb: 0,
+      value: value.startsWith("0x") ? Number.parseInt(value, 16) : Number.parseInt(value.replaceAll("x", "0"), 2),
+    }]);
+  }
+
+  return [[parseGuardTerm(trimmed)]];
 }
 
 function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {}): Guard[] {
@@ -134,17 +171,12 @@ function parseDecodeGuards(source: string, options: ParseEncodingFileOptions = {
       continue;
     }
     try {
-      const parsedTerms = terms.flatMap((term) => {
-        if (term.trim() === "size::sh == '001'") {
-          return [
-            { kind: "eq", field: "size", mask: 0b11, lsb: 0, value: 0 },
-            { kind: "eq", field: "sh", mask: 0b1, lsb: 0, value: 1 },
-          ];
-        }
-
-        return [parseGuardTerm(term)];
-      });
-      guards.push({ all: parsedTerms });
+      let alternatives: GuardCheck[][] = [[]];
+      for (const term of terms) {
+        const termAlternatives = parseGuardTermAlternatives(term);
+        alternatives = alternatives.flatMap((existing) => termAlternatives.map((next) => [...existing, ...next]));
+      }
+      guards.push(...alternatives.map((all) => ({ all })));
     } catch (error) {
       if (!options.ignoreUnsupportedGuards) {
         throw error;

@@ -1,6 +1,168 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 87,
+    "word": 3574101600,
+    "asmText": "dc igvac, x0",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 88,
+    "word": 3574101633,
+    "asmText": "dc igsw, x1",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 89,
+    "word": 3574102658,
+    "asmText": "dc cgsw, x2",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 90,
+    "word": 3574103683,
+    "asmText": "dc cigsw, x3",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 91,
+    "word": 3574299236,
+    "asmText": "dc cgvac, x4",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 92,
+    "word": 3574299749,
+    "asmText": "dc cgvap, x5",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 93,
+    "word": 3574300006,
+    "asmText": "dc cgvadp, x6",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 94,
+    "word": 3574300263,
+    "asmText": "dc cigvac, x7",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 95,
+    "word": 3574297704,
+    "asmText": "dc gva, x8",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 96,
+    "word": 3574101673,
+    "asmText": "dc igdvac, x9",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 97,
+    "word": 3574101706,
+    "asmText": "dc igdsw, x10",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 98,
+    "word": 3574102731,
+    "asmText": "dc cgdsw, x11",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 99,
+    "word": 3574103756,
+    "asmText": "dc cigdsw, x12",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 100,
+    "word": 3574299309,
+    "asmText": "dc cgdvac, x13",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 101,
+    "word": 3574299822,
+    "asmText": "dc cgdvap, x14",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 102,
+    "word": 3574300079,
+    "asmText": "dc cgdvadp, x15",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 103,
+    "word": 3574300336,
+    "asmText": "dc cigdvac, x16",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 104,
+    "word": 3574297745,
+    "asmText": "dc gzva, x17",
+    "encodingFile": "dc_sys.xml",
+    "mnemonic": "SYS",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
     "caseIndex": 105,
     "word": 3577430752,
     "asmText": "mrs x0, TCO",
@@ -1111,168 +1273,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_MTE"
     ]
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 87,
-    "word": 3574101600,
-    "asmText": "dc igvac, x0",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 88,
-    "word": 3574101633,
-    "asmText": "dc igsw, x1",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 89,
-    "word": 3574102658,
-    "asmText": "dc cgsw, x2",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 90,
-    "word": 3574103683,
-    "asmText": "dc cigsw, x3",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 91,
-    "word": 3574299236,
-    "asmText": "dc cgvac, x4",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 92,
-    "word": 3574299749,
-    "asmText": "dc cgvap, x5",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 93,
-    "word": 3574300006,
-    "asmText": "dc cgvadp, x6",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 94,
-    "word": 3574300263,
-    "asmText": "dc cigvac, x7",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 95,
-    "word": 3574297704,
-    "asmText": "dc gva, x8",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 96,
-    "word": 3574101673,
-    "asmText": "dc igdvac, x9",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 97,
-    "word": 3574101706,
-    "asmText": "dc igdsw, x10",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 98,
-    "word": 3574102731,
-    "asmText": "dc cgdsw, x11",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 99,
-    "word": 3574103756,
-    "asmText": "dc cigdsw, x12",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 100,
-    "word": 3574299309,
-    "asmText": "dc cgdvac, x13",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 101,
-    "word": 3574299822,
-    "asmText": "dc cgdvap, x14",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 102,
-    "word": 3574300079,
-    "asmText": "dc cgdvadp, x15",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 103,
-    "word": 3574300336,
-    "asmText": "dc cigdvac, x16",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 104,
-    "word": 3574297745,
-    "asmText": "dc gzva, x17",
-    "encodingFile": "dc_sys.xml",
-    "mnemonic": "SYS",
-    "features": []
   },
   {
     "sourceFile": "armv8.5a-mte.s.yaml",

@@ -66,6 +66,87 @@ test("decodes scalar load/store immediate and unscaled forms", () => {
   assert.equal(disasm(3088059797), "str w21, [x12, #-0x100]!");
 });
 
+test("decodes core scalar memory pair, signed-load, register-offset, and prfm forms", () => {
+  assert.equal(disasm(692066275), "ldp w3, w5, [sp]");
+  assert.equal(disasm(683677667), "ldp w3, w5, [sp], #0");
+  assert.equal(disasm(1765845993), "ldpsw x9, x10, [sp, #4]");
+  assert.equal(disasm(3093789642), "ldr w10, [x30, x7, lsl #2]");
+  assert.equal(disasm(3093556139), "ldr w11, [x29, x3, sxtx]");
+  assert.equal(disasm(947919970), "ldrsb x2, [x3, #1]!");
+  assert.equal(disasm(2025856098), "ldrsh w2, [x3, #1]!");
+  assert.equal(disasm(4185917408), "prfm pldl1keep, [sp, #8]");
+  assert.equal(disasm(4185916399), "prfm plislcstrm, [sp]");
+});
+
+test("decodes add/sub extended-register forms and compare aliases", () => {
+  assert.equal(disasm(2334457986), "add x2, x4, w5, uxtb");
+  assert.equal(disasm(3408359551), "sub sp, x3, x7, lsl #4");
+  assert.equal(disasm(186861538), "add w2, wsp, w3, lsl #1");
+  assert.equal(disasm(2871419903), "cmn sp, x6");
+  assert.equal(disasm(1797866495), "cmp wsp, w9");
+  assert.equal(disasm(3946090303), "cmp x25, w20, sxtb #3");
+});
+
+test("decodes bitfield and shift-immediate aliases", () => {
+  assert.equal(disasm(2474638467), "asr x3, x4, #63");
+  assert.equal(disasm(2470837577), "asr x9, x10, #5");
+  assert.equal(disasm(3545038021), "lsr x5, x6, #12");
+  assert.equal(disasm(3548113225), "lsl x9, x10, #5");
+  assert.equal(disasm(3544983716), "ubfiz x4, x5, #52, #11");
+  assert.equal(disasm(1392509257), "ubfx w9, w10, #0, #1");
+  assert.equal(disasm(3008112804), "bfi x4, x5, #52, #11");
+  assert.equal(disasm(3008167109), "bfxil x5, x6, #12, #52");
+  assert.equal(disasm(3011450852, undefined, { features: ["FEAT_ASMv8p2"] }), "bfi x4, xzr, #1, #6");
+  assert.equal(disasm(3007992831, undefined, { features: ["FEAT_ASMv8p2"] }), "bfxil xzr, xzr, #10, #11");
+  assert.equal(disasm(3010866175, undefined, { features: ["FEAT_ASMv8p2"] }), "bfi xzr, xzr, #10, #11");
+  assert.equal(disasm(318774337), "sxtb w1, w2");
+  assert.equal(disasm(2470452351), "sxtb xzr, w3");
+  assert.equal(disasm(2470477763), "sxtw x3, w30");
+  assert.equal(disasm(1392516161), "uxtb w1, w2");
+  assert.equal(disasm(1392524617), "uxth w9, w10");
+});
+
+test("decodes conditional select forms and aliases", () => {
+  assert.equal(disasm(445845505), "csel w1, w0, w19, ne");
+  assert.equal(disasm(2592482277), "csel x5, xzr, x6, hs");
+  assert.equal(disasm(445846529), "csinc w1, w0, w19, ne");
+  assert.equal(disasm(444978339), "cinc w3, w5, gt");
+  assert.equal(disasm(1519587329), "csinv w1, w0, w19, ne");
+  assert.equal(disasm(1518719139), "cinv w3, w5, gt");
+  assert.equal(disasm(1519588353), "csneg w1, w0, w19, ne");
+  assert.equal(disasm(3667896297), "cneg x9, xzr, lt");
+});
+
+test("decodes integer datapath multiply and logical forms", () => {
+  assert.equal(disasm(453409956), "mul w4, w5, w6");
+  assert.equal(disasm(453447777), "madd w1, w3, w7, w4");
+  assert.equal(disasm(453480545), "msub w1, w3, w7, w4");
+  assert.equal(disasm(168494019), "and w3, w30, w11");
+  assert.equal(disasm(176882627), "and w3, w30, w11, asr #0");
+  assert.equal(disasm(2325741191), "and x7, x20, xzr, asr #63");
+  assert.equal(disasm(839925027), "orr w3, w9, #0xffff0000");
+  assert.equal(disasm(302024683), "and w11, wzr, #0x30003");
+  assert.equal(disasm(1375979715), "eor w3, w6, #0xe0e0e0e0");
+  assert.equal(disasm(1377662512), "eor w16, w17, #0xfffffff9");
+});
+
+test("decodes barrier and cache/TLB maintenance system instructions", () => {
+  assert.equal(disasm(3573759935), "dmb sy");
+  assert.equal(disasm(3573759167), "dmb #12");
+  assert.equal(disasm(3573759135), "dfb");
+  assert.equal(disasm(3573758623), "dsb ishst");
+  assert.equal(disasm(3574297897), "ic ivau, x9");
+  assert.equal(disasm(3574101279), "ic iallu");
+  assert.equal(disasm(3574297644), "dc zva, x12");
+  assert.equal(disasm(3574101567), "dc ivac, xzr");
+  assert.equal(disasm(3574102067), "at s1e1w, x19");
+  assert.equal(disasm(3574364308), "at s12e1r, x20");
+  assert.equal(disasm(3574366244), "tlbi ipas2e1is, x4");
+  assert.equal(disasm(3574104863), "tlbi vmalle1is");
+  assert.equal(disasm(3574367199), "tlbi vmalls12e1is");
+  assert.equal(disasm(3574305316), "sys #3, c9, c2, #1, x4");
+});
+
 test("decodes PACIASP from XML-generated data", () => {
   const decoded = decode(0xd503233f, FEATURES);
   assert.equal(decoded.status, "ok");
