@@ -73,6 +73,18 @@ function formatConditionalSelect(decoded: DecodedInstruction): string | null {
   return sameSource ? `cneg ${rd}, ${rn}, ${aliasCond}` : `csneg ${rd}, ${rn}, ${rm}, ${conditionSuffix(encodedCond)}`;
 }
 
+function formatSubtractWithCarryAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+
+  if (!fileName || !["ngc_sbc.xml", "ngcs_sbcs.xml"].includes(fileName) || operands.length !== 3) {
+    return null;
+  }
+
+  const mnemonic = fileName === "ngc_sbc.xml" ? "ngc" : "ngcs";
+  return `${mnemonic} ${formatOperand(operands[0])}, ${formatOperand(operands[2])}`;
+}
+
 function formatMultiplyAlias(decoded: DecodedInstruction): string | null {
   const fileName = decoded.encoding?.fileName;
   const operands = decoded.operands ?? [];
@@ -220,6 +232,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
   const multiplyAlias = formatMultiplyAlias({ ...decoded, operands });
   if (multiplyAlias) {
     return multiplyAlias;
+  }
+
+  const subtractWithCarryAlias = formatSubtractWithCarryAlias({ ...decoded, operands });
+  if (subtractWithCarryAlias) {
+    return subtractWithCarryAlias;
   }
 
   const barrierInstruction = formatBarrierInstruction({ ...decoded, operands });

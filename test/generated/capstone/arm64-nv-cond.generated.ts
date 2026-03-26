@@ -10,6 +10,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "arm64-nv-cond.s.yaml",
+    "caseIndex": 2,
+    "word": 4198559744,
+    "asmText": "ccmp x0, x0, #0, nv",
+    "encodingFile": "ccmp_reg.xml",
+    "mnemonic": "CCMP",
+    "features": []
+  },
+  {
+    "sourceFile": "arm64-nv-cond.s.yaml",
     "caseIndex": 3,
     "word": 1409286159,
     "asmText": "b.nv #0",
@@ -31,14 +40,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_FP",
       "FEAT_FP16"
     ]
-  },
-  {
-    "sourceFile": "arm64-nv-cond.s.yaml",
-    "caseIndex": 2,
-    "word": 4198559744,
-    "asmText": "ccmp x0, x0, #0, nv",
-    "encodingFile": "ccmp_reg.xml",
-    "mnemonic": "CCMP",
-    "features": []
   }
 ];

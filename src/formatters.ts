@@ -473,6 +473,28 @@ function conditionalSelectOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function conditionalCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rn, "zr"),
+    { kind: "text", text: `#${fields.imm5 ?? 0}` },
+    { kind: "text", text: `#${fields.nzcv ?? 0}` },
+    conditionOperand(fields.cond),
+  ];
+}
+
+function conditionalCompareRegisterOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [
+    gpReg(width, fields.Rn, "zr"),
+    gpReg(width, fields.Rm, "zr"),
+    { kind: "text", text: `#${fields.nzcv ?? 0}` },
+    conditionOperand(fields.cond),
+  ];
+}
+
 function adcOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const width = widthFromSf(fields.sf);
@@ -599,6 +621,40 @@ function scalarLoadStoreRegisterWidth(fileName: string, size: number | undefined
   }
 }
 
+function fpSimdRegisterText(size: number | undefined, opc: number | undefined, index: number): string {
+  if ((size ?? 0) === 0 && ((opc ?? 0) & 0b10) !== 0) {
+    return `q${index}`;
+  }
+  return `${advsimdLaneFromSize(size)}${index}`;
+}
+
+function fpSimdPairRegisterText(opc: number | undefined, index: number): string {
+  switch (opc ?? 0) {
+    case 0:
+      return `s${index}`;
+    case 1:
+      return `d${index}`;
+    case 2:
+      return `q${index}`;
+    default:
+      return `s${index}`;
+  }
+}
+
+function isFpSimdLoadStore(fileName: string): boolean {
+  switch (fileName) {
+    case "ldr_imm_fpsimd.xml":
+    case "str_imm_fpsimd.xml":
+    case "ldr_reg_fpsimd.xml":
+    case "str_reg_fpsimd.xml":
+    case "ldp_fpsimd.xml":
+    case "stp_fpsimd.xml":
+      return true;
+    default:
+      return false;
+  }
+}
+
 function scalarLoadStoreImmediateScale(fileName: string, size: number | undefined): bigint {
   switch (fileName) {
     case "ldr_imm_gen.xml":
@@ -622,7 +678,12 @@ function scalarRegisterOffsetMemoryText(inst: DecodedInstruction): string {
   const fields = inst.fields!;
   const base = formatRegister(gpReg(64, fields.Rn, "sp"));
   const option = fields.option ?? 0;
-  const shift = fields.S === 1 ? (fields.size ?? 0) : 0;
+  const shift =
+    fields.S === 1
+      ? isFpSimdLoadStore(inst.encoding!.fileName)
+        ? (fields.opc ?? 0) === 3 ? 4 : (fields.size ?? 0)
+        : (fields.size ?? 0)
+      : 0;
   const indexWidth = (option & 1) === 0 ? 32 : 64;
   const index = formatRegister(gpReg(indexWidth === 32 ? 32 : 64, fields.Rm, "zr"));
 
@@ -640,20 +701,30 @@ function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
   const encodingId = inst.encoding!.encodingId;
   const base = formatRegister(gpReg(64, fields.Rn, "sp"));
 
-  if (inst.encoding!.fileName === "ldr_reg_gen.xml") {
+  if (inst.encoding!.fileName === "ldr_reg_gen.xml" || inst.encoding!.fileName === "ldr_reg_fpsimd.xml" || inst.encoding!.fileName === "str_reg_fpsimd.xml") {
     return scalarRegisterOffsetMemoryText(inst);
   }
 
   if (fields.imm12 !== undefined) {
-    const offset = BigInt(fields.imm12) * scalarLoadStoreImmediateScale(inst.encoding!.fileName, fields.size);
-    if (inst.encoding!.fileName === "prfm_imm.xml") {
+    const offset =
+      BigInt(fields.imm12) *
+      (inst.encoding!.fileName === "ldr_imm_fpsimd.xml" || inst.encoding!.fileName === "str_imm_fpsimd.xml"
+        ? (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 0b10) !== 0
+          ? 16n
+          : 1n << BigInt(fields.size ?? 0)
+        : scalarLoadStoreImmediateScale(inst.encoding!.fileName, fields.size));
+    if (inst.encoding!.fileName === "prfm_imm.xml" || isFpSimdLoadStore(inst.encoding!.fileName)) {
       return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
     }
     return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
   }
 
   const offset = signExtend(fields.imm9 ?? 0, 9);
-  if (inst.encoding!.fileName === "ldrsb_imm.xml" || inst.encoding!.fileName === "ldrsh_imm.xml") {
+  if (
+    inst.encoding!.fileName === "ldrsb_imm.xml" ||
+    inst.encoding!.fileName === "ldrsh_imm.xml" ||
+    isFpSimdLoadStore(inst.encoding!.fileName)
+  ) {
     if (encodingId.includes("immpost")) {
       return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
     }
@@ -676,6 +747,10 @@ function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
   if (inst.encoding!.fileName === "ldpsw.xml") {
     return signExtend(fields.imm7 ?? 0, 7) * 4n;
   }
+  if (inst.encoding!.fileName === "ldp_fpsimd.xml" || inst.encoding!.fileName === "stp_fpsimd.xml") {
+    const scale = (fields.opc ?? 0) === 2 ? 16n : (fields.opc ?? 0) === 1 ? 8n : 4n;
+    return signExtend(fields.imm7 ?? 0, 7) * scale;
+  }
   const width = (fields.opc ?? 0) === 2 ? 64 : 32;
   return signExtend(fields.imm7 ?? 0, 7) * BigInt(width / 8);
 }
@@ -697,6 +772,13 @@ function pairLoadStoreMemoryText(inst: DecodedInstruction): string {
 
 function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
+  if (inst.encoding!.fileName === "ldp_fpsimd.xml" || inst.encoding!.fileName === "stp_fpsimd.xml") {
+    return [
+      { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt) },
+      { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt2) },
+      { kind: "text", text: pairLoadStoreMemoryText(inst) },
+    ];
+  }
   const width = inst.encoding!.fileName === "ldpsw.xml" ? 64 : (fields.opc ?? 0) === 2 ? 64 : 32;
   return [
     gpReg(width, fields.Rt, "zr"),
@@ -716,6 +798,12 @@ function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   if (inst.encoding!.fileName === "ldrsb_imm.xml" || inst.encoding!.fileName === "ldrsh_imm.xml") {
     const width: 32 | 64 = (fields.opc ?? 0) === 2 ? 64 : 32;
     return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+  }
+  if (isFpSimdLoadStore(inst.encoding!.fileName)) {
+    return [
+      { kind: "text", text: fpSimdRegisterText(fields.size, fields.opc, fields.Rt) },
+      { kind: "text", text: scalarLoadStoreMemoryText(inst) },
+    ];
   }
   const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
   return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
@@ -2111,6 +2199,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
   switch (encoding.fileName) {
     case "adc.xml":
     case "adcs.xml":
+    case "sbc.xml":
+    case "sbcs.xml":
+    case "ngc_sbc.xml":
+    case "ngcs_sbcs.xml":
       return adcOperands(inst);
     case "madd.xml":
     case "msub.xml":
@@ -2162,6 +2254,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "strb_imm.xml":
     case "strh_imm.xml":
     case "ldr_reg_gen.xml":
+    case "ldr_imm_fpsimd.xml":
+    case "str_imm_fpsimd.xml":
+    case "ldr_reg_fpsimd.xml":
+    case "str_reg_fpsimd.xml":
     case "ldrsb_imm.xml":
     case "ldrsh_imm.xml":
     case "ldrsw_imm.xml":
@@ -2172,6 +2268,12 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "cinv_csinv.xml":
     case "cneg_csneg.xml":
       return conditionalSelectOperands(inst);
+    case "ccmp_imm.xml":
+    case "ccmn_imm.xml":
+      return conditionalCompareImmediateOperands(inst);
+    case "ccmp_reg.xml":
+    case "ccmn_reg.xml":
+      return conditionalCompareRegisterOperands(inst);
     case "bfm.xml":
     case "bfi_bfm.xml":
     case "bfc_bfm.xml":
@@ -2192,6 +2294,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uxth_ubfm.xml":
       return bitfieldImmediateOperands(inst);
     case "ldp_gen.xml":
+    case "ldp_fpsimd.xml":
+    case "stp_fpsimd.xml":
     case "ldpsw.xml":
       return pairLoadStoreOperands(inst);
     case "dup_z_zi.xml":

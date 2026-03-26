@@ -1,6 +1,17 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 7,
+    "word": 1035994082,
+    "asmText": "ldr q2, [sp]",
+    "encodingFile": "ldr_imm_fpsimd.xml",
+    "mnemonic": "LDR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
     "caseIndex": 9,
     "word": 2332033030,
     "asmText": "add x6, x0, x0",
@@ -91,17 +102,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_FP",
       "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 7,
-    "word": 1035994082,
-    "asmText": "ldr q2, [sp]",
-    "encodingFile": "ldr_imm_fpsimd.xml",
-    "mnemonic": "LDR",
-    "features": [
-      "FEAT_FP"
     ]
   },
   {

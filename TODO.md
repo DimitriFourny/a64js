@@ -42,12 +42,6 @@ Priority rule:
 - use the capstone snapshot and `basic-a64-instructions.s.yaml` volume as the default tie-breaker
 - only take niche SME/SVE/AdvSIMD work ahead of scalar/core A64 work when it clearly removes a larger unsupported batch
 
-- FP/SIMD scalar and pair load/store batch from `basic-a64-instructions.s.yaml`: `108` unsupported cases across `ldr_imm_fpsimd.xml` (`34`), `str_imm_fpsimd.xml` (`31`), `ldp_fpsimd.xml` (`12`), `stp_fpsimd.xml` (`15`), `ldr_reg_fpsimd.xml` (`10`), and `str_reg_fpsimd.xml` (`6`).
-  Done when: decode/disasm covers scalar and vector FP loads/stores for immediate, register-offset, and pair forms across `b`/`h`/`s`/`d`/`q`; the XML files are promoted together in `tools/supported-files.ts`; cases like `#975 ldr b31, [sp, #4095]`, `#979 str q12, [sp, #65520]`, and the later `ldp`/`stp` FP pairs stop falling back to `.inst`.
-- Subtract-with-carry family from `basic-a64-instructions.s.yaml`: `28` unsupported cases across `sbc.xml` (`6`), `sbcs.xml` (`6`), `ngc_sbc.xml` (`8`), and `ngcs_sbcs.xml` (`8`).
-  Done when: decode/disasm covers raw `SBC`/`SBCS` plus `NGC`/`NGCS` aliases for both 32-bit and 64-bit forms; the XML files are promoted together in `tools/supported-files.ts`; cases like `#370 ngc w9, w10`, `#382 ngcs x9, x10`, and `#383 sbcs x20, x0, xzr` render correctly.
-- Conditional-compare family from `basic-a64-instructions.s.yaml`: `24` unsupported cases across `ccmp_imm.xml` (`6`), `ccmn_imm.xml` (`6`), `ccmp_reg.xml` (`6`), and `ccmn_reg.xml` (`6`).
-  Done when: decode/disasm covers immediate and register `CCMP`/`CCMN` forms with correct NZCV immediate formatting and condition names for both 32-bit and 64-bit operands; the XML files are promoted together in `tools/supported-files.ts`; cases like `#488 ccmp w1, #31, #0, eq`, `#497 ccmn x9, #31, #0, le`, and `#503 ccmp x9, xzr, #0, le` stop falling back.
 
 
 ## Blocked
@@ -58,6 +52,9 @@ Priority rule:
 
 Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
 
+- Conditional-compare family from `basic-a64-instructions.s.yaml`: `24` capstone cases promoted across `ccmp_imm.xml`, `ccmn_imm.xml`, `ccmp_reg.xml`, and `ccmn_reg.xml`, covering 32-bit and 64-bit immediate/register forms with decimal NZCV formatting and named conditions.
+- FP/SIMD scalar and pair load/store batch from `basic-a64-instructions.s.yaml`: `108` capstone cases promoted across `ldr_imm_fpsimd.xml`, `str_imm_fpsimd.xml`, `ldp_fpsimd.xml`, `stp_fpsimd.xml`, `ldr_reg_fpsimd.xml`, and `str_reg_fpsimd.xml`, covering `b`/`h`/`s`/`d`/`q` immediate, register-offset, and pair forms.
+- Subtract-with-carry family from `basic-a64-instructions.s.yaml`: `28` capstone cases promoted across `sbc.xml`, `sbcs.xml`, `ngc_sbc.xml`, and `ngcs_sbcs.xml`, including raw `SBC`/`SBCS` rendering and `NGC`/`NGCS` alias formatting for 32-bit and 64-bit forms.
 - Barrier and cache/TLB maintenance batch from `basic-a64-instructions.s.yaml`: `85` capstone cases promoted across `dmb.xml`, `dsb.xml`, `at_sys.xml`, `dc_sys.xml`, and `tlbi_sys.xml`, including barrier option names, `DFB`, named `AT`/`DC`/`IC`/`TLBI` operations, and guarded overlap handling for unsupported SYS aliases.
 - Conditional-select family from `basic-a64-instructions.s.yaml`: `46` capstone cases promoted across `csel.xml`, `cinc_csinc.xml`, `cinv_csinv.xml`, and `cneg_csneg.xml`, including `CINC`/`CINV`/`CNEG` alias rendering, raw `CSINC`/`CSINV`/`CSNEG` forms, and `cset`/`csetm` overlap kept unsupported.
 - Integer datapath cleanup from `basic-a64-instructions.s.yaml`: multiply-accumulate plus logical shifted-register/immediate support landed across `mul_madd.xml`, `madd.xml`, `msub.xml`, `and_log_shift.xml`, `and_log_imm.xml`, `orr_log_imm.xml`, and `eor_log_imm.xml`, with `MNEG` and `MOV (bitmask immediate)` overlaps still gated as unsupported until their alias XML families are promoted.
@@ -73,16 +70,16 @@ Use one line per completed work item with a concise outcome note. Keep detailed 
 
 Current capstone coverage snapshot:
 
-- `19592` supported capstone cases
-- `14965` unsupported capstone cases
-- `304` XML instruction files currently listed in `tools/supported-files.ts`
-- `1582` distinct unsupported XML instruction files
+- `19754` supported capstone cases
+- `14803` unsupported capstone cases
+- `318` XML instruction files currently listed in `tools/supported-files.ts`
+- `1568` distinct unsupported XML instruction files
 - `854` capstone source YAML files containing unsupported cases
-- `875` distinct unsupported mnemonics
+- `870` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `basic-a64-instructions.s.yaml`: `614`
+- `basic-a64-instructions.s.yaml`: `454`
 - `neon-simd-misc.s.yaml`: `260`
 - `neon-compare-instructions.s.yaml`: `180`
 - `neon-simd-shift.s.yaml`: `159`
@@ -98,8 +95,8 @@ Largest unsupported feature sets:
 - `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `785`
 - `FEAT_SVE2p1 || FEAT_SME2p1, FEAT_SVE2p1, FEAT_SME2p1`: `774`
 - `FEAT_SVE`: `386`
-- no feature gate recorded: `322`
 - `FEAT_SME`: `294`
+- no feature gate recorded: `269`
 - `FEAT_AdvSIMD && FEAT_FP16, FEAT_AdvSIMD, FEAT_FP16`: `179`
 
 Implication:
@@ -133,6 +130,8 @@ So this TODO tracks instructions that already map cleanly to XML encodings, but 
 
 Recently completed families and batches:
 
+- Conditional-compare family: `24` capstone cases promoted across `ccmp_imm.xml`, `ccmn_imm.xml`, `ccmp_reg.xml`, and `ccmn_reg.xml`, with immediate/register forms rendered using decimal NZCV literals and named conditions
+- Subtract-with-carry family: `28` capstone cases promoted across `sbc.xml`, `sbcs.xml`, `ngc_sbc.xml`, and `ngcs_sbcs.xml`, with `NGC` / `NGCS` aliases rendered from the dedicated alias XMLs
 - Barrier and cache/TLB maintenance batch: `85` capstone cases promoted across `dmb.xml`, `dsb.xml`, `at_sys.xml`, `dc_sys.xml`, and `tlbi_sys.xml`
 - Bitfield immediate aliases: `85` capstone cases promoted across `bfi_bfm.xml`, `bfc_bfm.xml`, `asr_sbfm.xml`, `lsl_ubfm.xml`, `lsr_ubfm.xml`, `sbfiz_sbfm.xml`, `sbfx_sbfm.xml`, `sxtb_sbfm.xml`, `sxth_sbfm.xml`, `sxtw_sbfm.xml`, `ubfiz_ubfm.xml`, `ubfx_ubfm.xml`, `uxtb_ubfm.xml`, and `uxth_ubfm.xml`
 - `ldiapp.xml`: `48` capstone cases promoted to supported across the LRCPC3 ordered register-pair load family

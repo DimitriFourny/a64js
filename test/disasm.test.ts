@@ -87,6 +87,19 @@ test("decodes add/sub extended-register forms and compare aliases", () => {
   assert.equal(disasm(3946090303), "cmp x25, w20, sxtb #3");
 });
 
+test("decodes subtract-with-carry forms and ngc aliases", () => {
+  assert.equal(disasm(1511588733), "sbc w29, w27, w25");
+  assert.equal(disasm(1510605801), "ngc w9, w10");
+  assert.equal(disasm(1511981076), "sbc w20, w0, wzr");
+  assert.equal(disasm(3659072381), "sbc x29, x27, x25");
+  assert.equal(disasm(3658089449), "ngc x9, x10");
+  assert.equal(disasm(2048459645), "sbcs w29, w27, w25");
+  assert.equal(disasm(2047476713), "ngcs w9, w10");
+  assert.equal(disasm(4195943293), "sbcs x29, x27, x25");
+  assert.equal(disasm(4194960361), "ngcs x9, x10");
+  assert.equal(disasm(4196335636), "sbcs x20, x0, xzr");
+});
+
 test("decodes bitfield and shift-immediate aliases", () => {
   assert.equal(disasm(2474638467), "asr x3, x4, #63");
   assert.equal(disasm(2470837577), "asr x9, x10, #5");
@@ -115,6 +128,13 @@ test("decodes conditional select forms and aliases", () => {
   assert.equal(disasm(1518719139), "cinv w3, w5, gt");
   assert.equal(disasm(1519588353), "csneg w1, w0, w19, ne");
   assert.equal(disasm(3667896297), "cneg x9, xzr, lt");
+});
+
+test("decodes conditional compare immediate and register forms", () => {
+  assert.equal(disasm(2053048352), "ccmp w1, #31, #0, eq");
+  assert.equal(disasm(3126843680), "ccmn x9, #31, #0, le");
+  assert.equal(disasm(4200583456), "ccmp x9, xzr, #0, le");
+  assert.equal(disasm(977281135), "ccmn w3, w0, #15, hs");
 });
 
 test("decodes integer datapath multiply and logical forms", () => {
