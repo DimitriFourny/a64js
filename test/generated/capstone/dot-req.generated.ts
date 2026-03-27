@@ -1,38 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 7,
-    "word": 1035994082,
-    "asmText": "ldr q2, [sp]",
-    "encodingFile": "ldr_imm_fpsimd.xml",
-    "mnemonic": "LDR",
-    "features": [
-      "FEAT_FP"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 9,
-    "word": 2332033030,
-    "asmText": "add x6, x0, x0",
-    "encodingFile": "add_addsub_shift.xml",
-    "mnemonic": "ADD",
-    "features": []
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 10,
-    "word": 2332033030,
-    "asmText": "add x6, x0, x0",
-    "encodingFile": "add_addsub_shift.xml",
-    "mnemonic": "ADD",
-    "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "dot-req.s.yaml",
     "caseIndex": 0,
     "word": 2852848613,
     "asmText": "mov x5, x11",
@@ -58,6 +26,49 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "mnemonic": "ORR",
     "features": []
   },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 7,
+    "word": 1035994082,
+    "asmText": "ldr q2, [sp]",
+    "encodingFile": "ldr_imm_fpsimd.xml",
+    "mnemonic": "LDR",
+    "features": [
+      "FEAT_FP"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 8,
+    "word": 245439520,
+    "asmText": "mov v0.8b, v1.8b",
+    "encodingFile": "mov_orr_advsimd_reg.xml",
+    "mnemonic": "ORR",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 9,
+    "word": 2332033030,
+    "asmText": "add x6, x0, x0",
+    "encodingFile": "add_addsub_shift.xml",
+    "mnemonic": "ADD",
+    "features": []
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 10,
+    "word": 2332033030,
+    "asmText": "add x6, x0, x0",
+    "encodingFile": "add_addsub_shift.xml",
+    "mnemonic": "ADD",
+    "features": []
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "dot-req.s.yaml",
     "caseIndex": 3,
@@ -102,17 +113,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_FP",
       "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 8,
-    "word": 245439520,
-    "asmText": "mov v0.8b, v1.8b",
-    "encodingFile": "mov_orr_advsimd_reg.xml",
-    "mnemonic": "ORR",
-    "features": [
-      "FEAT_AdvSIMD"
     ]
   }
 ];

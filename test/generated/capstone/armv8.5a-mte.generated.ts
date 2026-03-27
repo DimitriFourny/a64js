@@ -1201,6 +1201,25 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 114,
+    "word": 3573760159,
+    "asmText": "msr TCO, #0",
+    "encodingFile": "msr_imm.xml",
+    "mnemonic": "MSR",
+    "features": [
+      "FEAT_VHE",
+      "FEAT_UAO",
+      "FEAT_PAN",
+      "FEAT_NMI",
+      "FEAT_EBEP",
+      "FEAT_DIT",
+      "FEAT_SME",
+      "FEAT_MTE",
+      "FEAT_SSBS"
+    ]
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
     "caseIndex": 115,
     "word": 3575333600,
     "asmText": "msr TCO, x0",
@@ -1384,25 +1403,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
 ];
 
 export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 114,
-    "word": 3573760159,
-    "asmText": "msr TCO, #0",
-    "encodingFile": "msr_imm.xml",
-    "mnemonic": "MSR",
-    "features": [
-      "FEAT_VHE",
-      "FEAT_UAO",
-      "FEAT_PAN",
-      "FEAT_NMI",
-      "FEAT_EBEP",
-      "FEAT_DIT",
-      "FEAT_SME",
-      "FEAT_MTE",
-      "FEAT_SSBS"
-    ]
-  },
   {
     "sourceFile": "armv8.5a-mte.s.yaml",
     "caseIndex": 123,

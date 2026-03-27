@@ -1,4 +1,27 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
+export const SUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "neon-bitwise-instructions.s.yaml",
+    "caseIndex": 2,
+    "word": 245505056,
+    "asmText": "orr v0.8b, v1.8b, v2.8b",
+    "encodingFile": "mov_orr_advsimd_reg.xml",
+    "mnemonic": "ORR",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-bitwise-instructions.s.yaml",
+    "caseIndex": 3,
+    "word": 1319246880,
+    "asmText": "orr v0.16b, v1.16b, v2.16b",
+    "encodingFile": "mov_orr_advsimd_reg.xml",
+    "mnemonic": "ORR",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  }
+];
 
 export const UNSUPPORTED_CAPSTONE_CASES = [
   {
@@ -19,28 +42,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "asmText": "and v0.16b, v1.16b, v2.16b",
     "encodingFile": "and_advsimd.xml",
     "mnemonic": "AND",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-bitwise-instructions.s.yaml",
-    "caseIndex": 2,
-    "word": 245505056,
-    "asmText": "orr v0.8b, v1.8b, v2.8b",
-    "encodingFile": "mov_orr_advsimd_reg.xml",
-    "mnemonic": "ORR",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-bitwise-instructions.s.yaml",
-    "caseIndex": 3,
-    "word": 1319246880,
-    "asmText": "orr v0.16b, v1.16b, v2.16b",
-    "encodingFile": "mov_orr_advsimd_reg.xml",
-    "mnemonic": "ORR",
     "features": [
       "FEAT_AdvSIMD"
     ]

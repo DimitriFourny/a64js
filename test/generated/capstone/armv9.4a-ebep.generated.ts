@@ -16,10 +16,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "msr_reg.xml",
     "mnemonic": "MSR",
     "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "armv9.4a-ebep.s.yaml",
     "caseIndex": 2,
@@ -40,3 +37,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

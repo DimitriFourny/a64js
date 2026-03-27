@@ -1,0 +1,70 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "BFMLAL_advsimd_elt",
+    "encodingId": "BFMLAL_asimdelem_F",
+    "mnemonic": "BFMLAL",
+    "className": "Vector",
+    "fileName": "bfmlal_advsimd_elt.xml",
+    "mask": 3217093632,
+    "value": 264302592,
+    "bitCount": 14,
+    "fields": [
+      {
+        "name": "Q",
+        "lsb": 30,
+        "width": 1
+      },
+      {
+        "name": "U",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "L",
+        "lsb": 21,
+        "width": 1
+      },
+      {
+        "name": "M",
+        "lsb": 20,
+        "width": 1
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 4
+      },
+      {
+        "name": "opcode",
+        "lsb": 12,
+        "width": 4
+      },
+      {
+        "name": "H",
+        "lsb": 11,
+        "width": 1
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_BF16"
+    ],
+    "guards": []
+  }
+];

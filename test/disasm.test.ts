@@ -84,6 +84,21 @@ test("decodes core scalar memory pair, signed-load, register-offset, and prfm fo
   assert.equal(disasm(4185916399), "prfm plislcstrm, [sp]");
 });
 
+test("decodes the remaining core A64 scalar load/store promotion batch", () => {
+  assert.equal(disasm(954690506), "ldrsb w10, [x30, x7]");
+  assert.equal(disasm(950721234), "ldrsb x18, [x22, w10, sxtw]");
+  assert.equal(disasm(2028493584), "ldrsh w16, [x24, w8, uxtw #1]");
+  assert.equal(disasm(3089496941), "str w13, [x27, x5, sxtx #2]");
+  assert.equal(disasm(4163267433), "str x9, [x27, x6]");
+  assert.equal(disasm(689940479), "stp wzr, w9, [sp, #252]");
+  assert.equal(disasm(681551871), "stp wzr, w9, [sp], #252");
+  assert.equal(disasm(698329087), "stp wzr, w9, [sp, #252]!");
+  assert.equal(disasm(2285887254), "stlxp wzr, w22, w23, [x24]");
+  assert.equal(disasm(3359240186), "stlxp w25, x26, x27, [sp]");
+  assert.equal(disasm(744485885, undefined, { features: ["FEAT_FP"] }), "ldnp s29, s28, [sp, #252]");
+  assert.equal(disasm(2892002359, undefined, { features: ["FEAT_FP"] }), "ldnp q23, q29, [x1, #-1024]");
+});
+
 test("decodes add/sub extended-register forms and compare aliases", () => {
   assert.equal(disasm(2334457986), "add x2, x4, w5, uxtb");
   assert.equal(disasm(3408359551), "sub sp, x3, x7, lsl #4");
@@ -563,11 +578,17 @@ test("decodes RCpc3 FP/SIMD and AdvSIMD single-lane ordered memory forms", () =>
   assert.equal(disasm(1296139747, undefined, advsimdOptions), "ldap1 { v3.d }[1], [x15]");
 });
 
-test("decodes AdvSIMD multiple-structure LD1/ST1", () => {
+test("decodes AdvSIMD multiple-structure LD/ST families", () => {
   const options = { features: ["FEAT_AdvSIMD"] };
   assert.equal(disasm(0x4c007000, undefined, options), "st1 { v0.16b }, [x0]");
   assert.equal(disasm(0x4c407000, undefined, options), "ld1 { v0.16b }, [x0]");
   assert.equal(disasm(0x4c402bff, undefined, options), "ld1 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp]");
+  assert.equal(disasm(0x4c008000, undefined, options), "st2 { v0.16b, v1.16b }, [x0]");
+  assert.equal(disasm(0x4c004000, undefined, options), "st3 { v0.16b, v1.16b, v2.16b }, [x0]");
+  assert.equal(disasm(0x4c000000, undefined, options), "st4 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0]");
+  assert.equal(disasm(0x4cc18000, undefined, options), "ld2 { v0.16b, v1.16b }, [x0], x1");
+  assert.equal(disasm(0x4cc14000, undefined, options), "ld3 { v0.16b, v1.16b, v2.16b }, [x0], x1");
+  assert.equal(disasm(0x4c9f0c00, undefined, options), "st4 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64");
 });
 
 test("decodes AdvSIMD single-structure lane and replicate loads/stores", () => {
@@ -596,6 +617,16 @@ test("decodes AdvSIMD by-element multiply and MLA families", () => {
   assert.equal(disasm(1335240736, undefined, { features: ["FEAT_AdvSIMD"] }), "smlal2 v0.2d, v1.4s, v22.s[2]");
   assert.equal(disasm(1598042112, undefined, { features: ["FEAT_AdvSIMD"] }), "sqdmlal s0, h0, v0.h[0]");
   assert.equal(disasm(1606187600, undefined, { features: ["FEAT_AdvSIMD"] }), "sqdmlsl d16, s18, v28.s[3]");
+});
+
+test("decodes AdvSIMD move-immediate and move-alias forms", () => {
+  const options = { features: ["FEAT_AdvSIMD"] };
+  assert.equal(disasm(0x0f008420, undefined, options), "movi v0.4h, #1");
+  assert.equal(disasm(0x4f00c420, undefined, options), "movi v0.4s, #1, msl #8");
+  assert.equal(disasm(0x2f00d420, undefined, options), "mvni v0.2s, #1, msl #16");
+  assert.equal(disasm(0x6f05e540, undefined, options), "movi v0.2d, #0xff00ff00ff00ff00");
+  assert.equal(disasm(0x0f03f601, undefined, options), "fmov v1.2s, #1.00000000");
+  assert.equal(disasm(0x0ebf1fe0, undefined, options), "mov v0.8b, v31.8b");
 });
 
 test("marks feature-gated PAuth instructions undefined when features are disabled", () => {

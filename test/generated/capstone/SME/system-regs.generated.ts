@@ -154,18 +154,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME/system-regs.s.yaml",
-    "caseIndex": 23,
-    "word": 3575369891,
-    "asmText": "msr TPIDR2_EL0, x3",
-    "encodingFile": "msr_reg.xml",
-    "mnemonic": "MSR",
-    "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SME/system-regs.s.yaml",
     "caseIndex": 17,
     "word": 3573760639,
     "asmText": "smstop sm",
@@ -229,5 +217,16 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SME"
     ]
+  },
+  {
+    "sourceFile": "SME/system-regs.s.yaml",
+    "caseIndex": 23,
+    "word": 3575369891,
+    "asmText": "msr TPIDR2_EL0, x3",
+    "encodingFile": "msr_reg.xml",
+    "mnemonic": "MSR",
+    "features": []
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

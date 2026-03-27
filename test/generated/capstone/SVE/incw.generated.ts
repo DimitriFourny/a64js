@@ -1,6 +1,58 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 0,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 1,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 2,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 3,
+    "word": 79676384,
+    "asmText": "incw z0.s, all, mul #16",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
     "caseIndex": 4,
     "word": 78701536,
     "asmText": "incw x0",
@@ -274,6 +326,19 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 25,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
     "caseIndex": 26,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -287,11 +352,89 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 27,
+    "word": 79676384,
+    "asmText": "incw z0.s, all, mul #16",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
     "caseIndex": 28,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 29,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 30,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 31,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 32,
+    "word": 78693344,
+    "asmText": "incw z0.s",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 33,
+    "word": 79676384,
+    "asmText": "incw z0.s, all, mul #16",
+    "encodingFile": "incd_z_zs.xml",
+    "mnemonic": "INCW",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -573,183 +716,24 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 56,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 58,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 0,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 1,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 2,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 3,
-    "word": 79676384,
-    "asmText": "incw z0.s, all, mul #16",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 25,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 27,
-    "word": 79676384,
-    "asmText": "incw z0.s, all, mul #16",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 29,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 30,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 31,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 32,
-    "word": 78693344,
-    "asmText": "incw z0.s",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
-    "caseIndex": 33,
-    "word": 79676384,
-    "asmText": "incw z0.s, all, mul #16",
-    "encodingFile": "incd_z_zs.xml",
-    "mnemonic": "INCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/incw.s.yaml",
     "caseIndex": 55,
     "word": 78693344,
     "asmText": "incw z0.s",
     "encodingFile": "incd_z_zs.xml",
     "mnemonic": "INCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 56,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -771,6 +755,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/incw.s.yaml",
+    "caseIndex": 58,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/incw.s.yaml",
     "caseIndex": 59,
     "word": 78693344,
     "asmText": "incw z0.s",
@@ -783,3 +780,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

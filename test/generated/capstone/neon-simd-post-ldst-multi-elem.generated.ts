@@ -353,6 +353,237 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 32,
+    "word": 1287749632,
+    "asmText": "ld2 { v0.16b, v1.16b }, [x0], x1",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 33,
+    "word": 1287816687,
+    "asmText": "ld2 { v15.8h, v16.8h }, [x15], x2",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 34,
+    "word": 1289718783,
+    "asmText": "ld2 { v31.4s, v0.4s }, [sp], #32",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 35,
+    "word": 1289718784,
+    "asmText": "ld2 { v0.2d, v1.2d }, [x0], #32",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 36,
+    "word": 214073344,
+    "asmText": "ld2 { v0.8b, v1.8b }, [x0], x2",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 37,
+    "word": 214140399,
+    "asmText": "ld2 { v15.4h, v16.4h }, [x15], x3",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 38,
+    "word": 215976959,
+    "asmText": "ld2 { v31.2s, v0.2s }, [sp], #16",
+    "encodingFile": "ld2_advsimd_mult.xml",
+    "mnemonic": "LD2",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 39,
+    "word": 1287733248,
+    "asmText": "ld3 { v0.16b, v1.16b, v2.16b }, [x0], x1",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 40,
+    "word": 1287800303,
+    "asmText": "ld3 { v15.8h, v16.8h, v17.8h }, [x15], x2",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 41,
+    "word": 1289702399,
+    "asmText": "ld3 { v31.4s, v0.4s, v1.4s }, [sp], #48",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 42,
+    "word": 1289702400,
+    "asmText": "ld3 { v0.2d, v1.2d, v2.2d }, [x0], #48",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 43,
+    "word": 214056960,
+    "asmText": "ld3 { v0.8b, v1.8b, v2.8b }, [x0], x2",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 44,
+    "word": 214124015,
+    "asmText": "ld3 { v15.4h, v16.4h, v17.4h }, [x15], x3",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 45,
+    "word": 215960575,
+    "asmText": "ld3 { v31.2s, v0.2s, v1.2s }, [sp], #24",
+    "encodingFile": "ld3_advsimd_mult.xml",
+    "mnemonic": "LD3",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 46,
+    "word": 1287716864,
+    "asmText": "ld4 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 47,
+    "word": 1287783919,
+    "asmText": "ld4 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 48,
+    "word": 1289686015,
+    "asmText": "ld4 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 49,
+    "word": 1289686016,
+    "asmText": "ld4 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 50,
+    "word": 214106112,
+    "asmText": "ld4 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 51,
+    "word": 214173167,
+    "asmText": "ld4 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
+    "caseIndex": 52,
+    "word": 215944191,
+    "asmText": "ld4 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
+    "encodingFile": "ld4_advsimd_mult.xml",
+    "mnemonic": "LD4",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
     "caseIndex": 53,
     "word": 1283551232,
     "asmText": "st1 { v0.16b }, [x0], x1",
@@ -702,240 +933,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 32,
-    "word": 1287749632,
-    "asmText": "ld2 { v0.16b, v1.16b }, [x0], x1",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 33,
-    "word": 1287816687,
-    "asmText": "ld2 { v15.8h, v16.8h }, [x15], x2",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 34,
-    "word": 1289718783,
-    "asmText": "ld2 { v31.4s, v0.4s }, [sp], #32",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 35,
-    "word": 1289718784,
-    "asmText": "ld2 { v0.2d, v1.2d }, [x0], #32",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 36,
-    "word": 214073344,
-    "asmText": "ld2 { v0.8b, v1.8b }, [x0], x2",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 37,
-    "word": 214140399,
-    "asmText": "ld2 { v15.4h, v16.4h }, [x15], x3",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 38,
-    "word": 215976959,
-    "asmText": "ld2 { v31.2s, v0.2s }, [sp], #16",
-    "encodingFile": "ld2_advsimd_mult.xml",
-    "mnemonic": "LD2",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 39,
-    "word": 1287733248,
-    "asmText": "ld3 { v0.16b, v1.16b, v2.16b }, [x0], x1",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 40,
-    "word": 1287800303,
-    "asmText": "ld3 { v15.8h, v16.8h, v17.8h }, [x15], x2",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 41,
-    "word": 1289702399,
-    "asmText": "ld3 { v31.4s, v0.4s, v1.4s }, [sp], #48",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 42,
-    "word": 1289702400,
-    "asmText": "ld3 { v0.2d, v1.2d, v2.2d }, [x0], #48",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 43,
-    "word": 214056960,
-    "asmText": "ld3 { v0.8b, v1.8b, v2.8b }, [x0], x2",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 44,
-    "word": 214124015,
-    "asmText": "ld3 { v15.4h, v16.4h, v17.4h }, [x15], x3",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 45,
-    "word": 215960575,
-    "asmText": "ld3 { v31.2s, v0.2s, v1.2s }, [sp], #24",
-    "encodingFile": "ld3_advsimd_mult.xml",
-    "mnemonic": "LD3",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 46,
-    "word": 1287716864,
-    "asmText": "ld4 { v0.16b, v1.16b, v2.16b, v3.16b }, [x0], x1",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 47,
-    "word": 1287783919,
-    "asmText": "ld4 { v15.8h, v16.8h, v17.8h, v18.8h }, [x15], x2",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 48,
-    "word": 1289686015,
-    "asmText": "ld4 { v31.4s, v0.4s, v1.4s, v2.4s }, [sp], #64",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 49,
-    "word": 1289686016,
-    "asmText": "ld4 { v0.2d, v1.2d, v2.2d, v3.2d }, [x0], #64",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 50,
-    "word": 214106112,
-    "asmText": "ld4 { v0.8b, v1.8b, v2.8b, v3.8b }, [x0], x3",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 51,
-    "word": 214173167,
-    "asmText": "ld4 { v15.4h, v16.4h, v17.4h, v18.4h }, [x15], x4",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
-    "caseIndex": 52,
-    "word": 215944191,
-    "asmText": "ld4 { v31.2s, v0.2s, v1.2s, v2.2s }, [sp], #32",
-    "encodingFile": "ld4_advsimd_mult.xml",
-    "mnemonic": "LD4",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
   },
   {
     "sourceFile": "neon-simd-post-ldst-multi-elem.s.yaml",
@@ -1169,3 +1166,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

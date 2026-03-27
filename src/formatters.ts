@@ -285,6 +285,22 @@ function twoSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function signExtendImmediate(value: number, width: number): number {
+  const shift = 32 - width;
+  return (value << shift) >> shift;
+}
+
+function minMaxImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  const fileName = inst.encoding!.fileName;
+  const immediate =
+    fileName.startsWith("smax_") || fileName.startsWith("smin_")
+      ? signExtendImmediate(fields.imm8 ?? 0, 8)
+      : (fields.imm8 ?? 0);
+  return [gpReg(width, fields.Rd, "zr"), gpReg(width, fields.Rn, "zr"), { kind: "text", text: `#${immediate}` }];
+}
+
 function mulAliasOperands(inst: DecodedInstruction): Operand[] {
   return threeSourceIntegerOperands(inst).slice(0, 3);
 }
@@ -324,6 +340,12 @@ function logicalShiftedRegisterOperands(inst: DecodedInstruction): Operand[] {
   }
 
   return ops;
+}
+
+function movRegisterAliasOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width = widthFromSf(fields.sf);
+  return [gpReg(width, fields.Rd, "zr"), gpReg(width, fields.Rm, "zr")];
 }
 
 function highestSetBit(value: number): number {
@@ -580,6 +602,118 @@ function barrierOperands(inst: DecodedInstruction): Operand[] {
   return [{ kind: "text", text: option }];
 }
 
+function clrexOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return (fields.CRm ?? 0) === 15 ? [] : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
+}
+
+function isbOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return (fields.CRm ?? 0) === 15 ? [] : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
+}
+
+function pstateFieldName(fields: Record<string, number>): string | null {
+  const op1 = fields.op1 ?? 0;
+  const op2 = fields.op2 ?? 0;
+  const CRm = fields.CRm ?? 0;
+
+  if (op1 === 0 && op2 === 3) {
+    return "UAO";
+  }
+  if (op1 === 0 && op2 === 4) {
+    return "PAN";
+  }
+  if (op1 === 0 && op2 === 5) {
+    return "SPSel";
+  }
+  if (op1 === 1 && op2 === 0) {
+    if ((CRm & 0b1110) === 0) {
+      return "ALLINT";
+    }
+    if ((CRm & 0b1110) === 0b0010) {
+      return "PM";
+    }
+    return null;
+  }
+  if (op1 === 3 && op2 === 1) {
+    return "SSBS";
+  }
+  if (op1 === 3 && op2 === 2) {
+    return "DIT";
+  }
+  if (op1 === 3 && op2 === 3) {
+    if ((CRm & 0b1110) === 0b0010) {
+      return "SVCRSM";
+    }
+    if ((CRm & 0b1110) === 0b0100) {
+      return "SVCRZA";
+    }
+    if ((CRm & 0b1110) === 0b0110) {
+      return "SVCRSMZA";
+    }
+    return null;
+  }
+  if (op1 === 3 && op2 === 4) {
+    return "TCO";
+  }
+  if (op1 === 3 && op2 === 6) {
+    return "DAIFSet";
+  }
+  if (op1 === 3 && op2 === 7) {
+    return "DAIFClr";
+  }
+  return null;
+}
+
+function pstateImmediateValue(fields: Record<string, number>): number {
+  const fieldName = pstateFieldName(fields);
+  const CRm = fields.CRm ?? 0;
+  if (fieldName === "ALLINT" || fieldName === "PM" || fieldName?.startsWith("SVCR")) {
+    return CRm & 1;
+  }
+  return CRm;
+}
+
+function msrImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fieldName = pstateFieldName(fields);
+  if (!fieldName) {
+    return [];
+  }
+  return [{ kind: "text", text: fieldName }, { kind: "text", text: `#${pstateImmediateValue(fields)}` }];
+}
+
+function syslOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rt, "zr"),
+    { kind: "text", text: `#${fields.op1 ?? 0}` },
+    { kind: "text", text: `c${fields.CRn ?? 0}` },
+    { kind: "text", text: `c${fields.CRm ?? 0}` },
+    { kind: "text", text: `#${fields.op2 ?? 0}` },
+  ];
+}
+
+function smstartSmstopOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const CRm = fields.CRm ?? 0;
+  if ((CRm & 0b0110) === 0b0110) {
+    return [];
+  }
+  if ((CRm & 0b0110) === 0b0010) {
+    return [{ kind: "text", text: "sm" }];
+  }
+  if ((CRm & 0b0110) === 0b0100) {
+    return [{ kind: "text", text: "za" }];
+  }
+  return [];
+}
+
+function gcsSyslAliasOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return fields.Rt === 31 ? [] : [gpReg(64, fields.Rt, "zr")];
+}
+
 function rawSysOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const ops: Operand[] = [
@@ -728,6 +862,8 @@ function scalarLoadStoreRegisterWidth(fileName: string, size: number | undefined
     case "str_imm_gen.xml":
     case "ldur_gen.xml":
     case "stur_gen.xml":
+    case "ldr_reg_gen.xml":
+    case "str_reg_gen.xml":
       return size === 3 ? 64 : 32;
     case "ldrsw_imm.xml":
       return 64;
@@ -823,8 +959,12 @@ function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
     inst.encoding!.fileName === "ldr_reg_gen.xml" ||
     inst.encoding!.fileName === "ldrb_reg.xml" ||
     inst.encoding!.fileName === "ldrh_reg.xml" ||
+    inst.encoding!.fileName === "ldrsb_reg.xml" ||
+    inst.encoding!.fileName === "ldrsh_reg.xml" ||
+    inst.encoding!.fileName === "str_reg_gen.xml" ||
     inst.encoding!.fileName === "ldr_reg_fpsimd.xml" ||
-    inst.encoding!.fileName === "str_reg_fpsimd.xml"
+    inst.encoding!.fileName === "str_reg_fpsimd.xml" ||
+    inst.encoding!.fileName === "prfm_reg.xml"
   ) {
     return scalarRegisterOffsetMemoryText(inst);
   }
@@ -874,7 +1014,8 @@ function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
   if (
     inst.encoding!.fileName === "ldp_fpsimd.xml" ||
     inst.encoding!.fileName === "stp_fpsimd.xml" ||
-    inst.encoding!.fileName === "stnp_fpsimd.xml"
+    inst.encoding!.fileName === "stnp_fpsimd.xml" ||
+    inst.encoding!.fileName === "ldnp_fpsimd.xml"
   ) {
     const scale = (fields.opc ?? 0) === 2 ? 16n : (fields.opc ?? 0) === 1 ? 8n : 4n;
     return signExtend(fields.imm7 ?? 0, 7) * scale;
@@ -903,7 +1044,8 @@ function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   if (
     inst.encoding!.fileName === "ldp_fpsimd.xml" ||
     inst.encoding!.fileName === "stp_fpsimd.xml" ||
-    inst.encoding!.fileName === "stnp_fpsimd.xml"
+    inst.encoding!.fileName === "stnp_fpsimd.xml" ||
+    inst.encoding!.fileName === "ldnp_fpsimd.xml"
   ) {
     return [
       { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt) },
@@ -921,13 +1063,18 @@ function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
 
 function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  if (inst.encoding!.fileName === "prfm_imm.xml") {
+  if (inst.encoding!.fileName === "prfm_imm.xml" || inst.encoding!.fileName === "prfm_reg.xml") {
     return [
       { kind: "text", text: prfmOpText(fields.Rt) },
       { kind: "text", text: scalarLoadStoreMemoryText(inst) },
     ];
   }
-  if (inst.encoding!.fileName === "ldrsb_imm.xml" || inst.encoding!.fileName === "ldrsh_imm.xml") {
+  if (
+    inst.encoding!.fileName === "ldrsb_imm.xml" ||
+    inst.encoding!.fileName === "ldrsh_imm.xml" ||
+    inst.encoding!.fileName === "ldrsb_reg.xml" ||
+    inst.encoding!.fileName === "ldrsh_reg.xml"
+  ) {
     const width: 32 | 64 = (fields.opc ?? 0) === 2 ? 64 : 32;
     return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
   }
@@ -939,6 +1086,18 @@ function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   }
   const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
   return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+}
+
+function stlxpOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const width: 32 | 64 = (fields.sz ?? 0) === 1 ? 64 : 32;
+  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
+  return [
+    gpReg(32, fields.Rs, "zr"),
+    gpReg(width, fields.Rt, "zr"),
+    gpReg(width, fields.Rt2, "zr"),
+    { kind: "text", text: `[${base}]` },
+  ];
 }
 
 function mteTagOffset(value: number | undefined, bits: number): bigint {
@@ -1135,17 +1294,25 @@ function scalarFpConditionalCompareOperands(inst: DecodedInstruction): Operand[]
 function scalarFpConvertPrecisionOperands(inst: DecodedInstruction): Operand[] {
   const encodingId = inst.encoding!.encodingId;
   const match = /^FCVT_([HSD])([HSD])_/.exec(encodingId);
-  if (!match) {
-    return [];
+  if (match) {
+    const destLane = match[1].toLowerCase() as "h" | "s" | "d";
+    const sourceLane = match[2].toLowerCase() as "h" | "s" | "d";
+    const fields = inst.fields!;
+    return [
+      { kind: "text", text: scalarFpRegisterText(fields.Rd, destLane) },
+      { kind: "text", text: scalarFpRegisterText(fields.Rn, sourceLane) },
+    ];
   }
 
-  const destLane = match[1].toLowerCase() as "h" | "s" | "d";
-  const sourceLane = match[2].toLowerCase() as "h" | "s" | "d";
   const fields = inst.fields!;
-  return [
-    { kind: "text", text: scalarFpRegisterText(fields.Rd, destLane) },
-    { kind: "text", text: scalarFpRegisterText(fields.Rn, sourceLane) },
-  ];
+  if (encodingId === "BFCVT_BS_floatdp1") {
+    return [
+      { kind: "text", text: scalarFpRegisterText(fields.Rd, "h") },
+      { kind: "text", text: scalarFpRegisterText(fields.Rn, "s") },
+    ];
+  }
+
+  return [];
 }
 
 function scalarFpMoveGeneralOperands(inst: DecodedInstruction): Operand[] {
@@ -1207,6 +1374,15 @@ function scalarIntegerToFpOperands(inst: DecodedInstruction, fixedPoint = false)
     ops.push({ kind: "text", text: `#${64 - (fields.scale ?? 0)}` });
   }
   return ops;
+}
+
+function scalarFpUnaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = scalarFpLaneFromFtype(fields.ftype);
+  return [
+    { kind: "text", text: scalarFpRegisterText(fields.Rd, lane) },
+    { kind: "text", text: scalarFpRegisterText(fields.Rn, lane) },
+  ];
 }
 
 function sveMovprfxOperands(inst: DecodedInstruction): Operand[] {
@@ -1341,6 +1517,151 @@ function advsimdVectorRegisterText(index: number, size: number | undefined, q: n
   return `v${index}.${advsimdArrangementFromSizeQ(size, q)}`;
 }
 
+function advsimdImmediateImm8(fields: Record<string, number>): number {
+  return (
+    ((fields.a ?? 0) << 7) |
+    ((fields.b ?? 0) << 6) |
+    ((fields.c ?? 0) << 5) |
+    ((fields.d ?? 0) << 4) |
+    ((fields.e ?? 0) << 3) |
+    ((fields.f ?? 0) << 2) |
+    ((fields.g ?? 0) << 1) |
+    (fields.h ?? 0)
+  );
+}
+
+function replicatePattern(pattern: bigint, patternWidth: number, totalWidth: number): bigint {
+  let value = 0n;
+  for (let offset = 0; offset < totalWidth; offset += patternWidth) {
+    value |= pattern << BigInt(offset);
+  }
+  return value;
+}
+
+function advsimdExpandImmediate(op: number, cmode: number, imm8: number): bigint {
+  const cmodeHigh = (cmode >>> 1) & 0x7;
+  const cmodeLow = cmode & 1;
+  const imm = BigInt(imm8);
+
+  switch (cmodeHigh) {
+    case 0:
+      return replicatePattern(imm, 32, 64);
+    case 1:
+      return replicatePattern(imm << 8n, 32, 64);
+    case 2:
+      return replicatePattern(imm << 16n, 32, 64);
+    case 3:
+      return replicatePattern(imm << 24n, 32, 64);
+    case 4:
+      return replicatePattern(imm, 16, 64);
+    case 5:
+      return replicatePattern(imm << 8n, 16, 64);
+    case 6:
+      return cmodeLow === 0
+        ? replicatePattern((imm << 8n) | 0xffn, 32, 64)
+        : replicatePattern((imm << 16n) | 0xffffn, 32, 64);
+    case 7:
+      if (cmodeLow === 0 && op === 0) {
+        return replicatePattern(imm, 8, 64);
+      }
+      if (cmodeLow === 0 && op === 1) {
+        let value = 0n;
+        for (let bit = 7; bit >= 0; bit -= 1) {
+          value = (value << 8n) | (((imm8 >>> bit) & 1) === 1 ? 0xffn : 0n);
+        }
+        return value;
+      }
+      break;
+    default:
+      break;
+  }
+
+  return 0n;
+}
+
+function advsimdImmediateVectorText(fields: Record<string, number>, size: number, scalar = false): string {
+  if (scalar) {
+    return advsimdScalarRegisterText(fields.Rd ?? 0, size);
+  }
+  return advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q);
+}
+
+function advsimdImmediateShiftText(cmode: number, masked = false): string | null {
+  if (masked) {
+    return (cmode & 1) === 0 ? "msl #8" : "msl #16";
+  }
+
+  const shift = ((cmode >>> 1) & 0x3) << 3;
+  return shift === 0 ? null : `lsl #${shift}`;
+}
+
+function advsimdMoveImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fileName = inst.encoding!.fileName;
+  const className = inst.encoding!.className.toLowerCase();
+  const imm8 = advsimdImmediateImm8(fields);
+  const cmode = fields.cmode ?? 0;
+  const op = fields.op ?? 0;
+  const cmodeHigh = (cmode >>> 1) & 0x7;
+  const cmodeLow = cmode & 1;
+  const is64BitImmediate = (cmode === 0b1110) && op === 1;
+  const isMaskedImmediate = cmodeHigh === 0b110;
+  const size =
+    fileName === "fmov_advsimd.xml"
+      ? (className.includes("half-precision") ? 1 : op === 1 ? 3 : 2)
+      : is64BitImmediate
+        ? 3
+        : cmodeHigh <= 0b011 || cmodeHigh === 0b110
+          ? 2
+          : cmodeHigh <= 0b101
+            ? 1
+            : (cmodeLow === 0 && op === 0 ? 0 : 3);
+  const destination = advsimdImmediateVectorText(fields, size, fileName === "movi_advsimd.xml" && is64BitImmediate && (fields.Q ?? 0) === 0);
+
+  if (fileName === "fmov_advsimd.xml") {
+    const width = size === 1 ? 16 : size === 2 ? 32 : 64;
+    return [{ kind: "text", text: destination }, { kind: "fpimm", value: expandVfpImmediate(imm8, width as 16 | 32 | 64) }];
+  }
+
+  if (is64BitImmediate) {
+    const imm64 = advsimdExpandImmediate(op, cmode, imm8);
+    return [{ kind: "text", text: destination }, { kind: "text", text: `#0x${imm64.toString(16)}` }];
+  }
+
+  const operands: Operand[] = [
+    { kind: "text", text: destination },
+    { kind: "text", text: `#${imm8}` },
+  ];
+  const shiftText = advsimdImmediateShiftText(cmode, isMaskedImmediate);
+  if (shiftText) {
+    operands.push({ kind: "text", text: shiftText });
+  }
+  return operands;
+}
+
+function advsimdMoveRegisterAliasOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, 0, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, 0, fields.Q) },
+  ];
+}
+
+function advsimdElementSize(inst: DecodedInstruction): number {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className.toLowerCase();
+  if (fields.size !== undefined) {
+    return fields.size;
+  }
+  if (className.includes("half-precision")) {
+    return 1;
+  }
+  if (fields.sz !== undefined) {
+    return fields.sz + 2;
+  }
+  return 0;
+}
+
 function highestSetBitNZ(value: number | undefined): number {
   const n = value ?? 0;
   return n === 0 ? 0 : 31 - Math.clz32(n);
@@ -1382,24 +1703,106 @@ function advsimdImmediateShiftOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function advsimdNarrowingImmediateShiftOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const immh = fields.immh ?? 0;
+  const size = highestSetBitNZ(immh);
+  const esize = 8 << size;
+  const shift = (2 * esize) - ((immh << 3) | (fields.immb ?? 0));
+  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+
+  if (isScalar) {
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size + 1) },
+      { kind: "text", text: `#${shift}` },
+    ];
+  }
+
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${advsimdNarrowSourceArrangement(size)}` },
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
 function advsimdDotProductSourceText(index: number, q: number | undefined): string {
   return `v${index}.${q === 1 ? "16b" : "8b"}`;
+}
+
+function advsimdBfloat16DotProductSourceText(index: number, q: number | undefined): string {
+  return `v${index}.${q === 1 ? "8h" : "4h"}`;
 }
 
 function advsimdUnaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+  const size = advsimdElementSize(inst);
 
   if (isScalar) {
     return [
-      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, fields.size) },
-      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, fields.size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size) },
     ];
   }
 
   return [
-    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, fields.size, fields.Q) },
-    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, fields.size, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, size, fields.Q) },
+  ];
+}
+
+function advsimdUnaryWithImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const operands = advsimdUnaryOperands(inst);
+  operands.push({ kind: "text", text: `#${64 - (fields.scale ?? 0)}` });
+  return operands;
+}
+
+function advsimdComplexVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const arrangement = advsimdFpByElementVectorArrangement(inst);
+  const rotation = ((fields.rot ?? 0) & 0x3) * 90;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${arrangement}` },
+    { kind: "text", text: `#${rotation}` },
+  ];
+}
+
+function advsimdComplexByElementOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const arrangement = advsimdFpByElementVectorArrangement(inst);
+  const lane = advsimdFpByElementLane(inst);
+  const sourceIndex = advsimdFpByElementSourceIndex(inst);
+  const elementIndex = advsimdFpByElementIndex(inst);
+  const rotation = ((fields.rot ?? 0) & 0x3) * 90;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+    { kind: "text", text: `#${rotation}` },
+  ];
+}
+
+function advsimdFpLongMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = (fields.Q ?? 0) === 1 ? "4s" : "2s";
+  const sourceArrangement = (fields.Q ?? 0) === 1 ? "4h" : "2h";
+
+  if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+    return [
+      { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+      { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+      { kind: "text", text: `v${fields.Rm ?? 0}.${sourceArrangement}` },
+    ];
+  }
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+    { kind: "text", text: `v${advsimdFpByElementSourceIndex(inst)}.h[${advsimdFpByElementIndex(inst)}]` },
   ];
 }
 
@@ -1432,6 +1835,47 @@ function advsimdLongSourceArrangement(size: number | undefined, q: number | unde
   return q === 1 ? "4s" : "2s";
 }
 
+function advsimdNarrowSourceArrangement(size: number | undefined): "8h" | "4s" | "2d" {
+  switch (size ?? 0) {
+    case 0:
+      return "8h";
+    case 1:
+      return "4s";
+    default:
+      return "2d";
+  }
+}
+
+function advsimdNarrowOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdElementSize(inst);
+  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+
+  if (isScalar) {
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size + 1) },
+    ];
+  }
+
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${advsimdNarrowSourceArrangement(size)}` },
+  ];
+}
+
+function advsimdShiftLeftLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdElementSize(inst);
+  const shift = 8 << size;
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${advsimdLongDestArrangement(size)}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${advsimdLongSourceArrangement(size, fields.Q)}` },
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
 function advsimdWideningThreeRegOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const destArrangement = advsimdLongDestArrangement(fields.size);
@@ -1444,8 +1888,32 @@ function advsimdWideningThreeRegOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function advsimdWideThreeRegOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = advsimdLongDestArrangement(fields.size);
+  const sourceArrangement = advsimdLongSourceArrangement(fields.size, fields.Q);
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${sourceArrangement}` },
+  ];
+}
+
+function advsimdHighNarrowThreeRegOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = advsimdArrangementFromSizeQ(fields.size, fields.Q);
+  const sourceArrangement = advsimdNarrowSourceArrangement(fields.size);
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${sourceArrangement}` },
+  ];
+}
+
 function advsimdStructureRegisterCount(encodingId: string): 1 | 2 | 3 | 4 {
-  const match = /_(?:R|I)([1-4])_/.exec(encodingId);
+  const match = /_(?:R|I)([1-4])(?:_|$)/.exec(encodingId);
   if (!match) {
     return 1;
   }
@@ -1709,23 +2177,71 @@ function advsimdSaturatingRoundingDoublingMultiplyOperands(inst: DecodedInstruct
 function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const size = fields.size;
+  const isBfloat16 = inst.encoding!.fileName.startsWith("bfdot_");
 
   if (inst.encoding!.fileName.endsWith("_vec.xml")) {
     return [
       { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
-      { kind: "text", text: advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q) },
-      { kind: "text", text: advsimdDotProductSourceText(fields.Rm ?? 0, fields.Q) },
+      {
+        kind: "text",
+        text: isBfloat16
+          ? advsimdBfloat16DotProductSourceText(fields.Rn ?? 0, fields.Q)
+          : advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q),
+      },
+      {
+        kind: "text",
+        text: isBfloat16
+          ? advsimdBfloat16DotProductSourceText(fields.Rm ?? 0, fields.Q)
+          : advsimdDotProductSourceText(fields.Rm ?? 0, fields.Q),
+      },
     ];
   }
 
   if (inst.encoding!.fileName.endsWith("_elt.xml")) {
     return [
       { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
-      { kind: "text", text: advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q) },
       {
         kind: "text",
-        text: `v${advsimdByElementSourceIndex(fields, size)}.4b[${advsimdByElementIndex(fields, size)}]`,
+        text: isBfloat16
+          ? advsimdBfloat16DotProductSourceText(fields.Rn ?? 0, fields.Q)
+          : advsimdDotProductSourceText(fields.Rn ?? 0, fields.Q),
       },
+      {
+        kind: "text",
+        text: isBfloat16
+          ? `v${advsimdByElementSourceIndex(fields, size)}.2h[${advsimdByElementIndex(fields, size)}]`
+          : `v${advsimdByElementSourceIndex(fields, size)}.4b[${advsimdByElementIndex(fields, size)}]`,
+      },
+    ];
+  }
+
+  return [];
+}
+
+function advsimdBfloat16MultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+
+  if (inst.encoding!.fileName === "bfmmla_advsimd.xml") {
+    return [
+      { kind: "text", text: "v" + (fields.Rd ?? 0) + ".4s" },
+      { kind: "text", text: "v" + (fields.Rn ?? 0) + ".8h" },
+      { kind: "text", text: "v" + (fields.Rm ?? 0) + ".8h" },
+    ];
+  }
+
+  if (inst.encoding!.fileName === "bfmlal_advsimd_vec.xml") {
+    return [
+      { kind: "text", text: "v" + (fields.Rd ?? 0) + ".4s" },
+      { kind: "text", text: "v" + (fields.Rn ?? 0) + ".8h" },
+      { kind: "text", text: "v" + (fields.Rm ?? 0) + ".8h" },
+    ];
+  }
+
+  if (inst.encoding!.fileName === "bfmlal_advsimd_elt.xml") {
+    return [
+      { kind: "text", text: "v" + (fields.Rd ?? 0) + ".4s" },
+      { kind: "text", text: "v" + (fields.Rn ?? 0) + ".8h" },
+      { kind: "text", text: `v${advsimdByElementSourceIndex(fields, fields.size)}.h[${advsimdByElementIndex(fields, fields.size)}]` },
     ];
   }
 
@@ -2014,6 +2530,114 @@ function svePredicatedUnaryOperands(inst: DecodedInstruction): Operand[] {
   const lane = sveLaneFromSize(fields.size);
   const mode = inst.encoding!.encodingId.endsWith("_z") ? "z" : "m";
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, mode), vecReg(fields.Zn, lane)];
+}
+
+function sveBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function svePredicatedBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [
+    vecReg(fields.Zdn ?? 0, lane),
+    predReg(fields.Pg ?? 0, "m"),
+    vecReg(fields.Zdn ?? 0, lane),
+    vecReg(fields.Zm ?? 0, lane),
+  ];
+}
+
+function sveArithmeticImmediateText(fields: Record<string, number>): string {
+  const imm8 = fields.imm8 ?? 0;
+  if ((fields.sh ?? 0) === 1) {
+    return imm8 === 0 ? "#0, lsl #8" : `#${imm8 << 8}`;
+  }
+  return `#${imm8}`;
+}
+
+function sveDestructiveImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const zdn = fields.Zdn ?? 0;
+  return [vecReg(zdn, lane), vecReg(zdn, lane), { kind: "text", text: sveArithmeticImmediateText(fields) }];
+}
+
+function sveShiftImmediateInfo(fields: Record<string, number>, leftShift: boolean): { lane: "b" | "h" | "s" | "d"; shift: number } {
+  const tsize = ((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0);
+  const elementLog2 = highestSetBitNZ(tsize);
+  const esize = 8 << elementLog2;
+  const encoded = (tsize << 3) | (fields.imm3 ?? 0);
+  return {
+    lane: sveVectorLaneFromSize(elementLog2),
+    shift: leftShift ? encoded - esize : (2 * esize) - encoded,
+  };
+}
+
+function sveShiftImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const { lane, shift } = sveShiftImmediateInfo(fields, inst.encoding!.fileName.startsWith("lsl_"));
+
+  if (inst.encoding!.fileName.includes("_p_")) {
+    const zdn = fields.Zdn ?? 0;
+    return [vecReg(zdn, lane), predReg(fields.Pg ?? 0, "m"), vecReg(zdn, lane), { kind: "text", text: `#${shift}` }];
+  }
+
+  return [
+    vecReg(fields.Zd ?? 0, lane),
+    vecReg(fields.Zn ?? 0, lane),
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
+function sveWideShiftOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const wideSource = vecReg(fields.Zm ?? 0, "d");
+
+  if (inst.encoding!.fileName.includes("_p_")) {
+    const zdn = fields.Zdn ?? 0;
+    return [vecReg(zdn, lane), predReg(fields.Pg ?? 0, "m"), vecReg(zdn, lane), wideSource];
+  }
+
+  return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), wideSource];
+}
+
+function sveCountVectorLane(mnemonic: string): "b" | "h" | "s" | "d" {
+  switch (mnemonic) {
+    case "INCH":
+      return "h";
+    case "INCW":
+      return "s";
+    case "INCD":
+      return "d";
+    default:
+      return "b";
+  }
+}
+
+function sveIncDecVectorOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const pattern = fields.pattern ?? 0;
+  const multiplier = (fields.imm4 ?? 0) + 1;
+  const lane = sveCountVectorLane(inst.encoding!.mnemonic);
+  const ops: Operand[] = [vecReg(fields.Zdn ?? 0, lane)];
+  const patternName = pattern === 31 ? "all" : svePatternName(pattern);
+
+  if (patternName) {
+    if (!(pattern === 31 && (fields.imm4 ?? 0) === 0)) {
+      ops.push({ kind: "text", text: patternName });
+    }
+  } else if (pattern !== 31) {
+    ops.push({ kind: "imm", value: BigInt(pattern), signed: true });
+  }
+
+  if ((fields.imm4 ?? 0) !== 0) {
+    ops.push({ kind: "text", text: `mul #${multiplier}` });
+  }
+
+  return ops;
 }
 
 function sveBfSubOperands(inst: DecodedInstruction): Operand[] {
@@ -2864,6 +3488,13 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "madd.xml":
     case "msub.xml":
       return threeSourceIntegerOperands(inst);
+    case "clz_int.xml":
+    case "rbit_int.xml":
+    case "rev16_int.xml":
+    case "abs.xml":
+    case "cnt.xml":
+    case "ctz.xml":
+      return oneSourceIntegerOperands(inst);
     case "mul_madd.xml":
       return mulAliasOperands(inst);
     case "mneg_msub.xml":
@@ -2890,12 +3521,26 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "dmb.xml":
     case "dsb.xml":
       return barrierOperands(inst);
+    case "clrex.xml":
+      return clrexOperands(inst);
+    case "isb.xml":
+      return isbOperands(inst);
     case "at_sys.xml":
       return systemInstructionAliasOperands(inst, AT_SYSTEM_ALIASES);
     case "dc_sys.xml":
       return systemInstructionAliasOperands(inst, DC_SYSTEM_ALIASES);
     case "tlbi_sys.xml":
       return systemInstructionAliasOperands(inst, TLBI_SYSTEM_ALIASES);
+    case "msr_imm.xml":
+      return msrImmediateOperands(inst);
+    case "smstart_msr_imm.xml":
+    case "smstop_msr_imm.xml":
+      return smstartSmstopOperands(inst);
+    case "sysl.xml":
+      return syslOperands(inst);
+    case "gcsss2_sysl.xml":
+    case "gcspopm_sysl.xml":
+      return gcsSyslAliasOperands(inst);
     case "ldapr.xml":
       return ldaprOperands(inst);
     case "ldiapp.xml":
@@ -2936,8 +3581,15 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return scalarFpMoveGeneralOperands(inst);
     case "fmov_float_imm.xml":
       return scalarFpMoveImmediateOperands(inst);
+    case "frint32z_float.xml":
+    case "frint64z_float.xml":
+    case "frint32x_float.xml":
+    case "frint64x_float.xml":
+      return scalarFpUnaryOperands(inst);
     case "fcvtns_float.xml":
     case "fcvtnu_float.xml":
+    case "fcvtas_float.xml":
+    case "fcvtau_float.xml":
     case "fcvtps_float.xml":
     case "fcvtpu_float.xml":
     case "fcvtms_float.xml":
@@ -2956,6 +3608,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return scalarIntegerToFpOperands(inst, true);
     case "and_log_shift.xml":
       return logicalShiftedRegisterOperands(inst);
+    case "mov_orr_log_shift.xml":
+      return movRegisterAliasOperands(inst);
     case "and_log_imm.xml":
     case "ands_log_imm.xml":
     case "tst_ands_log_imm.xml":
@@ -2973,8 +3627,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "strb_imm.xml":
     case "strh_imm.xml":
     case "ldr_reg_gen.xml":
+    case "str_reg_gen.xml":
     case "ldrb_reg.xml":
     case "ldrh_reg.xml":
+    case "ldrsb_reg.xml":
+    case "ldrsh_reg.xml":
     case "ldr_imm_fpsimd.xml":
     case "str_imm_fpsimd.xml":
     case "ldr_reg_fpsimd.xml":
@@ -2982,6 +3639,7 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ldrsb_imm.xml":
     case "ldrsh_imm.xml":
     case "ldrsw_imm.xml":
+    case "prfm_reg.xml":
     case "prfm_imm.xml":
       return scalarLoadStoreOperands(inst);
     case "csel.xml":
@@ -2997,6 +3655,16 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ccmp_reg.xml":
     case "ccmn_reg.xml":
       return conditionalCompareRegisterOperands(inst);
+    case "smax_reg.xml":
+    case "smin_reg.xml":
+    case "umax_reg.xml":
+    case "umin_reg.xml":
+      return twoSourceIntegerOperands(inst);
+    case "smax_imm.xml":
+    case "smin_imm.xml":
+    case "umax_imm.xml":
+    case "umin_imm.xml":
+      return minMaxImmediateOperands(inst);
     case "bfm.xml":
     case "bfi_bfm.xml":
     case "bfc_bfm.xml":
@@ -3017,12 +3685,16 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uxth_ubfm.xml":
       return bitfieldImmediateOperands(inst);
     case "ldp_gen.xml":
+    case "stp_gen.xml":
     case "ldnp_gen.xml":
     case "ldp_fpsimd.xml":
+    case "ldnp_fpsimd.xml":
     case "stp_fpsimd.xml":
     case "stnp_fpsimd.xml":
     case "ldpsw.xml":
       return pairLoadStoreOperands(inst);
+    case "stlxp.xml":
+      return stlxpOperands(inst);
     case "dup_z_zi.xml":
       return sveDupIndexedOperands(inst);
     case "dup_z_i.xml":
@@ -3056,6 +3728,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fmul_advsimd_elt.xml":
     case "fmulx_advsimd_elt.xml":
       return advsimdByElementMultiplyAccumulateOperands(inst);
+    case "fcmla_advsimd_vec.xml":
+    case "fcadd_advsimd_vec.xml":
+      return advsimdComplexVectorOperands(inst);
+    case "fcmla_advsimd_elt.xml":
+      return advsimdComplexByElementOperands(inst);
     case "smlal_advsimd_elt.xml":
     case "smlsl_advsimd_elt.xml":
     case "sqdmlal_advsimd_elt.xml":
@@ -3063,10 +3740,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "umlsl_advsimd_elt.xml":
     case "sqdmlsl_advsimd_elt.xml":
       return advsimdByElementLongOperands(inst);
+    case "fmlal_advsimd_vec.xml":
+    case "fmlsl_advsimd_vec.xml":
+    case "fmlal_advsimd_elt.xml":
+    case "fmlsl_advsimd_elt.xml":
+      return advsimdFpLongMultiplyAccumulateOperands(inst);
+    case "bfmmla_advsimd.xml":
+    case "bfmlal_advsimd_vec.xml":
+    case "bfmlal_advsimd_elt.xml":
+      return advsimdBfloat16MultiplyAccumulateOperands(inst);
     case "sdot_advsimd_vec.xml":
     case "sdot_advsimd_elt.xml":
     case "udot_advsimd_vec.xml":
     case "udot_advsimd_elt.xml":
+    case "bfdot_advsimd_vec.xml":
+    case "bfdot_advsimd_elt.xml":
       return advsimdDotProductOperands(inst);
     case "cmeq_advsimd_reg.xml":
     case "cmeq_advsimd_zero.xml":
@@ -3095,7 +3783,47 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "neg_advsimd.xml":
     case "rev64_advsimd.xml":
     case "cls_advsimd.xml":
+    case "clz_advsimd.xml":
+    case "fabs_advsimd.xml":
+    case "fneg_advsimd.xml":
+    case "frintn_advsimd.xml":
+    case "frinta_advsimd.xml":
+    case "frintp_advsimd.xml":
+    case "frintm_advsimd.xml":
+    case "frintx_advsimd.xml":
+    case "frintz_advsimd.xml":
+    case "frinti_advsimd.xml":
+    case "frint32z_advsimd.xml":
+    case "frint64z_advsimd.xml":
+    case "frint32x_advsimd.xml":
+    case "frint64x_advsimd.xml":
+    case "fcvtas_advsimd.xml":
+    case "fcvtau_advsimd.xml":
+    case "fcvtps_advsimd.xml":
+    case "fcvtpu_advsimd.xml":
+    case "fcvtms_advsimd.xml":
+    case "fcvtmu_advsimd.xml":
+    case "fcvtnu_advsimd.xml":
+    case "scvtf_advsimd_int.xml":
+    case "ucvtf_advsimd_int.xml":
+    case "fcvtzs_advsimd_int.xml":
+    case "fcvtzu_advsimd_int.xml":
+    case "fcvtns_advsimd.xml":
       return advsimdUnaryOperands(inst);
+    case "scvtf_advsimd_fix.xml":
+    case "ucvtf_advsimd_fix.xml":
+    case "fcvtzs_advsimd_fix.xml":
+    case "fcvtzu_advsimd_fix.xml":
+      return advsimdUnaryWithImmediateOperands(inst);
+    case "xtn_advsimd.xml":
+    case "fcvtxn_advsimd.xml":
+    case "bfcvtn_advsimd.xml":
+    case "sqxtun_advsimd.xml":
+    case "sqxtn_advsimd.xml":
+    case "uqxtn_advsimd.xml":
+      return advsimdNarrowOperands(inst);
+    case "shll_advsimd.xml":
+      return advsimdShiftLeftLongOperands(inst);
     case "saddlp_advsimd.xml":
     case "uaddlp_advsimd.xml":
     case "sadalp_advsimd.xml":
@@ -3105,6 +3833,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uaddl_advsimd.xml":
     case "ssubl_advsimd.xml":
     case "usubl_advsimd.xml":
+    case "smull_advsimd_vec.xml":
+    case "umull_advsimd_vec.xml":
     case "sabal_advsimd.xml":
     case "uabal_advsimd.xml":
     case "sabdl_advsimd.xml":
@@ -3114,6 +3844,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "smlsl_advsimd_vec.xml":
     case "umlsl_advsimd_vec.xml":
       return advsimdWideningThreeRegOperands(inst);
+    case "saddw_advsimd.xml":
+    case "uaddw_advsimd.xml":
+    case "ssubw_advsimd.xml":
+    case "usubw_advsimd.xml":
+      return advsimdWideThreeRegOperands(inst);
     case "sshr_advsimd.xml":
     case "ushr_advsimd.xml":
     case "ssra_advsimd.xml":
@@ -3126,7 +3861,28 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sli_advsimd.xml":
     case "sqshlu_advsimd.xml":
     case "sqshl_advsimd_imm.xml":
+    case "uqshl_advsimd_imm.xml":
       return advsimdImmediateShiftOperands(inst);
+    case "shrn_advsimd.xml":
+    case "rshrn_advsimd.xml":
+    case "addhn_advsimd.xml":
+    case "raddhn_advsimd.xml":
+      return advsimdHighNarrowThreeRegOperands(inst);
+    case "sqshrn_advsimd.xml":
+    case "uqshrn_advsimd.xml":
+    case "sqrshrn_advsimd.xml":
+    case "uqrshrn_advsimd.xml":
+    case "sqshrun_advsimd.xml":
+    case "sqrshrun_advsimd.xml":
+      return advsimdNarrowingImmediateShiftOperands(inst);
+    case "movi_advsimd.xml":
+    case "mvni_advsimd.xml":
+    case "bic_advsimd_imm.xml":
+    case "orr_advsimd_imm.xml":
+    case "fmov_advsimd.xml":
+      return advsimdMoveImmediateOperands(inst);
+    case "mov_orr_advsimd_reg.xml":
+      return advsimdMoveRegisterAliasOperands(inst);
     case "ld1r_advsimd.xml":
     case "ld2r_advsimd.xml":
     case "ld3r_advsimd.xml":
@@ -3143,7 +3899,13 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ldap1_advsimd_sngl.xml":
       return advsimdSingleStructureOperands(inst);
     case "ld1_advsimd_mult.xml":
+    case "ld2_advsimd_mult.xml":
+    case "ld3_advsimd_mult.xml":
+    case "ld4_advsimd_mult.xml":
     case "st1_advsimd_mult.xml":
+    case "st2_advsimd_mult.xml":
+    case "st3_advsimd_mult.xml":
+    case "st4_advsimd_mult.xml":
       return advsimdMultipleStructureOperands(inst);
     case "mov_mova_z_p_rza.xml":
       return movaSingleToVectorOperands(inst);
@@ -3302,6 +4064,35 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveRdffrOperands(inst);
     case "frinta_z_p_z.xml":
       return svePredicatedUnaryOperands(inst);
+    case "add_z_p_zz.xml":
+    case "sub_z_p_zz.xml":
+    case "subr_z_p_zz.xml":
+      return svePredicatedBinaryOperands(inst);
+    case "add_z_zz.xml":
+    case "sub_z_zz.xml":
+      return sveBinaryOperands(inst);
+    case "add_z_zi.xml":
+    case "sub_z_zi.xml":
+    case "subr_z_zi.xml":
+      return sveDestructiveImmediateOperands(inst);
+    case "asr_z_zi.xml":
+    case "lsl_z_zi.xml":
+    case "lsr_z_zi.xml":
+    case "asr_z_p_zi.xml":
+    case "lsl_z_p_zi.xml":
+    case "lsr_z_p_zi.xml":
+      return sveShiftImmediateOperands(inst);
+    case "asr_z_p_zz.xml":
+    case "lsl_z_p_zz.xml":
+    case "lsr_z_p_zz.xml":
+      return svePredicatedBinaryOperands(inst);
+    case "asr_z_zw.xml":
+    case "lsl_z_zw.xml":
+    case "lsr_z_zw.xml":
+    case "asr_z_p_zw.xml":
+    case "lsl_z_p_zw.xml":
+    case "lsr_z_p_zw.xml":
+      return sveWideShiftOperands(inst);
     case "bfsub_z_p_zz.xml":
     case "bfsub_z_zz.xml":
       return sveBfSubOperands(inst);
@@ -3333,6 +4124,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uqdech_r_rs.xml":
     case "uqdecw_r_rs.xml":
       return sveIncDecScalarOperands(inst);
+    case "incd_z_zs.xml":
+      return sveIncDecVectorOperands(inst);
     case "whilege_p_p_rr.xml":
     case "whilegt_p_p_rr.xml":
     case "whilehi_p_p_rr.xml":

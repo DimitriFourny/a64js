@@ -27,10 +27,16 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
   "uaddl_advsimd.xml",
   "ssubl_advsimd.xml",
   "usubl_advsimd.xml",
+  "saddw_advsimd.xml",
+  "uaddw_advsimd.xml",
+  "ssubw_advsimd.xml",
+  "usubw_advsimd.xml",
   "sabal_advsimd.xml",
   "uabal_advsimd.xml",
   "sabdl_advsimd.xml",
   "uabdl_advsimd.xml",
+  "smull_advsimd_vec.xml",
+  "umull_advsimd_vec.xml",
   "smlal_advsimd_vec.xml",
   "umlal_advsimd_vec.xml",
   "smlsl_advsimd_vec.xml",
@@ -41,6 +47,30 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
   "umlal_advsimd_elt.xml",
   "umlsl_advsimd_elt.xml",
   "sqdmlsl_advsimd_elt.xml",
+  "fmlal_advsimd_vec.xml",
+  "fmlsl_advsimd_vec.xml",
+  "fmlal_advsimd_elt.xml",
+  "fmlsl_advsimd_elt.xml",
+]);
+
+const ADVSIMD_UPPER_HALF_SUFFIX_FILES = new Set([
+  "bfcvtn_advsimd.xml",
+  "xtn_advsimd.xml",
+  "sqxtun_advsimd.xml",
+  "sqxtn_advsimd.xml",
+  "uqxtn_advsimd.xml",
+  "shll_advsimd.xml",
+  "fcvtxn_advsimd.xml",
+  "shrn_advsimd.xml",
+  "rshrn_advsimd.xml",
+  "addhn_advsimd.xml",
+  "raddhn_advsimd.xml",
+  "sqshrn_advsimd.xml",
+  "uqshrn_advsimd.xml",
+  "sqrshrn_advsimd.xml",
+  "uqrshrn_advsimd.xml",
+  "sqshrun_advsimd.xml",
+  "sqrshrun_advsimd.xml",
 ]);
 
 function formatUnknown(word: number): string {
@@ -112,6 +142,26 @@ function formatLogicalImmediateAlias(decoded: DecodedInstruction): string | null
   }
 
   return `tst ${formatOperand(operands[0])}, ${formatOperand(operands[1])}`;
+}
+
+function formatBfloat16Alias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+  const fields = decoded.fields;
+
+  if (!fileName || !fields) {
+    return null;
+  }
+
+  if (fileName === "bfcvt_float.xml" && operands.length === 2) {
+    return `bfcvt ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
+  }
+
+  if (["bfmlal_advsimd_vec.xml", "bfmlal_advsimd_elt.xml"].includes(fileName) && operands.length === 3) {
+    return `bfmlal${(fields.Q ?? 0) === 1 ? "t" : "b"} ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
+  }
+
+  return null;
 }
 
 function formatSubtractWithCarryAlias(decoded: DecodedInstruction): string | null {
@@ -351,6 +401,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return logicalImmediateAlias;
   }
 
+  const bfloat16Alias = formatBfloat16Alias({ ...decoded, operands });
+  if (bfloat16Alias) {
+    return bfloat16Alias;
+  }
+
   const subtractWithCarryAlias = formatSubtractWithCarryAlias({ ...decoded, operands });
   if (subtractWithCarryAlias) {
     return subtractWithCarryAlias;
@@ -394,7 +449,16 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     decoded.encoding && ["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(decoded.encoding.fileName)
       ? "fmov"
       : decoded.encoding &&
-          ["dup_z_i.xml", "dup_z_zi.xml", "cpy_z_p_r.xml", "cpy_z_o_i.xml", "cpy_z_p_i.xml", "cpy_z_p_v.xml"].includes(
+          [
+            "dup_z_i.xml",
+            "dup_z_zi.xml",
+            "cpy_z_p_r.xml",
+            "cpy_z_o_i.xml",
+            "cpy_z_p_i.xml",
+            "cpy_z_p_v.xml",
+            "mov_orr_log_shift.xml",
+            "mov_orr_advsimd_reg.xml",
+          ].includes(
             decoded.encoding.fileName,
           )
         ? "mov"
@@ -402,6 +466,14 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
         ? "cmn"
       : decoded.encoding && decoded.encoding.fileName === "cmp_subs_addsub_ext.xml"
         ? "cmp"
+      : decoded.encoding && decoded.encoding.fileName === "smstart_msr_imm.xml"
+        ? "smstart"
+      : decoded.encoding && decoded.encoding.fileName === "smstop_msr_imm.xml"
+        ? "smstop"
+      : decoded.encoding && decoded.encoding.fileName === "gcsss2_sysl.xml"
+        ? "gcsss2"
+      : decoded.encoding && decoded.encoding.fileName === "gcspopm_sysl.xml"
+        ? "gcspopm"
       : decoded.encoding &&
           [
             "mov_mova_z_p_rza.xml",
@@ -419,6 +491,12 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
       : decoded.encoding &&
           decoded.fields &&
           ADVSIMD_WIDENING_LONG_FILES.has(decoded.encoding.fileName) &&
+          (decoded.fields.Q ?? 0) === 1
+        ? `${decoded.mnemonic.toLowerCase()}2`
+      : decoded.encoding &&
+          decoded.fields &&
+          ADVSIMD_UPPER_HALF_SUFFIX_FILES.has(decoded.encoding.fileName) &&
+          decoded.encoding.className.toLowerCase().includes("vector") &&
           (decoded.fields.Q ?? 0) === 1
         ? `${decoded.mnemonic.toLowerCase()}2`
       : decoded.mnemonic.toLowerCase();

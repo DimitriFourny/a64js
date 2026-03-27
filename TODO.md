@@ -32,7 +32,9 @@ bun test
 
 ## In Progress
 
-- None.
+- SVE logical, compare, and move cleanup.
+  Anchors: `SVE/and.s.yaml`, `SVE/orr.s.yaml`, `SVE/eor.s.yaml`, `SVE/bic.s.yaml`, `SVE/mov.s.yaml`, `SVE/fcmeq.s.yaml`, `fcmeq_p_p_z0.xml`, `fcmeq_p_p_zz.xml`.
+  Done when: logical immediate/register families, move aliases, and floating compare predicate forms all disassemble with the correct predicate policy and aliases, and the associated SVE shards are promoted.
 
 ## Ready
 
@@ -47,50 +49,6 @@ Backlog target:
 - the grouped work items below are the remaining roadmap to drive the unsupported capstone count to zero
 - each item names the current source-YAML and XML anchors that still account for unsupported capstone cases
 - when a family spills into related alias XMLs, promote the whole family together before touching `tools/supported-files.ts`
-
-- Core A64 scalar FP/int/control cleanup from `basic-a64-instructions.s.yaml`.
-  Anchors: `fcvtas_float.xml`, `fcvtau_float.xml`, `mov_orr_log_shift.xml`, `clz_int.xml`, `rbit_int.xml`, `rev16_int.xml`, `clrex.xml`, `isb.xml`, `msr_imm.xml`, `sysl.xml`.
-  Done when: the remaining scalar convert/bit-manip/control instructions in `basic-a64-instructions.s.yaml` disassemble with architectural mnemonics and operands, the whole batch is added to `tools/supported-files.ts`, and the capstone shard no longer reports these XMLs as unsupported.
-
-- Core A64 scalar load/store leftovers from `basic-a64-instructions.s.yaml`.
-  Anchors: `ldrsh_reg.xml`, `ldrsb_reg.xml`, `str_reg_gen.xml`, `stp_gen.xml`, `stlxp.xml`, `ldnp_fpsimd.xml`.
-  Done when: register-offset, pair, exclusive-pair, and no-allocate variants format correctly across 32/64-bit and FP/SIMD forms, the family is promoted together, and the associated capstone cases move from unsupported to supported.
-
-- AdvSIMD miscellaneous unary/narrow/widen cleanup from `neon-simd-misc.s.yaml`.
-  Anchors: `clz_advsimd.xml`, `xtn_advsimd.xml`, `sqxtun_advsimd.xml`, `sqxtn_advsimd.xml`, `uqxtn_advsimd.xml`, `shll_advsimd.xml`, `fabs_advsimd.xml`, `fneg_advsimd.xml`, `frint{n,a,p,m,x,z,i}_advsimd.xml`, `fcvtns_advsimd.xml`.
-  Done when: scalar/vector unary, narrow, widen, and FP rounding forms render with the correct arrangement and suffix rules, the family is promoted together, and `neon-simd-misc.s.yaml` drops accordingly in the capstone snapshot.
-
-- AdvSIMD immediate-shift and narrowing cleanup from `neon-simd-shift.s.yaml`.
-  Anchors: `uqshl_advsimd_imm.xml`, `shrn_advsimd.xml`, `sqshrun_advsimd.xml`, `rshrn_advsimd.xml`, `sqrshrun_advsimd.xml`, `sqshrn_advsimd.xml`, `uqshrn_advsimd.xml`, `sqrshrn_advsimd.xml`.
-  Done when: narrowing, saturating, and rounding immediate-shift forms decode without overlap regressions, disassembly uses the right lane widths and upper-half mnemonics, and the family is added to `tools/supported-files.ts`.
-
-- AdvSIMD immediate move/logical-immediate cleanup from `neon-mov.s.yaml`.
-  Anchors: `movi_advsimd.xml`, `mvni_advsimd.xml`, `bic_advsimd_imm.xml`, `orr_advsimd_imm.xml`, `mov_orr_advsimd_reg.xml`, `fmov_advsimd.xml`.
-  Done when: immediate synthesis, logical-immediate aliases, and register-move forms render with the correct immediate spellings and aliases, and the remaining `neon-mov.s.yaml` capstone cases are promoted.
-
-- AdvSIMD multi-structure load/store cleanup from `neon-simd-ldst-multi-elem.s.yaml` and `neon-simd-post-ldst-multi-elem.s.yaml`.
-  Anchors: `ld2_advsimd_mult.xml`, `ld3_advsimd_mult.xml`, `ld4_advsimd_mult.xml`, `st2_advsimd_mult.xml`, `st3_advsimd_mult.xml`, `st4_advsimd_mult.xml`.
-  Done when: multi-register structure lists, lane indexes, and post-index writeback forms all match capstone expectations and the whole multi-structure family is promoted together.
-
-- AdvSIMD widening/addhn/multiply leftovers from `neon-3vdiff.s.yaml`.
-  Anchors: `smull_advsimd_vec.xml`, `umull_advsimd_vec.xml`, `saddw_advsimd.xml`, `uaddw_advsimd.xml`, `ssubw_advsimd.xml`, `usubw_advsimd.xml`, `addhn_advsimd.xml`, `raddhn_advsimd.xml`.
-  Done when: widening arithmetic, long multiply, and high-narrowing forms render with the correct arrangement and `2`/upper-half conventions, and the family is promoted in one pass.
-
-- AdvSIMD BF16 and scalar BF16 cleanup from `armv8.6a-bf16.s.yaml`.
-  Anchors: `bfdot_advsimd_elt.xml`, `bfmlal_advsimd_elt.xml`, `bfdot_advsimd_vec.xml`, `bfmmla_advsimd.xml`, `bfcvtn_advsimd.xml`, `bfmlal_advsimd_vec.xml`, `bfcvt_float.xml`.
-  Done when: BF16 dot-product, matrix-multiply, convert, and long multiply-accumulate forms decode and disassemble correctly across vector, by-element, and scalar variants, and the BF16 shard is promoted.
-
-- Core architectural extension cleanup from root source files outside the main scalar batch.
-  Anchors: `armv8.9a-cssc.s.yaml`, `armv8.9a-clrbhb.s.yaml`, `armv8.3a-complex.s.yaml`, `armv8.5a-frint.s.yaml`, `armv8a-fpmul.s.yaml`, `neon-scalar-cvt.s.yaml`.
-  Done when: the remaining CSSC, CLRBHB, complex arithmetic, FRINT, FP multiply, and scalar convert extension cases stop falling back to `.inst`, and each finished family is promoted as a coherent batch.
-
-- SVE arithmetic core batch from `SVE/add.s.yaml`, `SVE/sub.s.yaml`, `SVE/subr.s.yaml`, `SVE/asr.s.yaml`, `SVE/lsl.s.yaml`, and `SVE/lsr.s.yaml`.
-  Anchors: `add_z_p_zz.xml`, `add_z_zz.xml`, `add_z_zi.xml`, `sub_z_p_zz.xml`, `sub_z_zz.xml`, `sub_z_zi.xml`, `incd_z_zs.xml`.
-  Done when: predicated and unpredicated arithmetic/immediate forms render with the correct merge/zero semantics and immediates, related shift/inc forms are handled consistently, and the arithmetic cluster is promoted together.
-
-- SVE logical, compare, and move cleanup.
-  Anchors: `SVE/and.s.yaml`, `SVE/orr.s.yaml`, `SVE/eor.s.yaml`, `SVE/bic.s.yaml`, `SVE/mov.s.yaml`, `SVE/fcmeq.s.yaml`, `fcmeq_p_p_z0.xml`, `fcmeq_p_p_zz.xml`.
-  Done when: logical immediate/register families, move aliases, and floating compare predicate forms all disassemble with the correct predicate policy and aliases, and the associated SVE shards are promoted.
 
 - SVE memory and matrix-multiply cleanup.
   Anchors: `SVE/ld1b.s.yaml`, `SVE/st1b.s.yaml`, `SVE/bfmlal.s.yaml`, `SVE/fmul.s.yaml`, `SVE/matrix-multiply-fp64.s.yaml`.
@@ -130,50 +88,60 @@ Backlog target:
 
 ## Blocked
 
-- None.
+- SVE arithmetic core batch from `SVE/add.s.yaml`, `SVE/sub.s.yaml`, `SVE/subr.s.yaml`, `SVE/asr.s.yaml`, `SVE/lsl.s.yaml`, and `SVE/lsr.s.yaml` is blocked after implementation because the required `bun test` run still fails on unrelated `neon-mov.s.yaml#9` (`MOVI 0x0f008420`): the promoted SVE arithmetic/shift/inc shards now generate cleanly, but the shared unsupported-capstone assertion stops on that separate queued family.
+- AdvSIMD immediate-shift and narrowing cleanup from `neon-simd-shift.s.yaml` is blocked after implementation because the required `bun test` run now fails on unrelated `neon-mov.s.yaml#9` (`MOVI 0x0f008420`): it decodes as supported while that separately queued family is still in the unsupported capstone set.
 
 ## Done
 
 Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
 
+- AdvSIMD multi-structure load/store cleanup from `neon-simd-ldst-multi-elem.s.yaml` and `neon-simd-post-ldst-multi-elem.s.yaml` completed; promoted `ld2`/`ld3`/`ld4` plus `st2`/`st3`/`st4` multiple-structure forms, fixed register-count formatting for non-post-index encodings, and cleared both source shards.
+- AdvSIMD immediate move/logical-immediate cleanup from `neon-mov.s.yaml` completed; promoted `movi`/`mvni`/`bic`/`orr` immediates plus `fmov` and `mov` vector aliases, clearing `neon-mov.s.yaml` and unblocking the full test suite.
+- AdvSIMD BF16 and scalar BF16 cleanup from `armv8.6a-bf16.s.yaml` completed; promoted `bfdot`, `bfmmla`, `bfcvtn`/`bfcvtn2`, `bfcvt`, and `bfmlal{b,t}` vector/by-element forms, clearing the BF16 shard.
+- Core A64 scalar FP/int/control cleanup from `basic-a64-instructions.s.yaml` completed; promoted the scalar FP/int/control batch plus related `MSR`/`SYSL` aliases, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `182`.
+- Core A64 scalar load/store leftovers from `basic-a64-instructions.s.yaml` completed; promoted `ldrsh_reg`, `ldrsb_reg`, `str_reg_gen`, `stp_gen`, `stlxp`, and `ldnp_fpsimd`, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `161`.
+- AdvSIMD miscellaneous unary/narrow/widen cleanup from `neon-simd-misc.s.yaml` completed; promoted `clz`, `xtn`/`*xtn2`, `shll`/`shll2`, `fabs`, `fneg`, `frint*`, and `fcvtns`, bringing `neon-simd-misc.s.yaml` unsupported cases down to `96`.
+- AdvSIMD widening/addhn/multiply leftovers from `neon-3vdiff.s.yaml` completed; promoted `smull`/`umull`, `saddw`/`uaddw`, `ssubw`/`usubw`, and `addhn`/`raddhn` with correct `2`/upper-half formatting, bringing `neon-3vdiff.s.yaml` unsupported cases down to `22`.
+- Core architectural extension cleanup from root source files outside the main scalar batch completed; promoted CSSC min/max and unary integer ops, `clrbhb`, `fcadd`/`fcmla`, `frint32*`/`frint64*`, `fmlal`/`fmlsl`, and the remaining scalar AdvSIMD convert families, clearing `armv8.9a-cssc.s.yaml`, `armv8.9a-clrbhb.s.yaml`, `armv8.3a-complex{,_nofp16}.s.yaml`, `armv8.5a-frint.s.yaml`, `armv8a-fpmul.s.yaml`, and `neon-scalar-cvt.s.yaml`.
+
 ## Snapshot
 
 Current capstone coverage snapshot:
 
-- `21109` supported capstone cases
-- `13448` unsupported capstone cases
-- `469` XML instruction files currently listed in `tools/supported-files.ts`
-- `1417` distinct unsupported XML instruction files
-- `846` capstone source YAML files containing unsupported cases
-- `798` distinct unsupported mnemonics
+- `22636` supported capstone cases
+- `11921` unsupported capstone cases
+- `608` XML instruction files currently listed in `tools/supported-files.ts`
+- `1278` distinct unsupported XML instruction files
+- `794` capstone source YAML files containing unsupported cases
+- `739` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `basic-a64-instructions.s.yaml`: `214`
-- `neon-simd-misc.s.yaml`: `182`
-- `SVE/add.s.yaml`: `98`
-- `SVE/sub.s.yaml`: `98`
-- `neon-simd-ldst-multi-elem.s.yaml`: `84`
+- `basic-a64-instructions.s.yaml`: `161`
 - `SVE2p1/pmov.s.yaml`: `80`
+- `SME2/svdot.s.yaml`: `72`
+- `SME2/uvdot.s.yaml`: `72`
+- `FP8_SVE2/fcvt.s.yaml`: `64`
+- `SME2/smax.s.yaml`: `64`
 
 Largest unsupported feature sets:
 
-- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `3773`
+- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `3308`
 - `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `1950`
 - `FEAT_SME2`: `1725`
-- `FEAT_AdvSIMD`: `1191`
 - `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `785`
 - `FEAT_SVE2p1 || FEAT_SME2p1, FEAT_SVE2p1, FEAT_SME2p1`: `774`
+- `FEAT_AdvSIMD`: `729`
 - `FEAT_SVE`: `386`
-- `FEAT_SME`: `294`
-- no feature gate recorded: `164`
+- `FEAT_SME`: `268`
 - `FEAT_SVE || FEAT_SME`: `152`
+- `FEAT_SVE2`: `126`
 
 Implication:
 
 - the remaining work is still concentrated in SVE, SME, SME2, and AdvSIMD
-- the next highest-value batches are family work, not one-off instruction fixes
-- the first priority should still be common scalar/core A64 families from `basic-a64-instructions.s.yaml` when they have large unsupported batches
+- the CSSC/core-extension cleanup batch is cleared, so the next ready priority should shift to SVE logical, compare, and move cleanup
+- the next highest-value batches are still family work, not one-off instruction fixes
 
 ## Meaning Of "Unsupported"
 
