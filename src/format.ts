@@ -54,7 +54,10 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
 ]);
 
 const ADVSIMD_UPPER_HALF_SUFFIX_FILES = new Set([
+  "bf12cvtl_advsimd.xml",
+  "f12cvtl_advsimd.xml",
   "bfcvtn_advsimd.xml",
+  "fcvtn_advsimd_328.xml",
   "xtn_advsimd.xml",
   "sqxtun_advsimd.xml",
   "sqxtn_advsimd.xml",
@@ -375,6 +378,183 @@ function formatBitfieldAlias(decoded: DecodedInstruction): string | null {
   return null;
 }
 
+function rotateRight(value: bigint, shift: number, width: number): bigint {
+  const normalizedShift = ((shift % width) + width) % width;
+  const mask = (1n << BigInt(width)) - 1n;
+  if (normalizedShift === 0) {
+    return value & mask;
+  }
+  return ((value >> BigInt(normalizedShift)) | (value << BigInt(width - normalizedShift))) & mask;
+}
+
+function highestSetBit(value: number): number {
+  for (let bit = 31; bit >= 0; bit -= 1) {
+    if ((value & (1 << bit)) !== 0) {
+      return bit;
+    }
+  }
+  return -1;
+}
+
+function decodeLogicalImmediate(n: number, immr: number, imms: number, width: 32 | 64): bigint | null {
+  const len = highestSetBit((n << 6) | ((~imms) & 0x3f));
+  if (len < 1) {
+    return null;
+  }
+
+  const size = 1 << len;
+  const levels = size - 1;
+  const s = imms & levels;
+  const r = immr & levels;
+
+  if (s === levels) {
+    return null;
+  }
+
+  const element = rotateRight((1n << BigInt(s + 1)) - 1n, r, size);
+  let value = 0n;
+  for (let offset = 0; offset < width; offset += size) {
+    value |= element << BigInt(offset);
+  }
+  return value;
+}
+
+function sveMoveMaskPreferred(imm13: number): boolean {
+  const imm = decodeLogicalImmediate((imm13 >>> 12) & 1, (imm13 >>> 6) & 0x3f, imm13 & 0x3f, 64);
+  if (imm === null) {
+    return false;
+  }
+
+  const low8 = Number(imm & 0xffn);
+  if (low8 !== 0) {
+    const upper57 = imm >> 7n;
+    if (upper57 === 0n || upper57 === ((1n << 57n) - 1n)) {
+      return false;
+    }
+
+    const low32 = imm & 0xffffffffn;
+    const high32 = (imm >> 32n) & 0xffffffffn;
+    if (high32 === low32) {
+      const upper25 = (low32 >> 7n) & ((1n << 25n) - 1n);
+      if (upper25 === 0n || upper25 === ((1n << 25n) - 1n)) {
+        return false;
+      }
+    }
+
+    const low16 = imm & 0xffffn;
+    const mid16 = (imm >> 16n) & 0xffffn;
+    if (high32 === low32 && mid16 === low16) {
+      const upper9 = (low16 >> 7n) & ((1n << 9n) - 1n);
+      if (upper9 === 0n || upper9 === ((1n << 9n) - 1n)) {
+        return false;
+      }
+    }
+
+    const high8 = (low16 >> 8n) & 0xffn;
+    if (high32 === low32 && mid16 === low16 && high8 === BigInt(low8)) {
+      return false;
+    }
+  } else {
+    const upper49 = imm >> 15n;
+    if (upper49 === 0n || upper49 === ((1n << 49n) - 1n)) {
+      return false;
+    }
+
+    const low32 = imm & 0xffffffffn;
+    const high32 = (imm >> 32n) & 0xffffffffn;
+    if (high32 === low32) {
+      const upper25 = (low32 >> 7n) & ((1n << 25n) - 1n);
+      if (upper25 === 0n || upper25 === ((1n << 25n) - 1n)) {
+        return false;
+      }
+    }
+
+    const low16 = imm & 0xffffn;
+    const mid16 = (imm >> 16n) & 0xffffn;
+    if (high32 === low32 && mid16 === low16) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<DecodedInstruction["operands"]>): string {
+  const fileName = decoded.encoding?.fileName;
+  if (!fileName) {
+    return decoded.mnemonic!.toLowerCase();
+  }
+
+  if (["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(fileName)) {
+    return "fmov";
+  }
+
+  if (["dup_z_i.xml", "dup_z_zi.xml", "cpy_z_p_r.xml", "cpy_z_o_i.xml", "cpy_z_p_i.xml", "cpy_z_p_v.xml", "mov_orr_log_shift.xml", "mov_orr_advsimd_reg.xml", "mov_dup_z_r.xml", "dup_z_r.xml"].includes(fileName)) {
+    return "mov";
+  }
+
+  if (fileName === "dupm_z_i.xml" || fileName === "mov_dupm_z_i.xml") {
+    return decoded.fields && sveMoveMaskPreferred(decoded.fields.imm13 ?? 0) ? "mov" : "dupm";
+  }
+
+  if (fileName === "cmn_adds_addsub_ext.xml") {
+    return "cmn";
+  }
+  if (fileName === "cmp_subs_addsub_ext.xml") {
+    return "cmp";
+  }
+  if (fileName === "smstart_msr_imm.xml") {
+    return "smstart";
+  }
+  if (fileName === "smstop_msr_imm.xml") {
+    return "smstop";
+  }
+  if (fileName === "gcsss2_sysl.xml") {
+    return "gcsss2";
+  }
+  if (fileName === "gcspopm_sysl.xml") {
+    return "gcspopm";
+  }
+
+  if (
+    [
+      "mov_mova_z_p_rza.xml",
+      "mov_mova_za_p_rz.xml",
+      "mov_mova_mz2_za.xml",
+      "mov_mova_za2_z.xml",
+      "mov_mova_za4_z.xml",
+      "mov_mova_mz4_za.xml",
+      "mov_mova_mz_za2.xml",
+      "mov_mova_mz_za4.xml",
+      "mov_mova_za_mz2.xml",
+      "mov_mova_za_mz4.xml",
+    ].includes(fileName)
+  ) {
+    return "mov";
+  }
+
+  if (
+    ["and_p_p_pp.xml", "mov_and_p_p_pp.xml", "orr_p_p_pp.xml", "mov_orr_p_p_pp.xml", "orr_z_zz.xml", "mov_orr_z_zz.xml", "sel_p_p_pp.xml", "mov_sel_p_p_pp.xml", "sel_z_p_zz.xml", "mov_sel_z_p_zz.xml"].includes(fileName) &&
+    operands.length <= 3
+  ) {
+    return "mov";
+  }
+
+  if (decoded.fields && ADVSIMD_WIDENING_LONG_FILES.has(fileName) && (decoded.fields.Q ?? 0) === 1) {
+    return `${decoded.mnemonic!.toLowerCase()}2`;
+  }
+
+  if (
+    decoded.fields &&
+    ADVSIMD_UPPER_HALF_SUFFIX_FILES.has(fileName) &&
+    (decoded.fields.Q ?? 0) === 1
+  ) {
+    return `${decoded.mnemonic!.toLowerCase()}2`;
+  }
+
+  return decoded.mnemonic!.toLowerCase();
+}
+
 export function format(decoded: DecodedInstruction, options: FormatOptions = {}): string {
   if (decoded.status !== "ok" || !decoded.mnemonic) {
     if (options.onUnknown === "error") {
@@ -445,61 +625,18 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return `b.${operands[0].suffix} ${formatOperand(operands[1])}`;
   }
 
-  const mnemonic =
-    decoded.encoding && ["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(decoded.encoding.fileName)
-      ? "fmov"
-      : decoded.encoding &&
-          [
-            "dup_z_i.xml",
-            "dup_z_zi.xml",
-            "cpy_z_p_r.xml",
-            "cpy_z_o_i.xml",
-            "cpy_z_p_i.xml",
-            "cpy_z_p_v.xml",
-            "mov_orr_log_shift.xml",
-            "mov_orr_advsimd_reg.xml",
-          ].includes(
-            decoded.encoding.fileName,
-          )
-        ? "mov"
-      : decoded.encoding && decoded.encoding.fileName === "cmn_adds_addsub_ext.xml"
-        ? "cmn"
-      : decoded.encoding && decoded.encoding.fileName === "cmp_subs_addsub_ext.xml"
-        ? "cmp"
-      : decoded.encoding && decoded.encoding.fileName === "smstart_msr_imm.xml"
-        ? "smstart"
-      : decoded.encoding && decoded.encoding.fileName === "smstop_msr_imm.xml"
-        ? "smstop"
-      : decoded.encoding && decoded.encoding.fileName === "gcsss2_sysl.xml"
-        ? "gcsss2"
-      : decoded.encoding && decoded.encoding.fileName === "gcspopm_sysl.xml"
-        ? "gcspopm"
-      : decoded.encoding &&
-          [
-            "mov_mova_z_p_rza.xml",
-            "mov_mova_za_p_rz.xml",
-            "mov_mova_mz2_za.xml",
-            "mov_mova_za2_z.xml",
-            "mov_mova_za4_z.xml",
-            "mov_mova_mz4_za.xml",
-            "mov_mova_mz_za2.xml",
-            "mov_mova_mz_za4.xml",
-            "mov_mova_za_mz2.xml",
-            "mov_mova_za_mz4.xml",
-          ].includes(decoded.encoding.fileName)
-        ? "mov"
-      : decoded.encoding &&
-          decoded.fields &&
-          ADVSIMD_WIDENING_LONG_FILES.has(decoded.encoding.fileName) &&
-          (decoded.fields.Q ?? 0) === 1
-        ? `${decoded.mnemonic.toLowerCase()}2`
-      : decoded.encoding &&
-          decoded.fields &&
-          ADVSIMD_UPPER_HALF_SUFFIX_FILES.has(decoded.encoding.fileName) &&
-          decoded.encoding.className.toLowerCase().includes("vector") &&
-          (decoded.fields.Q ?? 0) === 1
-        ? `${decoded.mnemonic.toLowerCase()}2`
-      : decoded.mnemonic.toLowerCase();
+  if (
+    decoded.encoding?.fileName === "ldr_lit_gen.xml" &&
+    operands.length === 2 &&
+    operands[1].kind === "label"
+  ) {
+    const target = operands[1].absolute !== undefined
+      ? `0x${operands[1].absolute.toString(16)}`
+      : `#${operands[1].offset.toString()}`;
+    return `${preferredMnemonic(decoded, operands)} ${formatOperand(operands[0])}, ${target}`;
+  }
+
+  const mnemonic = preferredMnemonic(decoded, operands);
 
   const operandText = operands.map((operand, index) => {
     if (

@@ -30,19 +30,15 @@ type ParseEncodingFileOptions = {
 
 type FieldWidthMap = Map<string, number>;
 
-const ADVSIMD_IMMEDIATE_SHIFT_CONSTRAINT_FILES = new Set([
-  "sshr_advsimd.xml",
-  "ushr_advsimd.xml",
-  "ssra_advsimd.xml",
-  "usra_advsimd.xml",
-  "srshr_advsimd.xml",
-  "urshr_advsimd.xml",
-  "srsra_advsimd.xml",
-  "ursra_advsimd.xml",
-  "sri_advsimd.xml",
-  "sli_advsimd.xml",
-  "sqshlu_advsimd.xml",
-  "sqshl_advsimd_imm.xml",
+const SME2_FLOAT_MAXMIN_CONSTRAINT_FILES = new Set([
+  "fmax_mz_zzv.xml",
+  "fmax_mz_zzw.xml",
+  "fmaxnm_mz_zzv.xml",
+  "fmaxnm_mz_zzw.xml",
+  "fmin_mz_zzv.xml",
+  "fmin_mz_zzw.xml",
+  "fminnm_mz_zzv.xml",
+  "fminnm_mz_zzw.xml",
 ]);
 
 function parseBoxBits(box: any): BoxBits {
@@ -268,7 +264,14 @@ function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: 
     const terms = condition
       .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
       .map((term) => term.trim())
-      .filter((term) => term.length > 0 && !term.includes("IsFeatureImplemented(") && term !== "(" && term !== ")");
+      .filter(
+        (term) =>
+          term.length > 0 &&
+          !term.includes("IsFeatureImplemented(") &&
+          !term.startsWith("MaxImplementedSVL()") &&
+          term !== "(" &&
+          term !== ")",
+      );
     if (terms.length === 0) {
       continue;
     }
@@ -350,7 +353,7 @@ export async function parseEncodingFile(
     const features = collectFeatures(iclass, decodeText);
     const guards = parseDecodeGuards(decodeText, fieldWidths, options);
     for (const constraint of base.constraints) {
-      if (!ADVSIMD_IMMEDIATE_SHIFT_CONSTRAINT_FILES.has(fileName) || constraint.field !== "immh") {
+      if (!SME2_FLOAT_MAXMIN_CONSTRAINT_FILES.has(fileName) || constraint.field !== "size") {
         continue;
       }
       const term = `${constraint.field} ${constraint.expression}`;

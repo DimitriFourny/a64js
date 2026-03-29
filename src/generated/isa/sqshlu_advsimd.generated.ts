@@ -56,17 +56,6 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "value": 0
           }
         ]
-      },
-      {
-        "all": [
-          {
-            "kind": "eq",
-            "field": "immh",
-            "mask": 15,
-            "lsb": 0,
-            "value": 0
-          }
-        ]
       }
     ]
   },
@@ -137,17 +126,6 @@ export const ENCODINGS: GeneratedEncoding[] = [
               }
             ],
             "value": 2
-          }
-        ]
-      },
-      {
-        "all": [
-          {
-            "kind": "eq",
-            "field": "immh",
-            "mask": 15,
-            "lsb": 0,
-            "value": 0
           }
         ]
       }

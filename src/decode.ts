@@ -41,8 +41,98 @@ function guardCheckMatches(fields: Record<string, number>, guard: GuardCheck): b
   return guard.kind === "eq" ? actual === guard.value : actual !== guard.value;
 }
 
+function stripOuterParentheses(expression: string): string {
+  let current = expression.trim();
+
+  while (current.startsWith("(") && current.endsWith(")")) {
+    let depth = 0;
+    let wrapsWholeExpression = true;
+
+    for (let index = 0; index < current.length; index += 1) {
+      const char = current[index];
+      if (char === "(") {
+        depth += 1;
+      } else if (char === ")") {
+        depth -= 1;
+        if (depth === 0 && index !== current.length - 1) {
+          wrapsWholeExpression = false;
+          break;
+        }
+      }
+    }
+
+    if (!wrapsWholeExpression) {
+      break;
+    }
+
+    current = current.slice(1, -1).trim();
+  }
+
+  return current;
+}
+
+function splitTopLevel(expression: string, operator: "||" | "&&"): string[] {
+  const parts: string[] = [];
+  let depth = 0;
+  let start = 0;
+
+  for (let index = 0; index < expression.length; index += 1) {
+    const char = expression[index];
+    if (char === "(") {
+      depth += 1;
+      continue;
+    }
+    if (char === ")") {
+      depth -= 1;
+      continue;
+    }
+    if (depth === 0 && expression.slice(index, index + operator.length) === operator) {
+      parts.push(expression.slice(start, index).trim());
+      start = index + operator.length;
+      index += operator.length - 1;
+    }
+  }
+
+  parts.push(expression.slice(start).trim());
+  return parts;
+}
+
+function evaluateFeatureExpression(expression: string, enabledFeatures: Set<string>): boolean {
+  const normalized = stripOuterParentheses(expression);
+  if (enabledFeatures.has(normalized)) {
+    return true;
+  }
+  const orParts = splitTopLevel(normalized, "||");
+  if (orParts.length > 1) {
+    return orParts.some((part) => evaluateFeatureExpression(part, enabledFeatures));
+  }
+
+  const andParts = splitTopLevel(normalized, "&&");
+  if (andParts.length > 1) {
+    return andParts.every((part) => evaluateFeatureExpression(part, enabledFeatures));
+  }
+
+  return enabledFeatures.has(normalized);
+}
+
+function missingFeatures(encoding: GeneratedEncoding, enabledFeatures: Set<string>): string[] {
+  const compositeExpressions = encoding.features.filter((feature) => feature.includes("||") || feature.includes("&&"));
+  const missing = compositeExpressions.filter((feature) => !evaluateFeatureExpression(feature, enabledFeatures));
+
+  for (const feature of encoding.features) {
+    if (feature.includes("||") || feature.includes("&&")) {
+      continue;
+    }
+    if (!enabledFeatures.has(feature)) {
+      missing.push(feature);
+    }
+  }
+
+  return missing;
+}
+
 function hasFeatures(encoding: GeneratedEncoding, enabledFeatures: Set<string>): boolean {
-  return encoding.features.every((feature) => enabledFeatures.has(feature));
+  return missingFeatures(encoding, enabledFeatures).length === 0;
 }
 
 const SUPPORTED_AT_SYS_KEYS = new Set([
@@ -211,12 +301,13 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     }
 
     if (!hasFeatures(encoding, enabledFeatures)) {
+      const missing = missingFeatures(encoding, enabledFeatures);
       return {
         status: "undefined",
         word,
         encoding,
         mnemonic: encoding.mnemonic,
-        errors: [`missing features: ${encoding.features.filter((feature) => !enabledFeatures.has(feature)).join(", ")}`],
+        errors: [`missing features: ${missing.join(", ")}`],
       };
     }
 

@@ -1,0 +1,196 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "FDIV_float",
+    "encodingId": "FDIV_D_floatdp2",
+    "mnemonic": "FDIV",
+    "className": "Floating-point",
+    "fileName": "fdiv_float.xml",
+    "mask": 4292934656,
+    "value": 509614080,
+    "bitCount": 17,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 12,
+        "width": 4
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FDIV_float",
+    "encodingId": "FDIV_H_floatdp2",
+    "mnemonic": "FDIV",
+    "className": "Floating-point",
+    "fileName": "fdiv_float.xml",
+    "mask": 4292934656,
+    "value": 518002688,
+    "bitCount": 17,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 12,
+        "width": 4
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "instructionId": "FDIV_float",
+    "encodingId": "FDIV_S_floatdp2",
+    "mnemonic": "FDIV",
+    "className": "Floating-point",
+    "fileName": "fdiv_float.xml",
+    "mask": 4292934656,
+    "value": 505419776,
+    "bitCount": 17,
+    "fields": [
+      {
+        "name": "M",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "ftype",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 12,
+        "width": 4
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
+    ]
+  }
+];

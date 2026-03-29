@@ -55,6 +55,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-prfm-slc.s.yaml",
+    "caseIndex": 6,
+    "word": 4171589734,
+    "asmText": "prfm pldslckeep, [x3, x5]",
+    "encodingFile": "prfm_reg.xml",
+    "mnemonic": "PRFM",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.9a-prfm-slc.s.yaml",
     "caseIndex": 7,
     "word": 4185915494,
     "asmText": "prfm pldslckeep, [x3]",
@@ -104,6 +113,15 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "word": 4185915511,
     "asmText": "prfm pstslcstrm, [x3]",
     "encodingFile": "prfm_imm.xml",
+    "mnemonic": "PRFM",
+    "features": []
+  },
+  {
+    "sourceFile": "armv8.9a-prfm-slc.s.yaml",
+    "caseIndex": 13,
+    "word": 4171589734,
+    "asmText": "prfm pldslckeep, [x3, x5]",
+    "encodingFile": "prfm_reg.xml",
     "mnemonic": "PRFM",
     "features": []
   },
@@ -160,27 +178,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "prfm_imm.xml",
     "mnemonic": "PRFM",
     "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.9a-prfm-slc.s.yaml",
-    "caseIndex": 6,
-    "word": 4171589734,
-    "asmText": "prfm pldslckeep, [x3, x5]",
-    "encodingFile": "prfm_reg.xml",
-    "mnemonic": "PRFM",
-    "features": []
-  },
-  {
-    "sourceFile": "armv8.9a-prfm-slc.s.yaml",
-    "caseIndex": 13,
-    "word": 4171589734,
-    "asmText": "prfm pldslckeep, [x3, x5]",
-    "encodingFile": "prfm_reg.xml",
-    "mnemonic": "PRFM",
-    "features": []
   },
   {
     "sourceFile": "armv8.9a-prfm-slc.s.yaml",
@@ -192,3 +189,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": []
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

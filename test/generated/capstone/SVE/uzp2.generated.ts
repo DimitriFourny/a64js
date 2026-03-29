@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SVE/uzp2.s.yaml",
     "caseIndex": 0,
@@ -55,58 +53,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uzp2.s.yaml",
-    "caseIndex": 4,
-    "word": 86986223,
-    "asmText": "uzp2 p15.b, p15.b, p15.b",
-    "encodingFile": "uzp1_p_pp.xml",
-    "mnemonic": "UZP2",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uzp2.s.yaml",
-    "caseIndex": 5,
-    "word": 95374831,
-    "asmText": "uzp2 p15.s, p15.s, p15.s",
-    "encodingFile": "uzp1_p_pp.xml",
-    "mnemonic": "UZP2",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uzp2.s.yaml",
-    "caseIndex": 6,
-    "word": 91180527,
-    "asmText": "uzp2 p15.h, p15.h, p15.h",
-    "encodingFile": "uzp1_p_pp.xml",
-    "mnemonic": "UZP2",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uzp2.s.yaml",
-    "caseIndex": 7,
-    "word": 99569135,
-    "asmText": "uzp2 p15.d, p15.d, p15.d",
-    "encodingFile": "uzp1_p_pp.xml",
-    "mnemonic": "UZP2",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uzp2.s.yaml",
     "caseIndex": 8,
     "word": 88043519,
     "asmText": "uzp2 z31.b, z31.b, z31.b",
@@ -150,6 +96,61 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "word": 100626431,
     "asmText": "uzp2 z31.d, z31.d, z31.d",
     "encodingFile": "uzp1_z_zz.xml",
+    "mnemonic": "UZP2",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "SVE/uzp2.s.yaml",
+    "caseIndex": 4,
+    "word": 86986223,
+    "asmText": "uzp2 p15.b, p15.b, p15.b",
+    "encodingFile": "uzp1_p_pp.xml",
+    "mnemonic": "UZP2",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uzp2.s.yaml",
+    "caseIndex": 5,
+    "word": 95374831,
+    "asmText": "uzp2 p15.s, p15.s, p15.s",
+    "encodingFile": "uzp1_p_pp.xml",
+    "mnemonic": "UZP2",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uzp2.s.yaml",
+    "caseIndex": 6,
+    "word": 91180527,
+    "asmText": "uzp2 p15.h, p15.h, p15.h",
+    "encodingFile": "uzp1_p_pp.xml",
+    "mnemonic": "UZP2",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uzp2.s.yaml",
+    "caseIndex": 7,
+    "word": 99569135,
+    "asmText": "uzp2 p15.d, p15.d, p15.d",
+    "encodingFile": "uzp1_p_pp.xml",
     "mnemonic": "UZP2",
     "features": [
       "FEAT_SVE || FEAT_SME",

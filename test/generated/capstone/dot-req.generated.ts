@@ -28,6 +28,41 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 3,
+    "word": 238139398,
+    "asmText": "addv b6, v0.8b",
+    "encodingFile": "addv_advsimd.xml",
+    "mnemonic": "ADDV",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 5,
+    "word": 505686144,
+    "asmText": "fadd s0, s4, s4",
+    "encodingFile": "fadd_float.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 6,
+    "word": 509624418,
+    "asmText": "fmov d2, d3",
+    "encodingFile": "fmov_float.xml",
+    "mnemonic": "FMOV",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
     "caseIndex": 7,
     "word": 1035994082,
     "asmText": "ldr q2, [sp]",
@@ -71,17 +106,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
 export const UNSUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 3,
-    "word": 238139398,
-    "asmText": "addv b6, v0.8b",
-    "encodingFile": "addv_advsimd.xml",
-    "mnemonic": "ADDV",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
     "caseIndex": 4,
     "word": 1577976965,
     "asmText": "mov h5, v4.h[3]",
@@ -89,30 +113,6 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "mnemonic": "DUP",
     "features": [
       "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 5,
-    "word": 505686144,
-    "asmText": "fadd s0, s4, s4",
-    "encodingFile": "fadd_float.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 6,
-    "word": 509624418,
-    "asmText": "fmov d2, d3",
-    "encodingFile": "fmov_float.xml",
-    "mnemonic": "FMOV",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
     ]
   }
 ];

@@ -1,6 +1,18 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "arm64-nv-cond.s.yaml",
+    "caseIndex": 0,
+    "word": 511705084,
+    "asmText": "fcsel d28, d31, d31, nv",
+    "encodingFile": "fcsel_float.xml",
+    "mnemonic": "FCSEL",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "arm64-nv-cond.s.yaml",
     "caseIndex": 1,
     "word": 2592141312,
     "asmText": "csel x0, x0, x0, nv",
@@ -28,17 +40,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "arm64-nv-cond.s.yaml",
-    "caseIndex": 0,
-    "word": 511705084,
-    "asmText": "fcsel d28, d31, d31, nv",
-    "encodingFile": "fcsel_float.xml",
-    "mnemonic": "FCSEL",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

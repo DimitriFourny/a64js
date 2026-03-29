@@ -1,0 +1,81 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "uzp_mz_zz",
+    "encodingId": "uzp_mz_zz_2q",
+    "mnemonic": "UZP",
+    "className": "128-bit element",
+    "fileName": "uzp_mz_zz.xml",
+    "mask": 4292934657,
+    "value": 3240154113,
+    "bitCount": 18,
+    "fields": [
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 1,
+        "width": 4
+      },
+      {
+        "name": "op",
+        "lsb": 0,
+        "width": 1
+      }
+    ],
+    "features": [
+      "FEAT_SME2"
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "uzp_mz_zz",
+    "encodingId": "uzp_mz_zz_2",
+    "mnemonic": "UZP",
+    "className": "8-bit to 64-bit elements",
+    "fileName": "uzp_mz_zz.xml",
+    "mask": 4280351745,
+    "value": 3240153089,
+    "bitCount": 16,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 1,
+        "width": 4
+      },
+      {
+        "name": "op",
+        "lsb": 0,
+        "width": 1
+      }
+    ],
+    "features": [
+      "FEAT_SME2"
+    ],
+    "guards": []
+  }
+];

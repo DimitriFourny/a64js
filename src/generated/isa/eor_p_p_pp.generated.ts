@@ -1,0 +1,62 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "eor_p_p_pp",
+    "encodingId": "eor_p_p_pp_z",
+    "mnemonic": "EOR",
+    "className": "Not setting the condition flags",
+    "fileName": "eor_p_p_pp.xml",
+    "mask": 4293968400,
+    "value": 620773888,
+    "bitCount": 16,
+    "fields": [
+      {
+        "name": "op",
+        "lsb": 23,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 22,
+        "width": 1
+      },
+      {
+        "name": "Pm",
+        "lsb": 16,
+        "width": 4
+      },
+      {
+        "name": "Pg",
+        "lsb": 10,
+        "width": 4
+      },
+      {
+        "name": "o2",
+        "lsb": 9,
+        "width": 1
+      },
+      {
+        "name": "Pn",
+        "lsb": 5,
+        "width": 4
+      },
+      {
+        "name": "o3",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "Pd",
+        "lsb": 0,
+        "width": 4
+      }
+    ],
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ],
+    "guards": []
+  }
+];

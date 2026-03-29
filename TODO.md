@@ -32,10 +32,6 @@ bun test
 
 ## In Progress
 
-- SVE logical, compare, and move cleanup.
-  Anchors: `SVE/and.s.yaml`, `SVE/orr.s.yaml`, `SVE/eor.s.yaml`, `SVE/bic.s.yaml`, `SVE/mov.s.yaml`, `SVE/fcmeq.s.yaml`, `fcmeq_p_p_z0.xml`, `fcmeq_p_p_zz.xml`.
-  Done when: logical immediate/register families, move aliases, and floating compare predicate forms all disassemble with the correct predicate policy and aliases, and the associated SVE shards are promoted.
-
 ## Ready
 
 Priority rule:
@@ -50,42 +46,6 @@ Backlog target:
 - each item names the current source-YAML and XML anchors that still account for unsupported capstone cases
 - when a family spills into related alias XMLs, promote the whole family together before touching `tools/supported-files.ts`
 
-- SVE memory and matrix-multiply cleanup.
-  Anchors: `SVE/ld1b.s.yaml`, `SVE/st1b.s.yaml`, `SVE/bfmlal.s.yaml`, `SVE/fmul.s.yaml`, `SVE/matrix-multiply-fp64.s.yaml`.
-  Done when: remaining SVE memory, BF16/FP multiply, and matrix-multiply forms format correctly and can be added to `tools/supported-files.ts` without leaving related aliases behind.
-
-- SVE2 and SVE2p1 predicate/move/extract cleanup.
-  Anchors: `SVE2p1/pmov.s.yaml`, `SVE2p1/pext.s.yaml`, `pmov_p_zi.xml`, `pmov_z_pi.xml`.
-  Done when: predicate/vector move and extract forms render correctly across all arrangement variants, the family is promoted together, and the SVE2p1 backlog drops for both source files.
-
-- SVE2 complex arithmetic and FP8 convert cleanup.
-  Anchors: `SVE2/cmla.s.yaml`, `SVE2/sqrdcmlah.s.yaml`, `FP8_SVE2/fcvt.s.yaml`, `f1cvt_z_z8.xml`, `bf1cvt_z_z8.xml`, `f1cvtlt_z_z8.xml`, `bf1cvtlt_z_z8.xml`.
-  Done when: complex multiply-accumulate and FP8 convert families decode and disassemble with the correct lane, rotate, and FP8 suffix behavior, and the affected SVE2/FP8 shards are promoted.
-
-- SME zeroing cleanup from `SME/zero.s.yaml` and `SME2p1/zero.s.yaml`.
-  Anchors: `zero_za_i.xml`.
-  Done when: ZA zeroing forms across SME and SME2p1 format correctly for all tile/immediate variants and both source shards stop reporting unsupported cases.
-
-- SME2 integer dot-product cleanup from `SME2/svdot.s.yaml` and `SME2/uvdot.s.yaml`.
-  Anchors: `svdot_za_zzi.xml`, `svdot_za32_zzi.xml`, `uvdot_za_zzi.xml`, `uvdot_za32_zzi.xml`.
-  Done when: ZA dot-product forms decode/disassemble correctly across element widths and accumulator shapes, the family is promoted together, and both capstone shards are cleared.
-
-- SME2 integer max/min/shift/arithmetic cleanup.
-  Anchors: `SME2/smax.s.yaml`, `SME2/smin.s.yaml`, `SME2/umax.s.yaml`, `SME2/umin.s.yaml`, `SME2/sqdmulh.s.yaml`, `SME2/srshl.s.yaml`, `SME2/urshl.s.yaml`, `smax_mz_zzv.xml`, `smax_mz_zzw.xml`, `smin_mz_zzv.xml`, `smin_mz_zzw.xml`, `sqdmulh_mz_zzv.xml`, `sqdmulh_mz_zzw.xml`, `srshl_mz_zzv.xml`, `srshl_mz_zzw.xml`, `urshl_mz_zzv.xml`, `urshl_mz_zzw.xml`.
-  Done when: the remaining merged-ZA arithmetic families share consistent operand formatting across vector and tile variants, are promoted in coherent batches, and the SME2 arithmetic backlog drops materially.
-
-- SME2 floating max/min and ZIP/UZP cleanup.
-  Anchors: `SME2/fmax.s.yaml`, `SME2/fmaxnm.s.yaml`, `SME2/fmin.s.yaml`, `SME2/fminnm.s.yaml`, `SME2/zip.s.yaml`, `SME2/uzp.s.yaml`.
-  Done when: floating compare-select style arithmetic and permutation families render correctly across ZA forms and the whole cluster can be promoted without leaving sibling XMLs behind.
-
-- FP8 SME2 dot/MLA cleanup from `FP8_SME2/dot.s.yaml` and `FP8_SME2/mla.s.yaml`.
-  Anchors: the remaining FP8 SME2 dot-product and multiply-accumulate XMLs in those two source files.
-  Done when: FP8 SME2 dot and MLA forms decode/disassemble correctly across all remaining cases and both shards are promoted out of the unsupported set.
-
-- Remaining long-tail source-YAML batches after the high-volume families above.
-  Anchors: every source YAML still present in `test/generated/capstone/index.generated.ts` after the named batches are complete.
-  Done when: the backlog is refreshed, new highest-value families are pulled into concrete work items, and the final sweep continues until `UNSUPPORTED_CAPSTONE_CASES.length === 0` and all committed capstone tests pass.
-
 ## Blocked
 
 - SVE arithmetic core batch from `SVE/add.s.yaml`, `SVE/sub.s.yaml`, `SVE/subr.s.yaml`, `SVE/asr.s.yaml`, `SVE/lsl.s.yaml`, and `SVE/lsr.s.yaml` is blocked after implementation because the required `bun test` run still fails on unrelated `neon-mov.s.yaml#9` (`MOVI 0x0f008420`): the promoted SVE arithmetic/shift/inc shards now generate cleanly, but the shared unsupported-capstone assertion stops on that separate queued family.
@@ -95,9 +55,24 @@ Backlog target:
 
 Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
 
+- AdvSIMD across-lane cleanup from `neon-across.s.yaml` completed; promoted `saddlv`, `uaddlv`, `smaxv`, `sminv`, `umaxv`, `uminv`, `addv`, `fmaxnmv`, `fminnmv`, `fmaxv`, and `fminv`, added a shared across-lane reduction formatter for scalar-destination/vector-source operand sizing, and cleared the shard.
+- AdvSIMD max/min cleanup from `neon-max-min.s.yaml` completed; promoted `smax`/`smin`/`umax`/`umin` and `fmax`/`fmin`/`fmaxnm`/`fminnm`, reused the shared AdvSIMD three-same formatter path, and cleared the shard.
+- AdvSIMD max/min pairwise cleanup from `neon-max-min-pairwise.s.yaml` completed; promoted `smaxp`, `sminp`, `umaxp`, `uminp`, and the floating `fmaxp`/`fminp`/`fmaxnmp`/`fminnmp` vector-plus-scalar pair XMLs, added shared floating pairwise scalar/vector operand formatting, and cleared the shard.
+- FP8 miscellaneous cleanup from `FP8/miscellaneous-fp8.s.yaml` completed; promoted `bf12cvtl_advsimd.xml`, `f12cvtl_advsimd.xml`, `fcvtn_advsimd_{168,328}.xml`, and `fscale_advsimd.xml`, added the AdvSIMD FP8 convert/narrow/three-same formatter paths plus the `...2` mnemonic suffix handling, and cleared the FP8 miscellaneous shard.
+- Core A64 scalar memory/exclusive tail cleanup from `basic-a64-instructions.s.yaml` completed; promoted the scalar literal `ldr`, exclusive/acquire (`stxr`/`ldxr`/`stxp`/`ldxp`/`stlxr`/`ldaxr`/`ldar`) tail, unprivileged/unscaled memory (`ldur*`/`stur*`/`ldtr*`/`sttr*`/`prfum`), remaining register-offset byte/halfword/`ldrsw`/`prfm`, and `stnp_gen`, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `51`.
+- SME2 floating max/min and ZIP/UZP cleanup completed; promoted `f{max,maxnm,min,minnm}_mz_{zzv,zzw}` plus the related BF16 `bf{max,maxnm,min,minnm}_mz_{zzv,zzw}` siblings and `zip_mz_zz`/`uzp_mz_zz`, fixed ZA multi-vector arithmetic/permutation formatting and the `MaxImplementedSVL()` parser skip for the `Q` encodings, and cleared `SME2/{fmax,fmaxnm,fmin,fminnm,zip,uzp}.s.yaml`.
+- FP8 SME2 dot/MLA cleanup completed; promoted `fdot_za{,32}_{z8z8v,z8z8i,z8z8w}`, `fvdot_za_z8z8i`, `fvdot{b,t}_za32_z8z8i`, `fmlal_za_z8z8{v,i,w}`, and `fmlall_za32_z8z8{v,i,w}`, added the FP8 SME ZA dot/long-accumulate formatter paths, and cleared `FP8_SME2/{dot,mla}.s.yaml`.
+- SME zeroing cleanup from `SME/zero.s.yaml` and `SME2p1/zero.s.yaml` completed; promoted `zero_za_i` plus the SME2p1 `zero_za{1,2,4}_ri` siblings, added shortest-mask/base ZA zero formatting, and cleared both zero source shards.
+- SME2 integer max/min/shift/arithmetic cleanup from `SME2/{smax,smin,umax,umin,sqdmulh,srshl,urshl}.s.yaml` completed; promoted the merged-vector `*_mz_{zzv,zzw}` families, reused the shared SME arithmetic formatter path for single-vector and multi-vector variants, and cleared all seven source shards.
+- SME2 integer dot-product cleanup from `SME2/svdot.s.yaml` and `SME2/uvdot.s.yaml` completed; promoted `svdot_za_{zzi,za32_zzi}` and `uvdot_za_{zzi,za32_zzi}`, reused the ZA dot-product formatter path for the vertical variants, and cleared both source shards.
+- SVE2 complex arithmetic and FP8 convert cleanup completed; promoted `cmla_z_{zzz,zzzi}`, `sqrdcmlah_z_{zzz,zzzi}`, and the FP8 SVE2 convert XMLs, with correct rotate/lane formatting and `SVE2/{cmla,sqrdcmlah}.s.yaml` plus `FP8_SVE2/fcvt.s.yaml` cleared.
+- SVE2 and SVE2p1 predicate/move/extract cleanup completed; promoted `pmov_p_zi`, `pmov_z_pi`, `pext_pn_rr`, and `pext_pp_rr`, fixed indexed predicate/vector move and extract formatting, and cleared `SVE2p1/{pmov,pext}.s.yaml`.
+- SVE memory and matrix-multiply cleanup completed; promoted `ld1b`/`st1b`, `ld1ro*`, `bfmlalb`/`bfmlalt`, the remaining SVE `fmul` forms, `fmmla`, and the related `zip`/`uzp`/`trn` vector permutations, clearing `SVE/{ld1b,st1b,bfmlal,fmul,matrix-multiply-fp64}.s.yaml`.
+- SVE logical, compare, and move cleanup completed; promoted the logical immediate/register, move-alias, `SEL` move-alias, and floating predicate-compare families, clearing `SVE/{and,bic,dup,dupm,eor,fcmeq,mov,orr,sel}.s.yaml` plus related `fcm*`, `eon`, and `orn` alias shards.
 - AdvSIMD multi-structure load/store cleanup from `neon-simd-ldst-multi-elem.s.yaml` and `neon-simd-post-ldst-multi-elem.s.yaml` completed; promoted `ld2`/`ld3`/`ld4` plus `st2`/`st3`/`st4` multiple-structure forms, fixed register-count formatting for non-post-index encodings, and cleared both source shards.
 - AdvSIMD immediate move/logical-immediate cleanup from `neon-mov.s.yaml` completed; promoted `movi`/`mvni`/`bic`/`orr` immediates plus `fmov` and `mov` vector aliases, clearing `neon-mov.s.yaml` and unblocking the full test suite.
 - AdvSIMD BF16 and scalar BF16 cleanup from `armv8.6a-bf16.s.yaml` completed; promoted `bfdot`, `bfmmla`, `bfcvtn`/`bfcvtn2`, `bfcvt`, and `bfmlal{b,t}` vector/by-element forms, clearing the BF16 shard.
+- Core A64 scalar FP arithmetic/unary/select cleanup from `basic-a64-instructions.s.yaml` completed; promoted `fcsel`, scalar `fmov`/`fabs`/`fneg`/`fsqrt`, `frint{n,p,m,z,a,x,i}`, `fmul`/`fdiv`/`fadd`/`fsub`/`fmax`/`fmin`/`fmaxnm`/`fminnm`/`fnmul`, and `fmadd`/`fmsub`/`fnmadd`/`fnmsub`, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `111`.
 - Core A64 scalar FP/int/control cleanup from `basic-a64-instructions.s.yaml` completed; promoted the scalar FP/int/control batch plus related `MSR`/`SYSL` aliases, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `182`.
 - Core A64 scalar load/store leftovers from `basic-a64-instructions.s.yaml` completed; promoted `ldrsh_reg`, `ldrsb_reg`, `str_reg_gen`, `stp_gen`, `stlxp`, and `ldnp_fpsimd`, bringing `basic-a64-instructions.s.yaml` unsupported cases down to `161`.
 - AdvSIMD miscellaneous unary/narrow/widen cleanup from `neon-simd-misc.s.yaml` completed; promoted `clz`, `xtn`/`*xtn2`, `shll`/`shll2`, `fabs`, `fneg`, `frint*`, and `fcvtns`, bringing `neon-simd-misc.s.yaml` unsupported cases down to `96`.
@@ -108,39 +83,38 @@ Use one line per completed work item with a concise outcome note. Keep detailed 
 
 Current capstone coverage snapshot:
 
-- `22636` supported capstone cases
-- `11921` unsupported capstone cases
-- `608` XML instruction files currently listed in `tools/supported-files.ts`
-- `1278` distinct unsupported XML instruction files
-- `794` capstone source YAML files containing unsupported cases
-- `739` distinct unsupported mnemonics
+- `25024` supported capstone cases
+- `9533` unsupported capstone cases
+- `832` XML instruction files currently listed in `tools/supported-files.ts`
+- `1068` distinct unsupported XML instruction files
+- `739` capstone source YAML files containing unsupported cases
+- `657` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `basic-a64-instructions.s.yaml`: `161`
-- `SVE2p1/pmov.s.yaml`: `80`
-- `SME2/svdot.s.yaml`: `72`
-- `SME2/uvdot.s.yaml`: `72`
-- `FP8_SVE2/fcvt.s.yaml`: `64`
-- `SME2/smax.s.yaml`: `64`
+- `basic-a64-instructions.s.yaml`: `51`
+- `neon-perm.s.yaml`: `42`
+- `neon-simd-copy.s.yaml`: `41`
+- `neon-simd-misc.s.yaml`: `39`
+- `SVE/fcmla.s.yaml`: `38`
 
 Largest unsupported feature sets:
 
-- `FEAT_SVE || FEAT_SME, FEAT_SVE, FEAT_SME`: `3308`
-- `FEAT_SVE2 || FEAT_SME, FEAT_SVE2, FEAT_SME`: `1950`
-- `FEAT_SME2`: `1725`
-- `FEAT_SME2 || FEAT_SVE2p1, FEAT_SME2, FEAT_SVE2p1`: `785`
-- `FEAT_SVE2p1 || FEAT_SME2p1, FEAT_SVE2p1, FEAT_SME2p1`: `774`
-- `FEAT_AdvSIMD`: `729`
-- `FEAT_SVE`: `386`
-- `FEAT_SME`: `268`
-- `FEAT_SVE || FEAT_SME`: `152`
-- `FEAT_SVE2`: `126`
+- `FEAT_SME`: `5022`
+- `FEAT_SVE`: `3272`
+- `FEAT_SVE || FEAT_SME`: `2850`
+- `FEAT_SVE2`: `2069`
+- `FEAT_SVE2 || FEAT_SME`: `1861`
+- `FEAT_SME2`: `1836`
+- `FEAT_SVE2p1`: `1530`
+- `FEAT_SME2 || FEAT_SVE2p1`: `725`
+- `FEAT_SME2p1`: `724`
+- `FEAT_AdvSIMD`: `713`
 
 Implication:
 
-- the remaining work is still concentrated in SVE, SME, SME2, and AdvSIMD
-- the CSSC/core-extension cleanup batch is cleared, so the next ready priority should shift to SVE logical, compare, and move cleanup
+- the remaining work is concentrated in `basic-a64-instructions.s.yaml` plus the AdvSIMD/SVE/SME long tail
+- the ready queue is now empty; future batching should be re-seeded from the current highest-value unsupported source files
 - the next highest-value batches are still family work, not one-off instruction fixes
 
 ## Meaning Of "Unsupported"

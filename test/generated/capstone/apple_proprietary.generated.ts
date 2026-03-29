@@ -1,6 +1,18 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "apple_proprietary.yaml",
+    "caseIndex": 0,
+    "word": 521150464,
+    "asmText": "ldx xzr",
+    "encodingFile": "fmadd_float.xml",
+    "mnemonic": "FMADD",
+    "features": [
+      "FEAT_FP",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "apple_proprietary.yaml",
     "caseIndex": 8,
     "word": 3759153152,
     "asmText": "stzi x0",
@@ -24,18 +36,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
 ];
 
 export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "apple_proprietary.yaml",
-    "caseIndex": 0,
-    "word": 521150464,
-    "asmText": "ldx xzr",
-    "encodingFile": "fmadd_float.xml",
-    "mnemonic": "FMADD",
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
-    ]
-  },
   {
     "sourceFile": "apple_proprietary.yaml",
     "caseIndex": 6,
