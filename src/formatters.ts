@@ -220,6 +220,20 @@ function addSubShiftedOperands(inst: DecodedInstruction): Operand[] {
   return ops;
 }
 
+function checkedPointerAddSubOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const shift = fields.imm3 ?? 0;
+  const ops: Operand[] = [
+    gpReg(64, fields.Rd, "sp"),
+    gpReg(64, fields.Rn, "sp"),
+    gpReg(64, fields.Rm, "zr"),
+  ];
+  if (shift !== 0) {
+    ops.push({ kind: "text", text: `lsl #${shift}` });
+  }
+  return ops;
+}
+
 function addSubExtendedPreferredLsl(width: 32 | 64, option: number, rd: number | undefined, rn: number): boolean {
   if (width === 32) {
     return option === 2 && (rd === 31 || rn === 31);
@@ -285,6 +299,22 @@ function twoSourceIntegerOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function crc32Operands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const rmWidth = (fields.sf ?? 0) === 1 ? 64 : 32;
+  return [
+    gpReg(32, fields.Rd, "zr"),
+    gpReg(32, fields.Rn, "zr"),
+    gpReg(rmWidth, fields.Rm, "zr"),
+  ];
+}
+
+function exceptionImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const imm = BigInt(fields.imm16 ?? 0);
+  return [{ kind: "text", text: imm === 0n ? "#0" : formatSignedHexImmediate(imm) }];
+}
+
 function signExtendImmediate(value: number, width: number): number {
   const shift = 32 - width;
   return (value << shift) >> shift;
@@ -329,11 +359,16 @@ function logicalShiftedRegisterOperands(inst: DecodedInstruction): Operand[] {
   const width = widthFromSf(fields.sf);
   const shiftType = (["lsl", "lsr", "asr", "ror"] as const)[fields.shift ?? 0] ?? "lsl";
   const shiftAmount = fields.imm6 ?? 0;
-  const ops: Operand[] = [
-    gpReg(width, fields.Rd, "zr"),
-    gpReg(width, fields.Rn, "zr"),
-    gpReg(width, fields.Rm, "zr"),
-  ];
+  const ops: Operand[] = inst.encoding!.fileName === "tst_ands_log_shift.xml"
+    ? [
+      gpReg(width, fields.Rn, "zr"),
+      gpReg(width, fields.Rm, "zr"),
+    ]
+    : [
+      gpReg(width, fields.Rd, "zr"),
+      gpReg(width, fields.Rn, "zr"),
+      gpReg(width, fields.Rm, "zr"),
+    ];
 
   if (shiftAmount !== 0 || shiftType !== "lsl") {
     ops.push({ kind: "text", text: `${shiftType} #${shiftAmount}` });
@@ -406,6 +441,10 @@ function logicalImmediateOperands(inst: DecodedInstruction): Operand[] {
     return [gpReg(width, fields.Rn, "zr"), { kind: "imm", value: imm }];
   }
 
+  if (inst.encoding!.fileName === "mov_orr_log_imm.xml") {
+    return [gpReg(width, fields.Rd, "zr"), { kind: "imm", value: imm }];
+  }
+
   return [
     gpReg(width, fields.Rd, "zr"),
     gpReg(width, fields.Rn, "zr"),
@@ -422,6 +461,44 @@ function moveWideOperands(inst: DecodedInstruction): Operand[] {
     { kind: "imm", value: BigInt(fields.imm16), shift },
   ];
   return ops;
+}
+
+function hintOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const imm = ((fields.CRm ?? 0) << 3) | (fields.op2 ?? 0);
+  return [{ kind: "text", text: `#${imm}` }];
+}
+
+function btiOperands(inst: DecodedInstruction): Operand[] {
+  const targets = ((inst.fields!.op2 ?? 0) >> 1) & 0b11;
+  switch (targets) {
+    case 0b01:
+      return [{ kind: "text", text: "c" }];
+    case 0b10:
+      return [{ kind: "text", text: "j" }];
+    case 0b11:
+      return [{ kind: "text", text: "jc" }];
+    default:
+      return [];
+  }
+}
+
+function noOperands(): Operand[] {
+  return [];
+}
+
+function setfOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [gpReg(32, fields.Rn, "zr")];
+}
+
+function rmifOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    gpReg(64, fields.Rn, "zr"),
+    { kind: "text", text: `#${fields.imm6 ?? 0}` },
+    { kind: "text", text: `#${fields.mask ?? 0}` },
+  ];
 }
 
 function bitfieldImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -712,6 +789,19 @@ function smstartSmstopOperands(inst: DecodedInstruction): Operand[] {
 function gcsSyslAliasOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   return fields.Rt === 31 ? [] : [gpReg(64, fields.Rt, "zr")];
+}
+
+function chkfeatOperands(): Operand[] {
+  return [gpReg(64, 16, "zr")];
+}
+
+function gcsbOperands(): Operand[] {
+  return [{ kind: "text", text: "dsync" }];
+}
+
+function specResContextOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [{ kind: "text", text: "rctx" }, gpReg(64, fields.Rt, "zr")];
 }
 
 function rawSysOperands(inst: DecodedInstruction): Operand[] {
@@ -1800,6 +1890,78 @@ function advsimdMoveRegisterAliasOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function advsimdLaneSizeFromImm5(imm5: number | undefined): number {
+  const encoded = imm5 ?? 0;
+  for (let size = 0; size < 4; size += 1) {
+    if (((encoded >> size) & 1) === 1) {
+      return size;
+    }
+  }
+  return 0;
+}
+
+function advsimdLaneIndexFromImm5(imm5: number | undefined, size: number): number {
+  return (imm5 ?? 0) >> (size + 1);
+}
+
+function advsimdCopyGeneralToElementOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdLaneSizeFromImm5(fields.imm5);
+  const lane = advsimdLaneFromSize(size);
+  const index = advsimdLaneIndexFromImm5(fields.imm5, size);
+  const width = lane === "d" ? 64 : 32;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${lane}[${index}]` },
+    gpReg(width, fields.Rn ?? 0, "zr"),
+  ];
+}
+
+function advsimdCopyElementToElementOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdLaneSizeFromImm5(fields.imm5);
+  const lane = advsimdLaneFromSize(size);
+  const dstIndex = advsimdLaneIndexFromImm5(fields.imm5, size);
+  const srcIndex = (fields.imm4 ?? 0) >> size;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${lane}[${dstIndex}]` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${lane}[${srcIndex}]` },
+  ];
+}
+
+function advsimdCopyElementToGeneralOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdLaneSizeFromImm5(fields.imm5);
+  const lane = advsimdLaneFromSize(size);
+  const index = advsimdLaneIndexFromImm5(fields.imm5, size);
+  const width = (fields.Q ?? 0) === 1 ? 64 : 32;
+  return [
+    gpReg(width, fields.Rd ?? 0, "zr"),
+    { kind: "text", text: `v${fields.Rn ?? 0}.${lane}[${index}]` },
+  ];
+}
+
+function advsimdScalarDuplicateElementOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdLaneSizeFromImm5(fields.imm5);
+  const lane = advsimdLaneFromSize(size);
+  const index = advsimdLaneIndexFromImm5(fields.imm5, size);
+  return [
+    { kind: "text", text: `${lane}${fields.Rd ?? 0}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${lane}[${index}]` },
+  ];
+}
+
+function advsimdExtractOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const arrangement = (fields.Q ?? 0) === 1 ? "16b" : "8b";
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${arrangement}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${arrangement}` },
+    { kind: "text", text: `#${fields.imm4 ?? 0}` },
+  ];
+}
+
 function advsimdElementSize(inst: DecodedInstruction): number {
   const fields = inst.fields!;
   const className = inst.encoding!.className.toLowerCase();
@@ -1835,6 +1997,7 @@ function advsimdImmediateShiftOperands(inst: DecodedInstruction): Operand[] {
   const immh = fields.immh ?? 0;
   const imm = (immh << 3) | (fields.immb ?? 0);
   const isLeftShift =
+    fileName === "shl_advsimd.xml" ||
     fileName === "sqshl_advsimd_imm.xml" ||
     fileName === "sqshlu_advsimd.xml" ||
     fileName === "sli_advsimd.xml";
@@ -1912,6 +2075,34 @@ function advsimdUnaryWithImmediateOperands(inst: DecodedInstruction): Operand[] 
   return operands;
 }
 
+function advsimdFloatingConvertNarrowOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = (fields.sz ?? 0) === 1
+    ? ((fields.Q ?? 0) === 1 ? "4s" : "2s")
+    : ((fields.Q ?? 0) === 1 ? "8h" : "4h");
+  const sourceArrangement = (fields.sz ?? 0) === 1
+    ? ((fields.Q ?? 0) === 1 ? "4d" : "2d")
+    : ((fields.Q ?? 0) === 1 ? "8s" : "4s");
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+  ];
+}
+
+function advsimdFloatingConvertLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destArrangement = (fields.sz ?? 0) === 1 ? "2d" : "4s";
+  const sourceArrangement = (fields.sz ?? 0) === 1
+    ? ((fields.Q ?? 0) === 1 ? "4s" : "2s")
+    : ((fields.Q ?? 0) === 1 ? "8h" : "4h");
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+  ];
+}
+
 function advsimdThreeSameOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const size = advsimdElementSize(inst);
@@ -1919,6 +2110,19 @@ function advsimdThreeSameOperands(inst: DecodedInstruction): Operand[] {
     { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
     { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, size, fields.Q) },
     { kind: "text", text: advsimdVectorRegisterText(fields.Rm ?? 0, size, fields.Q) },
+  ];
+}
+
+function advsimdTableLookupOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const arrangement = (fields.Q ?? 0) === 1 ? "16b" : "8b";
+  const registerCount = ((fields.len ?? 0) & 0x3) + 1;
+  const tableRegisters = Array.from({ length: registerCount }, (_, index) => `v${((fields.Rn ?? 0) + index) & 31}.16b`);
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `{ ${tableRegisters.join(", ")} }` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.${arrangement}` },
   ];
 }
 
@@ -1935,6 +2139,18 @@ function advsimdFloatingPairwiseOperands(inst: DecodedInstruction): Operand[] {
   return [
     { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
     { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
+  ];
+}
+
+function advsimdIntegerPairwiseOperands(inst: DecodedInstruction): Operand[] {
+  if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+    return advsimdThreeSameOperands(inst);
+  }
+
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `d${fields.Rd ?? 0}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.2d` },
   ];
 }
 
@@ -2080,8 +2296,10 @@ function advsimdNarrowOperands(inst: DecodedInstruction): Operand[] {
 
 function advsimdShiftLeftLongOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const size = advsimdElementSize(inst);
-  const shift = 8 << size;
+  const size = fields.size ?? (highestSetBitNZ(fields.immh) as 0 | 1 | 2);
+  const shift = fields.size !== undefined
+    ? 8 << size
+    : (((fields.immh ?? 0) << 3) | (fields.immb ?? 0)) - (8 << size);
 
   return [
     { kind: "text", text: `v${fields.Rd ?? 0}.${advsimdLongDestArrangement(size)}` },
@@ -2090,8 +2308,29 @@ function advsimdShiftLeftLongOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function advsimdExtendLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = highestSetBitNZ(fields.immh) as 0 | 1 | 2;
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${advsimdLongDestArrangement(size)}` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.${advsimdLongSourceArrangement(size, fields.Q)}` },
+  ];
+}
+
 function advsimdWideningThreeRegOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
+  const className = inst.encoding!.className.toLowerCase();
+
+  if (className.includes("scalar")) {
+    const sourceSize = fields.size ?? 0;
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, sourceSize + 1) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, sourceSize) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rm ?? 0, sourceSize) },
+    ];
+  }
+
   const destArrangement = advsimdLongDestArrangement(fields.size);
   const sourceArrangement = advsimdLongSourceArrangement(fields.size, fields.Q);
 
@@ -2111,6 +2350,77 @@ function advsimdWideThreeRegOperands(inst: DecodedInstruction): Operand[] {
     { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
     { kind: "text", text: `v${fields.Rn ?? 0}.${destArrangement}` },
     { kind: "text", text: `v${fields.Rm ?? 0}.${sourceArrangement}` },
+  ];
+}
+
+function advsimdScalarOrVectorThreeSameOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const className = inst.encoding!.className.toLowerCase();
+  const size = advsimdElementSize(inst);
+
+  if (className.includes("scalar")) {
+    return [
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, size) },
+      { kind: "text", text: advsimdScalarRegisterText(fields.Rm ?? 0, size) },
+    ];
+  }
+
+  return [
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, size, fields.Q) },
+    { kind: "text", text: advsimdVectorRegisterText(fields.Rm ?? 0, size, fields.Q) },
+  ];
+}
+
+function advsimdCryptoBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: "v" + (fields.Rd ?? 0) + ".16b" },
+    { kind: "text", text: "v" + (fields.Rn ?? 0) + ".16b" },
+  ];
+}
+
+function advsimdCryptoSha1HashOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: advsimdScalarRegisterText(fields.Rd ?? 0, 2) },
+    { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, 2) },
+  ];
+}
+
+function advsimdCryptoVector4sBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.4s` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.4s` },
+  ];
+}
+
+function advsimdCryptoSha1ThreeRegOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `q${fields.Rd ?? 0}` },
+    { kind: "text", text: advsimdScalarRegisterText(fields.Rn ?? 0, 2) },
+    { kind: "text", text: `v${fields.Rm ?? 0}.4s` },
+  ];
+}
+
+function advsimdCryptoSha256HashOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `q${fields.Rd ?? 0}` },
+    { kind: "text", text: `q${fields.Rn ?? 0}` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.4s` },
+  ];
+}
+
+function advsimdCryptoVector4sThreeRegOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.4s` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.4s` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.4s` },
   ];
 }
 
@@ -2390,10 +2700,12 @@ function advsimdSaturatingRoundingDoublingMultiplyOperands(inst: DecodedInstruct
 
 function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const size = fields.size;
-  const isBfloat16 = inst.encoding!.fileName.startsWith("bfdot_");
+  const fileName = inst.encoding!.fileName;
+  const isBfloat16 = fileName.startsWith("bfdot_");
+  const isMixedSignByElement = fileName === "sudot_advsimd_elt.xml" || fileName === "usdot_advsimd_elt.xml";
+  const size = isMixedSignByElement ? 2 : fields.size;
 
-  if (inst.encoding!.fileName.endsWith("_vec.xml")) {
+  if (fileName.endsWith("_vec.xml")) {
     return [
       { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
       {
@@ -2411,7 +2723,13 @@ function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
     ];
   }
 
-  if (inst.encoding!.fileName.endsWith("_elt.xml")) {
+  if (fileName.endsWith("_elt.xml")) {
+    const sourceIndex = isMixedSignByElement
+      ? (((fields.M ?? 0) << 4) | (fields.Rm ?? 0))
+      : advsimdByElementSourceIndex(fields, size);
+    const elementIndex = isMixedSignByElement
+      ? (((fields.H ?? 0) << 1) | (fields.L ?? 0))
+      : advsimdByElementIndex(fields, size);
     return [
       { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, size, fields.Q) },
       {
@@ -2423,8 +2741,8 @@ function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
       {
         kind: "text",
         text: isBfloat16
-          ? `v${advsimdByElementSourceIndex(fields, size)}.2h[${advsimdByElementIndex(fields, size)}]`
-          : `v${advsimdByElementSourceIndex(fields, size)}.4b[${advsimdByElementIndex(fields, size)}]`,
+          ? `v${sourceIndex}.2h[${elementIndex}]`
+          : `v${sourceIndex}.4b[${elementIndex}]`,
       },
     ];
   }
@@ -2462,6 +2780,15 @@ function advsimdBfloat16MultiplyAccumulateOperands(inst: DecodedInstruction): Op
   return [];
 }
 
+function advsimdMatrixMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.4s` },
+    { kind: "text", text: `v${fields.Rn ?? 0}.16b` },
+    { kind: "text", text: `v${fields.Rm ?? 0}.16b` },
+  ];
+}
+
 function advsimdMultipleStructureOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const encodingId = inst.encoding!.encodingId;
@@ -2497,7 +2824,7 @@ function advsimdCompareOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const fileName = encoding.fileName;
   const className = encoding.className.toLowerCase();
-  const isFloat = fileName.startsWith("fcm");
+  const isFloat = fileName.startsWith("fcm") || fileName.startsWith("facg");
   const isScalar = className.includes("scalar");
   const isZeroForm =
     fileName.includes("_zero") ||
@@ -4313,10 +4640,14 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return adcOperands(inst);
     case "madd.xml":
     case "msub.xml":
+    case "maddpt.xml":
+    case "msubpt.xml":
       return threeSourceIntegerOperands(inst);
     case "clz_int.xml":
     case "rbit_int.xml":
     case "rev16_int.xml":
+    case "rev32_int.xml":
+    case "cls_int.xml":
     case "abs.xml":
     case "cnt.xml":
     case "ctz.xml":
@@ -4324,7 +4655,12 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "mul_madd.xml":
       return mulAliasOperands(inst);
     case "mneg_msub.xml":
+    case "udiv.xml":
+    case "sdiv.xml":
       return twoSourceIntegerOperands(inst);
+    case "crc32.xml":
+    case "crc32c.xml":
+      return crc32Operands(inst);
     case "smaddl.xml":
     case "smsubl.xml":
     case "umaddl.xml":
@@ -4351,6 +4687,15 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return clrexOperands(inst);
     case "isb.xml":
       return isbOperands(inst);
+    case "svc.xml":
+    case "hvc.xml":
+    case "smc.xml":
+    case "brk.xml":
+    case "hlt.xml":
+    case "dcps1.xml":
+    case "dcps2.xml":
+    case "dcps3.xml":
+      return exceptionImmediateOperands(inst);
     case "at_sys.xml":
       return systemInstructionAliasOperands(inst, AT_SYSTEM_ALIASES);
     case "dc_sys.xml":
@@ -4364,9 +4709,22 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return smstartSmstopOperands(inst);
     case "sysl.xml":
       return syslOperands(inst);
+    case "sys.xml":
+      return rawSysOperands(inst);
+    case "cfp_sys.xml":
+    case "dvp_sys.xml":
+    case "cpp_sys.xml":
+    case "cosp_sys.xml":
+      return specResContextOperands(inst);
+    case "chkfeat.xml":
+      return chkfeatOperands();
     case "gcsss2_sysl.xml":
     case "gcspopm_sysl.xml":
+    case "gcsss1_sys.xml":
+    case "gcspushm_sys.xml":
       return gcsSyslAliasOperands(inst);
+    case "gcsb.xml":
+      return gcsbOperands();
     case "ldapr.xml":
       return ldaprOperands(inst);
     case "ldiapp.xml":
@@ -4384,6 +4742,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ldapur_fpsimd.xml":
       return rcpcUnscaledOperands(inst);
     case "stlr.xml":
+    case "stlrb.xml":
+    case "stlrh.xml":
       return stlrOperands(inst);
     case "stilp.xml":
       return stilpOperands(inst);
@@ -4465,11 +4825,19 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return logicalShiftedRegisterOperands(inst);
     case "mov_orr_log_shift.xml":
       return movRegisterAliasOperands(inst);
+    case "bic_log_shift.xml":
+    case "orr_log_shift.xml":
+    case "orn_log_shift.xml":
+    case "ands_log_shift.xml":
+    case "bics.xml":
+    case "tst_ands_log_shift.xml":
+      return logicalShiftedRegisterOperands(inst);
     case "and_log_imm.xml":
     case "ands_log_imm.xml":
     case "tst_ands_log_imm.xml":
     case "orr_log_imm.xml":
     case "eor_log_imm.xml":
+    case "mov_orr_log_imm.xml":
       return logicalImmediateOperands(inst);
     case "ldr_imm_gen.xml":
     case "str_imm_gen.xml":
@@ -4616,6 +4984,32 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveCopyScalarVectorOperands(inst);
     case "extr.xml":
       return extractRegisterOperands(inst);
+    case "bti.xml":
+      return btiOperands(inst);
+    case "hint.xml":
+      return hintOperands(inst);
+    case "setf.xml":
+      return setfOperands(inst);
+    case "rmif.xml":
+      return rmifOperands(inst);
+    case "nop.xml":
+    case "yield.xml":
+    case "wfe.xml":
+    case "wfi.xml":
+    case "sev.xml":
+    case "sevl.xml":
+    case "cfinv.xml":
+    case "xaflag.xml":
+    case "axflag.xml":
+    case "dgh.xml":
+    case "esb.xml":
+    case "csdb.xml":
+    case "ssbb_dsb.xml":
+    case "pssbb_dsb.xml":
+    case "sb.xml":
+    case "eret.xml":
+    case "drps.xml":
+      return noOperands();
     case "rev.xml":
       return oneSourceIntegerOperands(inst);
     case "lsl_lslv.xml":
@@ -4627,14 +5021,24 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sqrdmlah_advsimd_elt.xml":
     case "sqrdmlsh_advsimd_vec.xml":
     case "sqrdmlsh_advsimd_elt.xml":
+    case "sqdmulh_advsimd_vec.xml":
+    case "sqrdmulh_advsimd_vec.xml":
       return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
     case "mla_advsimd_elt.xml":
     case "mls_advsimd_elt.xml":
+    case "mul_advsimd_elt.xml":
     case "fmla_advsimd_elt.xml":
     case "fmls_advsimd_elt.xml":
     case "fmul_advsimd_elt.xml":
     case "fmulx_advsimd_elt.xml":
       return advsimdByElementMultiplyAccumulateOperands(inst);
+    case "smull_advsimd_elt.xml":
+    case "umull_advsimd_elt.xml":
+    case "sqdmull_advsimd_elt.xml":
+      return advsimdByElementLongOperands(inst);
+    case "sqdmulh_advsimd_elt.xml":
+    case "sqrdmulh_advsimd_elt.xml":
+      return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
     case "fcmla_advsimd_vec.xml":
     case "fcadd_advsimd_vec.xml":
       return advsimdComplexVectorOperands(inst);
@@ -4656,12 +5060,32 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fminp_advsimd_pair.xml":
     case "fmaxnmp_advsimd_pair.xml":
     case "fminnmp_advsimd_pair.xml":
+    case "faddp_advsimd_vec.xml":
+    case "faddp_advsimd_pair.xml":
     case "fmaxp_advsimd_vec.xml":
     case "fminp_advsimd_vec.xml":
     case "fmaxnmp_advsimd_vec.xml":
     case "fminnmp_advsimd_vec.xml":
       return advsimdFloatingPairwiseOperands(inst);
+    case "addp_advsimd_vec.xml":
+    case "addp_advsimd_pair.xml":
+      return advsimdIntegerPairwiseOperands(inst);
+    case "aese_advsimd.xml":
+    case "aesd_advsimd.xml":
+    case "aesmc_advsimd.xml":
+    case "aesimc_advsimd.xml":
+      return advsimdCryptoBinaryOperands(inst);
     case "fscale_advsimd.xml":
+    case "add_advsimd.xml":
+    case "sub_advsimd.xml":
+    case "fadd_advsimd.xml":
+    case "fsub_advsimd.xml":
+    case "shadd_advsimd.xml":
+    case "uhadd_advsimd.xml":
+    case "shsub_advsimd.xml":
+    case "uhsub_advsimd.xml":
+    case "srhadd_advsimd.xml":
+    case "urhadd_advsimd.xml":
     case "smaxp_advsimd.xml":
     case "sminp_advsimd.xml":
     case "umaxp_advsimd.xml":
@@ -4674,15 +5098,57 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fmin_advsimd.xml":
     case "fmaxnm_advsimd.xml":
     case "fminnm_advsimd.xml":
-      return advsimdThreeSameOperands(inst);
+    case "fabd_advsimd.xml":
+    case "frecps_advsimd.xml":
+    case "frsqrts_advsimd.xml":
+    case "saba_advsimd.xml":
+    case "uaba_advsimd.xml":
+    case "sabd_advsimd.xml":
+    case "uabd_advsimd.xml":
+    case "sqadd_advsimd.xml":
+    case "uqadd_advsimd.xml":
+    case "sqsub_advsimd.xml":
+    case "uqsub_advsimd.xml":
+    case "mul_advsimd_vec.xml":
+    case "mla_advsimd_vec.xml":
+    case "mls_advsimd_vec.xml":
+    case "fmul_advsimd_vec.xml":
+    case "fdiv_advsimd.xml":
+    case "pmul_advsimd.xml":
+    case "fmulx_advsimd_vec.xml":
+    case "fmla_advsimd_vec.xml":
+    case "fmls_advsimd_vec.xml":
+    case "and_advsimd.xml":
+    case "eor_advsimd.xml":
+    case "bit_advsimd.xml":
+    case "bif_advsimd.xml":
+    case "bsl_advsimd.xml":
+    case "orn_advsimd.xml":
+    case "bic_advsimd_reg.xml":
+    case "sshl_advsimd.xml":
+    case "ushl_advsimd.xml":
+    case "srshl_advsimd.xml":
+    case "urshl_advsimd.xml":
+    case "sqshl_advsimd_reg.xml":
+    case "uqshl_advsimd_reg.xml":
+    case "sqrshl_advsimd.xml":
+    case "uqrshl_advsimd.xml":
+      return advsimdScalarOrVectorThreeSameOperands(inst);
     case "bfmmla_advsimd.xml":
     case "bfmlal_advsimd_vec.xml":
     case "bfmlal_advsimd_elt.xml":
       return advsimdBfloat16MultiplyAccumulateOperands(inst);
+    case "smmla_advsimd_vec.xml":
+    case "ummla_advsimd_vec.xml":
+    case "usmmla_advsimd_vec.xml":
+      return advsimdMatrixMultiplyAccumulateOperands(inst);
     case "sdot_advsimd_vec.xml":
     case "sdot_advsimd_elt.xml":
+    case "sudot_advsimd_elt.xml":
     case "udot_advsimd_vec.xml":
     case "udot_advsimd_elt.xml":
+    case "usdot_advsimd_vec.xml":
+    case "usdot_advsimd_elt.xml":
     case "bfdot_advsimd_vec.xml":
     case "bfdot_advsimd_elt.xml":
       return advsimdDotProductOperands(inst);
@@ -4694,6 +5160,7 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "cmgt_advsimd_zero.xml":
     case "cmhi_advsimd.xml":
     case "cmhs_advsimd.xml":
+    case "cmtst_advsimd.xml":
     case "cmle_advsimd.xml":
     case "cmlt_advsimd.xml":
     case "fcmeq_advsimd_reg.xml":
@@ -4704,7 +5171,24 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcmgt_advsimd_zero.xml":
     case "fcmle_advsimd.xml":
     case "fcmlt_advsimd.xml":
+    case "facge_advsimd.xml":
+    case "facgt_advsimd.xml":
       return advsimdCompareOperands(inst);
+    case "sha1h_advsimd.xml":
+      return advsimdCryptoSha1HashOperands(inst);
+    case "sha1su1_advsimd.xml":
+    case "sha256su0_advsimd.xml":
+      return advsimdCryptoVector4sBinaryOperands(inst);
+    case "sha1c_advsimd.xml":
+    case "sha1p_advsimd.xml":
+    case "sha1m_advsimd.xml":
+      return advsimdCryptoSha1ThreeRegOperands(inst);
+    case "sha1su0_advsimd.xml":
+    case "sha256su1_advsimd.xml":
+      return advsimdCryptoVector4sThreeRegOperands(inst);
+    case "sha256h_advsimd.xml":
+    case "sha256h2_advsimd.xml":
+      return advsimdCryptoSha256HashOperands(inst);
     case "suqadd_advsimd.xml":
     case "usqadd_advsimd.xml":
     case "sqabs_advsimd.xml":
@@ -4712,10 +5196,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "abs_advsimd.xml":
     case "neg_advsimd.xml":
     case "rev64_advsimd.xml":
+    case "rev32_advsimd.xml":
+    case "rev16_advsimd.xml":
     case "cls_advsimd.xml":
     case "clz_advsimd.xml":
+    case "cnt_advsimd.xml":
+    case "mvn_not_advsimd.xml":
+    case "rbit_advsimd.xml":
     case "fabs_advsimd.xml":
     case "fneg_advsimd.xml":
+    case "urecpe_advsimd.xml":
+    case "ursqrte_advsimd.xml":
+    case "frecpe_advsimd.xml":
+    case "frecpx_advsimd.xml":
+    case "frsqrte_advsimd.xml":
+    case "fsqrt_advsimd.xml":
     case "frintn_advsimd.xml":
     case "frinta_advsimd.xml":
     case "frintp_advsimd.xml":
@@ -4740,6 +5235,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcvtzu_advsimd_int.xml":
     case "fcvtns_advsimd.xml":
       return advsimdUnaryOperands(inst);
+    case "fcvtn_advsimd.xml":
+      return advsimdFloatingConvertNarrowOperands(inst);
+    case "fcvtl_advsimd.xml":
+      return advsimdFloatingConvertLongOperands(inst);
     case "scvtf_advsimd_fix.xml":
     case "ucvtf_advsimd_fix.xml":
     case "fcvtzs_advsimd_fix.xml":
@@ -4748,6 +5247,16 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "f12cvtl_advsimd.xml":
     case "bf12cvtl_advsimd.xml":
       return advsimdFp8ConvertLongOperands(inst);
+    case "uzp1_advsimd.xml":
+    case "uzp2_advsimd.xml":
+    case "trn1_advsimd.xml":
+    case "trn2_advsimd.xml":
+    case "zip1_advsimd.xml":
+    case "zip2_advsimd.xml":
+      return advsimdThreeSameOperands(inst);
+    case "tbl_advsimd.xml":
+    case "tbx_advsimd.xml":
+      return advsimdTableLookupOperands(inst);
     case "xtn_advsimd.xml":
     case "fcvtxn_advsimd.xml":
     case "bfcvtn_advsimd.xml":
@@ -4759,7 +5268,12 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcvtn_advsimd_328.xml":
       return advsimdFp8NarrowPairOperands(inst);
     case "shll_advsimd.xml":
+    case "sshll_advsimd.xml":
+    case "ushll_advsimd.xml":
       return advsimdShiftLeftLongOperands(inst);
+    case "sxtl_sshll_advsimd.xml":
+    case "uxtl_ushll_advsimd.xml":
+      return advsimdExtendLongOperands(inst);
     case "saddlp_advsimd.xml":
     case "uaddlp_advsimd.xml":
     case "sadalp_advsimd.xml":
@@ -4791,6 +5305,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "umlal_advsimd_vec.xml":
     case "smlsl_advsimd_vec.xml":
     case "umlsl_advsimd_vec.xml":
+    case "sqdmull_advsimd_vec.xml":
+    case "sqdmlal_advsimd_vec.xml":
+    case "sqdmlsl_advsimd_vec.xml":
       return advsimdWideningThreeRegOperands(inst);
     case "saddw_advsimd.xml":
     case "uaddw_advsimd.xml":
@@ -4807,6 +5324,7 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "ursra_advsimd.xml":
     case "sri_advsimd.xml":
     case "sli_advsimd.xml":
+    case "shl_advsimd.xml":
     case "sqshlu_advsimd.xml":
     case "sqshl_advsimd_imm.xml":
     case "uqshl_advsimd_imm.xml":
@@ -4831,6 +5349,18 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return advsimdMoveImmediateOperands(inst);
     case "mov_orr_advsimd_reg.xml":
       return advsimdMoveRegisterAliasOperands(inst);
+    case "ins_advsimd_gen.xml":
+      return advsimdCopyGeneralToElementOperands(inst);
+    case "ins_advsimd_elt.xml":
+      return advsimdCopyElementToElementOperands(inst);
+    case "smov_advsimd.xml":
+    case "umov_advsimd.xml":
+    case "mov_umov_advsimd.xml":
+      return advsimdCopyElementToGeneralOperands(inst);
+    case "dup_advsimd_elt.xml":
+      return advsimdScalarDuplicateElementOperands(inst);
+    case "ext_advsimd.xml":
+      return advsimdExtractOperands(inst);
     case "ld1r_advsimd.xml":
     case "ld2r_advsimd.xml":
     case "ld3r_advsimd.xml":
@@ -5257,9 +5787,13 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "stgp.xml":
       return mteTagPairStoreOperands(inst);
     case "cmpp_subps.xml":
+    case "subp.xml":
+    case "subps.xml":
       return mteSubtractPointerOperands(inst);
     case "ldg.xml":
     case "ldgm.xml":
+    case "stgm.xml":
+    case "stzgm.xml":
       return mteTagLoadOperands(inst);
     case "add_addsub_imm.xml":
     case "adds_addsub_imm.xml":
@@ -5271,6 +5805,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sub_addsub_shift.xml":
     case "subs_addsub_shift.xml":
       return addSubShiftedOperands(inst);
+    case "addpt.xml":
+    case "subpt.xml":
+      return checkedPointerAddSubOperands(inst);
     case "add_addsub_ext.xml":
     case "adds_addsub_ext.xml":
     case "sub_addsub_ext.xml":

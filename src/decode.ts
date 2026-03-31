@@ -275,6 +275,25 @@ function isUnsupportedBarrierAlias(
   return encoding.fileName === "dsb.xml" && ((fields.CRm ?? 0) === 0 || (fields.CRm ?? 0) === 4);
 }
 
+function isUnsupportedHintAlias(
+  encoding: GeneratedEncoding,
+  fields: Record<string, number>,
+): boolean {
+  if (encoding.fileName !== "hint.xml") {
+    return false;
+  }
+
+  const imm = ((fields.CRm ?? 0) << 3) | (fields.op2 ?? 0);
+  return new Set([
+    0, 1, 2, 3, 4, 5, 6, 7,
+    8, 10, 12, 14,
+    16, 17, 18, 19, 20, 22,
+    24, 25, 26, 27, 28, 29, 30, 31,
+    32, 34, 36, 38, 39, 40,
+    48, 49, 50, 51, 52,
+  ]).has(imm);
+}
+
 function isUnsupportedSystemInstructionOverlap(
   encoding: GeneratedEncoding,
   fields: Record<string, number>,
@@ -316,6 +335,7 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
       isUnsupportedConditionalSelectAlias(encoding, fields) ||
       isUnsupportedLogicalImmediateAlias(encoding, fields) ||
       isUnsupportedBarrierAlias(encoding, fields) ||
+      isUnsupportedHintAlias(encoding, fields) ||
       isUnsupportedSystemInstructionOverlap(encoding, fields)
     ) {
       return {

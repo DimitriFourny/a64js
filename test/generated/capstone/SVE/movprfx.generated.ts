@@ -14,6 +14,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 1,
+    "word": 3560964128,
+    "asmText": "hlt #0x1",
+    "encodingFile": "hlt.xml",
+    "mnemonic": "HLT",
+    "features": [
+      "FEAT_BTI"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
     "caseIndex": 2,
     "word": 80748576,
     "asmText": "movprfx z0.d, p0/z, z1.d",
@@ -23,6 +34,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 3,
+    "word": 3560964128,
+    "asmText": "hlt #0x1",
+    "encodingFile": "hlt.xml",
+    "mnemonic": "HLT",
+    "features": [
+      "FEAT_BTI"
     ]
   },
   {
@@ -40,6 +62,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 5,
+    "word": 3558866976,
+    "asmText": "brk #0x1",
+    "encodingFile": "brk.xml",
+    "mnemonic": "BRK",
+    "features": [
+      "FEAT_BTI"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
     "caseIndex": 6,
     "word": 80748576,
     "asmText": "movprfx z0.d, p0/z, z1.d",
@@ -49,6 +82,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 7,
+    "word": 3558866976,
+    "asmText": "brk #0x1",
+    "encodingFile": "brk.xml",
+    "mnemonic": "BRK",
+    "features": [
+      "FEAT_BTI"
     ]
   },
   {
@@ -105,6 +149,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 12,
+    "word": 3560964128,
+    "asmText": "hlt #0x1",
+    "encodingFile": "hlt.xml",
+    "mnemonic": "HLT",
+    "features": [
+      "FEAT_BTI"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
     "caseIndex": 13,
     "word": 80748576,
     "asmText": "movprfx z0.d, p0/z, z1.d",
@@ -114,6 +169,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 14,
+    "word": 3560964128,
+    "asmText": "hlt #0x1",
+    "encodingFile": "hlt.xml",
+    "mnemonic": "HLT",
+    "features": [
+      "FEAT_BTI"
     ]
   },
   {
@@ -131,6 +197,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 16,
+    "word": 3558866976,
+    "asmText": "brk #0x1",
+    "encodingFile": "brk.xml",
+    "mnemonic": "BRK",
+    "features": [
+      "FEAT_BTI"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
     "caseIndex": 17,
     "word": 80748576,
     "asmText": "movprfx z0.d, p0/z, z1.d",
@@ -140,6 +217,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/movprfx.s.yaml",
+    "caseIndex": 18,
+    "word": 3558866976,
+    "asmText": "brk #0x1",
+    "encodingFile": "brk.xml",
+    "mnemonic": "BRK",
+    "features": [
+      "FEAT_BTI"
     ]
   },
   {
@@ -183,93 +271,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 1,
-    "word": 3560964128,
-    "asmText": "hlt #0x1",
-    "encodingFile": "hlt.xml",
-    "mnemonic": "HLT",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 3,
-    "word": 3560964128,
-    "asmText": "hlt #0x1",
-    "encodingFile": "hlt.xml",
-    "mnemonic": "HLT",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 5,
-    "word": 3558866976,
-    "asmText": "brk #0x1",
-    "encodingFile": "brk.xml",
-    "mnemonic": "BRK",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 7,
-    "word": 3558866976,
-    "asmText": "brk #0x1",
-    "encodingFile": "brk.xml",
-    "mnemonic": "BRK",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 12,
-    "word": 3560964128,
-    "asmText": "hlt #0x1",
-    "encodingFile": "hlt.xml",
-    "mnemonic": "HLT",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 14,
-    "word": 3560964128,
-    "asmText": "hlt #0x1",
-    "encodingFile": "hlt.xml",
-    "mnemonic": "HLT",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 16,
-    "word": 3558866976,
-    "asmText": "brk #0x1",
-    "encodingFile": "brk.xml",
-    "mnemonic": "BRK",
-    "features": [
-      "FEAT_BTI"
-    ]
-  },
-  {
-    "sourceFile": "SVE/movprfx.s.yaml",
-    "caseIndex": 18,
-    "word": 3558866976,
-    "asmText": "brk #0x1",
-    "encodingFile": "brk.xml",
-    "mnemonic": "BRK",
-    "features": [
-      "FEAT_BTI"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

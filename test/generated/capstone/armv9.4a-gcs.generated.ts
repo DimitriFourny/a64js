@@ -181,11 +181,33 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv9.4a-gcs.s.yaml",
+    "caseIndex": 20,
+    "word": 3574298453,
+    "asmText": "gcsss1 x21",
+    "encodingFile": "gcsss1_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_GCS"
+    ]
+  },
+  {
+    "sourceFile": "armv9.4a-gcs.s.yaml",
     "caseIndex": 21,
     "word": 3576395638,
     "asmText": "gcsss2 x22",
     "encodingFile": "gcsss2_sysl.xml",
     "mnemonic": "SYSL",
+    "features": [
+      "FEAT_GCS"
+    ]
+  },
+  {
+    "sourceFile": "armv9.4a-gcs.s.yaml",
+    "caseIndex": 22,
+    "word": 3574298393,
+    "asmText": "gcspushm x25",
+    "encodingFile": "gcspushm_sys.xml",
+    "mnemonic": "SYS",
     "features": [
       "FEAT_GCS"
     ]
@@ -222,31 +244,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_GCS"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv9.4a-gcs.s.yaml",
-    "caseIndex": 20,
-    "word": 3574298453,
-    "asmText": "gcsss1 x21",
-    "encodingFile": "gcsss1_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_GCS"
-    ]
-  },
-  {
-    "sourceFile": "armv9.4a-gcs.s.yaml",
-    "caseIndex": 22,
-    "word": 3574298393,
-    "asmText": "gcspushm x25",
-    "encodingFile": "gcspushm_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_GCS"
-    ]
   },
   {
     "sourceFile": "armv9.4a-gcs.s.yaml",
@@ -269,7 +266,10 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_GCS"
     ]
-  },
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv9.4a-gcs.s.yaml",
     "caseIndex": 28,

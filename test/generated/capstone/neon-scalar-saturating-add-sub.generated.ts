@@ -1,97 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 16,
-    "word": 1579170259,
-    "asmText": "suqadd b19, b14",
-    "encodingFile": "suqadd_advsimd.xml",
-    "mnemonic": "SUQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 17,
-    "word": 1583364596,
-    "asmText": "suqadd h20, h15",
-    "encodingFile": "suqadd_advsimd.xml",
-    "mnemonic": "SUQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 18,
-    "word": 1587558805,
-    "asmText": "suqadd s21, s12",
-    "encodingFile": "suqadd_advsimd.xml",
-    "mnemonic": "SUQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 19,
-    "word": 1591753426,
-    "asmText": "suqadd d18, d22",
-    "encodingFile": "suqadd_advsimd.xml",
-    "mnemonic": "SUQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 20,
-    "word": 2116041171,
-    "asmText": "usqadd b19, b14",
-    "encodingFile": "usqadd_advsimd.xml",
-    "mnemonic": "USQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 21,
-    "word": 2120235508,
-    "asmText": "usqadd h20, h15",
-    "encodingFile": "usqadd_advsimd.xml",
-    "mnemonic": "USQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 22,
-    "word": 2124429717,
-    "asmText": "usqadd s21, s12",
-    "encodingFile": "usqadd_advsimd.xml",
-    "mnemonic": "USQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
-    "caseIndex": 23,
-    "word": 2128624338,
-    "asmText": "usqadd d18, d22",
-    "encodingFile": "usqadd_advsimd.xml",
-    "mnemonic": "USQADD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
     "caseIndex": 0,
     "word": 1579289632,
     "asmText": "sqadd b0, b1, b2",
@@ -265,5 +174,95 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 16,
+    "word": 1579170259,
+    "asmText": "suqadd b19, b14",
+    "encodingFile": "suqadd_advsimd.xml",
+    "mnemonic": "SUQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 17,
+    "word": 1583364596,
+    "asmText": "suqadd h20, h15",
+    "encodingFile": "suqadd_advsimd.xml",
+    "mnemonic": "SUQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 18,
+    "word": 1587558805,
+    "asmText": "suqadd s21, s12",
+    "encodingFile": "suqadd_advsimd.xml",
+    "mnemonic": "SUQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 19,
+    "word": 1591753426,
+    "asmText": "suqadd d18, d22",
+    "encodingFile": "suqadd_advsimd.xml",
+    "mnemonic": "SUQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 20,
+    "word": 2116041171,
+    "asmText": "usqadd b19, b14",
+    "encodingFile": "usqadd_advsimd.xml",
+    "mnemonic": "USQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 21,
+    "word": 2120235508,
+    "asmText": "usqadd h20, h15",
+    "encodingFile": "usqadd_advsimd.xml",
+    "mnemonic": "USQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 22,
+    "word": 2124429717,
+    "asmText": "usqadd s21, s12",
+    "encodingFile": "usqadd_advsimd.xml",
+    "mnemonic": "USQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-saturating-add-sub.s.yaml",
+    "caseIndex": 23,
+    "word": 2128624338,
+    "asmText": "usqadd d18, d22",
+    "encodingFile": "usqadd_advsimd.xml",
+    "mnemonic": "USQADD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

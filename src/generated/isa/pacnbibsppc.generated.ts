@@ -1,0 +1,50 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "PACNBIBSPPC",
+    "encodingId": "PACNBIBSPPC_64LR_dp_1src",
+    "mnemonic": "PACNBIBSPPC",
+    "className": "Integer",
+    "fileName": "pacnbibsppc.xml",
+    "mask": 4294967295,
+    "value": 3670116350,
+    "bitCount": 32,
+    "fields": [
+      {
+        "name": "sf",
+        "lsb": 31,
+        "width": 1
+      },
+      {
+        "name": "S",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "opcode2",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 10,
+        "width": 6
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_PAuth_LR"
+    ],
+    "guards": []
+  }
+];

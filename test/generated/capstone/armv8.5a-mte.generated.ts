@@ -1292,6 +1292,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 123,
+    "word": 2596405280,
+    "asmText": "subp x0, x1, x2",
+    "encodingFile": "subp.xml",
+    "mnemonic": "SUBP",
+    "features": [
+      "FEAT_MTE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 124,
+    "word": 2598306784,
+    "asmText": "subp x0, sp, sp",
+    "encodingFile": "subp.xml",
+    "mnemonic": "SUBP",
+    "features": [
+      "FEAT_MTE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 125,
+    "word": 3133276192,
+    "asmText": "subps x0, x1, x2",
+    "encodingFile": "subps.xml",
+    "mnemonic": "SUBPS",
+    "features": [
+      "FEAT_MTE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
+    "caseIndex": 126,
+    "word": 3135177696,
+    "asmText": "subps x0, sp, sp",
+    "encodingFile": "subps.xml",
+    "mnemonic": "SUBPS",
+    "features": [
+      "FEAT_MTE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.5a-mte.s.yaml",
     "caseIndex": 127,
     "word": 3133210655,
     "asmText": "subps xzr, x0, x1",
@@ -1399,53 +1443,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_MTE2"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 123,
-    "word": 2596405280,
-    "asmText": "subp x0, x1, x2",
-    "encodingFile": "subp.xml",
-    "mnemonic": "SUBP",
-    "features": [
-      "FEAT_MTE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 124,
-    "word": 2598306784,
-    "asmText": "subp x0, sp, sp",
-    "encodingFile": "subp.xml",
-    "mnemonic": "SUBP",
-    "features": [
-      "FEAT_MTE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 125,
-    "word": 3133276192,
-    "asmText": "subps x0, x1, x2",
-    "encodingFile": "subps.xml",
-    "mnemonic": "SUBPS",
-    "features": [
-      "FEAT_MTE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.5a-mte.s.yaml",
-    "caseIndex": 126,
-    "word": 3135177696,
-    "asmText": "subps x0, sp, sp",
-    "encodingFile": "subps.xml",
-    "mnemonic": "SUBPS",
-    "features": [
-      "FEAT_MTE"
-    ]
   },
   {
     "sourceFile": "armv8.5a-mte.s.yaml",
@@ -1514,3 +1511,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

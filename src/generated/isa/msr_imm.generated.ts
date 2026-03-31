@@ -33,15 +33,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_VHE",
-      "FEAT_UAO",
-      "FEAT_PAN",
-      "FEAT_NMI",
-      "FEAT_EBEP",
-      "FEAT_DIT",
-      "FEAT_SME",
-      "FEAT_MTE",
-      "FEAT_SSBS"
+      "FEAT_VHE"
     ],
     "guards": []
   }

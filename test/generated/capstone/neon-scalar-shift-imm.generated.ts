@@ -89,6 +89,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-scalar-shift-imm.s.yaml",
+    "caseIndex": 8,
+    "word": 1598838087,
+    "asmText": "shl d7, d10, #12",
+    "encodingFile": "shl_advsimd.xml",
+    "mnemonic": "SHL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-shift-imm.s.yaml",
     "caseIndex": 9,
     "word": 1594848875,
     "asmText": "sqshl b11, b19, #7",
@@ -441,16 +452,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-scalar-shift-imm.s.yaml",
-    "caseIndex": 8,
-    "word": 1598838087,
-    "asmText": "shl d7, d10, #12",
-    "encodingFile": "shl_advsimd.xml",
-    "mnemonic": "SHL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

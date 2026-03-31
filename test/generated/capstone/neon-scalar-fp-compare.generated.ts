@@ -453,10 +453,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "neon-scalar-fp-compare.s.yaml",
     "caseIndex": 39,
@@ -528,3 +525,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

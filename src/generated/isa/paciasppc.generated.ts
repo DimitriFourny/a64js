@@ -43,8 +43,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_PAuth_LR",
-      "FEAT_BTI"
+      "FEAT_PAuth_LR"
     ],
     "guards": []
   }

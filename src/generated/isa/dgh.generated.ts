@@ -1,0 +1,30 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "DGH",
+    "encodingId": "DGH_HI_hints",
+    "mnemonic": "DGH",
+    "className": "System",
+    "fileName": "dgh.xml",
+    "mask": 4294967295,
+    "value": 3573752031,
+    "bitCount": 32,
+    "fields": [
+      {
+        "name": "CRm",
+        "lsb": 8,
+        "width": 4
+      },
+      {
+        "name": "op2",
+        "lsb": 5,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_DGH"
+    ],
+    "guards": []
+  }
+];

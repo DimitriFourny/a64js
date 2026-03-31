@@ -23,8 +23,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_PAuth",
-      "FEAT_BTI"
+      "FEAT_PAuth"
     ],
     "guards": []
   },
@@ -50,8 +49,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_PAuth",
-      "FEAT_BTI"
+      "FEAT_PAuth"
     ],
     "guards": []
   },
@@ -77,8 +75,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_PAuth",
-      "FEAT_BTI"
+      "FEAT_PAuth"
     ],
     "guards": []
   },

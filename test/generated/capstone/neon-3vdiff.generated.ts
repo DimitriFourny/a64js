@@ -925,6 +925,138 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 84,
+    "word": 241340448,
+    "asmText": "sqdmlal v0.4s, v1.4h, v2.4h",
+    "encodingFile": "sqdmlal_advsimd_vec.xml",
+    "mnemonic": "SQDMLAL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 85,
+    "word": 245534752,
+    "asmText": "sqdmlal v0.2d, v1.2s, v2.2s",
+    "encodingFile": "sqdmlal_advsimd_vec.xml",
+    "mnemonic": "SQDMLAL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 86,
+    "word": 1315082272,
+    "asmText": "sqdmlal2 v0.4s, v1.8h, v2.8h",
+    "encodingFile": "sqdmlal_advsimd_vec.xml",
+    "mnemonic": "SQDMLAL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 87,
+    "word": 1319276576,
+    "asmText": "sqdmlal2 v0.2d, v1.4s, v2.4s",
+    "encodingFile": "sqdmlal_advsimd_vec.xml",
+    "mnemonic": "SQDMLAL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 88,
+    "word": 241348640,
+    "asmText": "sqdmlsl v0.4s, v1.4h, v2.4h",
+    "encodingFile": "sqdmlsl_advsimd_vec.xml",
+    "mnemonic": "SQDMLSL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 89,
+    "word": 245542944,
+    "asmText": "sqdmlsl v0.2d, v1.2s, v2.2s",
+    "encodingFile": "sqdmlsl_advsimd_vec.xml",
+    "mnemonic": "SQDMLSL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 90,
+    "word": 1315090464,
+    "asmText": "sqdmlsl2 v0.4s, v1.8h, v2.8h",
+    "encodingFile": "sqdmlsl_advsimd_vec.xml",
+    "mnemonic": "SQDMLSL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 91,
+    "word": 1319284768,
+    "asmText": "sqdmlsl2 v0.2d, v1.4s, v2.4s",
+    "encodingFile": "sqdmlsl_advsimd_vec.xml",
+    "mnemonic": "SQDMLSL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 92,
+    "word": 241356832,
+    "asmText": "sqdmull v0.4s, v1.4h, v2.4h",
+    "encodingFile": "sqdmull_advsimd_vec.xml",
+    "mnemonic": "SQDMULL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 93,
+    "word": 245551136,
+    "asmText": "sqdmull v0.2d, v1.2s, v2.2s",
+    "encodingFile": "sqdmull_advsimd_vec.xml",
+    "mnemonic": "SQDMULL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 94,
+    "word": 1315098656,
+    "asmText": "sqdmull2 v0.4s, v1.8h, v2.8h",
+    "encodingFile": "sqdmull_advsimd_vec.xml",
+    "mnemonic": "SQDMULL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 95,
+    "word": 1319292960,
+    "asmText": "sqdmull2 v0.2d, v1.4s, v2.4s",
+    "encodingFile": "sqdmull_advsimd_vec.xml",
+    "mnemonic": "SQDMULL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
     "caseIndex": 100,
     "word": 237113376,
     "asmText": "saddw v0.8h, v1.8h, v2.8b",
@@ -1322,138 +1454,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
 ];
 
 export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 84,
-    "word": 241340448,
-    "asmText": "sqdmlal v0.4s, v1.4h, v2.4h",
-    "encodingFile": "sqdmlal_advsimd_vec.xml",
-    "mnemonic": "SQDMLAL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 85,
-    "word": 245534752,
-    "asmText": "sqdmlal v0.2d, v1.2s, v2.2s",
-    "encodingFile": "sqdmlal_advsimd_vec.xml",
-    "mnemonic": "SQDMLAL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 86,
-    "word": 1315082272,
-    "asmText": "sqdmlal2 v0.4s, v1.8h, v2.8h",
-    "encodingFile": "sqdmlal_advsimd_vec.xml",
-    "mnemonic": "SQDMLAL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 87,
-    "word": 1319276576,
-    "asmText": "sqdmlal2 v0.2d, v1.4s, v2.4s",
-    "encodingFile": "sqdmlal_advsimd_vec.xml",
-    "mnemonic": "SQDMLAL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 88,
-    "word": 241348640,
-    "asmText": "sqdmlsl v0.4s, v1.4h, v2.4h",
-    "encodingFile": "sqdmlsl_advsimd_vec.xml",
-    "mnemonic": "SQDMLSL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 89,
-    "word": 245542944,
-    "asmText": "sqdmlsl v0.2d, v1.2s, v2.2s",
-    "encodingFile": "sqdmlsl_advsimd_vec.xml",
-    "mnemonic": "SQDMLSL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 90,
-    "word": 1315090464,
-    "asmText": "sqdmlsl2 v0.4s, v1.8h, v2.8h",
-    "encodingFile": "sqdmlsl_advsimd_vec.xml",
-    "mnemonic": "SQDMLSL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 91,
-    "word": 1319284768,
-    "asmText": "sqdmlsl2 v0.2d, v1.4s, v2.4s",
-    "encodingFile": "sqdmlsl_advsimd_vec.xml",
-    "mnemonic": "SQDMLSL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 92,
-    "word": 241356832,
-    "asmText": "sqdmull v0.4s, v1.4h, v2.4h",
-    "encodingFile": "sqdmull_advsimd_vec.xml",
-    "mnemonic": "SQDMULL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 93,
-    "word": 245551136,
-    "asmText": "sqdmull v0.2d, v1.2s, v2.2s",
-    "encodingFile": "sqdmull_advsimd_vec.xml",
-    "mnemonic": "SQDMULL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 94,
-    "word": 1315098656,
-    "asmText": "sqdmull2 v0.4s, v1.8h, v2.8h",
-    "encodingFile": "sqdmull_advsimd_vec.xml",
-    "mnemonic": "SQDMULL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 95,
-    "word": 1319292960,
-    "asmText": "sqdmull2 v0.2d, v1.4s, v2.4s",
-    "encodingFile": "sqdmull_advsimd_vec.xml",
-    "mnemonic": "SQDMULL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
   {
     "sourceFile": "neon-3vdiff.s.yaml",
     "caseIndex": 96,

@@ -12,6 +12,41 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-scalar-abs.s.yaml",
+    "caseIndex": 1,
+    "word": 2127828765,
+    "asmText": "fabd h29, h24, h20",
+    "encodingFile": "fabd_advsimd.xml",
+    "mnemonic": "FABD",
+    "features": [
+      "FEAT_AdvSIMD && FEAT_FP16",
+      "FEAT_AdvSIMD",
+      "FEAT_FP16"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-abs.s.yaml",
+    "caseIndex": 2,
+    "word": 2125780765,
+    "asmText": "fabd s29, s24, s20",
+    "encodingFile": "fabd_advsimd.xml",
+    "mnemonic": "FABD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-abs.s.yaml",
+    "caseIndex": 3,
+    "word": 2129975069,
+    "asmText": "fabd d29, d24, d20",
+    "encodingFile": "fabd_advsimd.xml",
+    "mnemonic": "FABD",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-scalar-abs.s.yaml",
     "caseIndex": 4,
     "word": 1579186643,
     "asmText": "sqabs b19, b14",
@@ -56,40 +91,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-scalar-abs.s.yaml",
-    "caseIndex": 1,
-    "word": 2127828765,
-    "asmText": "fabd h29, h24, h20",
-    "encodingFile": "fabd_advsimd.xml",
-    "mnemonic": "FABD",
-    "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
-      "FEAT_AdvSIMD",
-      "FEAT_FP16"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-abs.s.yaml",
-    "caseIndex": 2,
-    "word": 2125780765,
-    "asmText": "fabd s29, s24, s20",
-    "encodingFile": "fabd_advsimd.xml",
-    "mnemonic": "FABD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-scalar-abs.s.yaml",
-    "caseIndex": 3,
-    "word": 2129975069,
-    "asmText": "fabd d29, d24, d20",
-    "encodingFile": "fabd_advsimd.xml",
-    "mnemonic": "FABD",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

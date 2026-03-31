@@ -67,6 +67,72 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 6,
+    "word": 1847593982,
+    "asmText": "rev32 v30.16b, v31.16b",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 7,
+    "word": 1851787492,
+    "asmText": "rev32 v4.8h, v7.8h",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 8,
+    "word": 773851189,
+    "asmText": "rev32 v21.8b, v1.8b",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 9,
+    "word": 778045728,
+    "asmText": "rev32 v0.4h, v9.4h",
+    "encodingFile": "rev32_advsimd.xml",
+    "mnemonic": "REV32",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 10,
+    "word": 1310727166,
+    "asmText": "rev16 v30.16b, v31.16b",
+    "encodingFile": "rev16_advsimd.xml",
+    "mnemonic": "REV16",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 11,
+    "word": 236984373,
+    "asmText": "rev16 v21.8b, v1.8b",
+    "encodingFile": "rev16_advsimd.xml",
+    "mnemonic": "REV16",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
     "caseIndex": 12,
     "word": 1310730915,
     "asmText": "saddlp v3.8h, v21.16b",
@@ -925,6 +991,72 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 90,
+    "word": 1310743520,
+    "asmText": "cnt v0.16b, v31.16b",
+    "encodingFile": "cnt_advsimd.xml",
+    "mnemonic": "CNT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 91,
+    "word": 237000993,
+    "asmText": "cnt v1.8b, v9.8b",
+    "encodingFile": "cnt_advsimd.xml",
+    "mnemonic": "CNT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 92,
+    "word": 1847614432,
+    "asmText": "mvn v0.16b, v31.16b",
+    "encodingFile": "mvn_not_advsimd.xml",
+    "mnemonic": "NOT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 93,
+    "word": 773871905,
+    "asmText": "mvn v1.8b, v9.8b",
+    "encodingFile": "mvn_not_advsimd.xml",
+    "mnemonic": "NOT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 94,
+    "word": 1851808736,
+    "asmText": "rbit v0.16b, v31.16b",
+    "encodingFile": "rbit_advsimd.xml",
+    "mnemonic": "RBIT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 95,
+    "word": 778066209,
+    "asmText": "rbit v1.8b, v9.8b",
+    "encodingFile": "rbit_advsimd.xml",
+    "mnemonic": "RBIT",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
     "caseIndex": 96,
     "word": 251197444,
     "asmText": "fabs v4.4h, v0.4h",
@@ -1373,6 +1505,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 136,
+    "word": 1310812290,
+    "asmText": "fcvtn2 v2.8h, v4.4s",
+    "encodingFile": "fcvtn_advsimd.xml",
+    "mnemonic": "FCVTN",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 137,
+    "word": 1315006726,
+    "asmText": "fcvtn2 v6.4s, v8.2d",
+    "encodingFile": "fcvtn_advsimd.xml",
+    "mnemonic": "FCVTN",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 138,
+    "word": 237071021,
+    "asmText": "fcvtn v13.4h, v21.4s",
+    "encodingFile": "fcvtn_advsimd.xml",
+    "mnemonic": "FCVTN",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 139,
+    "word": 241264644,
+    "asmText": "fcvtn v4.2s, v0.2d",
+    "encodingFile": "fcvtn_advsimd.xml",
+    "mnemonic": "FCVTN",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
     "caseIndex": 140,
     "word": 1851877638,
     "asmText": "fcvtxn2 v6.4s, v8.2d",
@@ -1389,6 +1565,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "fcvtxn v4.2s, v0.2d",
     "encodingFile": "fcvtxn_advsimd.xml",
     "mnemonic": "FCVTXN",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 142,
+    "word": 237074473,
+    "asmText": "fcvtl v9.4s, v1.4h",
+    "encodingFile": "fcvtl_advsimd.xml",
+    "mnemonic": "FCVTL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 143,
+    "word": 241268768,
+    "asmText": "fcvtl v0.2d, v1.2s",
+    "encodingFile": "fcvtl_advsimd.xml",
+    "mnemonic": "FCVTL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 144,
+    "word": 1310816396,
+    "asmText": "fcvtl2 v12.4s, v4.8h",
+    "encodingFile": "fcvtl_advsimd.xml",
+    "mnemonic": "FCVTL",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 145,
+    "word": 1315011473,
+    "asmText": "fcvtl2 v17.2d, v28.4s",
+    "encodingFile": "fcvtl_advsimd.xml",
+    "mnemonic": "FCVTL",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -2398,6 +2618,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 231,
+    "word": 1319225606,
+    "asmText": "urecpe v6.4s, v8.4s",
+    "encodingFile": "urecpe_advsimd.xml",
+    "mnemonic": "URECPE",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 232,
+    "word": 245483524,
+    "asmText": "urecpe v4.2s, v0.2s",
+    "encodingFile": "urecpe_advsimd.xml",
+    "mnemonic": "URECPE",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 233,
+    "word": 1856096518,
+    "asmText": "ursqrte v6.4s, v8.4s",
+    "encodingFile": "ursqrte_advsimd.xml",
+    "mnemonic": "URSQRTE",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
+    "caseIndex": 234,
+    "word": 782354436,
+    "asmText": "ursqrte v4.2s, v0.2s",
+    "encodingFile": "ursqrte_advsimd.xml",
+    "mnemonic": "URSQRTE",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-simd-misc.s.yaml",
     "caseIndex": 235,
     "word": 242866180,
     "asmText": "scvtf v4.4h, v0.4h",
@@ -2510,273 +2774,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ucvtf v4.2s, v0.2s",
     "encodingFile": "ucvtf_advsimd_int.xml",
     "mnemonic": "UCVTF",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 6,
-    "word": 1847593982,
-    "asmText": "rev32 v30.16b, v31.16b",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 7,
-    "word": 1851787492,
-    "asmText": "rev32 v4.8h, v7.8h",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 8,
-    "word": 773851189,
-    "asmText": "rev32 v21.8b, v1.8b",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 9,
-    "word": 778045728,
-    "asmText": "rev32 v0.4h, v9.4h",
-    "encodingFile": "rev32_advsimd.xml",
-    "mnemonic": "REV32",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 10,
-    "word": 1310727166,
-    "asmText": "rev16 v30.16b, v31.16b",
-    "encodingFile": "rev16_advsimd.xml",
-    "mnemonic": "REV16",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 11,
-    "word": 236984373,
-    "asmText": "rev16 v21.8b, v1.8b",
-    "encodingFile": "rev16_advsimd.xml",
-    "mnemonic": "REV16",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 90,
-    "word": 1310743520,
-    "asmText": "cnt v0.16b, v31.16b",
-    "encodingFile": "cnt_advsimd.xml",
-    "mnemonic": "CNT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 91,
-    "word": 237000993,
-    "asmText": "cnt v1.8b, v9.8b",
-    "encodingFile": "cnt_advsimd.xml",
-    "mnemonic": "CNT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 92,
-    "word": 1847614432,
-    "asmText": "mvn v0.16b, v31.16b",
-    "encodingFile": "mvn_not_advsimd.xml",
-    "mnemonic": "NOT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 93,
-    "word": 773871905,
-    "asmText": "mvn v1.8b, v9.8b",
-    "encodingFile": "mvn_not_advsimd.xml",
-    "mnemonic": "NOT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 94,
-    "word": 1851808736,
-    "asmText": "rbit v0.16b, v31.16b",
-    "encodingFile": "rbit_advsimd.xml",
-    "mnemonic": "RBIT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 95,
-    "word": 778066209,
-    "asmText": "rbit v1.8b, v9.8b",
-    "encodingFile": "rbit_advsimd.xml",
-    "mnemonic": "RBIT",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 136,
-    "word": 1310812290,
-    "asmText": "fcvtn2 v2.8h, v4.4s",
-    "encodingFile": "fcvtn_advsimd.xml",
-    "mnemonic": "FCVTN",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 137,
-    "word": 1315006726,
-    "asmText": "fcvtn2 v6.4s, v8.2d",
-    "encodingFile": "fcvtn_advsimd.xml",
-    "mnemonic": "FCVTN",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 138,
-    "word": 237071021,
-    "asmText": "fcvtn v13.4h, v21.4s",
-    "encodingFile": "fcvtn_advsimd.xml",
-    "mnemonic": "FCVTN",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 139,
-    "word": 241264644,
-    "asmText": "fcvtn v4.2s, v0.2d",
-    "encodingFile": "fcvtn_advsimd.xml",
-    "mnemonic": "FCVTN",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 142,
-    "word": 237074473,
-    "asmText": "fcvtl v9.4s, v1.4h",
-    "encodingFile": "fcvtl_advsimd.xml",
-    "mnemonic": "FCVTL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 143,
-    "word": 241268768,
-    "asmText": "fcvtl v0.2d, v1.2s",
-    "encodingFile": "fcvtl_advsimd.xml",
-    "mnemonic": "FCVTL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 144,
-    "word": 1310816396,
-    "asmText": "fcvtl2 v12.4s, v4.8h",
-    "encodingFile": "fcvtl_advsimd.xml",
-    "mnemonic": "FCVTL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 145,
-    "word": 1315011473,
-    "asmText": "fcvtl2 v17.2d, v28.4s",
-    "encodingFile": "fcvtl_advsimd.xml",
-    "mnemonic": "FCVTL",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 231,
-    "word": 1319225606,
-    "asmText": "urecpe v6.4s, v8.4s",
-    "encodingFile": "urecpe_advsimd.xml",
-    "mnemonic": "URECPE",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 232,
-    "word": 245483524,
-    "asmText": "urecpe v4.2s, v0.2s",
-    "encodingFile": "urecpe_advsimd.xml",
-    "mnemonic": "URECPE",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 233,
-    "word": 1856096518,
-    "asmText": "ursqrte v6.4s, v8.4s",
-    "encodingFile": "ursqrte_advsimd.xml",
-    "mnemonic": "URSQRTE",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-simd-misc.s.yaml",
-    "caseIndex": 234,
-    "word": 782354436,
-    "asmText": "ursqrte v4.2s, v0.2s",
-    "encodingFile": "ursqrte_advsimd.xml",
-    "mnemonic": "URSQRTE",
     "features": [
       "FEAT_AdvSIMD"
     ]
@@ -2959,3 +2956,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

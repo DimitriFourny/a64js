@@ -1,6 +1,17 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 0,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
     "caseIndex": 1,
     "word": 3575141152,
     "asmText": "msr ERRSELR_EL1, x0",
@@ -214,6 +225,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mrs.xml",
     "mnemonic": "MRS",
     "features": []
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 25,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
   },
   {
     "sourceFile": "ras-extension.s.yaml",
@@ -433,6 +455,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 50,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
     "caseIndex": 51,
     "word": 3575141152,
     "asmText": "msr ERRSELR_EL1, x0",
@@ -646,6 +679,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mrs.xml",
     "mnemonic": "MRS",
     "features": []
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 75,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
   },
   {
     "sourceFile": "ras-extension.s.yaml",
@@ -865,6 +909,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 100,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
     "caseIndex": 101,
     "word": 3575141152,
     "asmText": "msr ERRSELR_EL1, x0",
@@ -1078,6 +1133,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mrs.xml",
     "mnemonic": "MRS",
     "features": []
+  },
+  {
+    "sourceFile": "ras-extension.s.yaml",
+    "caseIndex": 125,
+    "word": 3573752351,
+    "asmText": "esb",
+    "encodingFile": "esb.xml",
+    "mnemonic": "ESB",
+    "features": [
+      "FEAT_RAS"
+    ]
   },
   {
     "sourceFile": "ras-extension.s.yaml",
@@ -1297,71 +1363,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 0,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  },
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 25,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  },
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 50,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  },
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 75,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  },
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 100,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  },
-  {
-    "sourceFile": "ras-extension.s.yaml",
-    "caseIndex": 125,
-    "word": 3573752351,
-    "asmText": "esb",
-    "encodingFile": "esb.xml",
-    "mnemonic": "ESB",
-    "features": [
-      "FEAT_RAS"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

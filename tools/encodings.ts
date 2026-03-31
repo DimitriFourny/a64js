@@ -268,7 +268,10 @@ function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: 
         (term) =>
           term.length > 0 &&
           !term.includes("IsFeatureImplemented(") &&
+          !term.includes("()") &&
           !term.startsWith("MaxImplementedSVL()") &&
+          term !== "!()" &&
+          term !== "()" &&
           term !== "(" &&
           term !== ")",
       );
@@ -291,17 +294,26 @@ function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: 
   return guards;
 }
 
-function collectFeatures(iclass: any, decodeText: string): string[] {
+function collectFeatures(iclass: any, decodeText: string, fileName: string): string[] {
   const features = new Set<string>();
   for (const variant of children(firstChild(iclass, "arch_variants") ?? { children: [] }, "arch_variant")) {
     if (variant.attrs.feature) {
       features.add(variant.attrs.feature);
     }
   }
-  const regex = /IsFeatureImplemented\((FEAT_[A-Za-z0-9_]+)\)/g;
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(decodeText)) !== null) {
-    features.add(match[1]);
+  if (fileName === "hint.xml") {
+    return [...features];
+  }
+  const decodePreamble = decodeText.split(/\nlet\s+/)[0] ?? decodeText;
+  const guardRegex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
+  let guardMatch: RegExpExecArray | null;
+  while ((guardMatch = guardRegex.exec(decodePreamble)) !== null) {
+    const condition = guardMatch[1] ?? "";
+    const featureRegex = /IsFeatureImplemented\((FEAT_[A-Za-z0-9_]+)\)/g;
+    let featureMatch: RegExpExecArray | null;
+    while ((featureMatch = featureRegex.exec(condition)) !== null) {
+      features.add(featureMatch[1]);
+    }
   }
   return [...features];
 }
@@ -350,7 +362,7 @@ export async function parseEncodingFile(
     const psSection = firstChild(iclass, "ps_section");
     const decodePs = psSection ? children(psSection, "ps")[0] : undefined;
     const decodeText = decodePs ? children(decodePs, "pstext")[0]?.children.map((child) => (typeof child === "string" ? child : "")).join("") ?? "" : "";
-    const features = collectFeatures(iclass, decodeText);
+    const features = collectFeatures(iclass, decodeText, fileName);
     const guards = parseDecodeGuards(decodeText, fieldWidths, options);
     for (const constraint of base.constraints) {
       if (!SME2_FLOAT_MAXMIN_CONSTRAINT_FILES.has(fileName) || constraint.field !== "size") {

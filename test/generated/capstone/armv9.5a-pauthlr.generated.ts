@@ -1,6 +1,15 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv9.5a-pauthlr.s.yaml",
+    "caseIndex": 0,
+    "word": 3573751839,
+    "asmText": "nop",
+    "encodingFile": "nop.xml",
+    "mnemonic": "NOP",
+    "features": []
+  },
+  {
+    "sourceFile": "armv9.5a-pauthlr.s.yaml",
     "caseIndex": 1,
     "word": 3670123518,
     "asmText": "paciasppc",
@@ -21,6 +30,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_PAuth_LR",
       "FEAT_BTI"
+    ]
+  },
+  {
+    "sourceFile": "armv9.5a-pauthlr.s.yaml",
+    "caseIndex": 3,
+    "word": 3670115326,
+    "asmText": "pacnbiasppc",
+    "encodingFile": "pacnbiasppc.xml",
+    "mnemonic": "PACNBIASPPC",
+    "features": [
+      "FEAT_PAuth_LR"
+    ]
+  },
+  {
+    "sourceFile": "armv9.5a-pauthlr.s.yaml",
+    "caseIndex": 4,
+    "word": 3670116350,
+    "asmText": "pacnbibsppc",
+    "encodingFile": "pacnbibsppc.xml",
+    "mnemonic": "PACNBIBSPPC",
+    "features": [
+      "FEAT_PAuth_LR"
     ]
   },
   {
@@ -176,40 +207,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_PAuth_LR"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv9.5a-pauthlr.s.yaml",
-    "caseIndex": 0,
-    "word": 3573751839,
-    "asmText": "nop",
-    "encodingFile": "nop.xml",
-    "mnemonic": "NOP",
-    "features": []
-  },
-  {
-    "sourceFile": "armv9.5a-pauthlr.s.yaml",
-    "caseIndex": 3,
-    "word": 3670115326,
-    "asmText": "pacnbiasppc",
-    "encodingFile": "pacnbiasppc.xml",
-    "mnemonic": "PACNBIASPPC",
-    "features": [
-      "FEAT_PAuth_LR"
-    ]
-  },
-  {
-    "sourceFile": "armv9.5a-pauthlr.s.yaml",
-    "caseIndex": 4,
-    "word": 3670116350,
-    "asmText": "pacnbibsppc",
-    "encodingFile": "pacnbibsppc.xml",
-    "mnemonic": "PACNBIBSPPC",
-    "features": [
-      "FEAT_PAuth_LR"
-    ]
   },
   {
     "sourceFile": "armv9.5a-pauthlr.s.yaml",
@@ -223,3 +220,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

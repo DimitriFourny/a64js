@@ -39,6 +39,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "dot-req.s.yaml",
+    "caseIndex": 4,
+    "word": 1577976965,
+    "asmText": "mov h5, v4.h[3]",
+    "encodingFile": "dup_advsimd_elt.xml",
+    "mnemonic": "DUP",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "dot-req.s.yaml",
     "caseIndex": 5,
     "word": 505686144,
     "asmText": "fadd s0, s4, s4",
@@ -103,16 +114,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "dot-req.s.yaml",
-    "caseIndex": 4,
-    "word": 1577976965,
-    "asmText": "mov h5, v4.h[3]",
-    "encodingFile": "dup_advsimd_elt.xml",
-    "mnemonic": "DUP",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

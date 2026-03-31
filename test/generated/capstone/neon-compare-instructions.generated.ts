@@ -694,6 +694,83 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 63,
+    "word": 238128608,
+    "asmText": "cmtst v0.8b, v15.8b, v17.8b",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 64,
+    "word": 1311281121,
+    "asmText": "cmtst v1.16b, v31.16b, v8.16b",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 65,
+    "word": 242322959,
+    "asmText": "cmtst v15.4h, v16.4h, v17.4h",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 66,
+    "word": 1315409093,
+    "asmText": "cmtst v5.8h, v6.8h, v7.8h",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 67,
+    "word": 247238525,
+    "asmText": "cmtst v29.2s, v27.2s, v28.2s",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 68,
+    "word": 1319668969,
+    "asmText": "cmtst v9.4s, v7.4s, v8.4s",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
+    "caseIndex": 69,
+    "word": 1324716003,
+    "asmText": "cmtst v3.2d, v31.2d, v21.2d",
+    "encodingFile": "cmtst_advsimd.xml",
+    "mnemonic": "CMTST",
+    "features": [
+      "FEAT_AdvSIMD"
+    ]
+  },
+  {
+    "sourceFile": "neon-compare-instructions.s.yaml",
     "caseIndex": 70,
     "word": 240134112,
     "asmText": "fcmeq v0.4h, v31.4h, v16.4h",
@@ -1964,82 +2041,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 63,
-    "word": 238128608,
-    "asmText": "cmtst v0.8b, v15.8b, v17.8b",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 64,
-    "word": 1311281121,
-    "asmText": "cmtst v1.16b, v31.16b, v8.16b",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 65,
-    "word": 242322959,
-    "asmText": "cmtst v15.4h, v16.4h, v17.4h",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 66,
-    "word": 1315409093,
-    "asmText": "cmtst v5.8h, v6.8h, v7.8h",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 67,
-    "word": 247238525,
-    "asmText": "cmtst v29.2s, v27.2s, v28.2s",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 68,
-    "word": 1319668969,
-    "asmText": "cmtst v9.4s, v7.4s, v8.4s",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  },
-  {
-    "sourceFile": "neon-compare-instructions.s.yaml",
-    "caseIndex": 69,
-    "word": 1324716003,
-    "asmText": "cmtst v3.2d, v31.2d, v21.2d",
-    "encodingFile": "cmtst_advsimd.xml",
-    "mnemonic": "CMTST",
-    "features": [
-      "FEAT_AdvSIMD"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

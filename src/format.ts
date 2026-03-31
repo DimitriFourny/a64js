@@ -37,6 +37,9 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
   "uabdl_advsimd.xml",
   "smull_advsimd_vec.xml",
   "umull_advsimd_vec.xml",
+  "smull_advsimd_elt.xml",
+  "umull_advsimd_elt.xml",
+  "sqdmull_advsimd_elt.xml",
   "smlal_advsimd_vec.xml",
   "umlal_advsimd_vec.xml",
   "smlsl_advsimd_vec.xml",
@@ -57,12 +60,16 @@ const ADVSIMD_UPPER_HALF_SUFFIX_FILES = new Set([
   "bf12cvtl_advsimd.xml",
   "f12cvtl_advsimd.xml",
   "bfcvtn_advsimd.xml",
+  "fcvtl_advsimd.xml",
+  "fcvtn_advsimd.xml",
   "fcvtn_advsimd_328.xml",
   "xtn_advsimd.xml",
   "sqxtun_advsimd.xml",
   "sqxtn_advsimd.xml",
   "uqxtn_advsimd.xml",
   "shll_advsimd.xml",
+  "sshll_advsimd.xml",
+  "ushll_advsimd.xml",
   "fcvtxn_advsimd.xml",
   "shrn_advsimd.xml",
   "rshrn_advsimd.xml",
@@ -140,11 +147,30 @@ function formatLogicalImmediateAlias(decoded: DecodedInstruction): string | null
   const fileName = decoded.encoding?.fileName;
   const operands = decoded.operands ?? [];
 
+  if (fileName === "mov_orr_log_imm.xml" && operands.length === 2) {
+    return `mov ${formatOperand(operands[0])}, ${formatOperand(operands[1])}`;
+  }
+
   if (fileName !== "tst_ands_log_imm.xml" || operands.length !== 2) {
     return null;
   }
 
   return `tst ${formatOperand(operands[0])}, ${formatOperand(operands[1])}`;
+}
+
+function formatLogicalShiftedRegisterAlias(decoded: DecodedInstruction): string | null {
+  const fileName = decoded.encoding?.fileName;
+  const operands = decoded.operands ?? [];
+
+  if (fileName !== "tst_ands_log_shift.xml" || operands.length < 2 || operands.length > 3) {
+    return null;
+  }
+
+  const rendered = [formatOperand(operands[0]), formatOperand(operands[1])];
+  if (operands[2]) {
+    rendered.push(formatOperand(operands[2]));
+  }
+  return `tst ${rendered.join(", ")}`;
 }
 
 function formatBfloat16Alias(decoded: DecodedInstruction): string | null {
@@ -261,7 +287,7 @@ function formatBarrierInstruction(decoded: DecodedInstruction): string | null {
   const operands = decoded.operands ?? [];
   const fields = decoded.fields;
 
-  if (!fileName || !fields || !["dmb.xml", "dsb.xml"].includes(fileName) || operands.length !== 1 || operands[0].kind !== "text") {
+  if (!fileName || !fields || !["dmb.xml", "dsb.xml", "gcsb.xml"].includes(fileName) || operands.length !== 1 || operands[0].kind !== "text") {
     return null;
   }
 
@@ -276,7 +302,7 @@ function formatSystemInstructionAlias(decoded: DecodedInstruction): string | nul
   const fileName = decoded.encoding?.fileName;
   const operands = decoded.operands ?? [];
 
-  if (!fileName || !["at_sys.xml", "dc_sys.xml", "tlbi_sys.xml"].includes(fileName) || operands.length === 0) {
+  if (!fileName || !["at_sys.xml", "dc_sys.xml", "tlbi_sys.xml", "gcsss1_sys.xml", "gcspushm_sys.xml"].includes(fileName) || operands.length === 0) {
     return null;
   }
 
@@ -294,6 +320,11 @@ function formatSystemInstructionAlias(decoded: DecodedInstruction): string | nul
         : `${operands[0].text} ${operands[1].text}`;
     }
     return `sys ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
+  }
+
+  if (fileName === "gcsss1_sys.xml" || fileName === "gcspushm_sys.xml") {
+    const mnemonic = fileName === "gcsss1_sys.xml" ? "gcsss1" : "gcspushm";
+    return operands.length === 0 ? mnemonic : `${mnemonic} ${operands.map((operand) => formatOperand(operand)).join(", ")}`;
   }
 
   if (operands[0].kind !== "text") {
@@ -489,7 +520,27 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
     return "fmov";
   }
 
-  if (["dup_z_i.xml", "dup_z_zi.xml", "cpy_z_p_r.xml", "cpy_z_o_i.xml", "cpy_z_p_i.xml", "cpy_z_p_v.xml", "mov_orr_log_shift.xml", "mov_orr_advsimd_reg.xml", "mov_dup_z_r.xml", "dup_z_r.xml"].includes(fileName)) {
+  if (fileName === "mvn_not_advsimd.xml") {
+    return "mvn";
+  }
+
+  if ([
+    "dup_z_i.xml",
+    "dup_z_zi.xml",
+    "cpy_z_p_r.xml",
+    "cpy_z_o_i.xml",
+    "cpy_z_p_i.xml",
+    "cpy_z_p_v.xml",
+    "mov_orr_log_shift.xml",
+    "mov_orr_log_imm.xml",
+    "mov_orr_advsimd_reg.xml",
+    "mov_dup_z_r.xml",
+    "dup_z_r.xml",
+    "ins_advsimd_gen.xml",
+    "ins_advsimd_elt.xml",
+    "dup_advsimd_elt.xml",
+    "mov_umov_advsimd.xml",
+  ].includes(fileName)) {
     return "mov";
   }
 
@@ -514,6 +565,36 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
   }
   if (fileName === "gcspopm_sysl.xml") {
     return "gcspopm";
+  }
+  if (fileName === "gcsss1_sys.xml") {
+    return "gcsss1";
+  }
+  if (fileName === "gcspushm_sys.xml") {
+    return "gcspushm";
+  }
+  if (fileName === "cfp_sys.xml") {
+    return "cfp";
+  }
+  if (fileName === "dvp_sys.xml") {
+    return "dvp";
+  }
+  if (fileName === "cpp_sys.xml") {
+    return "cpp";
+  }
+  if (fileName === "cosp_sys.xml") {
+    return "cosp";
+  }
+  if (fileName === "ssbb_dsb.xml") {
+    return "ssbb";
+  }
+  if (fileName === "pssbb_dsb.xml") {
+    return "pssbb";
+  }
+  if (fileName === "sxtl_sshll_advsimd.xml") {
+    return `sxtl${(decoded.fields?.Q ?? 0) === 1 ? "2" : ""}`;
+  }
+  if (fileName === "uxtl_ushll_advsimd.xml") {
+    return `uxtl${(decoded.fields?.Q ?? 0) === 1 ? "2" : ""}`;
   }
 
   if (
@@ -579,6 +660,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
   const logicalImmediateAlias = formatLogicalImmediateAlias({ ...decoded, operands });
   if (logicalImmediateAlias) {
     return logicalImmediateAlias;
+  }
+
+  const logicalShiftedRegisterAlias = formatLogicalShiftedRegisterAlias({ ...decoded, operands });
+  if (logicalShiftedRegisterAlias) {
+    return logicalShiftedRegisterAlias;
   }
 
   const bfloat16Alias = formatBfloat16Alias({ ...decoded, operands });
