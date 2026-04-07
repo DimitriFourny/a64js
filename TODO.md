@@ -30,9 +30,58 @@ bun tools/generate.ts
 bun test
 ```
 
+## Formatter Strategy
+
+Goal: stop scaling instruction support by adding more one-off `formatters.ts` cases for every XML family. The generated decode tables can stay large; the handwritten operand/rendering path should become smaller and more systematic.
+
+Constraints:
+
+- keep Arm XML-derived decode data as the source of truth
+- keep Capstone fixtures as a progress/regression corpus only
+- do not add Capstone-specific formatting overlays unless the project explicitly changes output compatibility goals
+- do not depend on `<asmtemplate>` parsing for this migration
+- prefer compact local operand/action schemas keyed by field shape, encoding id patterns, class names, feature/docvar-like metadata already collected, and explicit XML filename groups when needed
+
+Target architecture:
+
+1. Add a small operand/action schema layer that can express common operand construction patterns:
+   - register operands: GP, SIMD/FP, SVE vector, predicate, ZA/tile text helpers
+   - immediates: unsigned, signed, shifted, concatenated, scaled, PC-relative
+   - memory forms: base, base+imm, pre/post-index, register offset, SVE/SME vector-length scaled forms
+   - formatting actions: optional operands, lane suffixes, predicate modes, tuple/group text, alias mnemonic selection hooks
+2. Generate or precompute a compact dispatch table from schemas to encodings during `bun tools/generate.ts`.
+   - ordinary encodings should get a `formatFamily`/`operandAction` id rather than a new handwritten `switch` case
+   - ambiguous or truly special encodings can remain on bespoke formatter functions
+3. Keep the existing handwritten formatter as the fallback while migrating.
+   - convert one family at a time
+   - require `bun tools/generate.ts` and `bun test` after each conversion
+   - do not promote more XML files in the same patch unless the schema work directly enables them
+4. Use reports to track formatter coverage separately from instruction support.
+   - supported XML file has no schema or bespoke formatter
+   - schema candidate matches multiple incompatible formatter shapes
+   - unsupported capstone cases match an already-known schema but are not yet promoted
+5. End state:
+   - generic families are handled by schemas
+   - `buildOperands()` dispatches through generated schema ids first
+   - the filename switch only contains genuinely special cases
+   - adding a large remaining family usually means adding schema rows, not new formatter logic
+
 ## In Progress
 
 ## Ready
+
+- Operand/action schema foundation
+  - Anchors: `src/formatters.ts`, `src/types.ts`, `tools/generate.ts`, `tools/encodings.ts`
+  - Focus: introduce the schema mechanism without changing supported instruction behavior or promoting new XML files.
+  - Plan:
+    - define schema/action types for the smallest useful set of operand builders
+    - wire generated encodings to an optional schema/action id
+    - route `buildOperands()` through schema dispatch before falling back to the existing bespoke switch
+    - port one low-risk family already covered by tests, such as a simple GP three-register or add/sub immediate family, as the proof of concept
+  - Done when:
+    - existing tests pass with no supported/unsupported count regression
+    - the migrated family no longer depends on its old bespoke `buildOperands()` switch case
+    - adding a second similar family would only require schema table entries, not a new formatter function
 
 - SVE loads with replicated/scalarizing forms batch
   - Anchors: `SVE/ld1rb.s.yaml`, `SVE/ld1rh.s.yaml`, `SVE/ld1rw.s.yaml`, `SVE/ld1rsb.s.yaml`, `SVE/ld1rsh.s.yaml`, `SVE/ld1rsw.s.yaml`, `SVE/ld1rqb.s.yaml`, `SVE/ld1rqh.s.yaml`, `SVE/ld1rqw.s.yaml`, `SVE/ld1rqd.s.yaml`
@@ -269,6 +318,8 @@ So this TODO tracks instructions that already map cleanly to XML encodings, but 
 
 - Do not add XML files to `tools/supported-files.ts` until both `decode()` and `disasm()` behave correctly for that family.
 - The generated capstone corpus is a progress metric, not the whole instruction universe.
+- Do not encode Capstone-specific output quirks in the implementation unless output compatibility goals explicitly change.
+- Do not spend migration effort on parsing `<asmtemplate>`; use compact local operand/action schemas instead.
 - `bun tools/generate.ts` now refreshes the committed capstone shards by repartitioning the tracked corpus against the current `tools/supported-files.ts` set.
 - The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
 - `tools/encodings.ts` needs to tolerate feature terms inside larger guard expressions; keep that in mind when working on mixed-guard XMLs.
