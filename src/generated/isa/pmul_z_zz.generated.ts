@@ -1,0 +1,51 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "pmul_z_zz",
+    "encodingId": "pmul_z_zz_",
+    "mnemonic": "PMUL",
+    "className": "SVE2",
+    "fileName": "pmul_z_zz.xml",
+    "mask": 4292934656,
+    "value": 69231616,
+    "bitCount": 17,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opc",
+        "lsb": 10,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_SVE2 || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2 || FEAT_SME",
+        "all": []
+      }
+    ],
+    "guards": []
+  }
+];

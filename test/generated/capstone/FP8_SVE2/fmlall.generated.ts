@@ -1,6 +1,17 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 0,
+    "word": 1679867904,
+    "asmText": "fmlallbb z0.s, z0.b, z0.b[0]",
+    "encodingFile": "fmlallbb_z32_z8z8z8i.xml",
+    "mnemonic": "FMLALLBB",
+    "features": [
+      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
     "caseIndex": 1,
     "word": 69255159,
     "asmText": "movprfx z23, z31",
@@ -10,111 +21,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 5,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 9,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 13,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 17,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 21,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 25,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 29,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
-    "caseIndex": 0,
-    "word": 1679867904,
-    "asmText": "fmlallbb z0.s, z0.b, z0.b[0]",
-    "encodingFile": "fmlallbb_z32_z8z8z8i.xml",
-    "mnemonic": "FMLALLBB",
-    "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
     ]
   },
   {
@@ -152,6 +58,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 5,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
     "caseIndex": 6,
     "word": 1680378295,
     "asmText": "fmlallbb z23.s, z13.b, z8.b",
@@ -181,6 +100,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "mnemonic": "FMLALLBT",
     "features": [
       "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 9,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -218,6 +150,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 13,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
     "caseIndex": 14,
     "word": 1680382391,
     "asmText": "fmlallbt z23.s, z13.b, z8.b",
@@ -247,6 +192,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "mnemonic": "FMLALLTB",
     "features": [
       "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 17,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -284,6 +242,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 21,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
     "caseIndex": 22,
     "word": 1680386487,
     "asmText": "fmlalltb z23.s, z13.b, z8.b",
@@ -313,6 +284,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "mnemonic": "FMLALLTT",
     "features": [
       "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 25,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -350,6 +334,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "FP8_SVE2/fmlall.s.yaml",
+    "caseIndex": 29,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "FP8_SVE2/fmlall.s.yaml",
     "caseIndex": 30,
     "word": 1680390583,
     "asmText": "fmlalltt z23.s, z13.b, z8.b",
@@ -371,3 +368,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

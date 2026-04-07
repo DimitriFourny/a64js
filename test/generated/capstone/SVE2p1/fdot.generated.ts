@@ -14,48 +14,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/fdot.s.yaml",
-    "caseIndex": 6,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fdot.s.yaml",
-    "caseIndex": 12,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fdot.s.yaml",
-    "caseIndex": 18,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE2p1/fdot.s.yaml",
     "caseIndex": 1,
     "word": 1680376247,
     "asmText": "fdot z23.s, z13.h, z8.h",
@@ -117,6 +75,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fdot.s.yaml",
+    "caseIndex": 6,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -186,6 +157,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/fdot.s.yaml",
+    "caseIndex": 12,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fdot.s.yaml",
     "caseIndex": 13,
     "word": 1680376247,
     "asmText": "fdot z23.s, z13.h, z8.h",
@@ -247,6 +231,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fdot.s.yaml",
+    "caseIndex": 18,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -315,3 +312,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

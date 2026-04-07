@@ -1,0 +1,127 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "FAMIN_advsimd",
+    "encodingId": "FAMIN_asimdsamefp16_only",
+    "mnemonic": "FAMIN",
+    "className": "Half-precision",
+    "fileName": "famin_advsimd.xml",
+    "mask": 3219192832,
+    "value": 784342016,
+    "bitCount": 16,
+    "fields": [
+      {
+        "name": "Q",
+        "lsb": 30,
+        "width": 1
+      },
+      {
+        "name": "U",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "a",
+        "lsb": 23,
+        "width": 1
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 11,
+        "width": 3
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_AdvSIMD && FEAT_FAMINMAX"
+    ],
+    "featureGuards": [],
+    "guards": []
+  },
+  {
+    "instructionId": "FAMIN_advsimd",
+    "encodingId": "FAMIN_asimdsame_only",
+    "mnemonic": "FAMIN",
+    "className": "Single-precision and double-precision",
+    "fileName": "famin_advsimd.xml",
+    "mask": 3214998528,
+    "value": 782294016,
+    "bitCount": 15,
+    "fields": [
+      {
+        "name": "Q",
+        "lsb": 30,
+        "width": 1
+      },
+      {
+        "name": "U",
+        "lsb": 29,
+        "width": 1
+      },
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Rm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "opcode",
+        "lsb": 11,
+        "width": 5
+      },
+      {
+        "name": "Rn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Rd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_AdvSIMD && FEAT_FAMINMAX"
+    ],
+    "featureGuards": [],
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
+    ]
+  }
+];

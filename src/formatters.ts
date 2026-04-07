@@ -2277,6 +2277,30 @@ function advsimdFp8NarrowPairOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function advsimdFp8LutiRegisterCount(inst: DecodedInstruction): number {
+  if (inst.encoding!.fileName === "luti2_advsimd.xml") {
+    return 1;
+  }
+  return ((inst.fields!.len ?? 0) & 0x1) + 1;
+}
+
+function advsimdFp8LutiOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const size = advsimdElementSize(inst);
+  const lane = advsimdLaneFromSize(size);
+  const arrangement = advsimdArrangementFromSizeQ(size, fields.Q);
+  const registerCount = advsimdFp8LutiRegisterCount(inst);
+  const tableRegisters = Array.from({ length: registerCount }, (_, index) => `v${((fields.Rn ?? 0) + index) & 31}.${arrangement}`);
+  const sourceIndex = advsimdByElementSourceIndex(fields, size);
+  const elementIndex = advsimdByElementIndex(fields, size);
+
+  return [
+    { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
+    { kind: "text", text: `{ ${tableRegisters.join(", ")} }` },
+    { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+  ];
+}
+
 function complexRotateDegrees(inst: DecodedInstruction): number {
   const fields = inst.fields ?? {};
   if (inst.encoding?.fileName === "fcadd_advsimd_vec.xml" || inst.encoding?.fileName === "fcadd_z_p_zz.xml") {
@@ -3163,6 +3187,10 @@ function sveWhileCompareOperands(inst: DecodedInstruction): Operand[] {
   const lane = sveVectorLaneFromSize(fields.size);
   const fileName = inst.encoding!.fileName;
 
+  if (fileName.endsWith("_p_rr.xml")) {
+    return [predReg(fields.Pd, undefined, lane), gpReg(64, fields.Rn, "zr"), gpReg(64, fields.Rm, "zr")];
+  }
+
   if (fileName.endsWith("_p_p_rr.xml")) {
     const width = widthFromSf(fields.sf);
     return [
@@ -3492,6 +3520,19 @@ function svePredicatedConversionOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(fields.Zd ?? 0, destinationLane), predReg(fields.Pg ?? 0, mode), vecReg(fields.Zn ?? 0, sourceLane)];
 }
 
+function svePredicatedNarrowingConversionOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const mode = inst.encoding!.encodingId.endsWith("z") ? "z" : "m";
+  const match = inst.encoding!.encodingId.match(/_([hsd])2([hsd])z?$/);
+  if (!match) {
+    return [];
+  }
+
+  const sourceLane = match[1] as "h" | "s" | "d";
+  const destinationLane = match[2] as "h" | "s" | "d";
+  return [vecReg(fields.Zd ?? 0, destinationLane), predReg(fields.Pg ?? 0, mode), vecReg(fields.Zn ?? 0, sourceLane)];
+}
+
 function svePredicatePermutationOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
@@ -3556,6 +3597,28 @@ function sveBinaryOperands(inst: DecodedInstruction): Operand[] {
     return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane)];
   }
   return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveWideningBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const sourceLane = sveVectorLaneFromSize(fields.size === undefined ? undefined : Math.max(0, fields.size - 1));
+  const destinationLane = sveVectorLaneFromSize(fields.size);
+  return [
+    vecReg(fields.Zd ?? 0, destinationLane),
+    vecReg(fields.Zn ?? 0, sourceLane),
+    vecReg(fields.Zm ?? 0, sourceLane),
+  ];
+}
+
+function sveNarrowingBinaryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const destinationLane = sveVectorLaneFromSize(fields.size === undefined ? undefined : Math.max(0, fields.size - 1));
+  const sourceLane = sveVectorLaneFromSize(fields.size);
+  return [
+    vecReg(fields.Zd ?? 0, destinationLane),
+    vecReg(fields.Zn ?? 0, sourceLane),
+    vecReg(fields.Zm ?? 0, sourceLane),
+  ];
 }
 
 function svePredicatedBinaryOperands(inst: DecodedInstruction): Operand[] {
@@ -3683,6 +3746,25 @@ function sveDestructiveImmediateOperands(inst: DecodedInstruction): Operand[] {
   return [vecReg(zdn, lane), vecReg(zdn, lane), { kind: "text", text: sveArithmeticImmediateText(fields) }];
 }
 
+function sveDestructiveBinaryOperands(inst: DecodedInstruction, lane: "b" | "h" | "s" | "d"): Operand[] {
+  const fields = inst.fields!;
+  const zdn = fields.Zdn ?? 0;
+  return [vecReg(zdn, lane), vecReg(zdn, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveDestructiveTernaryOperands(inst: DecodedInstruction, lane: "b" | "h" | "s" | "d"): Operand[] {
+  const fields = inst.fields!;
+  const zdn = fields.Zdn ?? 0;
+  return [vecReg(zdn, lane), vecReg(zdn, lane), vecReg(fields.Zm ?? 0, lane), vecReg(fields.Zk ?? 0, lane)];
+}
+
+function sveXarOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const { lane, shift } = sveShiftImmediateInfo(fields, false);
+  const zdn = fields.Zdn ?? 0;
+  return [vecReg(zdn, lane), vecReg(zdn, lane), vecReg(fields.Zm ?? 0, lane), { kind: "text", text: `#${shift}` }];
+}
+
 function sveShiftImmediateInfo(fields: Record<string, number>, leftShift: boolean): { lane: "b" | "h" | "s" | "d"; shift: number } {
   const tsize = ((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0);
   const elementLog2 = highestSetBitNZ(tsize);
@@ -3696,7 +3778,12 @@ function sveShiftImmediateInfo(fields: Record<string, number>, leftShift: boolea
 
 function sveShiftImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const { lane, shift } = sveShiftImmediateInfo(fields, inst.encoding!.fileName.startsWith("lsl_"));
+  const isLeftShift =
+    inst.encoding!.fileName.startsWith("lsl_") ||
+    inst.encoding!.fileName.startsWith("sqshl_") ||
+    inst.encoding!.fileName.startsWith("uqshl_") ||
+    inst.encoding!.fileName.startsWith("sqshlu_");
+  const { lane, shift } = sveShiftImmediateInfo(fields, isLeftShift);
 
   if (inst.encoding!.fileName.includes("_p_")) {
     const zdn = fields.Zdn ?? 0;
@@ -3708,6 +3795,41 @@ function sveShiftImmediateOperands(inst: DecodedInstruction): Operand[] {
     vecReg(fields.Zn ?? 0, lane),
     { kind: "text", text: `#${shift}` },
   ];
+}
+
+function sveNarrowingShiftImmediateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const tsize = ((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0);
+  if (tsize === 0) {
+    return [];
+  }
+
+  const destinationSizeLog2 = highestSetBitNZ(tsize);
+  const destinationLane = sveVectorLaneFromSize(destinationSizeLog2);
+  const sourceLane = sveVectorLaneFromSize(destinationSizeLog2 + 1);
+  const esize = 8 << destinationSizeLog2;
+  const encoded = (tsize << 3) | (fields.imm3 ?? 0);
+  const shift = (2 * esize) - encoded;
+
+  return [
+    vecReg(fields.Zd ?? 0, destinationLane),
+    vecReg(fields.Zn ?? 0, sourceLane),
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
+function sveNarrowingExtractOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const tsize = ((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0);
+  if (tsize === 0) {
+    return [];
+  }
+
+  const destinationSizeLog2 = highestSetBitNZ(tsize);
+  const destinationLane = sveVectorLaneFromSize(destinationSizeLog2);
+  const sourceLane = sveVectorLaneFromSize(destinationSizeLog2 + 1);
+
+  return [vecReg(fields.Zd ?? 0, destinationLane), vecReg(fields.Zn ?? 0, sourceLane)];
 }
 
 function sveWideShiftOperands(inst: DecodedInstruction): Operand[] {
@@ -3811,6 +3933,45 @@ function sveFpMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
 
   const lane = inst.encoding!.encodingId.endsWith("_s") ? "s" : inst.encoding!.encodingId.endsWith("_d") ? "d" : "h";
   return [vecReg(fields.Zda ?? 0, lane), vecReg(fields.Zn ?? 0, lane), { kind: "text", text: smeIndexedSourceText(inst, lane) }];
+}
+
+function sveMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [vecReg(fields.Zda ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveCdotOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const ops = sveDotProductOperands(inst);
+  ops.push({ kind: "text", text: `#${(fields.rot ?? 0) * 90}` });
+  return ops;
+}
+
+function svePmullOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  if (inst.encoding!.encodingId.endsWith("_q")) {
+    return [vecReg(fields.Zd ?? 0, "q"), vecReg(fields.Zn ?? 0, "d"), vecReg(fields.Zm ?? 0, "d")];
+  }
+  return sveWideningBinaryOperands(inst);
+}
+
+function sveFmlalLongOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  switch (inst.encoding!.fileName) {
+    case "fmlalb_z_zzz.xml":
+    case "fmlalt_z_zzz.xml":
+    case "fmlslb_z_zzz.xml":
+    case "fmlslt_z_zzz.xml":
+      return [vecReg(fields.Zda ?? 0, "s"), vecReg(fields.Zn ?? 0, "h"), vecReg(fields.Zm ?? 0, "h")];
+    case "fmlalb_z_zzzi.xml":
+    case "fmlalt_z_zzzi.xml":
+    case "fmlslb_z_zzzi.xml":
+    case "fmlslt_z_zzzi.xml":
+      return [vecReg(fields.Zda ?? 0, "s"), vecReg(fields.Zn ?? 0, "h"), { kind: "text", text: smeIndexedSourceText(inst, "h") }];
+    default:
+      return [];
+  }
 }
 
 function sveLd1bLaneFromEncodingId(encodingId: string): "b" | "h" | "s" | "d" {
@@ -3937,7 +4098,7 @@ function sveSingleVectorListText(register: number, lane: "b" | "h" | "s" | "d" |
 }
 
 function isSveContiguousMemoryFile(fileName: string): boolean {
-  return /^(?:ld1[bhwd]|ld1s[bhw]|st1[bhwd]|ld[234][bhwdq]|st[234][bhwdq]|ldnt1[bhwd]|stnt1[bhwd])_(?:z|mz)_p_(?:bi|br)\.xml$/
+  return /^(?:ld1[bhwd]|ld1s[bhw]|st1[bhwd]|ld[234][bhwdq]|st[234][bhwdq]|ldnt1[bhwd]|stnt1[bhwd])_(?:z_p_(?:ar|bi|br)|mzx?_p_(?:bi|br))\.xml$/
     .test(fileName);
 }
 
@@ -3959,6 +4120,7 @@ function sveElementShiftFromMnemonic(mnemonic: string): number {
 function sveMemoryLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | "d" | "q" {
   const fileName = inst.encoding!.fileName;
   const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
 
   if (fileName.startsWith("ld2q_") || fileName.startsWith("ld3q_") || fileName.startsWith("ld4q_")) {
     return "q";
@@ -3969,18 +4131,30 @@ function sveMemoryLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | 
   }
 
   if (fileName.startsWith("ld1b_")) {
+    if (fileName.endsWith("_ar.xml")) {
+      return encodingId.includes("_x32_") ? "s" : "d";
+    }
     return sveLd1bLaneFromEncodingId(inst.encoding!.encodingId);
   }
 
   if (fileName.startsWith("ld1s")) {
+    if (fileName.endsWith("_ar.xml")) {
+      return encodingId.includes("_x32_") ? "s" : "d";
+    }
     return sveSignExtLoadLaneFromEncodingId(inst.encoding!.encodingId);
   }
 
   if (fileName.startsWith("st1b_") || fileName.startsWith("st1h_")) {
+    if (fileName.endsWith("_ar.xml")) {
+      return encodingId.includes("_x32_") ? "s" : "d";
+    }
     return sveVectorLaneFromSize(fields.size);
   }
 
   if (fileName.startsWith("st1w_")) {
+    if (fileName.endsWith("_ar.xml")) {
+      return encodingId.includes("_x32_") ? "s" : "d";
+    }
     return (fields.sz ?? 0) === 0 ? "s" : "d";
   }
 
@@ -3998,7 +4172,17 @@ function sveMemoryLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | 
   }
 }
 
-function sveMemoryRegisterCount(mnemonic: string): number {
+function sveMemoryRegisterCount(inst: DecodedInstruction): number {
+  const fileName = inst.encoding!.fileName;
+  const encodingId = inst.encoding!.encodingId;
+  if (/_mzx?_p_/.test(fileName)) {
+    const match = /_(2|4)(?:x\d+)?$/.exec(encodingId);
+    if (match) {
+      return Number(match[1]);
+    }
+  }
+
+  const mnemonic = inst.encoding!.mnemonic;
   const match = /^(?:LD|ST)([234])/.exec(mnemonic);
   return match ? Number(match[1]) : 1;
 }
@@ -4120,9 +4304,9 @@ function sveFaultTolerantLoadOperands(inst: DecodedInstruction): Operand[] {
 function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const fileName = inst.encoding!.fileName;
-  const isPredicateCounter = fileName.includes("_mz_");
+  const isPredicateCounter = /_mzx?_p_/.test(fileName);
   const lane = sveMemoryLaneFromEncoding(inst);
-  const registerCount = sveMemoryRegisterCount(inst.encoding!.mnemonic);
+  const registerCount = sveMemoryRegisterCount(inst);
   const register = {
     kind: "text" as const,
     text: sveContiguousVectorListText(fields.Zt ?? 0, registerCount, lane),
@@ -4133,6 +4317,13 @@ function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
       ? predReg(fields.Pg ?? 0, "z")
       : predReg(fields.Pg ?? 0);
   const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
+
+  if (fileName.endsWith("_ar.xml")) {
+    const vectorBase = `z${fields.Zn ?? 0}.${lane}`;
+    const offsetRegister = fields.Rm ?? 31;
+    const memory = offsetRegister === 31 ? `[${vectorBase}]` : `[${vectorBase}, x${offsetRegister}]`;
+    return [register, predicate, { kind: "text", text: memory }];
+  }
 
   if (fileName.endsWith("_bi.xml")) {
     const imm = Number(signExtend(fields.imm4 ?? 0, 4)) * registerCount;
@@ -4316,12 +4507,20 @@ function sveDotLanes(inst: DecodedInstruction): { destination: "h" | "s" | "d"; 
   const encodingId = inst.encoding!.encodingId;
   const fields = inst.fields!;
 
+  if (fileName.includes("z8z8z8") || fileName.includes("zz8z8")) {
+    return { destination: fileName.includes("_z32_") ? "s" : "h", source: "b" };
+  }
+
   if (fileName.startsWith("bfdot_")) {
     return { destination: "s", source: "h" };
   }
 
   if (fileName === "sudot_z_zzzi.xml" || fileName === "usdot_z_zzz.xml" || fileName === "usdot_z_zzzi.xml") {
     return { destination: "s", source: "b" };
+  }
+
+  if (fileName.startsWith("fdot_")) {
+    return { destination: "s", source: "h" };
   }
 
   if (encodingId.includes("_z16_") || encodingId.endsWith("_h")) {
@@ -4358,12 +4557,13 @@ function sveDotIndexedSourceText(inst: DecodedInstruction, sourceLane: "b" | "h"
 function sveDotProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lanes = sveDotLanes(inst);
+  const hasIndexedSource = fields.i1 !== undefined || fields.i2 !== undefined || fields.i3h !== undefined || fields.i3l !== undefined || fields.i4h !== undefined || fields.i4l !== undefined;
   const ops: Operand[] = [
     vecReg(fields.Zda ?? 0, lanes.destination),
     vecReg(fields.Zn ?? 0, lanes.source),
   ];
 
-  if (inst.encoding!.fileName.endsWith("_zzzi.xml")) {
+  if (hasIndexedSource) {
     ops.push({ kind: "text", text: sveDotIndexedSourceText(inst, lanes.source) });
   } else {
     ops.push(vecReg(fields.Zm ?? 0, lanes.source));
@@ -4372,10 +4572,60 @@ function sveDotProductOperands(inst: DecodedInstruction): Operand[] {
   return ops;
 }
 
+function sveFp8LutiRegisterCount(inst: DecodedInstruction): number {
+  if (inst.encoding!.fileName === "luti2_z_zz.xml") {
+    return 1;
+  }
+  return ((inst.fields!.len ?? 0) & 0x1) + 1;
+}
+
+function sveFp8LutiIndex(fields: Record<string, number>): number {
+  if (fields.i3h !== undefined || fields.i3l !== undefined) {
+    return ((fields.i3h ?? 0) << 2) | (fields.i3l ?? 0);
+  }
+  if (fields.i2 !== undefined) {
+    return fields.i2;
+  }
+  return fields.i1 ?? 0;
+}
+
+function sveFp8LutiOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const registerCount = sveFp8LutiRegisterCount(inst);
+  const sourceRegisters = Array.from({ length: registerCount }, (_, index) => `z${((fields.Zn ?? 0) + index) & 31}.${lane}`);
+  const index = sveFp8LutiIndex(fields);
+  return [
+    vecReg(fields.Zd ?? 0, lane),
+    { kind: "text", text: `{ ${sourceRegisters.join(", ")} }` },
+    { kind: "text", text: `z${fields.Zm ?? 0}[${index}]` },
+  ];
+}
+
 function svePermutationOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = inst.encoding!.encodingId.endsWith("_q") ? "q" : sveVectorLaneFromSize(fields.size);
   return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveTableLookupOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  if (inst.encoding!.encodingId.endsWith("_2")) {
+    const first = fields.Zn ?? 0;
+    return [
+      vecReg(fields.Zd ?? 0, lane),
+      { kind: "text", text: `{ z${first}.${lane}, z${(first + 1) & 31}.${lane} }` },
+      vecReg(fields.Zm ?? 0, lane),
+    ];
+  }
+  return [vecReg(fields.Zd ?? 0, lane), sveSingleVectorListText(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveHistcntOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [vecReg(fields.Zd ?? 0, lane), predReg(fields.Pg ?? 0, "z"), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
 }
 
 function sveUnaryPermutationOperands(inst: DecodedInstruction): Operand[] {
@@ -4552,6 +4802,64 @@ function smeWideningFloatConvertOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function smeFp8WideningConvertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 2, 2, "h") },
+    vecReg(fields.Zn ?? 0, "b"),
+  ];
+}
+
+function smeNarrowingConvertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  if (inst.encoding!.fileName.endsWith("_mz4.xml")) {
+    const destLane = (fields.sz ?? 0) === 1 ? "h" : "b";
+    const srcLane = destLane === "h" ? "d" : "s";
+    return [
+      vecReg(fields.Zd ?? 0, destLane),
+      { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, srcLane) },
+    ];
+  }
+
+  return [vecReg(fields.Zd ?? 0, "h"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "s") }];
+}
+
+function smeNarrowingShiftOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  if (inst.encoding!.fileName.endsWith("_mz4.xml")) {
+    const tsize = fields.tsize ?? 0;
+    if (tsize === 0) {
+      return [];
+    }
+
+    const sourceElementBits = 8 << highestSetBitNZ(tsize);
+    const encoded = (tsize << 5) | (fields.imm5 ?? 0);
+    const shift = (8 * sourceElementBits) - encoded;
+    const sourceLane = sourceElementBits === 8 ? "s" : "d";
+    const destLane = sourceElementBits === 8 ? "b" : "h";
+    return [
+      vecReg(fields.Zd ?? 0, destLane),
+      { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, sourceLane) },
+      { kind: "text", text: `#${shift}` },
+    ];
+  }
+
+  const tsize = ((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0);
+  if (tsize === 0) {
+    return [];
+  }
+
+  const sourceElementBits = 8 << highestSetBitNZ(tsize);
+  const encoded = (tsize << 3) | (fields.imm3 ?? 0);
+  const shift = (2 * sourceElementBits) - encoded;
+
+  return [
+    vecReg(fields.Zd ?? 0, "h"),
+    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "s") },
+    { kind: "text", text: `#${shift}` },
+  ];
+}
+
 function smeFp8NarrowConvertSourceLane(fileName: string): "h" | "s" {
   return fileName === "fcvtnb_z8_mz2.xml" || fileName === "fcvtnt_z8_mz2.xml" ? "s" : "h";
 }
@@ -4563,6 +4871,15 @@ function smeFp8NarrowConvertOperands(inst: DecodedInstruction): Operand[] {
     vecReg(fields.Zd ?? 0, "b"),
     { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, lane) },
   ];
+}
+
+function smeFp8NarrowingConvertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  if (inst.encoding!.fileName.endsWith("_mz4.xml")) {
+    return [vecReg(fields.Zd ?? 0, "b"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, "s") }];
+  }
+
+  return [vecReg(fields.Zd ?? 0, "b"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "h") }];
 }
 
 type SmeZeroMaskEntry = {
@@ -4803,6 +5120,8 @@ function smeDotSourceLane(inst: DecodedInstruction, accLane: "h" | "s" | "d"): "
   }
   return accLane === "d" ||
       inst.encoding!.fileName.includes("za32") ||
+      inst.encoding!.fileName.startsWith("bfvdot_") ||
+      inst.encoding!.fileName.startsWith("fvdot_") ||
       inst.encoding!.fileName.startsWith("bfdot_") ||
       inst.encoding!.fileName.startsWith("fdot_")
     ? "h"
@@ -4817,12 +5136,18 @@ function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
   switch (inst.encoding!.fileName) {
     case "fmax_mz_zzv.xml":
     case "fmax_mz_zzw.xml":
+    case "famax_mz_zzv.xml":
+    case "famax_mz_zzw.xml":
     case "fmaxnm_mz_zzv.xml":
     case "fmaxnm_mz_zzw.xml":
     case "fmin_mz_zzv.xml":
     case "fmin_mz_zzw.xml":
+    case "famin_mz_zzv.xml":
+    case "famin_mz_zzw.xml":
     case "fminnm_mz_zzv.xml":
-    case "fminnm_mz_zzw.xml": {
+    case "fminnm_mz_zzw.xml":
+    case "fscale_mz_zzv.xml":
+    case "fscale_mz_zzw.xml": {
       const lane = sveVectorLaneFromSize(inst.fields?.size);
       return lane === "d" ? "d" : lane === "s" ? "s" : "h";
     }
@@ -4875,11 +5200,20 @@ function smeMultiVectorArithmeticOperands(inst: DecodedInstruction): Operand[] {
 function smeMultiVectorClampOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const count = smeDotGroupCount(inst.encoding!.className);
-  const lane = sveVectorLaneFromSize(fields.size);
+  const lane = inst.encoding!.mnemonic.startsWith("BF") ? "h" : sveVectorLaneFromSize(fields.size);
   return [
     { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, lane) },
     vecReg(fields.Zn ?? 0, lane),
     vecReg(fields.Zm ?? 0, lane),
+  ];
+}
+
+function smeIntFloatConvertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const count = smeDotGroupCount(inst.encoding!.className);
+  return [
+    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, "s") },
+    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * count, count, "s") },
   ];
 }
 
@@ -4918,6 +5252,16 @@ function smeLutiOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
     { kind: "text", text: smeLutiVectorGroupText(inst, count, lane) },
     { kind: "text", text: "zt0" },
     { kind: "text", text: `z${fields.Zn ?? 0}[${smeLutiIndex(inst)}]` },
+  ];
+}
+
+function smeFp8LutiMixedOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const sourceStart = fields.Zm ?? 0;
+  return [
+    { kind: "text", text: smeLutiVectorGroupText(inst, 4, "b") },
+    { kind: "text", text: "zt0" },
+    { kind: "text", text: `{ z${sourceStart}, z${(sourceStart + 1) & 31} }` },
   ];
 }
 
@@ -5259,9 +5603,12 @@ function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Z
     case "bfmin_mz_zzv.xml":
     case "bfminnm_mz_zzv.xml":
     case "fmax_mz_zzv.xml":
+    case "famax_mz_zzv.xml":
     case "fmaxnm_mz_zzv.xml":
     case "fmin_mz_zzv.xml":
+    case "famin_mz_zzv.xml":
     case "fminnm_mz_zzv.xml":
+    case "fscale_mz_zzv.xml":
     case "sqdmulh_mz_zzv.xml":
     case "srshl_mz_zzv.xml":
     case "urshl_mz_zzv.xml":
@@ -5276,9 +5623,12 @@ function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Z
     case "bfmin_mz_zzw.xml":
     case "bfminnm_mz_zzw.xml":
     case "fmax_mz_zzw.xml":
+    case "famax_mz_zzw.xml":
     case "fmaxnm_mz_zzw.xml":
     case "fmin_mz_zzw.xml":
+    case "famin_mz_zzw.xml":
     case "fminnm_mz_zzw.xml":
+    case "fscale_mz_zzw.xml":
     case "sqdmulh_mz_zzw.xml":
     case "srshl_mz_zzw.xml":
     case "urshl_mz_zzw.xml":
@@ -5331,9 +5681,12 @@ function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
     case "bfmin_mz_zzv.xml":
     case "bfminnm_mz_zzv.xml":
     case "fmax_mz_zzv.xml":
+    case "famax_mz_zzv.xml":
     case "fmaxnm_mz_zzv.xml":
     case "fmin_mz_zzv.xml":
+    case "famin_mz_zzv.xml":
     case "fminnm_mz_zzv.xml":
+    case "fscale_mz_zzv.xml":
     case "sqdmulh_mz_zzv.xml":
     case "srshl_mz_zzv.xml":
     case "urshl_mz_zzv.xml":
@@ -5351,9 +5704,12 @@ function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
     case "bfmin_mz_zzw.xml":
     case "bfminnm_mz_zzw.xml":
     case "fmax_mz_zzw.xml":
+    case "famax_mz_zzw.xml":
     case "fmaxnm_mz_zzw.xml":
     case "fmin_mz_zzw.xml":
+    case "famin_mz_zzw.xml":
     case "fminnm_mz_zzw.xml":
+    case "fscale_mz_zzw.xml":
     case "sqdmulh_mz_zzw.xml":
     case "srshl_mz_zzw.xml":
     case "urshl_mz_zzw.xml":
@@ -5406,14 +5762,62 @@ function smeOuterProductLane(inst: DecodedInstruction): "h" | "s" | "d" {
 
 function smeOuterProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = smeOuterProductLane(inst);
+  let lane = smeOuterProductLane(inst);
+  let sourceLane = lane;
+  switch (inst.encoding!.fileName) {
+    case "smopa_za_pp_zz.xml":
+    case "smops_za_pp_zz.xml":
+    case "umopa_za_pp_zz.xml":
+    case "umops_za_pp_zz.xml":
+    case "smopa_za32_pp_zz.xml":
+    case "smops_za32_pp_zz.xml":
+    case "umopa_za32_pp_zz.xml":
+    case "umops_za32_pp_zz.xml":
+      lane = inst.encoding!.fileName.includes("za32") ? "s" : inst.encoding!.className.includes("64-bit") ? "d" : "s";
+      sourceLane = lane === "d" ? "s" : "h";
+      break;
+    case "bmopa_za_pp_zz.xml":
+    case "bmops_za_pp_zz.xml":
+      lane = "s";
+      sourceLane = "s";
+      break;
+    case "bfmopa_za_pp_zz.xml":
+    case "bfmops_za_pp_zz.xml":
+      lane = "h";
+      sourceLane = "h";
+      break;
+    case "bfmopa_za32_pp_zz.xml":
+    case "bfmops_za32_pp_zz.xml":
+      lane = "s";
+      sourceLane = "h";
+      break;
+  }
   return [
     { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
     predReg(fields.Pn ?? 0, "m"),
     predReg(fields.Pm ?? 0, "m"),
-    vecReg(fields.Zn ?? 0, lane),
-    vecReg(fields.Zm ?? 0, lane),
+    vecReg(fields.Zn ?? 0, sourceLane),
+    vecReg(fields.Zm ?? 0, sourceLane),
   ];
+}
+
+function smeFp8OuterProductOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane: "h" | "s" = inst.encoding!.fileName.includes("za16") ? "h" : "s";
+  return [
+    { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
+    predReg(fields.Pn ?? 0, "m"),
+    predReg(fields.Pm ?? 0, "m"),
+    vecReg(fields.Zn ?? 0, "b"),
+    vecReg(fields.Zm ?? 0, "b"),
+  ];
+}
+
+function smeMovtZtOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const offset = fields.off2 ?? fields.imm2 ?? 0;
+  const destination = offset === 0 ? "zt0" : `zt0[${offset}, mul vl]`;
+  return [{ kind: "text", text: destination }, vecReg(fields.Zn ?? fields.Zm ?? 0)];
 }
 
 function smePermutationOperands(inst: DecodedInstruction): Operand[] {
@@ -5492,16 +5896,22 @@ function smeDotSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): nu
     case "fdot_za32_z8z8i.xml":
     case "svdot_za_zzi.xml":
     case "svdot_za32_zzi.xml":
+    case "fvdot_za_zzi.xml":
+    case "bfvdot_za_zzi.xml":
     case "sudot_za_zzi.xml":
+    case "suvdot_za_zzi.xml":
     case "uvdot_za_zzi.xml":
     case "uvdot_za32_zzi.xml":
     case "usdot_za_zzi.xml":
+    case "usvdot_za_zzi.xml":
     case "sdot_za32_zzi.xml":
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
     case "udot_za_zzi.xml":
       return fieldName === "Zn" ? (fields.Zn ?? 0) * smeDotGroupCount(inst.encoding!.className) : (fields.Zm ?? 0);
     case "fvdot_za_z8z8i.xml":
+    case "fvdot_za_zzi.xml":
+    case "bfvdot_za_zzi.xml":
     case "fvdotb_za32_z8z8i.xml":
     case "fvdott_za32_z8z8i.xml":
       return fieldName === "Zn" ? (fields.Zn ?? 0) * 2 : (fields.Zm ?? 0);
@@ -5557,14 +5967,18 @@ function smeDotOperands(inst: DecodedInstruction): Operand[] {
     case "fdot_za_z8z8i.xml":
     case "fdot_za32_z8z8i.xml":
     case "fvdot_za_z8z8i.xml":
+    case "fvdot_za_zzi.xml":
+    case "bfvdot_za_zzi.xml":
     case "fvdotb_za32_z8z8i.xml":
     case "fvdott_za32_z8z8i.xml":
     case "svdot_za_zzi.xml":
     case "svdot_za32_zzi.xml":
     case "sudot_za_zzi.xml":
+    case "suvdot_za_zzi.xml":
     case "uvdot_za_zzi.xml":
     case "uvdot_za32_zzi.xml":
     case "usdot_za_zzi.xml":
+    case "usvdot_za_zzi.xml":
     case "sdot_za32_zzi.xml":
     case "udot_za32_zzi.xml":
     case "sdot_za_zzi.xml":
@@ -5639,6 +6053,12 @@ function smeLdrZaArrayVectorOperands(inst: DecodedInstruction): Operand[] {
     { kind: "text", text: `za[w${selector}, ${offset}]` },
     { kind: "text", text: memory },
   ];
+}
+
+function smeZtMemoryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
+  return [{ kind: "text", text: "zt0" }, { kind: "text", text: `[${base}]` }];
 }
 
 function pselLaneAndImmediate(fields: Record<string, number>): { lane: "b" | "h" | "s" | "d"; imm: number } {
@@ -6133,8 +6553,12 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sqdmlsl_advsimd_elt.xml":
       return advsimdByElementLongOperands(inst);
     case "fmlal_advsimd_vec.xml":
+    case "fmlalb_advsimd_vec.xml":
+    case "fmlallbb_advsimd_vec.xml":
     case "fmlsl_advsimd_vec.xml":
     case "fmlal_advsimd_elt.xml":
+    case "fmlalb_advsimd_elem.xml":
+    case "fmlallbb_advsimd_elem.xml":
     case "fmlsl_advsimd_elt.xml":
       return advsimdFpLongMultiplyAccumulateOperands(inst);
     case "fmaxp_advsimd_pair.xml":
@@ -6176,7 +6600,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "umax_advsimd.xml":
     case "umin_advsimd.xml":
     case "fmax_advsimd.xml":
+    case "famax_advsimd.xml":
     case "fmin_advsimd.xml":
+    case "famin_advsimd.xml":
     case "fmaxnm_advsimd.xml":
     case "fminnm_advsimd.xml":
     case "fabd_advsimd.xml":
@@ -6232,6 +6658,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "usdot_advsimd_elt.xml":
     case "bfdot_advsimd_vec.xml":
     case "bfdot_advsimd_elt.xml":
+    case "fdot_advsimd_2wayvec.xml":
+    case "fdot_advsimd_4wayvec.xml":
+    case "fdot_advsimd_2wayelem.xml":
+    case "fdot_advsimd_4wayelem.xml":
       return advsimdDotProductOperands(inst);
     case "cmeq_advsimd_reg.xml":
     case "cmeq_advsimd_zero.xml":
@@ -6338,6 +6768,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "tbl_advsimd.xml":
     case "tbx_advsimd.xml":
       return advsimdTableLookupOperands(inst);
+    case "luti2_advsimd.xml":
+    case "luti4_advsimd.xml":
+      return advsimdFp8LutiOperands(inst);
     case "xtn_advsimd.xml":
     case "fcvtxn_advsimd.xml":
     case "bfcvtn_advsimd.xml":
@@ -6500,11 +6933,37 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fcvt_mz2_z.xml":
     case "fcvtl_mz2_z.xml":
       return smeWideningFloatConvertOperands(inst);
+    case "f1cvt_mz2_z8.xml":
+    case "f1cvtl_mz2_z8.xml":
+    case "bf1cvt_mz2_z8.xml":
+    case "bf1cvtl_mz2_z8.xml":
+      return smeFp8WideningConvertOperands(inst);
+    case "fcvt_z_mz2.xml":
+    case "bfcvt_z_mz2.xml":
+    case "fcvtn_z_mz2.xml":
+    case "bfcvtn_z_mz2.xml":
+    case "sqcvtn_z_mz2.xml":
+    case "sqcvtun_z_mz2.xml":
+    case "uqcvtn_z_mz2.xml":
+    case "sqcvtn_z_mz4.xml":
+    case "uqcvtn_z_mz4.xml":
+      return smeNarrowingConvertOperands(inst);
+    case "sqrshrn_z_mz2.xml":
+    case "sqrshrun_z_mz2.xml":
+    case "uqrshrn_z_mz2.xml":
+    case "sqrshrn_z_mz4.xml":
+    case "uqrshrn_z_mz4.xml":
+      return smeNarrowingShiftOperands(inst);
     case "fcvtn_z8_mz2.xml":
     case "fcvtnb_z8_mz2.xml":
     case "fcvtnt_z8_mz2.xml":
     case "bfcvtn_z8_mz2.xml":
       return smeFp8NarrowConvertOperands(inst);
+    case "fcvt_z8_mz2.xml":
+    case "fcvt_z8_mz4.xml":
+    case "fcvtn_z8_mz4.xml":
+    case "bfcvt_z8_mz2.xml":
+      return smeFp8NarrowingConvertOperands(inst);
     case "zero_za_i.xml":
       return smeZeroBaseOperands(inst);
     case "zero_za1_ri.xml":
@@ -6526,11 +6985,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return smeZaTileSliceOperands(inst);
     case "ldr_za_ri.xml":
       return smeLdrZaArrayVectorOperands(inst);
+    case "ldr_zt_br.xml":
+    case "str_zt_br.xml":
+      return smeZtMemoryOperands(inst);
     case "add_mz_zzv.xml":
       return smeMultiVectorArithmeticOperands(inst);
     case "sclamp_mz_zz.xml":
     case "uclamp_mz_zz.xml":
+    case "fclamp_mz_zz.xml":
+    case "bfclamp_mz_zz.xml":
       return smeMultiVectorClampOperands(inst);
+    case "scvtf_mz_z.xml":
+    case "ucvtf_mz_z.xml":
+    case "fcvtzs_mz_z.xml":
+    case "fcvtzu_mz_z.xml":
+      return smeIntFloatConvertOperands(inst);
     case "add_za_zzv.xml":
     case "sub_za_zzv.xml":
     case "smax_mz_zzv.xml":
@@ -6586,7 +7055,26 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return smeArithmeticOperands(inst);
     case "fmopa_za_pp_zz.xml":
     case "fmops_za_pp_zz.xml":
+    case "smopa_za_pp_zz.xml":
+    case "smopa_za32_pp_zz.xml":
+    case "smops_za_pp_zz.xml":
+    case "smops_za32_pp_zz.xml":
+    case "umopa_za_pp_zz.xml":
+    case "umopa_za32_pp_zz.xml":
+    case "umops_za_pp_zz.xml":
+    case "umops_za32_pp_zz.xml":
+    case "bmopa_za_pp_zz.xml":
+    case "bmops_za_pp_zz.xml":
+    case "bfmopa_za_pp_zz.xml":
+    case "bfmops_za_pp_zz.xml":
+    case "bfmopa_za32_pp_zz.xml":
+    case "bfmops_za32_pp_zz.xml":
       return smeOuterProductOperands(inst);
+    case "fmopa_za16_pp_z8z8.xml":
+    case "fmopa_za32_pp_z8z8.xml":
+      return smeFp8OuterProductOperands(inst);
+    case "movt_zt_z.xml":
+      return smeMovtZtOperands(inst);
     case "zip_mz_zz.xml":
     case "uzp_mz_zz.xml":
       return smePermutationOperands(inst);
@@ -6604,6 +7092,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "luti2_mz4_ztz.xml":
     case "luti4_mz4_ztz.xml":
       return smeLutiOperands(inst, 4);
+    case "luti4_mz4_ztmz2.xml":
+      return smeFp8LutiMixedOperands(inst);
     case "smlall_za_zzi.xml":
     case "smlall_za_zzv.xml":
     case "smlall_za_zzw.xml":
@@ -6679,16 +7169,20 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "fdot_za32_z8z8i.xml":
     case "fdot_za32_z8z8w.xml":
     case "fvdot_za_z8z8i.xml":
+    case "fvdot_za_zzi.xml":
+    case "bfvdot_za_zzi.xml":
     case "fvdotb_za32_z8z8i.xml":
     case "fvdott_za32_z8z8i.xml":
     case "svdot_za_zzi.xml":
     case "svdot_za32_zzi.xml":
     case "sudot_za_zzv.xml":
     case "sudot_za_zzi.xml":
+    case "suvdot_za_zzi.xml":
     case "uvdot_za_zzi.xml":
     case "uvdot_za32_zzi.xml":
     case "usdot_za_zzv.xml":
     case "usdot_za_zzi.xml":
+    case "usvdot_za_zzi.xml":
     case "usdot_za_zzw.xml":
       return smeDotOperands(inst);
     case "cmpeq_p_p_zi.xml":
@@ -6698,7 +7192,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "cmpeq_p_p_zz.xml":
     case "fcmeq_p_p_zz.xml":
     case "facge_p_p_zz.xml":
+    case "match_p_p_zz.xml":
+    case "nmatch_p_p_zz.xml":
       return sveCompareVectorOperands(inst);
+    case "histcnt_z_p_zz.xml":
+      return sveHistcntOperands(inst);
     case "cmpeq_p_p_zw.xml":
       return sveCompareWideVectorOperands(inst);
     case "ptrue_p_s.xml":
@@ -6779,15 +7277,36 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "scvtf_z_p_z.xml":
     case "ucvtf_z_p_z.xml":
       return svePredicatedConversionOperands(inst);
+    case "fcvtlt_z_p_z.xml":
+    case "fcvtnt_z_p_z.xml":
+    case "fcvtx_z_p_z.xml":
+    case "fcvtxnt_z_p_z.xml":
+      return svePredicatedNarrowingConversionOperands(inst);
     case "add_z_p_zz.xml":
+    case "addp_z_p_zz.xml":
     case "sub_z_p_zz.xml":
     case "subr_z_p_zz.xml":
+    case "shadd_z_p_zz.xml":
+    case "uhadd_z_p_zz.xml":
+    case "shsub_z_p_zz.xml":
+    case "uhsub_z_p_zz.xml":
+    case "bfadd_z_p_zz.xml":
+    case "bfmul_z_p_zz.xml":
+    case "faddp_z_p_zz.xml":
+    case "bfmax_z_p_zz.xml":
+    case "bfmaxnm_z_p_zz.xml":
+    case "bfmin_z_p_zz.xml":
+    case "bfminnm_z_p_zz.xml":
     case "and_z_p_zz.xml":
     case "orr_z_p_zz.xml":
     case "eor_z_p_zz.xml":
     case "bic_z_p_zz.xml":
       return svePredicatedBinaryOperands(inst);
     case "add_z_zz.xml":
+    case "mul_z_zz.xml":
+    case "sqdmulh_z_zz.xml":
+    case "sqrdmulh_z_zz.xml":
+    case "pmul_z_zz.xml":
     case "sqadd_z_zz.xml":
     case "sub_z_zz.xml":
     case "sqsub_z_zz.xml":
@@ -6798,9 +7317,33 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "bic_z_zz.xml":
     case "uqadd_z_zz.xml":
     case "uqsub_z_zz.xml":
+    case "bfadd_z_zz.xml":
+    case "bfmul_z_zz.xml":
+    case "bfclamp_z_zz.xml":
+    case "fclamp_z_zz.xml":
     case "sclamp_z_zz.xml":
     case "tbx_z_zz.xml":
+    case "bdep_z_zz.xml":
+    case "bext_z_zz.xml":
+    case "bgrp_z_zz.xml":
+    case "histseg_z_zz.xml":
       return sveBinaryOperands(inst);
+    case "aese_z_zz.xml":
+    case "aesd_z_zz.xml":
+    case "sm4e_z_zz.xml":
+      return sveDestructiveBinaryOperands(inst, inst.encoding!.fileName.startsWith("sm4") ? "s" : "b");
+    case "aesmc_z_z.xml":
+    case "aesimc_z_z.xml":
+      return [vecReg(inst.fields!.Zdn ?? 0, "b"), vecReg(inst.fields!.Zdn ?? 0, "b")];
+    case "sm4ekey_z_zz.xml":
+      return [vecReg(inst.fields!.Zd ?? 0, "s"), vecReg(inst.fields!.Zn ?? 0, "s"), vecReg(inst.fields!.Zm ?? 0, "s")];
+    case "bsl_z_zzz.xml":
+    case "bsl1n_z_zzz.xml":
+    case "bsl2n_z_zzz.xml":
+    case "nbsl_z_zzz.xml":
+    case "bcax_z_zzz.xml":
+    case "eor3_z_zzz.xml":
+      return sveDestructiveTernaryOperands(inst, "d");
     case "and_z_zi.xml":
     case "bic_and_z_zi.xml":
     case "orr_z_zi.xml":
@@ -6824,6 +7367,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveSelectVectorOperands(inst);
     case "add_z_zi.xml":
     case "mul_z_zi.xml":
+    case "mul_z_zzi.xml":
+    case "sqdmulh_z_zzi.xml":
+    case "sqrdmulh_z_zzi.xml":
     case "smax_z_zi.xml":
     case "smin_z_zi.xml":
     case "umax_z_zi.xml":
@@ -6835,17 +7381,60 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uqadd_z_zi.xml":
     case "uqsub_z_zi.xml":
       return sveDestructiveImmediateOperands(inst);
+    case "xar_z_zzi.xml":
+      return sveXarOperands(inst);
     case "asr_z_zi.xml":
     case "lsl_z_zi.xml":
     case "lsr_z_zi.xml":
+    case "sqshl_z_p_zi.xml":
+    case "uqshl_z_p_zi.xml":
+    case "sqshlu_z_p_zi.xml":
+    case "srshr_z_p_zi.xml":
+    case "urshr_z_p_zi.xml":
     case "asr_z_p_zi.xml":
     case "asrd_z_p_zi.xml":
     case "lsl_z_p_zi.xml":
     case "lsr_z_p_zi.xml":
       return sveShiftImmediateOperands(inst);
+    case "sqshrnb_z_zi.xml":
+    case "sqshrnt_z_zi.xml":
+    case "uqshrnb_z_zi.xml":
+    case "uqshrnt_z_zi.xml":
+    case "sqrshrnb_z_zi.xml":
+    case "sqrshrnt_z_zi.xml":
+    case "uqrshrnb_z_zi.xml":
+    case "uqrshrnt_z_zi.xml":
+      return sveNarrowingShiftImmediateOperands(inst);
+    case "sqxtnb_z_zz.xml":
+    case "sqxtnt_z_zz.xml":
+    case "uqxtnb_z_zz.xml":
+    case "uqxtnt_z_zz.xml":
+      return sveNarrowingExtractOperands(inst);
+    case "saddlb_z_zz.xml":
+    case "saddlt_z_zz.xml":
+    case "uaddlb_z_zz.xml":
+    case "uaddlt_z_zz.xml":
+    case "ssublb_z_zz.xml":
+    case "ssublt_z_zz.xml":
+    case "usublb_z_zz.xml":
+    case "usublt_z_zz.xml":
+      return sveWideningBinaryOperands(inst);
+    case "addhnb_z_zz.xml":
+    case "addhnt_z_zz.xml":
+    case "subhnb_z_zz.xml":
+    case "subhnt_z_zz.xml":
+    case "raddhnb_z_zz.xml":
+    case "raddhnt_z_zz.xml":
+    case "rsubhnb_z_zz.xml":
+    case "rsubhnt_z_zz.xml":
+      return sveNarrowingBinaryOperands(inst);
     case "asr_z_p_zz.xml":
     case "lsl_z_p_zz.xml":
     case "lsr_z_p_zz.xml":
+    case "sqshl_z_p_zz.xml":
+    case "uqshl_z_p_zz.xml":
+    case "sqrshl_z_p_zz.xml":
+    case "uqrshl_z_p_zz.xml":
     case "mul_z_p_zz.xml":
     case "smax_z_p_zz.xml":
     case "smin_z_p_zz.xml":
@@ -6906,20 +7495,39 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "cmla_z_zzz.xml":
     case "sqrdcmlah_z_zzz.xml":
       return sveComplexVectorOperands(inst);
+    case "sqrdmlah_z_zzz.xml":
+    case "sqrdmlsh_z_zzz.xml":
+      return sveMultiplyAccumulateOperands(inst);
     case "fcmla_z_p_zzz.xml":
       return sveFcmlaPredicatedOperands(inst);
     case "cmla_z_zzzi.xml":
     case "fcmla_z_zzzi.xml":
     case "sqrdcmlah_z_zzzi.xml":
       return sveComplexIndexedOperands(inst);
+    case "mla_z_zzzi.xml":
+    case "mls_z_zzzi.xml":
+    case "sqrdmlah_z_zzzi.xml":
+    case "sqrdmlsh_z_zzzi.xml":
+      return sveFpMultiplyAccumulateOperands(inst);
     case "bfmlalb_z_zzz.xml":
     case "bfmlalt_z_zzz.xml":
     case "bfmlalb_z_zzzi.xml":
     case "bfmlalt_z_zzzi.xml":
       return sveBfmlalOperands(inst);
+    case "fmlalb_z_zzz.xml":
+    case "fmlalt_z_zzz.xml":
+    case "fmlslb_z_zzz.xml":
+    case "fmlslt_z_zzz.xml":
+    case "fmlalb_z_zzzi.xml":
+    case "fmlalt_z_zzzi.xml":
+    case "fmlslb_z_zzzi.xml":
+    case "fmlslt_z_zzzi.xml":
+      return sveFmlalLongOperands(inst);
     case "bfmls_z_p_zzz.xml":
     case "bfmls_z_zzzi.xml":
       return sveBfmlsOperands(inst);
+    case "bfmla_z_p_zzz.xml":
+    case "bfmla_z_zzzi.xml":
     case "fmla_z_p_zzz.xml":
     case "fmla_z_zzzi.xml":
     case "fmls_z_p_zzz.xml":
@@ -6966,6 +7574,7 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return sveReplicateLoadOperands(inst);
     case "fmul_z_p_zs.xml":
       return sveFmulImmediateOperands(inst);
+    case "bfmul_z_zzi.xml":
     case "fmul_z_zzi.xml":
       return sveFmulIndexedOperands(inst);
     case "fadd_z_p_zz.xml":
@@ -6995,10 +7604,33 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "udot_z32_zzzi.xml":
     case "bfdot_z_zzz.xml":
     case "bfdot_z_zzzi.xml":
+    case "fdot_z_zzz.xml":
+    case "fdot_z_zzzi.xml":
+    case "fdot_z_zz8z8.xml":
+    case "fdot_z_zz8z8i.xml":
+    case "fdot_z32_zz8z8.xml":
+    case "fdot_z32_zz8z8i.xml":
     case "usdot_z_zzz.xml":
     case "usdot_z_zzzi.xml":
     case "sudot_z_zzzi.xml":
-      return sveDotProductOperands(inst);
+    case "cdot_z_zzz.xml":
+    case "cdot_z_zzzi.xml":
+    case "fmlalb_z_z8z8z8.xml":
+    case "fmlalb_z_z8z8z8i.xml":
+    case "fmlalt_z_z8z8z8.xml":
+    case "fmlalt_z_z8z8z8i.xml":
+    case "fmlallbb_z32_z8z8z8.xml":
+    case "fmlallbb_z32_z8z8z8i.xml":
+    case "fmlallbt_z32_z8z8z8.xml":
+    case "fmlallbt_z32_z8z8z8i.xml":
+    case "fmlalltb_z32_z8z8z8.xml":
+    case "fmlalltb_z32_z8z8z8i.xml":
+    case "fmlalltt_z32_z8z8z8.xml":
+    case "fmlalltt_z32_z8z8z8i.xml":
+      return inst.encoding!.fileName.startsWith("cdot_") ? sveCdotOperands(inst) : sveDotProductOperands(inst);
+    case "pmullb_z_zz.xml":
+    case "pmullt_z_zz.xml":
+      return svePmullOperands(inst);
     case "fmmla_z_zzz.xml":
     case "bfmmla_z_zzz.xml":
     case "bfmmla_z16_zzz.xml":
@@ -7010,6 +7642,11 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "uzp1_z_zz.xml":
     case "trn1_z_zz.xml":
       return svePermutationOperands(inst);
+    case "tbl_z_zz.xml":
+      return sveTableLookupOperands(inst);
+    case "luti2_z_zz.xml":
+    case "luti4_z_zz.xml":
+      return sveFp8LutiOperands(inst);
     case "tblq_z_zz.xml":
     case "tbxq_z_zz.xml":
     case "zipq1_z_zz.xml":
@@ -7096,6 +7733,8 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "whilelo_pn_rr.xml":
     case "whilels_pn_rr.xml":
     case "whilelt_pn_rr.xml":
+    case "whilewr_p_rr.xml":
+    case "whilerw_p_rr.xml":
       return sveWhileCompareOperands(inst);
     case "irg.xml":
       return mteInsertRandomTagOperands(inst);

@@ -1,0 +1,125 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "luti4_z_zz",
+    "encodingId": "luti4_z_zz_8",
+    "mnemonic": "LUTI4",
+    "className": "Byte, single register table",
+    "fileName": "luti4_z_zz.xml",
+    "mask": 4284546048,
+    "value": 1163961344,
+    "bitCount": 16,
+    "fields": [
+      {
+        "name": "i1",
+        "lsb": 23,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
+    ],
+    "featureGuards": [],
+    "guards": []
+  },
+  {
+    "instructionId": "luti4_z_zz",
+    "encodingId": "luti4_z_zz_1x16",
+    "mnemonic": "LUTI4",
+    "className": "Halfword, single register table",
+    "fileName": "luti4_z_zz.xml",
+    "mask": 4280351744,
+    "value": 1159773184,
+    "bitCount": 15,
+    "fields": [
+      {
+        "name": "i2",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "op",
+        "lsb": 11,
+        "width": 1
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
+    ],
+    "featureGuards": [],
+    "guards": []
+  },
+  {
+    "instructionId": "luti4_z_zz",
+    "encodingId": "luti4_z_zz_2x16",
+    "mnemonic": "LUTI4",
+    "className": "Halfword, two register table",
+    "fileName": "luti4_z_zz.xml",
+    "mask": 4280351744,
+    "value": 1159771136,
+    "bitCount": 15,
+    "fields": [
+      {
+        "name": "i2",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "op",
+        "lsb": 11,
+        "width": 1
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
+    ],
+    "featureGuards": [],
+    "guards": []
+  }
+];

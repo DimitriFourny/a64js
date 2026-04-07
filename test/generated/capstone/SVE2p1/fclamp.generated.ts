@@ -14,74 +14,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/fclamp.s.yaml",
-    "caseIndex": 6,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fclamp.s.yaml",
-    "caseIndex": 12,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fclamp.s.yaml",
-    "caseIndex": 18,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fclamp.s.yaml",
-    "caseIndex": 24,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2p1/fclamp.s.yaml",
-    "caseIndex": 30,
-    "word": 69255159,
-    "asmText": "movprfx z23, z31",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE2p1/fclamp.s.yaml",
     "caseIndex": 1,
     "word": 1692935607,
     "asmText": "fclamp z23.d, z13.d, z8.d",
@@ -143,6 +75,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fclamp.s.yaml",
+    "caseIndex": 6,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -212,6 +157,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/fclamp.s.yaml",
+    "caseIndex": 12,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fclamp.s.yaml",
     "caseIndex": 13,
     "word": 1688741303,
     "asmText": "fclamp z23.s, z13.s, z8.s",
@@ -273,6 +231,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fclamp.s.yaml",
+    "caseIndex": 18,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -342,6 +313,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2p1/fclamp.s.yaml",
+    "caseIndex": 24,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fclamp.s.yaml",
     "caseIndex": 25,
     "word": 1684546999,
     "asmText": "fclamp z23.h, z13.h, z8.h",
@@ -403,6 +387,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SVE2p1/fclamp.s.yaml",
+    "caseIndex": 30,
+    "word": 69255159,
+    "asmText": "movprfx z23, z31",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -471,3 +468,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

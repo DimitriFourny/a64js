@@ -11,10 +11,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE",
       "FEAT_SME"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "SVE2p1/bfclamp.s.yaml",
     "caseIndex": 1,
@@ -71,3 +68,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];
