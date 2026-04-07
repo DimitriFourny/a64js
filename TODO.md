@@ -70,83 +70,6 @@ Target architecture:
 
 ## Ready
 
-- Operand/action schema foundation
-  - Anchors: `src/formatters.ts`, `src/types.ts`, `tools/generate.ts`, `tools/encodings.ts`
-  - Focus: introduce the schema mechanism without changing supported instruction behavior or promoting new XML files.
-  - Plan:
-    - define schema/action types for the smallest useful set of operand builders
-    - wire generated encodings to an optional schema/action id
-    - route `buildOperands()` through schema dispatch before falling back to the existing bespoke switch
-    - port one low-risk family already covered by tests, such as a simple GP three-register or add/sub immediate family, as the proof of concept
-  - Done when:
-    - existing tests pass with no supported/unsupported count regression
-    - the migrated family no longer depends on its old bespoke `buildOperands()` switch case
-    - adding a second similar family would only require schema table entries, not a new formatter function
-
-- SVE loads with replicated/scalarizing forms batch
-  - Anchors: `SVE/ld1rb.s.yaml`, `SVE/ld1rh.s.yaml`, `SVE/ld1rw.s.yaml`, `SVE/ld1rsb.s.yaml`, `SVE/ld1rsh.s.yaml`, `SVE/ld1rsw.s.yaml`, `SVE/ld1rqb.s.yaml`, `SVE/ld1rqh.s.yaml`, `SVE/ld1rqw.s.yaml`, `SVE/ld1rqd.s.yaml`
-  - Focus: land the replicate-load family as one task because the memory operand and replication suffix handling are tightly related.
-  - Done when:
-    - all replicate/scalarizing load forms print consistent addressing syntax
-    - signed-extension and element-width differences are covered by tests
-    - the family can be promoted without leaving partial load variants behind
-
-- SVE first-fault and non-fault load batch
-  - Anchors: `SVE/ldff1b.s.yaml`, `SVE/ldff1h.s.yaml`, `SVE/ldff1w.s.yaml`, `SVE/ldff1d.s.yaml`, `SVE/ldnf1b.s.yaml`, `SVE/ldnf1h.s.yaml`, `SVE/ldnf1w.s.yaml`, `SVE/ldnf1d.s.yaml`
-  - Focus: implement the fault-tolerant load families together so their addressing and mnemonic prefixes are handled in one place.
-  - Done when:
-    - first-fault and non-fault loads both disassemble correctly across widths
-    - predicate and addressing operand order is stable across the family
-    - fixtures for the whole batch are supported before promotion
-
-- SVE structured load/store batch
-  - Anchors: `SVE/ld2d.s.yaml`, `SVE/ld2h.s.yaml`, `SVE/ld3d.s.yaml`, `SVE/ld3h.s.yaml`, `SVE/ld4h.s.yaml`, `SVE/ld4w.s.yaml`, `SVE/st1b.s.yaml`, `SVE/st1h.s.yaml`, `SVE/st1d.s.yaml`, `SVE/st3h.s.yaml`, `SVE/st3w.s.yaml`, `SVE/stnt1b.s.yaml`, `SVE/stnt1h.s.yaml`, `SVE/stnt1w.s.yaml`, `SVE/stnt1d.s.yaml`
-  - Focus: cover the multi-structure and streaming store family together instead of promoting isolated addressing forms.
-  - Done when:
-    - tuple-register formatting for loads/stores is correct across all listed source YAML files
-    - non-temporal store variants share the same addressing path
-    - the whole structured memory batch is promoted in one pass
-
-- SVE reduction and horizontal FP/int batch
-  - Anchors: `SVE/orv.s.yaml`, `SVE/uaddv.s.yaml`, `SVE/smaxv.s.yaml`, `SVE/sminv.s.yaml`, `SVE/fmaxnmv.s.yaml`, `SVE/fminnmv.s.yaml`
-  - Focus: implement horizontal reductions together because they share scalar-result formatting and predicated reduction syntax.
-  - Done when:
-    - all scalar-result reductions print the correct destination register class
-    - predicate-limited reductions are covered by dedicated tests
-    - the reduction family lands as one support promotion
-
-- SVE matrix and dot-product batch
-  - Anchors: `SVE/bfdot.s.yaml`, `SVE/udot.s.yaml`, `SVE/bfmmla.s.yaml`, `SVE/matrix-multiply-fp64.s.yaml`
-  - Focus: cover the SVE matrix/dot-product family together so lane-group operand formatting is implemented once.
-  - Done when:
-    - dot-product and matrix-multiply operands render correctly for all tuple sizes
-    - BF16 and FP64 special cases are both tested
-    - the batch is promoted without leaving adjacent matmul variants unsupported
-
-- SME2p1 floating arithmetic batch
-  - Anchors: `SME2p1/fadd.s.yaml`, `SME2p1/fsub.s.yaml`, `SME2p1/fmla.s.yaml`, `SME2p1/fmls.s.yaml`, `SME2p1/fmopa.s.yaml`, `SME2p1/fmops.s.yaml`
-  - Focus: land the SME2p1 floating ZA-array arithmetic family together because the ZA operand syntax is the main implementation cost.
-  - Done when:
-    - ZA tile-array operands print correctly across add/sub/FMA/FMOPA forms
-    - accumulation and pairwise tile-selection syntax is covered by tests
-    - the whole SME2p1 FP arithmetic cluster is promoted together
-
-- SME2p1 convert-and-move batch
-  - Anchors: `SME2p1/fcvt.s.yaml`, `SME2p1/fcvtl.s.yaml`, `SME2p1/movaz.s.yaml`, `SME2p1/zero.s.yaml`
-  - Focus: implement the SME2p1 conversion and ZA move/zero family so tile movement and type-conversion syntax lands coherently.
-  - Done when:
-    - conversion widths and ZA destination forms disassemble correctly
-    - move/zero forms share tile operand formatting helpers
-    - this family is promoted as one SME2p1 support batch
-
-- SME2p1 LUTI batch
-  - Anchors: `SME2p1/luti2.s.yaml`, `SME2p1/luti4.s.yaml`
-  - Focus: finish the SME2p1 LUTI family together because the indexed lookup operand syntax is specialized and not worth splitting into tiny tasks.
-  - Done when:
-    - both `LUTI2` and `LUTI4` source files decode and disassemble correctly
-    - indexed ZA/lane operand formatting is covered by tests
-    - the family is promoted only after generation and tests pass
-
 ## Backlog Statistics
 
 Priority rule:
@@ -227,6 +150,15 @@ Backlog target:
 
 Keep one concise line per completed work item.
 
+- SME2p1 convert-and-move batch: promoted `SME2p1/fcvt.s.yaml` and `SME2p1/fcvtl.s.yaml` alongside the already-supported `movaz`/`zero` ZA move/zero forms with shared SME vector-group and ZA tile operand formatting; regenerated fixtures/encodings and `bun test` passed.
+- SME2p1 floating arithmetic batch: promoted `SME2p1/fmopa.s.yaml` and `SME2p1/fmops.s.yaml` alongside the existing `fadd`/`fsub`/`fmla`/`fmls` ZA-array arithmetic coverage with shared SME outer-product ZA tile/predicate operand formatting; regenerated fixtures/encodings and `bun test` passed.
+- SME2p1 LUTI batch: promoted `SME2p1/luti2.s.yaml` and `SME2p1/luti4.s.yaml` through shared LUTI multi-vector group/index formatting for `mz2` and `mz4` forms, with adjacent SME2 consecutive-form spillover covered; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` matrix and dot-product batch: promoted `BFDOT`/`BFMMLA`, SVE `SDOT`/`UDOT`, int8 `SMMLA`/`UMMLA`/`USMMLA` plus `SUDOT`/`USDOT`, and adjacent SVE2p1 `z32` dot variants with shared SVE dot/matrix operand formatting; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` structured load/store batch: promoted scalar plus immediate/register `LD2`/`LD3`/`LD4`, `ST1`/`ST2`/`ST3`/`ST4`, and `STNT1` contiguous memory XMLs with shared tuple-register and MUL VL addressing formatting; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` first-fault and non-fault loads: promoted `SVE/ldff1b.s.yaml`, `SVE/ldff1h.s.yaml`, `SVE/ldff1w.s.yaml`, `SVE/ldff1d.s.yaml`, `SVE/ldnf1b.s.yaml`, `SVE/ldnf1h.s.yaml`, `SVE/ldnf1w.s.yaml`, and `SVE/ldnf1d.s.yaml`, plus signed spillover `SVE/ldff1sb.s.yaml`, `SVE/ldff1sh.s.yaml`, `SVE/ldff1sw.s.yaml`, `SVE/ldnf1sb.s.yaml`, `SVE/ldnf1sh.s.yaml`, and `SVE/ldnf1sw.s.yaml`, with shared fault-tolerant load addressing for scalar/vector/immediate forms; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` reduction and horizontal FP/int batch: promoted `SVE/orv.s.yaml`, `SVE/uaddv.s.yaml`, `SVE/smaxv.s.yaml`, `SVE/sminv.s.yaml`, `SVE/fmaxnmv.s.yaml`, and `SVE/fminnmv.s.yaml`, plus same-shape adjacent `SVE/andv.s.yaml`, `SVE/eorv.s.yaml`, `SVE/saddv.s.yaml`, `SVE/umaxv.s.yaml`, `SVE/uminv.s.yaml`, `SVE/faddv.s.yaml`, `SVE/fmaxv.s.yaml`, and `SVE/fminv.s.yaml`, with shared scalar-result reduction formatting; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` loads with replicated/scalarizing forms: promoted `SVE/ld1rb.s.yaml`, `SVE/ld1rh.s.yaml`, `SVE/ld1rw.s.yaml`, `SVE/ld1rsb.s.yaml`, `SVE/ld1rsh.s.yaml`, `SVE/ld1rsw.s.yaml`, `SVE/ld1rqb.s.yaml`, `SVE/ld1rqh.s.yaml`, `SVE/ld1rqw.s.yaml`, and `SVE/ld1rqd.s.yaml`, plus adjacent `SVE/ld1rd.s.yaml`, with shared replicated-load operand formatting; regenerated fixtures/encodings and `bun test` passed.
+- Operand/action schema foundation: added generated `operandSchemaId` wiring plus a small GP-register operand action schema, migrated the add/sub-with-carry scalar register family (`ADC`/`ADCS`/`SBC`/`SBCS` and `NGC` aliases) out of the bespoke `buildOperands()` switch, regenerated fixtures with no support-count regression, and `bun test` passed.
 - `SVE` permute-and-rearrange batch: promoted `SVE/trn1.s.yaml`, `SVE/trn2.s.yaml`, `SVE/zip1.s.yaml`, `SVE/zip2.s.yaml`, `SVE/uzp1.s.yaml`, `SVE/uzp2.s.yaml`, `SVE/rev.s.yaml`, `SVE/revb.s.yaml`, `SVE/compact.s.yaml`, plus `revh`/`revw` spillover via shared predicate/vector permutation formatters; regenerated encodings/fixtures and `bun test` passed.
 - `SVE` logical-and-bitwise batch: promoted `SVE/and.s.yaml`, `SVE/ands.s.yaml`, `SVE/bic.s.yaml`, `SVE/eor.s.yaml`, `SVE/eors.s.yaml`, `SVE/orn.s.yaml`, `SVE/orr.s.yaml`, `SVE/nand.s.yaml`, `SVE/nands.s.yaml`, `SVE/nor.s.yaml`, `SVE/nors.s.yaml`, `SVE/not.s.yaml`, and `SVE/nots.s.yaml` by extending the shared predicate-logical formatter path to the flag-setting predicate forms and aliases (`MOVS`/`NOTS`), regenerating encodings/fixtures, and `bun test` passed.
 - `SVE` floating compare-and-classify: promoted `SVE/faclt.s.yaml`, `SVE/fcmlt.s.yaml`, `SVE/fcmgt.s.yaml`, `SVE/fcmge.s.yaml`, `SVE/fcmeq.s.yaml`, and `SVE/fcmne.s.yaml` by extending the shared floating compare formatter path to `FAC<cc>`, regenerating encodings/fixtures, and `bun test` passed.
@@ -265,33 +197,33 @@ Keep one concise line per completed work item.
 
 Current capstone coverage snapshot:
 
-- `26438` supported capstone cases
-- `8119` unsupported capstone cases
-- `1058` XML instruction files currently listed in `tools/supported-files.ts`
-- `845` distinct unsupported XML instruction files
-- `644` capstone source YAML files containing unsupported cases
-- `549` distinct unsupported mnemonics
+- `27532` supported capstone cases
+- `7025` unsupported capstone cases
+- `1207` XML instruction files currently listed in `tools/supported-files.ts`
+- `697` distinct unsupported XML instruction files
+- `548` capstone source YAML files containing unsupported cases
+- `466` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
 - `FP8_SVE2/faminmax.s.yaml`: `36`
-- `SME2/luti2.s.yaml`: `36`
 - `SVE/ld1sb.s.yaml`: `34`
 - `FP8_SVE2/fcvtn.s.yaml`: `32`
 - `SME2/add.s.yaml`: `32`
+- `SME2/sclamp.s.yaml`: `32`
 
 Largest unsupported feature sets:
 
-- `FEAT_SME`: `4478`
-- `FEAT_SVE`: `2728`
-- `FEAT_SVE || FEAT_SME`: `2296`
+- `FEAT_SME`: `3761`
 - `FEAT_SVE2`: `2069`
 - `FEAT_SVE2 || FEAT_SME`: `1861`
-- `FEAT_SME2`: `1836`
-- `FEAT_SVE2p1`: `1530`
-- `FEAT_SME2 || FEAT_SVE2p1`: `725`
-- `FEAT_SME2p1`: `724`
+- `FEAT_SVE`: `1838`
+- `FEAT_SME2`: `1752`
+- `FEAT_SVE || FEAT_SME`: `1624`
+- `FEAT_SVE2p1`: `1470`
+- `FEAT_SME2p1`: `696`
 - `FEAT_SVE2p1 || FEAT_SME2p1`: `694`
+- `FEAT_SME2 || FEAT_SVE2p1`: `685`
 
 Implication:
 

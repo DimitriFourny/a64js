@@ -2,6 +2,8 @@ import type {
   DecodedInstruction,
   GeneratedEncoding,
   Operand,
+  OperandAction,
+  OperandSchema,
   PredicateRegisterOperand,
   RegisterName,
   SystemRegisterOperand,
@@ -165,6 +167,41 @@ function widthFromSf(sf: number | undefined): 32 | 64 {
 
 function gpReg(width: 32 | 64, index: number, zeroName: "zr" | "sp" = "zr"): RegisterName {
   return reg(width, index, zeroName);
+}
+
+const OPERAND_SCHEMAS: Record<string, OperandSchema> = {
+  "gp-rd-rn-rm-sf": {
+    id: "gp-rd-rn-rm-sf",
+    actions: [
+      { kind: "gp-reg", field: "Rd", width: "sf", zeroName: "zr" },
+      { kind: "gp-reg", field: "Rn", width: "sf", zeroName: "zr" },
+      { kind: "gp-reg", field: "Rm", width: "sf", zeroName: "zr" },
+    ],
+  },
+};
+
+function widthFromSchemaAction(action: OperandAction, fields: Record<string, number>): 32 | 64 {
+  return action.width === "sf" ? widthFromSf(fields.sf) : action.width;
+}
+
+function buildSchemaActionOperand(action: OperandAction, fields: Record<string, number>): Operand {
+  switch (action.kind) {
+    case "gp-reg":
+      return gpReg(widthFromSchemaAction(action, fields), fields[action.field], action.zeroName);
+  }
+}
+
+function buildSchemaOperands(inst: DecodedInstruction, encoding: GeneratedEncoding): Operand[] | undefined {
+  const schemaId = encoding.operandSchemaId;
+  if (!schemaId) {
+    return undefined;
+  }
+  const schema = OPERAND_SCHEMAS[schemaId];
+  if (!schema) {
+    return undefined;
+  }
+  const fields = inst.fields!;
+  return schema.actions.map((action) => buildSchemaActionOperand(action, fields));
 }
 
 function sysReg(op0: number, op1: number, CRn: number, CRm: number, op2: number): SystemRegisterOperand {
@@ -641,16 +678,6 @@ function conditionalCompareRegisterOperands(inst: DecodedInstruction): Operand[]
     gpReg(width, fields.Rm, "zr"),
     { kind: "text", text: `#${fields.nzcv ?? 0}` },
     conditionOperand(fields.cond),
-  ];
-}
-
-function adcOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const width = widthFromSf(fields.sf);
-  return [
-    gpReg(width, fields.Rd, "zr"),
-    gpReg(width, fields.Rn, "zr"),
-    gpReg(width, fields.Rm, "zr"),
   ];
 }
 
@@ -3296,6 +3323,21 @@ function svePredicatedBinaryOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
+function sveHorizontalReductionOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  const destinationLane =
+    inst.encoding!.fileName === "saddv_r_p_z.xml" || inst.encoding!.fileName === "uaddv_r_p_z.xml"
+      ? "d"
+      : lane;
+
+  return [
+    { kind: "text", text: `${destinationLane}${fields.Vd ?? 0}` },
+    predReg(fields.Pg ?? 0),
+    vecReg(fields.Zn ?? 0, lane),
+  ];
+}
+
 function sveMoveMaskLane(imm13: number): "b" | "h" | "s" | "d" {
   if (((imm13 >>> 12) & 1) === 1) {
     return "d";
@@ -3546,6 +3588,73 @@ function sveLd1roLaneFromFile(fileName: string): "b" | "h" | "s" | "d" {
   }
 }
 
+function sveReplicateLoadLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | "d" {
+  const fileName = inst.encoding!.fileName;
+
+  if (fileName.startsWith("ld1ro")) {
+    return sveLd1roLaneFromFile(fileName);
+  }
+
+  if (fileName.startsWith("ld1rq")) {
+    switch (fileName) {
+      case "ld1rqh_z_p_bi.xml":
+      case "ld1rqh_z_p_br.xml":
+        return "h";
+      case "ld1rqw_z_p_bi.xml":
+      case "ld1rqw_z_p_br.xml":
+        return "s";
+      case "ld1rqd_z_p_bi.xml":
+      case "ld1rqd_z_p_br.xml":
+        return "d";
+      default:
+        return "b";
+    }
+  }
+
+  if (inst.encoding!.encodingId.endsWith("16")) {
+    return "h";
+  }
+  if (inst.encoding!.encodingId.endsWith("32")) {
+    return "s";
+  }
+  if (inst.encoding!.encodingId.endsWith("64")) {
+    return "d";
+  }
+  return "b";
+}
+
+function sveReplicateLoadImmediateScale(fileName: string): bigint {
+  if (fileName.startsWith("ld1ro")) {
+    return 32n;
+  }
+  if (fileName.startsWith("ld1rq")) {
+    return 16n;
+  }
+
+  const mnemonic = fileName.split("_")[0] ?? "";
+  switch (mnemonic.at(-1)) {
+    case "h":
+      return 2n;
+    case "w":
+      return 4n;
+    case "d":
+      return 8n;
+    default:
+      return 1n;
+  }
+}
+
+function sveReplicateLoadImmediateOffset(inst: DecodedInstruction): bigint {
+  const fileName = inst.encoding!.fileName;
+  const scale = sveReplicateLoadImmediateScale(fileName);
+
+  if (fileName.startsWith("ld1rq") || fileName.startsWith("ld1ro")) {
+    return signExtend(inst.fields!.imm4 ?? 0, 4) * scale;
+  }
+
+  return BigInt(inst.fields!.imm6 ?? 0) * scale;
+}
+
 function sveLd1roRegisterShift(lane: "b" | "h" | "s" | "d"): number {
   switch (lane) {
     case "h":
@@ -3559,42 +3668,209 @@ function sveLd1roRegisterShift(lane: "b" | "h" | "s" | "d"): number {
   }
 }
 
-function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
+function sveSingleVectorListText(register: number, lane: "b" | "h" | "s" | "d"): string {
+  return `{ z${register}.${lane} }`;
+}
+
+function isSveContiguousMemoryFile(fileName: string): boolean {
+  return /^(?:ld1b|st1[bhwd]|ld[234][bhwd]|st[234][bhwd]|stnt1[bhwd])_z_p_(?:bi|br)\.xml$/.test(fileName);
+}
+
+function sveElementShiftFromMnemonic(mnemonic: string): number {
+  switch (mnemonic.at(-1)?.toLowerCase()) {
+    case "h":
+      return 1;
+    case "w":
+      return 2;
+    case "d":
+      return 3;
+    default:
+      return 0;
+  }
+}
+
+function sveMemoryLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | "d" {
   const fileName = inst.encoding!.fileName;
-  const lane =
-    fileName.startsWith("ld1b_")
-      ? sveLd1bLaneFromEncodingId(inst.encoding!.encodingId)
-      : sveVectorLaneFromSize(fields.size);
-  const register = vecReg(fields.Zt ?? 0, lane);
-  const predicate = fileName.startsWith("ld1b_") ? predReg(fields.Pg ?? 0, "z") : predReg(fields.Pg ?? 0);
+  const fields = inst.fields!;
+
+  if (fileName.startsWith("ld1b_")) {
+    return sveLd1bLaneFromEncodingId(inst.encoding!.encodingId);
+  }
+
+  if (fileName.startsWith("st1b_") || fileName.startsWith("st1h_")) {
+    return sveVectorLaneFromSize(fields.size);
+  }
+
+  if (fileName.startsWith("st1w_")) {
+    return (fields.sz ?? 0) === 0 ? "s" : "d";
+  }
+
+  switch (inst.encoding!.mnemonic.at(-1)?.toLowerCase()) {
+    case "h":
+      return "h";
+    case "w":
+      return "s";
+    case "d":
+      return "d";
+    default:
+      return "b";
+  }
+}
+
+function sveMemoryRegisterCount(mnemonic: string): number {
+  const match = /^(?:LD|ST)([234])/.exec(mnemonic);
+  return match ? Number(match[1]) : 1;
+}
+
+function sveContiguousVectorListText(start: number, count: number, lane: "b" | "h" | "s" | "d"): string {
+  if (count === 1) {
+    return sveSingleVectorListText(start, lane);
+  }
+
+  const end = start + count - 1;
+  if (count > 2 && end < 32) {
+    return `{ z${start}.${lane} - z${end}.${lane} }`;
+  }
+
+  const registers = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
+  return `{ ${registers.join(", ")} }`;
+}
+
+function isSveFaultTolerantLoadFile(fileName: string): boolean {
+  return /^ld(?:ff|nf)1(?:s?[bhw]|d)_z_p_(?:ai|bi|br|bz)\.xml$/.test(fileName);
+}
+
+function sveFaultLoadLaneFromEncodingId(encodingId: string): "b" | "h" | "s" | "d" {
+  if (encodingId.endsWith("16")) {
+    return "h";
+  }
+  if (encodingId.endsWith("32") || encodingId.includes("_s_") || encodingId.endsWith("_s")) {
+    return "s";
+  }
+  if (encodingId.endsWith("64") || encodingId.includes("_d_") || encodingId.endsWith("_d")) {
+    return "d";
+  }
+  return "b";
+}
+
+function sveFaultLoadSourceByteSize(mnemonic: string): number {
+  const lower = mnemonic.toLowerCase();
+  if (lower.endsWith("h") || lower.endsWith("sh")) {
+    return 2;
+  }
+  if (lower.endsWith("w") || lower.endsWith("sw")) {
+    return 4;
+  }
+  if (lower.endsWith("d")) {
+    return 8;
+  }
+  return 1;
+}
+
+function sveFaultLoadSourceShift(inst: DecodedInstruction): number {
+  const sourceBytes = sveFaultLoadSourceByteSize(inst.encoding!.mnemonic);
+  return sourceBytes === 8 ? 3 : sourceBytes === 4 ? 2 : sourceBytes === 2 ? 1 : 0;
+}
+
+function sveFaultLoadVectorOffsetMemoryText(inst: DecodedInstruction, base: string): string {
+  const fields = inst.fields!;
+  const lane = sveFaultLoadLaneFromEncodingId(inst.encoding!.encodingId);
+  const shift = inst.encoding!.encodingId.includes("scaled") && !inst.encoding!.encodingId.includes("unscaled")
+    ? sveFaultLoadSourceShift(inst)
+    : 0;
+  const index = `z${fields.Zm ?? 0}.${lane}`;
+  let modifier: string | undefined;
+
+  if (inst.encoding!.encodingId.includes("_64_")) {
+    modifier = shift === 0 ? undefined : `lsl #${shift}`;
+  } else {
+    modifier = (fields.xs ?? 0) === 0 ? "uxtw" : "sxtw";
+    if (shift !== 0) {
+      modifier += ` #${shift}`;
+    }
+  }
+
+  return modifier ? `[${base}, ${index}, ${modifier}]` : `[${base}, ${index}]`;
+}
+
+function sveFaultTolerantLoadOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveFaultLoadLaneFromEncodingId(inst.encoding!.encodingId);
+  const destination = { kind: "text" as const, text: sveSingleVectorListText(fields.Zt ?? 0, lane) };
+  const predicate = predReg(fields.Pg ?? 0, "z");
+  const fileName = inst.encoding!.fileName;
+
+  if (fileName.endsWith("_ai.xml")) {
+    const sourceBytes = sveFaultLoadSourceByteSize(inst.encoding!.mnemonic);
+    const imm = (fields.imm5 ?? 0) * sourceBytes;
+    const base = `z${fields.Zn ?? 0}.${lane}`;
+    const memory = imm === 0 ? `[${base}]` : `[${base}, #${imm}]`;
+    return [destination, predicate, { kind: "text", text: memory }];
+  }
+
   const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
 
   if (fileName.endsWith("_bi.xml")) {
     const imm = Number(signExtend(fields.imm4 ?? 0, 4));
     const memory = imm === 0 ? `[${base}]` : `[${base}, #${imm}, mul vl]`;
+    return [destination, predicate, { kind: "text", text: memory }];
+  }
+
+  if (fileName.endsWith("_br.xml")) {
+    const offsetRegister = fields.Rm ?? 31;
+    if (offsetRegister === 31) {
+      return [destination, predicate, { kind: "text", text: `[${base}]` }];
+    }
+
+    const offset = formatRegister(gpReg(64, offsetRegister, "zr"));
+    const shift = sveFaultLoadSourceShift(inst);
+    const memory = shift === 0 ? `[${base}, ${offset}]` : `[${base}, ${offset}, lsl #${shift}]`;
+    return [destination, predicate, { kind: "text", text: memory }];
+  }
+
+  return [destination, predicate, { kind: "text", text: sveFaultLoadVectorOffsetMemoryText(inst, base) }];
+}
+
+function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const fileName = inst.encoding!.fileName;
+  const lane = sveMemoryLaneFromEncoding(inst);
+  const registerCount = sveMemoryRegisterCount(inst.encoding!.mnemonic);
+  const register = {
+    kind: "text" as const,
+    text: sveContiguousVectorListText(fields.Zt ?? 0, registerCount, lane),
+  };
+  const predicate = fileName.startsWith("ld") ? predReg(fields.Pg ?? 0, "z") : predReg(fields.Pg ?? 0);
+  const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
+
+  if (fileName.endsWith("_bi.xml")) {
+    const imm = Number(signExtend(fields.imm4 ?? 0, 4)) * registerCount;
+    const memory = imm === 0 ? `[${base}]` : `[${base}, #${imm}, mul vl]`;
     return [register, predicate, { kind: "text", text: memory }];
   }
 
   const offset = formatRegister(gpReg(64, fields.Rm ?? 0, "zr"));
-  return [register, predicate, { kind: "text", text: `[${base}, ${offset}]` }];
+  const shift = sveElementShiftFromMnemonic(inst.encoding!.mnemonic);
+  const memory = shift === 0 ? `[${base}, ${offset}]` : `[${base}, ${offset}, lsl #${shift}]`;
+  return [register, predicate, { kind: "text", text: memory }];
 }
 
 function sveReplicateLoadOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = sveLd1roLaneFromFile(inst.encoding!.fileName);
+  const lane = sveReplicateLoadLaneFromEncoding(inst);
+  const register = { kind: "text" as const, text: sveSingleVectorListText(fields.Zt ?? 0, lane) };
   const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
 
   if (inst.encoding!.fileName.endsWith("_bi.xml")) {
-    const imm = Number(signExtend(fields.imm4 ?? 0, 4)) * 32;
-    const memory = imm === 0 ? `[${base}]` : `[${base}, #${imm}]`;
-    return [vecReg(fields.Zt ?? 0, lane), predReg(fields.Pg ?? 0, "z"), { kind: "text", text: memory }];
+    const imm = sveReplicateLoadImmediateOffset(inst);
+    const memory = imm === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(imm)}]`;
+    return [register, predReg(fields.Pg ?? 0, "z"), { kind: "text", text: memory }];
   }
 
   const offset = formatRegister(gpReg(64, fields.Rm ?? 0, "zr"));
   const shift = sveLd1roRegisterShift(lane);
   const memory = shift === 0 ? `[${base}, ${offset}]` : `[${base}, ${offset}, lsl #${shift}]`;
-  return [vecReg(fields.Zt ?? 0, lane), predReg(fields.Pg ?? 0, "z"), { kind: "text", text: memory }];
+  return [register, predReg(fields.Pg ?? 0, "z"), { kind: "text", text: memory }];
 }
 
 function sveBfmlalOperands(inst: DecodedInstruction): Operand[] {
@@ -3725,6 +4001,84 @@ function sveFmmlaOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = inst.encoding!.encodingId.endsWith("_d") ? "d" : inst.encoding!.encodingId.endsWith("_s") ? "s" : "h";
   return [vecReg(fields.Zda ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveMatrixMultiplyOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+
+  switch (inst.encoding!.fileName) {
+    case "bfmmla_z_zzz.xml":
+      return [vecReg(fields.Zda ?? 0, "s"), vecReg(fields.Zn ?? 0, "h"), vecReg(fields.Zm ?? 0, "h")];
+    case "bfmmla_z16_zzz.xml":
+      return [vecReg(fields.Zda ?? 0, "h"), vecReg(fields.Zn ?? 0, "h"), vecReg(fields.Zm ?? 0, "h")];
+    case "smmla_z_zzz.xml":
+    case "ummla_z_zzz.xml":
+    case "usmmla_z_zzz.xml":
+      return [vecReg(fields.Zda ?? 0, "s"), vecReg(fields.Zn ?? 0, "b"), vecReg(fields.Zm ?? 0, "b")];
+    default:
+      return sveFmmlaOperands(inst);
+  }
+}
+
+function sveDotLanes(inst: DecodedInstruction): { destination: "h" | "s" | "d"; source: "b" | "h" } {
+  const fileName = inst.encoding!.fileName;
+  const encodingId = inst.encoding!.encodingId;
+  const fields = inst.fields!;
+
+  if (fileName.startsWith("bfdot_")) {
+    return { destination: "s", source: "h" };
+  }
+
+  if (fileName === "sudot_z_zzzi.xml" || fileName === "usdot_z_zzz.xml" || fileName === "usdot_z_zzzi.xml") {
+    return { destination: "s", source: "b" };
+  }
+
+  if (encodingId.includes("_z16_") || encodingId.endsWith("_h")) {
+    return { destination: "h", source: "b" };
+  }
+
+  if (fileName.includes("_z32_")) {
+    return { destination: "s", source: "h" };
+  }
+
+  if ((fields.size ?? 0) === 3 || encodingId.endsWith("_d")) {
+    return { destination: "d", source: "h" };
+  }
+
+  return { destination: "s", source: "b" };
+}
+
+function sveDotIndexedSourceText(inst: DecodedInstruction, sourceLane: "b" | "h"): string {
+  const fields = inst.fields!;
+  const widthByName = new Map(inst.encoding!.fields.map((field) => [field.name, field.width] as const));
+  let index = 0;
+
+  if (fields.i3h !== undefined || fields.i3l !== undefined) {
+    index = ((fields.i3h ?? 0) << (widthByName.get("i3l") ?? 0)) | (fields.i3l ?? 0);
+  } else if (fields.i2 !== undefined) {
+    index = fields.i2;
+  } else if (fields.i1 !== undefined) {
+    index = fields.i1;
+  }
+
+  return `z${fields.Zm ?? 0}.${sourceLane}[${index}]`;
+}
+
+function sveDotProductOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lanes = sveDotLanes(inst);
+  const ops: Operand[] = [
+    vecReg(fields.Zda ?? 0, lanes.destination),
+    vecReg(fields.Zn ?? 0, lanes.source),
+  ];
+
+  if (inst.encoding!.fileName.endsWith("_zzzi.xml")) {
+    ops.push({ kind: "text", text: sveDotIndexedSourceText(inst, lanes.source) });
+  } else {
+    ops.push(vecReg(fields.Zm ?? 0, lanes.source));
+  }
+
+  return ops;
 }
 
 function svePermutationOperands(inst: DecodedInstruction): Operand[] {
@@ -3897,6 +4251,14 @@ function movaSliceZaText(
 
 function movaArrayZaText(fields: Record<string, number>, count: 2 | 4): string {
   return `za.d[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
+}
+
+function smeWideningFloatConvertOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  return [
+    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 2, 2, "s") },
+    vecReg(fields.Zn ?? 0, "h"),
+  ];
 }
 
 type SmeZeroMaskEntry = {
@@ -4186,6 +4548,44 @@ function smeVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" |
     return `{ ${regs[0]} - ${regs[3]} }`;
   }
   return `{ ${regs.join(", ")} }`;
+}
+
+function smeLutiVectorGroupText(inst: DecodedInstruction, count: 2 | 4, lane: "b" | "h" | "s" | "d"): string {
+  const fields = inst.fields!;
+  const encodingId = inst.encoding!.encodingId;
+  if (encodingId.endsWith("_1")) {
+    return smeVectorGroupText((fields.Zd ?? 0) * count, count, lane);
+  }
+
+  const start = ((fields.D ?? 0) << 4) | (fields.Zd ?? 0);
+  const stride = count === 2 ? 8 : 4;
+  const regs = Array.from({ length: count }, (_, index) => `z${start + stride * index}.${lane}`);
+  return `{ ${regs.join(", ")} }`;
+}
+
+function smeLutiIndex(inst: DecodedInstruction): number {
+  const fields = inst.fields!;
+  switch (inst.encoding!.fileName) {
+    case "luti2_mz2_ztz.xml":
+      return fields.i3 ?? 0;
+    case "luti2_mz4_ztz.xml":
+    case "luti4_mz2_ztz.xml":
+      return fields.i2 ?? 0;
+    case "luti4_mz4_ztz.xml":
+      return fields.i1 ?? 0;
+    default:
+      return 0;
+  }
+}
+
+function smeLutiOperands(inst: DecodedInstruction, count: 2 | 4): Operand[] {
+  const fields = inst.fields!;
+  const lane = sveVectorLaneFromSize(fields.size);
+  return [
+    { kind: "text", text: smeLutiVectorGroupText(inst, count, lane) },
+    { kind: "text", text: "zt0" },
+    { kind: "text", text: `z${fields.Zn ?? 0}[${smeLutiIndex(inst)}]` },
+  ];
 }
 
 function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" | "h" | "d"): string {
@@ -4658,6 +5058,31 @@ function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
   }
 }
 
+function smeOuterProductLane(inst: DecodedInstruction): "h" | "s" | "d" {
+  switch (inst.encoding!.className) {
+    case "Half-precision":
+      return "h";
+    case "Single-precision":
+      return "s";
+    case "Double-precision":
+      return "d";
+    default:
+      return "h";
+  }
+}
+
+function smeOuterProductOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = smeOuterProductLane(inst);
+  return [
+    { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
+    predReg(fields.Pn ?? 0, "m"),
+    predReg(fields.Pm ?? 0, "m"),
+    vecReg(fields.Zn ?? 0, lane),
+    vecReg(fields.Zm ?? 0, lane),
+  ];
+}
+
 function smePermutationOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = inst.encoding!.className.includes("128-bit") ? "q" : sveVectorLaneFromSize(fields.size);
@@ -4816,14 +5241,20 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     return [];
   }
 
+  const schemaOperands = buildSchemaOperands(inst, encoding);
+  if (schemaOperands) {
+    return schemaOperands;
+  }
+
+  if (isSveFaultTolerantLoadFile(encoding.fileName)) {
+    return sveFaultTolerantLoadOperands(inst);
+  }
+
+  if (isSveContiguousMemoryFile(encoding.fileName)) {
+    return sveContiguousByteMemoryOperands(inst);
+  }
+
   switch (encoding.fileName) {
-    case "adc.xml":
-    case "adcs.xml":
-    case "sbc.xml":
-    case "sbcs.xml":
-    case "ngc_sbc.xml":
-    case "ngcs_sbcs.xml":
-      return adcOperands(inst);
     case "madd.xml":
     case "msub.xml":
     case "maddpt.xml":
@@ -5597,6 +6028,9 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return movaVectorsToArrayOperands(inst, 2);
     case "mov_mova_za_mz4.xml":
       return movaVectorsToArrayOperands(inst, 4);
+    case "fcvt_mz2_z.xml":
+    case "fcvtl_mz2_z.xml":
+      return smeWideningFloatConvertOperands(inst);
     case "zero_za_i.xml":
       return smeZeroBaseOperands(inst);
     case "zero_za1_ri.xml":
@@ -5669,9 +6103,18 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "bfmls_za_zzi.xml":
     case "bfmls_za_zzw.xml":
       return smeArithmeticOperands(inst);
+    case "fmopa_za_pp_zz.xml":
+    case "fmops_za_pp_zz.xml":
+      return smeOuterProductOperands(inst);
     case "zip_mz_zz.xml":
     case "uzp_mz_zz.xml":
       return smePermutationOperands(inst);
+    case "luti2_mz2_ztz.xml":
+    case "luti4_mz2_ztz.xml":
+      return smeLutiOperands(inst, 2);
+    case "luti2_mz4_ztz.xml":
+    case "luti4_mz4_ztz.xml":
+      return smeLutiOperands(inst, 4);
     case "smlall_za_zzi.xml":
     case "smlall_za_zzv.xml":
     case "smlall_za_zzw.xml":
@@ -5877,6 +6320,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "lsl_z_p_zz.xml":
     case "lsr_z_p_zz.xml":
       return svePredicatedBinaryOperands(inst);
+    case "saddv_r_p_z.xml":
+    case "uaddv_r_p_z.xml":
+    case "smaxv_r_p_z.xml":
+    case "umaxv_r_p_z.xml":
+    case "sminv_r_p_z.xml":
+    case "uminv_r_p_z.xml":
+    case "orv_r_p_z.xml":
+    case "eorv_r_p_z.xml":
+    case "andv_r_p_z.xml":
+    case "faddv_v_p_z.xml":
+    case "fmaxnmv_v_p_z.xml":
+    case "fminnmv_v_p_z.xml":
+    case "fmaxv_v_p_z.xml":
+    case "fminv_v_p_z.xml":
+      return sveHorizontalReductionOperands(inst);
     case "asr_z_zw.xml":
     case "lsl_z_zw.xml":
     case "lsr_z_zw.xml":
@@ -5921,6 +6379,21 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "st1b_z_p_bi.xml":
     case "st1b_z_p_br.xml":
       return sveContiguousByteMemoryOperands(inst);
+    case "ld1rb_z_p_bi.xml":
+    case "ld1rh_z_p_bi.xml":
+    case "ld1rw_z_p_bi.xml":
+    case "ld1rd_z_p_bi.xml":
+    case "ld1rsb_z_p_bi.xml":
+    case "ld1rsh_z_p_bi.xml":
+    case "ld1rsw_z_p_bi.xml":
+    case "ld1rqb_z_p_bi.xml":
+    case "ld1rqh_z_p_bi.xml":
+    case "ld1rqw_z_p_bi.xml":
+    case "ld1rqd_z_p_bi.xml":
+    case "ld1rqb_z_p_br.xml":
+    case "ld1rqh_z_p_br.xml":
+    case "ld1rqw_z_p_br.xml":
+    case "ld1rqd_z_p_br.xml":
     case "ld1rob_z_p_bi.xml":
     case "ld1roh_z_p_bi.xml":
     case "ld1row_z_p_bi.xml":
@@ -5944,8 +6417,27 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return svePredicatedBinaryOperands(inst);
     case "fmul_z_zz.xml":
       return sveBinaryOperands(inst);
+    case "sdot_z_zzz.xml":
+    case "sdot_z_zzzi.xml":
+    case "sdot_z32_zzz.xml":
+    case "sdot_z32_zzzi.xml":
+    case "udot_z_zzz.xml":
+    case "udot_z_zzzi.xml":
+    case "udot_z32_zzz.xml":
+    case "udot_z32_zzzi.xml":
+    case "bfdot_z_zzz.xml":
+    case "bfdot_z_zzzi.xml":
+    case "usdot_z_zzz.xml":
+    case "usdot_z_zzzi.xml":
+    case "sudot_z_zzzi.xml":
+      return sveDotProductOperands(inst);
     case "fmmla_z_zzz.xml":
-      return sveFmmlaOperands(inst);
+    case "bfmmla_z_zzz.xml":
+    case "bfmmla_z16_zzz.xml":
+    case "smmla_z_zzz.xml":
+    case "ummla_z_zzz.xml":
+    case "usmmla_z_zzz.xml":
+      return sveMatrixMultiplyOperands(inst);
     case "zip1_z_zz.xml":
     case "uzp1_z_zz.xml":
     case "trn1_z_zz.xml":

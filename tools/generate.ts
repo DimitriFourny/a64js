@@ -5,6 +5,15 @@ import { parseEncodingFile } from "./encodings.ts";
 import { generateCapstoneFixtures } from "./generate-capstone.ts";
 import { SUPPORTED_FILES, XML_ROOT } from "./supported-files.ts";
 
+const OPERAND_SCHEMA_BY_FILE = new Map<string, string>([
+  ["adc.xml", "gp-rd-rn-rm-sf"],
+  ["adcs.xml", "gp-rd-rn-rm-sf"],
+  ["sbc.xml", "gp-rd-rn-rm-sf"],
+  ["sbcs.xml", "gp-rd-rn-rm-sf"],
+  ["ngc_sbc.xml", "gp-rd-rn-rm-sf"],
+  ["ngcs_sbcs.xml", "gp-rd-rn-rm-sf"],
+]);
+
 function bitCount(value: number): number {
   let count = 0;
   let current = value >>> 0;
@@ -29,6 +38,11 @@ function renderEncodingModule(encodings: GeneratedEncoding[]): string {
   return `import type { GeneratedEncoding } from "../../types.ts";
 
 export const ENCODINGS: GeneratedEncoding[] = ${JSON.stringify(encodings, null, 2)};\n`;
+}
+
+function attachOperandSchema(encoding: GeneratedEncoding): GeneratedEncoding {
+  const operandSchemaId = OPERAND_SCHEMA_BY_FILE.get(encoding.fileName);
+  return operandSchemaId ? { ...encoding, operandSchemaId } : encoding;
 }
 
 function moduleName(fileName: string): string {
@@ -70,7 +84,9 @@ ${entries}
 }
 
 async function main(): Promise<void> {
-  const encodings = (await Promise.all(SUPPORTED_FILES.map((fileName) => parseEncodingFile(XML_ROOT, fileName)))).flat();
+  const encodings = (await Promise.all(SUPPORTED_FILES.map((fileName) => parseEncodingFile(XML_ROOT, fileName))))
+    .flat()
+    .map(attachOperandSchema);
   const ordered = orderEncodings(encodings);
   const outputRoot = "src/generated/isa";
   const grouped = new Map<string, GeneratedEncoding[]>();

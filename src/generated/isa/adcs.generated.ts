@@ -44,7 +44,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandSchemaId": "gp-rd-rn-rm-sf"
   },
   {
     "instructionId": "ADCS",
@@ -89,6 +90,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandSchemaId": "gp-rd-rn-rm-sf"
   }
 ];

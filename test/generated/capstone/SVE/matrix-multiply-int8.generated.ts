@@ -1,87 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 3,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 5,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 7,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 10,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 14,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
-    "caseIndex": 16,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
     "caseIndex": 0,
     "word": 1170380832,
     "asmText": "ummla z0.s, z1.b, z2.b",
@@ -121,6 +40,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 3,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
     "caseIndex": 4,
     "word": 1170380832,
     "asmText": "ummla z0.s, z1.b, z2.b",
@@ -134,6 +66,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 5,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
     "caseIndex": 6,
     "word": 1157797920,
     "asmText": "smmla z0.s, z1.b, z2.b",
@@ -143,6 +88,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 7,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -170,6 +128,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE",
       "FEAT_SME",
       "FEAT_I8MM"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 10,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -216,6 +187,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 14,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
     "caseIndex": 15,
     "word": 1151473696,
     "asmText": "usdot z0.s, z1.b, z2.b[0]",
@@ -226,6 +210,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SVE",
       "FEAT_SME",
       "FEAT_I8MM"
+    ]
+  },
+  {
+    "sourceFile": "SVE/matrix-multiply-int8.s.yaml",
+    "caseIndex": 16,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -243,3 +240,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

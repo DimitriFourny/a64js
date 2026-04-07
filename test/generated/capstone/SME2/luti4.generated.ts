@@ -1,138 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 0,
-    "word": 3234467840,
-    "asmText": "luti4 z0.h, zt0, z0[0]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 1,
-    "word": 3234550101,
-    "asmText": "luti4 z21.h, zt0, z10[5]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 2,
-    "word": 3234517431,
-    "asmText": "luti4 z23.h, zt0, z13[3]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 3,
-    "word": 3234583551,
-    "asmText": "luti4 z31.h, zt0, z31[7]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 4,
-    "word": 3234471936,
-    "asmText": "luti4 z0.s, zt0, z0[0]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 5,
-    "word": 3234554197,
-    "asmText": "luti4 z21.s, zt0, z10[5]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 6,
-    "word": 3234521527,
-    "asmText": "luti4 z23.s, zt0, z13[3]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 7,
-    "word": 3234587647,
-    "asmText": "luti4 z31.s, zt0, z31[7]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 8,
-    "word": 3234463744,
-    "asmText": "luti4 z0.b, zt0, z0[0]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 9,
-    "word": 3234546005,
-    "asmText": "luti4 z21.b, zt0, z10[5]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 10,
-    "word": 3234513335,
-    "asmText": "luti4 z23.b, zt0, z13[3]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/luti4.s.yaml",
-    "caseIndex": 11,
-    "word": 3234579455,
-    "asmText": "luti4 z31.b, zt0, z31[7]",
-    "encodingFile": "luti4_z_ztz.xml",
-    "mnemonic": "LUTI4",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SME2/luti4.s.yaml",
     "caseIndex": 12,
@@ -348,6 +214,141 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "word": 3230376956,
     "asmText": "luti4 { z28.s - z31.s }, zt0, z31[1]",
     "encodingFile": "luti4_mz4_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  }
+];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 0,
+    "word": 3234467840,
+    "asmText": "luti4 z0.h, zt0, z0[0]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 1,
+    "word": 3234550101,
+    "asmText": "luti4 z21.h, zt0, z10[5]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 2,
+    "word": 3234517431,
+    "asmText": "luti4 z23.h, zt0, z13[3]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 3,
+    "word": 3234583551,
+    "asmText": "luti4 z31.h, zt0, z31[7]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 4,
+    "word": 3234471936,
+    "asmText": "luti4 z0.s, zt0, z0[0]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 5,
+    "word": 3234554197,
+    "asmText": "luti4 z21.s, zt0, z10[5]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 6,
+    "word": 3234521527,
+    "asmText": "luti4 z23.s, zt0, z13[3]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 7,
+    "word": 3234587647,
+    "asmText": "luti4 z31.s, zt0, z31[7]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 8,
+    "word": 3234463744,
+    "asmText": "luti4 z0.b, zt0, z0[0]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 9,
+    "word": 3234546005,
+    "asmText": "luti4 z21.b, zt0, z10[5]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 10,
+    "word": 3234513335,
+    "asmText": "luti4 z23.b, zt0, z13[3]",
+    "encodingFile": "luti4_z_ztz.xml",
+    "mnemonic": "LUTI4",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/luti4.s.yaml",
+    "caseIndex": 11,
+    "word": 3234579455,
+    "asmText": "luti4 z31.b, zt0, z31[7]",
+    "encodingFile": "luti4_z_ztz.xml",
     "mnemonic": "LUTI4",
     "features": [
       "FEAT_SME2"

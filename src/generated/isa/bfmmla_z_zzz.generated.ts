@@ -1,0 +1,41 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "bfmmla_z_zzz",
+    "encodingId": "bfmmla_z_zzz_",
+    "mnemonic": "BFMMLA",
+    "className": "SVE",
+    "fileName": "bfmmla_z_zzz.xml",
+    "mask": 4292934656,
+    "value": 1684071424,
+    "bitCount": 17,
+    "fields": [
+      {
+        "name": "opc",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zda",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_SVE && FEAT_BF16"
+    ],
+    "featureGuards": [],
+    "guards": []
+  }
+];
