@@ -40,6 +40,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_F64MM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_F64MM",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -81,6 +87,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_F64MM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_F64MM",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -120,9 +132,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
+      "FEAT_SVE || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE || FEAT_SME",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -163,9 +179,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
+      "FEAT_SVE || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE || FEAT_SME",
+        "all": []
+      }
     ],
     "guards": []
   }

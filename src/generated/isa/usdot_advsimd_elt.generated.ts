@@ -65,6 +65,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_I8MM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_I8MM",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

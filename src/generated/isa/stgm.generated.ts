@@ -40,6 +40,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_MTE2"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_MTE2",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

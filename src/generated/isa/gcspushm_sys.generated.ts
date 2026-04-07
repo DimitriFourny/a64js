@@ -45,6 +45,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_GCS"
     ],
+    "featureGuards": [],
     "guards": []
   }
 ];

@@ -45,6 +45,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FRINTTS"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FRINTTS",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -102,6 +108,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_FRINTTS"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FRINTTS",
+        "all": []
+      }
     ],
     "guards": [
       {

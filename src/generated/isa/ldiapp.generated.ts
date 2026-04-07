@@ -45,6 +45,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_LRCPC3",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -90,6 +96,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_LRCPC3"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_LRCPC3",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -137,6 +149,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_LRCPC3",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -182,6 +200,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_LRCPC3"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_LRCPC3",
+        "all": []
+      }
     ],
     "guards": []
   }

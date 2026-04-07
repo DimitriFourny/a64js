@@ -32,9 +32,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_VHE"
-    ],
+    "features": [],
+    "featureGuards": [],
     "guards": []
   }
 ];

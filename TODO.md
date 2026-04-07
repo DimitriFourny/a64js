@@ -34,6 +34,70 @@ bun test
 
 ## Ready
 
+- SVE loads with replicated/scalarizing forms batch
+  - Anchors: `SVE/ld1rb.s.yaml`, `SVE/ld1rh.s.yaml`, `SVE/ld1rw.s.yaml`, `SVE/ld1rsb.s.yaml`, `SVE/ld1rsh.s.yaml`, `SVE/ld1rsw.s.yaml`, `SVE/ld1rqb.s.yaml`, `SVE/ld1rqh.s.yaml`, `SVE/ld1rqw.s.yaml`, `SVE/ld1rqd.s.yaml`
+  - Focus: land the replicate-load family as one task because the memory operand and replication suffix handling are tightly related.
+  - Done when:
+    - all replicate/scalarizing load forms print consistent addressing syntax
+    - signed-extension and element-width differences are covered by tests
+    - the family can be promoted without leaving partial load variants behind
+
+- SVE first-fault and non-fault load batch
+  - Anchors: `SVE/ldff1b.s.yaml`, `SVE/ldff1h.s.yaml`, `SVE/ldff1w.s.yaml`, `SVE/ldff1d.s.yaml`, `SVE/ldnf1b.s.yaml`, `SVE/ldnf1h.s.yaml`, `SVE/ldnf1w.s.yaml`, `SVE/ldnf1d.s.yaml`
+  - Focus: implement the fault-tolerant load families together so their addressing and mnemonic prefixes are handled in one place.
+  - Done when:
+    - first-fault and non-fault loads both disassemble correctly across widths
+    - predicate and addressing operand order is stable across the family
+    - fixtures for the whole batch are supported before promotion
+
+- SVE structured load/store batch
+  - Anchors: `SVE/ld2d.s.yaml`, `SVE/ld2h.s.yaml`, `SVE/ld3d.s.yaml`, `SVE/ld3h.s.yaml`, `SVE/ld4h.s.yaml`, `SVE/ld4w.s.yaml`, `SVE/st1b.s.yaml`, `SVE/st1h.s.yaml`, `SVE/st1d.s.yaml`, `SVE/st3h.s.yaml`, `SVE/st3w.s.yaml`, `SVE/stnt1b.s.yaml`, `SVE/stnt1h.s.yaml`, `SVE/stnt1w.s.yaml`, `SVE/stnt1d.s.yaml`
+  - Focus: cover the multi-structure and streaming store family together instead of promoting isolated addressing forms.
+  - Done when:
+    - tuple-register formatting for loads/stores is correct across all listed source YAML files
+    - non-temporal store variants share the same addressing path
+    - the whole structured memory batch is promoted in one pass
+
+- SVE reduction and horizontal FP/int batch
+  - Anchors: `SVE/orv.s.yaml`, `SVE/uaddv.s.yaml`, `SVE/smaxv.s.yaml`, `SVE/sminv.s.yaml`, `SVE/fmaxnmv.s.yaml`, `SVE/fminnmv.s.yaml`
+  - Focus: implement horizontal reductions together because they share scalar-result formatting and predicated reduction syntax.
+  - Done when:
+    - all scalar-result reductions print the correct destination register class
+    - predicate-limited reductions are covered by dedicated tests
+    - the reduction family lands as one support promotion
+
+- SVE matrix and dot-product batch
+  - Anchors: `SVE/bfdot.s.yaml`, `SVE/udot.s.yaml`, `SVE/bfmmla.s.yaml`, `SVE/matrix-multiply-fp64.s.yaml`
+  - Focus: cover the SVE matrix/dot-product family together so lane-group operand formatting is implemented once.
+  - Done when:
+    - dot-product and matrix-multiply operands render correctly for all tuple sizes
+    - BF16 and FP64 special cases are both tested
+    - the batch is promoted without leaving adjacent matmul variants unsupported
+
+- SME2p1 floating arithmetic batch
+  - Anchors: `SME2p1/fadd.s.yaml`, `SME2p1/fsub.s.yaml`, `SME2p1/fmla.s.yaml`, `SME2p1/fmls.s.yaml`, `SME2p1/fmopa.s.yaml`, `SME2p1/fmops.s.yaml`
+  - Focus: land the SME2p1 floating ZA-array arithmetic family together because the ZA operand syntax is the main implementation cost.
+  - Done when:
+    - ZA tile-array operands print correctly across add/sub/FMA/FMOPA forms
+    - accumulation and pairwise tile-selection syntax is covered by tests
+    - the whole SME2p1 FP arithmetic cluster is promoted together
+
+- SME2p1 convert-and-move batch
+  - Anchors: `SME2p1/fcvt.s.yaml`, `SME2p1/fcvtl.s.yaml`, `SME2p1/movaz.s.yaml`, `SME2p1/zero.s.yaml`
+  - Focus: implement the SME2p1 conversion and ZA move/zero family so tile movement and type-conversion syntax lands coherently.
+  - Done when:
+    - conversion widths and ZA destination forms disassemble correctly
+    - move/zero forms share tile operand formatting helpers
+    - this family is promoted as one SME2p1 support batch
+
+- SME2p1 LUTI batch
+  - Anchors: `SME2p1/luti2.s.yaml`, `SME2p1/luti4.s.yaml`
+  - Focus: finish the SME2p1 LUTI family together because the indexed lookup operand syntax is specialized and not worth splitting into tiny tasks.
+  - Done when:
+    - both `LUTI2` and `LUTI4` source files decode and disassemble correctly
+    - indexed ZA/lane operand formatting is covered by tests
+    - the family is promoted only after generation and tests pass
+
 ## Backlog Statistics
 
 Priority rule:
@@ -110,66 +174,75 @@ Backlog target:
 
 ## Blocked
 
-- SVE arithmetic core batch from `SVE/add.s.yaml`, `SVE/sub.s.yaml`, `SVE/subr.s.yaml`, `SVE/asr.s.yaml`, `SVE/lsl.s.yaml`, and `SVE/lsr.s.yaml` is blocked after implementation because the required `bun test` run still fails on unrelated `neon-mov.s.yaml#9` (`MOVI 0x0f008420`): the promoted SVE arithmetic/shift/inc shards now generate cleanly, but the shared unsupported-capstone assertion stops on that separate queued family.
-- AdvSIMD immediate-shift and narrowing cleanup from `neon-simd-shift.s.yaml` is blocked after implementation because the required `bun test` run now fails on unrelated `neon-mov.s.yaml#9` (`MOVI 0x0f008420`): it decodes as supported while that separately queued family is still in the unsupported capstone set.
-
 ## Done
 
-Use one line per completed work item with a concise outcome note. Keep detailed history below in `Completed Families`.
+Keep one concise line per completed work item.
 
-- `neon-shift` vector shift batch: promoted `shl_advsimd.xml`, `sshl_advsimd.xml`, `ushl_advsimd.xml`, `srshl_advsimd.xml`, `urshl_advsimd.xml`, `sqshl_advsimd_reg.xml`, `uqshl_advsimd_reg.xml`, `sqrshl_advsimd.xml`, `uqrshl_advsimd.xml`, `sshll_advsimd.xml`, and `ushll_advsimd.xml` for `neon-shift.s.yaml`, `neon-rounding-shift.s.yaml`, `neon-saturating-rounding-shift.s.yaml`, `neon-saturating-shift.s.yaml`, and `neon-shift-left-long.s.yaml`; added shared AdvSIMD shift-register, left-shift-immediate, and widening long-shift formatter/test coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-scalar-shift` scalar shift batch: completed as shared spillover from the promoted AdvSIMD shift XMLs, clearing `neon-scalar-saturating-rounding-shift.s.yaml`, `neon-scalar-saturating-shift.s.yaml`, `neon-scalar-rounding-shift.s.yaml`, `neon-scalar-shift.s.yaml`, and `neon-scalar-shift-imm.s.yaml`; verified by the same `bun tools/generate.ts` and `bun test` pass.
-- `neon-crypto` batch: promoted `aese_advsimd.xml`, `aesd_advsimd.xml`, `aesmc_advsimd.xml`, `aesimc_advsimd.xml`, `sha1h_advsimd.xml`, `sha1su1_advsimd.xml`, `sha256su0_advsimd.xml`, `sha1c_advsimd.xml`, `sha1p_advsimd.xml`, `sha1m_advsimd.xml`, `sha1su0_advsimd.xml`, `sha256h_advsimd.xml`, `sha256h2_advsimd.xml`, and `sha256su1_advsimd.xml` for `neon-crypto.s.yaml`; added AdvSIMD crypto operand formatter/test coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-compare` scalar and pairwise batch: promoted `addp_advsimd_vec.xml`, `addp_advsimd_pair.xml`, `faddp_advsimd_vec.xml`, and `faddp_advsimd_pair.xml` to finish `neon-scalar-fp-compare.s.yaml`, `neon-scalar-compare.s.yaml`, `neon-scalar-reduce-pairwise.s.yaml`, and `neon-add-pairwise.s.yaml`; added AdvSIMD pairwise add formatter/test coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-mul-div` and MLA/MLS batch: promoted `mul_advsimd_vec.xml`, `fmul_advsimd_vec.xml`, `fdiv_advsimd.xml`, `pmul_advsimd.xml`, `sqdmulh_advsimd_vec.xml`, `sqrdmulh_advsimd_vec.xml`, `fmulx_advsimd_vec.xml`, `mla_advsimd_vec.xml`, `mls_advsimd_vec.xml`, `fmla_advsimd_vec.xml`, `fmls_advsimd_vec.xml`, `sqdmull_advsimd_vec.xml`, `sqdmlal_advsimd_vec.xml`, and `sqdmlsl_advsimd_vec.xml` for `neon-mul-div-instructions.s.yaml`, `neon-mla-mls-instructions.s.yaml`, and `neon-scalar-mul.s.yaml`; added vector/scalar multiply-accumulate formatter coverage and regression assertions; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-facge/facgt` and fp reciprocal batch: promoted `facge_advsimd.xml`, `facgt_advsimd.xml`, `frecps_advsimd.xml`, `frecpx_advsimd.xml`, and `frsqrts_advsimd.xml` for `neon-facge-facgt.s.yaml`, `neon-frsqrt-frecp.s.yaml`, and `neon-scalar-recip.s.yaml`; routed absolute compare through the floating-point compare formatter and reciprocal step/exponent forms through the shared AdvSIMD operand formatters; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-add-sub` and halving batch: promoted `add_advsimd.xml`, `sub_advsimd.xml`, `fadd_advsimd.xml`, `fsub_advsimd.xml`, `shadd_advsimd.xml`, `uhadd_advsimd.xml`, `shsub_advsimd.xml`, `uhsub_advsimd.xml`, `srhadd_advsimd.xml`, and `urhadd_advsimd.xml` for `neon-add-sub-instructions.s.yaml`, `neon-halving-add-sub.s.yaml`, and `neon-rounding-halving-add.s.yaml`; routed the family through the shared AdvSIMD three-register formatter path; ran `bun tools/generate.ts` and `bun test` successfully.
-- `armv8.6a-simd-matmul` and dot-product batch: promoted `smmla_advsimd_vec.xml`, `ummla_advsimd_vec.xml`, `usmmla_advsimd_vec.xml`, `usdot_advsimd_vec.xml`, `usdot_advsimd_elt.xml`, and `sudot_advsimd_elt.xml` to finish `armv8.6a-simd-matmul.s.yaml` alongside the already clean `dot-req.s.yaml`; added AdvSIMD I8MM matrix-multiply and mixed-sign dot-product formatter/test coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-saturating-add-sub` core batch: promoted `sqadd_advsimd.xml`, `uqadd_advsimd.xml`, `sqsub_advsimd.xml`, and `uqsub_advsimd.xml` for `neon-saturating-add-sub.s.yaml` and `neon-scalar-saturating-add-sub.s.yaml`; routed scalar/vector saturating add/sub formatting through the shared three-register AdvSIMD operand path; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-aba-abd` and diff batch: promoted `saba_advsimd.xml`, `uaba_advsimd.xml`, `sabd_advsimd.xml`, and `uabd_advsimd.xml` to complete `neon-aba-abd.s.yaml` alongside the existing `sabal_advsimd.xml`, `uabal_advsimd.xml`, `sabdl_advsimd.xml`, and `uabdl_advsimd.xml` support for `neon-3vdiff.s.yaml`; added AdvSIMD absolute-difference/accumulate regression coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `armv8.5a-mte` and prediction/resource batch: promoted `subp.xml`, `subps.xml`, `stgm.xml`, `stzgm.xml`, `cfp_sys.xml`, `dvp_sys.xml`, `cpp_sys.xml`, `cosp_sys.xml`, and `esb.xml` for `armv8.5a-mte.s.yaml`, `armv8.5a-predres.s.yaml`, `armv8.9a-specres2.s.yaml`, and `ras-extension.s.yaml`; added MTE pointer/tag and SPECRES/SPECRES2 operand formatting; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-sxtl/uxtl` and scalar abs batch: promoted `sxtl_sshll_advsimd.xml`, `uxtl_ushll_advsimd.xml`, and `fabd_advsimd.xml` for `neon-sxtl.s.yaml`, `neon-uxtl.s.yaml`, and `neon-scalar-abs.s.yaml`; added SXTL/UXTL alias formatting plus scalar/vector FABD operand coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `armv9.5a-cpa` and `armv9.4a-gcs` system extension batch: promoted `addpt.xml`, `subpt.xml`, `maddpt.xml`, `msubpt.xml`, `gcsss1_sys.xml`, `gcspushm_sys.xml`, `gcsb.xml`, and `chkfeat.xml` for `armv9.5a-cpa.s.yaml`, `armv9.4a-gcs.s.yaml`, and `armv9.4a-chk.s.yaml`; added checked-pointer and GCS/CHK formatter coverage; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-2velem` lane-by-element batch: promoted `mul_advsimd_elt.xml`, `smull_advsimd_elt.xml`, `umull_advsimd_elt.xml`, `sqdmull_advsimd_elt.xml`, `sqdmulh_advsimd_elt.xml`, and `sqrdmulh_advsimd_elt.xml` for `neon-2velem.s.yaml` and `neon-scalar-by-elem-saturating-mul.s.yaml`; fixed by-element formatter routing plus widening `...2` suffix handling; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-simd-misc` and compare/bitwise batch: promoted `rev32_advsimd.xml`, `rev16_advsimd.xml`, `cnt_advsimd.xml`, `mvn_not_advsimd.xml`, `rbit_advsimd.xml`, `fcvtn_advsimd.xml`, `fcvtl_advsimd.xml`, `urecpe_advsimd.xml`, `ursqrte_advsimd.xml`, `frecpe_advsimd.xml`, `frsqrte_advsimd.xml`, `fsqrt_advsimd.xml`, `cmtst_advsimd.xml`, `and_advsimd.xml`, `eor_advsimd.xml`, `bit_advsimd.xml`, `bif_advsimd.xml`, `bsl_advsimd.xml`, `orn_advsimd.xml`, and `bic_advsimd_reg.xml` for `neon-simd-misc.s.yaml`, `neon-compare-instructions.s.yaml`, and `neon-bitwise-instructions.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
-- `armv8.4a-flag` and flag-manipulation batch: promoted `cfinv.xml`, `setf.xml`, `rmif.xml`, `xaflag.xml`, and `axflag.xml` for `armv8.4a-flag.s.yaml`, `armv8.4a-flagm.s.yaml`, and `armv8.5a-altnzcv.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-perm` and table/permutation batch: promoted `uzp1_advsimd.xml`, `uzp2_advsimd.xml`, `trn1_advsimd.xml`, `trn2_advsimd.xml`, `zip1_advsimd.xml`, `zip2_advsimd.xml`, `tbl_advsimd.xml`, and `tbx_advsimd.xml` for `neon-perm.s.yaml` and `neon-tbl.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
-- pointer-auth and RCpc scalar batch: promoted `pacm.xml`, `pacnbiasppc.xml`, and `pacnbibsppc.xml` to finish `armv8.3a-signed-pointer.s.yaml`, `armv8.3a-rcpc.s.yaml`, and `armv9.5a-pauthlr.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
-- `armv8.5a-bti` and branch barrier batch: promoted `bti.xml`, `csdb.xml`, and `sb.xml` for `armv8.5a-bti.s.yaml`, `speculation-barriers.s.yaml`, and `armv8.5a-sb.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
-- `basic-a64-instructions` core A64 cleanup: promoted the remaining scalar/core A64 XML batch for `basic-a64-instructions.s.yaml` and `arm64-basic-a64-instructions.s.yaml` (CRC32, divide/reverse/classify, exception/hint/system/no-operand, logical aliases, STLRB/STLRH); ran `bun tools/generate.ts` and `bun test` successfully.
-- `neon-simd-copy` and lane-move batch: promoted `ins_advsimd_gen.xml`, `ins_advsimd_elt.xml`, `smov_advsimd.xml`, `umov_advsimd.xml`, `mov_umov_advsimd.xml`, `dup_advsimd_elt.xml`, and `ext_advsimd.xml` for `neon-simd-copy.s.yaml`, `neon-scalar-dup.s.yaml`, and `neon-extract.s.yaml`; ran `bun tools/generate.ts` and `bun test` successfully.
+- `SVE` permute-and-rearrange batch: promoted `SVE/trn1.s.yaml`, `SVE/trn2.s.yaml`, `SVE/zip1.s.yaml`, `SVE/zip2.s.yaml`, `SVE/uzp1.s.yaml`, `SVE/uzp2.s.yaml`, `SVE/rev.s.yaml`, `SVE/revb.s.yaml`, `SVE/compact.s.yaml`, plus `revh`/`revw` spillover via shared predicate/vector permutation formatters; regenerated encodings/fixtures and `bun test` passed.
+- `SVE` logical-and-bitwise batch: promoted `SVE/and.s.yaml`, `SVE/ands.s.yaml`, `SVE/bic.s.yaml`, `SVE/eor.s.yaml`, `SVE/eors.s.yaml`, `SVE/orn.s.yaml`, `SVE/orr.s.yaml`, `SVE/nand.s.yaml`, `SVE/nands.s.yaml`, `SVE/nor.s.yaml`, `SVE/nors.s.yaml`, `SVE/not.s.yaml`, and `SVE/nots.s.yaml` by extending the shared predicate-logical formatter path to the flag-setting predicate forms and aliases (`MOVS`/`NOTS`), regenerating encodings/fixtures, and `bun test` passed.
+- `SVE` floating compare-and-classify: promoted `SVE/faclt.s.yaml`, `SVE/fcmlt.s.yaml`, `SVE/fcmgt.s.yaml`, `SVE/fcmge.s.yaml`, `SVE/fcmeq.s.yaml`, and `SVE/fcmne.s.yaml` by extending the shared floating compare formatter path to `FAC<cc>`, regenerating encodings/fixtures, and `bun test` passed.
+- `SVE` predicate-break and flow: promoted `SVE/brkb.s.yaml`, `SVE/brkbs.s.yaml`, `SVE/brka.s.yaml`, `SVE/brkas.s.yaml`, `SVE/brkn.s.yaml`, `SVE/brkns.s.yaml`, `SVE/brkpa.s.yaml`, `SVE/brkpas.s.yaml`, `SVE/brkpb.s.yaml`, `SVE/brkpbs.s.yaml`, `SVE/pfirst.s.yaml`, `SVE/pnext.s.yaml`, and `SVE/ptest.s.yaml` by extending the shared predicate-control formatter path, regenerated fixtures/encodings, and `bun test` passed.
+- `SVE` complex arithmetic: promoted `SVE/fcmla.s.yaml`, `SVE/fcadd.s.yaml`, `armv8.3a-complex.s.yaml`, and `armv8.3a-complex_nofp16.s.yaml` with shared complex rotate formatting, corrected AdvSIMD/SVE operand ordering plus FP16-gated decode handling, regenerated fixtures/encodings, and `bun test` passed.
+- `SVE` floating multiply-accumulate: promoted `SVE/fmla.s.yaml`, `SVE/fmls.s.yaml`, `SVE/fnmla.s.yaml`, and `SVE/fnmls.s.yaml` with one shared FP multiply-accumulate formatter covering predicated and indexed forms; regenerated fixtures/encodings, added direct regression assertions, and `bun test` passed.
+- `SVE` floating-point arithmetic core: promoted `SVE/fadd.s.yaml`, `SVE/fsub.s.yaml`, `SVE/fmul.s.yaml`, `SVE/fdiv.s.yaml`, and `SVE/fmad.s.yaml` with shared predicated FP arithmetic formatting, regenerated fixtures/encodings, and `bun test` passed.
+- `SVE` integer compare-and-mask batch was already implemented and promoted via the shared compare operand formatters for immediate, vector, and wide-vector forms; revalidated `SVE/cmpeq.s.yaml`, `SVE/cmple.s.yaml`, `SVE/cmplo.s.yaml`, `SVE/cmphi.s.yaml`, `SVE/cmpge.s.yaml`, and `SVE/cmpgt.s.yaml` with `bun tools/generate.ts` and `bun test`, both passing.
+- `SVE` increment/decrement-by-predicate: promoted the saturating scalar and predicate-count inc/dec family, including `sqincp`/`uqincp` plus the related `sqdecp`/`uqdecp` XMLs, with shared scalar register formatting and direct predicate-count tests; regenerated fixtures and `bun test` passed.
+- `SVE` saturating integer arithmetic: promoted `SVE/sqadd.s.yaml`, `SVE/sqsub.s.yaml`, `SVE/uqadd.s.yaml`, and `SVE/uqsub.s.yaml` with shared SVE binary/immediate operand formatting; regenerated and `bun test` passed, and all four capstone shards now have zero unsupported cases.
+- `SVE` predicate count and while: promoted `SVE/cntp.s.yaml` alongside the already-shared `CNT*`/`WHILE*` formatting path, regenerated fixtures, and `bun test` passed with the batch fully supported.
+- `SVE` arithmetic-and-shift core: `SVE/add.s.yaml`, `SVE/sub.s.yaml`, `SVE/subr.s.yaml`, `SVE/asr.s.yaml`, `SVE/lsl.s.yaml`, and `SVE/lsr.s.yaml` were already implemented and promoted through the shared SVE arithmetic/shift formatters; revalidated with `bun tools/generate.ts` and `bun test`, both passing.
+- `neon-mov`: AdvSIMD move-immediate and alias coverage was already in place and promoted; revalidated `neon-mov.s.yaml` plus related spillover with `bun tools/generate.ts` and `bun test`, both passing cleanly.
+- `neon-shift` and `neon-scalar-shift`: shared AdvSIMD shift-register, immediate-shift, and widening-long coverage landed; `bun tools/generate.ts` and `bun test` passed.
+- `neon-crypto`: AES and SHA AdvSIMD families promoted with operand formatter coverage; generate/test passed.
+- `neon-compare`: pairwise add and scalar compare spillover promoted for `neon-add-pairwise` and scalar compare shards; generate/test passed.
+- `neon-mul-div` and MLA/MLS: vector/scalar multiply, divide, accumulate, and saturating multiply families promoted; generate/test passed.
+- `neon-facge/facgt` and reciprocal-step: absolute FP compare and reciprocal helper families promoted; generate/test passed.
+- `neon-add-sub`, halving, and rounding-halving: shared three-register AdvSIMD arithmetic formatting landed; generate/test passed.
+- `armv8.6a-simd-matmul` and mixed dot-product: I8MM and mixed-sign dot-product families promoted; generate/test passed.
+- `neon-saturating-add-sub`: signed/unsigned saturating add/sub families promoted; generate/test passed.
+- `neon-aba-abd` and `neon-3vdiff`: absolute-difference and accumulate families promoted; generate/test passed.
+- `armv8.5a-mte`, `armv8.5a-predres`, `armv8.9a-specres2`, and `ras-extension`: pointer-tag and system resource families promoted; generate/test passed.
+- `neon-sxtl/uxtl` and `neon-scalar-abs`: widening aliases plus scalar/vector `FABD` coverage landed; generate/test passed.
+- `armv9.5a-cpa`, `armv9.4a-gcs`, and `armv9.4a-chk`: checked-pointer and GCS/CHK system families promoted; generate/test passed.
+- `neon-2velem` and scalar by-element saturating multiply: lane-by-element widening/saturating multiply families promoted; generate/test passed.
+- `neon-simd-misc`, `neon-compare-instructions`, and `neon-bitwise-instructions`: misc FP/int/vector logical families promoted; generate/test passed.
+- `armv8.4a-flag`, `armv8.4a-flagm`, and `armv8.5a-altnzcv`: flag-manipulation families promoted; generate/test passed.
+- `neon-perm` and `neon-tbl`: transpose/zip/unzip/table permutation families promoted; generate/test passed.
+- Pointer-auth and RCpc scalar cleanup: remaining pointer-auth aliases and RCpc spillover promoted; generate/test passed.
+- `armv8.5a-bti`, `speculation-barriers`, and `armv8.5a-sb`: branch-target and speculation-barrier families promoted; generate/test passed.
+- `basic-a64-instructions` and `arm64-basic-a64-instructions`: remaining core scalar A64 cleanup promoted; generate/test passed.
+- `neon-simd-copy`, `neon-scalar-dup`, and `neon-extract`: lane-move, dup, and extract families promoted; generate/test passed.
 
 ## Snapshot
 
 Current capstone coverage snapshot:
 
-- `25212` supported capstone cases
-- `9345` unsupported capstone cases
-- `887` XML instruction files currently listed in `tools/supported-files.ts`
-- `1013` distinct unsupported XML instruction files
-- `726` capstone source YAML files containing unsupported cases
-- `615` distinct unsupported mnemonics
+- `26438` supported capstone cases
+- `8119` unsupported capstone cases
+- `1058` XML instruction files currently listed in `tools/supported-files.ts`
+- `845` distinct unsupported XML instruction files
+- `644` capstone source YAML files containing unsupported cases
+- `549` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `neon-simd-copy.s.yaml`: `41`
-- `neon-simd-misc.s.yaml`: `39`
-- `SVE/fcmla.s.yaml`: `38`
-- `SVE/sqadd.s.yaml`: `38`
-- `SVE/sqsub.s.yaml`: `38`
+- `FP8_SVE2/faminmax.s.yaml`: `36`
+- `SME2/luti2.s.yaml`: `36`
+- `SVE/ld1sb.s.yaml`: `34`
+- `FP8_SVE2/fcvtn.s.yaml`: `32`
+- `SME2/add.s.yaml`: `32`
 
 Largest unsupported feature sets:
 
-- `FEAT_SME`: `5022`
-- `FEAT_SVE`: `3272`
-- `FEAT_SVE || FEAT_SME`: `2850`
+- `FEAT_SME`: `4478`
+- `FEAT_SVE`: `2728`
+- `FEAT_SVE || FEAT_SME`: `2296`
 - `FEAT_SVE2`: `2069`
 - `FEAT_SVE2 || FEAT_SME`: `1861`
 - `FEAT_SME2`: `1836`
 - `FEAT_SVE2p1`: `1530`
 - `FEAT_SME2 || FEAT_SVE2p1`: `725`
 - `FEAT_SME2p1`: `724`
-- `FEAT_AdvSIMD`: `713`
+- `FEAT_SVE2p1 || FEAT_SME2p1`: `694`
 
 Implication:
 
@@ -200,4 +273,3 @@ So this TODO tracks instructions that already map cleanly to XML encodings, but 
 - The recent system-register work formats generic system-register operands as `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>`. That is acceptable for coverage and should not block further family support.
 - `tools/encodings.ts` needs to tolerate feature terms inside larger guard expressions; keep that in mind when working on mixed-guard XMLs.
 - If `MOVA`-related capstone accounting does not move as expected, verify the XML-to-case mapping before assuming the formatter is wrong.
- Conditional-select family: `46` capstone cases promoted across `csel.xml`, `cinc_csinc.xml`, `cinv_csinv.xml`, and `cneg_csneg.xml`, with alias condition inversion handled in the formatter while `cset` / `csetm` remain unsupported

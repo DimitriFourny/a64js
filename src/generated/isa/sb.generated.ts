@@ -30,6 +30,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SB"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SB",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

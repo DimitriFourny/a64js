@@ -53,6 +53,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
+    "featureGuards": [],
     "guards": [
       {
         "all": [
@@ -119,6 +120,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
+    "featureGuards": [],
     "guards": [
       {
         "all": [

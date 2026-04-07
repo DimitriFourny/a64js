@@ -1,0 +1,61 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "fmls_z_p_zzz",
+    "encodingId": "fmls_z_p_zzz_",
+    "mnemonic": "FMLS",
+    "className": "SVE",
+    "fileName": "fmls_z_p_zzz.xml",
+    "mask": 4280344576,
+    "value": 1696604160,
+    "bitCount": 12,
+    "fields": [
+      {
+        "name": "size",
+        "lsb": 22,
+        "width": 2
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "N",
+        "lsb": 14,
+        "width": 1
+      },
+      {
+        "name": "op",
+        "lsb": 13,
+        "width": 1
+      },
+      {
+        "name": "Pg",
+        "lsb": 10,
+        "width": 3
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "Zda",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "FEAT_SVE || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE || FEAT_SME",
+        "all": []
+      }
+    ],
+    "guards": []
+  }
+];

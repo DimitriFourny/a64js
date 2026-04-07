@@ -50,6 +50,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CRC32",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -100,6 +106,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_CRC32"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CRC32",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -152,6 +164,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CRC32",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -202,6 +220,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_CRC32"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CRC32",
+        "all": []
+      }
     ],
     "guards": []
   }

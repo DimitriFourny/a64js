@@ -45,6 +45,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -102,6 +108,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_FP"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
     ],
     "guards": [
       {
@@ -161,6 +173,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -218,6 +236,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_FP"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
     ],
     "guards": [
       {
@@ -277,6 +301,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -334,6 +364,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_FP"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      }
     ],
     "guards": [
       {

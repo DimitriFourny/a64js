@@ -25,6 +25,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -51,6 +52,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -77,6 +79,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -122,6 +125,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_PAuth"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_PAuth",
+        "all": []
+      }
     ],
     "guards": [
       {
@@ -187,6 +196,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_PAuth"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_PAuth",
+        "all": []
+      }
     ],
     "guards": [
       {

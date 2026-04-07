@@ -47,9 +47,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -127,9 +142,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -207,9 +237,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -287,9 +332,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -367,9 +427,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -447,9 +522,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -527,9 +617,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -607,9 +712,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -687,9 +807,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {
@@ -767,9 +902,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "width": 5
       }
     ],
-    "features": [
-      "FEAT_FP",
-      "FEAT_FP16"
+    "features": [],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FP",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ]
+      }
     ],
     "guards": [
       {

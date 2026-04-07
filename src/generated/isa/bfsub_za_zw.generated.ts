@@ -40,6 +40,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_B16B16"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME_B16B16",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -80,6 +86,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_SME_B16B16"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME_B16B16",
+        "all": []
+      }
     ],
     "guards": []
   }

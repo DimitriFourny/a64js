@@ -58,10 +58,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
-      "FEAT_AdvSIMD",
-      "FEAT_LRCPC3"
+      "FEAT_AdvSIMD && FEAT_LRCPC3"
     ],
+    "featureGuards": [],
     "guards": []
   }
 ];

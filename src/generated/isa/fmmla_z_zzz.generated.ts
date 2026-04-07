@@ -35,6 +35,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_F64MM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_F64MM",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -69,10 +75,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2p2 && FEAT_F16MM",
-      "FEAT_SVE2p2",
-      "FEAT_F16MM"
+      "FEAT_SVE2p2 && FEAT_F16MM"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -108,6 +113,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_F32MM"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_F32MM",
+        "all": []
+      }
     ],
     "guards": []
   }

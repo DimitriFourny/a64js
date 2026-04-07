@@ -28,6 +28,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
+    "featureGuards": [],
     "guards": []
   }
 ];

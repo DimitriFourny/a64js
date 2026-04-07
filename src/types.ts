@@ -54,6 +54,11 @@ export type GeneratedField = {
   width: number;
 };
 
+export type FeatureGuard = {
+  feature: FeatureName;
+  all: GuardCheck[];
+};
+
 export type GeneratedEncoding = {
   instructionId: string;
   encodingId: string;
@@ -64,6 +69,7 @@ export type GeneratedEncoding = {
   value: number;
   fields: GeneratedField[];
   features: FeatureName[];
+  featureGuards: FeatureGuard[];
   guards: Guard[];
 };
 

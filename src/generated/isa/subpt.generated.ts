@@ -50,6 +50,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CPA"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CPA",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

@@ -30,9 +30,15 @@ test("supported capstone cases decode through supported XML encodings", () => {
 test("unsupported capstone cases still fall back to raw .inst", () => {
   for (const capstoneCase of UNSUPPORTED_CAPSTONE_CASES) {
     const decoded = decode(capstoneCase.word, { features: capstoneCase.features });
-    assert.notEqual(decoded.status, "ok", describeCase(capstoneCase));
+    const rendered = disasm(capstoneCase.word, undefined, { features: capstoneCase.features });
+    if (decoded.status === "ok") {
+      assert.notEqual(decoded.encoding?.fileName, capstoneCase.encodingFile, describeCase(capstoneCase));
+      assert.notEqual(rendered, `.inst ${formatWord(capstoneCase.word)}`, describeCase(capstoneCase));
+      continue;
+    }
+
     assert.equal(
-      disasm(capstoneCase.word, undefined, { features: capstoneCase.features }),
+      rendered,
       `.inst ${formatWord(capstoneCase.word)}`,
       describeCase(capstoneCase),
     );

@@ -115,7 +115,11 @@ function evaluateFeatureExpression(expression: string, enabledFeatures: Set<stri
   return enabledFeatures.has(normalized);
 }
 
-function missingFeatures(encoding: GeneratedEncoding, enabledFeatures: Set<string>): string[] {
+function missingFeatures(
+  encoding: GeneratedEncoding,
+  fields: Record<string, number>,
+  enabledFeatures: Set<string>,
+): string[] {
   const compositeExpressions = encoding.features.filter((feature) => feature.includes("||") || feature.includes("&&"));
   const missing = compositeExpressions.filter((feature) => !evaluateFeatureExpression(feature, enabledFeatures));
 
@@ -128,11 +132,24 @@ function missingFeatures(encoding: GeneratedEncoding, enabledFeatures: Set<strin
     }
   }
 
+  for (const featureGuard of encoding.featureGuards) {
+    if (!featureGuard.all.every((check) => guardCheckMatches(fields, check))) {
+      continue;
+    }
+    if (!evaluateFeatureExpression(featureGuard.feature, enabledFeatures)) {
+      missing.push(featureGuard.feature);
+    }
+  }
+
   return missing;
 }
 
-function hasFeatures(encoding: GeneratedEncoding, enabledFeatures: Set<string>): boolean {
-  return missingFeatures(encoding, enabledFeatures).length === 0;
+function hasFeatures(
+  encoding: GeneratedEncoding,
+  fields: Record<string, number>,
+  enabledFeatures: Set<string>,
+): boolean {
+  return missingFeatures(encoding, fields, enabledFeatures).length === 0;
 }
 
 const SUPPORTED_AT_SYS_KEYS = new Set([
@@ -319,18 +336,19 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
       continue;
     }
 
-    if (!hasFeatures(encoding, enabledFeatures)) {
-      const missing = missingFeatures(encoding, enabledFeatures);
+    const fields = extractFields(word, encoding);
+
+    if (!hasFeatures(encoding, fields, enabledFeatures)) {
+      const missing = missingFeatures(encoding, fields, enabledFeatures);
       return {
         status: "undefined",
         word,
         encoding,
         mnemonic: encoding.mnemonic,
+        fields,
         errors: [`missing features: ${missing.join(", ")}`],
       };
     }
-
-    const fields = extractFields(word, encoding);
     if (
       isUnsupportedConditionalSelectAlias(encoding, fields) ||
       isUnsupportedLogicalImmediateAlias(encoding, fields) ||

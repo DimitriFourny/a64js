@@ -40,6 +40,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC2"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_LRCPC2",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

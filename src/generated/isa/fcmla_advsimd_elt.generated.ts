@@ -63,8 +63,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_FCMA",
-      "FEAT_FP16"
+      "FEAT_FCMA"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FCMA",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ]
+      }
     ],
     "guards": [
       {

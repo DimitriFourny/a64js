@@ -45,6 +45,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_RDM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_RDM",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -107,6 +113,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_RDM"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_RDM",
+        "all": []
+      }
     ],
     "guards": [
       {

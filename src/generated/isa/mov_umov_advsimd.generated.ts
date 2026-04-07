@@ -45,6 +45,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -91,6 +92,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
+    "featureGuards": [],
     "guards": []
   }
 ];

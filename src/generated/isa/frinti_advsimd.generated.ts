@@ -43,9 +43,17 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
-      "FEAT_AdvSIMD",
-      "FEAT_FP16"
+      "FEAT_AdvSIMD && FEAT_FP16"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_AdvSIMD",
+        "all": []
+      },
+      {
+        "feature": "FEAT_FP16",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -97,6 +105,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_AdvSIMD"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_AdvSIMD",
+        "all": []
+      }
     ],
     "guards": [
       {

@@ -251,6 +251,27 @@ test("decodes AdvSIMD add/sub and halving families", () => {
   assert.equal(disasm(782373920, undefined, advsimdOptions), "urhadd v0.2s, v1.2s, v2.2s");
 });
 
+test("decodes complex arithmetic rotates and applies FP16 gating only to half-precision forms", () => {
+  const fcmaOnly = { features: ["FEAT_FCMA"] } as const;
+  const fcmaFp16 = { features: ["FEAT_FCMA", "FEAT_FP16"] } as const;
+  const sveOnly = { features: ["FEAT_SVE"] } as const;
+
+  assert.equal(disasm(780325920, undefined, fcmaOnly), "fcmla v0.2s, v1.2s, v2.2s, #180");
+  assert.equal(disasm(780334112, undefined, fcmaOnly), "fcadd v0.2s, v1.2s, v2.2s, #270");
+  assert.equal(disasm(776127520, undefined, fcmaFp16), "fcmla v0.4h, v1.4h, v2.4h, #0");
+  assert.equal(disasm(792858656, undefined, fcmaFp16), "fcmla v0.4h, v1.4h, v2.h[0], #0");
+  assert.deepEqual(
+    decode(776127520, fcmaOnly).errors,
+    ["missing features: FEAT_FP16"],
+  );
+
+  assert.equal(disasm(1681948672, undefined, sveOnly), "fcadd z0.h, p0/m, z0.h, z0.h, #90");
+  assert.equal(disasm(1690411007, undefined, sveOnly), "fcadd z31.d, p7/m, z31.d, z31.d, #270");
+  assert.equal(disasm(1681915904, undefined, sveOnly), "fcmla z0.h, p0/m, z0.h, z0.h, #0");
+  assert.equal(disasm(1692368868, undefined, sveOnly), "fcmla z4.d, p7/m, z31.d, z31.d, #270");
+  assert.equal(disasm(1693783381, undefined, sveOnly), "fcmla z21.s, z10.s, z5.s[1], #90");
+});
+
 test("decodes AdvSIMD shift register and long-shift forms", () => {
   const advsimdOptions = { features: ["FEAT_AdvSIMD"] } as const;
   assert.equal(disasm(237126688, undefined, advsimdOptions), "sshl v0.8b, v1.8b, v2.8b");
@@ -308,6 +329,19 @@ test("decodes scalar bit-manipulation aliases and data movement leftovers", () =
   assert.equal(disasm(2479307939), "extr x3, x5, x7, #15");
   assert.equal(disasm(2480366323), "ror x19, x23, #24");
   assert.equal(disasm(328039849), "ror w9, w13, #31");
+});
+
+test("decodes SVE rearrangement and reverse families", () => {
+  const sveOptions = { features: ["FEAT_SVE"] };
+  assert.equal(disasm(88045567, undefined, sveOptions), "trn2 z31.b, z31.b, z31.b");
+  assert.equal(disasm(86988271, undefined, sveOptions), "trn2 p15.b, p15.b, p15.b");
+  assert.equal(disasm(85999616, undefined, sveOptions), "zip1 p0.b, p0.b, p0.b");
+  assert.equal(disasm(86986223, undefined, sveOptions), "uzp2 p15.b, p15.b, p15.b");
+  assert.equal(disasm(87571424, undefined, sveOptions), "rev z0.b, z31.b");
+  assert.equal(disasm(90480608, undefined, sveOptions), "revb z0.h, p7/m, z31.h");
+  assert.equal(disasm(94740448, undefined, sveOptions), "revh z0.s, p7/m, z31.s");
+  assert.equal(disasm(99000288, undefined, sveOptions), "revw z0.d, p7/m, z31.d");
+  assert.equal(disasm(94478335, undefined, sveOptions), "compact z31.s, p7, z31.s");
 });
 
 test("decodes barrier and cache/TLB maintenance system instructions", () => {
@@ -489,6 +523,27 @@ test("decodes SVE BF16 subtraction forms", () => {
   assert.equal(disasm(1684540855, undefined, options), "bfmls z23.h, z13.h, z0.h[5]");
 });
 
+test("decodes SVE floating multiply-accumulate forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(1702829088, undefined, options), "fmla z0.h, p7/m, z1.h, z31.h");
+  assert.equal(disasm(1686044704, undefined, options), "fmla z0.h, z1.h, z7.h[7]");
+  assert.equal(disasm(1702837280, undefined, options), "fmls z0.h, p7/m, z1.h, z31.h");
+  assert.equal(disasm(1702845472, undefined, options), "fnmla z0.h, p7/m, z1.h, z31.h");
+  assert.equal(disasm(1702853664, undefined, options), "fnmls z0.h, p7/m, z1.h, z31.h");
+});
+
+test("decodes SVE saturating integer add/sub forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(69210112, undefined, options), "sqadd z0.b, z0.b, z0.b");
+  assert.equal(disasm(631570431, undefined, options), "sqadd z31.s, z31.s, #65280");
+  assert.equal(disasm(69212160, undefined, options), "sqsub z0.b, z0.b, z0.b");
+  assert.equal(disasm(635895807, undefined, options), "sqsub z31.d, z31.d, #65280");
+  assert.equal(disasm(77599744, undefined, options), "uqadd z0.s, z0.s, z0.s");
+  assert.equal(disasm(627441663, undefined, options), "uqadd z31.h, z31.h, #65280");
+  assert.equal(disasm(81796096, undefined, options), "uqsub z0.d, z0.d, z0.d");
+  assert.equal(disasm(631767039, undefined, options), "uqsub z31.s, z31.s, #65280");
+});
+
 test("decodes scalar FCMP and FCMPE forms", () => {
   const options = { features: ["FEAT_FP", "FEAT_FP16"] };
   assert.equal(disasm(505749600, undefined, options), "fcmp s3, s5");
@@ -560,6 +615,13 @@ test("decodes SVE compare vector", () => {
   assert.equal(disasm(0x2400a000, undefined, { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] }), "cmpeq p0.b, p0/z, z0.b, z0.b");
 });
 
+test("decodes SVE floating compare zero, vector, and absolute-vector forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] } as const;
+  assert.equal(disasm(1699880960, undefined, options), "fcmeq p0.h, p0/z, z0.h, #0.0");
+  assert.equal(disasm(1698783232, undefined, options), "fcmeq p0.h, p0/z, z0.h, z1.h");
+  assert.equal(disasm(1698750512, undefined, options), "facgt p0.h, p0/z, z1.h, z0.h");
+});
+
 test("decodes SVE compare wide-vector forms", () => {
   const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
   assert.equal(disasm(603987968, undefined, options), "cmpeq p0.b, p0/z, z0.b, z0.d");
@@ -584,14 +646,35 @@ test("decodes SVE predicate break and test forms", () => {
   const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
   assert.equal(disasm(621837808, undefined, options), "brka p0.b, p15/m, p15.b");
   assert.equal(disasm(621837792, undefined, options), "brka p0.b, p15/z, p15.b");
+  assert.equal(disasm(626032096, undefined, options), "brkas p0.b, p15/z, p15.b");
   assert.equal(disasm(630226416, undefined, options), "brkb p0.b, p15/m, p15.b");
+  assert.equal(disasm(634420704, undefined, options), "brkbs p0.b, p15/z, p15.b");
   assert.equal(disasm(622361632, undefined, options), "brkn p0.b, p15/z, p1.b, p0.b");
   assert.equal(disasm(626555936, undefined, options), "brkns p0.b, p15/z, p1.b, p0.b");
   assert.equal(disasm(620952608, undefined, options), "brkpa p0.b, p15/z, p1.b, p2.b");
   assert.equal(disasm(625146912, undefined, options), "brkpas p0.b, p15/z, p1.b, p2.b");
   assert.equal(disasm(620952624, undefined, options), "brkpb p0.b, p15/z, p1.b, p2.b");
   assert.equal(disasm(625146928, undefined, options), "brkpbs p0.b, p15/z, p1.b, p2.b");
+  assert.equal(disasm(626573792, undefined, options), "pfirst p0.b, p15, p0.b");
+  assert.equal(disasm(622446048, undefined, options), "pnext p0.b, p15, p0.b");
+  assert.equal(disasm(626640352, undefined, options), "pnext p0.h, p15, p0.h");
+  assert.equal(disasm(630834656, undefined, options), "pnext p0.s, p15, p0.s");
+  assert.equal(disasm(635028960, undefined, options), "pnext p0.d, p15, p0.d");
   assert.equal(disasm(626064384, undefined, options), "ptest p15, p0.b");
+});
+
+test("decodes SVE predicate logical forms including flag-setting aliases", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(620773392, undefined, options), "bic p0.b, p0/z, p0.b, p0.b");
+  assert.equal(disasm(624967696, undefined, options), "bics p0.b, p0/z, p0.b, p0.b");
+  assert.equal(disasm(625033216, undefined, options), "ands p0.b, p0/z, p0.b, p1.b");
+  assert.equal(disasm(624967680, undefined, options), "movs p0.b, p0/z, p0.b");
+  assert.equal(disasm(633421824, undefined, options), "orrs p0.b, p0/z, p0.b, p1.b");
+  assert.equal(disasm(633356288, undefined, options), "movs p0.b, p0.b");
+  assert.equal(disasm(625033728, undefined, options), "eors p0.b, p0/z, p0.b, p1.b");
+  assert.equal(disasm(624968192, undefined, options), "nots p0.b, p0/z, p0.b");
+  assert.equal(disasm(633356816, undefined, options), "nands p0.b, p0/z, p0.b, p0.b");
+  assert.equal(disasm(633356800, undefined, options), "nors p0.b, p0/z, p0.b, p0.b");
 });
 
 test("decodes RDFFR predicate forms", () => {
@@ -636,6 +719,12 @@ test("decodes SVE CNTB/CNTH/CNTW/CNTD scalar count patterns", () => {
   assert.equal(disasm(69264256, undefined, options), "cntb x0, #28");
 });
 
+test("decodes SVE CNTP and WHILE predicate-loop forms", () => {
+  const sveOptions = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(622902272, undefined, sveOptions), "cntp x0, p15, p0.b");
+  assert.equal(disasm(624890911, undefined, sveOptions), "whilele p15.b, x0, xzr");
+});
+
 test("decodes SME ZA tile-slice load/store operands", () => {
   const options = { features: ["FEAT_SME"] };
   assert.equal(disasm(3758096384, undefined, options), "ld1b {za0h.b[w12, 0]}, p0/z, [x0, x0]");
@@ -676,6 +765,14 @@ test("decodes unsigned SVE scalar saturating INCB and DECB forms", () => {
   assert.equal(disasm(69269472, undefined, options), "uqincb w0");
   assert.equal(disasm(70320096, undefined, options), "uqdecb x0");
   assert.equal(disasm(69271520, undefined, options), "uqdecb w0");
+});
+
+test("decodes SVE saturating increment/decrement by predicate-count forms", () => {
+  const options = { features: ["FEAT_SVE || FEAT_SME", "FEAT_SVE", "FEAT_SME"] };
+  assert.equal(disasm(623414272, undefined, options), "sqincp x0, p0.b");
+  assert.equal(disasm(623610367, undefined, options), "uqdecp wzr, p15.b");
+  assert.equal(disasm(635994112, undefined, options), "sqincp z0.d, p0.d");
+  assert.equal(disasm(636190720, undefined, options), "uqdecp z0.d, p0.d");
 });
 
 test("decodes SVE DUP indexed mov aliases", () => {

@@ -50,6 +50,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_ASMv8p2"
     ],
+    "featureGuards": [],
     "guards": []
   },
   {
@@ -101,6 +102,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_ASMv8p2"
     ],
+    "featureGuards": [],
     "guards": []
   }
 ];

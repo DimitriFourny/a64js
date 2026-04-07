@@ -615,10 +615,32 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
   }
 
   if (
-    ["and_p_p_pp.xml", "mov_and_p_p_pp.xml", "orr_p_p_pp.xml", "mov_orr_p_p_pp.xml", "orr_z_zz.xml", "mov_orr_z_zz.xml", "sel_p_p_pp.xml", "mov_sel_p_p_pp.xml", "sel_z_p_zz.xml", "mov_sel_z_p_zz.xml"].includes(fileName) &&
+    [
+      "and_p_p_pp.xml",
+      "mov_and_p_p_pp.xml",
+      "orr_p_p_pp.xml",
+      "mov_orr_p_p_pp.xml",
+      "orr_z_zz.xml",
+      "mov_orr_z_zz.xml",
+      "sel_p_p_pp.xml",
+      "mov_sel_p_p_pp.xml",
+      "sel_z_p_zz.xml",
+      "mov_sel_z_p_zz.xml",
+    ].includes(fileName) &&
     operands.length <= 3
   ) {
     return "mov";
+  }
+
+  if (
+    ["ands_p_p_pp.xml", "movs_ands_p_p_pp.xml", "orrs_p_p_pp.xml", "movs_orrs_p_p_pp.xml"].includes(fileName) &&
+    operands.length <= 3
+  ) {
+    return "movs";
+  }
+
+  if (["eors_p_p_pp.xml", "nots_eors_p_p_pp.xml"].includes(fileName) && operands.length === 3) {
+    return "nots";
   }
 
   if (decoded.fields && ADVSIMD_WIDENING_LONG_FILES.has(fileName) && (decoded.fields.Q ?? 0) === 1) {

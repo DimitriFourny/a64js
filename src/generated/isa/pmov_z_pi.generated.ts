@@ -33,9 +33,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
-      "FEAT_SVE2p1",
-      "FEAT_SME2p1"
+      "FEAT_SVE2p1 || FEAT_SME2p1"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -71,9 +75,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
-      "FEAT_SVE2p1",
-      "FEAT_SME2p1"
+      "FEAT_SVE2p1 || FEAT_SME2p1"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -109,9 +117,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
-      "FEAT_SVE2p1",
-      "FEAT_SME2p1"
+      "FEAT_SVE2p1 || FEAT_SME2p1"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -147,9 +159,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
-      "FEAT_SVE2p1",
-      "FEAT_SME2p1"
+      "FEAT_SVE2p1 || FEAT_SME2p1"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
+        "all": []
+      }
     ],
     "guards": []
   }

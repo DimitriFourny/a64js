@@ -43,9 +43,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
-      "FEAT_SVE2",
-      "FEAT_SME"
+      "FEAT_SVE2 || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2 || FEAT_SME",
+        "all": []
+      }
     ],
     "guards": []
   },
@@ -91,9 +95,13 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
-      "FEAT_SVE2",
-      "FEAT_SME"
+      "FEAT_SVE2 || FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SVE2 || FEAT_SME",
+        "all": []
+      }
     ],
     "guards": []
   }

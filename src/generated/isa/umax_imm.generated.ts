@@ -50,6 +50,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CSSC"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CSSC",
+        "all": []
+      }
+    ],
     "guards": []
   },
   {
@@ -100,6 +106,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_CSSC"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_CSSC",
+        "all": []
+      }
     ],
     "guards": []
   }

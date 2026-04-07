@@ -65,6 +65,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FHM"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FHM",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
@@ -142,6 +148,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [
       "FEAT_FHM"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_FHM",
+        "all": []
+      }
     ],
     "guards": [
       {

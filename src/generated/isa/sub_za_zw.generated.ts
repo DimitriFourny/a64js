@@ -38,8 +38,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
+      "FEAT_SME2"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME2",
+        "all": []
+      },
+      {
+        "feature": "FEAT_SME_I16I64",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ]
+      }
     ],
     "guards": []
   },
@@ -80,8 +97,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [
-      "FEAT_SME2",
-      "FEAT_SME_I16I64"
+      "FEAT_SME2"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME2",
+        "all": []
+      },
+      {
+        "feature": "FEAT_SME_I16I64",
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ]
+      }
     ],
     "guards": []
   }

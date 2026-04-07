@@ -105,113 +105,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 16,
-    "word": 86007808,
-    "asmText": "zip1 z0.b, z0.b, z0.b",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 17,
-    "word": 90202112,
-    "asmText": "zip1 z0.h, z0.h, z0.h",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 18,
-    "word": 94396416,
-    "asmText": "zip1 z0.s, z0.s, z0.s",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 19,
-    "word": 98590720,
-    "asmText": "zip1 z0.d, z0.d, z0.d",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 20,
-    "word": 88040447,
-    "asmText": "zip1 z31.b, z31.b, z31.b",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 21,
-    "word": 92234751,
-    "asmText": "zip1 z31.h, z31.h, z31.h",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 22,
-    "word": 96429055,
-    "asmText": "zip1 z31.s, z31.s, z31.s",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
-    "caseIndex": 23,
-    "word": 100623359,
-    "asmText": "zip1 z31.d, z31.d, z31.d",
-    "encodingFile": "zip1_z_zz.xml",
-    "mnemonic": "ZIP1",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/zip1.s.yaml",
     "caseIndex": 8,
     "word": 85999616,
     "asmText": "zip1 p0.b, p0.b, p0.b",
@@ -307,6 +200,110 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "word": 99566063,
     "asmText": "zip1 p15.d, p15.d, p15.d",
     "encodingFile": "zip1_p_pp.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 16,
+    "word": 86007808,
+    "asmText": "zip1 z0.b, z0.b, z0.b",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 17,
+    "word": 90202112,
+    "asmText": "zip1 z0.h, z0.h, z0.h",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 18,
+    "word": 94396416,
+    "asmText": "zip1 z0.s, z0.s, z0.s",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 19,
+    "word": 98590720,
+    "asmText": "zip1 z0.d, z0.d, z0.d",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 20,
+    "word": 88040447,
+    "asmText": "zip1 z31.b, z31.b, z31.b",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 21,
+    "word": 92234751,
+    "asmText": "zip1 z31.h, z31.h, z31.h",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 22,
+    "word": 96429055,
+    "asmText": "zip1 z31.s, z31.s, z31.s",
+    "encodingFile": "zip1_z_zz.xml",
+    "mnemonic": "ZIP1",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/zip1.s.yaml",
+    "caseIndex": 23,
+    "word": 100623359,
+    "asmText": "zip1 z31.d, z31.d, z31.d",
+    "encodingFile": "zip1_z_zz.xml",
     "mnemonic": "ZIP1",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -419,3 +416,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

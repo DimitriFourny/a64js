@@ -35,6 +35,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SHA1"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SHA1",
+        "all": []
+      }
+    ],
     "guards": []
   }
 ];

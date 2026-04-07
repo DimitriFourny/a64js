@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { GeneratedEncoding, GeneratedField, Guard, GuardCheck } from "../src/types.ts";
+import type { FeatureGuard, GeneratedEncoding, GeneratedField, Guard, GuardCheck } from "../src/types.ts";
 import { children, firstChild, parseXml } from "./xml.ts";
 
 type BoxBits = Array<0 | 1 | "x">;
@@ -301,21 +301,45 @@ function collectFeatures(iclass: any, decodeText: string, fileName: string): str
       features.add(variant.attrs.feature);
     }
   }
-  if (fileName === "hint.xml") {
-    return [...features];
-  }
-  const decodePreamble = decodeText.split(/\nlet\s+/)[0] ?? decodeText;
-  const guardRegex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
-  let guardMatch: RegExpExecArray | null;
-  while ((guardMatch = guardRegex.exec(decodePreamble)) !== null) {
-    const condition = guardMatch[1] ?? "";
-    const featureRegex = /IsFeatureImplemented\((FEAT_[A-Za-z0-9_]+)\)/g;
-    let featureMatch: RegExpExecArray | null;
-    while ((featureMatch = featureRegex.exec(condition)) !== null) {
-      features.add(featureMatch[1]);
-    }
-  }
   return [...features];
+}
+
+function parseDecodeFeatureGuards(source: string, fieldWidths: FieldWidthMap): FeatureGuard[] {
+  if (source.includes("case CRm::op2 of")) {
+    return [];
+  }
+  const featureGuards: FeatureGuard[] = [];
+  const decodePreamble = source.split(/\nlet\s+/)[0] ?? source;
+  const regex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(decodePreamble)) !== null) {
+    const condition = match[1].trim();
+    if (!condition.includes("IsFeatureImplemented(")) {
+      continue;
+    }
+
+    const terms = condition
+      .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
+      .map((term) => term.trim())
+      .filter((term) => term.length > 0);
+    const requiredFeatures = terms
+      .map((term) => /^!IsFeatureImplemented\((FEAT_[A-Za-z0-9_]+)\)$/.exec(term)?.[1] ?? null)
+      .filter((feature): feature is string => feature !== null);
+    const nonFeatureTerms = terms.filter((term) => !term.includes("IsFeatureImplemented("));
+    if (requiredFeatures.length === 0) {
+      continue;
+    }
+
+    let alternatives: GuardCheck[][] = [[]];
+    for (const term of nonFeatureTerms) {
+      const termAlternatives = parseGuardTermAlternatives(term, fieldWidths);
+      alternatives = alternatives.flatMap((existing) => termAlternatives.map((next) => [...existing, ...next]));
+    }
+
+    const feature = requiredFeatures.length === 1 ? requiredFeatures[0] : requiredFeatures.join(" || ");
+    featureGuards.push(...alternatives.map((all) => ({ feature, all })));
+  }
+  return featureGuards;
 }
 
 function collectEncodingMnemonic(encoding: any, instructionDocvars: any): string {
@@ -363,6 +387,7 @@ export async function parseEncodingFile(
     const decodePs = psSection ? children(psSection, "ps")[0] : undefined;
     const decodeText = decodePs ? children(decodePs, "pstext")[0]?.children.map((child) => (typeof child === "string" ? child : "")).join("") ?? "" : "";
     const features = collectFeatures(iclass, decodeText, fileName);
+    const featureGuards = parseDecodeFeatureGuards(decodeText, fieldWidths);
     const guards = parseDecodeGuards(decodeText, fieldWidths, options);
     for (const constraint of base.constraints) {
       if (!SME2_FLOAT_MAXMIN_CONSTRAINT_FILES.has(fileName) || constraint.field !== "size") {
@@ -408,6 +433,7 @@ export async function parseEncodingFile(
         bitCount,
         fields,
         features,
+        featureGuards,
         guards,
       });
     }

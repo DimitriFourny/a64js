@@ -50,6 +50,12 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SYSREG128"
     ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SYSREG128",
+        "all": []
+      }
+    ],
     "guards": [
       {
         "all": [
