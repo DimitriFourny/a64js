@@ -218,10 +218,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SME2"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "SME2/zip.s.yaml",
     "caseIndex": 20,
@@ -443,3 +440,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

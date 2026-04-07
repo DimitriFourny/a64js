@@ -1,0 +1,36 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "bfcvtn_z8_mz2",
+    "encodingId": "bfcvtn_z8_mz2_bf2b",
+    "mnemonic": "BFCVTN",
+    "className": "SVE2",
+    "fileName": "bfcvtn_z8_mz2.xml",
+    "mask": 4294966304,
+    "value": 1695168512,
+    "bitCount": 23,
+    "fields": [
+      {
+        "name": "opc",
+        "lsb": 10,
+        "width": 2
+      },
+      {
+        "name": "Zn",
+        "lsb": 6,
+        "width": 4
+      },
+      {
+        "name": "Zd",
+        "lsb": 0,
+        "width": 5
+      }
+    ],
+    "features": [
+      "(FEAT_SVE2 || FEAT_SME2) && FEAT_FP8"
+    ],
+    "featureGuards": [],
+    "guards": []
+  }
+];

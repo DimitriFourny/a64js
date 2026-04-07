@@ -917,6 +917,13 @@ test("decodes SME2p1 floating ZA array arithmetic forms", () => {
   assert.equal(disasm(2174047577, undefined, options), "fmops za1.h, p5/m, p2/m, z10.h, z21.h");
 });
 
+test("decodes SME2 ADD destructive multi-vector arithmetic forms", () => {
+  const options = { features: ["FEAT_SME2"] };
+  assert.equal(disasm(3244335872, undefined, options), "add { z0.h, z1.h }, { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3244663572, undefined, options), "add { z20.h, z21.h }, { z20.h, z21.h }, z5.h");
+  assert.equal(disasm(3240143616, undefined, options), "add { z0.b - z3.b }, { z0.b - z3.b }, z0.b");
+});
+
 test("decodes SME2 BFMAX/BFMIN multi-vector arithmetic forms", () => {
   const options = { features: ["FEAT_SME2", "FEAT_SVE_B16B16"] };
   assert.equal(disasm(3240141056, undefined, options), "bfmax za.h[w8, 0, vgx2], { z0.h, z1.h }, z0.h");

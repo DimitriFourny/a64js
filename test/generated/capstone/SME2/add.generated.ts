@@ -1,6 +1,50 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 0,
+    "word": 3244335872,
+    "asmText": "add { z0.h, z1.h }, { z0.h, z1.h }, z0.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 1,
+    "word": 3244663572,
+    "asmText": "add { z20.h, z21.h }, { z20.h, z21.h }, z5.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 2,
+    "word": 3244860182,
+    "asmText": "add { z22.h, z23.h }, { z22.h, z23.h }, z8.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 3,
+    "word": 3245318942,
+    "asmText": "add { z30.h, z31.h }, { z30.h, z31.h }, z15.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
     "caseIndex": 4,
     "word": 3248495632,
     "asmText": "add za.s[w8, 0, vgx2], { z0.s, z1.s }",
@@ -561,6 +605,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SME2",
       "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 51,
+    "word": 3248530176,
+    "asmText": "add { z0.s, z1.s }, { z0.s, z1.s }, z0.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 52,
+    "word": 3248857876,
+    "asmText": "add { z20.s, z21.s }, { z20.s, z21.s }, z5.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 53,
+    "word": 3249054486,
+    "asmText": "add { z22.s, z23.s }, { z22.s, z23.s }, z8.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 54,
+    "word": 3249513246,
+    "asmText": "add { z30.s, z31.s }, { z30.s, z31.s }, z15.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
     ]
   },
   {
@@ -1429,6 +1517,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 127,
+    "word": 3252724480,
+    "asmText": "add { z0.d, z1.d }, { z0.d, z1.d }, z0.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 128,
+    "word": 3253052180,
+    "asmText": "add { z20.d, z21.d }, { z20.d, z21.d }, z5.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 129,
+    "word": 3253248790,
+    "asmText": "add { z22.d, z23.d }, { z22.d, z23.d }, z8.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 130,
+    "word": 3253707550,
+    "asmText": "add { z30.d, z31.d }, { z30.d, z31.d }, z15.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
     "caseIndex": 131,
     "word": 3252688912,
     "asmText": "add za.d[w8, 0, vgx2], { z0.d, z1.d }, { z0.d, z1.d }",
@@ -1713,6 +1845,94 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SME2",
       "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 155,
+    "word": 3240141568,
+    "asmText": "add { z0.b, z1.b }, { z0.b, z1.b }, z0.b",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 156,
+    "word": 3240469268,
+    "asmText": "add { z20.b, z21.b }, { z20.b, z21.b }, z5.b",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 157,
+    "word": 3240665878,
+    "asmText": "add { z22.b, z23.b }, { z22.b, z23.b }, z8.b",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 158,
+    "word": 3241124638,
+    "asmText": "add { z30.b, z31.b }, { z30.b, z31.b }, z15.b",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 159,
+    "word": 3244337920,
+    "asmText": "add { z0.h - z3.h }, { z0.h - z3.h }, z0.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 160,
+    "word": 3244665620,
+    "asmText": "add { z20.h - z23.h }, { z20.h - z23.h }, z5.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 161,
+    "word": 3244862228,
+    "asmText": "add { z20.h - z23.h }, { z20.h - z23.h }, z8.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 162,
+    "word": 3245320988,
+    "asmText": "add { z28.h - z31.h }, { z28.h - z31.h }, z15.h",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
     ]
   },
   {
@@ -2289,6 +2509,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SME2",
       "FEAT_SME_I16I64"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 211,
+    "word": 3248532224,
+    "asmText": "add { z0.s - z3.s }, { z0.s - z3.s }, z0.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 212,
+    "word": 3248859924,
+    "asmText": "add { z20.s - z23.s }, { z20.s - z23.s }, z5.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 213,
+    "word": 3249056532,
+    "asmText": "add { z20.s - z23.s }, { z20.s - z23.s }, z8.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 214,
+    "word": 3249515292,
+    "asmText": "add { z28.s - z31.s }, { z28.s - z31.s }, z15.s",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
     ]
   },
   {
@@ -3445,6 +3709,50 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 311,
+    "word": 3252726528,
+    "asmText": "add { z0.d - z3.d }, { z0.d - z3.d }, z0.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 312,
+    "word": 3253054228,
+    "asmText": "add { z20.d - z23.d }, { z20.d - z23.d }, z5.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 313,
+    "word": 3253250836,
+    "asmText": "add { z20.d - z23.d }, { z20.d - z23.d }, z8.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
+    "caseIndex": 314,
+    "word": 3253709596,
+    "asmText": "add { z28.d - z31.d }, { z28.d - z31.d }, z15.d",
+    "encodingFile": "add_mz_zzv.xml",
+    "mnemonic": "ADD",
+    "features": [
+      "FEAT_SME2"
+    ]
+  },
+  {
+    "sourceFile": "SME2/add.s.yaml",
     "caseIndex": 315,
     "word": 3252754448,
     "asmText": "add za.d[w8, 0, vgx4], { z0.d - z3.d }, { z0.d - z3.d }",
@@ -3730,317 +4038,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 0,
-    "word": 3244335872,
-    "asmText": "add { z0.h, z1.h }, { z0.h, z1.h }, z0.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 1,
-    "word": 3244663572,
-    "asmText": "add { z20.h, z21.h }, { z20.h, z21.h }, z5.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 2,
-    "word": 3244860182,
-    "asmText": "add { z22.h, z23.h }, { z22.h, z23.h }, z8.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 3,
-    "word": 3245318942,
-    "asmText": "add { z30.h, z31.h }, { z30.h, z31.h }, z15.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 51,
-    "word": 3248530176,
-    "asmText": "add { z0.s, z1.s }, { z0.s, z1.s }, z0.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 52,
-    "word": 3248857876,
-    "asmText": "add { z20.s, z21.s }, { z20.s, z21.s }, z5.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 53,
-    "word": 3249054486,
-    "asmText": "add { z22.s, z23.s }, { z22.s, z23.s }, z8.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 54,
-    "word": 3249513246,
-    "asmText": "add { z30.s, z31.s }, { z30.s, z31.s }, z15.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 127,
-    "word": 3252724480,
-    "asmText": "add { z0.d, z1.d }, { z0.d, z1.d }, z0.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 128,
-    "word": 3253052180,
-    "asmText": "add { z20.d, z21.d }, { z20.d, z21.d }, z5.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 129,
-    "word": 3253248790,
-    "asmText": "add { z22.d, z23.d }, { z22.d, z23.d }, z8.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 130,
-    "word": 3253707550,
-    "asmText": "add { z30.d, z31.d }, { z30.d, z31.d }, z15.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 155,
-    "word": 3240141568,
-    "asmText": "add { z0.b, z1.b }, { z0.b, z1.b }, z0.b",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 156,
-    "word": 3240469268,
-    "asmText": "add { z20.b, z21.b }, { z20.b, z21.b }, z5.b",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 157,
-    "word": 3240665878,
-    "asmText": "add { z22.b, z23.b }, { z22.b, z23.b }, z8.b",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 158,
-    "word": 3241124638,
-    "asmText": "add { z30.b, z31.b }, { z30.b, z31.b }, z15.b",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 159,
-    "word": 3244337920,
-    "asmText": "add { z0.h - z3.h }, { z0.h - z3.h }, z0.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 160,
-    "word": 3244665620,
-    "asmText": "add { z20.h - z23.h }, { z20.h - z23.h }, z5.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 161,
-    "word": 3244862228,
-    "asmText": "add { z20.h - z23.h }, { z20.h - z23.h }, z8.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 162,
-    "word": 3245320988,
-    "asmText": "add { z28.h - z31.h }, { z28.h - z31.h }, z15.h",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 211,
-    "word": 3248532224,
-    "asmText": "add { z0.s - z3.s }, { z0.s - z3.s }, z0.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 212,
-    "word": 3248859924,
-    "asmText": "add { z20.s - z23.s }, { z20.s - z23.s }, z5.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 213,
-    "word": 3249056532,
-    "asmText": "add { z20.s - z23.s }, { z20.s - z23.s }, z8.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 214,
-    "word": 3249515292,
-    "asmText": "add { z28.s - z31.s }, { z28.s - z31.s }, z15.s",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 311,
-    "word": 3252726528,
-    "asmText": "add { z0.d - z3.d }, { z0.d - z3.d }, z0.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 312,
-    "word": 3253054228,
-    "asmText": "add { z20.d - z23.d }, { z20.d - z23.d }, z5.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 313,
-    "word": 3253250836,
-    "asmText": "add { z20.d - z23.d }, { z20.d - z23.d }, z8.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
-  },
-  {
-    "sourceFile": "SME2/add.s.yaml",
-    "caseIndex": 314,
-    "word": 3253709596,
-    "asmText": "add { z28.d - z31.d }, { z28.d - z31.d }, z15.d",
-    "encodingFile": "add_mz_zzv.xml",
-    "mnemonic": "ADD",
-    "features": [
-      "FEAT_SME2"
-    ]
   },
   {
     "sourceFile": "SME2/add.s.yaml",
@@ -4087,3 +4084,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

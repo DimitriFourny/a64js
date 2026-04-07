@@ -261,6 +261,9 @@ function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: 
     if (condition.includes("IsFeatureImplemented(")) {
       continue;
     }
+    if (condition.includes("MaxImplementedSVL()")) {
+      continue;
+    }
     const terms = condition
       .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
       .map((term) => term.trim())

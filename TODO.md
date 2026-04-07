@@ -72,21 +72,6 @@ Target architecture:
 
 Coverage note: the generated capstone shards currently show roughly seven thousand unsupported cases, concentrated in `SVE2`, `SVE`, `SVE2p1`, `SME2`, `SME`, and FP8 extension folders. The Ready queue below is intentionally grouped into family-sized implementation batches; it is meant to cover the whole remaining corpus without turning every XML file into a separate work item.
 
-- `FP8_SVE2` absolute min/max batch from `FP8_SVE2/faminmax.s.yaml` (`36` unsupported cases in the latest TODO snapshot).
-  XML anchors: `famin_z_p_zz.xml`, `famax_z_p_zz.xml`.
-  Scope: implement shared predicated `FAMIN`/`FAMAX` SVE/SME vector formatting, including the existing `MOVPRFX` pairing behavior without adding Capstone-specific overlays.
-  Done when: unsupported cases for `FP8_SVE2/faminmax.s.yaml` are zero; the XML files are promoted in `tools/supported-files.ts`; `bun tools/generate.ts` and `bun test` pass.
-
-- `SVE` sign-extending contiguous load batch seeded by `SVE/ld1sb.s.yaml` (`34` unsupported cases in the latest TODO snapshot).
-  Source YAML anchors: `SVE/ld1sb.s.yaml`, plus same-shape spillover in `SVE/ld1sh.s.yaml` and `SVE/ld1sw.s.yaml` when the formatter path is shared.
-  XML anchors: `ld1sb_z_p_bi.xml`, `ld1sb_z_p_br.xml`, `ld1sh_z_p_bi.xml`, `ld1sh_z_p_br.xml`, `ld1sw_z_p_bi.xml`, `ld1sw_z_p_br.xml`; check adjacent gather forms `*_z_p_ai.xml` and `*_z_p_bz.xml` before promotion if they share the same operand schema.
-  Done when: selected sign-extending load shards no longer fall back to `.inst`; promoted XML files cover both immediate and scalar-register addressing forms; `bun tools/generate.ts` and `bun test` pass.
-
-- `FP8_SVE2` narrow convert batch from `FP8_SVE2/fcvtn.s.yaml` (`32` unsupported cases in the latest TODO snapshot).
-  XML anchors: `fcvtn_z8_mz2.xml`, `fcvtnb_z8_mz2.xml`, `fcvtnt_z8_mz2.xml`, `bfcvtn_z8_mz2.xml`.
-  Scope: implement the FP8/BF16 narrowing convert multi-vector operand shape for `{ zN.<T>, zN+1.<T> }` groups and destination byte vectors.
-  Done when: unsupported cases for `FP8_SVE2/fcvtn.s.yaml` are zero; any same-shape FP8 convert spillover is either promoted or explicitly left unsupported in the result note; `bun tools/generate.ts` and `bun test` pass.
-
 - FP8 SVE/SME arithmetic, dot, LUT, and system batch.
   Source YAML anchors: `FP8/faminmax.s.yaml`, `FP8/dot.s.yaml`, `FP8/mla.s.yaml`, `FP8/luti2.s.yaml`, `FP8/luti4.s.yaml`, `FP8/miscellaneous-fp8.s.yaml`, `FP8/system-regs.s.yaml`, `FP8_SVE2/fcvt.s.yaml`, `FP8_SVE2/fdot.s.yaml`, `FP8_SVE2/fmlal.s.yaml`, `FP8_SVE2/fmlall.s.yaml`, `FP8_SVE2/luti2.s.yaml`, `FP8_SVE2/luti4.s.yaml`, `FP8_SME2/cvt.s.yaml`, `FP8_SME2/dot.s.yaml`, `FP8_SME2/faminmax.s.yaml`, `FP8_SME2/fscale.s.yaml`, `FP8_SME2/lut.s.yaml`, `FP8_SME2/mla.s.yaml`, `FP8_SME2/mopa.s.yaml`, `FP8_SME2/movt.s.yaml`.
   XML anchors: `fdot_*`, `fmlal_*`, `fmlall_*`, `fscale_*`, `luti2_*`, `luti4_*`, and FP8 system-register encodings.
@@ -151,28 +136,6 @@ Coverage note: the generated capstone shards currently show roughly seven thousa
   Source YAML anchors: `SVE2p1/bfadd.s.yaml`, `SVE2p1/bfsub.s.yaml`, `SVE2p1/bfmul.s.yaml`, `SVE2p1/bfmla.s.yaml`, `SVE2p1/bfmls.s.yaml`, `SVE2p1/bfmax.s.yaml`, `SVE2p1/bfmaxnm.s.yaml`, `SVE2p1/bfmin.s.yaml`, `SVE2p1/bfminnm.s.yaml`, `SVE2p1/bfclamp.s.yaml`, `SVE2p1/fclamp.s.yaml`, `SVE2p1/fdot.s.yaml`, `SVE2p1/sqcvtn.s.yaml`, `SVE2p1/sqcvtun.s.yaml`, `SVE2p1/uqcvtn.s.yaml`, `SVE2p1/sqrshrn.s.yaml`, `SVE2p1/sqrshrun.s.yaml`, `SVE2p1/uqrshrn.s.yaml`.
   XML anchors: `bf*`, `fclamp_z_zz.xml`, `fdot_*`, `*cvtn_*`, `*rshrn_*`.
   Done when: SVE2p1 BF/FP arithmetic and narrowing conversion shards are promoted or blocked with specific XML notes; `bun tools/generate.ts` and `bun test` pass.
-
-- `SME2` multi-vector ADD/SUB register-group cleanup seeded by `SME2/add.s.yaml` (`32` unsupported cases in the latest TODO snapshot).
-  Source YAML anchors: `SME2/add.s.yaml`, `SME2/sub.s.yaml`.
-  XML anchors: `add_mz_zzv.xml`, `sub_mz_zzv.xml`; inspect `add_mz_zzw.xml` and `sub_mz_zzw.xml` for same-pass promotion if the register-group formatter covers both vector and multi-vector source forms.
-  Done when: remaining unsupported `ADD`/`SUB` multi-vector register-group cases in those shards are promoted without regressing already-supported `*_za_*` forms; `bun tools/generate.ts` and `bun test` pass.
-
-- `SME2` integer clamp batch seeded by `SME2/sclamp.s.yaml` (`32` unsupported cases in the latest TODO snapshot).
-  Source YAML anchors: `SME2/sclamp.s.yaml`, `SME2/uclamp.s.yaml`.
-  XML anchors: `sclamp_mz_zz.xml`, `uclamp_mz_zz.xml`.
-  Scope: implement the signed/unsigned multi-vector clamp operand pattern for two- and four-register destination groups across byte/half/single/double element sizes.
-  Done when: `SCLAMP` and `UCLAMP` shards are either fully promoted together or the result note explains any asymmetric blocker; `bun tools/generate.ts` and `bun test` pass.
-
-- `SME2` integer min/max multi-vector batch.
-  Source YAML anchors: `SME2/smax.s.yaml`, `SME2/smin.s.yaml`, `SME2/umax.s.yaml`, `SME2/umin.s.yaml`.
-  XML anchors: `smax_mz_zzv.xml`, `smax_mz_zzw.xml`, `smin_mz_zzv.xml`, `smin_mz_zzw.xml`, `umax_mz_zzv.xml`, `umax_mz_zzw.xml`, `umin_mz_zzv.xml`, `umin_mz_zzw.xml`.
-  Scope: reuse the multi-vector register-group operand formatting from the ADD/SUB cleanup where possible, then promote the signed/unsigned min/max family as one coherent batch.
-  Done when: listed min/max shards no longer fall back to `.inst`; `tools/supported-files.ts` contains only XMLs verified end-to-end; `bun tools/generate.ts` and `bun test` pass.
-
-- `SME2` multi-vector select, permutation, and unpack batch.
-  Source YAML anchors: `SME2/sel.s.yaml`, `SME2/zip.s.yaml`, `SME2/uzp.s.yaml`, `SME2/sunpk.s.yaml`, `SME2/uunpk.s.yaml`.
-  XML anchors: `sel_mz_p_zz.xml`, `zip_mz_z.xml`, `uzp_mz_z.xml`, `sunpk_mz_z.xml`, `uunpk_mz_z.xml`.
-  Done when: SME2 multi-vector group formatting covers select, zip/unzip, and unpack forms across two- and four-register groups; `bun tools/generate.ts` and `bun test` pass.
 
 - `SME2` multi-vector load/store and scalar memory batch.
   Source YAML anchors: `SME2/ld1b.s.yaml`, `SME2/ld1h.s.yaml`, `SME2/ld1w.s.yaml`, `SME2/ld1d.s.yaml`, `SME2/st1b.s.yaml`, `SME2/st1h.s.yaml`, `SME2/st1w.s.yaml`, `SME2/st1d.s.yaml`, `SME2/ldnt1b.s.yaml`, `SME2/ldnt1h.s.yaml`, `SME2/ldnt1w.s.yaml`, `SME2/ldnt1d.s.yaml`, `SME2/stnt1b.s.yaml`, `SME2/stnt1h.s.yaml`, `SME2/stnt1w.s.yaml`, `SME2/stnt1d.s.yaml`, `SME2/ldr.s.yaml`, `SME2/str.s.yaml`.
@@ -284,6 +247,13 @@ Backlog target:
 
 Keep one concise line per completed work item.
 
+- `SME2` multi-vector select, permutation, and unpack batch: promoted `sel_mz_p_zz.xml`, `zip_mz_z.xml`, `uzp_mz_z.xml`, `sunpk_mz_z.xml`, and `uunpk_mz_z.xml` with shared two-/four-register group formatting, predicate-as-counter `SEL`, four-vector `ZIP`/`UZP`, and widening unpack source operands; ignored SVL-dependent XML decode guards instead of treating `.d` forms as unconditionally undefined; the listed `SME2/sel.s.yaml`, `SME2/zip.s.yaml`, `SME2/uzp.s.yaml`, `SME2/sunpk.s.yaml`, and `SME2/uunpk.s.yaml` shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
+- `SME2` integer min/max multi-vector batch: revalidated `smax_mz_zzv.xml`, `smax_mz_zzw.xml`, `smin_mz_zzv.xml`, `smin_mz_zzw.xml`, `umax_mz_zzv.xml`, `umax_mz_zzw.xml`, `umin_mz_zzv.xml`, and `umin_mz_zzw.xml` through the shared SME multi-vector arithmetic formatter; the listed `SME2/smax.s.yaml`, `SME2/smin.s.yaml`, `SME2/umax.s.yaml`, and `SME2/umin.s.yaml` shards are fully supported; regenerated fixtures/encodings and `bun test` passed.
+- `SME2` integer clamp batch: promoted `sclamp_mz_zz.xml` and `uclamp_mz_zz.xml` with shared two-/four-register destination group formatting and scalar min/max source operands; `SME2/sclamp.s.yaml` and `SME2/uclamp.s.yaml` now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
+- `SME2` multi-vector ADD/SUB register-group cleanup: promoted `add_mz_zzv.xml` with the destructive multi-vector destination/source register-group formatter; `SME2/add.s.yaml` and `SME2/sub.s.yaml` now have zero unsupported cases, while `sub_mz_zzv.xml`, `add_mz_zzw.xml`, and `sub_mz_zzw.xml` are not present in the current Arm XML tree; regenerated fixtures/encodings and `bun test` passed.
+- `FP8_SVE2` narrow convert batch: promoted `fcvtn_z8_mz2.xml`, `fcvtnb_z8_mz2.xml`, `fcvtnt_z8_mz2.xml`, and `bfcvtn_z8_mz2.xml` with shared FP8/BF16 two-register source-group formatting; `FP8_SVE2/fcvtn.s.yaml` now has zero unsupported cases, while FP8_SME2 `fcvt_z8_mz2.xml`/`bfcvt_z8_mz2.xml` same-shape spillover remains in the separate FP8 SVE/SME batch; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` sign-extending contiguous load batch: promoted `ld1sb_z_p_bi.xml`, `ld1sb_z_p_br.xml`, `ld1sh_z_p_bi.xml`, `ld1sh_z_p_br.xml`, `ld1sw_z_p_bi.xml`, and `ld1sw_z_p_br.xml` through the shared contiguous SVE memory formatter; adjacent `*_z_p_ai.xml`/`*_z_p_bz.xml` gather/vector-index forms were left unsupported because they use a different memory operand schema; regenerated fixtures/encodings and `bun test` passed.
+- `FP8_SVE2` absolute min/max batch: promoted `famin_z_p_zz.xml` and `famax_z_p_zz.xml` through the existing predicated SVE/SME vector binary formatter, preserving the already-supported `MOVPRFX` cases; `FP8_SVE2/faminmax.s.yaml` now has zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 convert-and-move batch: promoted `SME2p1/fcvt.s.yaml` and `SME2p1/fcvtl.s.yaml` alongside the already-supported `movaz`/`zero` ZA move/zero forms with shared SME vector-group and ZA tile operand formatting; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 floating arithmetic batch: promoted `SME2p1/fmopa.s.yaml` and `SME2p1/fmops.s.yaml` alongside the existing `fadd`/`fsub`/`fmla`/`fmls` ZA-array arithmetic coverage with shared SME outer-product ZA tile/predicate operand formatting; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 LUTI batch: promoted `SME2p1/luti2.s.yaml` and `SME2p1/luti4.s.yaml` through shared LUTI multi-vector group/index formatting for `mz2` and `mz4` forms, with adjacent SME2 consecutive-form spillover covered; regenerated fixtures/encodings and `bun test` passed.
@@ -331,30 +301,30 @@ Keep one concise line per completed work item.
 
 Current capstone coverage snapshot:
 
-- `27532` supported capstone cases
-- `7025` unsupported capstone cases
-- `1207` XML instruction files currently listed in `tools/supported-files.ts`
-- `697` distinct unsupported XML instruction files
-- `548` capstone source YAML files containing unsupported cases
-- `466` distinct unsupported mnemonics
+- `27892` supported capstone cases
+- `6665` unsupported capstone cases
+- `1229` XML instruction files currently listed in `tools/supported-files.ts`
+- `675` distinct unsupported XML instruction files
+- `533` capstone source YAML files containing unsupported cases
+- `458` distinct unsupported mnemonics
 
 Highest-value remaining source files right now:
 
-- `FP8_SVE2/faminmax.s.yaml`: `36`
-- `SVE/ld1sb.s.yaml`: `34`
-- `FP8_SVE2/fcvtn.s.yaml`: `32`
-- `SME2/add.s.yaml`: `32`
-- `SME2/sclamp.s.yaml`: `32`
+- `SVE/ld1h.s.yaml`: `32`
+- `SVE2/sqshl.s.yaml`: `32`
+- `SVE2/uqshl.s.yaml`: `32`
+- `SVE2p1/addqv.s.yaml`: `32`
+- `SVE2p1/andqv.s.yaml`: `32`
 
 Largest unsupported feature sets:
 
-- `FEAT_SME`: `3761`
-- `FEAT_SVE2`: `2069`
+- `FEAT_SME`: `3693`
+- `FEAT_SVE2`: `2001`
 - `FEAT_SVE2 || FEAT_SME`: `1861`
-- `FEAT_SVE`: `1838`
-- `FEAT_SME2`: `1752`
-- `FEAT_SVE || FEAT_SME`: `1624`
+- `FEAT_SVE`: `1770`
+- `FEAT_SVE || FEAT_SME`: `1556`
 - `FEAT_SVE2p1`: `1470`
+- `FEAT_SME2`: `1468`
 - `FEAT_SME2p1`: `696`
 - `FEAT_SVE2p1 || FEAT_SME2p1`: `694`
 - `FEAT_SME2 || FEAT_SVE2p1`: `685`
