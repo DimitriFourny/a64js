@@ -1,6 +1,28 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 0,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 1,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 2,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -39,6 +61,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x15, [x0]",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 6,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 7,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
     "features": [
       "FEAT_LRCPC"
     ]
@@ -89,6 +133,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 12,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 13,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 14,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -127,6 +193,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x15, [x0]",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 18,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 19,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
     "features": [
       "FEAT_LRCPC"
     ]
@@ -177,6 +265,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 24,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 25,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 26,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -215,6 +325,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x15, [x0]",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 30,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 31,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
     "features": [
       "FEAT_LRCPC"
     ]
@@ -265,6 +397,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 36,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 37,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 38,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -303,6 +457,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x15, [x0]",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 42,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 43,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
     "features": [
       "FEAT_LRCPC"
     ]
@@ -353,6 +529,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 48,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 49,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 50,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -391,6 +589,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "ldapr x15, [x0]",
     "encodingFile": "ldapr.xml",
     "mnemonic": "LDAPR",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 54,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 55,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
     "features": [
       "FEAT_LRCPC"
     ]
@@ -441,6 +661,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 60,
+    "word": 952090624,
+    "asmText": "ldaprb w0, [x0]",
+    "encodingFile": "ldaprb.xml",
+    "mnemonic": "LDAPRB",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
+    "caseIndex": 61,
+    "word": 2025832992,
+    "asmText": "ldaprh w0, [x17]",
+    "encodingFile": "ldaprh.xml",
+    "mnemonic": "LDAPRH",
+    "features": [
+      "FEAT_LRCPC"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-rcpc.s.yaml",
     "caseIndex": 62,
     "word": 3099574304,
     "asmText": "ldapr w0, [x1]",
@@ -485,247 +727,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 0,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 1,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 6,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 7,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 12,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 13,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 18,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 19,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 24,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 25,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 30,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 31,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 36,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 37,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 42,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 43,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 48,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 49,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 54,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 55,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 60,
-    "word": 952090624,
-    "asmText": "ldaprb w0, [x0]",
-    "encodingFile": "ldaprb.xml",
-    "mnemonic": "LDAPRB",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-rcpc.s.yaml",
-    "caseIndex": 61,
-    "word": 2025832992,
-    "asmText": "ldaprh w0, [x17]",
-    "encodingFile": "ldaprh.xml",
-    "mnemonic": "LDAPRH",
-    "features": [
-      "FEAT_LRCPC"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

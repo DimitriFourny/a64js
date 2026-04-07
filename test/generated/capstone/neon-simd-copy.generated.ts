@@ -372,10 +372,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "neon-simd-copy.s.yaml",
     "caseIndex": 34,
@@ -454,3 +451,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

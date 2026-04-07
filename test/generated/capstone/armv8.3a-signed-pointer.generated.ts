@@ -490,11 +490,66 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 48,
+    "word": 3670083616,
+    "asmText": "pacda x0, x1",
+    "encodingFile": "pacda.xml",
+    "mnemonic": "PACDA",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 49,
+    "word": 3670087712,
+    "asmText": "autda x0, x1",
+    "encodingFile": "autda.xml",
+    "mnemonic": "AUTDA",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
     "caseIndex": 51,
     "word": 3670086688,
     "asmText": "autib x0, x1",
     "encodingFile": "autib.xml",
     "mnemonic": "AUTIB",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 52,
+    "word": 3670084640,
+    "asmText": "pacdb x0, x1",
+    "encodingFile": "pacdb.xml",
+    "mnemonic": "PACDB",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 53,
+    "word": 3670088736,
+    "asmText": "autdb x0, x1",
+    "encodingFile": "autdb.xml",
+    "mnemonic": "AUTDB",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 54,
+    "word": 2596417568,
+    "asmText": "pacga x0, x1, x2",
+    "encodingFile": "pacga.xml",
+    "mnemonic": "PACGA",
     "features": [
       "FEAT_PAuth"
     ]
@@ -523,6 +578,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 57,
+    "word": 3670092768,
+    "asmText": "pacdza x0",
+    "encodingFile": "pacda.xml",
+    "mnemonic": "PACDZA",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 58,
+    "word": 3670096864,
+    "asmText": "autdza x0",
+    "encodingFile": "autda.xml",
+    "mnemonic": "AUTDZA",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
     "caseIndex": 59,
     "word": 3670091744,
     "asmText": "pacizb x0",
@@ -539,6 +616,28 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "autizb x0",
     "encodingFile": "autib.xml",
     "mnemonic": "AUTIZB",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 61,
+    "word": 3670093792,
+    "asmText": "pacdzb x0",
+    "encodingFile": "pacdb.xml",
+    "mnemonic": "PACDZB",
+    "features": [
+      "FEAT_PAuth"
+    ]
+  },
+  {
+    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
+    "caseIndex": 62,
+    "word": 3670097888,
+    "asmText": "autdzb x0",
+    "encodingFile": "autdb.xml",
+    "mnemonic": "AUTDZB",
     "features": [
       "FEAT_PAuth"
     ]
@@ -671,108 +770,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "asmText": "retab",
     "encodingFile": "reta.xml",
     "mnemonic": "RETAB",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 48,
-    "word": 3670083616,
-    "asmText": "pacda x0, x1",
-    "encodingFile": "pacda.xml",
-    "mnemonic": "PACDA",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 49,
-    "word": 3670087712,
-    "asmText": "autda x0, x1",
-    "encodingFile": "autda.xml",
-    "mnemonic": "AUTDA",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 52,
-    "word": 3670084640,
-    "asmText": "pacdb x0, x1",
-    "encodingFile": "pacdb.xml",
-    "mnemonic": "PACDB",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 53,
-    "word": 3670088736,
-    "asmText": "autdb x0, x1",
-    "encodingFile": "autdb.xml",
-    "mnemonic": "AUTDB",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 54,
-    "word": 2596417568,
-    "asmText": "pacga x0, x1, x2",
-    "encodingFile": "pacga.xml",
-    "mnemonic": "PACGA",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 57,
-    "word": 3670092768,
-    "asmText": "pacdza x0",
-    "encodingFile": "pacda.xml",
-    "mnemonic": "PACDZA",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 58,
-    "word": 3670096864,
-    "asmText": "autdza x0",
-    "encodingFile": "autda.xml",
-    "mnemonic": "AUTDZA",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 61,
-    "word": 3670093792,
-    "asmText": "pacdzb x0",
-    "encodingFile": "pacdb.xml",
-    "mnemonic": "PACDZB",
-    "features": [
-      "FEAT_PAuth"
-    ]
-  },
-  {
-    "sourceFile": "armv8.3a-signed-pointer.s.yaml",
-    "caseIndex": 62,
-    "word": 3670097888,
-    "asmText": "autdzb x0",
-    "encodingFile": "autdb.xml",
-    "mnemonic": "AUTDZB",
     "features": [
       "FEAT_PAuth"
     ]
@@ -954,3 +951,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

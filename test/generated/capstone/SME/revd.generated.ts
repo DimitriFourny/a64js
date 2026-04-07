@@ -1,22 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SME/revd.s.yaml",
-    "caseIndex": 4,
-    "word": 69254965,
-    "asmText": "movprfx z21, z25",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SME/revd.s.yaml",
     "caseIndex": 0,
     "word": 86933504,
     "asmText": "revd z0.q, p0/m, z0.q",
@@ -69,6 +53,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME/revd.s.yaml",
+    "caseIndex": 4,
+    "word": 69254965,
+    "asmText": "movprfx z21, z25",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SME/revd.s.yaml",
     "caseIndex": 5,
     "word": 86938965,
     "asmText": "revd z21.q, p5/m, z10.q",
@@ -81,3 +78,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

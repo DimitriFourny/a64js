@@ -55,6 +55,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.4a-trace.s.yaml",
+    "caseIndex": 6,
+    "word": 3573752415,
+    "asmText": "tsb csync",
+    "encodingFile": "tsb.xml",
+    "mnemonic": "TSB",
+    "features": [
+      "FEAT_TRF"
+    ]
+  },
+  {
+    "sourceFile": "armv8.4a-trace.s.yaml",
     "caseIndex": 7,
     "word": 3575124512,
     "asmText": "msr TRFCR_EL1, x0",
@@ -106,20 +117,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mrs.xml",
     "mnemonic": "MRS",
     "features": []
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.4a-trace.s.yaml",
-    "caseIndex": 6,
-    "word": 3573752415,
-    "asmText": "tsb csync",
-    "encodingFile": "tsb.xml",
-    "mnemonic": "TSB",
-    "features": [
-      "FEAT_TRF"
-    ]
   },
   {
     "sourceFile": "armv8.4a-trace.s.yaml",
@@ -133,3 +130,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

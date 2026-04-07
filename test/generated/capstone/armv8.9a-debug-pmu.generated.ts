@@ -1963,6 +1963,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-debug-pmu.s.yaml",
+    "caseIndex": 218,
+    "word": 3574297313,
+    "asmText": "trcit x1",
+    "encodingFile": "trcit_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_ITE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
     "caseIndex": 219,
     "word": 3577256579,
     "asmText": "mrs x3, PMSDSFR_EL1",
@@ -3940,6 +3951,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "msr_reg.xml",
     "mnemonic": "MSR",
     "features": []
+  },
+  {
+    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
+    "caseIndex": 439,
+    "word": 3574297313,
+    "asmText": "trcit x1",
+    "encodingFile": "trcit_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_ITE"
+    ]
   },
   {
     "sourceFile": "armv8.9a-debug-pmu.s.yaml",
@@ -5923,6 +5945,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-debug-pmu.s.yaml",
+    "caseIndex": 660,
+    "word": 3574297313,
+    "asmText": "trcit x1",
+    "encodingFile": "trcit_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_ITE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
     "caseIndex": 661,
     "word": 3577256579,
     "asmText": "mrs x3, PMSDSFR_EL1",
@@ -7900,6 +7933,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "msr_reg.xml",
     "mnemonic": "MSR",
     "features": []
+  },
+  {
+    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
+    "caseIndex": 881,
+    "word": 3574297313,
+    "asmText": "trcit x1",
+    "encodingFile": "trcit_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_ITE"
+    ]
   },
   {
     "sourceFile": "armv8.9a-debug-pmu.s.yaml",
@@ -9883,6 +9927,17 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "armv8.9a-debug-pmu.s.yaml",
+    "caseIndex": 1102,
+    "word": 3574297313,
+    "asmText": "trcit x1",
+    "encodingFile": "trcit_sys.xml",
+    "mnemonic": "SYS",
+    "features": [
+      "FEAT_ITE"
+    ]
+  },
+  {
+    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
     "caseIndex": 1103,
     "word": 3577256579,
     "asmText": "mrs x3, PMSDSFR_EL1",
@@ -9901,60 +9956,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
-    "caseIndex": 218,
-    "word": 3574297313,
-    "asmText": "trcit x1",
-    "encodingFile": "trcit_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_ITE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
-    "caseIndex": 439,
-    "word": 3574297313,
-    "asmText": "trcit x1",
-    "encodingFile": "trcit_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_ITE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
-    "caseIndex": 660,
-    "word": 3574297313,
-    "asmText": "trcit x1",
-    "encodingFile": "trcit_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_ITE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
-    "caseIndex": 881,
-    "word": 3574297313,
-    "asmText": "trcit x1",
-    "encodingFile": "trcit_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_ITE"
-    ]
-  },
-  {
-    "sourceFile": "armv8.9a-debug-pmu.s.yaml",
-    "caseIndex": 1102,
-    "word": 3574297313,
-    "asmText": "trcit x1",
-    "encodingFile": "trcit_sys.xml",
-    "mnemonic": "SYS",
-    "features": [
-      "FEAT_ITE"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

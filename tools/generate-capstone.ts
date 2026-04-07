@@ -36,7 +36,7 @@ async function walkGeneratedModules(root: string): Promise<string[]> {
       continue;
     }
 
-    if (!entry.name.endsWith(".generated.ts") || entry.name === INDEX_FILE) {
+    if (!entry.name.endsWith(".generated.ts")) {
       continue;
     }
 
@@ -109,7 +109,10 @@ ${unsupportedEntries}
 export async function generateCapstoneFixtures(): Promise<void> {
   const outputRoot = resolve(OUTPUT_ROOT);
   const supportedFiles = new Set(SUPPORTED_FILES);
-  const moduleFiles = (await walkGeneratedModules(outputRoot)).sort((left, right) => left.localeCompare(right));
+  const rootIndexFile = join(outputRoot, INDEX_FILE);
+  const moduleFiles = (await walkGeneratedModules(outputRoot))
+    .filter((moduleFile) => moduleFile !== rootIndexFile)
+    .sort((left, right) => left.localeCompare(right));
 
   let supportedCount = 0;
   let unsupportedCount = 0;

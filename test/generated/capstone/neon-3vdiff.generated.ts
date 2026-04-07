@@ -1057,6 +1057,54 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 96,
+    "word": 237166624,
+    "asmText": "pmull v0.8h, v1.8b, v2.8b",
+    "encodingFile": "pmull_advsimd.xml",
+    "mnemonic": "PMULL",
+    "features": [
+      "FEAT_AdvSIMD",
+      "FEAT_PMULL"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 97,
+    "word": 249749536,
+    "asmText": "pmull v0.1q, v1.1d, v2.1d",
+    "encodingFile": "pmull_advsimd.xml",
+    "mnemonic": "PMULL",
+    "features": [
+      "FEAT_AdvSIMD",
+      "FEAT_PMULL"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 98,
+    "word": 1310908448,
+    "asmText": "pmull2 v0.8h, v1.16b, v2.16b",
+    "encodingFile": "pmull_advsimd.xml",
+    "mnemonic": "PMULL",
+    "features": [
+      "FEAT_AdvSIMD",
+      "FEAT_PMULL"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
+    "caseIndex": 99,
+    "word": 1323491360,
+    "asmText": "pmull2 v0.1q, v1.2d, v2.2d",
+    "encodingFile": "pmull_advsimd.xml",
+    "mnemonic": "PMULL",
+    "features": [
+      "FEAT_AdvSIMD",
+      "FEAT_PMULL"
+    ]
+  },
+  {
+    "sourceFile": "neon-3vdiff.s.yaml",
     "caseIndex": 100,
     "word": 237113376,
     "asmText": "saddw v0.8h, v1.8h, v2.8b",
@@ -1450,57 +1498,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_AdvSIMD"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 96,
-    "word": 237166624,
-    "asmText": "pmull v0.8h, v1.8b, v2.8b",
-    "encodingFile": "pmull_advsimd.xml",
-    "mnemonic": "PMULL",
-    "features": [
-      "FEAT_AdvSIMD",
-      "FEAT_PMULL"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 97,
-    "word": 249749536,
-    "asmText": "pmull v0.1q, v1.1d, v2.1d",
-    "encodingFile": "pmull_advsimd.xml",
-    "mnemonic": "PMULL",
-    "features": [
-      "FEAT_AdvSIMD",
-      "FEAT_PMULL"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 98,
-    "word": 1310908448,
-    "asmText": "pmull2 v0.8h, v1.16b, v2.16b",
-    "encodingFile": "pmull_advsimd.xml",
-    "mnemonic": "PMULL",
-    "features": [
-      "FEAT_AdvSIMD",
-      "FEAT_PMULL"
-    ]
-  },
-  {
-    "sourceFile": "neon-3vdiff.s.yaml",
-    "caseIndex": 99,
-    "word": 1323491360,
-    "asmText": "pmull2 v0.1q, v1.2d, v2.2d",
-    "encodingFile": "pmull_advsimd.xml",
-    "mnemonic": "PMULL",
-    "features": [
-      "FEAT_AdvSIMD",
-      "FEAT_PMULL"
-    ]
   },
   {
     "sourceFile": "neon-3vdiff.s.yaml",
@@ -1569,3 +1566,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

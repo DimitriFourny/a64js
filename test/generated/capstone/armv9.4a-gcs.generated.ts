@@ -266,10 +266,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_GCS"
     ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+  },
   {
     "sourceFile": "armv9.4a-gcs.s.yaml",
     "caseIndex": 28,
@@ -348,3 +345,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

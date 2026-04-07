@@ -75,6 +75,8 @@ const ADVSIMD_UPPER_HALF_SUFFIX_FILES = new Set([
   "rshrn_advsimd.xml",
   "addhn_advsimd.xml",
   "raddhn_advsimd.xml",
+  "rsubhn_advsimd.xml",
+  "pmull_advsimd.xml",
   "sqshrn_advsimd.xml",
   "uqshrn_advsimd.xml",
   "sqrshrn_advsimd.xml",
@@ -571,6 +573,18 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
   }
   if (fileName === "gcspushm_sys.xml") {
     return "gcspushm";
+  }
+  if (fileName === "gcspushx_sys.xml") {
+    return "gcspushx";
+  }
+  if (fileName === "gcspopx_sys.xml") {
+    return "gcspopx";
+  }
+  if (fileName === "gcspopcx_sys.xml") {
+    return "gcspopcx";
+  }
+  if (fileName === "trcit_sys.xml") {
+    return "trcit";
   }
   if (fileName === "cfp_sys.xml") {
     return "cfp";

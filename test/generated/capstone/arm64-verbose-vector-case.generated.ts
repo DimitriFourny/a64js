@@ -1,6 +1,4 @@
-export const SUPPORTED_CAPSTONE_CASES = [];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
+export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "arm64-verbose-vector-case.s.yaml",
     "caseIndex": 0,
@@ -98,3 +96,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];
