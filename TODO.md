@@ -70,12 +70,33 @@ Target architecture:
 
 ## Ready
 
-Coverage note: the generated capstone shards currently show roughly seven thousand unsupported cases, concentrated in `SVE2`, `SVE`, `SVE2p1`, `SME2`, `SME`, and FP8 extension folders. The Ready queue below is intentionally grouped into family-sized implementation batches; it is meant to cover the whole remaining corpus without turning every XML file into a separate work item.
+Coverage note: the generated capstone shards currently show `2418` unsupported cases, concentrated in `SVE2`, `SVE`, `SME2`, `SME`, and `SVE2p1`. The Ready queue below is intentionally grouped into family-sized implementation batches; it is meant to cover the remaining corpus without turning every XML file into a separate work item.
 
-- `SME` ZA accumulator, outer-product, and array arithmetic cleanup.
-  Source YAML anchors: `SME/addha-u32.s.yaml`, `SME/addha-u64.s.yaml`, `SME/addva-u32.s.yaml`, `SME/addva-u64.s.yaml`, `SME/fmopa.s.yaml`, `SME/fmops.s.yaml`, `SME/fmopa-fp64.s.yaml`, `SME/fmops-fp64.s.yaml`, `SME/bfmopa.s.yaml`, `SME/bfmops.s.yaml`, `SME/smopa-32.s.yaml`, `SME/smopa-64.s.yaml`, `SME/smops-32.s.yaml`, `SME/smops-64.s.yaml`.
-  XML anchors: `addha_za_pp_z.xml`, `addva_za_pp_z.xml`, `fmopa_*`, `fmops_*`, `bfmopa_*`, `bfmops_*`, `smopa_*`, `smops_*`.
-  Done when: remaining SME ZA accumulator/outer-product shards are promoted using shared ZA tile/predicate formatting; `bun tools/generate.ts` and `bun test` pass.
+
+- `SVE` integer arithmetic, logical predicate, unary, and unpack cleanup.
+  Source YAML anchors: `SVE/asrr.s.yaml`, `SVE/cls.s.yaml`, `SVE/clz.s.yaml`, `SVE/cnot.s.yaml`, `SVE/cnt.s.yaml`, `SVE/lslr.s.yaml`, `SVE/lsrr.s.yaml`, `SVE/mad.s.yaml`, `SVE/mla.s.yaml`, `SVE/mls.s.yaml`, `SVE/msb.s.yaml`, `SVE/nand.s.yaml`, `SVE/nor.s.yaml`, `SVE/not.s.yaml`, `SVE/orn.s.yaml`, `SVE/orns.s.yaml`, `SVE/rbit.s.yaml`, `SVE/sabd.s.yaml`, `SVE/sdiv.s.yaml`, `SVE/sdivr.s.yaml`, `SVE/smulh.s.yaml`, `SVE/sunpkhi.s.yaml`, `SVE/sunpklo.s.yaml`, `SVE/uabd.s.yaml`, `SVE/udiv.s.yaml`, `SVE/udivr.s.yaml`, `SVE/umulh.s.yaml`, `SVE/uunpkhi.s.yaml`, `SVE/uunpklo.s.yaml`.
+  XML anchors: `asrr_z_p_zz.xml`, `cls_z_p_z.xml`, `clz_z_p_z.xml`, `cnot_z_p_z.xml`, `cnt_z_p_z.xml`, `lslr_z_p_zz.xml`, `lsrr_z_p_zz.xml`, `mad_z_p_zzz.xml`, `mla_z_p_zzz.xml`, `mls_z_p_zzz.xml`, `msb_z_p_zzz.xml`, `nand_p_p_pp.xml`, `nor_p_p_pp.xml`, `not_z_p_z.xml`, `orn_p_p_pp.xml`, `orns_p_p_pp.xml`, `rbit_z_p_z.xml`, `sabd_z_p_zz.xml`, `sdiv_z_p_zz.xml`, `sdivr_z_p_zz.xml`, `smulh_z_p_zz.xml`, `sunpkhi_z_z.xml`, `uabd_z_p_zz.xml`, `udiv_z_p_zz.xml`, `udivr_z_p_zz.xml`, `umulh_z_p_zz.xml`, `uunpkhi_z_z.xml`.
+  Done when: the listed SVE integer/logical/unpack shards have zero unsupported cases; `bun tools/generate.ts` and `bun test` pass.
+
+- `SVE` remaining SVE-only memory, gather/scatter, predicate memory, and prefetch cleanup.
+  Source YAML anchors: `SVE/ld1b-sve-only.s.yaml`, `SVE/ld1d-sve-only.s.yaml`, `SVE/ld1h-sve-only.s.yaml`, `SVE/ld1sb-sve-only.s.yaml`, `SVE/ld1sh-sve-only.s.yaml`, `SVE/ld1sw-sve-only.s.yaml`, `SVE/ld1w-sve-only.s.yaml`, `SVE/ldr.s.yaml`, `SVE/prfb-sve-only.s.yaml`, `SVE/prfd-sve-only.s.yaml`, `SVE/prfh-sve-only.s.yaml`, `SVE/prfw-sve-only.s.yaml`, `SVE/st1b-sve-only.s.yaml`, `SVE/st1d-sve-only.s.yaml`, `SVE/st1h-sve-only.s.yaml`, `SVE/st1w-sve-only.s.yaml`, `SVE/str.s.yaml`.
+  XML anchors: `ld1{b,h,w,d}_z_p_ai.xml`, `ld1{b,h,w,d}_z_p_bz.xml`, `ld1{sb,sh,sw}_z_p_ai.xml`, `ld1{sb,sh,sw}_z_p_bz.xml`, `ldr_p_bi.xml`, `ldr_z_bi.xml`, `prf{b,h,w,d}_i_p_ai.xml`, `prf{b,h,w,d}_i_p_bz.xml`, `st1{b,h,w,d}_z_p_ai.xml`, `st1{b,h,w,d}_z_p_bz.xml`, `str_p_bi.xml`, `str_z_bi.xml`.
+  Done when: the listed SVE memory/prefetch shards have zero unsupported cases; `bun tools/generate.ts` and `bun test` pass.
+
+- `SME` and `SME2` ZA/vector-length, matrix outer-product, LUTI, MOVT, and ZERO residual cleanup.
+  Source YAML anchors: `SME/addspl.s.yaml`, `SME/addsvl.s.yaml`, `SME/str.s.yaml`, `SME/sumopa-32.s.yaml`, `SME/sumopa-64.s.yaml`, `SME/sumops-32.s.yaml`, `SME/sumops-64.s.yaml`, `SME/uclamp.s.yaml`, `SME/usmopa-32.s.yaml`, `SME/usmopa-64.s.yaml`, `SME/usmops-32.s.yaml`, `SME/usmops-64.s.yaml`, `SME2/luti2.s.yaml`, `SME2/luti4.s.yaml`, `SME2/movt.s.yaml`, `SME2/zero.s.yaml`.
+  XML anchors: `addspl_r_ri.xml`, `addsvl_r_ri.xml`, `str_za_ri.xml`, `sumopa_za_pp_zz.xml`, `sumops_za_pp_zz.xml`, `uclamp_z_zz.xml`, `usmopa_za_pp_zz.xml`, `usmops_za_pp_zz.xml`, `luti2_z_ztz.xml`, `luti4_z_ztz.xml`, `movt_r_zt.xml`, `movt_zt_r.xml`, `zero_zt_i.xml`.
+  Done when: the listed SME/SME2 ZA and LUTI residual shards have zero unsupported cases; `bun tools/generate.ts` and `bun test` pass.
+
+- `SME2` floating rounding, narrowing conversion, and narrowing shift cleanup.
+  Source YAML anchors: `SME2/frinta.s.yaml`, `SME2/frintm.s.yaml`, `SME2/frintn.s.yaml`, `SME2/frintp.s.yaml`, `SME2/sqcvt.s.yaml`, `SME2/sqcvtu.s.yaml`, `SME2/sqcvtun.s.yaml`, `SME2/sqrshr.s.yaml`, `SME2/sqrshru.s.yaml`, `SME2/sqrshrun.s.yaml`, `SME2/uqcvt.s.yaml`, `SME2/uqrshr.s.yaml`.
+  XML anchors: `frint{a,m,n,p}_mz_z.xml`, `sqcvt_z_mz{2,4}.xml`, `sqcvtu_z_mz{2,4}.xml`, `sqcvtun_z_mz4.xml`, `sqrshr_z_mz{2,4}.xml`, `sqrshru_z_mz{2,4}.xml`, `sqrshrun_z_mz4.xml`, `uqcvt_z_mz{2,4}.xml`, `uqrshr_z_mz{2,4}.xml`.
+  Done when: the listed SME2 rounding/conversion/narrowing shards have zero unsupported cases; `bun tools/generate.ts` and `bun test` pass.
+
+- `SVE2p1` BFMLS and Q-vector scalar-memory residual cleanup.
+  Source YAML anchors: `SVE2p1/bfmlslb.s.yaml`, `SVE2p1/bfmlslt.s.yaml`, `SVE2p1/ld1q.s.yaml`, `SVE2p1/st1q.s.yaml`.
+  XML anchors: `bfmlslb_z_{zzz,zzzi}.xml`, `bfmlslt_z_{zzz,zzzi}.xml`, `ld1q_z_p_ar.xml`, `st1q_z_p_ar.xml`.
+  Done when: the listed SVE2p1 residual shards have zero unsupported cases; `bun tools/generate.ts` and `bun test` pass.
 
 ## Backlog Statistics
 
@@ -88,75 +109,35 @@ Priority rule:
 Backlog target:
 
 - the grouped counts below are the remaining roadmap to drive the unsupported capstone count to zero
-- each line names a source-YAML file that still accounts for unsupported capstone cases
+- each line maps to one Ready work item above
 - these are prioritization statistics, not claimable work items
 - when a family spills into related alias XMLs, promote the whole family together before touching `tools/supported-files.ts`
 
-- `neon-simd-copy.s.yaml`: `41`
-- `neon-simd-misc.s.yaml`: `39`
-- `neon-2velem.s.yaml`: `36`
-- `neon-aba-abd.s.yaml`: `28`
-- `neon-saturating-add-sub.s.yaml`: `28`
-- `neon-add-sub-instructions.s.yaml`: `24`
-- `neon-halving-add-sub.s.yaml`: `24`
-- `neon-mul-div-instructions.s.yaml`: `23`
-- `neon-3vdiff.s.yaml`: `22`
-- `neon-mla-mls-instructions.s.yaml`: `22`
-- `neon-scalar-dup.s.yaml`: `22`
-- `neon-shift.s.yaml`: `21`
-- `neon-facge-facgt.s.yaml`: `20`
-- `armv8.6a-simd-matmul.s.yaml`: `18`
-- `neon-scalar-by-elem-saturating-mul.s.yaml`: `17`
-- `neon-scalar-saturating-add-sub.s.yaml`: `16`
-- `neon-scalar-recip.s.yaml`: `15`
-- `neon-bitwise-instructions.s.yaml`: `14`
-- `neon-crypto.s.yaml`: `14`
-- `neon-rounding-shift.s.yaml`: `14`
-- `neon-saturating-rounding-shift.s.yaml`: `14`
-- `neon-saturating-shift.s.yaml`: `14`
-- `neon-scalar-mul.s.yaml`: `13`
-- `armv9.5a-cpa.s.yaml`: `12`
-- `neon-add-pairwise.s.yaml`: `12`
-- `neon-rounding-halving-add.s.yaml`: `12`
-- `neon-shift-left-long.s.yaml`: `12`
-- `armv9.4a-gcs.s.yaml`: `11`
-- `armv8.5a-mte.s.yaml`: `10`
-- `neon-frsqrt-frecp.s.yaml`: `10`
-- `arm64-verbose-vector-case.s.yaml`: `8`
-- `armv9.4a-chk.s.yaml`: `8`
-- `neon-scalar-saturating-rounding-shift.s.yaml`: `8`
-- `neon-scalar-saturating-shift.s.yaml`: `8`
-- `neon-compare-instructions.s.yaml`: `7`
-- `armv8.5a-predres.s.yaml`: `6`
-- `armv8.9a-specres2.s.yaml`: `6`
-- `armv8r-unsupported-inst.s.yaml`: `6`
-- `neon-scalar-fp-compare.s.yaml`: `6`
-- `neon-sxtl.s.yaml`: `6`
-- `neon-uxtl.s.yaml`: `6`
-- `ras-extension.s.yaml`: `6`
-- `armv8.9a-debug-pmu.s.yaml`: `5`
-- `neon-scalar-reduce-pairwise.s.yaml`: `5`
-- `armv8.7a-wfxt.s.yaml`: `4`
-- `apple_proprietary.s.yaml`: `3`
-- `case-insen-reg-names.s.yaml`: `3`
-- `neon-scalar-abs.s.yaml`: `3`
-- `udf.s.yaml`: `3`
-- `armv8.3a-js.s.yaml`: `2`
-- `armv8.4a-trace.s.yaml`: `2`
-- `neon-extract.s.yaml`: `2`
-- `neon-scalar-add-sub.s.yaml`: `2`
-- `neon-scalar-rounding-shift.s.yaml`: `2`
-- `neon-scalar-shift.s.yaml`: `2`
-- `dot-req.s.yaml`: `1`
-- `neon-scalar-compare.s.yaml`: `1`
-- `neon-scalar-shift-imm.s.yaml`: `1`
+- `SVE2` saturating, rounding, and narrowing shift cleanup: `432`
+- `SVE` predicate, counter, vector-length, and FFR control cleanup: `285`
+- `SVE` integer arithmetic, logical predicate, unary, and unpack cleanup: `276`
+- `SVE2` widening multiply, long multiply, and multiply-accumulate cleanup: `260`
+- `SVE2` complex, carry, pairwise min/max, bit, and reciprocal cleanup: `223`
+- `SVE2` absolute-difference, widening add/sub, and pairwise add cleanup: `222`
+- `SVE` floating-point arithmetic, conversion, estimate, and trig-helper cleanup: `196`
+- `SVE` remaining SVE-only memory, gather/scatter, predicate memory, and prefetch cleanup: `187`
+- `SME` and `SME2` ZA/vector-length, matrix outer-product, LUTI, MOVT, and ZERO residual cleanup: `169`
+- `SME2` floating rounding, narrowing conversion, and narrowing shift cleanup: `120`
+- `SVE2p1` BFMLS and Q-vector scalar-memory residual cleanup: `48`
 
 ## Blocked
 
 ## Done
 
+- `SVE` floating-point arithmetic, conversion, estimate, and trig-helper cleanup: promoted `bfcvt{,nt}_z_p_z.xml`, `fabd_z_p_zz.xml`, `fabs_z_p_z.xml`, `fadd_z_zz.xml`, `fadda_v_p_z.xml`, `fcvt_z_p_z.xml`, `fdivr_z_p_zz.xml`, `fexpa_z_z.xml`, `fmov_dup_z_i.xml`, `fmsb_z_p_zzz.xml`, `fmulx_z_p_zz.xml`, `fneg_z_p_z.xml`, `fnmad_z_p_zzz.xml`, `fnmsb_z_p_zzz.xml`, `frecpe_z_z.xml`, `frecps_z_zz.xml`, `frecpx_z_p_z.xml`, `frsqrte_z_z.xml`, `frsqrts_z_zz.xml`, `fscale_z_p_zz.xml`, `fsqrt_z_p_z.xml`, `fsub_z_zz.xml`, `ftmad_z_zzi.xml`, `ftsmul_z_zz.xml`, and `ftssel_z_zz.xml` through shared SVE FP unary/binary/FMA formatter paths plus focused BF16 reduction/indexed helpers; all listed SVE FP shards now have zero unsupported cases; regenerated fixtures/encodings with `bun tools/generate.ts` and `bun test` passed.
+- `SVE2` complex, carry, pairwise min/max, bit, and reciprocal cleanup: promoted `adcl{b,t}_z_zzz.xml`, `cadd_z_zz.xml`, `eor{bt,tb}_z_zz.xml`, `flogb_z_p_z.xml`, `fmax{,nm}p_z_p_zz.xml`, `fmin{,nm}p_z_p_zz.xml`, `rax1_z_zz.xml`, `sbcl{b,t}_z_zzz.xml`, `sli_z_zzi.xml`, `smaxp_z_p_zz.xml`, `sminp_z_p_zz.xml`, `sqcadd_z_zz.xml`, `sri_z_zzi.xml`, `umaxp_z_p_zz.xml`, `uminp_z_p_zz.xml`, `urecpe_z_p_z.xml`, and `ursqrte_z_p_z.xml` through shared SVE2 carry/complex-rotate/predicated pairwise/unary/shift-insert formatter paths; all listed SVE2 shards now have zero unsupported cases; regenerated fixtures/encodings with `bun tools/generate.ts` and `bun test` passed, dropping unsupported capstone cases from `2975` to `1281`.
+- `SVE2` absolute-difference, widening add/sub, and pairwise add cleanup: promoted `saba`/`uaba`, `sabal*`/`uabal*`, `sabdl*`/`uabdl*`, `sadalp`/`uadalp`, `saddlbt`, `saddw*`/`uaddw*`, `shsubr`, `sshll*`/`ushll*`, and `ssubl*`/`ssubw*`/`usubw*` through shared SVE operand-formatter paths; regenerated encodings/fixtures and `bun tools/generate.ts` plus `bun test` passed, dropping unsupported capstone cases from `2418` to `1504`.
+
 Keep one concise line per completed work item.
 
+- `SVE2` widening multiply, long multiply, and multiply-accumulate cleanup: promoted `SVE2/{smlalb,smlalt,smlslb,smlslt,smulh,smullb,smullt,sqdmlalb,sqdmlalbt,sqdmlalt,sqdmlslb,sqdmlslbt,sqdmlslt,sqdmullb,sqdmullt,umlalb,umlalt,umlslb,umlslt,umulh,umullb,umullt}.s.yaml` with a shared SVE2 widening-long multiply formatter path covering vector and indexed encodings, including mixed `i3*`/`i2*` index fields; all listed capstone shards now have zero unsupported cases, `bun tools/generate.ts` regenerated encodings/fixtures, and `bun test` passed.
+
+- `SVE2` saturating, rounding, and narrowing shift cleanup: promoted the listed `rshr*`/`shr*`, saturating unary and predicated binary, `sqxtun*`, and `*sra` accumulate families by wiring them through the shared SVE narrowing-shift, narrowing-extract, predicated unary/binary, and accumulate-immediate formatter paths; all listed SVE2 shards now have zero unsupported cases; regenerated fixtures/encodings with `bun tools/generate.ts` and `bun test` passed.
 - `SME2` ZA dot-product and outer-product batch: promoted `smopa_za{,32}_pp_zz.xml`, `smops_za{,32}_pp_zz.xml`, `umopa_za{,32}_pp_zz.xml`, `umops_za{,32}_pp_zz.xml`, `bmopa_za_pp_zz.xml`, `bmops_za_pp_zz.xml`, `bfmopa_za{,32}_pp_zz.xml`, `bfmops_za{,32}_pp_zz.xml`, `fvdot_za_zzi.xml`, `bfvdot_za_zzi.xml`, `suvdot_za_zzi.xml`, and `usvdot_za_zzi.xml` with shared SME outer-product and ZA multi-vector dot formatting; all listed `SME2/{smopa,smops,umopa,umops,bmopa,bmops,bfmopa,bfmops,fvdot,bfvdot,svdot,uvdot,suvdot,usvdot,sudot,usdot,sdot,udot}.s.yaml` shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
 - `SVE2` multiply, dot-product, complex, and polynomial arithmetic batch: promoted `mul_z_{zz,zzi}.xml`, `mla_z_zzzi.xml`, `mls_z_zzzi.xml`, `sqdmulh_z_{zz,zzi}.xml`, `sqrdmulh_z_{zz,zzi}.xml`, `sqrdmlah_z_{zzz,zzzi}.xml`, `sqrdmlsh_z_{zzz,zzzi}.xml`, `cdot_z_{zzz,zzzi}.xml`, `pmul_z_zz.xml`, `pmull{b,t}_z_zz.xml`, and `fmlal{b,t}_z_{zzz,zzzi}.xml`/`fmlsl{b,t}_z_{zzz,zzzi}.xml` with shared SVE multiply-accumulate/indexed/dot/polynomial formatting (`CDOT` const immediate and `PMULL*.Q` lanes included); all listed SVE2 multiply/dot/polynomial shards now have zero unsupported cases; `mla_z_zzz.xml` and `mls_z_zzz.xml` are not present in the current Arm XML tree; regenerated fixtures/encodings and `bun test` passed.
 - FP8 SVE/SME arithmetic, dot, LUT, and system batch: promoted FP8 AdvSIMD (`fdot_advsimd_{2way,4way}{vec,elem}.xml`, `famax_advsimd.xml`, `famin_advsimd.xml`, `fmlalb_advsimd_{vec,elem}.xml`, `fmlallbb_advsimd_{vec,elem}.xml`, `luti{2,4}_advsimd.xml`), FP8_SVE2 (`fdot_z_{zz8z8,zz8z8i}.xml`, `fdot_z32_{zz8z8,zz8z8i}.xml`, `fmlalb/fmlalt_z_{z8z8z8,z8z8z8i}.xml`, `fmlall{bb,bt,tb,tt}_z32_{z8z8z8,z8z8z8i}.xml`, `luti{2,4}_z_zz.xml`), and FP8_SME2 (`{f,bf}1cvt{,l}_mz2_z8.xml`, `{bf}cvt_z8_mz2.xml`, `fcvt{,n}_z8_mz4.xml`, `famax_mz_zzw.xml`, `famin_mz_zzw.xml`, `fscale_mz_{zzv,zzw}.xml`, `luti4_mz4_ztmz2.xml`, `fmopa_za{16,32}_pp_z8z8.xml`, `movt_zt_z.xml`) via shared AdvSIMD/SVE dot/LUT and SME FP8 convert/outer-product/memory formatting; all listed `FP8`, `FP8_SVE2`, and `FP8_SME2` shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
@@ -182,6 +163,7 @@ Keep one concise line per completed work item.
 - `FP8_SVE2` absolute min/max batch: promoted `famin_z_p_zz.xml` and `famax_z_p_zz.xml` through the existing predicated SVE/SME vector binary formatter, preserving the already-supported `MOVPRFX` cases; `FP8_SVE2/faminmax.s.yaml` now has zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 convert-and-move batch: promoted `SME2p1/fcvt.s.yaml` and `SME2p1/fcvtl.s.yaml` alongside the already-supported `movaz`/`zero` ZA move/zero forms with shared SME vector-group and ZA tile operand formatting; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 floating arithmetic batch: promoted `SME2p1/fmopa.s.yaml` and `SME2p1/fmops.s.yaml` alongside the existing `fadd`/`fsub`/`fmla`/`fmls` ZA-array arithmetic coverage with shared SME outer-product ZA tile/predicate operand formatting; regenerated fixtures/encodings and `bun test` passed.
+- `SME` ZA accumulator, outer-product, and array arithmetic cleanup: promoted `addha_za_pp_z.xml`, `addva_za_pp_z.xml`, `fmopa_za32_pp_zz.xml`, and `fmops_za32_pp_zz.xml` through shared SME ZA tile/predicate formatting; listed `SME/{addha-u32,addha-u64,addva-u32,addva-u64,fmopa,fmops,fmopa-fp64,fmops-fp64,bfmopa,bfmops,smopa-32,smopa-64,smops-32,smops-64}.s.yaml` shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
 - SME2p1 LUTI batch: promoted `SME2p1/luti2.s.yaml` and `SME2p1/luti4.s.yaml` through shared LUTI multi-vector group/index formatting for `mz2` and `mz4` forms, with adjacent SME2 consecutive-form spillover covered; regenerated fixtures/encodings and `bun test` passed.
 - `SVE` matrix and dot-product batch: promoted `BFDOT`/`BFMMLA`, SVE `SDOT`/`UDOT`, int8 `SMMLA`/`UMMLA`/`USMMLA` plus `SUDOT`/`USDOT`, and adjacent SVE2p1 `z32` dot variants with shared SVE dot/matrix operand formatting; regenerated fixtures/encodings and `bun test` passed.
 - `SVE` structured load/store batch: promoted scalar plus immediate/register `LD2`/`LD3`/`LD4`, `ST1`/`ST2`/`ST3`/`ST4`, and `STNT1` contiguous memory XMLs with shared tuple-register and MUL VL addressing formatting; regenerated fixtures/encodings and `bun test` passed.
@@ -224,6 +206,7 @@ Keep one concise line per completed work item.
 - `neon-simd-copy`, `neon-scalar-dup`, and `neon-extract`: lane-move, dup, and extract families promoted; generate/test passed.
 - `SVE` index, insert, last-active, extend, and conversion cleanup: promoted `index_z_{ii,ir,ri,rr}.xml`, `insr_z_{r,v}.xml`, `clast{a,b}_{r_p_z,v_p_z,z_p_zz}.xml`, `last{a,b}_{r_p_z,v_p_z}.xml`, `adr_z_az.xml`, `ext_z_zi.xml`, `splice_z_p_zz.xml`, `sxtb_z_p_z.xml`, `uxtb_z_p_z.xml`, `fcvtz{s,u}_z_p_z.xml`, and `{s,u}cvtf_z_p_z.xml` with shared SVE operand-formatter coverage; fixed `tools/generate-capstone.ts` to only exclude the root `index.generated.ts` so `SVE/index.generated.ts` is repartitioned correctly; listed SVE shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
 - `SME` memory, MOVA/PSEL, clamp, and control cleanup: promoted `ldr_za_ri.xml`, `psel_p_ppi.xml`, `sclamp_z_zz.xml`, `revd_z_p_z.xml`, `rdsvl_r_i.xml`, and `tbx_z_zz.xml` with shared SME/SVE operand formatting for ZA array-vector load, predicate-index select, predicated REVD `.q`, signed VL read immediate, and unpredicated SVE binary forms; all listed `SME/{ld1*,st1*,ldr,mova,psel,sclamp,revd,rdsvl,smstart,smstop,feature}.s.yaml` shards now have zero unsupported cases; regenerated fixtures/encodings and `bun test` passed.
+- `SVE` predicate, counter, vector-length, and FFR control cleanup: promoted `addpl_r_ri.xml`, `addvl_r_ri.xml`, `rdvl_r_i.xml`, `pfalse_p.xml`, `punpkhi_p_p.xml`, `ctermeq_rr.xml`, `setffr_f.xml`, `wrffr_f_p.xml`, `sqinc{d,h,w}_z_zs.xml`, `sqdec{d,h,w}_z_zs.xml`, `uqinc{d,h,w}_z_zs.xml`, `uqdec{d,h,w}_z_zs.xml`, `addpt_z_{zz,p_zz}.xml`, `subpt_z_{zz,p_zz}.xml`, `madpt_z_zzz.xml`, and `mlapt_z_zzz.xml`, plus predicate `ldr_p_bi.xml`/`str_p_bi.xml` spillover from `predicate-as-counter-aliases`; all listed SVE shards now have zero unsupported cases; regenerated fixtures/encodings with `bun tools/generate.ts` and `bun test` passed, dropping unsupported capstone cases from `1281` to `984`.
 
 ## Snapshot
 

@@ -1,61 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SVE/fneg.s.yaml",
-    "caseIndex": 3,
-    "word": 80755908,
-    "asmText": "movprfx z4.d, p7/z, z6.d",
-    "encodingFile": "movprfx_z_p_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fneg.s.yaml",
-    "caseIndex": 5,
-    "word": 69254340,
-    "asmText": "movprfx z4, z6",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fneg.s.yaml",
-    "caseIndex": 10,
-    "word": 80755908,
-    "asmText": "movprfx z4.d, p7/z, z6.d",
-    "encodingFile": "movprfx_z_p_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fneg.s.yaml",
-    "caseIndex": 12,
-    "word": 69254340,
-    "asmText": "movprfx z4, z6",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/fneg.s.yaml",
     "caseIndex": 0,
     "word": 73252863,
     "asmText": "fneg z31.h, p7/m, z31.h",
@@ -95,11 +40,37 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/fneg.s.yaml",
+    "caseIndex": 3,
+    "word": 80755908,
+    "asmText": "movprfx z4.d, p7/z, z6.d",
+    "encodingFile": "movprfx_z_p_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fneg.s.yaml",
     "caseIndex": 4,
     "word": 81641444,
     "asmText": "fneg z4.d, p7/m, z31.d",
     "encodingFile": "fneg_z_p_z.xml",
     "mnemonic": "FNEG",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fneg.s.yaml",
+    "caseIndex": 5,
+    "word": 69254340,
+    "asmText": "movprfx z4, z6",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -160,11 +131,37 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/fneg.s.yaml",
+    "caseIndex": 10,
+    "word": 80755908,
+    "asmText": "movprfx z4.d, p7/z, z6.d",
+    "encodingFile": "movprfx_z_p_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fneg.s.yaml",
     "caseIndex": 11,
     "word": 81641444,
     "asmText": "fneg z4.d, p7/m, z31.d",
     "encodingFile": "fneg_z_p_z.xml",
     "mnemonic": "FNEG",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fneg.s.yaml",
+    "caseIndex": 12,
+    "word": 69254340,
+    "asmText": "movprfx z4, z6",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -185,3 +182,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

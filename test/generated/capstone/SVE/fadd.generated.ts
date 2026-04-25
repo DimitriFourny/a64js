@@ -144,6 +144,45 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 11,
+    "word": 1700724768,
+    "asmText": "fadd z0.h, z1.h, z31.h",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 12,
+    "word": 1704919072,
+    "asmText": "fadd z0.s, z1.s, z31.s",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 13,
+    "word": 1709113376,
+    "asmText": "fadd z0.d, z1.d, z31.d",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
     "caseIndex": 14,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -391,6 +430,45 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 33,
+    "word": 1700724768,
+    "asmText": "fadd z0.h, z1.h, z31.h",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 34,
+    "word": 1704919072,
+    "asmText": "fadd z0.s, z1.s, z31.s",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
+    "caseIndex": 35,
+    "word": 1709113376,
+    "asmText": "fadd z0.d, z1.d, z31.d",
+    "encodingFile": "fadd_z_zz.xml",
+    "mnemonic": "FADD",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/fadd.s.yaml",
     "caseIndex": 36,
     "word": 80755935,
     "asmText": "movprfx z31.d, p7/z, z6.d",
@@ -495,83 +573,4 @@ export const SUPPORTED_CAPSTONE_CASES = [
   }
 ];
 
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 11,
-    "word": 1700724768,
-    "asmText": "fadd z0.h, z1.h, z31.h",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 12,
-    "word": 1704919072,
-    "asmText": "fadd z0.s, z1.s, z31.s",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 13,
-    "word": 1709113376,
-    "asmText": "fadd z0.d, z1.d, z31.d",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 33,
-    "word": 1700724768,
-    "asmText": "fadd z0.h, z1.h, z31.h",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 34,
-    "word": 1704919072,
-    "asmText": "fadd z0.s, z1.s, z31.s",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/fadd.s.yaml",
-    "caseIndex": 35,
-    "word": 1709113376,
-    "asmText": "fadd z0.d, z1.d, z31.d",
-    "encodingFile": "fadd_z_zz.xml",
-    "mnemonic": "FADD",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
+export const UNSUPPORTED_CAPSTONE_CASES = [];

@@ -131,6 +131,84 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 10,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 11,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 12,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 13,
+    "word": 78628832,
+    "asmText": "uqincw z0.s, all, mul #16",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 14,
+    "word": 77644800,
+    "asmText": "uqincw z0.s, pow2",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 15,
+    "word": 78627840,
+    "asmText": "uqincw z0.s, pow2, mul #16",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
     "caseIndex": 16,
     "word": 78705664,
     "asmText": "uqincw x0, pow2",
@@ -521,6 +599,19 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 46,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
     "caseIndex": 47,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
@@ -534,11 +625,37 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 48,
+    "word": 78627840,
+    "asmText": "uqincw z0.s, pow2, mul #16",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
     "caseIndex": 49,
     "word": 69254368,
     "asmText": "movprfx z0, z7",
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 50,
+    "word": 77644800,
+    "asmText": "uqincw z0.s, pow2",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -668,6 +785,84 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "word": 78640128,
     "asmText": "uqincw w0, pow2, mul #16",
     "encodingFile": "uqincw_r_rs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 61,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 62,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 63,
+    "word": 77645792,
+    "asmText": "uqincw z0.s",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 64,
+    "word": 78628832,
+    "asmText": "uqincw z0.s, all, mul #16",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 65,
+    "word": 77644800,
+    "asmText": "uqincw z0.s, pow2",
+    "encodingFile": "uqincw_z_zs.xml",
+    "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 66,
+    "word": 78627840,
+    "asmText": "uqincw z0.s, pow2, mul #16",
+    "encodingFile": "uqincw_z_zs.xml",
     "mnemonic": "UQINCW",
     "features": [
       "FEAT_SVE || FEAT_SME",
@@ -1067,235 +1262,24 @@ export const SUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 98,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 100,
-    "word": 69254368,
-    "asmText": "movprfx z0, z7",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 10,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 11,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 12,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 13,
-    "word": 78628832,
-    "asmText": "uqincw z0.s, all, mul #16",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 14,
-    "word": 77644800,
-    "asmText": "uqincw z0.s, pow2",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 15,
-    "word": 78627840,
-    "asmText": "uqincw z0.s, pow2, mul #16",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 46,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 48,
-    "word": 78627840,
-    "asmText": "uqincw z0.s, pow2, mul #16",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 50,
-    "word": 77644800,
-    "asmText": "uqincw z0.s, pow2",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 61,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 62,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 63,
-    "word": 77645792,
-    "asmText": "uqincw z0.s",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 64,
-    "word": 78628832,
-    "asmText": "uqincw z0.s, all, mul #16",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 65,
-    "word": 77644800,
-    "asmText": "uqincw z0.s, pow2",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
-    "caseIndex": 66,
-    "word": 78627840,
-    "asmText": "uqincw z0.s, pow2, mul #16",
-    "encodingFile": "uqincw_z_zs.xml",
-    "mnemonic": "UQINCW",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE/uqincw.s.yaml",
     "caseIndex": 97,
     "word": 77645792,
     "asmText": "uqincw z0.s",
     "encodingFile": "uqincw_z_zs.xml",
     "mnemonic": "UQINCW",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 98,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
     "features": [
       "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
@@ -1317,6 +1301,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE/uqincw.s.yaml",
+    "caseIndex": 100,
+    "word": 69254368,
+    "asmText": "movprfx z0, z7",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE/uqincw.s.yaml",
     "caseIndex": 101,
     "word": 77644800,
     "asmText": "uqincw z0.s, pow2",
@@ -1329,3 +1326,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];

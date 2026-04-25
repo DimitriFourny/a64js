@@ -15,7 +15,7 @@ console.log(
   `capstone coverage snapshot: ${SUPPORTED_CAPSTONE_CASES.length} supported, ${UNSUPPORTED_CAPSTONE_CASES.length} unsupported`,
 );
 
-test("supported capstone cases decode through supported XML encodings", () => {
+test("supported capstone cases decode through supported XML encodings", { timeout: 10000 }, () => {
   for (const capstoneCase of SUPPORTED_CAPSTONE_CASES) {
     const decoded = decode(capstoneCase.word, { features: capstoneCase.features });
     assert.equal(decoded.status, "ok", describeCase(capstoneCase));

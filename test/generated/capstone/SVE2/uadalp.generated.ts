@@ -1,61 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SVE2/uadalp.s.yaml",
-    "caseIndex": 3,
-    "word": 80748767,
-    "asmText": "movprfx z31.d, p0/z, z6.d",
-    "encodingFile": "movprfx_z_p_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2/uadalp.s.yaml",
-    "caseIndex": 5,
-    "word": 69254367,
-    "asmText": "movprfx z31, z6",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2/uadalp.s.yaml",
-    "caseIndex": 10,
-    "word": 80748767,
-    "asmText": "movprfx z31.d, p0/z, z6.d",
-    "encodingFile": "movprfx_z_p_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SVE2/uadalp.s.yaml",
-    "caseIndex": 12,
-    "word": 69254367,
-    "asmText": "movprfx z31, z6",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SVE2/uadalp.s.yaml",
     "caseIndex": 0,
     "word": 1145413664,
     "asmText": "uadalp z0.h, p0/m, z1.b",
@@ -95,6 +40,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2/uadalp.s.yaml",
+    "caseIndex": 3,
+    "word": 80748767,
+    "asmText": "movprfx z31.d, p0/z, z6.d",
+    "encodingFile": "movprfx_z_p_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2/uadalp.s.yaml",
     "caseIndex": 4,
     "word": 1153803231,
     "asmText": "uadalp z31.d, p0/m, z30.s",
@@ -103,6 +61,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2/uadalp.s.yaml",
+    "caseIndex": 5,
+    "word": 69254367,
+    "asmText": "movprfx z31, z6",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
       "FEAT_SME"
     ]
   },
@@ -160,6 +131,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SVE2/uadalp.s.yaml",
+    "caseIndex": 10,
+    "word": 80748767,
+    "asmText": "movprfx z31.d, p0/z, z6.d",
+    "encodingFile": "movprfx_z_p_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2/uadalp.s.yaml",
     "caseIndex": 11,
     "word": 1153803231,
     "asmText": "uadalp z31.d, p0/m, z30.s",
@@ -168,6 +152,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     "features": [
       "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SVE2/uadalp.s.yaml",
+    "caseIndex": 12,
+    "word": 69254367,
+    "asmText": "movprfx z31, z6",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
       "FEAT_SME"
     ]
   },
@@ -185,3 +182,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];
