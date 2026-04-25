@@ -1,0 +1,128 @@
+import type { GeneratedEncoding } from "../../types.ts";
+
+export const ENCODINGS: GeneratedEncoding[] = [
+  {
+    "instructionId": "sumops_za_pp_zz",
+    "encodingId": "sumops_za_pp_zz_32",
+    "mnemonic": "SUMOPS",
+    "className": "32-bit",
+    "fileName": "sumops_za_pp_zz.xml",
+    "mask": 4292870172,
+    "value": 2694840336,
+    "bitCount": 14,
+    "fields": [
+      {
+        "name": "u0",
+        "lsb": 24,
+        "width": 1
+      },
+      {
+        "name": "u1",
+        "lsb": 21,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Pm",
+        "lsb": 13,
+        "width": 3
+      },
+      {
+        "name": "Pn",
+        "lsb": 10,
+        "width": 3
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "S",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "ZAda",
+        "lsb": 0,
+        "width": 2
+      }
+    ],
+    "features": [
+      "FEAT_SME"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME",
+        "all": []
+      }
+    ],
+    "guards": []
+  },
+  {
+    "instructionId": "sumops_za_pp_zz",
+    "encodingId": "sumops_za_pp_zz_64",
+    "mnemonic": "SUMOPS",
+    "className": "64-bit",
+    "fileName": "sumops_za_pp_zz.xml",
+    "mask": 4292870168,
+    "value": 2699034640,
+    "bitCount": 13,
+    "fields": [
+      {
+        "name": "u0",
+        "lsb": 24,
+        "width": 1
+      },
+      {
+        "name": "u1",
+        "lsb": 21,
+        "width": 1
+      },
+      {
+        "name": "Zm",
+        "lsb": 16,
+        "width": 5
+      },
+      {
+        "name": "Pm",
+        "lsb": 13,
+        "width": 3
+      },
+      {
+        "name": "Pn",
+        "lsb": 10,
+        "width": 3
+      },
+      {
+        "name": "Zn",
+        "lsb": 5,
+        "width": 5
+      },
+      {
+        "name": "S",
+        "lsb": 4,
+        "width": 1
+      },
+      {
+        "name": "ZAda",
+        "lsb": 0,
+        "width": 3
+      }
+    ],
+    "features": [
+      "FEAT_SME_I16I64"
+    ],
+    "featureGuards": [
+      {
+        "feature": "FEAT_SME_I16I64",
+        "all": []
+      }
+    ],
+    "guards": []
+  }
+];

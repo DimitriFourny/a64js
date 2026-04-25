@@ -1,61 +1,6 @@
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "SME/uclamp.s.yaml",
-    "caseIndex": 16,
-    "word": 69255031,
-    "asmText": "movprfx z23, z27",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SME/uclamp.s.yaml",
-    "caseIndex": 18,
-    "word": 69255031,
-    "asmText": "movprfx z23, z27",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SME/uclamp.s.yaml",
-    "caseIndex": 20,
-    "word": 69255031,
-    "asmText": "movprfx z23, z27",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  },
-  {
-    "sourceFile": "SME/uclamp.s.yaml",
-    "caseIndex": 22,
-    "word": 69255031,
-    "asmText": "movprfx z23, z27",
-    "encodingFile": "movprfx_z_z.xml",
-    "mnemonic": "MOVPRFX",
-    "features": [
-      "FEAT_SVE || FEAT_SME",
-      "FEAT_SVE",
-      "FEAT_SME"
-    ]
-  }
-];
-
-export const UNSUPPORTED_CAPSTONE_CASES = [
-  {
-    "sourceFile": "SME/uclamp.s.yaml",
     "caseIndex": 0,
     "word": 1140900864,
     "asmText": "uclamp z0.b, z0.b, z0.b",
@@ -264,6 +209,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME/uclamp.s.yaml",
+    "caseIndex": 16,
+    "word": 69255031,
+    "asmText": "movprfx z23, z27",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SME/uclamp.s.yaml",
     "caseIndex": 17,
     "word": 1141425591,
     "asmText": "uclamp z23.b, z13.b, z8.b",
@@ -273,6 +231,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME/uclamp.s.yaml",
+    "caseIndex": 18,
+    "word": 69255031,
+    "asmText": "movprfx z23, z27",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -290,6 +261,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
   },
   {
     "sourceFile": "SME/uclamp.s.yaml",
+    "caseIndex": 20,
+    "word": 69255031,
+    "asmText": "movprfx z23, z27",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
+    ]
+  },
+  {
+    "sourceFile": "SME/uclamp.s.yaml",
     "caseIndex": 21,
     "word": 1149814199,
     "asmText": "uclamp z23.s, z13.s, z8.s",
@@ -299,6 +283,19 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
       "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
+    ]
+  },
+  {
+    "sourceFile": "SME/uclamp.s.yaml",
+    "caseIndex": 22,
+    "word": 69255031,
+    "asmText": "movprfx z23, z27",
+    "encodingFile": "movprfx_z_z.xml",
+    "mnemonic": "MOVPRFX",
+    "features": [
+      "FEAT_SVE || FEAT_SME",
+      "FEAT_SVE",
+      "FEAT_SME"
     ]
   },
   {
@@ -315,3 +312,5 @@ export const UNSUPPORTED_CAPSTONE_CASES = [
     ]
   }
 ];
+
+export const UNSUPPORTED_CAPSTONE_CASES = [];
