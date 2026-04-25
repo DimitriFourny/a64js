@@ -45,8 +45,8 @@ exec "$SCRIPT_DIR/codex_loop.py" \
   --cwd "$SCRIPT_DIR" \
   --max-iterations "$MAX_ITERATIONS" \
   --delay "$DELAY" \
-  --codex-arg "-m" \
+  --codex-arg=-m \
   --codex-arg "$MODEL" \
-  --codex-arg "-c" \
+  --codex-arg=-c \
   --codex-arg "model_reasoning_effort=\"$REASONING_EFFORT\"" \
   "$PROMPT"
