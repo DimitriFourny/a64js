@@ -1,3 +1,19 @@
+import {
+  smeDotGroupCount,
+  smeDotAccumulatorLane,
+  smeMultiVectorArithmeticOperands,
+  smeMultiVectorClampOperands,
+  smeIntFloatConvertOperands,
+  smeLutiOperands,
+  smeFp8LutiMixedOperands,
+  smeIndexedSourceOperand,
+  smeIndexedSourceText,
+  smeLongArithmeticOperands,
+  smeFloatLongArithmeticOperands,
+  smeFp8LongArithmeticOperands,
+  smeArithmeticOperands,
+  smeDotOperands,
+} from "./sme-operands.ts";
 import type {
   DecodedInstruction,
   GeneratedEncoding,
@@ -8,8 +24,8 @@ import type {
   VectorRegisterOperand,
 } from "./types.ts";
 import { OperandDecodeError } from "./operand-errors.ts";
-import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
-import { buildRegisteredSchema } from "./operand-schemas.ts";
+import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand, ZaOperand } from "./operand-types.ts";
+import { buildRegisteredSchema, vectorGroup } from "./operand-schemas.ts";
 import { buildFamilyOperands } from "./operand-families.ts";
 
 const COND_NAMES = [
@@ -416,6 +432,9 @@ function decodeLogicalImmediate(fields: Record<string, number>, width: 32 | 64):
   }
 
   const size = 1 << len;
+  if (size > width) {
+    return null;
+  }
   const levels = size - 1;
   const s = imms & levels;
   const r = immr & levels;
@@ -446,11 +465,11 @@ function logicalImmediateOperands(inst: DecodedInstruction): Operand[] {
   }
 
   if (inst.encoding!.fileName === "mov_orr_log_imm.xml") {
-    return [gpReg(width, fields.Rd, "zr"), { kind: "imm", value: imm }];
+    return [gpReg(width, fields.Rd, "sp"), { kind: "imm", value: imm }];
   }
 
   return [
-    gpReg(width, fields.Rd, "zr"),
+    gpReg(width, fields.Rd, inst.encoding!.mnemonic === "ANDS" ? "zr" : "sp"),
     gpReg(width, fields.Rn, "zr"),
     { kind: "imm", value: imm },
   ];
@@ -487,10 +506,12 @@ function btiOperands(inst: DecodedInstruction): Operand[] {
   }
 }
 
-const INTENTIONAL_ZERO_OPERANDS: Operand[] = [];
+const INTENTIONAL_ZERO_OPERANDS = new WeakSet<Operand[]>();
 
 function noOperands(): Operand[] {
-  return INTENTIONAL_ZERO_OPERANDS;
+  const operands: Operand[] = [];
+  INTENTIONAL_ZERO_OPERANDS.add(operands);
+  return operands;
 }
 
 function setfOperands(inst: DecodedInstruction): Operand[] {
@@ -925,7 +946,7 @@ function rcpcUnscaledOperands(inst: DecodedInstruction): Operand[] {
 
   if (fileName === "stlur_fpsimd.xml" || fileName === "ldapur_fpsimd.xml") {
     return [
-      { kind: "text", text: fpSimdRegisterText(fields.size, fields.opc, fields.Rt) },
+      { kind: "simd", index: fields.Rt, scalar: (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 2) !== 0 ? "q" : advsimdLaneFromSize(fields.size) },
       { kind: "text", text: memory },
     ];
   }
@@ -1106,75 +1127,43 @@ function isDecimalUnscaledLoadStore(fileName: string): boolean {
   }
 }
 
-function scalarRegisterOffsetMemoryText(inst: DecodedInstruction): string {
+function scalarRegisterOffsetMemoryOperand(inst: DecodedInstruction): MemoryOperand {
   const fields = inst.fields!;
-  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
   const option = fields.option ?? 0;
-  const shift =
-    fields.S === 1
-      ? isFpSimdLoadStore(inst.encoding!.fileName)
-        ? (fields.opc ?? 0) === 3 ? 4 : (fields.size ?? 0)
-        : (fields.size ?? 0)
-      : 0;
-  const indexWidth = (option & 1) === 0 ? 32 : 64;
-  const index = formatRegister(gpReg(indexWidth === 32 ? 32 : 64, fields.Rm, "zr"));
-
-  if (option === 3 && shift === 0) {
-    return `[${base}, ${index}]`;
-  }
-
+  const shift = fields.S === 1
+    ? isFpSimdLoadStore(inst.encoding!.fileName) && (fields.opc ?? 0) === 3 ? 4 : (fields.size ?? 0)
+    : 0;
   const extendNames = ["uxtb", "uxth", "uxtw", "lsl", "sxtb", "sxth", "sxtw", "sxtx"] as const;
-  const extend = extendNames[option] ?? "lsl";
-  return shift === 0 ? `[${base}, ${index}, ${extend}]` : `[${base}, ${index}, ${extend} #${shift}]`;
+  return {
+    kind: "mem", base: gpReg(64, fields.Rn, "sp"),
+    offset: gpReg((option & 1) === 0 ? 32 : 64, fields.Rm, "zr"),
+    modifier: option === 3 && shift === 0 ? undefined : { kind: extendNames[option], amount: shift === 0 ? undefined : shift },
+  };
 }
 
-function scalarLoadStoreMemoryText(inst: DecodedInstruction): string {
+function scalarLoadStoreMemoryOperand(inst: DecodedInstruction): MemoryOperand {
   const fields = inst.fields!;
-  const encodingId = inst.encoding!.encodingId;
-  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
-
-  if (
-    isScalarRegisterOffsetLoadStore(inst.encoding!.fileName)
-  ) {
-    return scalarRegisterOffsetMemoryText(inst);
+  const encoding = inst.encoding!;
+  if (isScalarRegisterOffsetLoadStore(encoding.fileName)) {
+    return scalarRegisterOffsetMemoryOperand(inst);
   }
-
+  const base = gpReg(64, fields.Rn, "sp");
   if (fields.imm12 !== undefined) {
-    const offset =
-      BigInt(fields.imm12) *
-      (inst.encoding!.fileName === "ldr_imm_fpsimd.xml" || inst.encoding!.fileName === "str_imm_fpsimd.xml"
-        ? (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 0b10) !== 0
-          ? 16n
-          : 1n << BigInt(fields.size ?? 0)
-        : scalarLoadStoreImmediateScale(inst.encoding!.fileName, fields.size));
-    if (inst.encoding!.fileName === "prfm_imm.xml" || isFpSimdLoadStore(inst.encoding!.fileName)) {
-      return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
-    }
-    return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
+    const scale = isFpSimdLoadStore(encoding.fileName)
+      ? (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 0b10) !== 0 ? 16n : 1n << BigInt(fields.size ?? 0)
+      : scalarLoadStoreImmediateScale(encoding.fileName, fields.size);
+    return {
+      kind: "mem", base, offset: { kind: "imm", value: BigInt(fields.imm12) * scale },
+      immediateFormat: encoding.fileName === "prfm_imm.xml" || isFpSimdLoadStore(encoding.fileName) ? "decimal" : "hex",
+    };
   }
-
-  const offset = signExtend(fields.imm9 ?? 0, 9);
-  if (
-    inst.encoding!.fileName === "ldrsb_imm.xml" ||
-    inst.encoding!.fileName === "ldrsh_imm.xml" ||
-    isDecimalUnscaledLoadStore(inst.encoding!.fileName) ||
-    isFpSimdLoadStore(inst.encoding!.fileName)
-  ) {
-    if (encodingId.includes("immpost")) {
-      return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
-    }
-    if (encodingId.includes("immpre")) {
-      return `[${base}, ${formatSignedDecimalImmediate(offset)}]!`;
-    }
-    return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
-  }
-  if (encodingId.includes("immpost")) {
-    return `[${base}], ${formatSignedHexImmediate(offset)}`;
-  }
-  if (encodingId.includes("immpre")) {
-    return `[${base}, ${formatSignedHexImmediate(offset)}]!`;
-  }
-  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedHexImmediate(offset)}]`;
+  const decimal = encoding.fileName === "ldrsb_imm.xml" || encoding.fileName === "ldrsh_imm.xml" ||
+    isDecimalUnscaledLoadStore(encoding.fileName) || isFpSimdLoadStore(encoding.fileName);
+  return {
+    kind: "mem", base, offset: { kind: "imm", value: signExtend(fields.imm9 ?? 0, 9) },
+    mode: encoding.encodingId.includes("immpost") ? "post-index" : encoding.encodingId.includes("immpre") ? "pre-index" : "offset",
+    immediateFormat: decimal ? "decimal" : "hex",
+  };
 }
 
 function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
@@ -1195,19 +1184,15 @@ function pairLoadStoreScaledImmediate(inst: DecodedInstruction): bigint {
   return signExtend(fields.imm7 ?? 0, 7) * BigInt(width / 8);
 }
 
-function pairLoadStoreMemoryText(inst: DecodedInstruction): string {
+function pairLoadStoreMemoryOperand(inst: DecodedInstruction): MemoryOperand {
   const fields = inst.fields!;
-  const base = formatRegister(gpReg(64, fields.Rn, "sp"));
-  const offset = pairLoadStoreScaledImmediate(inst);
   const encodingId = inst.encoding!.encodingId;
-
-  if (encodingId.includes("_post")) {
-    return `[${base}], ${formatSignedDecimalImmediate(offset)}`;
-  }
-  if (encodingId.includes("_pre")) {
-    return `[${base}, ${formatSignedDecimalImmediate(offset)}]!`;
-  }
-  return offset === 0n ? `[${base}]` : `[${base}, ${formatSignedDecimalImmediate(offset)}]`;
+  return {
+    kind: "mem", base: gpReg(64, fields.Rn, "sp"),
+    offset: { kind: "imm", value: pairLoadStoreScaledImmediate(inst) },
+    mode: encodingId.includes("_post") ? "post-index" : encodingId.includes("_pre") ? "pre-index" : "offset",
+    immediateFormat: "decimal",
+  };
 }
 
 function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
@@ -1219,16 +1204,16 @@ function pairLoadStoreOperands(inst: DecodedInstruction): Operand[] {
     inst.encoding!.fileName === "ldnp_fpsimd.xml"
   ) {
     return [
-      { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt) },
-      { kind: "text", text: fpSimdPairRegisterText(fields.opc, fields.Rt2) },
-      { kind: "text", text: pairLoadStoreMemoryText(inst) },
+      { kind: "simd", index: fields.Rt, scalar: (fields.opc ?? 0) === 2 ? "q" : (fields.opc ?? 0) === 1 ? "d" : "s" },
+      { kind: "simd", index: fields.Rt2, scalar: (fields.opc ?? 0) === 2 ? "q" : (fields.opc ?? 0) === 1 ? "d" : "s" },
+      pairLoadStoreMemoryOperand(inst),
     ];
   }
   const width = inst.encoding!.fileName === "ldpsw.xml" ? 64 : (fields.opc ?? 0) === 2 ? 64 : 32;
   return [
     gpReg(width, fields.Rt, "zr"),
     gpReg(width, fields.Rt2, "zr"),
-    { kind: "text", text: pairLoadStoreMemoryText(inst) },
+    pairLoadStoreMemoryOperand(inst),
   ];
 }
 
@@ -1237,7 +1222,7 @@ function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
   if (inst.encoding!.fileName === "prfm_imm.xml" || inst.encoding!.fileName === "prfm_reg.xml" || inst.encoding!.fileName === "prfum.xml") {
     return [
       { kind: "text", text: prfmOpText(fields.Rt) },
-      { kind: "text", text: scalarLoadStoreMemoryText(inst) },
+      scalarLoadStoreMemoryOperand(inst),
     ];
   }
   if (
@@ -1251,16 +1236,16 @@ function scalarLoadStoreOperands(inst: DecodedInstruction): Operand[] {
     inst.encoding!.fileName === "ldtrsh.xml"
   ) {
     const width: 32 | 64 = (fields.opc ?? 0) === 2 ? 64 : 32;
-    return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+    return [gpReg(width, fields.Rt, "zr"), scalarLoadStoreMemoryOperand(inst)];
   }
   if (isFpSimdLoadStore(inst.encoding!.fileName)) {
     return [
-      { kind: "text", text: fpSimdRegisterText(fields.size, fields.opc, fields.Rt) },
-      { kind: "text", text: scalarLoadStoreMemoryText(inst) },
+      { kind: "simd", index: fields.Rt, scalar: (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 2) !== 0 ? "q" : advsimdLaneFromSize(fields.size) },
+      scalarLoadStoreMemoryOperand(inst),
     ];
   }
   const width = scalarLoadStoreRegisterWidth(inst.encoding!.fileName, fields.size);
-  return [gpReg(width, fields.Rt, "zr"), { kind: "text", text: scalarLoadStoreMemoryText(inst) }];
+  return [gpReg(width, fields.Rt, "zr"), scalarLoadStoreMemoryOperand(inst)];
 }
 
 function orderedMemoryWidth(fileName: string, fields: Record<string, number>): 32 | 64 {
@@ -1674,7 +1659,7 @@ function sveMovprfxOperands(inst: DecodedInstruction): Operand[] {
 function svePredicatedMovprfxOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
-  return [vecReg(fields.Zd, lane), predReg(fields.Pg, "z"), vecReg(fields.Zn, lane)];
+  return [vecReg(fields.Zd, lane), predReg(fields.Pg, fields.M === 1 ? "m" : "z"), vecReg(fields.Zn, lane)];
 }
 
 function sveFcpyOperands(inst: DecodedInstruction): Operand[] {
@@ -1686,6 +1671,7 @@ function sveFcpyOperands(inst: DecodedInstruction): Operand[] {
 function sveFdupOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
+  if (inst.encoding!.fileName === "fmov_dup_z_i.xml") return sveDupImmediateOperands(inst);
   return [vecReg(fields.Zd, lane), sveFloatingImmediate(fields.imm8, fields.size)];
 }
 
@@ -1874,6 +1860,7 @@ function advsimdImmediateVectorText(fields: Record<string, number>, size: number
 }
 
 function advsimdImmediateShiftText(cmode: number, masked = false): string | null {
+  if (cmode === 14) return null;
   if (masked) {
     return (cmode & 1) === 0 ? "msl #8" : "msl #16";
   }
@@ -1928,6 +1915,9 @@ function advsimdMoveImmediateOperands(inst: DecodedInstruction): Operand[] {
 
 function advsimdMoveRegisterAliasOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
+  if (fields.Rn !== fields.Rm) {
+    return [fields.Rd, fields.Rn, fields.Rm].map((index) => ({ kind: "simd", index, arrangement: { lanes: fields.Q === 1 ? 16 : 8, element: "b" } }));
+  }
   return [
     { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, 0, fields.Q) },
     { kind: "text", text: advsimdVectorRegisterText(fields.Rn ?? 0, 0, fields.Q) },
@@ -1990,7 +1980,9 @@ function advsimdScalarDuplicateElementOperands(inst: DecodedInstruction): Operan
   const lane = advsimdLaneFromSize(size);
   const index = advsimdLaneIndexFromImm5(fields.imm5, size);
   return [
-    { kind: "text", text: `${lane}${fields.Rd ?? 0}` },
+    inst.encoding!.className.toLowerCase().includes("vector")
+      ? { kind: "simd", index: fields.Rd, arrangement: { lanes: (8 << fields.Q) >> size, element: lane } }
+      : { kind: "simd", index: fields.Rd, scalar: lane },
     { kind: "text", text: `v${fields.Rn ?? 0}.${lane}[${index}]` },
   ];
 }
@@ -2032,6 +2024,8 @@ function advsimdExtractOperands(inst: DecodedInstruction): Operand[] {
 function advsimdElementSize(inst: DecodedInstruction): number {
   const fields = inst.fields!;
   const className = inst.encoding!.className.toLowerCase();
+  if (["and_advsimd.xml", "orr_advsimd_reg.xml", "orn_advsimd.xml", "bic_advsimd_reg.xml", "eor_advsimd.xml", "rbit_advsimd.xml"].includes(inst.encoding!.fileName)) return 0;
+  if (fields.immh !== undefined) return highestSetBitNZ(fields.immh);
   if (fields.size !== undefined) {
     return fields.size;
   }
@@ -2066,17 +2060,14 @@ function advsimdImmediateShiftOperands(inst: DecodedInstruction): Operand[] {
   const isLeftShift =
     fileName === "shl_advsimd.xml" ||
     fileName === "sqshl_advsimd_imm.xml" ||
+    fileName === "uqshl_advsimd_imm.xml" ||
     fileName === "sqshlu_advsimd.xml" ||
     fileName === "sli_advsimd.xml";
-  const esize = isScalar && (fileName !== "sqshl_advsimd_imm.xml" && fileName !== "sqshlu_advsimd.xml")
-    ? 64
-    : 8 << highestSetBitNZ(immh);
+  const esize = 8 << highestSetBitNZ(immh);
   const shift = isLeftShift ? imm - esize : (esize * 2) - imm;
 
   const registerText = isScalar
-    ? (fileName === "sqshl_advsimd_imm.xml" || fileName === "sqshlu_advsimd.xml"
-      ? (index: number) => advsimdScalarRegisterFromImmh(index, immh)
-      : (index: number) => advsimdScalarRegisterText(index, 3))
+    ? (index: number) => advsimdScalarRegisterFromImmh(index, immh)
     : (index: number) => advsimdVectorRegisterFromImmh(index, immh, fields.Q);
 
   return [
@@ -2119,7 +2110,7 @@ function advsimdBfloat16DotProductSourceText(index: number, q: number | undefine
 
 function advsimdUnaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
+  const isScalar = inst.encoding!.className.toLowerCase().includes("scalar") || inst.encoding!.encodingId.includes("_asisd");
   const size = advsimdElementSize(inst);
 
   if (isScalar) {
@@ -2138,7 +2129,9 @@ function advsimdUnaryOperands(inst: DecodedInstruction): Operand[] {
 function advsimdUnaryWithImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const operands = advsimdUnaryOperands(inst);
-  operands.push({ kind: "text", text: `#${64 - (fields.scale ?? 0)}` });
+  const fractionalBits = fields.immh === undefined ? 64 - (fields.scale ?? 0)
+    : (16 << highestSetBitNZ(fields.immh)) - ((fields.immh << 3) | fields.immb);
+  operands.push({ kind: "imm", value: BigInt(fractionalBits), signed: true });
   return operands;
 }
 
@@ -2147,9 +2140,7 @@ function advsimdFloatingConvertNarrowOperands(inst: DecodedInstruction): Operand
   const destArrangement = (fields.sz ?? 0) === 1
     ? ((fields.Q ?? 0) === 1 ? "4s" : "2s")
     : ((fields.Q ?? 0) === 1 ? "8h" : "4h");
-  const sourceArrangement = (fields.sz ?? 0) === 1
-    ? ((fields.Q ?? 0) === 1 ? "4d" : "2d")
-    : ((fields.Q ?? 0) === 1 ? "8s" : "4s");
+  const sourceArrangement = (fields.sz ?? 0) === 1 ? "2d" : "4s";
 
   return [
     { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
@@ -2247,23 +2238,24 @@ function advsimdFp8LutiRegisterCount(inst: DecodedInstruction): number {
   if (inst.encoding!.fileName === "luti2_advsimd.xml") {
     return 1;
   }
-  return ((inst.fields!.len ?? 0) & 0x1) + 1;
+  return 1 << inst.fields!.op;
 }
 
 function advsimdFp8LutiOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const size = advsimdElementSize(inst);
-  const lane = advsimdLaneFromSize(size);
-  const arrangement = advsimdArrangementFromSizeQ(size, fields.Q);
+  const luti2 = inst.encoding!.fileName === "luti2_advsimd.xml";
+  const size = luti2 ? (fields.op2 === 2 ? 0 : 1) : fields.op;
+  const arrangement = advsimdArrangementFromSizeQ(size, 1);
   const registerCount = advsimdFp8LutiRegisterCount(inst);
   const tableRegisters = Array.from({ length: registerCount }, (_, index) => `v${((fields.Rn ?? 0) + index) & 31}.${arrangement}`);
-  const sourceIndex = advsimdByElementSourceIndex(fields, size);
-  const elementIndex = advsimdByElementIndex(fields, size);
+  const sourceIndex = fields.Rm;
+  const elementIndex = luti2 ? (size === 0 ? fields.len : (fields.len << 1) | fields.op)
+    : (size === 0 ? fields.len >>> 1 : fields.len);
 
   return [
     { kind: "text", text: `v${fields.Rd ?? 0}.${arrangement}` },
     { kind: "text", text: `{ ${tableRegisters.join(", ")} }` },
-    { kind: "text", text: `v${sourceIndex}.${lane}[${elementIndex}]` },
+    { kind: "text", text: `v${sourceIndex}[${elementIndex}]` },
   ];
 }
 
@@ -2340,6 +2332,17 @@ function advsimdComplexByElementOperands(inst: DecodedInstruction): Operand[] {
 
 function advsimdFpLongMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
+  if (inst.encoding!.fileName.startsWith("fmlalb_") || inst.encoding!.fileName.startsWith("fmlallbb_")) {
+    const half = inst.encoding!.fileName.startsWith("fmlalb_");
+    const operands: Operand[] = [
+      { kind: "simd", index: fields.Rd, arrangement: { lanes: half ? 8 : 4, element: half ? "h" : "s" } },
+      { kind: "simd", index: fields.Rn, arrangement: { lanes: 16, element: "b" } },
+    ];
+    operands.push(inst.encoding!.fileName.endsWith("_vec.xml")
+      ? { kind: "simd", index: fields.Rm, arrangement: { lanes: 16, element: "b" } }
+      : { kind: "simd", index: fields.Rm & 7, element: "b", laneIndex: (fields.H << 3) | (fields.L << 2) | (fields.M << 1) | (fields.Rm >>> 3) });
+    return operands;
+  }
   const destArrangement = (fields.Q ?? 0) === 1 ? "4s" : "2s";
   const sourceArrangement = (fields.Q ?? 0) === 1 ? "4h" : "2h";
 
@@ -2354,7 +2357,7 @@ function advsimdFpLongMultiplyAccumulateOperands(inst: DecodedInstruction): Oper
   return [
     { kind: "text", text: `v${fields.Rd ?? 0}.${destArrangement}` },
     { kind: "text", text: `v${fields.Rn ?? 0}.${sourceArrangement}` },
-    { kind: "text", text: `v${advsimdFpByElementSourceIndex(inst)}.h[${advsimdFpByElementIndex(inst)}]` },
+    { kind: "simd", index: fields.Rm, element: "h", laneIndex: (fields.H << 2) | (fields.L << 1) | fields.M },
   ];
 }
 
@@ -2370,7 +2373,7 @@ function advsimdAcrossLaneOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const fileName = inst.encoding!.fileName;
   const isLongReduction = fileName === "saddlv_advsimd.xml" || fileName === "uaddlv_advsimd.xml";
-  const sourceSize = fields.size ?? (fields.sz ?? 0) + 2;
+  const sourceSize = inst.encoding!.className.toLowerCase().includes("half") ? 1 : fields.size ?? (fields.sz ?? 0) + 2;
   const destinationSize = isLongReduction ? sourceSize + 1 : sourceSize;
 
   return [
@@ -2413,7 +2416,8 @@ function advsimdNarrowSourceArrangement(size: number | undefined): "8h" | "4s" |
 
 function advsimdNarrowOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const size = advsimdElementSize(inst);
+  const size = inst.encoding!.fileName === "bfcvtn_advsimd.xml" ? 1
+    : inst.encoding!.fileName === "fcvtxn_advsimd.xml" ? 2 : advsimdElementSize(inst);
   const isScalar = inst.encoding!.className.toLowerCase().includes("scalar");
 
   if (isScalar) {
@@ -2741,7 +2745,7 @@ function advsimdByElementMultiplyAccumulateOperands(inst: DecodedInstruction): O
   const fields = inst.fields!;
   const fileName = inst.encoding!.fileName;
 
-  if (fileName === "mla_advsimd_elt.xml" || fileName === "mls_advsimd_elt.xml") {
+  if (fileName === "mla_advsimd_elt.xml" || fileName === "mls_advsimd_elt.xml" || fileName === "mul_advsimd_elt.xml") {
     const lane = advsimdLaneFromSize(fields.size);
     return [
       { kind: "text", text: advsimdVectorRegisterText(fields.Rd ?? 0, fields.size, fields.Q) },
@@ -2838,7 +2842,7 @@ function advsimdDotProductOperands(inst: DecodedInstruction): Operand[] {
   const fileName = inst.encoding!.fileName;
   const isBfloat16 = fileName.startsWith("bfdot_");
   const isMixedSignByElement = fileName === "sudot_advsimd_elt.xml" || fileName === "usdot_advsimd_elt.xml";
-  const size = isMixedSignByElement ? 2 : fields.size;
+  const size = isMixedSignByElement || isBfloat16 ? 2 : fields.size;
 
   if (fileName.endsWith("_vec.xml")) {
     return [
@@ -3029,7 +3033,7 @@ function sveCompareImmediateOperands(inst: DecodedInstruction): Operand[] {
     predReg(fields.Pd, undefined, lane),
     predReg(fields.Pg, "z"),
     vecReg(fields.Zn, lane),
-    { kind: "imm", value: sveSignedImmediate(immField, immBits), signed: true },
+    { kind: "imm", value: immBits === 7 ? BigInt(immField) : sveSignedImmediate(immField, immBits), signed: immBits === 5 },
   ];
 }
 
@@ -3114,7 +3118,7 @@ function sveCountPredicateOperands(inst: DecodedInstruction): Operand[] {
   if (inst.encoding!.fileName === "cntp_r_pn.xml") {
     return [
       gpReg(64, fields.Rd ?? 0),
-      { kind: "text", text: svePredicateCounterText(fields.PNn ?? 0, lane) },
+      { kind: "text", text: `pn${fields.PNn ?? 0}.${lane}` },
       { kind: "text", text: `vlx${2 << (fields.vl ?? 0)}` },
     ];
   }
@@ -3158,7 +3162,7 @@ function sveWhileCompareOperands(inst: DecodedInstruction): Operand[] {
   const lane = sveVectorLaneFromSize(fields.size);
   const fileName = inst.encoding!.fileName;
 
-  if (fileName.endsWith("_p_rr.xml")) {
+  if (fileName.endsWith("_p_rr.xml") && !fileName.endsWith("_p_p_rr.xml")) {
     return [predReg(fields.Pd, undefined, lane), gpReg(64, fields.Rn, "zr"), gpReg(64, fields.Rm, "zr")];
   }
 
@@ -3246,7 +3250,8 @@ function svePextOperands(inst: DecodedInstruction): Operand[] {
   const source = { kind: "text", text: `pn${8 + (fields.PNn ?? 0)}[${fields.imm2 ?? fields.i1 ?? 0}]` } as const;
 
   if (inst.encoding!.fileName === "pext_pp_rr.xml") {
-    return [{ kind: "text", text: svePredicatePairText(fields.Pd ?? 0, lane) }, source];
+    const first = fields.Pd ?? 0;
+    return [{ kind: "text", text: `{ p${first}.${lane}, p${(first + 1) & 15}.${lane} }` }, source];
   }
 
   return [predReg(fields.Pd ?? 0, undefined, lane), source];
@@ -3314,7 +3319,7 @@ function sveRdffrOperands(inst: DecodedInstruction): Operand[] {
 
 function svePredicatedUnaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = sveLaneFromSize(fields.size);
+  const lane = sveVectorLaneFromSize(fields.size);
   const mode = inst.encoding!.encodingId.endsWith("_z") ? "z" : "m";
   return [vecReg(fields.Zd, lane), predReg(fields.Pg, mode), vecReg(fields.Zn, lane)];
 }
@@ -3423,7 +3428,7 @@ function sveAdrVectorOperands(inst: DecodedInstruction): Operand[] {
     return [destination, { kind: "text", text: address }];
   }
 
-  const extension = inst.encoding!.className.includes("signed") ? "sxtw" : "uxtw";
+  const extension = inst.encoding!.className.includes("unsigned") ? "uxtw" : "sxtw";
   const address = shift === 0 ? `[${base}, ${offset}, ${extension}]` : `[${base}, ${offset}, ${extension} #${shift}]`;
   return [destination, { kind: "text", text: address }];
 }
@@ -3547,10 +3552,8 @@ function svePredicateLogicalOperands(inst: DecodedInstruction): Operand[] {
       }
       return [pd, pg, pn, pm];
     case "orr_p_p_pp.xml":
-    case "orn_p_p_pp.xml":
     case "mov_orr_p_p_pp.xml":
     case "orrs_p_p_pp.xml":
-    case "orns_p_p_pp.xml":
     case "movs_orrs_p_p_pp.xml":
       if ((fields.S ?? 0) === 0 && fields.Pn === fields.Pm && fields.Pm === fields.Pg) {
         return [pd, pn];
@@ -3567,6 +3570,8 @@ function svePredicateLogicalOperands(inst: DecodedInstruction): Operand[] {
       }
       return [pd, pg, pn, pm];
     case "bic_p_p_pp.xml":
+    case "orn_p_p_pp.xml":
+    case "orns_p_p_pp.xml":
     case "nand_p_p_pp.xml":
     case "nor_p_p_pp.xml":
     case "bics_p_p_pp.xml":
@@ -3580,11 +3585,19 @@ function svePredicateLogicalOperands(inst: DecodedInstruction): Operand[] {
 
 function sveBinaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = sveVectorLaneFromSize(fields.size);
+  const fileName = inst.encoding!.fileName;
+  const lane = /^(?:and|bic|eor|orr|mov_orr)_z_zz\.xml$/.test(fileName) ? "d"
+    : fileName.startsWith("bf") ? "h" : sveVectorLaneFromSize(fields.size);
   if ((inst.encoding!.fileName === "orr_z_zz.xml" || inst.encoding!.fileName === "mov_orr_z_zz.xml") && fields.Zn === fields.Zm) {
     return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane)];
   }
   return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+}
+
+function sveBinaryIndexedOperands(inst: DecodedInstruction): Operand[] {
+  const fields = inst.fields!;
+  const lane = inst.encoding!.encodingId.endsWith("_d") ? "d" : inst.encoding!.encodingId.endsWith("_s") ? "s" : "h";
+  return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), { kind: "text", text: smeIndexedSourceText(inst, lane) }];
 }
 
 function sveWideningBinaryOperands(inst: DecodedInstruction): Operand[] {
@@ -3593,7 +3606,7 @@ function sveWideningBinaryOperands(inst: DecodedInstruction): Operand[] {
   const destinationLane = sveVectorLaneFromSize(fields.size);
   return [
     vecReg(fields.Zd ?? 0, destinationLane),
-    vecReg(fields.Zn ?? 0, sourceLane),
+    vecReg(fields.Zn ?? 0, /^(?:s|u)(?:add|sub)w[bt]_/.test(inst.encoding!.fileName) ? destinationLane : sourceLane),
     vecReg(fields.Zm ?? 0, sourceLane),
   ];
 }
@@ -3652,7 +3665,7 @@ function sveNarrowingBinaryOperands(inst: DecodedInstruction): Operand[] {
 
 function svePredicatedBinaryOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = sveVectorLaneFromSize(fields.size);
+  const lane = inst.encoding!.fileName.startsWith("bf") ? "h" : sveVectorLaneFromSize(fields.size);
   return [
     vecReg(fields.Zdn ?? 0, lane),
     predReg(fields.Pg ?? 0, "m"),
@@ -3717,7 +3730,7 @@ function sveMoveMaskLane(imm13: number): "b" | "h" | "s" | "d" {
 }
 
 function sveMaskImmediate(imm13: number): bigint | null {
-  return decodeLogicalImmediate(
+  const expanded = decodeLogicalImmediate(
     {
       N: (imm13 >>> 12) & 1,
       immr: (imm13 >>> 6) & 0x3f,
@@ -3725,6 +3738,10 @@ function sveMaskImmediate(imm13: number): bigint | null {
     },
     64,
   );
+  if (expanded === null) return null;
+  const lane = sveMoveMaskLane(imm13);
+  const width = lane === "b" ? 8 : lane === "h" ? 16 : lane === "s" ? 32 : 64;
+  return BigInt.asUintN(width, expanded);
 }
 
 function sveLogicalImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -3790,7 +3807,9 @@ function sveDestructiveImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
   const zdn = fields.Zdn ?? 0;
-  return [vecReg(zdn, lane), vecReg(zdn, lane), { kind: "text", text: sveArithmeticImmediateText(fields) }];
+  const isSigned = /^(?:mul|smax|smin)_z_zi\.xml$/.test(inst.encoding!.fileName);
+  const immediate = isSigned ? `#${sveSignedImmediate(fields.imm8 ?? 0, 8)}` : sveArithmeticImmediateText(fields);
+  return [vecReg(zdn, lane), vecReg(zdn, lane), { kind: "text", text: immediate }];
 }
 
 function sveDestructiveBinaryOperands(inst: DecodedInstruction, lane: "b" | "h" | "s" | "d"): Operand[] {
@@ -3840,7 +3859,7 @@ function sveShiftImmediateOperands(inst: DecodedInstruction): Operand[] {
   }
 
   return [
-    vecReg(fields.Zd ?? 0, lane),
+    vecReg(fields.Zd ?? 0, /^(?:sshll|ushll)/.test(inst.encoding!.fileName) ? sveVectorLaneFromSize(highestSetBitNZ(((fields.tszh ?? 0) << 2) | (fields.tszl ?? 0)) + 1) : lane),
     vecReg(fields.Zn ?? 0, lane),
     { kind: "text", text: `#${shift}` },
   ];
@@ -3983,7 +4002,7 @@ function sveBfmlsOperands(inst: DecodedInstruction): Operand[] {
     case "bfmls_z_p_zzz.xml":
       return [dest, predReg(fields.Pg ?? 0, "m"), first, vecReg(fields.Zm ?? 0, lane)];
     case "bfmls_z_zzzi.xml":
-      return [dest, first, { kind: "text", text: smeIndexedSourceText(inst, lane) }];
+      return [dest, first, smeIndexedSourceOperand(inst, lane)];
     default:
       return [];
   }
@@ -3999,13 +4018,16 @@ function sveFpMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
   }
 
   const lane = inst.encoding!.encodingId.endsWith("_s") ? "s" : inst.encoding!.encodingId.endsWith("_d") ? "d" : "h";
-  return [vecReg(fields.Zda ?? 0, lane), vecReg(fields.Zn ?? 0, lane), { kind: "text", text: smeIndexedSourceText(inst, lane) }];
+  return [vecReg(fields.Zda ?? 0, lane), vecReg(fields.Zn ?? 0, lane), smeIndexedSourceOperand(inst, lane)];
 }
 
 function sveMultiplyAccumulateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
   if (inst.encoding!.fileName.endsWith("_p_zzz.xml")) {
+    if (fields.Zda !== undefined) {
+      return [vecReg(fields.Zda, lane), predReg(fields.Pg ?? 0, "m"), vecReg(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+    }
     const zdn = vecReg(fields.Zdn ?? 0, lane);
     return [zdn, predReg(fields.Pg ?? 0, "m"), vecReg(fields.Zm ?? 0, lane), vecReg(fields.Za ?? 0, lane)];
   }
@@ -4192,6 +4214,19 @@ function sveMemoryLaneFromEncoding(inst: DecodedInstruction): "b" | "h" | "s" | 
   const fileName = inst.encoding!.fileName;
   const fields = inst.fields!;
   const encodingId = inst.encoding!.encodingId;
+
+  // The memory access width and the scalable register element width are independent.
+  // XML encoding names distinguish widening/128-bit forms even when size is fixed.
+  const width = /_[us](8|16|32|64|128)$/.exec(encodingId)?.[1];
+  if (width) return width === "8" ? "b" : width === "16" ? "h" : width === "32" ? "s" : width === "64" ? "d" : "q";
+  if (fileName.startsWith("ld1q_") || fileName.startsWith("st1q_")) return "q";
+  const addressLane = /_(s|d)(?:_|$)/.exec(encodingId)?.[1];
+  if (addressLane) return addressLane as "s" | "d";
+
+  if (/_mzx?_p_/.test(fileName)) {
+    const shift = sveElementShiftFromMnemonic(inst.encoding!.mnemonic);
+    return shift === 0 ? "b" : shift === 1 ? "h" : shift === 2 ? "s" : shift === 3 ? "d" : "q";
+  }
 
   if (fileName.startsWith("ld2q_") || fileName.startsWith("ld3q_") || fileName.startsWith("ld4q_")) {
     return "q";
@@ -4412,9 +4447,14 @@ function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
   const isPredicateCounter = /_mzx?_p_/.test(fileName);
   const lane = sveMemoryLaneFromEncoding(inst);
   const registerCount = sveMemoryRegisterCount(inst);
+  const isStrided = fileName.includes("_mzx_");
+  const first = isStrided ? ((fields.T ?? 0) << 4) | (fields.Zt ?? 0)
+    : isPredicateCounter ? (fields.Zt ?? 0) * registerCount : fields.Zt ?? 0;
   const register = {
     kind: "text" as const,
-    text: sveContiguousVectorListText(fields.Zt ?? 0, registerCount, lane),
+    text: isStrided
+      ? `{ ${Array.from({ length: registerCount }, (_, index) => `z${first + index * (16 / registerCount)}.${lane}`).join(", ")} }`
+      : sveContiguousVectorListText(first, registerCount, lane),
   };
   const predicate = isPredicateCounter
     ? { kind: "text" as const, text: svePredicateCounterGroupText(fields.PNg ?? 0, fileName.startsWith("ld") ? "z" : undefined) }
@@ -4433,7 +4473,7 @@ function sveContiguousByteMemoryOperands(inst: DecodedInstruction): Operand[] {
   const base = formatRegister(gpReg(64, fields.Rn ?? 0, "sp"));
 
   if (fileName.endsWith("_ar.xml")) {
-    const vectorBase = `z${fields.Zn ?? 0}.${lane}`;
+    const vectorBase = `z${fields.Zn ?? 0}.${lane === "q" ? "d" : lane}`;
     const offsetRegister = fields.Rm ?? 31;
     const memory = offsetRegister === 31 ? `[${vectorBase}]` : `[${vectorBase}, x${offsetRegister}]`;
     return [register, predicate, { kind: "text", text: memory }];
@@ -4482,7 +4522,8 @@ function sveBfmlalOperands(inst: DecodedInstruction): Operand[] {
     case "bfmlslb_z_zzzi.xml":
     case "bfmlalt_z_zzzi.xml":
     case "bfmlslt_z_zzzi.xml": {
-      const index = ((fields.i3h ?? 0) << 2) | (fields.i3l ?? 0);
+      const lowWidth = inst.encoding!.fields.find((field) => field.name === "i3l")?.width ?? 0;
+      const index = ((fields.i3h ?? 0) << lowWidth) | (fields.i3l ?? 0);
       return [
         vecReg(fields.Zda ?? 0, "s"),
         vecReg(fields.Zn ?? 0, "h"),
@@ -4560,7 +4601,7 @@ function sveShiftInsertImmediateOperands(inst: DecodedInstruction): Operand[] {
   const lane = sveVectorLaneFromSize(highestSetBitNZ(tsize));
   const esize = 8 << highestSetBitNZ(tsize);
   const encoded = (tsize << 3) | (fields.imm3 ?? 0);
-  const shift = inst.encoding!.fileName === "sli_z_zzi.xml" ? encoded - esize : (2 * esize) - encoded;
+  const shift = ["sli_z_zzi.xml", "lsl_z_zi.xml"].includes(inst.encoding!.fileName) ? encoded - esize : (2 * esize) - encoded;
   return [vecReg(fields.Zd ?? 0, lane), vecReg(fields.Zn ?? 0, lane), { kind: "text", text: `#${shift}` }];
 }
 
@@ -4591,7 +4632,8 @@ function sveFmulImmediateOperands(inst: DecodedInstruction): Operand[] {
 function sveFpAddSubImmediateOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = sveLaneFromSize(fields.size);
-  const immediate = (fields.i1 ?? 0) === 0 ? "#0.5" : "#1.0";
+  const isMinMax = /^F(?:MIN|MAX)(?:NM)?$/.test(inst.encoding!.mnemonic);
+  const immediate = (fields.i1 ?? 0) === 0 ? (isMinMax ? "#0.0" : "#0.5") : "#1.0";
   return [vecReg(fields.Zdn ?? 0, lane), predReg(fields.Pg ?? 0, "m"), vecReg(fields.Zdn ?? 0, lane), { kind: "text", text: immediate }];
 }
 
@@ -4735,9 +4777,11 @@ function sveFp8LutiRegisterCount(inst: DecodedInstruction): number {
   return ((inst.fields!.len ?? 0) & 0x1) + 1;
 }
 
-function sveFp8LutiIndex(fields: Record<string, number>): number {
+function sveFp8LutiIndex(inst: DecodedInstruction): number {
+  const fields = inst.fields!;
   if (fields.i3h !== undefined || fields.i3l !== undefined) {
-    return ((fields.i3h ?? 0) << 2) | (fields.i3l ?? 0);
+    const lowWidth = inst.encoding!.fields.find((field) => field.name === "i3l")?.width ?? 0;
+    return ((fields.i3h ?? 0) << lowWidth) | (fields.i3l ?? 0);
   }
   if (fields.i2 !== undefined) {
     return fields.i2;
@@ -4747,10 +4791,10 @@ function sveFp8LutiIndex(fields: Record<string, number>): number {
 
 function sveFp8LutiOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const lane = sveVectorLaneFromSize(fields.size);
+  const lane = inst.encoding!.encodingId.endsWith("16") ? "h" : "b";
   const registerCount = sveFp8LutiRegisterCount(inst);
   const sourceRegisters = Array.from({ length: registerCount }, (_, index) => `z${((fields.Zn ?? 0) + index) & 31}.${lane}`);
-  const index = sveFp8LutiIndex(fields);
+  const index = sveFp8LutiIndex(inst);
   return [
     vecReg(fields.Zd ?? 0, lane),
     { kind: "text", text: `{ ${sourceRegisters.join(", ")} }` },
@@ -4962,7 +5006,7 @@ function movaArrayZaText(fields: Record<string, number>, count: 2 | 4): string {
 function smeWideningFloatConvertOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 2, 2, "s") },
+    vectorGroup((fields.Zd ?? 0) * 2, 2, "s"),
     vecReg(fields.Zn ?? 0, "h"),
   ];
 }
@@ -4970,7 +5014,7 @@ function smeWideningFloatConvertOperands(inst: DecodedInstruction): Operand[] {
 function smeFp8WideningConvertOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 2, 2, "h") },
+    vectorGroup((fields.Zd ?? 0) * 2, 2, "h"),
     vecReg(fields.Zn ?? 0, "b"),
   ];
 }
@@ -4982,11 +5026,11 @@ function smeNarrowingConvertOperands(inst: DecodedInstruction): Operand[] {
     const srcLane = destLane === "h" ? "d" : "s";
     return [
       vecReg(fields.Zd ?? 0, destLane),
-      { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, srcLane) },
+      vectorGroup((fields.Zn ?? 0) * 4, 4, srcLane),
     ];
   }
 
-  return [vecReg(fields.Zd ?? 0, "h"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "s") }];
+  return [vecReg(fields.Zd ?? 0, "h"), vectorGroup((fields.Zn ?? 0) * 2, 2, "s")];
 }
 
 function smeNarrowingShiftOperands(inst: DecodedInstruction): Operand[] {
@@ -5004,7 +5048,7 @@ function smeNarrowingShiftOperands(inst: DecodedInstruction): Operand[] {
     const destLane = sourceElementBits === 8 ? "b" : "h";
     return [
       vecReg(fields.Zd ?? 0, destLane),
-      { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, sourceLane) },
+      vectorGroup((fields.Zn ?? 0) * 4, 4, sourceLane),
       { kind: "text", text: `#${shift}` },
     ];
   }
@@ -5020,7 +5064,7 @@ function smeNarrowingShiftOperands(inst: DecodedInstruction): Operand[] {
 
   return [
     vecReg(fields.Zd ?? 0, "h"),
-    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "s") },
+    vectorGroup((fields.Zn ?? 0) * 2, 2, "s"),
     { kind: "text", text: `#${shift}` },
   ];
 }
@@ -5034,17 +5078,17 @@ function smeFp8NarrowConvertOperands(inst: DecodedInstruction): Operand[] {
   const lane = smeFp8NarrowConvertSourceLane(inst.encoding!.fileName);
   return [
     vecReg(fields.Zd ?? 0, "b"),
-    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, lane) },
+    vectorGroup((fields.Zn ?? 0) * 2, 2, lane),
   ];
 }
 
 function smeFp8NarrowingConvertOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   if (inst.encoding!.fileName.endsWith("_mz4.xml")) {
-    return [vecReg(fields.Zd ?? 0, "b"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, "s") }];
+    return [vecReg(fields.Zd ?? 0, "b"), vectorGroup((fields.Zn ?? 0) * 4, 4, "s")];
   }
 
-  return [vecReg(fields.Zd ?? 0, "b"), { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, "h") }];
+  return [vecReg(fields.Zd ?? 0, "b"), vectorGroup((fields.Zn ?? 0) * 2, 2, "h")];
 }
 
 type SmeZeroMaskEntry = {
@@ -5070,50 +5114,18 @@ const SME_ZERO_MASK_ENTRIES: SmeZeroMaskEntry[] = [
   { text: "za7.d", mask: 0x80 },
 ];
 
-const SME_ZERO_MASK_TEXT_CACHE = new Map<number, string>();
-
 function smeZeroMaskText(mask: number): string {
-  const normalizedMask = mask & 0xff;
-  const cached = SME_ZERO_MASK_TEXT_CACHE.get(normalizedMask);
-  if (cached !== undefined) {
-    return cached;
-  }
-
-  const bestByMask = new Map<number, string[]>([[0, []]]);
-
-  for (let currentMask = 1; currentMask <= normalizedMask; currentMask += 1) {
-    let best: string[] | undefined;
-
-    for (const entry of SME_ZERO_MASK_ENTRIES) {
-      if ((currentMask & entry.mask) !== entry.mask) {
-        continue;
-      }
-
-      const remainder = currentMask ^ entry.mask;
-      const remainderBest = bestByMask.get(remainder);
-      if (!remainderBest) {
-        continue;
-      }
-
-      const candidate = [entry.text, ...remainderBest];
-      if (
-        !best ||
-        candidate.length < best.length ||
-        (candidate.length === best.length && candidate.join(", ") < best.join(", "))
-      ) {
-        best = candidate;
-      }
-    }
-
-    if (best) {
-      bestByMask.set(currentMask, best);
+  const normalized = mask & 0xff;
+  if (normalized === 0xff) return "{za}";
+  // All listed tiles use one arrangement. Choose the widest tiles that cover
+  // exactly this mask; a partial tile requires the next smaller arrangement.
+  for (const lane of ["h", "s", "d"]) {
+    const tiles = SME_ZERO_MASK_ENTRIES.filter((entry) => entry.text.endsWith(`.${lane}`) && (normalized & entry.mask) === entry.mask);
+    if (tiles.reduce((covered, entry) => covered | entry.mask, 0) === normalized) {
+      return `{${tiles.map((entry) => entry.text).join(", ")}}`;
     }
   }
-
-  const selected = bestByMask.get(normalizedMask) ?? [];
-  const text = selected.length === 0 ? "{}" : `{${selected.join(", ")}}`;
-  SME_ZERO_MASK_TEXT_CACHE.set(normalizedMask, text);
-  return text;
+  return "{}";
 }
 
 function smeZeroGroupCount(encodingId: string): 1 | 2 | 4 {
@@ -5262,670 +5274,6 @@ function smeZaTileSliceOperands(inst: DecodedInstruction): Operand[] {
   ];
 }
 
-function smeDotGroupCount(className: string): 2 | 4 {
-  return className.includes("Four") ? 4 : 2;
-}
-
-function smeDotAccumulatorLane(inst: DecodedInstruction): "h" | "s" | "d" {
-  if (inst.encoding!.fileName.includes("z8z8")) {
-    return inst.encoding!.fileName.includes("za32") ? "s" : "h";
-  }
-  if (inst.encoding!.fileName.includes("za32")) {
-    return "s";
-  }
-  if (inst.fields?.sz !== undefined) {
-    return inst.fields.sz === 1 ? "d" : "s";
-  }
-  return inst.encoding!.className.includes("64-bit") ? "d" : "s";
-}
-
-function smeDotSourceLane(inst: DecodedInstruction, accLane: "h" | "s" | "d"): "b" | "h" {
-  if (inst.encoding!.fileName.includes("z8z8")) {
-    return "b";
-  }
-  return accLane === "d" ||
-      inst.encoding!.fileName.includes("za32") ||
-      inst.encoding!.fileName.startsWith("bfvdot_") ||
-      inst.encoding!.fileName.startsWith("fvdot_") ||
-      inst.encoding!.fileName.startsWith("bfdot_") ||
-      inst.encoding!.fileName.startsWith("fdot_")
-    ? "h"
-    : "b";
-}
-
-function smeDotZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "d"): string {
-  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
-}
-
-function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
-  switch (inst.encoding!.fileName) {
-    case "fmax_mz_zzv.xml":
-    case "fmax_mz_zzw.xml":
-    case "famax_mz_zzv.xml":
-    case "famax_mz_zzw.xml":
-    case "fmaxnm_mz_zzv.xml":
-    case "fmaxnm_mz_zzw.xml":
-    case "fmin_mz_zzv.xml":
-    case "fmin_mz_zzw.xml":
-    case "famin_mz_zzv.xml":
-    case "famin_mz_zzw.xml":
-    case "fminnm_mz_zzv.xml":
-    case "fminnm_mz_zzw.xml":
-    case "fscale_mz_zzv.xml":
-    case "fscale_mz_zzw.xml": {
-      const lane = sveVectorLaneFromSize(inst.fields?.size);
-      return lane === "d" ? "d" : lane === "s" ? "s" : "h";
-    }
-  }
-  if (inst.encoding!.mnemonic.startsWith("BF")) {
-    return "h";
-  }
-  const sz = inst.fields?.sz ?? 0;
-  return inst.encoding!.mnemonic.startsWith("F") ? (sz === 1 ? "d" : "h") : sz === 1 ? "d" : "s";
-}
-
-function smeZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "h" | "d"): string {
-  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
-}
-
-function smeDotVectorGroupText(start: number, count: 1 | 2 | 4, lane: "b" | "h" | "s" | "d"): string {
-  const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
-  if (count === 4 && start <= 28) {
-    return `{ ${regs[0]} - ${regs[3]} }`;
-  }
-  return `{ ${regs.join(", ")} }`;
-}
-
-function smeVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" | "d" | "q"): string {
-  const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
-  if (count === 4 && start <= 28) {
-    return `{ ${regs[0]} - ${regs[3]} }`;
-  }
-  return `{ ${regs.join(", ")} }`;
-}
-
-function smeMultiVectorArithmeticLane(inst: DecodedInstruction): "b" | "h" | "s" | "d" {
-  if (inst.encoding!.mnemonic.startsWith("BF")) {
-    return "h";
-  }
-  return sveVectorLaneFromSize(inst.fields?.size);
-}
-
-function smeMultiVectorArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const count = smeDotGroupCount(inst.encoding!.className);
-  const lane = smeMultiVectorArithmeticLane(inst);
-  const group = { kind: "text", text: smeVectorGroupText((fields.Zdn ?? 0) * count, count, lane) } satisfies Operand;
-  const second: Operand = inst.encoding!.fileName.endsWith("_zzw.xml")
-    ? { kind: "text", text: smeVectorGroupText((fields.Zm ?? 0) * count, count, lane) }
-    : { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` };
-  return [group, group, second];
-}
-
-function smeMultiVectorClampOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const count = smeDotGroupCount(inst.encoding!.className);
-  const lane = inst.encoding!.mnemonic.startsWith("BF") ? "h" : sveVectorLaneFromSize(fields.size);
-  return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, lane) },
-    vecReg(fields.Zn ?? 0, lane),
-    vecReg(fields.Zm ?? 0, lane),
-  ];
-}
-
-function smeIntFloatConvertOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const count = smeDotGroupCount(inst.encoding!.className);
-  return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, "s") },
-    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * count, count, "s") },
-  ];
-}
-
-function smeLutiVectorGroupText(inst: DecodedInstruction, count: 1 | 2 | 4, lane: "b" | "h" | "s" | "d"): string {
-  const fields = inst.fields!;
-  if (count === 1) {
-    return `z${fields.Zd ?? 0}.${lane}`;
-  }
-
-  const encodingId = inst.encoding!.encodingId;
-  if (encodingId.endsWith("_1")) {
-    return smeVectorGroupText((fields.Zd ?? 0) * count, count, lane);
-  }
-
-  const start = ((fields.D ?? 0) << 4) | (fields.Zd ?? 0);
-  const stride = count === 2 ? 8 : 4;
-  const regs = Array.from({ length: count }, (_, index) => `z${start + stride * index}.${lane}`);
-  return `{ ${regs.join(", ")} }`;
-}
-
-function smeLutiIndex(inst: DecodedInstruction): number {
-  const fields = inst.fields!;
-  switch (inst.encoding!.fileName) {
-    case "luti2_z_ztz.xml":
-      return fields.i4 ?? 0;
-    case "luti2_mz2_ztz.xml":
-      return fields.i3 ?? 0;
-    case "luti4_z_ztz.xml":
-      return fields.i3 ?? 0;
-    case "luti2_mz4_ztz.xml":
-    case "luti4_mz2_ztz.xml":
-      return fields.i2 ?? 0;
-    case "luti4_mz4_ztz.xml":
-      return fields.i1 ?? 0;
-    default:
-      return 0;
-  }
-}
-
-function smeLutiOperands(inst: DecodedInstruction, count: 1 | 2 | 4): Operand[] {
-  const fields = inst.fields!;
-  const lane = sveVectorLaneFromSize(fields.size);
-  return [
-    { kind: "text", text: smeLutiVectorGroupText(inst, count, lane) },
-    { kind: "text", text: "zt0" },
-    { kind: "text", text: `z${fields.Zn ?? 0}[${smeLutiIndex(inst)}]` },
-  ];
-}
-
-function smeFp8LutiMixedOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const sourceStart = fields.Zm ?? 0;
-  return [
-    { kind: "text", text: smeLutiVectorGroupText(inst, 4, "b") },
-    { kind: "text", text: "zt0" },
-    { kind: "text", text: `{ z${sourceStart}, z${(sourceStart + 1) & 31} }` },
-  ];
-}
-
-function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" | "h" | "d"): string {
-  const fields = inst.fields!;
-  const encodingFields = inst.encoding!.fields;
-  const widthByName = new Map(encodingFields.map((field) => [field.name, field.width] as const));
-
-  const i4h = fields.i4h;
-  const i4l = fields.i4l;
-  if (i4h !== undefined || i4l !== undefined) {
-    const lowWidth = widthByName.get("i4l") ?? 0;
-    return `z${fields.Zm ?? 0}.${lane}[${((i4h ?? 0) << lowWidth) | (i4l ?? 0)}]`;
-  }
-
-  const i3h = fields.i3h;
-  const i3l = fields.i3l;
-  if (i3h !== undefined || i3l !== undefined) {
-    const lowWidth = widthByName.get("i3l") ?? 0;
-    return `z${fields.Zm ?? 0}.${lane}[${((i3h ?? 0) << lowWidth) | (i3l ?? 0)}]`;
-  }
-
-  const i2h = fields.i2h;
-  const i2l = fields.i2l;
-  if (i2h !== undefined || i2l !== undefined) {
-    const lowWidth = widthByName.get("i2l") ?? 0;
-    return `z${fields.Zm ?? 0}.${lane}[${((i2h ?? 0) << lowWidth) | (i2l ?? 0)}]`;
-  }
-
-  return `z${fields.Zm ?? 0}.${lane}[${((fields.i2 ?? 0) << 1) | (fields.i1 ?? 0)}]`;
-}
-
-function smeFp8LongArithmeticZaText(inst: DecodedInstruction): string {
-  const fields = inst.fields!;
-  const isHalf = inst.encoding!.fileName.startsWith("fmlal_za_z8z8");
-  const start = isHalf ? 2 * (fields.off3 ?? 0) : 4 * (fields.off2 ?? 0);
-  const end = start + (isHalf ? 1 : 3);
-  const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  const vgx = groupSize === 1 ? "" : `, vgx${groupSize}`;
-  return `za.${isHalf ? "h" : "s"}[w${8 + (fields.Rv ?? 0)}, ${start}:${end}${vgx}]`;
-}
-
-function smeLongArithmeticLane(inst: DecodedInstruction): "s" | "d" {
-  switch (inst.encoding!.fileName) {
-    case "smlal_za_zzi.xml":
-    case "smlal_za_zzv.xml":
-    case "smlal_za_zzw.xml":
-    case "smlsl_za_zzi.xml":
-    case "smlsl_za_zzv.xml":
-    case "smlsl_za_zzw.xml":
-    case "umlal_za_zzi.xml":
-    case "umlal_za_zzv.xml":
-    case "umlal_za_zzw.xml":
-      return "s";
-  }
-  return inst.fields?.sz === 1 ? "d" : "s";
-}
-
-function smeLongArithmeticSourceLane(accLane: "s" | "d"): "b" | "h" {
-  return accLane === "d" ? "h" : "b";
-}
-
-function smeFloatLongArithmeticLane(): "s" {
-  return "s";
-}
-
-function smeFloatLongArithmeticZaText(inst: DecodedInstruction): string {
-  const fields = inst.fields!;
-  const start = 2 * (fields.off3 ?? fields.off2 ?? 0);
-  const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  const vgx = groupSize === 1 ? "" : `, vgx${groupSize}`;
-  return `za.s[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 1}${vgx}]`;
-}
-
-function smeFloatLongArithmeticSourceLane(): "h" {
-  return "h";
-}
-
-function smeLongArithmeticZaText(inst: DecodedInstruction, lane: "s" | "d"): string {
-  const fields = inst.fields!;
-  const start = 4 * (fields.off2 ?? fields.o1 ?? 0);
-  const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  const vgx = groupSize === 1 ? "" : `, vgx${groupSize}`;
-  return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${start}:${start + 3}${vgx}]`;
-}
-
-function smeInt16LongArithmeticFiles(fileName: string): boolean {
-  switch (fileName) {
-    case "smlal_za_zzi.xml":
-    case "smlal_za_zzv.xml":
-    case "smlal_za_zzw.xml":
-    case "smlsl_za_zzi.xml":
-    case "smlsl_za_zzv.xml":
-    case "smlsl_za_zzw.xml":
-    case "umlal_za_zzi.xml":
-    case "umlal_za_zzv.xml":
-    case "umlal_za_zzw.xml":
-    case "umlsl_za_zzi.xml":
-    case "umlsl_za_zzv.xml":
-    case "umlsl_za_zzw.xml":
-      return true;
-    default:
-      return false;
-  }
-}
-
-function smeLongArithmeticGroupSize(encodingId: string): 1 | 2 | 4 {
-  if (encodingId.includes("4x")) {
-    return 4;
-  }
-  if (encodingId.includes("2x")) {
-    return 2;
-  }
-  return 1;
-}
-
-function smeLongArithmeticSecondSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
-  const fields = inst.fields!;
-  const encodingId = inst.encoding!.encodingId;
-  const sourceStart = fields.Zm ?? 0;
-
-  if (encodingId.includes("_zzi_")) {
-    return { kind: "text", text: smeIndexedSourceText(inst, lane) };
-  }
-
-  if (!encodingId.includes("_zzw_")) {
-    return { kind: "text", text: `z${sourceStart}.${lane}` };
-  }
-
-  const groupSize = smeLongArithmeticGroupSize(encodingId);
-  return { kind: "text", text: smeDotVectorGroupText(sourceStart, groupSize, lane) };
-}
-
-function smeLongArithmeticFirstSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
-  const fields = inst.fields!;
-  const encodingId = inst.encoding!.encodingId;
-  const sourceStart = fields.Zn ?? 0;
-  const groupSize = smeLongArithmeticGroupSize(encodingId);
-
-  if (encodingId.includes("_zzi_")) {
-    return { kind: "text", text: smeLongArithmeticGroupSize(encodingId) === 1
-      ? `z${sourceStart}.${lane}`
-      : smeDotVectorGroupText(sourceStart, groupSize, lane) };
-  }
-
-  if (groupSize === 1) {
-    return { kind: "text", text: `z${sourceStart}.${lane}` };
-  }
-  return { kind: "text", text: smeDotVectorGroupText(sourceStart, groupSize, lane) };
-}
-
-function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const lane = smeLongArithmeticLane(inst);
-  const srcLane = smeInt16LongArithmeticFiles(inst.encoding!.fileName) ? "h" : smeLongArithmeticSourceLane(lane);
-  const za = {
-    kind: "text",
-    text: smeInt16LongArithmeticFiles(inst.encoding!.fileName)
-      ? smeFloatLongArithmeticZaText(inst)
-      : smeLongArithmeticZaText(inst, lane),
-  } satisfies Operand;
-  const first = smeLongArithmeticFirstSource(inst, srcLane);
-  const second = smeLongArithmeticSecondSource(inst, srcLane);
-
-  switch (inst.encoding!.encodingId) {
-    case "smlal_za_zzv_1":
-    case "smlal_za_zzv_2x1":
-    case "smlal_za_zzv_4x1":
-    case "smlall_za_zzv_1":
-    case "smlall_za_zzv_2x1":
-    case "smlall_za_zzv_4x1":
-    case "smlsl_za_zzv_1":
-    case "smlsl_za_zzv_2x1":
-    case "smlsl_za_zzv_4x1":
-    case "smlsll_za_zzv_1":
-    case "smlsll_za_zzv_2x1":
-    case "smlsll_za_zzv_4x1":
-    case "umlal_za_zzv_1":
-    case "umlal_za_zzv_2x1":
-    case "umlal_za_zzv_4x1":
-    case "umlall_za_zzv_1":
-    case "umlall_za_zzv_2x1":
-    case "umlall_za_zzv_4x1":
-    case "umlsl_za_zzv_1":
-    case "umlsl_za_zzv_2x1":
-    case "umlsl_za_zzv_4x1":
-    case "umlsll_za_zzv_1":
-    case "umlsll_za_zzv_2x1":
-    case "umlsll_za_zzv_4x1":
-    case "sumlall_za_zzv_s2x1":
-    case "sumlall_za_zzv_s4x1":
-    case "usmlall_za_zzv_s":
-    case "usmlall_za_zzv_s2x1":
-    case "usmlall_za_zzv_s4x1":
-    case "smlal_za_zzi_1":
-    case "smlal_za_zzi_2xi":
-    case "smlal_za_zzi_4xi":
-    case "smlall_za_zzi_s":
-    case "smlall_za_zzi_d":
-    case "smlall_za_zzi_s2xi":
-    case "smlall_za_zzi_d2xi":
-    case "smlall_za_zzi_s4xi":
-    case "smlall_za_zzi_d4xi":
-    case "smlsl_za_zzi_1":
-    case "smlsl_za_zzi_2xi":
-    case "smlsl_za_zzi_4xi":
-    case "smlsll_za_zzi_s":
-    case "smlsll_za_zzi_d":
-    case "smlsll_za_zzi_s2xi":
-    case "smlsll_za_zzi_d2xi":
-    case "smlsll_za_zzi_s4xi":
-    case "smlsll_za_zzi_d4xi":
-    case "umlal_za_zzi_1":
-    case "umlal_za_zzi_2xi":
-    case "umlal_za_zzi_4xi":
-    case "umlall_za_zzi_s":
-    case "umlall_za_zzi_d":
-    case "umlall_za_zzi_s2xi":
-    case "umlall_za_zzi_d2xi":
-    case "umlall_za_zzi_s4xi":
-    case "umlall_za_zzi_d4xi":
-    case "umlsl_za_zzi_1":
-    case "umlsl_za_zzi_2xi":
-    case "umlsl_za_zzi_4xi":
-    case "umlsll_za_zzi_s":
-    case "umlsll_za_zzi_d":
-    case "umlsll_za_zzi_s2xi":
-    case "umlsll_za_zzi_d2xi":
-    case "umlsll_za_zzi_s4xi":
-    case "umlsll_za_zzi_d4xi":
-    case "sumlall_za_zzi_s":
-    case "sumlall_za_zzi_s2xi":
-    case "sumlall_za_zzi_s4xi":
-    case "usmlall_za_zzi_s":
-    case "usmlall_za_zzi_s2xi":
-    case "usmlall_za_zzi_s4xi":
-    case "smlal_za_zzw_2x2":
-    case "smlal_za_zzw_4x4":
-    case "smlall_za_zzw_2x2":
-    case "smlall_za_zzw_4x4":
-    case "smlsl_za_zzw_2x2":
-    case "smlsl_za_zzw_4x4":
-    case "smlsll_za_zzw_2x2":
-    case "smlsll_za_zzw_4x4":
-    case "umlal_za_zzw_2x2":
-    case "umlal_za_zzw_4x4":
-    case "umlall_za_zzw_2x2":
-    case "umlall_za_zzw_4x4":
-    case "umlsl_za_zzw_2x2":
-    case "umlsl_za_zzw_4x4":
-    case "umlsll_za_zzw_2x2":
-    case "umlsll_za_zzw_4x4":
-    case "usmlall_za_zzw_s2x2":
-    case "usmlall_za_zzw_s4x4":
-      return [za, first, second];
-    default:
-      return [];
-  }
-}
-
-function smeFloatLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const srcLane = smeFloatLongArithmeticSourceLane();
-  const za = { kind: "text", text: smeFloatLongArithmeticZaText(inst) } satisfies Operand;
-  const first = smeLongArithmeticFirstSource(inst, srcLane);
-  const second = smeLongArithmeticSecondSource(inst, srcLane);
-
-  switch (inst.encoding!.encodingId) {
-    case "bfmlal_za_zzv_1":
-    case "bfmlal_za_zzv_2x1":
-    case "bfmlal_za_zzv_4x1":
-    case "bfmlal_za_zzi_1":
-    case "bfmlal_za_zzi_2xi":
-    case "bfmlal_za_zzi_4xi":
-    case "bfmlal_za_zzw_2x2":
-    case "bfmlal_za_zzw_4x4":
-    case "bfmlsl_za_zzv_1":
-    case "bfmlsl_za_zzv_2x1":
-    case "bfmlsl_za_zzv_4x1":
-    case "bfmlsl_za_zzi_1":
-    case "bfmlsl_za_zzi_2xi":
-    case "bfmlsl_za_zzi_4xi":
-    case "bfmlsl_za_zzw_2x2":
-    case "bfmlsl_za_zzw_4x4":
-    case "fmlal_za_zzv_1":
-    case "fmlal_za_zzv_2x1":
-    case "fmlal_za_zzv_4x1":
-    case "fmlal_za_zzi_1":
-    case "fmlal_za_zzi_2xi":
-    case "fmlal_za_zzi_4xi":
-    case "fmlal_za_zzw_2x2":
-    case "fmlal_za_zzw_4x4":
-    case "fmlsl_za_zzv_1":
-    case "fmlsl_za_zzv_2x1":
-    case "fmlsl_za_zzv_4x1":
-    case "fmlsl_za_zzi_1":
-    case "fmlsl_za_zzi_2xi":
-    case "fmlsl_za_zzi_4xi":
-    case "fmlsl_za_zzw_2x2":
-    case "fmlsl_za_zzw_4x4":
-      return [za, first, second];
-    default:
-      return [];
-  }
-}
-
-function smeFp8LongArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const za = { kind: "text", text: smeFp8LongArithmeticZaText(inst) } satisfies Operand;
-  const first = smeLongArithmeticFirstSource(inst, "b");
-  const second = smeLongArithmeticSecondSource(inst, "b");
-
-  switch (inst.encoding!.encodingId) {
-    case "fmlal_za_z8z8v_1":
-    case "fmlal_za_z8z8v_2x1":
-    case "fmlal_za_z8z8v_4x1":
-    case "fmlal_za_z8z8i_1":
-    case "fmlal_za_z8z8i_2xi":
-    case "fmlal_za_z8z8i_4xi":
-    case "fmlal_za_z8z8w_2x2":
-    case "fmlal_za_z8z8w_4x4":
-    case "fmlall_za32_z8z8v_1":
-    case "fmlall_za32_z8z8v_2x1":
-    case "fmlall_za32_z8z8v_4x1":
-    case "fmlall_za32_z8z8i_1":
-    case "fmlall_za32_z8z8i_2xi":
-    case "fmlall_za32_z8z8i_4xi":
-    case "fmlall_za32_z8z8w_2x2":
-    case "fmlall_za32_z8z8w_4x4":
-      return [za, first, second];
-    default:
-      return [];
-  }
-}
-
-function smeArithmeticSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
-  const fields = inst.fields!;
-  const count = smeDotGroupCount(inst.encoding!.className);
-  switch (inst.encoding!.fileName) {
-    case "add_za_zzv.xml":
-    case "sub_za_zzv.xml":
-    case "smax_mz_zzv.xml":
-    case "smin_mz_zzv.xml":
-    case "umax_mz_zzv.xml":
-    case "umin_mz_zzv.xml":
-    case "bfmax_mz_zzv.xml":
-    case "bfmaxnm_mz_zzv.xml":
-    case "bfmin_mz_zzv.xml":
-    case "bfminnm_mz_zzv.xml":
-    case "fmax_mz_zzv.xml":
-    case "famax_mz_zzv.xml":
-    case "fmaxnm_mz_zzv.xml":
-    case "fmin_mz_zzv.xml":
-    case "famin_mz_zzv.xml":
-    case "fminnm_mz_zzv.xml":
-    case "fscale_mz_zzv.xml":
-    case "sqdmulh_mz_zzv.xml":
-    case "srshl_mz_zzv.xml":
-    case "urshl_mz_zzv.xml":
-    case "add_za_zzw.xml":
-    case "sub_za_zzw.xml":
-    case "smax_mz_zzw.xml":
-    case "smin_mz_zzw.xml":
-    case "umax_mz_zzw.xml":
-    case "umin_mz_zzw.xml":
-    case "bfmax_mz_zzw.xml":
-    case "bfmaxnm_mz_zzw.xml":
-    case "bfmin_mz_zzw.xml":
-    case "bfminnm_mz_zzw.xml":
-    case "fmax_mz_zzw.xml":
-    case "famax_mz_zzw.xml":
-    case "fmaxnm_mz_zzw.xml":
-    case "fmin_mz_zzw.xml":
-    case "famin_mz_zzw.xml":
-    case "fminnm_mz_zzw.xml":
-    case "fscale_mz_zzw.xml":
-    case "sqdmulh_mz_zzw.xml":
-    case "srshl_mz_zzw.xml":
-    case "urshl_mz_zzw.xml":
-    case "add_za_zw.xml":
-    case "sub_za_zw.xml":
-    case "fmla_za_zzw.xml":
-    case "fmls_za_zzw.xml":
-    case "bfmla_za_zzw.xml":
-    case "bfmls_za_zzw.xml":
-      return (fields[fieldName] ?? 0) * count;
-    case "fadd_za_zw.xml":
-    case "fsub_za_zw.xml":
-    case "bfadd_za_zw.xml":
-    case "bfsub_za_zw.xml":
-      return (fields.Zm ?? 0) * count;
-    case "fmla_za_zzv.xml":
-    case "fmls_za_zzv.xml":
-    case "bfmla_za_zzv.xml":
-    case "bfmls_za_zzv.xml":
-      return fields[fieldName] ?? 0;
-    case "fmla_za_zzi.xml":
-    case "fmls_za_zzi.xml":
-    case "bfmla_za_zzi.xml":
-    case "bfmls_za_zzi.xml":
-      return fieldName === "Zn" ? (fields.Zn ?? 0) * count : (fields.Zm ?? 0);
-    default:
-      return fields[fieldName] ?? 0;
-  }
-}
-
-function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const count = smeDotGroupCount(inst.encoding!.className);
-  const lane = smeAccumulatorLane(inst);
-  const za = { kind: "text", text: smeZaText(fields, count, lane) } satisfies Operand;
-  const first = {
-    kind: "text",
-    text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zn"), count, lane),
-  } satisfies Operand;
-
-  switch (inst.encoding!.fileName) {
-    case "add_za_zzv.xml":
-    case "sub_za_zzv.xml":
-    case "smax_mz_zzv.xml":
-    case "smin_mz_zzv.xml":
-    case "umax_mz_zzv.xml":
-    case "umin_mz_zzv.xml":
-    case "bfmax_mz_zzv.xml":
-    case "bfmaxnm_mz_zzv.xml":
-    case "bfmin_mz_zzv.xml":
-    case "bfminnm_mz_zzv.xml":
-    case "fmax_mz_zzv.xml":
-    case "famax_mz_zzv.xml":
-    case "fmaxnm_mz_zzv.xml":
-    case "fmin_mz_zzv.xml":
-    case "famin_mz_zzv.xml":
-    case "fminnm_mz_zzv.xml":
-    case "fscale_mz_zzv.xml":
-    case "sqdmulh_mz_zzv.xml":
-    case "srshl_mz_zzv.xml":
-    case "urshl_mz_zzv.xml":
-      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
-    case "add_za_zw.xml":
-    case "sub_za_zw.xml":
-    case "add_za_zzw.xml":
-    case "sub_za_zzw.xml":
-    case "smax_mz_zzw.xml":
-    case "smin_mz_zzw.xml":
-    case "umax_mz_zzw.xml":
-    case "umin_mz_zzw.xml":
-    case "bfmax_mz_zzw.xml":
-    case "bfmaxnm_mz_zzw.xml":
-    case "bfmin_mz_zzw.xml":
-    case "bfminnm_mz_zzw.xml":
-    case "fmax_mz_zzw.xml":
-    case "famax_mz_zzw.xml":
-    case "fmaxnm_mz_zzw.xml":
-    case "fmin_mz_zzw.xml":
-    case "famin_mz_zzw.xml":
-    case "fminnm_mz_zzw.xml":
-    case "fscale_mz_zzw.xml":
-    case "sqdmulh_mz_zzw.xml":
-    case "srshl_mz_zzw.xml":
-    case "urshl_mz_zzw.xml":
-      return [
-        za,
-        first,
-        { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) },
-      ];
-    case "fadd_za_zw.xml":
-    case "fsub_za_zw.xml":
-    case "bfadd_za_zw.xml":
-    case "bfsub_za_zw.xml":
-      return [za, { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) }];
-    case "fmla_za_zzv.xml":
-    case "fmls_za_zzv.xml":
-    case "bfmla_za_zzv.xml":
-    case "bfmls_za_zzv.xml":
-      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` }];
-    case "fmla_za_zzi.xml":
-    case "fmls_za_zzi.xml":
-    case "bfmla_za_zzi.xml":
-    case "bfmls_za_zzi.xml":
-      return [za, first, { kind: "text", text: smeIndexedSourceText(inst, lane) }];
-    case "fmla_za_zzw.xml":
-    case "fmls_za_zzw.xml":
-    case "bfmla_za_zzw.xml":
-    case "bfmls_za_zzw.xml":
-      return [
-        za,
-        first,
-        { kind: "text", text: smeDotVectorGroupText(smeArithmeticSourceStart(inst, "Zm"), count, lane) },
-      ];
-    default:
-      return [];
-  }
-}
 
 function smeOuterProductLane(inst: DecodedInstruction): "h" | "s" | "d" {
   switch (inst.encoding!.className) {
@@ -5943,7 +5291,7 @@ function smeOuterProductLane(inst: DecodedInstruction): "h" | "s" | "d" {
 function smeOuterProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   let lane = smeOuterProductLane(inst);
-  let sourceLane = lane;
+  let sourceLane: "b" | "h" | "s" | "d" = lane;
   switch (inst.encoding!.fileName) {
     case "sumopa_za_pp_zz.xml":
     case "sumops_za_pp_zz.xml":
@@ -5958,7 +5306,7 @@ function smeOuterProductOperands(inst: DecodedInstruction): Operand[] {
     case "umopa_za32_pp_zz.xml":
     case "umops_za32_pp_zz.xml":
       lane = inst.encoding!.fileName.includes("za32") ? "s" : inst.encoding!.className.includes("64-bit") ? "d" : "s";
-      sourceLane = lane === "d" ? "s" : "h";
+      sourceLane = inst.encoding!.fileName.includes("za32") ? "h" : lane === "d" ? "h" : "b";
       break;
     case "bmopa_za_pp_zz.xml":
     case "bmops_za_pp_zz.xml":
@@ -5982,7 +5330,7 @@ function smeOuterProductOperands(inst: DecodedInstruction): Operand[] {
       break;
   }
   return [
-    { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
+    { kind: "za", index: fields.ZAda ?? 0, lane },
     predReg(fields.Pn ?? 0, "m"),
     predReg(fields.Pm ?? 0, "m"),
     vecReg(fields.Zn ?? 0, sourceLane),
@@ -5994,7 +5342,7 @@ function smeSliceAccumulatorOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = smeDotAccumulatorLane(inst);
   return [
-    { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
+    { kind: "za", index: fields.ZAda ?? 0, lane },
     predReg(fields.Pn ?? 0, "m"),
     predReg(fields.Pm ?? 0, "m"),
     vecReg(fields.Zn ?? 0, lane),
@@ -6005,7 +5353,7 @@ function smeFp8OuterProductOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane: "h" | "s" = inst.encoding!.fileName.includes("za16") ? "h" : "s";
   return [
-    { kind: "text", text: `za${fields.ZAda ?? 0}.${lane}` },
+    { kind: "za", index: fields.ZAda ?? 0, lane },
     predReg(fields.Pn ?? 0, "m"),
     predReg(fields.Pm ?? 0, "m"),
     vecReg(fields.Zn ?? 0, "b"),
@@ -6036,7 +5384,7 @@ function smePermutationOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const lane = inst.encoding!.className.includes("128-bit") ? "q" : sveVectorLaneFromSize(fields.size);
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 2, 2, lane) },
+    vectorGroup((fields.Zd ?? 0) * 2, 2, lane),
     vecReg(fields.Zn ?? 0, lane),
     vecReg(fields.Zm ?? 0, lane),
   ];
@@ -6046,8 +5394,8 @@ function smeVectorGroupPermutationOperands(inst: DecodedInstruction): Operand[] 
   const fields = inst.fields!;
   const lane = inst.encoding!.className.includes("128-bit") ? "q" : sveVectorLaneFromSize(fields.size);
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * 4, 4, lane) },
-    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 4, 4, lane) },
+    vectorGroup((fields.Zd ?? 0) * 4, 4, lane),
+    vectorGroup((fields.Zn ?? 0) * 4, 4, lane),
   ];
 }
 
@@ -6056,10 +5404,10 @@ function smeSelectOperands(inst: DecodedInstruction): Operand[] {
   const count = smeDotGroupCount(inst.encoding!.className);
   const lane = sveVectorLaneFromSize(fields.size);
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, lane) },
+    vectorGroup((fields.Zd ?? 0) * count, count, lane),
     { kind: "text", text: `pn${8 + (fields.PNv ?? 0)}` },
-    { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * count, count, lane) },
-    { kind: "text", text: smeVectorGroupText((fields.Zm ?? 0) * count, count, lane) },
+    vectorGroup((fields.Zn ?? 0) * count, count, lane),
+    vectorGroup((fields.Zm ?? 0) * count, count, lane),
   ];
 }
 
@@ -6080,140 +5428,15 @@ function smeUnpackOperands(inst: DecodedInstruction): Operand[] {
   const lane = sveVectorLaneFromSize(fields.size) as "h" | "s" | "d";
   const sourceLane = smeUnpackSourceLane(lane);
   const source: Operand = count === 4
-    ? { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, sourceLane) }
+    ? vectorGroup((fields.Zn ?? 0) * 2, 2, sourceLane)
     : vecReg(fields.Zn ?? 0, sourceLane);
   return [
-    { kind: "text", text: smeVectorGroupText((fields.Zd ?? 0) * count, count, lane) },
+    vectorGroup((fields.Zd ?? 0) * count, count, lane),
     source,
   ];
 }
 
-function smeDotSourceStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
-  const fields = inst.fields!;
-  switch (inst.encoding!.fileName) {
-    case "bfdot_za_zzv.xml":
-    case "fdot_za_zzv.xml":
-    case "fdot_za_z8z8v.xml":
-    case "fdot_za32_z8z8v.xml":
-    case "sudot_za_zzv.xml":
-    case "usdot_za_zzv.xml":
-    case "sdot_za32_zzv.xml":
-    case "udot_za32_zzv.xml":
-    case "sdot_za_zzv.xml":
-    case "udot_za_zzv.xml":
-      return fields[fieldName] ?? 0;
-    case "bfdot_za_zzi.xml":
-    case "fdot_za_zzi.xml":
-    case "fdot_za_z8z8i.xml":
-    case "fdot_za32_z8z8i.xml":
-    case "svdot_za_zzi.xml":
-    case "svdot_za32_zzi.xml":
-    case "fvdot_za_zzi.xml":
-    case "bfvdot_za_zzi.xml":
-    case "sudot_za_zzi.xml":
-    case "suvdot_za_zzi.xml":
-    case "uvdot_za_zzi.xml":
-    case "uvdot_za32_zzi.xml":
-    case "usdot_za_zzi.xml":
-    case "usvdot_za_zzi.xml":
-    case "sdot_za32_zzi.xml":
-    case "udot_za32_zzi.xml":
-    case "sdot_za_zzi.xml":
-    case "udot_za_zzi.xml":
-      return fieldName === "Zn" ? (fields.Zn ?? 0) * smeDotGroupCount(inst.encoding!.className) : (fields.Zm ?? 0);
-    case "fvdot_za_z8z8i.xml":
-    case "fvdot_za_zzi.xml":
-    case "bfvdot_za_zzi.xml":
-    case "fvdotb_za32_z8z8i.xml":
-    case "fvdott_za32_z8z8i.xml":
-      return fieldName === "Zn" ? (fields.Zn ?? 0) * 2 : (fields.Zm ?? 0);
-    case "bfdot_za_zzw.xml":
-    case "fdot_za_zzw.xml":
-    case "fdot_za_z8z8w.xml":
-    case "fdot_za32_z8z8w.xml":
-    case "usdot_za_zzw.xml":
-    case "sdot_za32_zzw.xml":
-    case "udot_za32_zzw.xml":
-    case "sdot_za_zzw.xml":
-    case "udot_za_zzw.xml":
-      return (fields[fieldName] ?? 0) * smeDotGroupCount(inst.encoding!.className);
-    default:
-      return fields[fieldName] ?? 0;
-  }
-}
 
-function smeDotOperands(inst: DecodedInstruction): Operand[] {
-  const fields = inst.fields!;
-  const count =
-    inst.encoding!.fileName === "fvdotb_za32_z8z8i.xml" || inst.encoding!.fileName === "fvdott_za32_z8z8i.xml"
-      ? 4
-      : smeDotGroupCount(inst.encoding!.className);
-  const firstCount =
-    inst.encoding!.fileName === "fvdot_za_z8z8i.xml" ||
-    inst.encoding!.fileName === "fvdotb_za32_z8z8i.xml" ||
-    inst.encoding!.fileName === "fvdott_za32_z8z8i.xml"
-      ? 2
-      : count;
-  const accLane = smeDotAccumulatorLane(inst);
-  const srcLane = smeDotSourceLane(inst, accLane);
-  const za = { kind: "text", text: smeZaText(fields, count, accLane) } satisfies Operand;
-  const first = {
-    kind: "text",
-    text: smeDotVectorGroupText(smeDotSourceStart(inst, "Zn"), firstCount, srcLane),
-  } satisfies Operand;
-
-  switch (inst.encoding!.fileName) {
-    case "bfdot_za_zzv.xml":
-    case "fdot_za_zzv.xml":
-    case "fdot_za_z8z8v.xml":
-    case "fdot_za32_z8z8v.xml":
-    case "sudot_za_zzv.xml":
-    case "usdot_za_zzv.xml":
-    case "sdot_za32_zzv.xml":
-    case "udot_za32_zzv.xml":
-    case "sdot_za_zzv.xml":
-    case "udot_za_zzv.xml":
-      return [za, first, { kind: "text", text: `z${fields.Zm ?? 0}.${srcLane}` }];
-    case "bfdot_za_zzi.xml":
-    case "fdot_za_zzi.xml":
-    case "fdot_za_z8z8i.xml":
-    case "fdot_za32_z8z8i.xml":
-    case "fvdot_za_z8z8i.xml":
-    case "fvdot_za_zzi.xml":
-    case "bfvdot_za_zzi.xml":
-    case "fvdotb_za32_z8z8i.xml":
-    case "fvdott_za32_z8z8i.xml":
-    case "svdot_za_zzi.xml":
-    case "svdot_za32_zzi.xml":
-    case "sudot_za_zzi.xml":
-    case "suvdot_za_zzi.xml":
-    case "uvdot_za_zzi.xml":
-    case "uvdot_za32_zzi.xml":
-    case "usdot_za_zzi.xml":
-    case "usvdot_za_zzi.xml":
-    case "sdot_za32_zzi.xml":
-    case "udot_za32_zzi.xml":
-    case "sdot_za_zzi.xml":
-    case "udot_za_zzi.xml":
-      return [za, first, { kind: "text", text: smeIndexedSourceText(inst, srcLane) }];
-    case "bfdot_za_zzw.xml":
-    case "fdot_za_zzw.xml":
-    case "fdot_za_z8z8w.xml":
-    case "fdot_za32_z8z8w.xml":
-    case "usdot_za_zzw.xml":
-    case "sdot_za32_zzw.xml":
-    case "udot_za32_zzw.xml":
-    case "sdot_za_zzw.xml":
-    case "udot_za_zzw.xml":
-      return [
-        za,
-        first,
-        { kind: "text", text: smeDotVectorGroupText(smeDotSourceStart(inst, "Zm"), count, srcLane) },
-      ];
-    default:
-      return [];
-  }
-}
 
 function rprfmOpText(fields: Record<string, number>): string {
   const operation = (((fields.option ?? 0) >> 2) << 5) | (((fields.option ?? 0) & 1) << 4) | ((fields.S ?? 0) << 3) | ((fields.Rt ?? 0) & 0x7);
@@ -6314,7 +5537,7 @@ function sveRevdOperands(inst: DecodedInstruction): Operand[] {
 
 function rdsvlOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  return [gpReg(64, fields.Rd ?? 0, "zr"), { kind: "imm", value: signExtend(fields.imm6 ?? 0, 6) }];
+  return [gpReg(64, fields.Rd ?? 0, "zr"), { kind: "imm", value: signExtend(fields.imm6 ?? 0, 6), signed: true }];
 }
 
 function sveVectorLengthGpImmediateOperands(inst: DecodedInstruction): Operand[] {
@@ -6348,7 +5571,7 @@ function svePredicateControlOperands(inst: DecodedInstruction): Operand[] {
 
 function sveTerminateConditionOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const width = widthFromSf(fields.sf);
+  const width = widthFromSf(fields.sz);
   return [gpReg(width, fields.Rn ?? 0, "zr"), gpReg(width, fields.Rm ?? 0, "zr")];
 }
 
@@ -6383,7 +5606,7 @@ function svePredicateAsCounterOperands(inst: DecodedInstruction): Operand[] {
 
 export function buildOperands(inst: DecodedInstruction): Operand[] {
   const operands = buildEncodingOperands(inst);
-  if (operands.length === 0 && operands !== INTENTIONAL_ZERO_OPERANDS) {
+  if (operands.length === 0 && !INTENTIONAL_ZERO_OPERANDS.has(operands)) {
     throw new OperandDecodeError("unsupported", `unsupported operands for ${inst.encoding?.encodingId ?? "missing encoding"}`, inst.encoding?.fileName);
   }
   return operands;
@@ -7140,6 +6363,7 @@ function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
       return advsimdImmediateShiftOperands(inst);
     case "shrn_advsimd.xml":
     case "rshrn_advsimd.xml":
+      return advsimdNarrowingImmediateShiftOperands(inst);
     case "addhn_advsimd.xml":
     case "raddhn_advsimd.xml":
     case "rsubhn_advsimd.xml":
@@ -7746,9 +6970,6 @@ function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
       return sveSelectVectorOperands(inst);
     case "add_z_zi.xml":
     case "mul_z_zi.xml":
-    case "mul_z_zzi.xml":
-    case "sqdmulh_z_zzi.xml":
-    case "sqrdmulh_z_zzi.xml":
     case "smax_z_zi.xml":
     case "smin_z_zi.xml":
     case "umax_z_zi.xml":
@@ -7760,6 +6981,10 @@ function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
     case "uqadd_z_zi.xml":
     case "uqsub_z_zi.xml":
       return sveDestructiveImmediateOperands(inst);
+    case "mul_z_zzi.xml":
+    case "sqdmulh_z_zzi.xml":
+    case "sqrdmulh_z_zzi.xml":
+      return sveBinaryIndexedOperands(inst);
     case "xar_z_zzi.xml":
       return sveXarOperands(inst);
     case "asr_z_zi.xml":
@@ -8493,7 +7718,9 @@ export function formatRegister(register: RegisterName): string {
 }
 
 function formatVectorRegister(register: VectorRegisterOperand): string {
-  return register.lane ? `z${register.index}.${register.lane}` : `z${register.index}`;
+  const lane = register.lane ? `.${register.lane}` : "";
+  const index = register.laneIndex === undefined ? "" : `[${register.laneIndex}]`;
+  return `z${register.index}${lane}${index}`;
 }
 
 function formatPredicateRegister(register: PredicateRegisterOperand): string {
@@ -8549,6 +7776,14 @@ function formatMemoryOperand(memory: MemoryOperand): string {
   return `[${base}${suffix ? `, ${suffix}` : ""}]${mode === "pre-index" ? "!" : ""}`;
 }
 
+function formatZaOperand(operand: ZaOperand): string {
+  const tile = operand.index === undefined ? "" : String(operand.index);
+  if (!operand.slice) return `za${tile}.${operand.lane}`;
+  const slice = operand.slice;
+  const range = slice.end === undefined ? `${slice.offset}` : `${slice.offset}:${slice.end}`;
+  return `za${tile}.${operand.lane}[w${slice.selector}, ${range}${slice.group ? `, vgx${slice.group}` : ""}]`;
+}
+
 export function formatOperand(operand: Operand): string {
   switch (operand.kind) {
     case "reg":
@@ -8583,6 +7818,8 @@ export function formatOperand(operand: Operand): string {
       return formatVectorGroup(operand);
     case "mem":
       return formatMemoryOperand(operand);
+    case "za":
+      return formatZaOperand(operand);
     case "text":
       return operand.text;
   }

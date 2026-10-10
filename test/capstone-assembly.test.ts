@@ -57,9 +57,9 @@ test("named system register exclusion checks the independently encoded tuple and
   assert.equal(compareCapstoneAssembly(fixture, "mrs x0").matches, false);
 });
 
-test("the reviewed ADRP reference correction preserves the full signed 33-bit offset", () => {
+test("ADRP comparison preserves the full signed 33-bit byte offset", () => {
   const fixture = { sourceFile: "basic-a64-instructions.s.yaml", caseIndex: 1340, word: 0xf07f_ffe9, asmText: "adrp x9, #4294963200" };
-  assert.ok(compareCapstoneAssembly(fixture, "adrp x9, .-0x1000").matches);
-  assert.equal(compareCapstoneAssembly(fixture, "adrp x9, .+0xfffff000").matches, false);
+  assert.ok(compareCapstoneAssembly(fixture, "adrp x9, .+0xfffff000").matches);
+  assert.equal(compareCapstoneAssembly(fixture, "adrp x9, .-0x1000").matches, false);
   assert.equal(compare("adrp x20, #-4294967296", "adrp x20, .+0x0").matches, false);
 });

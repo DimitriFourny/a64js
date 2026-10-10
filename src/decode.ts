@@ -344,6 +344,7 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     }
 
     const fields = extractFields(word, encoding);
+    let behavior: "instruction" | "nop" | "undefined" = "instruction";
 
     for (const guard of encoding.guards) {
       if (guard.all.every((check) => guardCheckMatches(fields, check, enabledFeatures))) {
@@ -352,6 +353,15 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
           ...missingFeatures(encoding, fields, enabledFeatures),
           ...guard.all.flatMap((check) => check.kind === "feature" && !check.implemented ? [check.feature] : []),
         ])];
+        // Named permanent traps and unconditional hints still have useful assembly operands.
+        if (nop && missing.length === 0) {
+          behavior = "nop";
+          break;
+        }
+        if (encoding.mnemonic === "UDF" && guard.all.length === 0) {
+          behavior = "undefined";
+          break;
+        }
         return {
           status: nop ? "ok" : "undefined", word, encoding, mnemonic: encoding.mnemonic, fields,
           ...(nop ? { operands: [], behavior: "nop" as const } : {}),
@@ -390,7 +400,7 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     const decoded: DecodedInstruction = {
       status: "ok",
       availability: "available",
-      behavior: "instruction",
+      behavior,
       word,
       encoding,
       mnemonic: encoding.mnemonic,

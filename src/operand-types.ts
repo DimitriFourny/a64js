@@ -33,3 +33,16 @@ export type MemoryOperand = {
   mode?: "offset" | "pre-index" | "post-index";
   immediateFormat?: "decimal" | "hex";
 };
+
+/** A ZA tile or a selected ZA array vector, with an optional vector group. */
+export type ZaOperand = {
+  kind: "za";
+  lane: ElementSize;
+  index?: number;
+  slice?: {
+    selector: number;
+    offset: number;
+    end?: number;
+    group?: 2 | 4;
+  };
+};

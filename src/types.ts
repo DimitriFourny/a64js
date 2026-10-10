@@ -1,5 +1,5 @@
-import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
-export type { ElementSize, MemoryModifier, MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
+import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand, ZaOperand } from "./operand-types.ts";
+export type { ElementSize, MemoryModifier, MemoryOperand, SimdRegisterOperand, VectorGroupOperand, ZaOperand } from "./operand-types.ts";
 
 export type FeatureName = string;
 
@@ -139,6 +139,7 @@ export type VectorRegisterOperand = {
   kind: "vec";
   index: number;
   lane?: "b" | "h" | "s" | "d" | "q";
+  laneIndex?: number;
 };
 
 export type PredicateRegisterOperand = {
@@ -170,6 +171,7 @@ export type Operand =
   | SimdRegisterOperand
   | VectorGroupOperand
   | MemoryOperand
+  | ZaOperand
   | TextOperand;
 
 export type DecodeStatus = "ok" | "unknown" | "undefined";
@@ -183,7 +185,7 @@ export type DecodedInstruction = {
   operands?: Operand[];
   errors?: string[];
   availability?: "available" | "unavailable";
-  behavior?: "instruction" | "nop";
+  behavior?: "instruction" | "nop" | "undefined";
 };
 
 export type DecodeOptions = {

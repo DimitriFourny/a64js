@@ -46,3 +46,10 @@ test("feature-disabled hints preserve their recognized identity and NOP behavior
   }
   assert.equal(decode(0xdac10020).status, "undefined");
 });
+
+test("named permanent traps and unconditional hints retain their assembly", () => {
+  assert.equal(disasm(0x00000201), "udf #513");
+  assert.equal(decode(0x00000201).behavior, "undefined");
+  assert.equal(disasm(0xd5032fff), "hint #127");
+  assert.equal(decode(0xd5032fff).behavior, "nop");
+});

@@ -1,5 +1,6 @@
 import { conditionSuffix, formatOperand, invertConditionCode, resolvePcRelativeOperands } from "./formatters.ts";
 import type { DecodedInstruction, FormatOptions } from "./types.ts";
+import { addressToBigInt } from "./input.ts";
 
 const BITFIELD_FILES = new Set([
   "bfm.xml",
@@ -40,6 +41,7 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
   "smull_advsimd_elt.xml",
   "umull_advsimd_elt.xml",
   "sqdmull_advsimd_elt.xml",
+  "sqdmull_advsimd_vec.xml",
   "smlal_advsimd_vec.xml",
   "umlal_advsimd_vec.xml",
   "smlsl_advsimd_vec.xml",
@@ -47,13 +49,11 @@ const ADVSIMD_WIDENING_LONG_FILES = new Set([
   "smlal_advsimd_elt.xml",
   "smlsl_advsimd_elt.xml",
   "sqdmlal_advsimd_elt.xml",
+  "sqdmlal_advsimd_vec.xml",
   "umlal_advsimd_elt.xml",
   "umlsl_advsimd_elt.xml",
   "sqdmlsl_advsimd_elt.xml",
-  "fmlal_advsimd_vec.xml",
-  "fmlsl_advsimd_vec.xml",
-  "fmlal_advsimd_elt.xml",
-  "fmlsl_advsimd_elt.xml",
+  "sqdmlsl_advsimd_vec.xml",
 ]);
 
 const ADVSIMD_UPPER_HALF_SUFFIX_FILES = new Set([
@@ -517,6 +517,11 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
   if (!fileName) {
     return decoded.mnemonic!.toLowerCase();
   }
+  if (fileName === "fmov_dup_z_i.xml") return "mov";
+  if (fileName === "orr_z_zz.xml" || fileName === "mov_orr_z_zz.xml") return operands.length === 2 ? "mov" : "orr";
+  if (fileName === "mov_orr_advsimd_reg.xml" && decoded.fields?.Rn !== decoded.fields?.Rm) return "orr";
+  if (fileName === "dup_advsimd_elt.xml") return decoded.encoding!.className.toLowerCase().includes("vector") ? "dup" : "mov";
+  if (["autiasppcr.xml", "autibsppcr.xml", "retasppcr_reg.xml"].includes(fileName)) return decoded.mnemonic!.toLowerCase().replace(/r$/, "");
 
   if (["fcpy_z_p_i.xml", "fdup_z_i.xml"].includes(fileName)) {
     return "fmov";
@@ -540,7 +545,6 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
     "dup_z_r.xml",
     "ins_advsimd_gen.xml",
     "ins_advsimd_elt.xml",
-    "dup_advsimd_elt.xml",
     "mov_umov_advsimd.xml",
   ].includes(fileName)) {
     return "mov";
@@ -634,8 +638,6 @@ function preferredMnemonic(decoded: DecodedInstruction, operands: NonNullable<De
       "mov_and_p_p_pp.xml",
       "orr_p_p_pp.xml",
       "mov_orr_p_p_pp.xml",
-      "orr_z_zz.xml",
-      "mov_orr_z_zz.xml",
       "sel_p_p_pp.xml",
       "mov_sel_p_p_pp.xml",
       "sel_z_p_zz.xml",
@@ -680,11 +682,11 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return formatUnknown(decoded.word);
   }
 
-  if (decoded.behavior === "nop") {
+  if (decoded.behavior === "nop" && decoded.availability === "unavailable") {
     return "nop";
   }
 
-  const pc = options.pc === undefined ? undefined : BigInt(options.pc);
+  const pc = options.pc === undefined ? undefined : addressToBigInt(options.pc);
   const operands = resolvePcRelativeOperands(decoded.operands ?? [], pc);
 
   const multiplyAlias = formatMultiplyAlias({ ...decoded, operands });

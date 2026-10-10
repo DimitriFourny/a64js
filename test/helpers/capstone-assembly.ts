@@ -155,15 +155,7 @@ export function canonicalizeCapstoneAssembly(text: string): string {
 /** Compare independent fixture assembly, preserving registers, lanes, widths, and all nondefault operands. */
 export function compareCapstoneAssembly(reference: CapstoneReferenceCase, actualText: string): AssemblyComparison {
   const equivalences = new Set<string>();
-  let expectedText = reference.asmText;
-  // Reviewed fixture defect: ADRP's 33-bit signed byte offset was printed as unsigned 32-bit.
-  // adrp.xml Decode: SignExtend(immhi::immlo::Zeros(12)); f07fffe9 encodes -4096.
-  if (reference.sourceFile === "basic-a64-instructions.s.yaml" && reference.caseIndex === 1340 &&
-      reference.word === 0xf07f_ffe9 && reference.asmText === "adrp x9, #4294963200") {
-    expectedText = "adrp x9, #-4096";
-    equivalences.add("reviewed-reference-adrp-signed-offset");
-  }
-  const expected = canonicalAssembly(expectedText, equivalences);
+  const expected = canonicalAssembly(reference.asmText, equivalences);
   const actual = canonicalAssembly(actualText, equivalences);
   let exclusion: AssemblyComparison["exclusion"];
   if (reference.sourceFile === "apple_proprietary.yaml") {

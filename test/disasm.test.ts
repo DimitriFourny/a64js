@@ -965,18 +965,18 @@ test("decodes SME2 ADD destructive multi-vector arithmetic forms", () => {
 
 test("decodes SME2 BFMAX/BFMIN multi-vector arithmetic forms", () => {
   const options = { features: ["FEAT_SME2", "FEAT_SVE_B16B16"] };
-  assert.equal(disasm(3240141056, undefined, options), "bfmax za.h[w8, 0, vgx2], { z0.h, z1.h }, z0.h");
-  assert.equal(disasm(3240145184, undefined, options), "bfmaxnm za.h[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }");
-  assert.equal(disasm(3240141057, undefined, options), "bfmin za.h[w8, 0, vgx2], { z0.h, z1.h }, z0.h");
-  assert.equal(disasm(3240145185, undefined, options), "bfminnm za.h[w8, 0, vgx2], { z0.h, z1.h }, { z0.h, z1.h }");
+  assert.equal(disasm(3240141056, undefined, options), "bfmax { z0.h, z1.h }, { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3240145184, undefined, options), "bfmaxnm { z0.h, z1.h }, { z0.h, z1.h }, { z0.h, z1.h }");
+  assert.equal(disasm(3240141057, undefined, options), "bfmin { z0.h, z1.h }, { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3240145185, undefined, options), "bfminnm { z0.h, z1.h }, { z0.h, z1.h }, { z0.h, z1.h }");
 });
 
 test("decodes SME2 floating max/min multi-vector arithmetic forms", () => {
   const options = { features: ["FEAT_SME2"] };
-  assert.equal(disasm(3244335360, undefined, options), "fmax za.h[w8, 0, vgx2], { z0.h, z1.h }, z0.h");
-  assert.equal(disasm(3252728064, undefined, options), "fmax za.d[w8, 0, vgx2], { z0.d, z1.d }, { z0.d, z1.d }");
-  assert.equal(disasm(3244335393, undefined, options), "fminnm za.h[w8, 0, vgx2], { z0.h, z1.h }, z0.h");
-  assert.equal(disasm(3252728097, undefined, options), "fminnm za.d[w8, 0, vgx2], { z0.d, z1.d }, { z0.d, z1.d }");
+  assert.equal(disasm(3244335360, undefined, options), "fmax { z0.h, z1.h }, { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3252728064, undefined, options), "fmax { z0.d, z1.d }, { z0.d, z1.d }, { z0.d, z1.d }");
+  assert.equal(disasm(3244335393, undefined, options), "fminnm { z0.h, z1.h }, { z0.h, z1.h }, z0.h");
+  assert.equal(disasm(3252728097, undefined, options), "fminnm { z0.d, z1.d }, { z0.d, z1.d }, { z0.d, z1.d }");
 });
 
 test("decodes SME2 ZIP and UZP multi-vector permutation forms", () => {
@@ -1101,7 +1101,8 @@ test("decodes AdvSIMD move-immediate and move-alias forms", () => {
   assert.equal(disasm(0x0ebf1fe0, undefined, options), "mov v0.8b, v31.8b");
 });
 
-test("marks feature-gated PAuth instructions undefined when features are disabled", () => {
+test("feature-disabled PAuth hints execute as NOP", () => {
   const decoded = decode(0xd503233f);
-  assert.equal(decoded.status, "undefined");
+  assert.equal(decoded.status, "ok");
+  assert.equal(decoded.behavior, "nop");
 });
