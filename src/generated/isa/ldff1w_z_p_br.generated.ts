@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   },
   {
     "instructionId": "ldff1w_z_p_br",
@@ -105,6 +106,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   }
 ];

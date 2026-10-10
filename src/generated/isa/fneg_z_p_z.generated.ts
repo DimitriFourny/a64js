@@ -74,7 +74,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "fneg_z_p_z",
@@ -149,6 +150,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   }
 ];

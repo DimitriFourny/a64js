@@ -64,22 +64,6 @@ export type FeatureGuard = {
   all: GuardCheck[];
 };
 
-export type OperandWidthSpec = 32 | 64 | "sf";
-
-export type GpRegisterOperandAction = {
-  kind: "gp-reg";
-  field: string;
-  width: OperandWidthSpec;
-  zeroName: "zr" | "sp";
-};
-
-export type OperandAction = GpRegisterOperandAction;
-
-export type OperandSchema = {
-  id: string;
-  actions: OperandAction[];
-};
-
 export type GeneratedEncoding = {
   instructionId: string;
   encodingId: string;

@@ -47,7 +47,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-matrix-multiply"
   },
   {
     "instructionId": "fmmla_z_zzz",
@@ -105,7 +106,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-matrix-multiply"
   },
   {
     "instructionId": "fmmla_z_zzz",
@@ -153,6 +155,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-matrix-multiply"
   }
 ];

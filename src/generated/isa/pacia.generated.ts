@@ -37,7 +37,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "PACIA",
@@ -75,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "PACIA",
@@ -113,7 +115,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "PACIA",
@@ -190,7 +193,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "PACIA",
@@ -267,6 +271,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   }
 ];

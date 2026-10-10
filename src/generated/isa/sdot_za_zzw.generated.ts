@@ -74,7 +74,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-dot"
   },
   {
     "instructionId": "sdot_za_zzw",
@@ -149,6 +150,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-dot"
   }
 ];

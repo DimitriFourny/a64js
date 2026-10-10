@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sdot-z-zzz"
   },
   {
     "instructionId": "sdot_z32_zzz",
@@ -110,6 +111,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sdot-z-zzz"
   }
 ];

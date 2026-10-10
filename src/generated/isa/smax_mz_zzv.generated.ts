@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "smax_mz_zzv",
@@ -105,6 +106,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   }
 ];

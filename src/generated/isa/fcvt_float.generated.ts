@@ -91,7 +91,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   },
   {
     "instructionId": "FCVT_float",
@@ -183,7 +184,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   },
   {
     "instructionId": "FCVT_float",
@@ -275,7 +277,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   },
   {
     "instructionId": "FCVT_float",
@@ -367,7 +370,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   },
   {
     "instructionId": "FCVT_float",
@@ -459,7 +463,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   },
   {
     "instructionId": "FCVT_float",
@@ -551,6 +556,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-convert-precision"
   }
 ];

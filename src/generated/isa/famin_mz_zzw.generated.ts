@@ -74,7 +74,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-multi-vector-arithmetic"
   },
   {
     "instructionId": "famin_mz_zzw",
@@ -149,6 +150,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-multi-vector-arithmetic"
   }
 ];

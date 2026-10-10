@@ -99,7 +99,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-ternary"
   },
   {
     "instructionId": "FNMADD_float",
@@ -199,7 +200,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-ternary"
   },
   {
     "instructionId": "FNMADD_float",
@@ -299,6 +301,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-ternary"
   }
 ];

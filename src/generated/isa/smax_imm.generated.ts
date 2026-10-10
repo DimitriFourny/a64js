@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "min-max-immediate"
   },
   {
     "instructionId": "SMAX_imm",
@@ -125,6 +126,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "min-max-immediate"
   }
 ];

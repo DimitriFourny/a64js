@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "ST3_advsimd_mult",
@@ -120,7 +121,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "ST3_advsimd_mult",
@@ -183,6 +185,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   }
 ];

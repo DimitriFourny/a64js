@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-permutation"
   },
   {
     "instructionId": "trn1_z_zz",
@@ -105,7 +106,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-permutation"
   },
   {
     "instructionId": "trn1_z_zz",
@@ -163,7 +165,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-permutation"
   },
   {
     "instructionId": "trn1_z_zz",
@@ -221,6 +224,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-permutation"
   }
 ];

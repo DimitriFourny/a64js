@@ -128,7 +128,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "SBFM_32M_bitfield",
-    "canonicalFileName": "sbfm.xml"
+    "canonicalFileName": "sbfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   },
   {
     "instructionId": "SXTB_SBFM",
@@ -257,6 +258,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "SBFM_64M_bitfield",
-    "canonicalFileName": "sbfm.xml"
+    "canonicalFileName": "sbfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   }
 ];

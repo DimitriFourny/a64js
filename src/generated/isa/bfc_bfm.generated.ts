@@ -130,7 +130,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "BFM_32M_bitfield",
-    "canonicalFileName": "bfm.xml"
+    "canonicalFileName": "bfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   },
   {
     "instructionId": "BFC_BFM",
@@ -261,6 +262,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "BFM_64M_bitfield",
-    "canonicalFileName": "bfm.xml"
+    "canonicalFileName": "bfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   }
 ];

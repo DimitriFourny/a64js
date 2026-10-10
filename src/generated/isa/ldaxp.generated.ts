@@ -53,7 +53,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "Rt == Rt2 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rt == Rt2 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "exclusive-pair"
   },
   {
     "instructionId": "LDAXP",
@@ -107,6 +108,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "Rt == Rt2 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rt == Rt2 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "exclusive-pair"
   }
 ];

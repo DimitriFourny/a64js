@@ -59,7 +59,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "move-wide"
   },
   {
     "instructionId": "MOVZ",
@@ -119,6 +120,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "move-wide"
   }
 ];

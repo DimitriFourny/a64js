@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary"
   },
   {
     "instructionId": "UCVTF_advsimd_int",
@@ -130,7 +131,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary"
   },
   {
     "instructionId": "UCVTF_advsimd_int",
@@ -183,7 +185,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary"
   },
   {
     "instructionId": "UCVTF_advsimd_int",
@@ -262,6 +265,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary"
   }
 ];

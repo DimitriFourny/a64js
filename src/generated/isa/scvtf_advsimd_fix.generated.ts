@@ -86,7 +86,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary-with-immediate"
   },
   {
     "instructionId": "SCVTF_advsimd_fix",
@@ -199,6 +200,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-unary-with-immediate"
   }
 ];

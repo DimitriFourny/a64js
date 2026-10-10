@@ -59,7 +59,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-luti-mixed"
   },
   {
     "instructionId": "luti4_mz4_ztmz2",
@@ -134,6 +135,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-luti-mixed"
   }
 ];

@@ -54,7 +54,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz2_za_b1",
-    "canonicalFileName": "mova_mz2_za.xml"
+    "canonicalFileName": "mova_mz2_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -109,7 +110,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz2_za_d1",
-    "canonicalFileName": "mova_mz2_za.xml"
+    "canonicalFileName": "mova_mz2_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -169,7 +171,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz2_za_h1",
-    "canonicalFileName": "mova_mz2_za.xml"
+    "canonicalFileName": "mova_mz2_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -229,6 +232,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz2_za_w1",
-    "canonicalFileName": "mova_mz2_za.xml"
+    "canonicalFileName": "mova_mz2_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors"
   }
 ];

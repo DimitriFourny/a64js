@@ -76,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "PACDB",
@@ -153,6 +154,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   }
 ];

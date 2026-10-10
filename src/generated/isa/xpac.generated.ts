@@ -37,7 +37,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "xpac"
   },
   {
     "instructionId": "XPAC",
@@ -95,7 +96,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "xpac"
   },
   {
     "instructionId": "XPAC",
@@ -153,6 +155,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "xpac"
   }
 ];

@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-narrow"
   },
   {
     "instructionId": "FCVTXN_advsimd",
@@ -110,6 +111,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-narrow"
   }
 ];

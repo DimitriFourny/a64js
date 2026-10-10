@@ -79,7 +79,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-floating-pairwise"
   },
   {
     "instructionId": "FMINP_advsimd_pair",
@@ -137,6 +138,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-floating-pairwise"
   }
 ];

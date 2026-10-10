@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "bfmla_za_zzv",
@@ -115,6 +116,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   }
 ];

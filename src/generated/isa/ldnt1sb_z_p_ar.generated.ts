@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-signed-nontemporal-vector-base-load"
   },
   {
     "instructionId": "ldnt1sb_z_p_ar",
@@ -115,6 +116,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-signed-nontemporal-vector-base-load"
   }
 ];

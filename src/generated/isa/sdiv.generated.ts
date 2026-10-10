@@ -44,7 +44,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "two-source-integer"
   },
   {
     "instructionId": "SDIV",
@@ -89,6 +90,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "two-source-integer"
   }
 ];

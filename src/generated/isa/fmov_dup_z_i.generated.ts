@@ -80,6 +80,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "dup_z_i_",
-    "canonicalFileName": "dup_z_i.xml"
+    "canonicalFileName": "dup_z_i.xml",
+    "operandFamilyId": "sve-fdup"
   }
 ];

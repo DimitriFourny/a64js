@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fmul-indexed"
   },
   {
     "instructionId": "fmul_z_zzi",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fmul-indexed"
   },
   {
     "instructionId": "fmul_z_zzi",
@@ -188,6 +190,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fmul-indexed"
   }
 ];

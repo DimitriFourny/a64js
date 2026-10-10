@@ -91,7 +91,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-saturating-rounding-doubling-multiply"
   },
   {
     "instructionId": "SQRDMLAH_advsimd_elt",
@@ -188,6 +189,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-saturating-rounding-doubling-multiply"
   }
 ];

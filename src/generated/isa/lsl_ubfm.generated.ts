@@ -128,7 +128,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "UBFM_32M_bitfield",
-    "canonicalFileName": "ubfm.xml"
+    "canonicalFileName": "ubfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   },
   {
     "instructionId": "LSL_UBFM",
@@ -257,6 +258,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "UBFM_64M_bitfield",
-    "canonicalFileName": "ubfm.xml"
+    "canonicalFileName": "ubfm.xml",
+    "operandFamilyId": "bitfield-immediate"
   }
 ];

@@ -49,7 +49,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "load-exclusive"
   },
   {
     "instructionId": "LDAXR",
@@ -99,6 +100,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "load-exclusive"
   }
 ];

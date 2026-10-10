@@ -42,7 +42,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-zero-single-vector"
   },
   {
     "instructionId": "zero_za1_ri",
@@ -85,6 +86,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-zero-single-vector"
   }
 ];

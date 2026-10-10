@@ -42,7 +42,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-int-float-convert"
   },
   {
     "instructionId": "fcvtzu_mz_z",
@@ -85,6 +86,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-int-float-convert"
   }
 ];

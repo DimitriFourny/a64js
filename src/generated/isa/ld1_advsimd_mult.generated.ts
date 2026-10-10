@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -115,7 +116,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -173,7 +175,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -231,7 +234,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -294,7 +298,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -357,7 +362,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -420,7 +426,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -483,7 +490,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -546,7 +554,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -609,7 +618,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -672,7 +682,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   },
   {
     "instructionId": "LD1_advsimd_mult",
@@ -735,6 +746,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-multiple-structure"
   }
 ];

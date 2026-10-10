@@ -59,6 +59,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "SUBPS_64S_dp_2src",
-    "canonicalFileName": "subps.xml"
+    "canonicalFileName": "subps.xml",
+    "operandFamilyId": "mte-subtract-pointer"
   }
 ];

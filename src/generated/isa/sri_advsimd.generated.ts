@@ -69,7 +69,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-immediate-shift"
   },
   {
     "instructionId": "SRI_advsimd",
@@ -153,6 +154,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-immediate-shift"
   }
 ];

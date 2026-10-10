@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-long-arithmetic"
   },
   {
     "instructionId": "fmlal_za_z8z8v",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-long-arithmetic"
   },
   {
     "instructionId": "fmlal_za_z8z8v",
@@ -173,6 +175,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-fp8-long-arithmetic"
   }
 ];

@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "LD1R_advsimd",
@@ -145,7 +146,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "LD1R_advsimd",
@@ -218,6 +220,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   }
 ];

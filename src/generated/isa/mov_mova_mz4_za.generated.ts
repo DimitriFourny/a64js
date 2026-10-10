@@ -54,7 +54,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz4_za_b1",
-    "canonicalFileName": "mova_mz4_za.xml"
+    "canonicalFileName": "mova_mz4_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors-mov-mova-mz4-za"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -114,7 +115,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz4_za_h1",
-    "canonicalFileName": "mova_mz4_za.xml"
+    "canonicalFileName": "mova_mz4_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors-mov-mova-mz4-za"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -169,7 +171,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_mz4_za_w1",
-    "canonicalFileName": "mova_mz4_za.xml"
+    "canonicalFileName": "mova_mz4_za.xml",
+    "operandFamilyId": "mova-slice-to-vectors-mov-mova-mz4-za"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -227,6 +230,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "canonicalFileName": "mova_mz4_za.xml",
     "guardDiagnostics": [
       "MaxImplementedSVL() < 256: maximum streaming vector length is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "mova-slice-to-vectors-mov-mova-mz4-za"
   }
 ];

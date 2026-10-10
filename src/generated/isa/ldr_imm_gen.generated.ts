@@ -44,7 +44,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDR_imm_gen",
@@ -89,7 +90,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDR_imm_gen",
@@ -134,7 +136,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDR_imm_gen",
@@ -179,7 +182,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDR_imm_gen",
@@ -224,7 +228,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDR_imm_gen",
@@ -269,6 +274,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "scalar-load-store"
   }
 ];

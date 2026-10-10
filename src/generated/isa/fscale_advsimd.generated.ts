@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   },
   {
     "instructionId": "FSCALE_advsimd",
@@ -144,6 +145,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   }
 ];

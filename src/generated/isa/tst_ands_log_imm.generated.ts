@@ -71,7 +71,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ANDS_32S_log_imm",
-    "canonicalFileName": "ands_log_imm.xml"
+    "canonicalFileName": "ands_log_imm.xml",
+    "operandFamilyId": "logical-immediate"
   },
   {
     "instructionId": "TST_ANDS_log_imm",
@@ -143,6 +144,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ANDS_64S_log_imm",
-    "canonicalFileName": "ands_log_imm.xml"
+    "canonicalFileName": "ands_log_imm.xml",
+    "operandFamilyId": "logical-immediate"
   }
 ];

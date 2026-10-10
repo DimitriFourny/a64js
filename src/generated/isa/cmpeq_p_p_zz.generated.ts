@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zz",
@@ -145,7 +146,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zz",
@@ -218,7 +220,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zz",
@@ -291,7 +294,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zz",
@@ -364,7 +368,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zz",
@@ -437,6 +442,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   }
 ];

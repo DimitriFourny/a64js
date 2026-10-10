@@ -1,11 +1,13 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { decode, disasm, format } from "../src/index.ts";
-import { buildOperands, formatOperand } from "../src/formatters.ts";
+import { buildOperands, formatOperand, getOperandFamilyId, listOperandFamilies } from "../src/formatters.ts";
 import { OperandDecodeError } from "../src/operand-errors.ts";
+import { OperandFamilyRegistry } from "../src/operand-registry.ts";
 import { vectorGroup } from "../src/operand-schemas.ts";
 import type { DecodedInstruction, GeneratedEncoding } from "../src/types.ts";
 import { SUPPORTED_CAPSTONE_CASES } from "./generated/capstone/index.generated.ts";
+import { SUPPORTED_FILES } from "../tools/supported-files.ts";
 
 const RESTORED_OPERAND_FILES = new Set([
   "bfcvt_float", "autiasppcr", "autibsppcr", "retasppcr_reg", "famax_mz_zzw", "famin_mz_zzw",
@@ -99,6 +101,52 @@ function synthetic(fileName: string, fields: Record<string, number> = {}): Decod
   };
   return { status: "ok", word: 0, encoding, mnemonic: "TEST", fields };
 }
+
+test("every supported XML has an explicit operand family with immutable coverage metadata", () => {
+  const families = listOperandFamilies();
+  assert.ok(Object.isFrozen(families));
+  const fileFamilies = new Map<string, string>();
+  for (const family of families) {
+    assert.ok(Object.isFrozen(family));
+    assert.ok(Object.isFrozen(family.files));
+    for (const file of family.files) {
+      assert.ok(!fileFamilies.has(file), `duplicate coverage for ${file}`);
+      fileFamilies.set(file, family.id);
+    }
+  }
+  for (const file of SUPPORTED_FILES) {
+    assert.ok(fileFamilies.has(file), `missing operand implementation for ${file}`);
+    assert.equal(getOperandFamilyId(file), fileFamilies.get(file));
+  }
+  assert.equal(getOperandFamilyId("unimplemented.xml"), undefined);
+  assert.equal(getOperandFamilyId("nop.xml"), "no-operands");
+});
+
+test("operand family registration rejects conflicting ids and file ownership", () => {
+  const build = () => [{ kind: "imm" as const, value: 0n }];
+  assert.throws(() => new OperandFamilyRegistry([
+    { id: "one", files: ["one.xml"], build },
+    { id: "one", files: ["two.xml"], build },
+  ]), /duplicate operand family id: one/);
+  assert.throws(() => new OperandFamilyRegistry([
+    { id: "one", files: ["same.xml"], build },
+    { id: "two", files: ["same.xml"], build },
+  ]), /duplicate operand family file: same.xml/);
+  assert.throws(() => new OperandFamilyRegistry([{ id: "empty", files: [], build }]), /at least one file/);
+});
+
+test("generated family ids select their handler and reject unknown or mismatched metadata", () => {
+  const instruction = synthetic("bfcvt_float.xml", { Rd: 1, Rn: 2 });
+  const expected = buildOperands(instruction);
+  instruction.encoding!.operandFamilyId = getOperandFamilyId("bfcvt_float.xml");
+  assert.deepEqual(buildOperands(instruction), expected);
+  instruction.encoding!.operandFamilyId = "unimplemented-family";
+  assert.throws(() => buildOperands(instruction),
+    (error: unknown) => error instanceof OperandDecodeError && error.reason === "unsupported");
+  instruction.encoding!.operandFamilyId = "no-operands";
+  assert.throws(() => buildOperands(instruction),
+    (error: unknown) => error instanceof OperandDecodeError && error.reason === "invalid");
+});
 
 test("unsupported operand families and schemas fail explicitly", () => {
   assert.throws(() => buildOperands(synthetic("unimplemented.xml")),

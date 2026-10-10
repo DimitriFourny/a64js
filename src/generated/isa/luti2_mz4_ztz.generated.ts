@@ -64,7 +64,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-luti-luti2-mz4-ztz"
   },
   {
     "instructionId": "luti2_mz4_ztz",
@@ -146,6 +147,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-luti-luti2-mz4-ztz"
   }
 ];

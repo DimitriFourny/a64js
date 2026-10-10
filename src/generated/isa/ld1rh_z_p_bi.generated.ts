@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-replicate-load"
   },
   {
     "instructionId": "ld1rh_z_p_bi",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-replicate-load"
   },
   {
     "instructionId": "ld1rh_z_p_bi",
@@ -188,6 +190,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-replicate-load"
   }
 ];

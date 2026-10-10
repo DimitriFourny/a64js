@@ -74,7 +74,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "logical-shifted-register"
   },
   {
     "instructionId": "AND_log_shift",
@@ -149,6 +150,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "logical-shifted-register"
   }
 ];

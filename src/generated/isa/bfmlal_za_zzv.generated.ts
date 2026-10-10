@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-float-long-arithmetic"
   },
   {
     "instructionId": "bfmlal_za_zzv",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-float-long-arithmetic"
   },
   {
     "instructionId": "bfmlal_za_zzv",
@@ -183,6 +185,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-float-long-arithmetic"
   }
 ];

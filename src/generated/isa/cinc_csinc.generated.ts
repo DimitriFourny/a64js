@@ -56,7 +56,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "CSINC_32_condsel",
-    "canonicalFileName": "csinc.xml"
+    "canonicalFileName": "csinc.xml",
+    "operandFamilyId": "conditional-select"
   },
   {
     "instructionId": "CINC_CSINC",
@@ -113,6 +114,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "CSINC_64_condsel",
-    "canonicalFileName": "csinc.xml"
+    "canonicalFileName": "csinc.xml",
+    "operandFamilyId": "conditional-select"
   }
 ];

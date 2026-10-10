@@ -49,7 +49,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_gen",
@@ -99,7 +100,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_gen",
@@ -149,7 +151,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_gen",
@@ -199,7 +202,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_gen",
@@ -249,7 +253,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_gen",
@@ -299,6 +304,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   }
 ];

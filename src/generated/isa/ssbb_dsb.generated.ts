@@ -31,6 +31,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "DSB_BO_barriers",
-    "canonicalFileName": "dsb.xml"
+    "canonicalFileName": "dsb.xml",
+    "operandFamilyId": "no-operands"
   }
 ];

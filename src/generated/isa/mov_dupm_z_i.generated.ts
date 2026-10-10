@@ -44,6 +44,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "dupm_z_i_",
-    "canonicalFileName": "dupm_z_i.xml"
+    "canonicalFileName": "dupm_z_i.xml",
+    "operandFamilyId": "sve-dup-mask-immediate"
   }
 ];

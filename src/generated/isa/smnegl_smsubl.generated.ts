@@ -56,6 +56,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "SMSUBL_64WA_dp_3src",
-    "canonicalFileName": "smsubl.xml"
+    "canonicalFileName": "smsubl.xml",
+    "operandFamilyId": "scalar-multiply-long-alias"
   }
 ];

@@ -56,6 +56,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "UMSUBL_64WA_dp_3src",
-    "canonicalFileName": "umsubl.xml"
+    "canonicalFileName": "umsubl.xml",
+    "operandFamilyId": "scalar-multiply-long-alias"
   }
 ];

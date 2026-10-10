@@ -49,6 +49,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "dup_z_r_",
-    "canonicalFileName": "dup_z_r.xml"
+    "canonicalFileName": "dup_z_r.xml",
+    "operandFamilyId": "sve-dup-scalar"
   }
 ];

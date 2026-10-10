@@ -81,7 +81,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-widening-three-reg"
   },
   {
     "instructionId": "SQDMLAL_advsimd_vec",
@@ -168,6 +169,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-widening-three-reg"
   }
 ];

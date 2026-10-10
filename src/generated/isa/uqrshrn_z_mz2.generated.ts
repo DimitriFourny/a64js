@@ -67,7 +67,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-two-vector-narrowing-shift"
   },
   {
     "instructionId": "uqrshrn_z_mz2",
@@ -135,6 +136,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-two-vector-narrowing-shift"
   }
 ];

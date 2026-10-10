@@ -47,7 +47,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-multi-vector-arithmetic"
   },
   {
     "instructionId": "add_mz_zzv",
@@ -95,6 +96,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-multi-vector-arithmetic"
   }
 ];

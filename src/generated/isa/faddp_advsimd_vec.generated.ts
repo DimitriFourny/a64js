@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-floating-pairwise"
   },
   {
     "instructionId": "FADDP_advsimd_vec",
@@ -156,6 +157,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-floating-pairwise"
   }
 ];

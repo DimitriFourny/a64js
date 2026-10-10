@@ -76,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ANDS_32_log_shift",
-    "canonicalFileName": "ands_log_shift.xml"
+    "canonicalFileName": "ands_log_shift.xml",
+    "operandFamilyId": "logical-shifted-register"
   },
   {
     "instructionId": "TST_ANDS_log_shift",
@@ -153,6 +154,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ANDS_64_log_shift",
-    "canonicalFileName": "ands_log_shift.xml"
+    "canonicalFileName": "ands_log_shift.xml",
+    "operandFamilyId": "logical-shifted-register"
   }
 ];

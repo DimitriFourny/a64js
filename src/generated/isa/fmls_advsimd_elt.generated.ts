@@ -82,7 +82,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-by-element-multiply-accumulate"
   },
   {
     "instructionId": "FMLS_advsimd_elt",
@@ -170,7 +171,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-by-element-multiply-accumulate"
   },
   {
     "instructionId": "FMLS_advsimd_elt",
@@ -264,7 +266,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-by-element-multiply-accumulate"
   },
   {
     "instructionId": "FMLS_advsimd_elt",
@@ -384,6 +387,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-by-element-multiply-accumulate"
   }
 ];

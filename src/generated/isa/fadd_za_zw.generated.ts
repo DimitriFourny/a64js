@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fadd_za_zw",
@@ -115,7 +116,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fadd_za_zw",
@@ -185,7 +187,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fadd_za_zw",
@@ -255,6 +258,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   }
 ];

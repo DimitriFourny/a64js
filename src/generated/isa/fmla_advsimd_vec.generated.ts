@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   },
   {
     "instructionId": "FMLA_advsimd_vec",
@@ -161,6 +162,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   }
 ];

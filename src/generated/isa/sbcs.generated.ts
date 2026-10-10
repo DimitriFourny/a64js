@@ -45,6 +45,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [],
     "featureGuards": [],
     "guards": [],
+    "operandFamilyId": "gp-rd-rn-rm-sf",
     "operandSchemaId": "gp-rd-rn-rm-sf"
   },
   {
@@ -91,6 +92,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [],
     "featureGuards": [],
     "guards": [],
+    "operandFamilyId": "gp-rd-rn-rm-sf",
     "operandSchemaId": "gp-rd-rn-rm-sf"
   }
 ];

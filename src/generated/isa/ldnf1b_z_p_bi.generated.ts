@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   },
   {
     "instructionId": "ldnf1b_z_p_bi",
@@ -105,7 +106,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   },
   {
     "instructionId": "ldnf1b_z_p_bi",
@@ -158,7 +160,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   },
   {
     "instructionId": "ldnf1b_z_p_bi",
@@ -211,6 +214,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fault-tolerant-load"
   }
 ];

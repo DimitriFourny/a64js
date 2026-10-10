@@ -69,7 +69,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "logical-immediate"
   },
   {
     "instructionId": "ANDS_log_imm",
@@ -139,6 +140,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "logical-immediate"
   }
 ];

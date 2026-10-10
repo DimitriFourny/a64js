@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fmla_za_zzw",
@@ -132,7 +133,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fmla_za_zzw",
@@ -190,7 +192,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   },
   {
     "instructionId": "fmla_za_zzw",
@@ -265,6 +268,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-arithmetic"
   }
 ];

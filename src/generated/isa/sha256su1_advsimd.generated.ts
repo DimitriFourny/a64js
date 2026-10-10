@@ -52,6 +52,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-crypto-vector4s-three-reg"
   }
 ];

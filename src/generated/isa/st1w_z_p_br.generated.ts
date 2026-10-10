@@ -69,7 +69,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-contiguous-memory"
   },
   {
     "instructionId": "st1w_z_p_br",
@@ -144,6 +145,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-contiguous-memory"
   }
 ];

@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -188,7 +190,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -251,7 +254,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -314,7 +318,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -377,7 +382,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -440,7 +446,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -503,7 +510,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "LDP_fpsimd",
@@ -566,6 +574,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pair-load-store"
   }
 ];

@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "movaz-single-to-vector"
   },
   {
     "instructionId": "movaz_z_rza",
@@ -120,7 +121,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "movaz-single-to-vector"
   },
   {
     "instructionId": "movaz_z_rza",
@@ -183,7 +185,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "movaz-single-to-vector"
   },
   {
     "instructionId": "movaz_z_rza",
@@ -241,7 +244,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "movaz-single-to-vector"
   },
   {
     "instructionId": "movaz_z_rza",
@@ -304,6 +308,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "movaz-single-to-vector"
   }
 ];

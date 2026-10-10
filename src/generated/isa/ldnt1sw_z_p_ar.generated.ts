@@ -57,6 +57,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-signed-nontemporal-vector-base-load"
   }
 ];

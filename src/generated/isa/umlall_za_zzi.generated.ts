@@ -77,7 +77,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlall_za_zzi",
@@ -155,7 +156,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlall_za_zzi",
@@ -228,7 +230,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlall_za_zzi",
@@ -301,7 +304,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlall_za_zzi",
@@ -379,7 +383,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlall_za_zzi",
@@ -452,6 +457,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   }
 ];

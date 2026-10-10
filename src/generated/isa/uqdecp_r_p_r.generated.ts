@@ -67,7 +67,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-predicate-scalar"
   },
   {
     "instructionId": "uqdecp_r_p_r",
@@ -135,6 +136,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-predicate-scalar"
   }
 ];

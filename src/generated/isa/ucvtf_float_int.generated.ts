@@ -89,7 +89,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   },
   {
     "instructionId": "UCVTF_float_int",
@@ -179,7 +180,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   },
   {
     "instructionId": "UCVTF_float_int",
@@ -269,7 +271,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   },
   {
     "instructionId": "UCVTF_float_int",
@@ -359,7 +362,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   },
   {
     "instructionId": "UCVTF_float_int",
@@ -449,7 +453,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   },
   {
     "instructionId": "UCVTF_float_int",
@@ -539,6 +544,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-integer-to-fp"
   }
 ];

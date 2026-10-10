@@ -76,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDUR_fpsimd",
@@ -153,7 +154,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDUR_fpsimd",
@@ -230,7 +232,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDUR_fpsimd",
@@ -307,7 +310,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-load-store"
   },
   {
     "instructionId": "LDUR_fpsimd",
@@ -384,6 +388,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-load-store"
   }
 ];

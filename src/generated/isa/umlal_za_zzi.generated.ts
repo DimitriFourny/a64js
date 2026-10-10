@@ -67,7 +67,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlal_za_zzi",
@@ -135,7 +136,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   },
   {
     "instructionId": "umlal_za_zzi",
@@ -203,6 +205,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-long-arithmetic"
   }
 ];

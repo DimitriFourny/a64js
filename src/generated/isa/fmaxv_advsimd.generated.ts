@@ -83,7 +83,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-across-lane"
   },
   {
     "instructionId": "FMAXV_advsimd",
@@ -151,6 +152,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-across-lane"
   }
 ];

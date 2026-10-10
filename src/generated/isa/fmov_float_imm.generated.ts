@@ -84,7 +84,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-immediate"
   },
   {
     "instructionId": "FMOV_float_imm",
@@ -169,7 +170,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-immediate"
   },
   {
     "instructionId": "FMOV_float_imm",
@@ -254,6 +256,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-immediate"
   }
 ];

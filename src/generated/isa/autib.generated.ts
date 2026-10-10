@@ -37,7 +37,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "AUTIB",
@@ -75,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "AUTIB",
@@ -113,7 +115,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "AUTIB",
@@ -190,7 +193,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   },
   {
     "instructionId": "AUTIB",
@@ -267,6 +271,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "auth-generic"
   }
 ];

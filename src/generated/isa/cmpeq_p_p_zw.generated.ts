@@ -84,7 +84,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -169,7 +170,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -254,7 +256,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -339,7 +342,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -424,7 +428,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -509,7 +514,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -594,7 +600,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -679,7 +686,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -764,7 +772,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   },
   {
     "instructionId": "cmpeq_p_p_zw",
@@ -849,6 +858,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-wide-vector"
   }
 ];

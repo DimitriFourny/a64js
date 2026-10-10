@@ -92,7 +92,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-move-immediate"
   },
   {
     "instructionId": "ORR_advsimd_imm",
@@ -185,6 +186,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-move-immediate"
   }
 ];

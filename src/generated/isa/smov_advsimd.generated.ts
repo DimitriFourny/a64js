@@ -88,7 +88,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-copy-element-to-general"
   },
   {
     "instructionId": "SMOV_advsimd",
@@ -177,6 +178,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-copy-element-to-general"
   }
 ];

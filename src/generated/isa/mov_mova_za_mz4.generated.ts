@@ -44,6 +44,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_za_mz4_1",
-    "canonicalFileName": "mova_za_mz4.xml"
+    "canonicalFileName": "mova_za_mz4.xml",
+    "operandFamilyId": "mova-vectors-to-array-mov-mova-za-mz4"
   }
 ];

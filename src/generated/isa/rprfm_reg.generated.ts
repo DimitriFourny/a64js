@@ -67,6 +67,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "nop"
       }
-    ]
+    ],
+    "operandFamilyId": "rprfm"
   }
 ];

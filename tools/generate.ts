@@ -5,6 +5,7 @@ import { parseEncodingFile } from "./encodings.ts";
 import { generateCapstoneFixtures } from "./generate-capstone.ts";
 import { SUPPORTED_FILES, XML_ROOT } from "./supported-files.ts";
 import { buildOpcodeBuckets } from "./dispatch.ts";
+import { getOperandFamilyId } from "../src/formatters.ts";
 
 const OPERAND_SCHEMA_BY_FILE = new Map<string, string>([
   ["adc.xml", "gp-rd-rn-rm-sf"],
@@ -42,8 +43,10 @@ export const ENCODINGS: GeneratedEncoding[] = ${JSON.stringify(encodings, null, 
 }
 
 function attachOperandSchema(encoding: GeneratedEncoding): GeneratedEncoding {
+  const operandFamilyId = getOperandFamilyId(encoding.fileName);
+  if (!operandFamilyId) throw new Error(`missing operand family for ${encoding.fileName}`);
   const operandSchemaId = OPERAND_SCHEMA_BY_FILE.get(encoding.fileName);
-  return operandSchemaId ? { ...encoding, operandSchemaId } : encoding;
+  return { ...encoding, operandFamilyId, ...(operandSchemaId ? { operandSchemaId } : {}) };
 }
 
 function moduleName(fileName: string): string {
@@ -88,6 +91,9 @@ export const OPCODE_BUCKETS: readonly (readonly number[])[] = ${JSON.stringify(b
 }
 
 async function main(): Promise<void> {
+  for (const fileName of SUPPORTED_FILES) {
+    if (!getOperandFamilyId(fileName)) throw new Error(`missing operand family for ${fileName}`);
+  }
   const encodings = (await Promise.all(SUPPORTED_FILES.map((fileName) => parseEncodingFile(XML_ROOT, fileName))))
     .flat()
     .map(attachOperandSchema);

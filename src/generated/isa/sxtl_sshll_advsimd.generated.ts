@@ -76,6 +76,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "SSHLL_asimdshf_L",
-    "canonicalFileName": "sshll_advsimd.xml"
+    "canonicalFileName": "sshll_advsimd.xml",
+    "operandFamilyId": "advsimd-extend-long"
   }
 ];

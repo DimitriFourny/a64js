@@ -94,7 +94,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-conditional-compare"
   },
   {
     "instructionId": "FCCMP_float",
@@ -189,7 +190,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-conditional-compare"
   },
   {
     "instructionId": "FCCMP_float",
@@ -284,6 +286,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-conditional-compare"
   }
 ];

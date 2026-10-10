@@ -96,7 +96,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "add-sub-extended"
   },
   {
     "instructionId": "ADD_addsub_ext",
@@ -193,6 +194,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "add-sub-extended"
   }
 ];

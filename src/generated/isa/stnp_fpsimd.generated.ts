@@ -51,7 +51,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_FP"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "STNP_fpsimd",
@@ -103,7 +104,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_FP"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   },
   {
     "instructionId": "STNP_fpsimd",
@@ -155,6 +157,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_FP"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "pair-load-store"
   }
 ];

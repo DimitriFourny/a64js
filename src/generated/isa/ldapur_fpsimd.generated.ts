@@ -81,7 +81,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "rcpc-unscaled"
   },
   {
     "instructionId": "LDAPUR_fpsimd",
@@ -163,7 +164,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "rcpc-unscaled"
   },
   {
     "instructionId": "LDAPUR_fpsimd",
@@ -245,7 +247,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "rcpc-unscaled"
   },
   {
     "instructionId": "LDAPUR_fpsimd",
@@ -327,7 +330,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "rcpc-unscaled"
   },
   {
     "instructionId": "LDAPUR_fpsimd",
@@ -409,6 +413,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "rcpc-unscaled"
   }
 ];

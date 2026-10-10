@@ -91,7 +91,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp8-luti"
   },
   {
     "instructionId": "LUTI2_advsimd",
@@ -183,6 +184,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp8-luti"
   }
 ];

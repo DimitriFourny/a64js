@@ -45,6 +45,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "guardDiagnostics": [
       "Halted(): debug halt state is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "sme-movt-scalar"
   }
 ];

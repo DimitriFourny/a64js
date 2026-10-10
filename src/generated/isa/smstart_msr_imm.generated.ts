@@ -593,6 +593,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "MSR_SI_pstate",
-    "canonicalFileName": "msr_imm.xml"
+    "canonicalFileName": "msr_imm.xml",
+    "operandFamilyId": "smstart-smstop"
   }
 ];

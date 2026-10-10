@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -115,7 +116,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -173,7 +175,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -231,7 +234,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -289,7 +293,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -347,7 +352,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -405,7 +411,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -463,7 +470,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -521,7 +529,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -579,7 +588,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -637,7 +647,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   },
   {
     "instructionId": "fcvt_z_p_z",
@@ -695,6 +706,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-conversion"
   }
 ];

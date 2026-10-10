@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-long-multiply-indexed"
   },
   {
     "instructionId": "sqdmlalt_z_zzzi",
@@ -145,6 +146,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-long-multiply-indexed"
   }
 ];

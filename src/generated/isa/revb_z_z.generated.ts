@@ -74,7 +74,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "revb_z_z",
@@ -149,7 +150,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "revb_z_z",
@@ -224,7 +226,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "revb_z_z",
@@ -299,7 +302,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "revb_z_z",
@@ -374,7 +378,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   },
   {
     "instructionId": "revb_z_z",
@@ -449,6 +454,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-predicated-unary"
   }
 ];

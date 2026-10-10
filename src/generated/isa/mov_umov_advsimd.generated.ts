@@ -109,7 +109,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "UMOV_asimdins_X_x",
-    "canonicalFileName": "umov_advsimd.xml"
+    "canonicalFileName": "umov_advsimd.xml",
+    "operandFamilyId": "advsimd-copy-element-to-general"
   },
   {
     "instructionId": "MOV_UMOV_advsimd",
@@ -219,6 +220,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "UMOV_asimdins_W_w",
-    "canonicalFileName": "umov_advsimd.xml"
+    "canonicalFileName": "umov_advsimd.xml",
+    "operandFamilyId": "advsimd-copy-element-to-general"
   }
 ];

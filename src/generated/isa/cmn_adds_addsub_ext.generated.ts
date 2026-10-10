@@ -98,7 +98,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ADDS_32S_addsub_ext",
-    "canonicalFileName": "adds_addsub_ext.xml"
+    "canonicalFileName": "adds_addsub_ext.xml",
+    "operandFamilyId": "add-sub-extended"
   },
   {
     "instructionId": "CMN_ADDS_addsub_ext",
@@ -197,6 +198,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ADDS_64S_addsub_ext",
-    "canonicalFileName": "adds_addsub_ext.xml"
+    "canonicalFileName": "adds_addsub_ext.xml",
+    "operandFamilyId": "add-sub-extended"
   }
 ];

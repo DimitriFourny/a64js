@@ -51,7 +51,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "ldapr"
   },
   {
     "instructionId": "LDAPR",
@@ -103,7 +104,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "ldapr"
   },
   {
     "instructionId": "LDAPR",
@@ -176,7 +178,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldapr"
   },
   {
     "instructionId": "LDAPR",
@@ -249,6 +252,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldapr"
   }
 ];

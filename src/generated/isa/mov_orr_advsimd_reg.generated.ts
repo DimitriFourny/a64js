@@ -64,6 +64,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ORR_asimdsame_only",
-    "canonicalFileName": "orr_advsimd_reg.xml"
+    "canonicalFileName": "orr_advsimd_reg.xml",
+    "operandFamilyId": "advsimd-move-register-alias"
   }
 ];

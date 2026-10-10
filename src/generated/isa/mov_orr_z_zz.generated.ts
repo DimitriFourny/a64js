@@ -54,6 +54,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "orr_z_zz_",
-    "canonicalFileName": "orr_z_zz.xml"
+    "canonicalFileName": "orr_z_zz.xml",
+    "operandFamilyId": "sve-binary"
   }
 ];

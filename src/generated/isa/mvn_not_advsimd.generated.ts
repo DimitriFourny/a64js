@@ -59,6 +59,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "NOT_asimdmisc_R",
-    "canonicalFileName": "not_advsimd.xml"
+    "canonicalFileName": "not_advsimd.xml",
+    "operandFamilyId": "advsimd-unary"
   }
 ];

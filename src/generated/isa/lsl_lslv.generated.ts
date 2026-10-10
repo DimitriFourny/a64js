@@ -46,7 +46,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "LSLV_32_dp_2src",
-    "canonicalFileName": "lslv.xml"
+    "canonicalFileName": "lslv.xml",
+    "operandFamilyId": "two-source-integer"
   },
   {
     "instructionId": "LSL_LSLV",
@@ -93,6 +94,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "LSLV_64_dp_2src",
-    "canonicalFileName": "lslv.xml"
+    "canonicalFileName": "lslv.xml",
+    "operandFamilyId": "two-source-integer"
   }
 ];

@@ -76,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ORR_32_log_shift",
-    "canonicalFileName": "orr_log_shift.xml"
+    "canonicalFileName": "orr_log_shift.xml",
+    "operandFamilyId": "mov-register-alias"
   },
   {
     "instructionId": "MOV_ORR_log_shift",
@@ -153,6 +154,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ORR_64_log_shift",
-    "canonicalFileName": "orr_log_shift.xml"
+    "canonicalFileName": "orr_log_shift.xml",
+    "operandFamilyId": "mov-register-alias"
   }
 ];

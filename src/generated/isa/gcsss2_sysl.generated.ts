@@ -48,6 +48,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "SYSL_RC_systeminstrs",
-    "canonicalFileName": "sysl.xml"
+    "canonicalFileName": "sysl.xml",
+    "operandFamilyId": "gcs-sysl-alias"
   }
 ];

@@ -45,7 +45,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "guardDiagnostics": [
       "MaxImplementedSVL() < 512: maximum streaming vector length is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "sme-vector-group-permutation"
   },
   {
     "instructionId": "zip_mz_z",
@@ -96,6 +97,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "guardDiagnostics": [
       "MaxImplementedSVL() < 256: maximum streaming vector length is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "sme-vector-group-permutation"
   }
 ];

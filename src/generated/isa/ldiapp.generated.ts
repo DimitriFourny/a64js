@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldiapp"
   },
   {
     "instructionId": "LDIAPP",
@@ -115,7 +116,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldiapp"
   },
   {
     "instructionId": "LDIAPP",
@@ -173,7 +175,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldiapp"
   },
   {
     "instructionId": "LDIAPP",
@@ -231,6 +234,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "ldiapp"
   }
 ];

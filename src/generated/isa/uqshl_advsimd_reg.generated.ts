@@ -81,7 +81,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   },
   {
     "instructionId": "UQSHL_advsimd_reg",
@@ -170,6 +171,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-scalar-or-vector-three-same"
   }
 ];

@@ -62,6 +62,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-bfloat16-multiply-accumulate"
   }
 ];

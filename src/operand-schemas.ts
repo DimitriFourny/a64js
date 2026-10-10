@@ -25,7 +25,17 @@ export function operandField(instruction: DecodedInstruction, field: string): nu
   if (value === undefined) {
     throw new OperandDecodeError("invalid", `missing operand field: ${field}`, instruction.encoding?.fileName);
   }
+  const layout = instruction.encoding?.fields.find((layout) => layout.name === field);
+  if (!Number.isInteger(value) || value < 0 || (layout && value >= 2 ** layout.width)) {
+    throw new OperandDecodeError("invalid", `invalid operand field: ${field}`, instruction.encoding?.fileName);
+  }
   return value;
+}
+
+export function operandFieldOneOf(instruction: DecodedInstruction, fields: readonly string[]): number {
+  const field = fields.find((field) => instruction.fields?.[field] !== undefined);
+  if (!field) throw new OperandDecodeError("invalid", `missing operand field: ${fields.join(" or ")}`, instruction.encoding?.fileName);
+  return operandField(instruction, field);
 }
 
 export function vectorGroup(start: number, count: number, lane: ElementSize, style?: "list" | "range"): VectorGroupOperand {
@@ -92,6 +102,10 @@ const REGISTERED_SCHEMAS: Record<string, readonly OperandRule[]> = {
 export function buildRegisteredSchema(instruction: DecodedInstruction): Operand[] | undefined {
   const id = instruction.encoding?.operandSchemaId;
   if (!id) return undefined;
+  return buildOperandSchemaById(instruction, id);
+}
+
+export function buildOperandSchemaById(instruction: DecodedInstruction, id: string): Operand[] {
   const rules = REGISTERED_SCHEMAS[id];
   if (!rules) {
     throw new OperandDecodeError("unsupported", `unsupported operand schema: ${id}`, instruction.encoding?.fileName);

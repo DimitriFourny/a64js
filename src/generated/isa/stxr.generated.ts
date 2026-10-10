@@ -55,7 +55,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "Rs == Rt && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rs == Rn && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rs == Rn && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "store-exclusive"
   },
   {
     "instructionId": "STXR",
@@ -111,6 +112,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "Rs == Rt && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rs == Rn && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "Rs == Rn && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "store-exclusive"
   }
 ];

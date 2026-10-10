@@ -71,7 +71,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ORR_32_log_imm",
-    "canonicalFileName": "orr_log_imm.xml"
+    "canonicalFileName": "orr_log_imm.xml",
+    "operandFamilyId": "logical-immediate"
   },
   {
     "instructionId": "MOV_ORR_log_imm",
@@ -143,6 +144,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "ORR_64_log_imm",
-    "canonicalFileName": "orr_log_imm.xml"
+    "canonicalFileName": "orr_log_imm.xml",
+    "operandFamilyId": "logical-immediate"
   }
 ];

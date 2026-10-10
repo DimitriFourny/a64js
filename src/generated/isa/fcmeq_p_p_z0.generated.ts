@@ -79,7 +79,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   },
   {
     "instructionId": "fcmeq_p_p_z0",
@@ -159,7 +160,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   },
   {
     "instructionId": "fcmeq_p_p_z0",
@@ -239,7 +241,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   },
   {
     "instructionId": "fcmeq_p_p_z0",
@@ -319,7 +322,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   },
   {
     "instructionId": "fcmeq_p_p_z0",
@@ -399,7 +403,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   },
   {
     "instructionId": "fcmeq_p_p_z0",
@@ -479,6 +484,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-floating-compare-immediate"
   }
 ];

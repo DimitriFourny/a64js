@@ -57,7 +57,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-scalar"
   },
   {
     "instructionId": "cntb_r_s",
@@ -115,7 +116,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-scalar"
   },
   {
     "instructionId": "cntb_r_s",
@@ -173,7 +175,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-scalar"
   },
   {
     "instructionId": "cntb_r_s",
@@ -231,6 +234,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-inc-dec-scalar"
   }
 ];

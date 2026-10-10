@@ -4,6 +4,8 @@ import type { OperandRule } from "./operand-schemas.ts";
 import type { ElementSize } from "./operand-types.ts";
 import type { DecodedInstruction, Operand } from "./types.ts";
 
+import type { OperandFamilyDefinition } from "./operand-registry.ts";
+
 type OperandBuilder = (instruction: DecodedInstruction) => Operand[];
 const schema = (rules: readonly OperandRule[]): OperandBuilder => (instruction) => buildOperandSchema(instruction, rules);
 const laneFromSize = (instruction: DecodedInstruction): ElementSize => (["b", "h", "s", "d"] as const)[operandField(instruction, "size")];
@@ -79,36 +81,13 @@ function twoVectorNarrowingShift(instruction: DecodedInstruction): Operand[] {
   ]);
 }
 
-const FAMILY_BUILDERS: Record<string, OperandBuilder> = {
-  "bfcvt_float.xml": schema([{ kind: "scalar", field: "Rd", lane: "h" }, { kind: "scalar", field: "Rn", lane: "s" }]),
-  "autiasppcr.xml": schema([{ kind: "gp", field: "Rn", width: 64 }]),
-  "autibsppcr.xml": schema([{ kind: "gp", field: "Rn", width: 64 }]),
-  "retasppcr_reg.xml": schema([{ kind: "gp", field: "Rm", width: 64 }]),
-  "famax_mz_zzw.xml": multiVectorArithmetic,
-  "famin_mz_zzw.xml": multiVectorArithmetic,
-  "fscale_mz_zzv.xml": multiVectorArithmetic,
-  "fscale_mz_zzw.xml": multiVectorArithmetic,
-  "fdot_advsimd_2wayvec.xml": fp8Dot,
-  "fdot_advsimd_4wayvec.xml": fp8Dot,
-  "fdot_advsimd_2wayelem.xml": fp8Dot,
-  "fdot_advsimd_4wayelem.xml": fp8Dot,
-  "ldnt1sb_z_p_ar.xml": signedNonTemporalLoad,
-  "ldnt1sh_z_p_ar.xml": signedNonTemporalLoad,
-  "ldnt1sw_z_p_ar.xml": signedNonTemporalLoad,
-  "sqrshr_z_mz2.xml": twoVectorNarrowingShift,
-  "sqrshru_z_mz2.xml": twoVectorNarrowingShift,
-  "uqrshr_z_mz2.xml": twoVectorNarrowingShift,
-  "sqrshrn_z_mz2.xml": twoVectorNarrowingShift,
-  "sqrshrun_z_mz2.xml": twoVectorNarrowingShift,
-  "uqrshrn_z_mz2.xml": twoVectorNarrowingShift,
-  "fcvt_z_p_z.xml": predicatedConversion,
-  "fcvtzs_z_p_z.xml": predicatedConversion,
-  "fcvtzu_z_p_z.xml": predicatedConversion,
-  "scvtf_z_p_z.xml": predicatedConversion,
-  "ucvtf_z_p_z.xml": predicatedConversion,
-};
-
-export function buildFamilyOperands(instruction: DecodedInstruction): Operand[] | undefined {
-  const builder = FAMILY_BUILDERS[instruction.encoding!.fileName];
-  return builder?.(instruction);
-}
+export const TYPED_OPERAND_FAMILIES: readonly OperandFamilyDefinition[] = [
+  { id: "scalar-bfloat16-conversion", files: ["bfcvt_float.xml"], build: schema([{ kind: "scalar", field: "Rd", lane: "h" }, { kind: "scalar", field: "Rn", lane: "s" }]) },
+  { id: "pauth-lr-auth-register", files: ["autiasppcr.xml", "autibsppcr.xml"], build: schema([{ kind: "gp", field: "Rn", width: 64 }]) },
+  { id: "pauth-lr-return-register", files: ["retasppcr_reg.xml"], build: schema([{ kind: "gp", field: "Rm", width: 64 }]) },
+  { id: "sme-fp8-multi-vector-arithmetic", files: ["famax_mz_zzw.xml", "famin_mz_zzw.xml", "fscale_mz_zzv.xml", "fscale_mz_zzw.xml"], build: multiVectorArithmetic },
+  { id: "advsimd-fp8-dot", files: ["fdot_advsimd_2wayvec.xml", "fdot_advsimd_4wayvec.xml", "fdot_advsimd_2wayelem.xml", "fdot_advsimd_4wayelem.xml"], build: fp8Dot },
+  { id: "sve-signed-nontemporal-vector-base-load", files: ["ldnt1sb_z_p_ar.xml", "ldnt1sh_z_p_ar.xml", "ldnt1sw_z_p_ar.xml"], build: signedNonTemporalLoad },
+  { id: "sme-two-vector-narrowing-shift", files: ["sqrshr_z_mz2.xml", "sqrshru_z_mz2.xml", "uqrshr_z_mz2.xml", "sqrshrn_z_mz2.xml", "sqrshrun_z_mz2.xml", "uqrshrn_z_mz2.xml"], build: twoVectorNarrowingShift },
+  { id: "sve-predicated-conversion", files: ["fcvt_z_p_z.xml", "fcvtzs_z_p_z.xml", "fcvtzu_z_p_z.xml", "scvtf_z_p_z.xml", "ucvtf_z_p_z.xml"], build: predicatedConversion },
+];

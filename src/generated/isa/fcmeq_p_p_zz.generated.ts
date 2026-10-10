@@ -84,7 +84,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "fcmeq_p_p_zz",
@@ -169,7 +170,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "fcmeq_p_p_zz",
@@ -254,7 +256,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "fcmeq_p_p_zz",
@@ -339,7 +342,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   },
   {
     "instructionId": "fcmeq_p_p_zz",
@@ -424,6 +428,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-vector"
   }
 ];

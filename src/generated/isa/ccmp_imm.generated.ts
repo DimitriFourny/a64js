@@ -59,7 +59,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "conditional-compare-immediate"
   },
   {
     "instructionId": "CCMP_imm",
@@ -119,6 +120,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "operandFamilyId": "conditional-compare-immediate"
   }
 ];

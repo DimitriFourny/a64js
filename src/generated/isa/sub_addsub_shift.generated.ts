@@ -86,7 +86,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "add-sub-shifted"
   },
   {
     "instructionId": "SUB_addsub_shift",
@@ -173,6 +174,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "add-sub-shifted"
   }
 ];

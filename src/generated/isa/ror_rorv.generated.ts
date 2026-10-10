@@ -46,7 +46,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "RORV_32_dp_2src",
-    "canonicalFileName": "rorv.xml"
+    "canonicalFileName": "rorv.xml",
+    "operandFamilyId": "two-source-integer"
   },
   {
     "instructionId": "ROR_RORV",
@@ -93,6 +94,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "RORV_64_dp_2src",
-    "canonicalFileName": "rorv.xml"
+    "canonicalFileName": "rorv.xml",
+    "operandFamilyId": "two-source-integer"
   }
 ];

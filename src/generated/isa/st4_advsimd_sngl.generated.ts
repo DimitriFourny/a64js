@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -145,7 +146,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -218,7 +220,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -291,7 +294,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -364,7 +368,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -437,7 +442,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -510,7 +516,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -583,7 +590,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -656,7 +664,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -729,7 +738,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -802,7 +812,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   },
   {
     "instructionId": "ST4_advsimd_sngl",
@@ -875,6 +886,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-single-structure"
   }
 ];

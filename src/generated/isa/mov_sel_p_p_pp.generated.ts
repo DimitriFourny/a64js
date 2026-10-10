@@ -74,6 +74,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "sel_p_p_pp_",
-    "canonicalFileName": "sel_p_p_pp.xml"
+    "canonicalFileName": "sel_p_p_pp.xml",
+    "operandFamilyId": "sve-select-predicate"
   }
 ];

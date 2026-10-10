@@ -24,6 +24,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         "all": [],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "udf"
   }
 ];

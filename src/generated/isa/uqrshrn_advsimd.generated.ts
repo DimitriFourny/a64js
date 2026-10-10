@@ -81,7 +81,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-narrowing-immediate-shift"
   },
   {
     "instructionId": "UQRSHRN_advsimd",
@@ -156,6 +157,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-narrowing-immediate-shift"
   }
 ];

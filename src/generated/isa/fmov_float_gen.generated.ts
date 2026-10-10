@@ -266,7 +266,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -533,7 +534,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -800,7 +802,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -1067,7 +1070,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -1334,7 +1338,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -1601,7 +1606,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -1868,7 +1874,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -2135,7 +2142,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -2402,7 +2410,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   },
   {
     "instructionId": "FMOV_float_gen",
@@ -2669,6 +2678,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "scalar-fp-move-general"
   }
 ];

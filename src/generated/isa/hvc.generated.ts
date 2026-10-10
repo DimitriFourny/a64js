@@ -37,6 +37,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guards": [],
     "guardDiagnostics": [
       "HaveEL(EL2): EL2 implementation is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "exception-immediate"
   }
 ];

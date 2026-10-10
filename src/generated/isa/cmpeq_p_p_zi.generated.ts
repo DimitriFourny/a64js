@@ -72,7 +72,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -145,7 +146,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -218,7 +220,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -291,7 +294,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -364,7 +368,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -437,7 +442,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -505,7 +511,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -573,7 +580,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -641,7 +649,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   },
   {
     "instructionId": "cmpeq_p_p_zi",
@@ -709,6 +718,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-compare-immediate"
   }
 ];

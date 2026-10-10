@@ -42,7 +42,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-zero-grouped"
   },
   {
     "instructionId": "zero_za2_ri",
@@ -85,7 +86,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-zero-grouped"
   },
   {
     "instructionId": "zero_za2_ri",
@@ -128,6 +130,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sme-zero-grouped"
   }
 ];

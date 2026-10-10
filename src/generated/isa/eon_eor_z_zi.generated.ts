@@ -49,6 +49,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "eor_z_zi_",
-    "canonicalFileName": "eor_z_zi.xml"
+    "canonicalFileName": "eor_z_zi.xml",
+    "operandFamilyId": "sve-logical-immediate"
   }
 ];

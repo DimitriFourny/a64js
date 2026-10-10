@@ -52,7 +52,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-scalar-immediate-prefetch"
   },
   {
     "instructionId": "prfd_i_p_bz",
@@ -110,7 +111,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-scalar-immediate-prefetch"
   },
   {
     "instructionId": "prfd_i_p_bz",
@@ -168,6 +170,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-scalar-immediate-prefetch"
   }
 ];

@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -125,7 +126,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -188,7 +190,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -251,6 +254,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   }
 ];

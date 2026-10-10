@@ -67,7 +67,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fp-multiply-accumulate"
   },
   {
     "instructionId": "fmla_z_zzzi",
@@ -135,7 +136,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fp-multiply-accumulate"
   },
   {
     "instructionId": "fmla_z_zzzi",
@@ -203,6 +205,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fp-multiply-accumulate"
   }
 ];

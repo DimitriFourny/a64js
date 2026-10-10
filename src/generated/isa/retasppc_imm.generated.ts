@@ -42,7 +42,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "label-from-imm16-negative"
   },
   {
     "instructionId": "RETASPPC_imm",
@@ -85,6 +86,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "label-from-imm16-negative"
   }
 ];

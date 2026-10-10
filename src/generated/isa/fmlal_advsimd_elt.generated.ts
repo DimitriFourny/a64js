@@ -89,7 +89,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   },
   {
     "instructionId": "FMLAL_advsimd_elt",
@@ -179,6 +180,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "advsimd-fp-long-multiply-accumulate"
   }
 ];

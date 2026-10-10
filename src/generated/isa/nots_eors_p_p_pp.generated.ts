@@ -74,6 +74,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "eors_p_p_pp_z",
-    "canonicalFileName": "eors_p_p_pp.xml"
+    "canonicalFileName": "eors_p_p_pp.xml",
+    "operandFamilyId": "sve-predicate-logical"
   }
 ];

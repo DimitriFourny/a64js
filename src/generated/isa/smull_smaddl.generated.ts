@@ -56,6 +56,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "SMADDL_64WA_dp_3src",
-    "canonicalFileName": "smaddl.xml"
+    "canonicalFileName": "smaddl.xml",
+    "operandFamilyId": "scalar-multiply-long-alias"
   }
 ];

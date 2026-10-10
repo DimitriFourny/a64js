@@ -59,6 +59,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "sel_z_p_zz_",
-    "canonicalFileName": "sel_z_p_zz.xml"
+    "canonicalFileName": "sel_z_p_zz.xml",
+    "operandFamilyId": "sve-select-vector"
   }
 ];

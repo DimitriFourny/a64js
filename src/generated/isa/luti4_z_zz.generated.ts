@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fp8-luti"
   },
   {
     "instructionId": "luti4_z_zz",
@@ -133,7 +134,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "guardDiagnostics": [
       "MaxImplementedAnyVL() < 256: maximum vector length is not configured; assumes the instruction is admitted by the implementation"
-    ]
+    ],
+    "operandFamilyId": "sve-fp8-luti"
   },
   {
     "instructionId": "luti4_z_zz",
@@ -201,6 +203,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "sve-fp8-luti"
   }
 ];

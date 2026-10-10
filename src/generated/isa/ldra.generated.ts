@@ -71,7 +71,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "auth-load-register"
   },
   {
     "instructionId": "LDRA",
@@ -143,7 +144,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "auth-load-register"
   },
   {
     "instructionId": "LDRA",
@@ -215,7 +217,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "auth-load-register"
   },
   {
     "instructionId": "LDRA",
@@ -287,6 +290,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "guardDiagnostics": [
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
       "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
-    ]
+    ],
+    "operandFamilyId": "auth-load-register"
   }
 ];

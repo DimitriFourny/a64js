@@ -57,6 +57,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "pauth-lr-auth-register"
   }
 ];

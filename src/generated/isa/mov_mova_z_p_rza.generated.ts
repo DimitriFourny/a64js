@@ -64,7 +64,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_z_p_rza_b",
-    "canonicalFileName": "mova_z_p_rza.xml"
+    "canonicalFileName": "mova_z_p_rza.xml",
+    "operandFamilyId": "mova-single-to-vector"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -134,7 +135,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_z_p_rza_d",
-    "canonicalFileName": "mova_z_p_rza.xml"
+    "canonicalFileName": "mova_z_p_rza.xml",
+    "operandFamilyId": "mova-single-to-vector"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -204,7 +206,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_z_p_rza_h",
-    "canonicalFileName": "mova_z_p_rza.xml"
+    "canonicalFileName": "mova_z_p_rza.xml",
+    "operandFamilyId": "mova-single-to-vector"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -269,7 +272,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_z_p_rza_q",
-    "canonicalFileName": "mova_z_p_rza.xml"
+    "canonicalFileName": "mova_z_p_rza.xml",
+    "operandFamilyId": "mova-single-to-vector"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -339,6 +343,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "canonicalEncodingId": "mova_z_p_rza_w",
-    "canonicalFileName": "mova_z_p_rza.xml"
+    "canonicalFileName": "mova_z_p_rza.xml",
+    "operandFamilyId": "mova-single-to-vector"
   }
 ];

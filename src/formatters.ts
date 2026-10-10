@@ -25,8 +25,10 @@ import type {
 } from "./types.ts";
 import { OperandDecodeError } from "./operand-errors.ts";
 import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand, ZaOperand } from "./operand-types.ts";
-import { buildRegisteredSchema, vectorGroup } from "./operand-schemas.ts";
-import { buildFamilyOperands } from "./operand-families.ts";
+import { buildOperandSchemaById, buildRegisteredSchema, vectorGroup } from "./operand-schemas.ts";
+import { TYPED_OPERAND_FAMILIES } from "./operand-families.ts";
+import { OperandFamilyRegistry } from "./operand-registry.ts";
+import type { OperandFamilyDefinition, OperandFamilyInfo } from "./operand-registry.ts";
 
 const COND_NAMES = [
   "eq",
@@ -4190,10 +4192,6 @@ function sveSingleVectorListText(register: number, lane: "b" | "h" | "s" | "d" |
   return `{ z${register}.${lane} }`;
 }
 
-function isSveContiguousMemoryFile(fileName: string): boolean {
-  return /^(?:ld1[bhwdq]|ld1s[bhw]|st1[bhwdq]|ld[234][bhwdq]|st[234][bhwdq]|ldnt1[bhwd]|stnt1[bhwd])_(?:z_p_(?:ar|bi|br)|mzx?_p_(?:bi|br))\.xml$/
-    .test(fileName);
-}
 
 function sveElementShiftFromMnemonic(mnemonic: string): number {
   switch (mnemonic.at(-1)?.toLowerCase()) {
@@ -4312,9 +4310,6 @@ function svePredicateCounterGroupText(png: number, mode?: "z"): string {
   return mode === "z" ? `${base}/z` : base;
 }
 
-function isSveFaultTolerantLoadFile(fileName: string): boolean {
-  return /^ld(?:ff|nf)1(?:s?[bhw]|d)_z_p_(?:ai|bi|br|bz)\.xml$/.test(fileName);
-}
 
 function sveFaultLoadLaneFromEncodingId(encodingId: string): "b" | "h" | "s" | "d" {
   if (encodingId.endsWith("16")) {
@@ -5614,2087 +5609,914 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
   return operands;
 }
 
-function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
-  const encoding = inst.encoding;
-  if (!encoding || !inst.fields) {
-    throw new OperandDecodeError("invalid", "operand construction requires encoding and fields", encoding?.fileName);
-  }
+function operandFamily(id: string, files: readonly string[], build: OperandFamilyDefinition["build"]): OperandFamilyDefinition {
+  return { id, files, build };
+}
 
-  const schemaOperands = buildRegisteredSchema(inst) ?? buildFamilyOperands(inst);
-  if (schemaOperands) {
-    return schemaOperands;
-  }
-
-  if (isSveFaultTolerantLoadFile(encoding.fileName)) {
-    return sveFaultTolerantLoadOperands(inst);
-  }
-
-  if (isSveContiguousMemoryFile(encoding.fileName)) {
-    return sveContiguousByteMemoryOperands(inst);
-  }
-
-  switch (encoding.fileName) {
-    case "madd.xml":
-    case "msub.xml":
-    case "maddpt.xml":
-    case "msubpt.xml":
-      return threeSourceIntegerOperands(inst);
-    case "clz_int.xml":
-    case "rbit_int.xml":
-    case "rev16_int.xml":
-    case "rev32_int.xml":
-    case "cls_int.xml":
-    case "abs.xml":
-    case "cnt.xml":
-    case "ctz.xml":
-      return oneSourceIntegerOperands(inst);
-    case "mul_madd.xml":
-      return mulAliasOperands(inst);
-    case "mneg_msub.xml":
-    case "udiv.xml":
-    case "sdiv.xml":
-      return twoSourceIntegerOperands(inst);
-    case "crc32.xml":
-    case "crc32c.xml":
-      return crc32Operands(inst);
-    case "smaddl.xml":
-    case "smsubl.xml":
-    case "umaddl.xml":
-    case "umsubl.xml":
-      return scalarMultiplyLongOperands(inst);
-    case "smull_smaddl.xml":
-    case "smnegl_smsubl.xml":
-    case "umull_umaddl.xml":
-    case "umnegl_umsubl.xml":
-      return scalarMultiplyLongAliasOperands(inst);
-    case "smulh.xml":
-    case "umulh.xml":
-      return multiplyHighOperands(inst);
-    case "mrs.xml":
-    case "msr_reg.xml":
+const OPERAND_FAMILIES = new OperandFamilyRegistry([
+  ...TYPED_OPERAND_FAMILIES,
+  operandFamily("gp-rd-rn-rm-sf", [
+    "adc.xml", "adcs.xml", "sbc.xml", "sbcs.xml",
+    "ngc_sbc.xml", "ngcs_sbcs.xml",
+  ], inst => buildRegisteredSchema(inst) ?? buildOperandSchemaById(inst, "gp-rd-rn-rm-sf")),
+  operandFamily("sve-fault-tolerant-load", [
+    "ldff1b_z_p_ai.xml", "ldff1b_z_p_br.xml", "ldff1b_z_p_bz.xml", "ldff1h_z_p_ai.xml",
+    "ldff1h_z_p_br.xml", "ldff1h_z_p_bz.xml", "ldff1w_z_p_ai.xml", "ldff1w_z_p_br.xml",
+    "ldff1w_z_p_bz.xml", "ldff1d_z_p_ai.xml", "ldff1d_z_p_br.xml", "ldff1d_z_p_bz.xml",
+    "ldff1sb_z_p_ai.xml", "ldff1sb_z_p_br.xml", "ldff1sb_z_p_bz.xml", "ldff1sh_z_p_ai.xml",
+    "ldff1sh_z_p_br.xml", "ldff1sh_z_p_bz.xml", "ldff1sw_z_p_ai.xml", "ldff1sw_z_p_br.xml",
+    "ldff1sw_z_p_bz.xml", "ldnf1b_z_p_bi.xml", "ldnf1h_z_p_bi.xml", "ldnf1w_z_p_bi.xml",
+    "ldnf1d_z_p_bi.xml", "ldnf1sb_z_p_bi.xml", "ldnf1sh_z_p_bi.xml", "ldnf1sw_z_p_bi.xml",
+  ], sveFaultTolerantLoadOperands),
+  operandFamily("sve-contiguous-memory", [
+    "ld1b_z_p_bi.xml", "ld1b_z_p_br.xml", "ld1h_z_p_bi.xml", "ld1h_z_p_br.xml",
+    "ld1w_z_p_bi.xml", "ld1w_z_p_br.xml", "ld1d_z_p_bi.xml", "ld1d_z_p_br.xml",
+    "ld1q_z_p_ar.xml", "ld1sb_z_p_bi.xml", "ld1sb_z_p_br.xml", "ld1sh_z_p_bi.xml",
+    "ld1sh_z_p_br.xml", "ld1sw_z_p_bi.xml", "ld1sw_z_p_br.xml", "ldnt1b_z_p_bi.xml",
+    "ldnt1b_z_p_br.xml", "ldnt1b_z_p_ar.xml", "ldnt1h_z_p_bi.xml", "ldnt1h_z_p_br.xml",
+    "ldnt1h_z_p_ar.xml", "ldnt1w_z_p_bi.xml", "ldnt1w_z_p_br.xml", "ldnt1w_z_p_ar.xml",
+    "ldnt1d_z_p_bi.xml", "ldnt1d_z_p_br.xml", "ldnt1d_z_p_ar.xml", "ld1b_mz_p_bi.xml",
+    "ld1b_mz_p_br.xml", "ld1b_mzx_p_bi.xml", "ld1b_mzx_p_br.xml", "ld1h_mz_p_bi.xml",
+    "ld1h_mz_p_br.xml", "ld1h_mzx_p_bi.xml", "ld1h_mzx_p_br.xml", "ld1w_mz_p_bi.xml",
+    "ld1w_mz_p_br.xml", "ld1w_mzx_p_bi.xml", "ld1w_mzx_p_br.xml", "ld1d_mz_p_bi.xml",
+    "ld1d_mz_p_br.xml", "ld1d_mzx_p_bi.xml", "ld1d_mzx_p_br.xml", "ldnt1b_mz_p_bi.xml",
+    "ldnt1b_mz_p_br.xml", "ldnt1b_mzx_p_bi.xml", "ldnt1b_mzx_p_br.xml", "ldnt1h_mz_p_bi.xml",
+    "ldnt1h_mz_p_br.xml", "ldnt1h_mzx_p_bi.xml", "ldnt1h_mzx_p_br.xml", "ldnt1w_mz_p_bi.xml",
+    "ldnt1w_mz_p_br.xml", "ldnt1w_mzx_p_bi.xml", "ldnt1w_mzx_p_br.xml", "ldnt1d_mz_p_bi.xml",
+    "ldnt1d_mz_p_br.xml", "ldnt1d_mzx_p_bi.xml", "ldnt1d_mzx_p_br.xml", "ld2q_z_p_bi.xml",
+    "ld2q_z_p_br.xml", "ld3q_z_p_bi.xml", "ld3q_z_p_br.xml", "ld4q_z_p_bi.xml",
+    "ld4q_z_p_br.xml", "st1b_z_p_bi.xml", "st1b_z_p_br.xml", "st1h_z_p_bi.xml",
+    "st1h_z_p_br.xml", "st1w_z_p_bi.xml", "st1w_z_p_br.xml", "st1d_z_p_bi.xml",
+    "st1d_z_p_br.xml", "st1q_z_p_ar.xml", "st1b_mz_p_bi.xml", "st1b_mz_p_br.xml",
+    "st1b_mzx_p_bi.xml", "st1b_mzx_p_br.xml", "st1h_mz_p_bi.xml", "st1h_mz_p_br.xml",
+    "st1h_mzx_p_bi.xml", "st1h_mzx_p_br.xml", "st1w_mz_p_bi.xml", "st1w_mz_p_br.xml",
+    "st1w_mzx_p_bi.xml", "st1w_mzx_p_br.xml", "st1d_mz_p_bi.xml", "st1d_mz_p_br.xml",
+    "st1d_mzx_p_bi.xml", "st1d_mzx_p_br.xml", "ld2b_z_p_bi.xml", "ld2b_z_p_br.xml",
+    "ld2h_z_p_bi.xml", "ld2h_z_p_br.xml", "ld2w_z_p_bi.xml", "ld2w_z_p_br.xml",
+    "ld2d_z_p_bi.xml", "ld2d_z_p_br.xml", "ld3b_z_p_bi.xml", "ld3b_z_p_br.xml",
+    "ld3h_z_p_bi.xml", "ld3h_z_p_br.xml", "ld3w_z_p_bi.xml", "ld3w_z_p_br.xml",
+    "ld3d_z_p_bi.xml", "ld3d_z_p_br.xml", "ld4b_z_p_bi.xml", "ld4b_z_p_br.xml",
+    "ld4h_z_p_bi.xml", "ld4h_z_p_br.xml", "ld4w_z_p_bi.xml", "ld4w_z_p_br.xml",
+    "ld4d_z_p_bi.xml", "ld4d_z_p_br.xml", "st2b_z_p_bi.xml", "st2b_z_p_br.xml",
+    "st2h_z_p_bi.xml", "st2h_z_p_br.xml", "st2w_z_p_bi.xml", "st2w_z_p_br.xml",
+    "st2d_z_p_bi.xml", "st2d_z_p_br.xml", "st2q_z_p_bi.xml", "st2q_z_p_br.xml",
+    "st3b_z_p_bi.xml", "st3b_z_p_br.xml", "st3h_z_p_bi.xml", "st3h_z_p_br.xml",
+    "st3w_z_p_bi.xml", "st3w_z_p_br.xml", "st3d_z_p_bi.xml", "st3d_z_p_br.xml",
+    "st3q_z_p_bi.xml", "st3q_z_p_br.xml", "st4b_z_p_bi.xml", "st4b_z_p_br.xml",
+    "st4h_z_p_bi.xml", "st4h_z_p_br.xml", "st4w_z_p_bi.xml", "st4w_z_p_br.xml",
+    "st4d_z_p_bi.xml", "st4d_z_p_br.xml", "st4q_z_p_bi.xml", "st4q_z_p_br.xml",
+    "stnt1b_z_p_bi.xml", "stnt1b_z_p_br.xml", "stnt1b_z_p_ar.xml", "stnt1h_z_p_bi.xml",
+    "stnt1h_z_p_br.xml", "stnt1h_z_p_ar.xml", "stnt1w_z_p_bi.xml", "stnt1w_z_p_br.xml",
+    "stnt1w_z_p_ar.xml", "stnt1d_z_p_bi.xml", "stnt1d_z_p_br.xml", "stnt1d_z_p_ar.xml",
+    "stnt1b_mz_p_bi.xml", "stnt1b_mz_p_br.xml", "stnt1b_mzx_p_bi.xml", "stnt1b_mzx_p_br.xml",
+    "stnt1h_mz_p_bi.xml", "stnt1h_mz_p_br.xml", "stnt1h_mzx_p_bi.xml", "stnt1h_mzx_p_br.xml",
+    "stnt1w_mz_p_bi.xml", "stnt1w_mz_p_br.xml", "stnt1w_mzx_p_bi.xml", "stnt1w_mzx_p_br.xml",
+    "stnt1d_mz_p_bi.xml", "stnt1d_mz_p_br.xml", "stnt1d_mzx_p_bi.xml", "stnt1d_mzx_p_br.xml",
+  ], sveContiguousByteMemoryOperands),
+  operandFamily("three-source-integer", ["madd.xml", "msub.xml", "maddpt.xml", "msubpt.xml"], threeSourceIntegerOperands),
+  operandFamily("one-source-integer", [
+    "clz_int.xml", "rbit_int.xml", "rev16_int.xml", "rev32_int.xml",
+    "cls_int.xml", "abs.xml", "cnt.xml", "ctz.xml",
+    "rev.xml",
+  ], oneSourceIntegerOperands),
+  operandFamily("mul-alias", ["mul_madd.xml"], mulAliasOperands),
+  operandFamily("two-source-integer", [
+    "mneg_msub.xml", "udiv.xml", "sdiv.xml", "smax_reg.xml",
+    "smin_reg.xml", "umax_reg.xml", "umin_reg.xml", "lsl_lslv.xml",
+    "lsr_lsrv.xml", "asr_asrv.xml", "ror_rorv.xml",
+  ], twoSourceIntegerOperands),
+  operandFamily("crc32", ["crc32.xml", "crc32c.xml"], crc32Operands),
+  operandFamily("scalar-multiply-long", ["smaddl.xml", "smsubl.xml", "umaddl.xml", "umsubl.xml"], scalarMultiplyLongOperands),
+  operandFamily("scalar-multiply-long-alias", ["smull_smaddl.xml", "smnegl_smsubl.xml", "umull_umaddl.xml", "umnegl_umsubl.xml"], scalarMultiplyLongAliasOperands),
+  operandFamily("multiply-high", ["smulh.xml", "umulh.xml"], multiplyHighOperands),
+  operandFamily("system-move", ["mrs.xml", "msr_reg.xml"], inst => {
+      const encoding = inst.encoding!;
       return systemMoveOperands(inst, encoding.mnemonic);
-    case "mrrs.xml":
-    case "msrr.xml":
+    }),
+  operandFamily("system-move128", ["mrrs.xml", "msrr.xml"], inst => {
+      const encoding = inst.encoding!;
       return systemMove128Operands(inst, encoding.mnemonic);
-    case "dmb.xml":
-    case "dsb.xml":
-      return barrierOperands(inst);
-    case "clrex.xml":
-      return clrexOperands(inst);
-    case "isb.xml":
-      return isbOperands(inst);
-    case "svc.xml":
-    case "hvc.xml":
-    case "smc.xml":
-    case "brk.xml":
-    case "hlt.xml":
-    case "dcps1.xml":
-    case "dcps2.xml":
-    case "dcps3.xml":
-      return exceptionImmediateOperands(inst);
-    case "at_sys.xml":
+    }),
+  operandFamily("barrier", ["dmb.xml", "dsb.xml"], barrierOperands),
+  operandFamily("clrex", ["clrex.xml"], clrexOperands),
+  operandFamily("isb", ["isb.xml"], isbOperands),
+  operandFamily("exception-immediate", [
+    "svc.xml", "hvc.xml", "smc.xml", "brk.xml",
+    "hlt.xml", "dcps1.xml", "dcps2.xml", "dcps3.xml",
+  ], exceptionImmediateOperands),
+  operandFamily("system-instruction-alias", ["at_sys.xml"], inst => {
       return systemInstructionAliasOperands(inst, AT_SYSTEM_ALIASES);
-    case "dc_sys.xml":
+    }),
+  operandFamily("system-instruction-alias-dc-sys", ["dc_sys.xml"], inst => {
       return systemInstructionAliasOperands(inst, DC_SYSTEM_ALIASES);
-    case "tlbi_sys.xml":
+    }),
+  operandFamily("system-instruction-alias-tlbi-sys", ["tlbi_sys.xml"], inst => {
       return systemInstructionAliasOperands(inst, TLBI_SYSTEM_ALIASES);
-    case "msr_imm.xml":
-      return msrImmediateOperands(inst);
-    case "smstart_msr_imm.xml":
-    case "smstop_msr_imm.xml":
-      return smstartSmstopOperands(inst);
-    case "rdsvl_r_i.xml":
-      return rdsvlOperands(inst);
-    case "addspl_r_ri.xml":
-    case "addsvl_r_ri.xml":
-    case "addpl_r_ri.xml":
-    case "addvl_r_ri.xml":
-    case "rdvl_r_i.xml":
-      return sveVectorLengthGpImmediateOperands(inst);
-    case "sysl.xml":
-      return syslOperands(inst);
-    case "sys.xml":
-      return rawSysOperands(inst);
-    case "cfp_sys.xml":
-    case "dvp_sys.xml":
-    case "cpp_sys.xml":
-    case "cosp_sys.xml":
-      return specResContextOperands(inst);
-    case "chkfeat.xml":
+    }),
+  operandFamily("msr-immediate", ["msr_imm.xml"], msrImmediateOperands),
+  operandFamily("smstart-smstop", ["smstart_msr_imm.xml", "smstop_msr_imm.xml"], smstartSmstopOperands),
+  operandFamily("rdsvl", ["rdsvl_r_i.xml"], rdsvlOperands),
+  operandFamily("sve-vector-length-gp-immediate", [
+    "addspl_r_ri.xml", "addsvl_r_ri.xml", "addpl_r_ri.xml", "addvl_r_ri.xml",
+    "rdvl_r_i.xml",
+  ], sveVectorLengthGpImmediateOperands),
+  operandFamily("sysl", ["sysl.xml"], syslOperands),
+  operandFamily("raw-sys", ["sys.xml"], rawSysOperands),
+  operandFamily("spec-res-context", ["cfp_sys.xml", "dvp_sys.xml", "cpp_sys.xml", "cosp_sys.xml"], specResContextOperands),
+  operandFamily("chkfeat", ["chkfeat.xml"], inst => {
       return chkfeatOperands();
-    case "gcsss2_sysl.xml":
-    case "gcspopm_sysl.xml":
-    case "gcsss1_sys.xml":
-    case "gcspushm_sys.xml":
-      return gcsSyslAliasOperands(inst);
-    case "gcspushx_sys.xml":
-    case "gcspopcx_sys.xml":
-    case "gcspopx_sys.xml":
+    }),
+  operandFamily("gcs-sysl-alias", ["gcsss2_sysl.xml", "gcspopm_sysl.xml", "gcsss1_sys.xml", "gcspushm_sys.xml"], gcsSyslAliasOperands),
+  operandFamily("no-operands", [
+    "gcspushx_sys.xml", "gcspopcx_sys.xml", "gcspopx_sys.xml", "nop.xml",
+    "yield.xml", "wfe.xml", "wfi.xml", "sev.xml",
+    "sevl.xml", "cfinv.xml", "xaflag.xml", "axflag.xml",
+    "dgh.xml", "esb.xml", "csdb.xml", "ssbb_dsb.xml",
+    "pssbb_dsb.xml", "sb.xml", "eret.xml", "drps.xml",
+    "clrbhb.xml", "pacnbiasppc.xml", "pacnbibsppc.xml", "pacm.xml",
+    "setffr_f.xml", "reta.xml", "ereta.xml", "autia171615.xml",
+    "autib171615.xml", "pacia171615.xml", "pacib171615.xml", "paciasppc.xml",
+    "pacibsppc.xml",
+  ], inst => {
       return noOperands();
-    case "gcsb.xml":
+    }),
+  operandFamily("gcsb", ["gcsb.xml"], inst => {
       return gcsbOperands();
-    case "gcsstr.xml":
-    case "gcssttr.xml":
-      return gcsStoreOperands(inst);
-    case "trcit_sys.xml":
-      return trcitOperands(inst);
-    case "ldapr.xml":
-      return ldaprOperands(inst);
-    case "ldaprb.xml":
-    case "ldaprh.xml":
-      return ldaprByteHalfwordOperands(inst);
-    case "ldiapp.xml":
-      return ldiappOperands(inst);
-    case "ldapursb.xml":
-    case "ldapursh.xml":
-    case "ldapur_gen.xml":
-    case "ldapurb.xml":
-    case "ldapurh.xml":
-    case "ldapursw.xml":
-    case "stlur_gen.xml":
-    case "stlurb.xml":
-    case "stlurh.xml":
-    case "stlur_fpsimd.xml":
-    case "ldapur_fpsimd.xml":
-      return rcpcUnscaledOperands(inst);
-    case "stlr.xml":
-    case "stlrb.xml":
-    case "stlrh.xml":
-      return stlrOperands(inst);
-    case "stilp.xml":
-      return stilpOperands(inst);
-    case "movprfx_z_z.xml":
-      return sveMovprfxOperands(inst);
-    case "movprfx_z_p_z.xml":
-      return svePredicatedMovprfxOperands(inst);
-    case "fcpy_z_p_i.xml":
-      return sveFcpyOperands(inst);
-    case "fdup_z_i.xml":
-    case "fmov_dup_z_i.xml":
-      return sveFdupOperands(inst);
-    case "fcmp_float.xml":
-    case "fcmpe_float.xml":
-      return scalarFpCompareOperands(inst);
-    case "fccmp_float.xml":
-    case "fccmpe_float.xml":
-      return scalarFpConditionalCompareOperands(inst);
-    case "fcsel_float.xml":
-      return scalarFpConditionalSelectOperands(inst);
-    case "fcvt_float.xml":
-      return scalarFpConvertPrecisionOperands(inst);
-    case "fmov_float.xml":
-    case "fabs_float.xml":
-    case "fneg_float.xml":
-    case "fsqrt_float.xml":
-    case "frintn_float.xml":
-    case "frintp_float.xml":
-    case "frintm_float.xml":
-    case "frintz_float.xml":
-    case "frinta_float.xml":
-    case "frintx_float.xml":
-    case "frinti_float.xml":
-      return scalarFpUnaryOperands(inst);
-    case "fmov_float_gen.xml":
-      return scalarFpMoveGeneralOperands(inst);
-    case "fmov_float_imm.xml":
-      return scalarFpMoveImmediateOperands(inst);
-    case "frint32z_float.xml":
-    case "frint64z_float.xml":
-    case "frint32x_float.xml":
-    case "frint64x_float.xml":
-      return scalarFpUnaryOperands(inst);
-    case "fcvtns_float.xml":
-    case "fcvtnu_float.xml":
-    case "fcvtas_float.xml":
-    case "fcvtau_float.xml":
-    case "fcvtps_float.xml":
-    case "fcvtpu_float.xml":
-    case "fcvtms_float.xml":
-    case "fcvtmu_float.xml":
-    case "fcvtzs_float_int.xml":
-    case "fcvtzu_float_int.xml":
-      return scalarFpToIntegerOperands(inst);
-    case "fcvtzs_float_fix.xml":
-    case "fcvtzu_float_fix.xml":
+    }),
+  operandFamily("gcs-store", ["gcsstr.xml", "gcssttr.xml"], gcsStoreOperands),
+  operandFamily("trcit", ["trcit_sys.xml"], trcitOperands),
+  operandFamily("ldapr", ["ldapr.xml"], ldaprOperands),
+  operandFamily("ldapr-byte-halfword", ["ldaprb.xml", "ldaprh.xml"], ldaprByteHalfwordOperands),
+  operandFamily("ldiapp", ["ldiapp.xml"], ldiappOperands),
+  operandFamily("rcpc-unscaled", [
+    "ldapursb.xml", "ldapursh.xml", "ldapur_gen.xml", "ldapurb.xml",
+    "ldapurh.xml", "ldapursw.xml", "stlur_gen.xml", "stlurb.xml",
+    "stlurh.xml", "stlur_fpsimd.xml", "ldapur_fpsimd.xml",
+  ], rcpcUnscaledOperands),
+  operandFamily("stlr", ["stlr.xml", "stlrb.xml", "stlrh.xml"], stlrOperands),
+  operandFamily("stilp", ["stilp.xml"], stilpOperands),
+  operandFamily("sve-movprfx", ["movprfx_z_z.xml"], sveMovprfxOperands),
+  operandFamily("sve-predicated-movprfx", ["movprfx_z_p_z.xml"], svePredicatedMovprfxOperands),
+  operandFamily("sve-fcpy", ["fcpy_z_p_i.xml"], sveFcpyOperands),
+  operandFamily("sve-fdup", ["fdup_z_i.xml", "fmov_dup_z_i.xml"], sveFdupOperands),
+  operandFamily("scalar-fp-compare", ["fcmp_float.xml", "fcmpe_float.xml"], scalarFpCompareOperands),
+  operandFamily("scalar-fp-conditional-compare", ["fccmp_float.xml", "fccmpe_float.xml"], scalarFpConditionalCompareOperands),
+  operandFamily("scalar-fp-conditional-select", ["fcsel_float.xml"], scalarFpConditionalSelectOperands),
+  operandFamily("scalar-fp-convert-precision", ["fcvt_float.xml"], scalarFpConvertPrecisionOperands),
+  operandFamily("scalar-fp-unary", [
+    "fmov_float.xml", "fabs_float.xml", "fneg_float.xml", "fsqrt_float.xml",
+    "frintn_float.xml", "frintp_float.xml", "frintm_float.xml", "frintz_float.xml",
+    "frinta_float.xml", "frintx_float.xml", "frinti_float.xml", "frint32z_float.xml",
+    "frint64z_float.xml", "frint32x_float.xml", "frint64x_float.xml",
+  ], scalarFpUnaryOperands),
+  operandFamily("scalar-fp-move-general", ["fmov_float_gen.xml"], scalarFpMoveGeneralOperands),
+  operandFamily("scalar-fp-move-immediate", ["fmov_float_imm.xml"], scalarFpMoveImmediateOperands),
+  operandFamily("scalar-fp-to-integer", [
+    "fcvtns_float.xml", "fcvtnu_float.xml", "fcvtas_float.xml", "fcvtau_float.xml",
+    "fcvtps_float.xml", "fcvtpu_float.xml", "fcvtms_float.xml", "fcvtmu_float.xml",
+    "fcvtzs_float_int.xml", "fcvtzu_float_int.xml",
+  ], scalarFpToIntegerOperands),
+  operandFamily("scalar-fp-to-integer-fcvtzs-float-fix", ["fcvtzs_float_fix.xml", "fcvtzu_float_fix.xml"], inst => {
       return scalarFpToIntegerOperands(inst, true);
-    case "scvtf_float_int.xml":
-    case "ucvtf_float_int.xml":
-      return scalarIntegerToFpOperands(inst);
-    case "scvtf_float_fix.xml":
-    case "ucvtf_float_fix.xml":
+    }),
+  operandFamily("scalar-integer-to-fp", ["scvtf_float_int.xml", "ucvtf_float_int.xml"], scalarIntegerToFpOperands),
+  operandFamily("scalar-integer-to-fp-scvtf-float-fix", ["scvtf_float_fix.xml", "ucvtf_float_fix.xml"], inst => {
       return scalarIntegerToFpOperands(inst, true);
-    case "fmul_float.xml":
-    case "fdiv_float.xml":
-    case "fadd_float.xml":
-    case "fsub_float.xml":
-    case "fmax_float.xml":
-    case "fmin_float.xml":
-    case "fmaxnm_float.xml":
-    case "fminnm_float.xml":
-    case "fnmul_float.xml":
-      return scalarFpBinaryOperands(inst);
-    case "fmadd_float.xml":
-    case "fmsub_float.xml":
-    case "fnmadd_float.xml":
-    case "fnmsub_float.xml":
-      return scalarFpTernaryOperands(inst);
-    case "and_log_shift.xml":
-      return logicalShiftedRegisterOperands(inst);
-    case "mov_orr_log_shift.xml":
-      return movRegisterAliasOperands(inst);
-    case "bic_log_shift.xml":
-    case "orr_log_shift.xml":
-    case "orn_log_shift.xml":
-    case "ands_log_shift.xml":
-    case "bics.xml":
-    case "tst_ands_log_shift.xml":
-      return logicalShiftedRegisterOperands(inst);
-    case "and_log_imm.xml":
-    case "ands_log_imm.xml":
-    case "tst_ands_log_imm.xml":
-    case "orr_log_imm.xml":
-    case "eor_log_imm.xml":
-    case "mov_orr_log_imm.xml":
-      return logicalImmediateOperands(inst);
-    case "ldr_imm_gen.xml":
-    case "str_imm_gen.xml":
-    case "ldur_gen.xml":
-    case "stur_gen.xml":
-    case "ldur_fpsimd.xml":
-    case "stur_fpsimd.xml":
-    case "ldrb_imm.xml":
-    case "ldurb.xml":
-    case "ldtrb.xml":
-    case "ldrh_imm.xml":
-    case "ldurh.xml":
-    case "ldtrh.xml":
-    case "strb_imm.xml":
-    case "sturb.xml":
-    case "sttrb.xml":
-    case "strh_imm.xml":
-    case "sturh.xml":
-    case "sttrh.xml":
-    case "ldr_reg_gen.xml":
-    case "ldrsw_reg.xml":
-    case "str_reg_gen.xml":
-    case "strb_reg.xml":
-    case "strh_reg.xml":
-    case "ldrb_reg.xml":
-    case "ldrh_reg.xml":
-    case "ldrsb_reg.xml":
-    case "ldrsh_reg.xml":
-    case "ldr_imm_fpsimd.xml":
-    case "str_imm_fpsimd.xml":
-    case "ldr_reg_fpsimd.xml":
-    case "str_reg_fpsimd.xml":
-    case "ldrsb_imm.xml":
-    case "ldrsh_imm.xml":
-    case "ldrsw_imm.xml":
-    case "ldursb.xml":
-    case "ldursh.xml":
-    case "ldursw.xml":
-    case "ldtr.xml":
-    case "sttr.xml":
-    case "ldtrsb.xml":
-    case "ldtrsh.xml":
-    case "ldtrsw.xml":
-    case "prfm_reg.xml":
-    case "prfm_imm.xml":
-    case "prfum.xml":
-      return scalarLoadStoreOperands(inst);
-    case "stxr.xml":
-    case "stxrb.xml":
-    case "stxrh.xml":
-    case "stlxr.xml":
-    case "stlxrb.xml":
-    case "stlxrh.xml":
-      return storeExclusiveOperands(inst);
-    case "ldxr.xml":
-    case "ldxrb.xml":
-    case "ldxrh.xml":
-    case "ldaxr.xml":
-    case "ldaxrb.xml":
-    case "ldaxrh.xml":
-    case "ldar.xml":
-    case "ldarb.xml":
-    case "ldarh.xml":
-      return loadExclusiveOperands(inst);
-    case "stxp.xml":
-    case "ldxp.xml":
-    case "ldaxp.xml":
-      return exclusivePairOperands(inst);
-    case "ldr_lit_gen.xml":
-      return ldrLiteralOperands(inst);
-    case "stnp_gen.xml":
-      return pairLoadStoreOperands(inst);
-    case "csel.xml":
-    case "cinc_csinc.xml":
-    case "cinv_csinv.xml":
-    case "cneg_csneg.xml":
-    case "cset_csinc.xml":
-    case "csetm_csinv.xml":
-      return conditionalSelectOperands(inst);
-    case "ccmp_imm.xml":
-    case "ccmn_imm.xml":
-      return conditionalCompareImmediateOperands(inst);
-    case "ccmp_reg.xml":
-    case "ccmn_reg.xml":
-      return conditionalCompareRegisterOperands(inst);
-    case "smax_reg.xml":
-    case "smin_reg.xml":
-    case "umax_reg.xml":
-    case "umin_reg.xml":
-      return twoSourceIntegerOperands(inst);
-    case "smax_imm.xml":
-    case "smin_imm.xml":
-    case "umax_imm.xml":
-    case "umin_imm.xml":
-      return minMaxImmediateOperands(inst);
-    case "bfm.xml":
-    case "bfi_bfm.xml":
-    case "bfc_bfm.xml":
-    case "bfxil_bfm.xml":
-    case "sbfm.xml":
-    case "asr_sbfm.xml":
-    case "sbfiz_sbfm.xml":
-    case "sbfx_sbfm.xml":
-    case "sxtb_sbfm.xml":
-    case "sxth_sbfm.xml":
-    case "sxtw_sbfm.xml":
-    case "ubfm.xml":
-    case "lsl_ubfm.xml":
-    case "lsr_ubfm.xml":
-    case "ubfiz_ubfm.xml":
-    case "ubfx_ubfm.xml":
-    case "uxtb_ubfm.xml":
-    case "uxth_ubfm.xml":
-      return bitfieldImmediateOperands(inst);
-    case "ldp_gen.xml":
-    case "stp_gen.xml":
-    case "ldnp_gen.xml":
-    case "ldp_fpsimd.xml":
-    case "ldnp_fpsimd.xml":
-    case "stp_fpsimd.xml":
-    case "stnp_fpsimd.xml":
-    case "ldpsw.xml":
-      return pairLoadStoreOperands(inst);
-    case "stlxp.xml":
-      return stlxpOperands(inst);
-    case "dup_z_zi.xml":
-      return sveDupIndexedOperands(inst);
-    case "dup_z_i.xml":
-      return sveDupImmediateOperands(inst);
-    case "pmov_p_zi.xml":
-      return svePmovPredicateOperands(inst);
-    case "pmov_z_pi.xml":
-      return svePmovVectorOperands(inst);
-    case "pext_pn_rr.xml":
-    case "pext_pp_rr.xml":
-      return svePextOperands(inst);
-    case "cpy_z_o_i.xml":
-      return sveCopyImmediateOperands(inst);
-    case "cpy_z_p_i.xml":
-      return sveCopyMergingImmediateOperands(inst);
-    case "cpy_z_p_r.xml":
-      return sveCopyScalarOperands(inst);
-    case "cpy_z_p_v.xml":
-      return sveCopyScalarVectorOperands(inst);
-    case "extr.xml":
-      return extractRegisterOperands(inst);
-    case "bti.xml":
-      return btiOperands(inst);
-    case "hint.xml":
-      return hintOperands(inst);
-    case "setf.xml":
-      return setfOperands(inst);
-    case "rmif.xml":
-      return rmifOperands(inst);
-    case "nop.xml":
-    case "yield.xml":
-    case "wfe.xml":
-    case "wfi.xml":
-    case "sev.xml":
-    case "sevl.xml":
-    case "cfinv.xml":
-    case "xaflag.xml":
-    case "axflag.xml":
-    case "dgh.xml":
-    case "esb.xml":
-    case "csdb.xml":
-    case "ssbb_dsb.xml":
-    case "pssbb_dsb.xml":
-    case "sb.xml":
-    case "eret.xml":
-    case "drps.xml":
-    case "clrbhb.xml":
-    case "pacnbiasppc.xml":
-    case "pacnbibsppc.xml":
-    case "pacm.xml":
-      return noOperands();
-    case "rev.xml":
-      return oneSourceIntegerOperands(inst);
-    case "lsl_lslv.xml":
-    case "lsr_lsrv.xml":
-    case "asr_asrv.xml":
-    case "ror_rorv.xml":
-      return twoSourceIntegerOperands(inst);
-    case "sqrdmlah_advsimd_vec.xml":
-    case "sqrdmlah_advsimd_elt.xml":
-    case "sqrdmlsh_advsimd_vec.xml":
-    case "sqrdmlsh_advsimd_elt.xml":
-    case "sqdmulh_advsimd_vec.xml":
-    case "sqrdmulh_advsimd_vec.xml":
-      return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
-    case "mla_advsimd_elt.xml":
-    case "mls_advsimd_elt.xml":
-    case "mul_advsimd_elt.xml":
-    case "fmla_advsimd_elt.xml":
-    case "fmls_advsimd_elt.xml":
-    case "fmul_advsimd_elt.xml":
-    case "fmulx_advsimd_elt.xml":
-      return advsimdByElementMultiplyAccumulateOperands(inst);
-    case "smull_advsimd_elt.xml":
-    case "umull_advsimd_elt.xml":
-    case "sqdmull_advsimd_elt.xml":
-      return advsimdByElementLongOperands(inst);
-    case "sqdmulh_advsimd_elt.xml":
-    case "sqrdmulh_advsimd_elt.xml":
-      return advsimdSaturatingRoundingDoublingMultiplyOperands(inst);
-    case "fcmla_advsimd_vec.xml":
-    case "fcadd_advsimd_vec.xml":
-      return advsimdComplexVectorOperands(inst);
-    case "fcmla_advsimd_elt.xml":
-      return advsimdComplexByElementOperands(inst);
-    case "smlal_advsimd_elt.xml":
-    case "smlsl_advsimd_elt.xml":
-    case "sqdmlal_advsimd_elt.xml":
-    case "umlal_advsimd_elt.xml":
-    case "umlsl_advsimd_elt.xml":
-    case "sqdmlsl_advsimd_elt.xml":
-      return advsimdByElementLongOperands(inst);
-    case "fmlal_advsimd_vec.xml":
-    case "fmlalb_advsimd_vec.xml":
-    case "fmlallbb_advsimd_vec.xml":
-    case "fmlsl_advsimd_vec.xml":
-    case "fmlal_advsimd_elt.xml":
-    case "fmlalb_advsimd_elem.xml":
-    case "fmlallbb_advsimd_elem.xml":
-    case "fmlsl_advsimd_elt.xml":
-      return advsimdFpLongMultiplyAccumulateOperands(inst);
-    case "fmaxp_advsimd_pair.xml":
-    case "fminp_advsimd_pair.xml":
-    case "fmaxnmp_advsimd_pair.xml":
-    case "fminnmp_advsimd_pair.xml":
-    case "faddp_advsimd_vec.xml":
-    case "faddp_advsimd_pair.xml":
-    case "fmaxp_advsimd_vec.xml":
-    case "fminp_advsimd_vec.xml":
-    case "fmaxnmp_advsimd_vec.xml":
-    case "fminnmp_advsimd_vec.xml":
-      return advsimdFloatingPairwiseOperands(inst);
-    case "addp_advsimd_vec.xml":
-    case "addp_advsimd_pair.xml":
-      return advsimdIntegerPairwiseOperands(inst);
-    case "aese_advsimd.xml":
-    case "aesd_advsimd.xml":
-    case "aesmc_advsimd.xml":
-    case "aesimc_advsimd.xml":
-      return advsimdCryptoBinaryOperands(inst);
-    case "fscale_advsimd.xml":
-    case "add_advsimd.xml":
-    case "sub_advsimd.xml":
-    case "fadd_advsimd.xml":
-    case "fsub_advsimd.xml":
-    case "shadd_advsimd.xml":
-    case "uhadd_advsimd.xml":
-    case "shsub_advsimd.xml":
-    case "uhsub_advsimd.xml":
-    case "srhadd_advsimd.xml":
-    case "urhadd_advsimd.xml":
-    case "smaxp_advsimd.xml":
-    case "sminp_advsimd.xml":
-    case "umaxp_advsimd.xml":
-    case "uminp_advsimd.xml":
-    case "smax_advsimd.xml":
-    case "smin_advsimd.xml":
-    case "umax_advsimd.xml":
-    case "umin_advsimd.xml":
-    case "fmax_advsimd.xml":
-    case "famax_advsimd.xml":
-    case "fmin_advsimd.xml":
-    case "famin_advsimd.xml":
-    case "fmaxnm_advsimd.xml":
-    case "fminnm_advsimd.xml":
-    case "fabd_advsimd.xml":
-    case "frecps_advsimd.xml":
-    case "frsqrts_advsimd.xml":
-    case "saba_advsimd.xml":
-    case "uaba_advsimd.xml":
-    case "sabd_advsimd.xml":
-    case "uabd_advsimd.xml":
-    case "sqadd_advsimd.xml":
-    case "uqadd_advsimd.xml":
-    case "sqsub_advsimd.xml":
-    case "uqsub_advsimd.xml":
-    case "mul_advsimd_vec.xml":
-    case "mla_advsimd_vec.xml":
-    case "mls_advsimd_vec.xml":
-    case "fmul_advsimd_vec.xml":
-    case "fdiv_advsimd.xml":
-    case "pmul_advsimd.xml":
-    case "fmulx_advsimd_vec.xml":
-    case "fmla_advsimd_vec.xml":
-    case "fmls_advsimd_vec.xml":
-    case "and_advsimd.xml":
-    case "eor_advsimd.xml":
-    case "bit_advsimd.xml":
-    case "bif_advsimd.xml":
-    case "bsl_advsimd.xml":
-    case "orn_advsimd.xml":
-    case "bic_advsimd_reg.xml":
-    case "sshl_advsimd.xml":
-    case "ushl_advsimd.xml":
-    case "srshl_advsimd.xml":
-    case "urshl_advsimd.xml":
-    case "sqshl_advsimd_reg.xml":
-    case "uqshl_advsimd_reg.xml":
-    case "sqrshl_advsimd.xml":
-    case "uqrshl_advsimd.xml":
-      return advsimdScalarOrVectorThreeSameOperands(inst);
-    case "bfmmla_advsimd.xml":
-    case "bfmlal_advsimd_vec.xml":
-    case "bfmlal_advsimd_elt.xml":
-      return advsimdBfloat16MultiplyAccumulateOperands(inst);
-    case "smmla_advsimd_vec.xml":
-    case "ummla_advsimd_vec.xml":
-    case "usmmla_advsimd_vec.xml":
-      return advsimdMatrixMultiplyAccumulateOperands(inst);
-    case "sdot_advsimd_vec.xml":
-    case "sdot_advsimd_elt.xml":
-    case "sudot_advsimd_elt.xml":
-    case "udot_advsimd_vec.xml":
-    case "udot_advsimd_elt.xml":
-    case "usdot_advsimd_vec.xml":
-    case "usdot_advsimd_elt.xml":
-    case "bfdot_advsimd_vec.xml":
-    case "bfdot_advsimd_elt.xml":
-    case "fdot_advsimd_2wayvec.xml":
-    case "fdot_advsimd_4wayvec.xml":
-    case "fdot_advsimd_2wayelem.xml":
-    case "fdot_advsimd_4wayelem.xml":
-      return advsimdDotProductOperands(inst);
-    case "cmeq_advsimd_reg.xml":
-    case "cmeq_advsimd_zero.xml":
-    case "cmge_advsimd_reg.xml":
-    case "cmge_advsimd_zero.xml":
-    case "cmgt_advsimd_reg.xml":
-    case "cmgt_advsimd_zero.xml":
-    case "cmhi_advsimd.xml":
-    case "cmhs_advsimd.xml":
-    case "cmtst_advsimd.xml":
-    case "cmle_advsimd.xml":
-    case "cmlt_advsimd.xml":
-    case "fcmeq_advsimd_reg.xml":
-    case "fcmeq_advsimd_zero.xml":
-    case "fcmge_advsimd_reg.xml":
-    case "fcmge_advsimd_zero.xml":
-    case "fcmgt_advsimd_reg.xml":
-    case "fcmgt_advsimd_zero.xml":
-    case "fcmle_advsimd.xml":
-    case "fcmlt_advsimd.xml":
-    case "facge_advsimd.xml":
-    case "facgt_advsimd.xml":
-      return advsimdCompareOperands(inst);
-    case "sha1h_advsimd.xml":
-      return advsimdCryptoSha1HashOperands(inst);
-    case "sha1su1_advsimd.xml":
-    case "sha256su0_advsimd.xml":
-      return advsimdCryptoVector4sBinaryOperands(inst);
-    case "sha1c_advsimd.xml":
-    case "sha1p_advsimd.xml":
-    case "sha1m_advsimd.xml":
-      return advsimdCryptoSha1ThreeRegOperands(inst);
-    case "sha1su0_advsimd.xml":
-    case "sha256su1_advsimd.xml":
-      return advsimdCryptoVector4sThreeRegOperands(inst);
-    case "sha256h_advsimd.xml":
-    case "sha256h2_advsimd.xml":
-      return advsimdCryptoSha256HashOperands(inst);
-    case "suqadd_advsimd.xml":
-    case "usqadd_advsimd.xml":
-    case "sqabs_advsimd.xml":
-    case "sqneg_advsimd.xml":
-    case "abs_advsimd.xml":
-    case "neg_advsimd.xml":
-    case "rev64_advsimd.xml":
-    case "rev32_advsimd.xml":
-    case "rev16_advsimd.xml":
-    case "cls_advsimd.xml":
-    case "clz_advsimd.xml":
-    case "cnt_advsimd.xml":
-    case "mvn_not_advsimd.xml":
-    case "rbit_advsimd.xml":
-    case "fabs_advsimd.xml":
-    case "fneg_advsimd.xml":
-    case "urecpe_advsimd.xml":
-    case "ursqrte_advsimd.xml":
-    case "frecpe_advsimd.xml":
-    case "frecpx_advsimd.xml":
-    case "frsqrte_advsimd.xml":
-    case "fsqrt_advsimd.xml":
-    case "frintn_advsimd.xml":
-    case "frinta_advsimd.xml":
-    case "frintp_advsimd.xml":
-    case "frintm_advsimd.xml":
-    case "frintx_advsimd.xml":
-    case "frintz_advsimd.xml":
-    case "frinti_advsimd.xml":
-    case "frint32z_advsimd.xml":
-    case "frint64z_advsimd.xml":
-    case "frint32x_advsimd.xml":
-    case "frint64x_advsimd.xml":
-    case "fcvtas_advsimd.xml":
-    case "fcvtau_advsimd.xml":
-    case "fcvtps_advsimd.xml":
-    case "fcvtpu_advsimd.xml":
-    case "fcvtms_advsimd.xml":
-    case "fcvtmu_advsimd.xml":
-    case "fcvtnu_advsimd.xml":
-    case "scvtf_advsimd_int.xml":
-    case "ucvtf_advsimd_int.xml":
-    case "fcvtzs_advsimd_int.xml":
-    case "fcvtzu_advsimd_int.xml":
-    case "fcvtns_advsimd.xml":
-      return advsimdUnaryOperands(inst);
-    case "fcvtn_advsimd.xml":
-      return advsimdFloatingConvertNarrowOperands(inst);
-    case "fcvtl_advsimd.xml":
-      return advsimdFloatingConvertLongOperands(inst);
-    case "scvtf_advsimd_fix.xml":
-    case "ucvtf_advsimd_fix.xml":
-    case "fcvtzs_advsimd_fix.xml":
-    case "fcvtzu_advsimd_fix.xml":
-      return advsimdUnaryWithImmediateOperands(inst);
-    case "f12cvtl_advsimd.xml":
-    case "bf12cvtl_advsimd.xml":
-      return advsimdFp8ConvertLongOperands(inst);
-    case "uzp1_advsimd.xml":
-    case "uzp2_advsimd.xml":
-    case "trn1_advsimd.xml":
-    case "trn2_advsimd.xml":
-    case "zip1_advsimd.xml":
-    case "zip2_advsimd.xml":
-      return advsimdThreeSameOperands(inst);
-    case "tbl_advsimd.xml":
-    case "tbx_advsimd.xml":
-      return advsimdTableLookupOperands(inst);
-    case "luti2_advsimd.xml":
-    case "luti4_advsimd.xml":
-      return advsimdFp8LutiOperands(inst);
-    case "xtn_advsimd.xml":
-    case "fcvtxn_advsimd.xml":
-    case "bfcvtn_advsimd.xml":
-    case "sqxtun_advsimd.xml":
-    case "sqxtn_advsimd.xml":
-    case "uqxtn_advsimd.xml":
-      return advsimdNarrowOperands(inst);
-    case "fcvtn_advsimd_168.xml":
-    case "fcvtn_advsimd_328.xml":
-      return advsimdFp8NarrowPairOperands(inst);
-    case "shll_advsimd.xml":
-    case "sshll_advsimd.xml":
-    case "ushll_advsimd.xml":
-      return advsimdShiftLeftLongOperands(inst);
-    case "sxtl_sshll_advsimd.xml":
-    case "uxtl_ushll_advsimd.xml":
-      return advsimdExtendLongOperands(inst);
-    case "saddlp_advsimd.xml":
-    case "uaddlp_advsimd.xml":
-    case "sadalp_advsimd.xml":
-    case "uadalp_advsimd.xml":
-      return advsimdPairwiseLongOperands(inst);
-    case "saddlv_advsimd.xml":
-    case "uaddlv_advsimd.xml":
-    case "smaxv_advsimd.xml":
-    case "sminv_advsimd.xml":
-    case "umaxv_advsimd.xml":
-    case "uminv_advsimd.xml":
-    case "addv_advsimd.xml":
-    case "fmaxnmv_advsimd.xml":
-    case "fminnmv_advsimd.xml":
-    case "fmaxv_advsimd.xml":
-    case "fminv_advsimd.xml":
-      return advsimdAcrossLaneOperands(inst);
-    case "saddl_advsimd.xml":
-    case "uaddl_advsimd.xml":
-    case "ssubl_advsimd.xml":
-    case "usubl_advsimd.xml":
-    case "smull_advsimd_vec.xml":
-    case "umull_advsimd_vec.xml":
-    case "sabal_advsimd.xml":
-    case "uabal_advsimd.xml":
-    case "sabdl_advsimd.xml":
-    case "uabdl_advsimd.xml":
-    case "smlal_advsimd_vec.xml":
-    case "umlal_advsimd_vec.xml":
-    case "smlsl_advsimd_vec.xml":
-    case "umlsl_advsimd_vec.xml":
-    case "sqdmull_advsimd_vec.xml":
-    case "sqdmlal_advsimd_vec.xml":
-    case "sqdmlsl_advsimd_vec.xml":
-      return advsimdWideningThreeRegOperands(inst);
-    case "saddw_advsimd.xml":
-    case "uaddw_advsimd.xml":
-    case "ssubw_advsimd.xml":
-    case "usubw_advsimd.xml":
-      return advsimdWideThreeRegOperands(inst);
-    case "sshr_advsimd.xml":
-    case "ushr_advsimd.xml":
-    case "ssra_advsimd.xml":
-    case "usra_advsimd.xml":
-    case "srshr_advsimd.xml":
-    case "urshr_advsimd.xml":
-    case "srsra_advsimd.xml":
-    case "ursra_advsimd.xml":
-    case "sri_advsimd.xml":
-    case "sli_advsimd.xml":
-    case "shl_advsimd.xml":
-    case "sqshlu_advsimd.xml":
-    case "sqshl_advsimd_imm.xml":
-    case "uqshl_advsimd_imm.xml":
-      return advsimdImmediateShiftOperands(inst);
-    case "shrn_advsimd.xml":
-    case "rshrn_advsimd.xml":
-      return advsimdNarrowingImmediateShiftOperands(inst);
-    case "addhn_advsimd.xml":
-    case "raddhn_advsimd.xml":
-    case "rsubhn_advsimd.xml":
-      return advsimdHighNarrowThreeRegOperands(inst);
-    case "pmull_advsimd.xml":
-      return advsimdPmullOperands(inst);
-    case "sqshrn_advsimd.xml":
-    case "uqshrn_advsimd.xml":
-    case "sqrshrn_advsimd.xml":
-    case "uqrshrn_advsimd.xml":
-    case "sqshrun_advsimd.xml":
-    case "sqrshrun_advsimd.xml":
-      return advsimdNarrowingImmediateShiftOperands(inst);
-    case "movi_advsimd.xml":
-    case "mvni_advsimd.xml":
-    case "bic_advsimd_imm.xml":
-    case "orr_advsimd_imm.xml":
-    case "fmov_advsimd.xml":
-      return advsimdMoveImmediateOperands(inst);
-    case "mov_orr_advsimd_reg.xml":
-      return advsimdMoveRegisterAliasOperands(inst);
-    case "ins_advsimd_gen.xml":
-      return advsimdCopyGeneralToElementOperands(inst);
-    case "ins_advsimd_elt.xml":
-      return advsimdCopyElementToElementOperands(inst);
-    case "smov_advsimd.xml":
-    case "umov_advsimd.xml":
-    case "mov_umov_advsimd.xml":
-      return advsimdCopyElementToGeneralOperands(inst);
-    case "dup_advsimd_elt.xml":
-      return advsimdScalarDuplicateElementOperands(inst);
-    case "dup_advsimd_gen.xml":
-      return advsimdDuplicateGeneralOperands(inst);
-    case "ext_advsimd.xml":
-      return advsimdExtractOperands(inst);
-    case "ld1r_advsimd.xml":
-    case "ld2r_advsimd.xml":
-    case "ld3r_advsimd.xml":
-    case "ld4r_advsimd.xml":
-    case "ld1_advsimd_sngl.xml":
-    case "ld2_advsimd_sngl.xml":
-    case "ld3_advsimd_sngl.xml":
-    case "ld4_advsimd_sngl.xml":
-    case "st1_advsimd_sngl.xml":
-    case "st2_advsimd_sngl.xml":
-    case "st3_advsimd_sngl.xml":
-    case "st4_advsimd_sngl.xml":
-    case "stl1_advsimd_sngl.xml":
-    case "ldap1_advsimd_sngl.xml":
-      return advsimdSingleStructureOperands(inst);
-    case "ld1_advsimd_mult.xml":
-    case "ld2_advsimd_mult.xml":
-    case "ld3_advsimd_mult.xml":
-    case "ld4_advsimd_mult.xml":
-    case "st1_advsimd_mult.xml":
-    case "st2_advsimd_mult.xml":
-    case "st3_advsimd_mult.xml":
-    case "st4_advsimd_mult.xml":
-      return advsimdMultipleStructureOperands(inst);
-    case "mov_mova_z_p_rza.xml":
-      return movaSingleToVectorOperands(inst);
-    case "movaz_z_rza.xml":
-      return movazSingleToVectorOperands(inst);
-    case "mov_mova_za_p_rz.xml":
-      return movaVectorToSingleOperands(inst);
-    case "mov_mova_mz2_za.xml":
+    }),
+  operandFamily("scalar-fp-binary", [
+    "fmul_float.xml", "fdiv_float.xml", "fadd_float.xml", "fsub_float.xml",
+    "fmax_float.xml", "fmin_float.xml", "fmaxnm_float.xml", "fminnm_float.xml",
+    "fnmul_float.xml",
+  ], scalarFpBinaryOperands),
+  operandFamily("scalar-fp-ternary", ["fmadd_float.xml", "fmsub_float.xml", "fnmadd_float.xml", "fnmsub_float.xml"], scalarFpTernaryOperands),
+  operandFamily("logical-shifted-register", [
+    "and_log_shift.xml", "bic_log_shift.xml", "orr_log_shift.xml", "orn_log_shift.xml",
+    "ands_log_shift.xml", "bics.xml", "tst_ands_log_shift.xml",
+  ], logicalShiftedRegisterOperands),
+  operandFamily("mov-register-alias", ["mov_orr_log_shift.xml"], movRegisterAliasOperands),
+  operandFamily("logical-immediate", [
+    "and_log_imm.xml", "ands_log_imm.xml", "tst_ands_log_imm.xml", "orr_log_imm.xml",
+    "eor_log_imm.xml", "mov_orr_log_imm.xml",
+  ], logicalImmediateOperands),
+  operandFamily("scalar-load-store", [
+    "ldr_imm_gen.xml", "str_imm_gen.xml", "ldur_gen.xml", "stur_gen.xml",
+    "ldur_fpsimd.xml", "stur_fpsimd.xml", "ldrb_imm.xml", "ldurb.xml",
+    "ldtrb.xml", "ldrh_imm.xml", "ldurh.xml", "ldtrh.xml",
+    "strb_imm.xml", "sturb.xml", "sttrb.xml", "strh_imm.xml",
+    "sturh.xml", "sttrh.xml", "ldr_reg_gen.xml", "ldrsw_reg.xml",
+    "str_reg_gen.xml", "strb_reg.xml", "strh_reg.xml", "ldrb_reg.xml",
+    "ldrh_reg.xml", "ldrsb_reg.xml", "ldrsh_reg.xml", "ldr_imm_fpsimd.xml",
+    "str_imm_fpsimd.xml", "ldr_reg_fpsimd.xml", "str_reg_fpsimd.xml", "ldrsb_imm.xml",
+    "ldrsh_imm.xml", "ldrsw_imm.xml", "ldursb.xml", "ldursh.xml",
+    "ldursw.xml", "ldtr.xml", "sttr.xml", "ldtrsb.xml",
+    "ldtrsh.xml", "ldtrsw.xml", "prfm_reg.xml", "prfm_imm.xml",
+    "prfum.xml",
+  ], scalarLoadStoreOperands),
+  operandFamily("store-exclusive", [
+    "stxr.xml", "stxrb.xml", "stxrh.xml", "stlxr.xml",
+    "stlxrb.xml", "stlxrh.xml",
+  ], storeExclusiveOperands),
+  operandFamily("load-exclusive", [
+    "ldxr.xml", "ldxrb.xml", "ldxrh.xml", "ldaxr.xml",
+    "ldaxrb.xml", "ldaxrh.xml", "ldar.xml", "ldarb.xml",
+    "ldarh.xml",
+  ], loadExclusiveOperands),
+  operandFamily("exclusive-pair", ["stxp.xml", "ldxp.xml", "ldaxp.xml"], exclusivePairOperands),
+  operandFamily("ldr-literal", ["ldr_lit_gen.xml"], ldrLiteralOperands),
+  operandFamily("pair-load-store", [
+    "stnp_gen.xml", "ldp_gen.xml", "stp_gen.xml", "ldnp_gen.xml",
+    "ldp_fpsimd.xml", "ldnp_fpsimd.xml", "stp_fpsimd.xml", "stnp_fpsimd.xml",
+    "ldpsw.xml",
+  ], pairLoadStoreOperands),
+  operandFamily("conditional-select", [
+    "csel.xml", "cinc_csinc.xml", "cinv_csinv.xml", "cneg_csneg.xml",
+    "cset_csinc.xml", "csetm_csinv.xml",
+  ], conditionalSelectOperands),
+  operandFamily("conditional-compare-immediate", ["ccmp_imm.xml", "ccmn_imm.xml"], conditionalCompareImmediateOperands),
+  operandFamily("conditional-compare-register", ["ccmp_reg.xml", "ccmn_reg.xml"], conditionalCompareRegisterOperands),
+  operandFamily("min-max-immediate", ["smax_imm.xml", "smin_imm.xml", "umax_imm.xml", "umin_imm.xml"], minMaxImmediateOperands),
+  operandFamily("bitfield-immediate", [
+    "bfm.xml", "bfi_bfm.xml", "bfc_bfm.xml", "bfxil_bfm.xml",
+    "sbfm.xml", "asr_sbfm.xml", "sbfiz_sbfm.xml", "sbfx_sbfm.xml",
+    "sxtb_sbfm.xml", "sxth_sbfm.xml", "sxtw_sbfm.xml", "ubfm.xml",
+    "lsl_ubfm.xml", "lsr_ubfm.xml", "ubfiz_ubfm.xml", "ubfx_ubfm.xml",
+    "uxtb_ubfm.xml", "uxth_ubfm.xml",
+  ], bitfieldImmediateOperands),
+  operandFamily("stlxp", ["stlxp.xml"], stlxpOperands),
+  operandFamily("sve-dup-indexed", ["dup_z_zi.xml"], sveDupIndexedOperands),
+  operandFamily("sve-dup-immediate", ["dup_z_i.xml"], sveDupImmediateOperands),
+  operandFamily("sve-pmov-predicate", ["pmov_p_zi.xml"], svePmovPredicateOperands),
+  operandFamily("sve-pmov-vector", ["pmov_z_pi.xml"], svePmovVectorOperands),
+  operandFamily("sve-pext", ["pext_pn_rr.xml", "pext_pp_rr.xml"], svePextOperands),
+  operandFamily("sve-copy-immediate", ["cpy_z_o_i.xml"], sveCopyImmediateOperands),
+  operandFamily("sve-copy-merging-immediate", ["cpy_z_p_i.xml"], sveCopyMergingImmediateOperands),
+  operandFamily("sve-copy-scalar", ["cpy_z_p_r.xml"], sveCopyScalarOperands),
+  operandFamily("sve-copy-scalar-vector", ["cpy_z_p_v.xml"], sveCopyScalarVectorOperands),
+  operandFamily("extract-register", ["extr.xml"], extractRegisterOperands),
+  operandFamily("bti", ["bti.xml"], btiOperands),
+  operandFamily("hint", ["hint.xml"], hintOperands),
+  operandFamily("setf", ["setf.xml"], setfOperands),
+  operandFamily("rmif", ["rmif.xml"], rmifOperands),
+  operandFamily("advsimd-saturating-rounding-doubling-multiply", [
+    "sqrdmlah_advsimd_vec.xml", "sqrdmlah_advsimd_elt.xml", "sqrdmlsh_advsimd_vec.xml", "sqrdmlsh_advsimd_elt.xml",
+    "sqdmulh_advsimd_vec.xml", "sqrdmulh_advsimd_vec.xml", "sqdmulh_advsimd_elt.xml", "sqrdmulh_advsimd_elt.xml",
+  ], advsimdSaturatingRoundingDoublingMultiplyOperands),
+  operandFamily("advsimd-by-element-multiply-accumulate", [
+    "mla_advsimd_elt.xml", "mls_advsimd_elt.xml", "mul_advsimd_elt.xml", "fmla_advsimd_elt.xml",
+    "fmls_advsimd_elt.xml", "fmul_advsimd_elt.xml", "fmulx_advsimd_elt.xml",
+  ], advsimdByElementMultiplyAccumulateOperands),
+  operandFamily("advsimd-by-element-long", [
+    "smull_advsimd_elt.xml", "umull_advsimd_elt.xml", "sqdmull_advsimd_elt.xml", "smlal_advsimd_elt.xml",
+    "smlsl_advsimd_elt.xml", "sqdmlal_advsimd_elt.xml", "umlal_advsimd_elt.xml", "umlsl_advsimd_elt.xml",
+    "sqdmlsl_advsimd_elt.xml",
+  ], advsimdByElementLongOperands),
+  operandFamily("advsimd-complex-vector", ["fcmla_advsimd_vec.xml", "fcadd_advsimd_vec.xml"], advsimdComplexVectorOperands),
+  operandFamily("advsimd-complex-by-element", ["fcmla_advsimd_elt.xml"], advsimdComplexByElementOperands),
+  operandFamily("advsimd-fp-long-multiply-accumulate", [
+    "fmlal_advsimd_vec.xml", "fmlalb_advsimd_vec.xml", "fmlallbb_advsimd_vec.xml", "fmlsl_advsimd_vec.xml",
+    "fmlal_advsimd_elt.xml", "fmlalb_advsimd_elem.xml", "fmlallbb_advsimd_elem.xml", "fmlsl_advsimd_elt.xml",
+  ], advsimdFpLongMultiplyAccumulateOperands),
+  operandFamily("advsimd-floating-pairwise", [
+    "fmaxp_advsimd_pair.xml", "fminp_advsimd_pair.xml", "fmaxnmp_advsimd_pair.xml", "fminnmp_advsimd_pair.xml",
+    "faddp_advsimd_vec.xml", "faddp_advsimd_pair.xml", "fmaxp_advsimd_vec.xml", "fminp_advsimd_vec.xml",
+    "fmaxnmp_advsimd_vec.xml", "fminnmp_advsimd_vec.xml",
+  ], advsimdFloatingPairwiseOperands),
+  operandFamily("advsimd-integer-pairwise", ["addp_advsimd_vec.xml", "addp_advsimd_pair.xml"], advsimdIntegerPairwiseOperands),
+  operandFamily("advsimd-crypto-binary", ["aese_advsimd.xml", "aesd_advsimd.xml", "aesmc_advsimd.xml", "aesimc_advsimd.xml"], advsimdCryptoBinaryOperands),
+  operandFamily("advsimd-scalar-or-vector-three-same", [
+    "fscale_advsimd.xml", "add_advsimd.xml", "sub_advsimd.xml", "fadd_advsimd.xml",
+    "fsub_advsimd.xml", "shadd_advsimd.xml", "uhadd_advsimd.xml", "shsub_advsimd.xml",
+    "uhsub_advsimd.xml", "srhadd_advsimd.xml", "urhadd_advsimd.xml", "smaxp_advsimd.xml",
+    "sminp_advsimd.xml", "umaxp_advsimd.xml", "uminp_advsimd.xml", "smax_advsimd.xml",
+    "smin_advsimd.xml", "umax_advsimd.xml", "umin_advsimd.xml", "fmax_advsimd.xml",
+    "famax_advsimd.xml", "fmin_advsimd.xml", "famin_advsimd.xml", "fmaxnm_advsimd.xml",
+    "fminnm_advsimd.xml", "fabd_advsimd.xml", "frecps_advsimd.xml", "frsqrts_advsimd.xml",
+    "saba_advsimd.xml", "uaba_advsimd.xml", "sabd_advsimd.xml", "uabd_advsimd.xml",
+    "sqadd_advsimd.xml", "uqadd_advsimd.xml", "sqsub_advsimd.xml", "uqsub_advsimd.xml",
+    "mul_advsimd_vec.xml", "mla_advsimd_vec.xml", "mls_advsimd_vec.xml", "fmul_advsimd_vec.xml",
+    "fdiv_advsimd.xml", "pmul_advsimd.xml", "fmulx_advsimd_vec.xml", "fmla_advsimd_vec.xml",
+    "fmls_advsimd_vec.xml", "and_advsimd.xml", "eor_advsimd.xml", "bit_advsimd.xml",
+    "bif_advsimd.xml", "bsl_advsimd.xml", "orn_advsimd.xml", "bic_advsimd_reg.xml",
+    "sshl_advsimd.xml", "ushl_advsimd.xml", "srshl_advsimd.xml", "urshl_advsimd.xml",
+    "sqshl_advsimd_reg.xml", "uqshl_advsimd_reg.xml", "sqrshl_advsimd.xml", "uqrshl_advsimd.xml",
+  ], advsimdScalarOrVectorThreeSameOperands),
+  operandFamily("advsimd-bfloat16-multiply-accumulate", ["bfmmla_advsimd.xml", "bfmlal_advsimd_vec.xml", "bfmlal_advsimd_elt.xml"], advsimdBfloat16MultiplyAccumulateOperands),
+  operandFamily("advsimd-matrix-multiply-accumulate", ["smmla_advsimd_vec.xml", "ummla_advsimd_vec.xml", "usmmla_advsimd_vec.xml"], advsimdMatrixMultiplyAccumulateOperands),
+  operandFamily("advsimd-dot-product", [
+    "sdot_advsimd_vec.xml", "sdot_advsimd_elt.xml", "sudot_advsimd_elt.xml", "udot_advsimd_vec.xml",
+    "udot_advsimd_elt.xml", "usdot_advsimd_vec.xml", "usdot_advsimd_elt.xml", "bfdot_advsimd_vec.xml",
+    "bfdot_advsimd_elt.xml",
+  ], advsimdDotProductOperands),
+  operandFamily("advsimd-compare", [
+    "cmeq_advsimd_reg.xml", "cmeq_advsimd_zero.xml", "cmge_advsimd_reg.xml", "cmge_advsimd_zero.xml",
+    "cmgt_advsimd_reg.xml", "cmgt_advsimd_zero.xml", "cmhi_advsimd.xml", "cmhs_advsimd.xml",
+    "cmtst_advsimd.xml", "cmle_advsimd.xml", "cmlt_advsimd.xml", "fcmeq_advsimd_reg.xml",
+    "fcmeq_advsimd_zero.xml", "fcmge_advsimd_reg.xml", "fcmge_advsimd_zero.xml", "fcmgt_advsimd_reg.xml",
+    "fcmgt_advsimd_zero.xml", "fcmle_advsimd.xml", "fcmlt_advsimd.xml", "facge_advsimd.xml",
+    "facgt_advsimd.xml",
+  ], advsimdCompareOperands),
+  operandFamily("advsimd-crypto-sha1-hash", ["sha1h_advsimd.xml"], advsimdCryptoSha1HashOperands),
+  operandFamily("advsimd-crypto-vector4s-binary", ["sha1su1_advsimd.xml", "sha256su0_advsimd.xml"], advsimdCryptoVector4sBinaryOperands),
+  operandFamily("advsimd-crypto-sha1-three-reg", ["sha1c_advsimd.xml", "sha1p_advsimd.xml", "sha1m_advsimd.xml"], advsimdCryptoSha1ThreeRegOperands),
+  operandFamily("advsimd-crypto-vector4s-three-reg", ["sha1su0_advsimd.xml", "sha256su1_advsimd.xml"], advsimdCryptoVector4sThreeRegOperands),
+  operandFamily("advsimd-crypto-sha256-hash", ["sha256h_advsimd.xml", "sha256h2_advsimd.xml"], advsimdCryptoSha256HashOperands),
+  operandFamily("advsimd-unary", [
+    "suqadd_advsimd.xml", "usqadd_advsimd.xml", "sqabs_advsimd.xml", "sqneg_advsimd.xml",
+    "abs_advsimd.xml", "neg_advsimd.xml", "rev64_advsimd.xml", "rev32_advsimd.xml",
+    "rev16_advsimd.xml", "cls_advsimd.xml", "clz_advsimd.xml", "cnt_advsimd.xml",
+    "mvn_not_advsimd.xml", "rbit_advsimd.xml", "fabs_advsimd.xml", "fneg_advsimd.xml",
+    "urecpe_advsimd.xml", "ursqrte_advsimd.xml", "frecpe_advsimd.xml", "frecpx_advsimd.xml",
+    "frsqrte_advsimd.xml", "fsqrt_advsimd.xml", "frintn_advsimd.xml", "frinta_advsimd.xml",
+    "frintp_advsimd.xml", "frintm_advsimd.xml", "frintx_advsimd.xml", "frintz_advsimd.xml",
+    "frinti_advsimd.xml", "frint32z_advsimd.xml", "frint64z_advsimd.xml", "frint32x_advsimd.xml",
+    "frint64x_advsimd.xml", "fcvtas_advsimd.xml", "fcvtau_advsimd.xml", "fcvtps_advsimd.xml",
+    "fcvtpu_advsimd.xml", "fcvtms_advsimd.xml", "fcvtmu_advsimd.xml", "fcvtnu_advsimd.xml",
+    "scvtf_advsimd_int.xml", "ucvtf_advsimd_int.xml", "fcvtzs_advsimd_int.xml", "fcvtzu_advsimd_int.xml",
+    "fcvtns_advsimd.xml",
+  ], advsimdUnaryOperands),
+  operandFamily("advsimd-floating-convert-narrow", ["fcvtn_advsimd.xml"], advsimdFloatingConvertNarrowOperands),
+  operandFamily("advsimd-floating-convert-long", ["fcvtl_advsimd.xml"], advsimdFloatingConvertLongOperands),
+  operandFamily("advsimd-unary-with-immediate", ["scvtf_advsimd_fix.xml", "ucvtf_advsimd_fix.xml", "fcvtzs_advsimd_fix.xml", "fcvtzu_advsimd_fix.xml"], advsimdUnaryWithImmediateOperands),
+  operandFamily("advsimd-fp8-convert-long", ["f12cvtl_advsimd.xml", "bf12cvtl_advsimd.xml"], advsimdFp8ConvertLongOperands),
+  operandFamily("advsimd-three-same", [
+    "uzp1_advsimd.xml", "uzp2_advsimd.xml", "trn1_advsimd.xml", "trn2_advsimd.xml",
+    "zip1_advsimd.xml", "zip2_advsimd.xml",
+  ], advsimdThreeSameOperands),
+  operandFamily("advsimd-table-lookup", ["tbl_advsimd.xml", "tbx_advsimd.xml"], advsimdTableLookupOperands),
+  operandFamily("advsimd-fp8-luti", ["luti2_advsimd.xml", "luti4_advsimd.xml"], advsimdFp8LutiOperands),
+  operandFamily("advsimd-narrow", [
+    "xtn_advsimd.xml", "fcvtxn_advsimd.xml", "bfcvtn_advsimd.xml", "sqxtun_advsimd.xml",
+    "sqxtn_advsimd.xml", "uqxtn_advsimd.xml",
+  ], advsimdNarrowOperands),
+  operandFamily("advsimd-fp8-narrow-pair", ["fcvtn_advsimd_168.xml", "fcvtn_advsimd_328.xml"], advsimdFp8NarrowPairOperands),
+  operandFamily("advsimd-shift-left-long", ["shll_advsimd.xml", "sshll_advsimd.xml", "ushll_advsimd.xml"], advsimdShiftLeftLongOperands),
+  operandFamily("advsimd-extend-long", ["sxtl_sshll_advsimd.xml", "uxtl_ushll_advsimd.xml"], advsimdExtendLongOperands),
+  operandFamily("advsimd-pairwise-long", ["saddlp_advsimd.xml", "uaddlp_advsimd.xml", "sadalp_advsimd.xml", "uadalp_advsimd.xml"], advsimdPairwiseLongOperands),
+  operandFamily("advsimd-across-lane", [
+    "saddlv_advsimd.xml", "uaddlv_advsimd.xml", "smaxv_advsimd.xml", "sminv_advsimd.xml",
+    "umaxv_advsimd.xml", "uminv_advsimd.xml", "addv_advsimd.xml", "fmaxnmv_advsimd.xml",
+    "fminnmv_advsimd.xml", "fmaxv_advsimd.xml", "fminv_advsimd.xml",
+  ], advsimdAcrossLaneOperands),
+  operandFamily("advsimd-widening-three-reg", [
+    "saddl_advsimd.xml", "uaddl_advsimd.xml", "ssubl_advsimd.xml", "usubl_advsimd.xml",
+    "smull_advsimd_vec.xml", "umull_advsimd_vec.xml", "sabal_advsimd.xml", "uabal_advsimd.xml",
+    "sabdl_advsimd.xml", "uabdl_advsimd.xml", "smlal_advsimd_vec.xml", "umlal_advsimd_vec.xml",
+    "smlsl_advsimd_vec.xml", "umlsl_advsimd_vec.xml", "sqdmull_advsimd_vec.xml", "sqdmlal_advsimd_vec.xml",
+    "sqdmlsl_advsimd_vec.xml",
+  ], advsimdWideningThreeRegOperands),
+  operandFamily("advsimd-wide-three-reg", ["saddw_advsimd.xml", "uaddw_advsimd.xml", "ssubw_advsimd.xml", "usubw_advsimd.xml"], advsimdWideThreeRegOperands),
+  operandFamily("advsimd-immediate-shift", [
+    "sshr_advsimd.xml", "ushr_advsimd.xml", "ssra_advsimd.xml", "usra_advsimd.xml",
+    "srshr_advsimd.xml", "urshr_advsimd.xml", "srsra_advsimd.xml", "ursra_advsimd.xml",
+    "sri_advsimd.xml", "sli_advsimd.xml", "shl_advsimd.xml", "sqshlu_advsimd.xml",
+    "sqshl_advsimd_imm.xml", "uqshl_advsimd_imm.xml",
+  ], advsimdImmediateShiftOperands),
+  operandFamily("advsimd-narrowing-immediate-shift", [
+    "shrn_advsimd.xml", "rshrn_advsimd.xml", "sqshrn_advsimd.xml", "uqshrn_advsimd.xml",
+    "sqrshrn_advsimd.xml", "uqrshrn_advsimd.xml", "sqshrun_advsimd.xml", "sqrshrun_advsimd.xml",
+  ], advsimdNarrowingImmediateShiftOperands),
+  operandFamily("advsimd-high-narrow-three-reg", ["addhn_advsimd.xml", "raddhn_advsimd.xml", "rsubhn_advsimd.xml"], advsimdHighNarrowThreeRegOperands),
+  operandFamily("advsimd-pmull", ["pmull_advsimd.xml"], advsimdPmullOperands),
+  operandFamily("advsimd-move-immediate", [
+    "movi_advsimd.xml", "mvni_advsimd.xml", "bic_advsimd_imm.xml", "orr_advsimd_imm.xml",
+    "fmov_advsimd.xml",
+  ], advsimdMoveImmediateOperands),
+  operandFamily("advsimd-move-register-alias", ["mov_orr_advsimd_reg.xml"], advsimdMoveRegisterAliasOperands),
+  operandFamily("advsimd-copy-general-to-element", ["ins_advsimd_gen.xml"], advsimdCopyGeneralToElementOperands),
+  operandFamily("advsimd-copy-element-to-element", ["ins_advsimd_elt.xml"], advsimdCopyElementToElementOperands),
+  operandFamily("advsimd-copy-element-to-general", ["smov_advsimd.xml", "umov_advsimd.xml", "mov_umov_advsimd.xml"], advsimdCopyElementToGeneralOperands),
+  operandFamily("advsimd-scalar-duplicate-element", ["dup_advsimd_elt.xml"], advsimdScalarDuplicateElementOperands),
+  operandFamily("advsimd-duplicate-general", ["dup_advsimd_gen.xml"], advsimdDuplicateGeneralOperands),
+  operandFamily("advsimd-extract", ["ext_advsimd.xml"], advsimdExtractOperands),
+  operandFamily("advsimd-single-structure", [
+    "ld1r_advsimd.xml", "ld2r_advsimd.xml", "ld3r_advsimd.xml", "ld4r_advsimd.xml",
+    "ld1_advsimd_sngl.xml", "ld2_advsimd_sngl.xml", "ld3_advsimd_sngl.xml", "ld4_advsimd_sngl.xml",
+    "st1_advsimd_sngl.xml", "st2_advsimd_sngl.xml", "st3_advsimd_sngl.xml", "st4_advsimd_sngl.xml",
+    "stl1_advsimd_sngl.xml", "ldap1_advsimd_sngl.xml",
+  ], advsimdSingleStructureOperands),
+  operandFamily("advsimd-multiple-structure", [
+    "ld1_advsimd_mult.xml", "ld2_advsimd_mult.xml", "ld3_advsimd_mult.xml", "ld4_advsimd_mult.xml",
+    "st1_advsimd_mult.xml", "st2_advsimd_mult.xml", "st3_advsimd_mult.xml", "st4_advsimd_mult.xml",
+  ], advsimdMultipleStructureOperands),
+  operandFamily("mova-single-to-vector", ["mov_mova_z_p_rza.xml"], movaSingleToVectorOperands),
+  operandFamily("movaz-single-to-vector", ["movaz_z_rza.xml"], movazSingleToVectorOperands),
+  operandFamily("mova-vector-to-single", ["mov_mova_za_p_rz.xml"], movaVectorToSingleOperands),
+  operandFamily("mova-slice-to-vectors", ["mov_mova_mz2_za.xml"], inst => {
       return movaSliceToVectorsOperands(inst, 2);
-    case "mov_mova_za2_z.xml":
+    }),
+  operandFamily("mova-vectors-to-slice", ["mov_mova_za2_z.xml"], inst => {
       return movaVectorsToSliceOperands(inst, 2);
-    case "mov_mova_za4_z.xml":
+    }),
+  operandFamily("mova-vectors-to-slice-mov-mova-za4-z", ["mov_mova_za4_z.xml"], inst => {
       return movaVectorsToSliceOperands(inst, 4);
-    case "mov_mova_mz4_za.xml":
+    }),
+  operandFamily("mova-slice-to-vectors-mov-mova-mz4-za", ["mov_mova_mz4_za.xml"], inst => {
       return movaSliceToVectorsOperands(inst, 4);
-    case "mov_mova_mz_za2.xml":
+    }),
+  operandFamily("mova-array-to-vectors", ["mov_mova_mz_za2.xml", "movaz_mz_za2.xml"], inst => {
       return movaArrayToVectorsOperands(inst, 2);
-    case "movaz_mz_za2.xml":
-      return movaArrayToVectorsOperands(inst, 2);
-    case "mov_mova_mz_za4.xml":
+    }),
+  operandFamily("mova-array-to-vectors-mov-mova-mz-za4", ["mov_mova_mz_za4.xml", "movaz_mz_za4.xml"], inst => {
       return movaArrayToVectorsOperands(inst, 4);
-    case "movaz_mz_za4.xml":
-      return movaArrayToVectorsOperands(inst, 4);
-    case "mov_mova_za_mz2.xml":
+    }),
+  operandFamily("mova-vectors-to-array", ["mov_mova_za_mz2.xml"], inst => {
       return movaVectorsToArrayOperands(inst, 2);
-    case "mov_mova_za_mz4.xml":
+    }),
+  operandFamily("mova-vectors-to-array-mov-mova-za-mz4", ["mov_mova_za_mz4.xml"], inst => {
       return movaVectorsToArrayOperands(inst, 4);
-    case "fcvt_mz2_z.xml":
-    case "fcvtl_mz2_z.xml":
-      return smeWideningFloatConvertOperands(inst);
-    case "f1cvt_mz2_z8.xml":
-    case "f1cvtl_mz2_z8.xml":
-    case "bf1cvt_mz2_z8.xml":
-    case "bf1cvtl_mz2_z8.xml":
-      return smeFp8WideningConvertOperands(inst);
-    case "fcvt_z_mz2.xml":
-    case "bfcvt_z_mz2.xml":
-    case "fcvtn_z_mz2.xml":
-    case "bfcvtn_z_mz2.xml":
-    case "sqcvt_z_mz2.xml":
-    case "sqcvtn_z_mz2.xml":
-    case "sqcvtu_z_mz2.xml":
-    case "uqcvt_z_mz2.xml":
-    case "sqcvtun_z_mz2.xml":
-    case "uqcvtn_z_mz2.xml":
-    case "sqcvt_z_mz4.xml":
-    case "sqcvtu_z_mz4.xml":
-    case "sqcvtun_z_mz4.xml":
-    case "uqcvt_z_mz4.xml":
-    case "sqcvtn_z_mz4.xml":
-    case "uqcvtn_z_mz4.xml":
-      return smeNarrowingConvertOperands(inst);
-    case "sqrshr_z_mz2.xml":
-    case "uqrshr_z_mz2.xml":
-    case "sqrshru_z_mz2.xml":
-    case "sqrshrn_z_mz2.xml":
-    case "sqrshr_z_mz4.xml":
-    case "uqrshr_z_mz4.xml":
-    case "sqrshru_z_mz4.xml":
-    case "sqrshrun_z_mz4.xml":
-    case "sqrshrun_z_mz2.xml":
-    case "uqrshrn_z_mz2.xml":
-    case "sqrshrn_z_mz4.xml":
-    case "uqrshrn_z_mz4.xml":
-      return smeNarrowingShiftOperands(inst);
-    case "fcvtn_z8_mz2.xml":
-    case "fcvtnb_z8_mz2.xml":
-    case "fcvtnt_z8_mz2.xml":
-    case "bfcvtn_z8_mz2.xml":
-      return smeFp8NarrowConvertOperands(inst);
-    case "fcvt_z8_mz2.xml":
-    case "fcvt_z8_mz4.xml":
-    case "fcvtn_z8_mz4.xml":
-    case "bfcvt_z8_mz2.xml":
-      return smeFp8NarrowingConvertOperands(inst);
-    case "zero_za_i.xml":
-      return smeZeroBaseOperands(inst);
-    case "zero_zt_i.xml":
+    }),
+  operandFamily("sme-widening-float-convert", ["fcvt_mz2_z.xml", "fcvtl_mz2_z.xml"], smeWideningFloatConvertOperands),
+  operandFamily("sme-fp8-widening-convert", ["f1cvt_mz2_z8.xml", "f1cvtl_mz2_z8.xml", "bf1cvt_mz2_z8.xml", "bf1cvtl_mz2_z8.xml"], smeFp8WideningConvertOperands),
+  operandFamily("sme-narrowing-convert", [
+    "fcvt_z_mz2.xml", "bfcvt_z_mz2.xml", "fcvtn_z_mz2.xml", "bfcvtn_z_mz2.xml",
+    "sqcvt_z_mz2.xml", "sqcvtn_z_mz2.xml", "sqcvtu_z_mz2.xml", "uqcvt_z_mz2.xml",
+    "sqcvtun_z_mz2.xml", "uqcvtn_z_mz2.xml", "sqcvt_z_mz4.xml", "sqcvtu_z_mz4.xml",
+    "sqcvtun_z_mz4.xml", "uqcvt_z_mz4.xml", "sqcvtn_z_mz4.xml", "uqcvtn_z_mz4.xml",
+  ], smeNarrowingConvertOperands),
+  operandFamily("sme-narrowing-shift", [
+    "sqrshr_z_mz4.xml", "uqrshr_z_mz4.xml", "sqrshru_z_mz4.xml", "sqrshrun_z_mz4.xml",
+    "sqrshrn_z_mz4.xml", "uqrshrn_z_mz4.xml",
+  ], smeNarrowingShiftOperands),
+  operandFamily("sme-fp8-narrow-convert", ["fcvtn_z8_mz2.xml", "fcvtnb_z8_mz2.xml", "fcvtnt_z8_mz2.xml", "bfcvtn_z8_mz2.xml"], smeFp8NarrowConvertOperands),
+  operandFamily("sme-fp8-narrowing-convert", ["fcvt_z8_mz2.xml", "fcvt_z8_mz4.xml", "fcvtn_z8_mz4.xml", "bfcvt_z8_mz2.xml"], smeFp8NarrowingConvertOperands),
+  operandFamily("sme-zero-base", ["zero_za_i.xml"], smeZeroBaseOperands),
+  operandFamily("sme-zero-zt", ["zero_zt_i.xml"], inst => {
       return smeZeroZtOperands();
-    case "zero_za1_ri.xml":
-      return smeZeroSingleVectorOperands(inst);
-    case "zero_za2_ri.xml":
+    }),
+  operandFamily("sme-zero-single-vector", ["zero_za1_ri.xml"], smeZeroSingleVectorOperands),
+  operandFamily("sme-zero-grouped", ["zero_za2_ri.xml"], inst => {
       return smeZeroGroupedOperands(inst, 2);
-    case "zero_za4_ri.xml":
+    }),
+  operandFamily("sme-zero-grouped-zero-za4-ri", ["zero_za4_ri.xml"], inst => {
       return smeZeroGroupedOperands(inst, 4);
-    case "ld1b_za_p_rrr.xml":
-    case "ld1h_za_p_rrr.xml":
-    case "ld1w_za_p_rrr.xml":
-    case "ld1d_za_p_rrr.xml":
-    case "ld1q_za_p_rrr.xml":
-    case "st1b_za_p_rrr.xml":
-    case "st1h_za_p_rrr.xml":
-    case "st1w_za_p_rrr.xml":
-    case "st1d_za_p_rrr.xml":
-    case "st1q_za_p_rrr.xml":
-      return smeZaTileSliceOperands(inst);
-    case "ldr_za_ri.xml":
-    case "str_za_ri.xml":
-      return smeLdrZaArrayVectorOperands(inst);
-    case "ldr_zt_br.xml":
-    case "str_zt_br.xml":
-      return smeZtMemoryOperands(inst);
-    case "add_mz_zzv.xml":
-      return smeMultiVectorArithmeticOperands(inst);
-    case "sclamp_mz_zz.xml":
-    case "uclamp_mz_zz.xml":
-    case "fclamp_mz_zz.xml":
-    case "bfclamp_mz_zz.xml":
-      return smeMultiVectorClampOperands(inst);
-    case "frinta_mz_z.xml":
-    case "frintm_mz_z.xml":
-    case "frintn_mz_z.xml":
-    case "frintp_mz_z.xml":
-    case "scvtf_mz_z.xml":
-    case "ucvtf_mz_z.xml":
-    case "fcvtzs_mz_z.xml":
-    case "fcvtzu_mz_z.xml":
-      return smeIntFloatConvertOperands(inst);
-    case "add_za_zzv.xml":
-    case "sub_za_zzv.xml":
-    case "smax_mz_zzv.xml":
-    case "smin_mz_zzv.xml":
-    case "umax_mz_zzv.xml":
-    case "umin_mz_zzv.xml":
-    case "bfmax_mz_zzv.xml":
-    case "bfmaxnm_mz_zzv.xml":
-    case "bfmin_mz_zzv.xml":
-    case "bfminnm_mz_zzv.xml":
-    case "fmax_mz_zzv.xml":
-    case "fmaxnm_mz_zzv.xml":
-    case "fmin_mz_zzv.xml":
-    case "fminnm_mz_zzv.xml":
-    case "sqdmulh_mz_zzv.xml":
-    case "srshl_mz_zzv.xml":
-    case "urshl_mz_zzv.xml":
-    case "add_za_zw.xml":
-    case "sub_za_zw.xml":
-    case "add_za_zzw.xml":
-    case "sub_za_zzw.xml":
-    case "smax_mz_zzw.xml":
-    case "smin_mz_zzw.xml":
-    case "umax_mz_zzw.xml":
-    case "umin_mz_zzw.xml":
-    case "bfmax_mz_zzw.xml":
-    case "bfmaxnm_mz_zzw.xml":
-    case "bfmin_mz_zzw.xml":
-    case "bfminnm_mz_zzw.xml":
-    case "fmax_mz_zzw.xml":
-    case "fmaxnm_mz_zzw.xml":
-    case "fmin_mz_zzw.xml":
-    case "fminnm_mz_zzw.xml":
-    case "sqdmulh_mz_zzw.xml":
-    case "srshl_mz_zzw.xml":
-    case "urshl_mz_zzw.xml":
-    case "fadd_za_zw.xml":
-    case "fsub_za_zw.xml":
-    case "bfadd_za_zw.xml":
-    case "bfsub_za_zw.xml":
-    case "fmla_za_zzv.xml":
-    case "fmla_za_zzi.xml":
-    case "fmla_za_zzw.xml":
-    case "fmls_za_zzv.xml":
-    case "fmls_za_zzi.xml":
-    case "fmls_za_zzw.xml":
-    case "bfmla_za_zzv.xml":
-    case "bfmla_za_zzi.xml":
-    case "bfmla_za_zzw.xml":
-    case "bfmls_za_zzv.xml":
-    case "bfmls_za_zzi.xml":
-    case "bfmls_za_zzw.xml":
-      return smeArithmeticOperands(inst);
-    case "fmopa_za_pp_zz.xml":
-    case "fmops_za_pp_zz.xml":
-    case "sumopa_za_pp_zz.xml":
-    case "sumops_za_pp_zz.xml":
-    case "usmopa_za_pp_zz.xml":
-    case "usmops_za_pp_zz.xml":
-    case "smopa_za_pp_zz.xml":
-    case "smopa_za32_pp_zz.xml":
-    case "smops_za_pp_zz.xml":
-    case "smops_za32_pp_zz.xml":
-    case "umopa_za_pp_zz.xml":
-    case "umopa_za32_pp_zz.xml":
-    case "umops_za_pp_zz.xml":
-    case "umops_za32_pp_zz.xml":
-    case "bmopa_za_pp_zz.xml":
-    case "bmops_za_pp_zz.xml":
-    case "bfmopa_za_pp_zz.xml":
-    case "bfmops_za_pp_zz.xml":
-    case "bfmopa_za32_pp_zz.xml":
-    case "bfmops_za32_pp_zz.xml":
-    case "fmopa_za32_pp_zz.xml":
-    case "fmops_za32_pp_zz.xml":
-      return smeOuterProductOperands(inst);
-    case "addha_za_pp_z.xml":
-    case "addva_za_pp_z.xml":
-      return smeSliceAccumulatorOperands(inst);
-    case "fmopa_za16_pp_z8z8.xml":
-    case "fmopa_za32_pp_z8z8.xml":
-      return smeFp8OuterProductOperands(inst);
-    case "movt_r_zt.xml":
-    case "movt_zt_r.xml":
-      return smeMovtScalarOperands(inst);
-    case "movt_zt_z.xml":
-      return smeMovtZtOperands(inst);
-    case "zip_mz_zz.xml":
-    case "uzp_mz_zz.xml":
-      return smePermutationOperands(inst);
-    case "zip_mz_z.xml":
-    case "uzp_mz_z.xml":
-      return smeVectorGroupPermutationOperands(inst);
-    case "sel_mz_p_zz.xml":
-      return smeSelectOperands(inst);
-    case "sunpk_mz_z.xml":
-    case "uunpk_mz_z.xml":
-      return smeUnpackOperands(inst);
-    case "luti2_z_ztz.xml":
-    case "luti4_z_ztz.xml":
+    }),
+  operandFamily("sme-za-tile-slice", [
+    "ld1b_za_p_rrr.xml", "ld1h_za_p_rrr.xml", "ld1w_za_p_rrr.xml", "ld1d_za_p_rrr.xml",
+    "ld1q_za_p_rrr.xml", "st1b_za_p_rrr.xml", "st1h_za_p_rrr.xml", "st1w_za_p_rrr.xml",
+    "st1d_za_p_rrr.xml", "st1q_za_p_rrr.xml",
+  ], smeZaTileSliceOperands),
+  operandFamily("sme-ldr-za-array-vector", ["ldr_za_ri.xml", "str_za_ri.xml"], smeLdrZaArrayVectorOperands),
+  operandFamily("sme-zt-memory", ["ldr_zt_br.xml", "str_zt_br.xml"], smeZtMemoryOperands),
+  operandFamily("sme-multi-vector-arithmetic", ["add_mz_zzv.xml"], smeMultiVectorArithmeticOperands),
+  operandFamily("sme-multi-vector-clamp", ["sclamp_mz_zz.xml", "uclamp_mz_zz.xml", "fclamp_mz_zz.xml", "bfclamp_mz_zz.xml"], smeMultiVectorClampOperands),
+  operandFamily("sme-int-float-convert", [
+    "frinta_mz_z.xml", "frintm_mz_z.xml", "frintn_mz_z.xml", "frintp_mz_z.xml",
+    "scvtf_mz_z.xml", "ucvtf_mz_z.xml", "fcvtzs_mz_z.xml", "fcvtzu_mz_z.xml",
+  ], smeIntFloatConvertOperands),
+  operandFamily("sme-arithmetic", [
+    "add_za_zzv.xml", "sub_za_zzv.xml", "smax_mz_zzv.xml", "smin_mz_zzv.xml",
+    "umax_mz_zzv.xml", "umin_mz_zzv.xml", "bfmax_mz_zzv.xml", "bfmaxnm_mz_zzv.xml",
+    "bfmin_mz_zzv.xml", "bfminnm_mz_zzv.xml", "fmax_mz_zzv.xml", "fmaxnm_mz_zzv.xml",
+    "fmin_mz_zzv.xml", "fminnm_mz_zzv.xml", "sqdmulh_mz_zzv.xml", "srshl_mz_zzv.xml",
+    "urshl_mz_zzv.xml", "add_za_zw.xml", "sub_za_zw.xml", "add_za_zzw.xml",
+    "sub_za_zzw.xml", "smax_mz_zzw.xml", "smin_mz_zzw.xml", "umax_mz_zzw.xml",
+    "umin_mz_zzw.xml", "bfmax_mz_zzw.xml", "bfmaxnm_mz_zzw.xml", "bfmin_mz_zzw.xml",
+    "bfminnm_mz_zzw.xml", "fmax_mz_zzw.xml", "fmaxnm_mz_zzw.xml", "fmin_mz_zzw.xml",
+    "fminnm_mz_zzw.xml", "sqdmulh_mz_zzw.xml", "srshl_mz_zzw.xml", "urshl_mz_zzw.xml",
+    "fadd_za_zw.xml", "fsub_za_zw.xml", "bfadd_za_zw.xml", "bfsub_za_zw.xml",
+    "fmla_za_zzv.xml", "fmla_za_zzi.xml", "fmla_za_zzw.xml", "fmls_za_zzv.xml",
+    "fmls_za_zzi.xml", "fmls_za_zzw.xml", "bfmla_za_zzv.xml", "bfmla_za_zzi.xml",
+    "bfmla_za_zzw.xml", "bfmls_za_zzv.xml", "bfmls_za_zzi.xml", "bfmls_za_zzw.xml",
+  ], smeArithmeticOperands),
+  operandFamily("sme-outer-product", [
+    "fmopa_za_pp_zz.xml", "fmops_za_pp_zz.xml", "sumopa_za_pp_zz.xml", "sumops_za_pp_zz.xml",
+    "usmopa_za_pp_zz.xml", "usmops_za_pp_zz.xml", "smopa_za_pp_zz.xml", "smopa_za32_pp_zz.xml",
+    "smops_za_pp_zz.xml", "smops_za32_pp_zz.xml", "umopa_za_pp_zz.xml", "umopa_za32_pp_zz.xml",
+    "umops_za_pp_zz.xml", "umops_za32_pp_zz.xml", "bmopa_za_pp_zz.xml", "bmops_za_pp_zz.xml",
+    "bfmopa_za_pp_zz.xml", "bfmops_za_pp_zz.xml", "bfmopa_za32_pp_zz.xml", "bfmops_za32_pp_zz.xml",
+    "fmopa_za32_pp_zz.xml", "fmops_za32_pp_zz.xml",
+  ], smeOuterProductOperands),
+  operandFamily("sme-slice-accumulator", ["addha_za_pp_z.xml", "addva_za_pp_z.xml"], smeSliceAccumulatorOperands),
+  operandFamily("sme-fp8-outer-product", ["fmopa_za16_pp_z8z8.xml", "fmopa_za32_pp_z8z8.xml"], smeFp8OuterProductOperands),
+  operandFamily("sme-movt-scalar", ["movt_r_zt.xml", "movt_zt_r.xml"], smeMovtScalarOperands),
+  operandFamily("sme-movt-zt", ["movt_zt_z.xml"], smeMovtZtOperands),
+  operandFamily("sme-permutation", ["zip_mz_zz.xml", "uzp_mz_zz.xml"], smePermutationOperands),
+  operandFamily("sme-vector-group-permutation", ["zip_mz_z.xml", "uzp_mz_z.xml"], smeVectorGroupPermutationOperands),
+  operandFamily("sme-select", ["sel_mz_p_zz.xml"], smeSelectOperands),
+  operandFamily("sme-unpack", ["sunpk_mz_z.xml", "uunpk_mz_z.xml"], smeUnpackOperands),
+  operandFamily("sme-luti", ["luti2_z_ztz.xml", "luti4_z_ztz.xml"], inst => {
       return smeLutiOperands(inst, 1);
-    case "luti2_mz2_ztz.xml":
-    case "luti4_mz2_ztz.xml":
+    }),
+  operandFamily("sme-luti-luti2-mz2-ztz", ["luti2_mz2_ztz.xml", "luti4_mz2_ztz.xml"], inst => {
       return smeLutiOperands(inst, 2);
-    case "luti2_mz4_ztz.xml":
-    case "luti4_mz4_ztz.xml":
+    }),
+  operandFamily("sme-luti-luti2-mz4-ztz", ["luti2_mz4_ztz.xml", "luti4_mz4_ztz.xml"], inst => {
       return smeLutiOperands(inst, 4);
-    case "luti4_mz4_ztmz2.xml":
-      return smeFp8LutiMixedOperands(inst);
-    case "smlall_za_zzi.xml":
-    case "smlall_za_zzv.xml":
-    case "smlall_za_zzw.xml":
-    case "smlal_za_zzi.xml":
-    case "smlal_za_zzv.xml":
-    case "smlal_za_zzw.xml":
-    case "smlsl_za_zzi.xml":
-    case "smlsl_za_zzv.xml":
-    case "smlsl_za_zzw.xml":
-    case "smlsll_za_zzi.xml":
-    case "smlsll_za_zzv.xml":
-    case "smlsll_za_zzw.xml":
-    case "umlal_za_zzi.xml":
-    case "umlal_za_zzv.xml":
-    case "umlal_za_zzw.xml":
-    case "umlall_za_zzi.xml":
-    case "umlall_za_zzv.xml":
-    case "umlall_za_zzw.xml":
-    case "umlsl_za_zzi.xml":
-    case "umlsl_za_zzv.xml":
-    case "umlsl_za_zzw.xml":
-    case "umlsll_za_zzi.xml":
-    case "umlsll_za_zzv.xml":
-    case "umlsll_za_zzw.xml":
-    case "sumlall_za_zzi.xml":
-    case "sumlall_za_zzv.xml":
-    case "usmlall_za_zzi.xml":
-    case "usmlall_za_zzv.xml":
-    case "usmlall_za_zzw.xml":
-      return smeLongArithmeticOperands(inst);
-    case "bfmlal_za_zzi.xml":
-    case "bfmlal_za_zzv.xml":
-    case "bfmlal_za_zzw.xml":
-    case "bfmlsl_za_zzi.xml":
-    case "bfmlsl_za_zzv.xml":
-    case "bfmlsl_za_zzw.xml":
-    case "fmlal_za_zzi.xml":
-    case "fmlal_za_zzv.xml":
-    case "fmlal_za_zzw.xml":
-    case "fmlsl_za_zzi.xml":
-    case "fmlsl_za_zzv.xml":
-    case "fmlsl_za_zzw.xml":
-      return smeFloatLongArithmeticOperands(inst);
-    case "fmlal_za_z8z8i.xml":
-    case "fmlal_za_z8z8v.xml":
-    case "fmlal_za_z8z8w.xml":
-    case "fmlall_za32_z8z8i.xml":
-    case "fmlall_za32_z8z8v.xml":
-    case "fmlall_za32_z8z8w.xml":
-      return smeFp8LongArithmeticOperands(inst);
-    case "sdot_za32_zzv.xml":
-    case "sdot_za32_zzi.xml":
-    case "sdot_za32_zzw.xml":
-    case "sdot_za_zzv.xml":
-    case "sdot_za_zzi.xml":
-    case "sdot_za_zzw.xml":
-    case "udot_za32_zzv.xml":
-    case "udot_za32_zzi.xml":
-    case "udot_za32_zzw.xml":
-    case "udot_za_zzv.xml":
-    case "udot_za_zzi.xml":
-    case "udot_za_zzw.xml":
-    case "bfdot_za_zzv.xml":
-    case "bfdot_za_zzi.xml":
-    case "bfdot_za_zzw.xml":
-    case "fdot_za_zzv.xml":
-    case "fdot_za_zzi.xml":
-    case "fdot_za_zzw.xml":
-    case "fdot_za_z8z8v.xml":
-    case "fdot_za_z8z8i.xml":
-    case "fdot_za_z8z8w.xml":
-    case "fdot_za32_z8z8v.xml":
-    case "fdot_za32_z8z8i.xml":
-    case "fdot_za32_z8z8w.xml":
-    case "fvdot_za_z8z8i.xml":
-    case "fvdot_za_zzi.xml":
-    case "bfvdot_za_zzi.xml":
-    case "fvdotb_za32_z8z8i.xml":
-    case "fvdott_za32_z8z8i.xml":
-    case "svdot_za_zzi.xml":
-    case "svdot_za32_zzi.xml":
-    case "sudot_za_zzv.xml":
-    case "sudot_za_zzi.xml":
-    case "suvdot_za_zzi.xml":
-    case "uvdot_za_zzi.xml":
-    case "uvdot_za32_zzi.xml":
-    case "usdot_za_zzv.xml":
-    case "usdot_za_zzi.xml":
-    case "usvdot_za_zzi.xml":
-    case "usdot_za_zzw.xml":
-      return smeDotOperands(inst);
-    case "cmpeq_p_p_zi.xml":
-      return sveCompareImmediateOperands(inst);
-    case "fcmeq_p_p_z0.xml":
-      return sveFloatingCompareImmediateOperands(inst);
-    case "cmpeq_p_p_zz.xml":
-    case "fcmeq_p_p_zz.xml":
-    case "facge_p_p_zz.xml":
-    case "match_p_p_zz.xml":
-    case "nmatch_p_p_zz.xml":
-      return sveCompareVectorOperands(inst);
-    case "histcnt_z_p_zz.xml":
-      return sveHistcntOperands(inst);
-    case "cmpeq_p_p_zw.xml":
-      return sveCompareWideVectorOperands(inst);
-    case "ptrue_p_s.xml":
-    case "ptrues_p_s.xml":
-      return svePtrueOperands(inst);
-    case "ptrue_pn_i.xml":
-      return svePtruePredicateCounterOperands(inst);
-    case "brka_p_p_p.xml":
-    case "brkas_p_p_p.xml":
-    case "brkb_p_p_p.xml":
-    case "brkbs_p_p_p.xml":
-      return svePredicateBreakOperands(inst);
-    case "brkn_p_p_pp.xml":
-    case "brkns_p_p_pp.xml":
-      return svePredicateBreakPropagationOperands(inst);
-    case "brkpa_p_p_pp.xml":
-    case "brkpas_p_p_pp.xml":
-    case "brkpb_p_p_pp.xml":
-    case "brkpbs_p_p_pp.xml":
-      return svePredicateBreakPairOperands(inst);
-    case "pfirst_p_p_p.xml":
-    case "pnext_p_p_p.xml":
-      return svePredicateFlowOperands(inst);
-    case "ptest_p_p.xml":
-      return svePredicateTestOperands(inst);
-    case "rdffr_p_f.xml":
-    case "rdffr_p_p_f.xml":
-    case "rdffrs_p_p_f.xml":
-      return sveRdffrOperands(inst);
-    case "setffr_f.xml":
-      return noOperands();
-    case "pfalse_p.xml":
-    case "punpkhi_p_p.xml":
-    case "wrffr_f_p.xml":
-      return svePredicateControlOperands(inst);
-    case "ctermeq_rr.xml":
-      return sveTerminateConditionOperands(inst);
-    case "and_p_p_pp.xml":
-    case "mov_and_p_p_pp.xml":
-    case "ands_p_p_pp.xml":
-    case "movs_ands_p_p_pp.xml":
-    case "orn_p_p_pp.xml":
-    case "orns_p_p_pp.xml":
-    case "orr_p_p_pp.xml":
-    case "mov_orr_p_p_pp.xml":
-    case "orrs_p_p_pp.xml":
-    case "movs_orrs_p_p_pp.xml":
-    case "eor_p_p_pp.xml":
-    case "eors_p_p_pp.xml":
-    case "nots_eors_p_p_pp.xml":
-    case "bic_p_p_pp.xml":
-    case "nand_p_p_pp.xml":
-    case "nor_p_p_pp.xml":
-    case "bics_p_p_pp.xml":
-    case "nands_p_p_pp.xml":
-    case "nors_p_p_pp.xml":
-      return svePredicateLogicalOperands(inst);
-    case "zip1_p_pp.xml":
-    case "uzp1_p_pp.xml":
-    case "trn1_p_pp.xml":
-      return svePredicatePermutationOperands(inst);
-    case "index_z_ii.xml":
-    case "index_z_ir.xml":
-    case "index_z_ri.xml":
-    case "index_z_rr.xml":
-      return sveIndexOperands(inst);
-    case "insr_z_r.xml":
-    case "insr_z_v.xml":
-      return sveInsrOperands(inst);
-    case "lasta_r_p_z.xml":
-    case "lasta_v_p_z.xml":
-    case "lastb_r_p_z.xml":
-    case "lastb_v_p_z.xml":
-    case "clasta_r_p_z.xml":
-    case "clasta_v_p_z.xml":
-    case "clasta_z_p_zz.xml":
-    case "clastb_r_p_z.xml":
-    case "clastb_v_p_z.xml":
-    case "clastb_z_p_zz.xml":
-      return sveLastExtractOperands(inst);
-    case "frinta_z_p_z.xml":
-    case "cls_z_p_z.xml":
-    case "clz_z_p_z.xml":
-    case "cnot_z_p_z.xml":
-    case "cnt_z_p_z.xml":
-    case "fabs_z_p_z.xml":
-    case "fneg_z_p_z.xml":
-    case "frecpx_z_p_z.xml":
-    case "fsqrt_z_p_z.xml":
-    case "not_z_p_z.xml":
-    case "rbit_z_p_z.xml":
-    case "sxtb_z_p_z.xml":
-    case "uxtb_z_p_z.xml":
-    case "revb_z_z.xml":
-    case "flogb_z_p_z.xml":
-    case "urecpe_z_p_z.xml":
-    case "ursqrte_z_p_z.xml":
-      return svePredicatedUnaryOperands(inst);
-    case "revd_z_p_z.xml":
-      return sveRevdOperands(inst);
-    case "fcvtzs_z_p_z.xml":
-    case "fcvtzu_z_p_z.xml":
-    case "scvtf_z_p_z.xml":
-    case "ucvtf_z_p_z.xml":
-      return svePredicatedConversionOperands(inst);
-    case "fcvtlt_z_p_z.xml":
-    case "fcvtnt_z_p_z.xml":
-    case "fcvtx_z_p_z.xml":
-    case "fcvtxnt_z_p_z.xml":
-      return svePredicatedNarrowingConversionOperands(inst);
-    case "bfcvt_z_p_z.xml":
-    case "bfcvtnt_z_p_z.xml":
-      return sveBfloat16ConversionOperands(inst);
-    case "add_z_p_zz.xml":
-    case "addpt_z_p_zz.xml":
-    case "addp_z_p_zz.xml":
-    case "sub_z_p_zz.xml":
-    case "subpt_z_p_zz.xml":
-    case "subr_z_p_zz.xml":
-    case "shadd_z_p_zz.xml":
-    case "uhadd_z_p_zz.xml":
-    case "shsub_z_p_zz.xml":
-    case "uhsub_z_p_zz.xml":
-    case "bfadd_z_p_zz.xml":
-    case "fabd_z_p_zz.xml":
-    case "fdivr_z_p_zz.xml":
-    case "fmulx_z_p_zz.xml":
-    case "fscale_z_p_zz.xml":
-    case "bfmul_z_p_zz.xml":
-    case "faddp_z_p_zz.xml":
-    case "bfmax_z_p_zz.xml":
-    case "bfmaxnm_z_p_zz.xml":
-    case "bfmin_z_p_zz.xml":
-    case "bfminnm_z_p_zz.xml":
-    case "and_z_p_zz.xml":
-    case "orr_z_p_zz.xml":
-    case "eor_z_p_zz.xml":
-    case "bic_z_p_zz.xml":
-      return svePredicatedBinaryOperands(inst);
-    case "add_z_zz.xml":
-    case "addpt_z_zz.xml":
-    case "mul_z_zz.xml":
-    case "sqdmulh_z_zz.xml":
-    case "sqrdmulh_z_zz.xml":
-    case "pmul_z_zz.xml":
-    case "sqadd_z_zz.xml":
-    case "sub_z_zz.xml":
-    case "subpt_z_zz.xml":
-    case "sqsub_z_zz.xml":
-    case "and_z_zz.xml":
-    case "orr_z_zz.xml":
-    case "mov_orr_z_zz.xml":
-    case "eor_z_zz.xml":
-    case "bic_z_zz.xml":
-    case "uqadd_z_zz.xml":
-    case "uqsub_z_zz.xml":
-    case "bfadd_z_zz.xml":
-    case "fadd_z_zz.xml":
-    case "bfmul_z_zz.xml":
-    case "bfclamp_z_zz.xml":
-    case "fclamp_z_zz.xml":
-    case "fsub_z_zz.xml":
-    case "frecps_z_zz.xml":
-    case "frsqrts_z_zz.xml":
-    case "ftsmul_z_zz.xml":
-    case "ftssel_z_zz.xml":
-    case "sclamp_z_zz.xml":
-    case "uclamp_z_zz.xml":
-    case "tbx_z_zz.xml":
-    case "bdep_z_zz.xml":
-    case "bext_z_zz.xml":
-    case "bgrp_z_zz.xml":
-    case "histseg_z_zz.xml":
-    case "eorbt_z_zz.xml":
-    case "eortb_z_zz.xml":
-      return sveBinaryOperands(inst);
-    case "madpt_z_zzz.xml":
-    case "mlapt_z_zzz.xml":
-      return svePredicateAsCounterOperands(inst);
-    case "aese_z_zz.xml":
-    case "aesd_z_zz.xml":
-    case "sm4e_z_zz.xml":
+    }),
+  operandFamily("sme-fp8-luti-mixed", ["luti4_mz4_ztmz2.xml"], smeFp8LutiMixedOperands),
+  operandFamily("sme-long-arithmetic", [
+    "smlall_za_zzi.xml", "smlall_za_zzv.xml", "smlall_za_zzw.xml", "smlal_za_zzi.xml",
+    "smlal_za_zzv.xml", "smlal_za_zzw.xml", "smlsl_za_zzi.xml", "smlsl_za_zzv.xml",
+    "smlsl_za_zzw.xml", "smlsll_za_zzi.xml", "smlsll_za_zzv.xml", "smlsll_za_zzw.xml",
+    "umlal_za_zzi.xml", "umlal_za_zzv.xml", "umlal_za_zzw.xml", "umlall_za_zzi.xml",
+    "umlall_za_zzv.xml", "umlall_za_zzw.xml", "umlsl_za_zzi.xml", "umlsl_za_zzv.xml",
+    "umlsl_za_zzw.xml", "umlsll_za_zzi.xml", "umlsll_za_zzv.xml", "umlsll_za_zzw.xml",
+    "sumlall_za_zzi.xml", "sumlall_za_zzv.xml", "usmlall_za_zzi.xml", "usmlall_za_zzv.xml",
+    "usmlall_za_zzw.xml",
+  ], smeLongArithmeticOperands),
+  operandFamily("sme-float-long-arithmetic", [
+    "bfmlal_za_zzi.xml", "bfmlal_za_zzv.xml", "bfmlal_za_zzw.xml", "bfmlsl_za_zzi.xml",
+    "bfmlsl_za_zzv.xml", "bfmlsl_za_zzw.xml", "fmlal_za_zzi.xml", "fmlal_za_zzv.xml",
+    "fmlal_za_zzw.xml", "fmlsl_za_zzi.xml", "fmlsl_za_zzv.xml", "fmlsl_za_zzw.xml",
+  ], smeFloatLongArithmeticOperands),
+  operandFamily("sme-fp8-long-arithmetic", [
+    "fmlal_za_z8z8i.xml", "fmlal_za_z8z8v.xml", "fmlal_za_z8z8w.xml", "fmlall_za32_z8z8i.xml",
+    "fmlall_za32_z8z8v.xml", "fmlall_za32_z8z8w.xml",
+  ], smeFp8LongArithmeticOperands),
+  operandFamily("sme-dot", [
+    "sdot_za32_zzv.xml", "sdot_za32_zzi.xml", "sdot_za32_zzw.xml", "sdot_za_zzv.xml",
+    "sdot_za_zzi.xml", "sdot_za_zzw.xml", "udot_za32_zzv.xml", "udot_za32_zzi.xml",
+    "udot_za32_zzw.xml", "udot_za_zzv.xml", "udot_za_zzi.xml", "udot_za_zzw.xml",
+    "bfdot_za_zzv.xml", "bfdot_za_zzi.xml", "bfdot_za_zzw.xml", "fdot_za_zzv.xml",
+    "fdot_za_zzi.xml", "fdot_za_zzw.xml", "fdot_za_z8z8v.xml", "fdot_za_z8z8i.xml",
+    "fdot_za_z8z8w.xml", "fdot_za32_z8z8v.xml", "fdot_za32_z8z8i.xml", "fdot_za32_z8z8w.xml",
+    "fvdot_za_z8z8i.xml", "fvdot_za_zzi.xml", "bfvdot_za_zzi.xml", "fvdotb_za32_z8z8i.xml",
+    "fvdott_za32_z8z8i.xml", "svdot_za_zzi.xml", "svdot_za32_zzi.xml", "sudot_za_zzv.xml",
+    "sudot_za_zzi.xml", "suvdot_za_zzi.xml", "uvdot_za_zzi.xml", "uvdot_za32_zzi.xml",
+    "usdot_za_zzv.xml", "usdot_za_zzi.xml", "usvdot_za_zzi.xml", "usdot_za_zzw.xml",
+  ], smeDotOperands),
+  operandFamily("sve-compare-immediate", ["cmpeq_p_p_zi.xml"], sveCompareImmediateOperands),
+  operandFamily("sve-floating-compare-immediate", ["fcmeq_p_p_z0.xml"], sveFloatingCompareImmediateOperands),
+  operandFamily("sve-compare-vector", [
+    "cmpeq_p_p_zz.xml", "fcmeq_p_p_zz.xml", "facge_p_p_zz.xml", "match_p_p_zz.xml",
+    "nmatch_p_p_zz.xml",
+  ], sveCompareVectorOperands),
+  operandFamily("sve-histcnt", ["histcnt_z_p_zz.xml"], sveHistcntOperands),
+  operandFamily("sve-compare-wide-vector", ["cmpeq_p_p_zw.xml"], sveCompareWideVectorOperands),
+  operandFamily("sve-ptrue", ["ptrue_p_s.xml", "ptrues_p_s.xml"], svePtrueOperands),
+  operandFamily("sve-ptrue-predicate-counter", ["ptrue_pn_i.xml"], svePtruePredicateCounterOperands),
+  operandFamily("sve-predicate-break", ["brka_p_p_p.xml", "brkas_p_p_p.xml", "brkb_p_p_p.xml", "brkbs_p_p_p.xml"], svePredicateBreakOperands),
+  operandFamily("sve-predicate-break-propagation", ["brkn_p_p_pp.xml", "brkns_p_p_pp.xml"], svePredicateBreakPropagationOperands),
+  operandFamily("sve-predicate-break-pair", ["brkpa_p_p_pp.xml", "brkpas_p_p_pp.xml", "brkpb_p_p_pp.xml", "brkpbs_p_p_pp.xml"], svePredicateBreakPairOperands),
+  operandFamily("sve-predicate-flow", ["pfirst_p_p_p.xml", "pnext_p_p_p.xml"], svePredicateFlowOperands),
+  operandFamily("sve-predicate-test", ["ptest_p_p.xml"], svePredicateTestOperands),
+  operandFamily("sve-rdffr", ["rdffr_p_f.xml", "rdffr_p_p_f.xml", "rdffrs_p_p_f.xml"], sveRdffrOperands),
+  operandFamily("sve-predicate-control", ["pfalse_p.xml", "punpkhi_p_p.xml", "wrffr_f_p.xml"], svePredicateControlOperands),
+  operandFamily("sve-terminate-condition", ["ctermeq_rr.xml"], sveTerminateConditionOperands),
+  operandFamily("sve-predicate-logical", [
+    "and_p_p_pp.xml", "mov_and_p_p_pp.xml", "ands_p_p_pp.xml", "movs_ands_p_p_pp.xml",
+    "orn_p_p_pp.xml", "orns_p_p_pp.xml", "orr_p_p_pp.xml", "mov_orr_p_p_pp.xml",
+    "orrs_p_p_pp.xml", "movs_orrs_p_p_pp.xml", "eor_p_p_pp.xml", "eors_p_p_pp.xml",
+    "nots_eors_p_p_pp.xml", "bic_p_p_pp.xml", "nand_p_p_pp.xml", "nor_p_p_pp.xml",
+    "bics_p_p_pp.xml", "nands_p_p_pp.xml", "nors_p_p_pp.xml",
+  ], svePredicateLogicalOperands),
+  operandFamily("sve-predicate-permutation", ["zip1_p_pp.xml", "uzp1_p_pp.xml", "trn1_p_pp.xml"], svePredicatePermutationOperands),
+  operandFamily("sve-index", ["index_z_ii.xml", "index_z_ir.xml", "index_z_ri.xml", "index_z_rr.xml"], sveIndexOperands),
+  operandFamily("sve-insr", ["insr_z_r.xml", "insr_z_v.xml"], sveInsrOperands),
+  operandFamily("sve-last-extract", [
+    "lasta_r_p_z.xml", "lasta_v_p_z.xml", "lastb_r_p_z.xml", "lastb_v_p_z.xml",
+    "clasta_r_p_z.xml", "clasta_v_p_z.xml", "clasta_z_p_zz.xml", "clastb_r_p_z.xml",
+    "clastb_v_p_z.xml", "clastb_z_p_zz.xml",
+  ], sveLastExtractOperands),
+  operandFamily("sve-predicated-unary", [
+    "frinta_z_p_z.xml", "cls_z_p_z.xml", "clz_z_p_z.xml", "cnot_z_p_z.xml",
+    "cnt_z_p_z.xml", "fabs_z_p_z.xml", "fneg_z_p_z.xml", "frecpx_z_p_z.xml",
+    "fsqrt_z_p_z.xml", "not_z_p_z.xml", "rbit_z_p_z.xml", "sxtb_z_p_z.xml",
+    "uxtb_z_p_z.xml", "revb_z_z.xml", "flogb_z_p_z.xml", "urecpe_z_p_z.xml",
+    "ursqrte_z_p_z.xml", "abs_z_p_z.xml", "neg_z_p_z.xml", "sqabs_z_p_z.xml",
+    "sqneg_z_p_z.xml",
+  ], svePredicatedUnaryOperands),
+  operandFamily("sve-revd", ["revd_z_p_z.xml"], sveRevdOperands),
+  operandFamily("sve-predicated-narrowing-conversion", ["fcvtlt_z_p_z.xml", "fcvtnt_z_p_z.xml", "fcvtx_z_p_z.xml", "fcvtxnt_z_p_z.xml"], svePredicatedNarrowingConversionOperands),
+  operandFamily("sve-bfloat16-conversion", ["bfcvt_z_p_z.xml", "bfcvtnt_z_p_z.xml"], sveBfloat16ConversionOperands),
+  operandFamily("sve-predicated-binary", [
+    "add_z_p_zz.xml", "addpt_z_p_zz.xml", "addp_z_p_zz.xml", "sub_z_p_zz.xml",
+    "subpt_z_p_zz.xml", "subr_z_p_zz.xml", "shadd_z_p_zz.xml", "uhadd_z_p_zz.xml",
+    "shsub_z_p_zz.xml", "uhsub_z_p_zz.xml", "bfadd_z_p_zz.xml", "fabd_z_p_zz.xml",
+    "fdivr_z_p_zz.xml", "fmulx_z_p_zz.xml", "fscale_z_p_zz.xml", "bfmul_z_p_zz.xml",
+    "faddp_z_p_zz.xml", "bfmax_z_p_zz.xml", "bfmaxnm_z_p_zz.xml", "bfmin_z_p_zz.xml",
+    "bfminnm_z_p_zz.xml", "and_z_p_zz.xml", "orr_z_p_zz.xml", "eor_z_p_zz.xml",
+    "bic_z_p_zz.xml", "asr_z_p_zz.xml", "asrr_z_p_zz.xml", "lsl_z_p_zz.xml",
+    "lslr_z_p_zz.xml", "lsr_z_p_zz.xml", "lsrr_z_p_zz.xml", "sqshl_z_p_zz.xml",
+    "uqshl_z_p_zz.xml", "sqrshl_z_p_zz.xml", "uqrshl_z_p_zz.xml", "sabd_z_p_zz.xml",
+    "uabd_z_p_zz.xml", "sqadd_z_p_zz.xml", "uqadd_z_p_zz.xml", "sqsub_z_p_zz.xml",
+    "uqsub_z_p_zz.xml", "suqadd_z_p_zz.xml", "usqadd_z_p_zz.xml", "sqsubr_z_p_zz.xml",
+    "uqsubr_z_p_zz.xml", "srshl_z_p_zz.xml", "urshl_z_p_zz.xml", "srshlr_z_p_zz.xml",
+    "urshlr_z_p_zz.xml", "sqshlr_z_p_zz.xml", "uqshlr_z_p_zz.xml", "sqrshlr_z_p_zz.xml",
+    "uqrshlr_z_p_zz.xml", "srhadd_z_p_zz.xml", "urhadd_z_p_zz.xml", "shsubr_z_p_zz.xml",
+    "uhsubr_z_p_zz.xml", "mul_z_p_zz.xml", "sdiv_z_p_zz.xml", "sdivr_z_p_zz.xml",
+    "smax_z_p_zz.xml", "smin_z_p_zz.xml", "smulh_z_p_zz.xml", "udiv_z_p_zz.xml",
+    "udivr_z_p_zz.xml", "umax_z_p_zz.xml", "umin_z_p_zz.xml", "umulh_z_p_zz.xml",
+    "smaxp_z_p_zz.xml", "sminp_z_p_zz.xml", "umaxp_z_p_zz.xml", "uminp_z_p_zz.xml",
+    "fmaxp_z_p_zz.xml", "fmaxnmp_z_p_zz.xml", "fminp_z_p_zz.xml", "fminnmp_z_p_zz.xml",
+    "fadd_z_p_zz.xml", "fsub_z_p_zz.xml", "fsubr_z_p_zz.xml", "fdiv_z_p_zz.xml",
+    "fmax_z_p_zz.xml", "fmaxnm_z_p_zz.xml", "fmin_z_p_zz.xml", "fminnm_z_p_zz.xml",
+    "famin_z_p_zz.xml", "famax_z_p_zz.xml", "fmul_z_p_zz.xml",
+  ], svePredicatedBinaryOperands),
+  operandFamily("sve-binary", [
+    "add_z_zz.xml", "addpt_z_zz.xml", "mul_z_zz.xml", "sqdmulh_z_zz.xml",
+    "sqrdmulh_z_zz.xml", "pmul_z_zz.xml", "sqadd_z_zz.xml", "sub_z_zz.xml",
+    "subpt_z_zz.xml", "sqsub_z_zz.xml", "and_z_zz.xml", "orr_z_zz.xml",
+    "mov_orr_z_zz.xml", "eor_z_zz.xml", "bic_z_zz.xml", "uqadd_z_zz.xml",
+    "uqsub_z_zz.xml", "bfadd_z_zz.xml", "fadd_z_zz.xml", "bfmul_z_zz.xml",
+    "bfclamp_z_zz.xml", "fclamp_z_zz.xml", "fsub_z_zz.xml", "frecps_z_zz.xml",
+    "frsqrts_z_zz.xml", "ftsmul_z_zz.xml", "ftssel_z_zz.xml", "sclamp_z_zz.xml",
+    "uclamp_z_zz.xml", "tbx_z_zz.xml", "bdep_z_zz.xml", "bext_z_zz.xml",
+    "bgrp_z_zz.xml", "histseg_z_zz.xml", "eorbt_z_zz.xml", "eortb_z_zz.xml",
+    "smulh_z_zz.xml", "umulh_z_zz.xml", "fmul_z_zz.xml",
+  ], sveBinaryOperands),
+  operandFamily("sve-predicate-as-counter", ["madpt_z_zzz.xml", "mlapt_z_zzz.xml"], svePredicateAsCounterOperands),
+  operandFamily("sve-destructive-binary", ["aese_z_zz.xml", "aesd_z_zz.xml", "sm4e_z_zz.xml"], inst => {
+      const encoding = inst.encoding!;
       return sveDestructiveBinaryOperands(inst, inst.encoding!.fileName.startsWith("sm4") ? "s" : "b");
-    case "aesmc_z_z.xml":
-    case "aesimc_z_z.xml":
+    }),
+  operandFamily("aesmc-z-z", ["aesmc_z_z.xml", "aesimc_z_z.xml"], inst => {
       return [vecReg(inst.fields!.Zdn ?? 0, "b"), vecReg(inst.fields!.Zdn ?? 0, "b")];
-    case "sm4ekey_z_zz.xml":
+    }),
+  operandFamily("sm4ekey-z-zz", ["sm4ekey_z_zz.xml"], inst => {
       return [vecReg(inst.fields!.Zd ?? 0, "s"), vecReg(inst.fields!.Zn ?? 0, "s"), vecReg(inst.fields!.Zm ?? 0, "s")];
-    case "bsl_z_zzz.xml":
-    case "bsl1n_z_zzz.xml":
-    case "bsl2n_z_zzz.xml":
-    case "nbsl_z_zzz.xml":
-    case "bcax_z_zzz.xml":
-    case "eor3_z_zzz.xml":
+    }),
+  operandFamily("sve-destructive-ternary", [
+    "bsl_z_zzz.xml", "bsl1n_z_zzz.xml", "bsl2n_z_zzz.xml", "nbsl_z_zzz.xml",
+    "bcax_z_zzz.xml", "eor3_z_zzz.xml",
+  ], inst => {
       return sveDestructiveTernaryOperands(inst, "d");
-    case "and_z_zi.xml":
-    case "bic_and_z_zi.xml":
-    case "orr_z_zi.xml":
-    case "orn_orr_z_zi.xml":
-    case "eor_z_zi.xml":
-    case "eon_eor_z_zi.xml":
-      return sveLogicalImmediateOperands(inst);
-    case "dupm_z_i.xml":
-    case "mov_dupm_z_i.xml":
-      return sveDupMaskImmediateOperands(inst);
-    case "dup_z_r.xml":
-    case "mov_dup_z_r.xml":
-      return sveDupScalarOperands(inst);
-    case "sel_p_p_pp.xml":
-    case "mov_sel_p_p_pp.xml":
-      return sveSelectPredicateOperands(inst);
-    case "psel_p_ppi.xml":
-      return smePredicateSelectOperands(inst);
-    case "sel_z_p_zz.xml":
-    case "mov_sel_z_p_zz.xml":
-      return sveSelectVectorOperands(inst);
-    case "add_z_zi.xml":
-    case "mul_z_zi.xml":
-    case "smax_z_zi.xml":
-    case "smin_z_zi.xml":
-    case "umax_z_zi.xml":
-    case "umin_z_zi.xml":
-    case "sqadd_z_zi.xml":
-    case "sub_z_zi.xml":
-    case "sqsub_z_zi.xml":
-    case "subr_z_zi.xml":
-    case "uqadd_z_zi.xml":
-    case "uqsub_z_zi.xml":
-      return sveDestructiveImmediateOperands(inst);
-    case "mul_z_zzi.xml":
-    case "sqdmulh_z_zzi.xml":
-    case "sqrdmulh_z_zzi.xml":
-      return sveBinaryIndexedOperands(inst);
-    case "xar_z_zzi.xml":
-      return sveXarOperands(inst);
-    case "asr_z_zi.xml":
-    case "lsl_z_zi.xml":
-    case "lsr_z_zi.xml":
-    case "sli_z_zzi.xml":
-    case "sri_z_zzi.xml":
-      return sveShiftInsertImmediateOperands(inst);
-    case "sqshl_z_p_zi.xml":
-    case "uqshl_z_p_zi.xml":
-    case "sqshlu_z_p_zi.xml":
-    case "srshr_z_p_zi.xml":
-    case "urshr_z_p_zi.xml":
-    case "asr_z_p_zi.xml":
-    case "asrd_z_p_zi.xml":
-    case "lsl_z_p_zi.xml":
-    case "lsr_z_p_zi.xml":
-      return sveShiftImmediateOperands(inst);
-    case "sqshrnb_z_zi.xml":
-    case "sqshrnt_z_zi.xml":
-    case "sqshrunb_z_zi.xml":
-    case "sqshrunt_z_zi.xml":
-    case "uqshrnb_z_zi.xml":
-    case "uqshrnt_z_zi.xml":
-    case "shrnb_z_zi.xml":
-    case "shrnt_z_zi.xml":
-    case "rshrnb_z_zi.xml":
-    case "rshrnt_z_zi.xml":
-    case "sqrshrnb_z_zi.xml":
-    case "sqrshrnt_z_zi.xml":
-    case "sqrshrunb_z_zi.xml":
-    case "sqrshrunt_z_zi.xml":
-    case "uqrshrnb_z_zi.xml":
-    case "uqrshrnt_z_zi.xml":
-      return sveNarrowingShiftImmediateOperands(inst);
-    case "sqxtnb_z_zz.xml":
-    case "sqxtnt_z_zz.xml":
-    case "sqxtunb_z_zz.xml":
-    case "sqxtunt_z_zz.xml":
-    case "uqxtnb_z_zz.xml":
-    case "uqxtnt_z_zz.xml":
-      return sveNarrowingExtractOperands(inst);
-    case "sabalb_z_zzz.xml":
-    case "sabalt_z_zzz.xml":
-    case "uabalb_z_zzz.xml":
-    case "uabalt_z_zzz.xml":
-      return sveLongMultiplyOperands(inst);
-    case "saddlb_z_zz.xml":
-    case "saddlt_z_zz.xml":
-    case "saddlbt_z_zz.xml":
-    case "uaddlb_z_zz.xml":
-    case "uaddlt_z_zz.xml":
-    case "saddwb_z_zz.xml":
-    case "saddwt_z_zz.xml":
-    case "ssublb_z_zz.xml":
-    case "ssublt_z_zz.xml":
-    case "ssublbt_z_zz.xml":
-    case "ssubltb_z_zz.xml":
-    case "ssubwb_z_zz.xml":
-    case "ssubwt_z_zz.xml":
-    case "usublb_z_zz.xml":
-    case "usublt_z_zz.xml":
-    case "sabdlb_z_zz.xml":
-    case "sabdlt_z_zz.xml":
-    case "uabdlb_z_zz.xml":
-    case "uabdlt_z_zz.xml":
-    case "uaddwb_z_zz.xml":
-    case "uaddwt_z_zz.xml":
-    case "usubwb_z_zz.xml":
-    case "usubwt_z_zz.xml":
-      return sveWideningBinaryOperands(inst);
-    case "addhnb_z_zz.xml":
-    case "addhnt_z_zz.xml":
-    case "subhnb_z_zz.xml":
-    case "subhnt_z_zz.xml":
-    case "raddhnb_z_zz.xml":
-    case "raddhnt_z_zz.xml":
-    case "rsubhnb_z_zz.xml":
-    case "rsubhnt_z_zz.xml":
-      return sveNarrowingBinaryOperands(inst);
-    case "asr_z_p_zz.xml":
-    case "asrr_z_p_zz.xml":
-    case "lsl_z_p_zz.xml":
-    case "lslr_z_p_zz.xml":
-    case "lsr_z_p_zz.xml":
-    case "lsrr_z_p_zz.xml":
-    case "sqshl_z_p_zz.xml":
-    case "uqshl_z_p_zz.xml":
-    case "sqrshl_z_p_zz.xml":
-    case "uqrshl_z_p_zz.xml":
-    case "sabd_z_p_zz.xml":
-    case "uabd_z_p_zz.xml":
-    case "sqadd_z_p_zz.xml":
-    case "uqadd_z_p_zz.xml":
-    case "sqsub_z_p_zz.xml":
-    case "uqsub_z_p_zz.xml":
-    case "suqadd_z_p_zz.xml":
-    case "usqadd_z_p_zz.xml":
-    case "sqsubr_z_p_zz.xml":
-    case "uqsubr_z_p_zz.xml":
-    case "srshl_z_p_zz.xml":
-    case "urshl_z_p_zz.xml":
-    case "srshlr_z_p_zz.xml":
-    case "urshlr_z_p_zz.xml":
-    case "sqshlr_z_p_zz.xml":
-    case "uqshlr_z_p_zz.xml":
-    case "sqrshlr_z_p_zz.xml":
-    case "uqrshlr_z_p_zz.xml":
-    case "srhadd_z_p_zz.xml":
-    case "urhadd_z_p_zz.xml":
-    case "shsubr_z_p_zz.xml":
-    case "uhsubr_z_p_zz.xml":
-    case "mul_z_p_zz.xml":
-    case "sdiv_z_p_zz.xml":
-    case "sdivr_z_p_zz.xml":
-    case "smax_z_p_zz.xml":
-    case "smin_z_p_zz.xml":
-    case "smulh_z_p_zz.xml":
-    case "udiv_z_p_zz.xml":
-    case "udivr_z_p_zz.xml":
-    case "umax_z_p_zz.xml":
-    case "umin_z_p_zz.xml":
-    case "umulh_z_p_zz.xml":
-    case "smaxp_z_p_zz.xml":
-    case "sminp_z_p_zz.xml":
-    case "umaxp_z_p_zz.xml":
-    case "uminp_z_p_zz.xml":
-    case "fmaxp_z_p_zz.xml":
-    case "fmaxnmp_z_p_zz.xml":
-    case "fminp_z_p_zz.xml":
-    case "fminnmp_z_p_zz.xml":
-      return svePredicatedBinaryOperands(inst);
-    case "abs_z_p_z.xml":
-    case "neg_z_p_z.xml":
-    case "sqabs_z_p_z.xml":
-    case "sqneg_z_p_z.xml":
-      return svePredicatedUnaryOperands(inst);
-    case "ssra_z_zi.xml":
-    case "usra_z_zi.xml":
-    case "srsra_z_zi.xml":
-    case "ursra_z_zi.xml":
-      return sveAccumulateShiftImmediateOperands(inst);
-    case "saddv_r_p_z.xml":
-    case "uaddv_r_p_z.xml":
-    case "smaxv_r_p_z.xml":
-    case "umaxv_r_p_z.xml":
-    case "sminv_r_p_z.xml":
-    case "uminv_r_p_z.xml":
-    case "orv_r_p_z.xml":
-    case "eorv_r_p_z.xml":
-    case "andv_r_p_z.xml":
-    case "faddv_v_p_z.xml":
-    case "fmaxnmv_v_p_z.xml":
-    case "fminnmv_v_p_z.xml":
-    case "fmaxv_v_p_z.xml":
-    case "fminv_v_p_z.xml":
-      return sveHorizontalReductionOperands(inst);
-    case "fadda_v_p_z.xml":
-      return sveFloatingReductionOperands(inst);
-    case "addqv_z_p_z.xml":
-    case "andqv_z_p_z.xml":
-    case "eorqv_z_p_z.xml":
-    case "orqv_z_p_z.xml":
-    case "smaxqv_z_p_z.xml":
-    case "sminqv_z_p_z.xml":
-    case "umaxqv_z_p_z.xml":
-    case "uminqv_z_p_z.xml":
-    case "faddqv_z_p_z.xml":
-    case "fmaxqv_z_p_z.xml":
-    case "fmaxnmqv_z_p_z.xml":
-    case "fminqv_z_p_z.xml":
-    case "fminnmqv_z_p_z.xml":
-      return sveQVectorReductionOperands(inst);
-    case "asr_z_zw.xml":
-    case "lsl_z_zw.xml":
-    case "lsr_z_zw.xml":
-    case "asr_z_p_zw.xml":
-    case "lsl_z_p_zw.xml":
-    case "lsr_z_p_zw.xml":
-      return sveWideShiftOperands(inst);
-    case "adr_z_az.xml":
-      return sveAdrVectorOperands(inst);
-    case "ext_z_zi.xml":
-    case "extq_z_zi.xml":
-      return sveExtOperands(inst);
-    case "splice_z_p_zz.xml":
-      return sveSpliceOperands(inst);
-    case "bfsub_z_p_zz.xml":
-    case "bfsub_z_zz.xml":
-      return sveBfSubOperands(inst);
-    case "fcadd_z_p_zz.xml":
-      return sveFcaddOperands(inst);
-    case "cadd_z_zz.xml":
-    case "sqcadd_z_zz.xml":
-      return sveCaddLikeOperands(inst);
-    case "rax1_z_zz.xml":
+    }),
+  operandFamily("sve-logical-immediate", [
+    "and_z_zi.xml", "bic_and_z_zi.xml", "orr_z_zi.xml", "orn_orr_z_zi.xml",
+    "eor_z_zi.xml", "eon_eor_z_zi.xml",
+  ], sveLogicalImmediateOperands),
+  operandFamily("sve-dup-mask-immediate", ["dupm_z_i.xml", "mov_dupm_z_i.xml"], sveDupMaskImmediateOperands),
+  operandFamily("sve-dup-scalar", ["dup_z_r.xml", "mov_dup_z_r.xml"], sveDupScalarOperands),
+  operandFamily("sve-select-predicate", ["sel_p_p_pp.xml", "mov_sel_p_p_pp.xml"], sveSelectPredicateOperands),
+  operandFamily("sme-predicate-select", ["psel_p_ppi.xml"], smePredicateSelectOperands),
+  operandFamily("sve-select-vector", ["sel_z_p_zz.xml", "mov_sel_z_p_zz.xml"], sveSelectVectorOperands),
+  operandFamily("sve-destructive-immediate", [
+    "add_z_zi.xml", "mul_z_zi.xml", "smax_z_zi.xml", "smin_z_zi.xml",
+    "umax_z_zi.xml", "umin_z_zi.xml", "sqadd_z_zi.xml", "sub_z_zi.xml",
+    "sqsub_z_zi.xml", "subr_z_zi.xml", "uqadd_z_zi.xml", "uqsub_z_zi.xml",
+  ], sveDestructiveImmediateOperands),
+  operandFamily("sve-binary-indexed", ["mul_z_zzi.xml", "sqdmulh_z_zzi.xml", "sqrdmulh_z_zzi.xml"], sveBinaryIndexedOperands),
+  operandFamily("sve-xar", ["xar_z_zzi.xml"], sveXarOperands),
+  operandFamily("sve-shift-insert-immediate", [
+    "asr_z_zi.xml", "lsl_z_zi.xml", "lsr_z_zi.xml", "sli_z_zzi.xml",
+    "sri_z_zzi.xml",
+  ], sveShiftInsertImmediateOperands),
+  operandFamily("sve-shift-immediate", [
+    "sqshl_z_p_zi.xml", "uqshl_z_p_zi.xml", "sqshlu_z_p_zi.xml", "srshr_z_p_zi.xml",
+    "urshr_z_p_zi.xml", "asr_z_p_zi.xml", "asrd_z_p_zi.xml", "lsl_z_p_zi.xml",
+    "lsr_z_p_zi.xml", "sshllb_z_zi.xml", "sshllt_z_zi.xml", "ushllb_z_zi.xml",
+    "ushllt_z_zi.xml",
+  ], sveShiftImmediateOperands),
+  operandFamily("sve-narrowing-shift-immediate", [
+    "sqshrnb_z_zi.xml", "sqshrnt_z_zi.xml", "sqshrunb_z_zi.xml", "sqshrunt_z_zi.xml",
+    "uqshrnb_z_zi.xml", "uqshrnt_z_zi.xml", "shrnb_z_zi.xml", "shrnt_z_zi.xml",
+    "rshrnb_z_zi.xml", "rshrnt_z_zi.xml", "sqrshrnb_z_zi.xml", "sqrshrnt_z_zi.xml",
+    "sqrshrunb_z_zi.xml", "sqrshrunt_z_zi.xml", "uqrshrnb_z_zi.xml", "uqrshrnt_z_zi.xml",
+  ], sveNarrowingShiftImmediateOperands),
+  operandFamily("sve-narrowing-extract", [
+    "sqxtnb_z_zz.xml", "sqxtnt_z_zz.xml", "sqxtunb_z_zz.xml", "sqxtunt_z_zz.xml",
+    "uqxtnb_z_zz.xml", "uqxtnt_z_zz.xml",
+  ], sveNarrowingExtractOperands),
+  operandFamily("sve-long-multiply", [
+    "sabalb_z_zzz.xml", "sabalt_z_zzz.xml", "uabalb_z_zzz.xml", "uabalt_z_zzz.xml",
+    "smlalb_z_zzz.xml", "smlalt_z_zzz.xml", "smlslb_z_zzz.xml", "smlslt_z_zzz.xml",
+    "sqdmlalb_z_zzz.xml", "sqdmlalbt_z_zzz.xml", "sqdmlalt_z_zzz.xml", "sqdmlslb_z_zzz.xml",
+    "sqdmlslbt_z_zzz.xml", "sqdmlslt_z_zzz.xml", "umlalb_z_zzz.xml", "umlalt_z_zzz.xml",
+    "umlslb_z_zzz.xml", "umlslt_z_zzz.xml", "smullb_z_zz.xml", "smullt_z_zz.xml",
+    "sqdmullb_z_zz.xml", "sqdmullt_z_zz.xml", "umullb_z_zz.xml", "umullt_z_zz.xml",
+  ], sveLongMultiplyOperands),
+  operandFamily("sve-widening-binary", [
+    "saddlb_z_zz.xml", "saddlt_z_zz.xml", "saddlbt_z_zz.xml", "uaddlb_z_zz.xml",
+    "uaddlt_z_zz.xml", "saddwb_z_zz.xml", "saddwt_z_zz.xml", "ssublb_z_zz.xml",
+    "ssublt_z_zz.xml", "ssublbt_z_zz.xml", "ssubltb_z_zz.xml", "ssubwb_z_zz.xml",
+    "ssubwt_z_zz.xml", "usublb_z_zz.xml", "usublt_z_zz.xml", "sabdlb_z_zz.xml",
+    "sabdlt_z_zz.xml", "uabdlb_z_zz.xml", "uabdlt_z_zz.xml", "uaddwb_z_zz.xml",
+    "uaddwt_z_zz.xml", "usubwb_z_zz.xml", "usubwt_z_zz.xml",
+  ], sveWideningBinaryOperands),
+  operandFamily("sve-narrowing-binary", [
+    "addhnb_z_zz.xml", "addhnt_z_zz.xml", "subhnb_z_zz.xml", "subhnt_z_zz.xml",
+    "raddhnb_z_zz.xml", "raddhnt_z_zz.xml", "rsubhnb_z_zz.xml", "rsubhnt_z_zz.xml",
+  ], sveNarrowingBinaryOperands),
+  operandFamily("sve-accumulate-shift-immediate", ["ssra_z_zi.xml", "usra_z_zi.xml", "srsra_z_zi.xml", "ursra_z_zi.xml"], sveAccumulateShiftImmediateOperands),
+  operandFamily("sve-horizontal-reduction", [
+    "saddv_r_p_z.xml", "uaddv_r_p_z.xml", "smaxv_r_p_z.xml", "umaxv_r_p_z.xml",
+    "sminv_r_p_z.xml", "uminv_r_p_z.xml", "orv_r_p_z.xml", "eorv_r_p_z.xml",
+    "andv_r_p_z.xml", "faddv_v_p_z.xml", "fmaxnmv_v_p_z.xml", "fminnmv_v_p_z.xml",
+    "fmaxv_v_p_z.xml", "fminv_v_p_z.xml",
+  ], sveHorizontalReductionOperands),
+  operandFamily("sve-floating-reduction", ["fadda_v_p_z.xml"], sveFloatingReductionOperands),
+  operandFamily("sve-qvector-reduction", [
+    "addqv_z_p_z.xml", "andqv_z_p_z.xml", "eorqv_z_p_z.xml", "orqv_z_p_z.xml",
+    "smaxqv_z_p_z.xml", "sminqv_z_p_z.xml", "umaxqv_z_p_z.xml", "uminqv_z_p_z.xml",
+    "faddqv_z_p_z.xml", "fmaxqv_z_p_z.xml", "fmaxnmqv_z_p_z.xml", "fminqv_z_p_z.xml",
+    "fminnmqv_z_p_z.xml",
+  ], sveQVectorReductionOperands),
+  operandFamily("sve-wide-shift", [
+    "asr_z_zw.xml", "lsl_z_zw.xml", "lsr_z_zw.xml", "asr_z_p_zw.xml",
+    "lsl_z_p_zw.xml", "lsr_z_p_zw.xml",
+  ], sveWideShiftOperands),
+  operandFamily("sve-adr-vector", ["adr_z_az.xml"], sveAdrVectorOperands),
+  operandFamily("sve-ext", ["ext_z_zi.xml", "extq_z_zi.xml"], sveExtOperands),
+  operandFamily("sve-splice", ["splice_z_p_zz.xml"], sveSpliceOperands),
+  operandFamily("sve-bf-sub", ["bfsub_z_p_zz.xml", "bfsub_z_zz.xml"], sveBfSubOperands),
+  operandFamily("sve-fcadd", ["fcadd_z_p_zz.xml"], sveFcaddOperands),
+  operandFamily("sve-cadd-like", ["cadd_z_zz.xml", "sqcadd_z_zz.xml"], sveCaddLikeOperands),
+  operandFamily("rax1-z-zz", ["rax1_z_zz.xml"], inst => {
       return [vecReg(inst.fields!.Zd ?? 0, "d"), vecReg(inst.fields!.Zn ?? 0, "d"), vecReg(inst.fields!.Zm ?? 0, "d")];
-    case "adclb_z_zzz.xml":
-    case "adclt_z_zzz.xml":
-    case "sbclb_z_zzz.xml":
-    case "sbclt_z_zzz.xml":
-      return sveCarryLongOperands(inst);
-    case "smulh_z_zz.xml":
-    case "umulh_z_zz.xml":
-      return sveBinaryOperands(inst);
-    case "cmla_z_zzz.xml":
-    case "sqrdcmlah_z_zzz.xml":
-      return sveComplexVectorOperands(inst);
-    case "smlalb_z_zzz.xml":
-    case "smlalt_z_zzz.xml":
-    case "smlslb_z_zzz.xml":
-    case "smlslt_z_zzz.xml":
-    case "sqdmlalb_z_zzz.xml":
-    case "sqdmlalbt_z_zzz.xml":
-    case "sqdmlalt_z_zzz.xml":
-    case "sqdmlslb_z_zzz.xml":
-    case "sqdmlslbt_z_zzz.xml":
-    case "sqdmlslt_z_zzz.xml":
-    case "umlalb_z_zzz.xml":
-    case "umlalt_z_zzz.xml":
-    case "umlslb_z_zzz.xml":
-    case "umlslt_z_zzz.xml":
-      return sveLongMultiplyOperands(inst);
-    case "smullb_z_zz.xml":
-    case "smullt_z_zz.xml":
-    case "sqdmullb_z_zz.xml":
-    case "sqdmullt_z_zz.xml":
-    case "umullb_z_zz.xml":
-    case "umullt_z_zz.xml":
-      return sveLongMultiplyOperands(inst);
-    case "smullb_z_zzi.xml":
-    case "smullt_z_zzi.xml":
-    case "sqdmullb_z_zzi.xml":
-    case "sqdmullt_z_zzi.xml":
-    case "umullb_z_zzi.xml":
-    case "umullt_z_zzi.xml":
-      return sveLongMultiplyIndexedOperands(inst);
-    case "smlalb_z_zzzi.xml":
-    case "smlalt_z_zzzi.xml":
-    case "smlslb_z_zzzi.xml":
-    case "smlslt_z_zzzi.xml":
-    case "sqdmlalb_z_zzzi.xml":
-    case "sqdmlalt_z_zzzi.xml":
-    case "sqdmlslb_z_zzzi.xml":
-    case "sqdmlslt_z_zzzi.xml":
-    case "umlalb_z_zzzi.xml":
-    case "umlalt_z_zzzi.xml":
-    case "umlslb_z_zzzi.xml":
-    case "umlslt_z_zzzi.xml":
-      return sveLongMultiplyIndexedOperands(inst);
-    case "sqrdmlah_z_zzz.xml":
-    case "sqrdmlsh_z_zzz.xml":
-      return sveMultiplyAccumulateOperands(inst);
-    case "fcmla_z_p_zzz.xml":
-      return sveFcmlaPredicatedOperands(inst);
-    case "cmla_z_zzzi.xml":
-    case "fcmla_z_zzzi.xml":
-    case "sqrdcmlah_z_zzzi.xml":
-      return sveComplexIndexedOperands(inst);
-    case "mla_z_zzzi.xml":
-    case "mls_z_zzzi.xml":
-    case "sqrdmlah_z_zzzi.xml":
-    case "sqrdmlsh_z_zzzi.xml":
-      return sveFpMultiplyAccumulateOperands(inst);
-    case "bfmlalb_z_zzz.xml":
-    case "bfmlslb_z_zzz.xml":
-    case "bfmlalt_z_zzz.xml":
-    case "bfmlslt_z_zzz.xml":
-    case "bfmlalb_z_zzzi.xml":
-    case "bfmlslb_z_zzzi.xml":
-    case "bfmlalt_z_zzzi.xml":
-    case "bfmlslt_z_zzzi.xml":
-      return sveBfmlalOperands(inst);
-    case "fmlalb_z_zzz.xml":
-    case "fmlalt_z_zzz.xml":
-    case "fmlslb_z_zzz.xml":
-    case "fmlslt_z_zzz.xml":
-    case "fmlalb_z_zzzi.xml":
-    case "fmlalt_z_zzzi.xml":
-    case "fmlslb_z_zzzi.xml":
-    case "fmlslt_z_zzzi.xml":
-      return sveFmlalLongOperands(inst);
-    case "bfmls_z_p_zzz.xml":
-    case "bfmls_z_zzzi.xml":
-      return sveBfmlsOperands(inst);
-    case "bfmla_z_p_zzz.xml":
-    case "bfmla_z_zzzi.xml":
-    case "fmla_z_p_zzz.xml":
-    case "fmla_z_zzzi.xml":
-    case "fmls_z_p_zzz.xml":
-    case "fmls_z_zzzi.xml":
-    case "fnmla_z_p_zzz.xml":
-    case "fnmls_z_p_zzz.xml":
-      return sveFpMultiplyAccumulateOperands(inst);
-    case "fadd_z_p_zs.xml":
-    case "fsub_z_p_zs.xml":
-    case "fmax_z_p_zs.xml":
-    case "fmaxnm_z_p_zs.xml":
-    case "fmin_z_p_zs.xml":
-    case "fminnm_z_p_zs.xml":
-    case "fsubr_z_p_zs.xml":
-      return sveFpAddSubImmediateOperands(inst);
-    case "ld1b_z_p_ai.xml":
-    case "ld1b_z_p_bi.xml":
-    case "ld1b_z_p_br.xml":
-    case "ld1b_z_p_bz.xml":
-    case "ld1h_z_p_ai.xml":
-    case "ld1h_z_p_bi.xml":
-    case "ld1h_z_p_br.xml":
-    case "ld1h_z_p_bz.xml":
-    case "ld1w_z_p_ai.xml":
-    case "ld1w_z_p_bi.xml":
-    case "ld1w_z_p_br.xml":
-    case "ld1w_z_p_bz.xml":
-    case "ld1d_z_p_ai.xml":
-    case "ld1d_z_p_bi.xml":
-    case "ld1d_z_p_br.xml":
-    case "ld1d_z_p_bz.xml":
-    case "ld1sb_z_p_ai.xml":
-    case "ld1sb_z_p_bi.xml":
-    case "ld1sb_z_p_br.xml":
-    case "ld1sb_z_p_bz.xml":
-    case "ld1sh_z_p_ai.xml":
-    case "ld1sh_z_p_bi.xml":
-    case "ld1sh_z_p_br.xml":
-    case "ld1sh_z_p_bz.xml":
-    case "ld1sw_z_p_ai.xml":
-    case "ld1sw_z_p_bi.xml":
-    case "ld1sw_z_p_br.xml":
-    case "ld1sw_z_p_bz.xml":
-    case "st1b_z_p_ai.xml":
-    case "st1b_z_p_bi.xml":
-    case "st1b_z_p_br.xml":
-    case "st1b_z_p_bz.xml":
-    case "st1h_z_p_ai.xml":
-    case "st1h_z_p_bi.xml":
-    case "st1h_z_p_br.xml":
-    case "st1h_z_p_bz.xml":
-    case "st1w_z_p_ai.xml":
-    case "st1w_z_p_bi.xml":
-    case "st1w_z_p_br.xml":
-    case "st1w_z_p_bz.xml":
-    case "st1d_z_p_ai.xml":
-    case "st1d_z_p_bi.xml":
-    case "st1d_z_p_br.xml":
-    case "st1d_z_p_bz.xml":
-      return sveContiguousByteMemoryOperands(inst);
-    case "ld1rb_z_p_bi.xml":
-    case "ld1rh_z_p_bi.xml":
-    case "ld1rw_z_p_bi.xml":
-    case "ld1rd_z_p_bi.xml":
-    case "ld1rsb_z_p_bi.xml":
-    case "ld1rsh_z_p_bi.xml":
-    case "ld1rsw_z_p_bi.xml":
-    case "ld1rqb_z_p_bi.xml":
-    case "ld1rqh_z_p_bi.xml":
-    case "ld1rqw_z_p_bi.xml":
-    case "ld1rqd_z_p_bi.xml":
-    case "ld1rqb_z_p_br.xml":
-    case "ld1rqh_z_p_br.xml":
-    case "ld1rqw_z_p_br.xml":
-    case "ld1rqd_z_p_br.xml":
-    case "ld1rob_z_p_bi.xml":
-    case "ld1roh_z_p_bi.xml":
-    case "ld1row_z_p_bi.xml":
-    case "ld1rod_z_p_bi.xml":
-    case "ld1rob_z_p_br.xml":
-    case "ld1roh_z_p_br.xml":
-    case "ld1row_z_p_br.xml":
-    case "ld1rod_z_p_br.xml":
-      return sveReplicateLoadOperands(inst);
-    case "fmul_z_p_zs.xml":
-      return sveFmulImmediateOperands(inst);
-    case "bfmul_z_zzi.xml":
-    case "fmul_z_zzi.xml":
-      return sveFmulIndexedOperands(inst);
-    case "fadd_z_p_zz.xml":
-    case "fsub_z_p_zz.xml":
-    case "fsubr_z_p_zz.xml":
-    case "fdiv_z_p_zz.xml":
-    case "fmax_z_p_zz.xml":
-    case "fmaxnm_z_p_zz.xml":
-    case "fmin_z_p_zz.xml":
-    case "fminnm_z_p_zz.xml":
-    case "famin_z_p_zz.xml":
-    case "famax_z_p_zz.xml":
-      return svePredicatedBinaryOperands(inst);
-    case "fmad_z_p_zzz.xml":
-    case "fmsb_z_p_zzz.xml":
-    case "fnmad_z_p_zzz.xml":
-    case "fnmsb_z_p_zzz.xml":
-      return sveFmadOperands(inst);
-    case "ftmad_z_zzi.xml":
-      return sveFtmadOperands(inst);
-    case "saba_z_zzz.xml":
-    case "uaba_z_zzz.xml":
-    case "mad_z_p_zzz.xml":
-    case "mla_z_p_zzz.xml":
-    case "mls_z_p_zzz.xml":
-    case "msb_z_p_zzz.xml":
-      return sveMultiplyAccumulateOperands(inst);
-    case "sadalp_z_p_z.xml":
-    case "uadalp_z_p_z.xml":
-      return svePredicatedPairwiseLongAccumulateOperands(inst);
-    case "fmul_z_p_zz.xml":
-      return svePredicatedBinaryOperands(inst);
-    case "fmul_z_zz.xml":
-      return sveBinaryOperands(inst);
-    case "fexpa_z_z.xml":
-    case "frecpe_z_z.xml":
-    case "frsqrte_z_z.xml":
-    case "sunpkhi_z_z.xml":
-    case "uunpkhi_z_z.xml":
+    }),
+  operandFamily("sve-carry-long", ["adclb_z_zzz.xml", "adclt_z_zzz.xml", "sbclb_z_zzz.xml", "sbclt_z_zzz.xml"], sveCarryLongOperands),
+  operandFamily("sve-complex-vector", ["cmla_z_zzz.xml", "sqrdcmlah_z_zzz.xml"], sveComplexVectorOperands),
+  operandFamily("sve-long-multiply-indexed", [
+    "smullb_z_zzi.xml", "smullt_z_zzi.xml", "sqdmullb_z_zzi.xml", "sqdmullt_z_zzi.xml",
+    "umullb_z_zzi.xml", "umullt_z_zzi.xml", "smlalb_z_zzzi.xml", "smlalt_z_zzzi.xml",
+    "smlslb_z_zzzi.xml", "smlslt_z_zzzi.xml", "sqdmlalb_z_zzzi.xml", "sqdmlalt_z_zzzi.xml",
+    "sqdmlslb_z_zzzi.xml", "sqdmlslt_z_zzzi.xml", "umlalb_z_zzzi.xml", "umlalt_z_zzzi.xml",
+    "umlslb_z_zzzi.xml", "umlslt_z_zzzi.xml",
+  ], sveLongMultiplyIndexedOperands),
+  operandFamily("sve-multiply-accumulate", [
+    "sqrdmlah_z_zzz.xml", "sqrdmlsh_z_zzz.xml", "saba_z_zzz.xml", "uaba_z_zzz.xml",
+    "mad_z_p_zzz.xml", "mla_z_p_zzz.xml", "mls_z_p_zzz.xml", "msb_z_p_zzz.xml",
+  ], sveMultiplyAccumulateOperands),
+  operandFamily("sve-fcmla-predicated", ["fcmla_z_p_zzz.xml"], sveFcmlaPredicatedOperands),
+  operandFamily("sve-complex-indexed", ["cmla_z_zzzi.xml", "fcmla_z_zzzi.xml", "sqrdcmlah_z_zzzi.xml"], sveComplexIndexedOperands),
+  operandFamily("sve-fp-multiply-accumulate", [
+    "mla_z_zzzi.xml", "mls_z_zzzi.xml", "sqrdmlah_z_zzzi.xml", "sqrdmlsh_z_zzzi.xml",
+    "bfmla_z_p_zzz.xml", "bfmla_z_zzzi.xml", "fmla_z_p_zzz.xml", "fmla_z_zzzi.xml",
+    "fmls_z_p_zzz.xml", "fmls_z_zzzi.xml", "fnmla_z_p_zzz.xml", "fnmls_z_p_zzz.xml",
+  ], sveFpMultiplyAccumulateOperands),
+  operandFamily("sve-bfmlal", [
+    "bfmlalb_z_zzz.xml", "bfmlslb_z_zzz.xml", "bfmlalt_z_zzz.xml", "bfmlslt_z_zzz.xml",
+    "bfmlalb_z_zzzi.xml", "bfmlslb_z_zzzi.xml", "bfmlalt_z_zzzi.xml", "bfmlslt_z_zzzi.xml",
+  ], sveBfmlalOperands),
+  operandFamily("sve-fmlal-long", [
+    "fmlalb_z_zzz.xml", "fmlalt_z_zzz.xml", "fmlslb_z_zzz.xml", "fmlslt_z_zzz.xml",
+    "fmlalb_z_zzzi.xml", "fmlalt_z_zzzi.xml", "fmlslb_z_zzzi.xml", "fmlslt_z_zzzi.xml",
+  ], sveFmlalLongOperands),
+  operandFamily("sve-bfmls", ["bfmls_z_p_zzz.xml", "bfmls_z_zzzi.xml"], sveBfmlsOperands),
+  operandFamily("sve-fp-add-sub-immediate", [
+    "fadd_z_p_zs.xml", "fsub_z_p_zs.xml", "fmax_z_p_zs.xml", "fmaxnm_z_p_zs.xml",
+    "fmin_z_p_zs.xml", "fminnm_z_p_zs.xml", "fsubr_z_p_zs.xml",
+  ], sveFpAddSubImmediateOperands),
+  operandFamily("sve-contiguous-byte-memory", [
+    "ld1b_z_p_ai.xml", "ld1b_z_p_bz.xml", "ld1h_z_p_ai.xml", "ld1h_z_p_bz.xml",
+    "ld1w_z_p_ai.xml", "ld1w_z_p_bz.xml", "ld1d_z_p_ai.xml", "ld1d_z_p_bz.xml",
+    "ld1sb_z_p_ai.xml", "ld1sb_z_p_bz.xml", "ld1sh_z_p_ai.xml", "ld1sh_z_p_bz.xml",
+    "ld1sw_z_p_ai.xml", "ld1sw_z_p_bz.xml", "st1b_z_p_ai.xml", "st1b_z_p_bz.xml",
+    "st1h_z_p_ai.xml", "st1h_z_p_bz.xml", "st1w_z_p_ai.xml", "st1w_z_p_bz.xml",
+    "st1d_z_p_ai.xml", "st1d_z_p_bz.xml",
+  ], sveContiguousByteMemoryOperands),
+  operandFamily("sve-replicate-load", [
+    "ld1rb_z_p_bi.xml", "ld1rh_z_p_bi.xml", "ld1rw_z_p_bi.xml", "ld1rd_z_p_bi.xml",
+    "ld1rsb_z_p_bi.xml", "ld1rsh_z_p_bi.xml", "ld1rsw_z_p_bi.xml", "ld1rqb_z_p_bi.xml",
+    "ld1rqh_z_p_bi.xml", "ld1rqw_z_p_bi.xml", "ld1rqd_z_p_bi.xml", "ld1rqb_z_p_br.xml",
+    "ld1rqh_z_p_br.xml", "ld1rqw_z_p_br.xml", "ld1rqd_z_p_br.xml", "ld1rob_z_p_bi.xml",
+    "ld1roh_z_p_bi.xml", "ld1row_z_p_bi.xml", "ld1rod_z_p_bi.xml", "ld1rob_z_p_br.xml",
+    "ld1roh_z_p_br.xml", "ld1row_z_p_br.xml", "ld1rod_z_p_br.xml",
+  ], sveReplicateLoadOperands),
+  operandFamily("sve-fmul-immediate", ["fmul_z_p_zs.xml"], sveFmulImmediateOperands),
+  operandFamily("sve-fmul-indexed", ["bfmul_z_zzi.xml", "fmul_z_zzi.xml"], sveFmulIndexedOperands),
+  operandFamily("sve-fmad", ["fmad_z_p_zzz.xml", "fmsb_z_p_zzz.xml", "fnmad_z_p_zzz.xml", "fnmsb_z_p_zzz.xml"], sveFmadOperands),
+  operandFamily("sve-ftmad", ["ftmad_z_zzi.xml"], sveFtmadOperands),
+  operandFamily("sve-predicated-pairwise-long-accumulate", ["sadalp_z_p_z.xml", "uadalp_z_p_z.xml"], svePredicatedPairwiseLongAccumulateOperands),
+  operandFamily("fexpa-z-z", [
+    "fexpa_z_z.xml", "frecpe_z_z.xml", "frsqrte_z_z.xml", "sunpkhi_z_z.xml",
+    "uunpkhi_z_z.xml",
+  ], inst => {
+      const encoding = inst.encoding!;
       return inst.encoding!.mnemonic.endsWith("UNPKHI") || inst.encoding!.mnemonic.endsWith("UNPKLO")
         ? sveUnpackOperands(inst)
         : sveUnaryPermutationOperands(inst);
-    case "sshllb_z_zi.xml":
-    case "sshllt_z_zi.xml":
-    case "ushllb_z_zi.xml":
-    case "ushllt_z_zi.xml":
-      return sveShiftImmediateOperands(inst);
-    case "sdot_z_zzz.xml":
-    case "sdot_z_zzzi.xml":
-    case "sdot_z32_zzz.xml":
-    case "sdot_z32_zzzi.xml":
-    case "udot_z_zzz.xml":
-    case "udot_z_zzzi.xml":
-    case "udot_z32_zzz.xml":
-    case "udot_z32_zzzi.xml":
-    case "bfdot_z_zzz.xml":
-    case "bfdot_z_zzzi.xml":
-    case "fdot_z_zzz.xml":
-    case "fdot_z_zzzi.xml":
-    case "fdot_z_zz8z8.xml":
-    case "fdot_z_zz8z8i.xml":
-    case "fdot_z32_zz8z8.xml":
-    case "fdot_z32_zz8z8i.xml":
-    case "usdot_z_zzz.xml":
-    case "usdot_z_zzzi.xml":
-    case "sudot_z_zzzi.xml":
-    case "cdot_z_zzz.xml":
-    case "cdot_z_zzzi.xml":
-    case "fmlalb_z_z8z8z8.xml":
-    case "fmlalb_z_z8z8z8i.xml":
-    case "fmlalt_z_z8z8z8.xml":
-    case "fmlalt_z_z8z8z8i.xml":
-    case "fmlallbb_z32_z8z8z8.xml":
-    case "fmlallbb_z32_z8z8z8i.xml":
-    case "fmlallbt_z32_z8z8z8.xml":
-    case "fmlallbt_z32_z8z8z8i.xml":
-    case "fmlalltb_z32_z8z8z8.xml":
-    case "fmlalltb_z32_z8z8z8i.xml":
-    case "fmlalltt_z32_z8z8z8.xml":
-    case "fmlalltt_z32_z8z8z8i.xml":
+    }),
+  operandFamily("sdot-z-zzz", [
+    "sdot_z_zzz.xml", "sdot_z_zzzi.xml", "sdot_z32_zzz.xml", "sdot_z32_zzzi.xml",
+    "udot_z_zzz.xml", "udot_z_zzzi.xml", "udot_z32_zzz.xml", "udot_z32_zzzi.xml",
+    "bfdot_z_zzz.xml", "bfdot_z_zzzi.xml", "fdot_z_zzz.xml", "fdot_z_zzzi.xml",
+    "fdot_z_zz8z8.xml", "fdot_z_zz8z8i.xml", "fdot_z32_zz8z8.xml", "fdot_z32_zz8z8i.xml",
+    "usdot_z_zzz.xml", "usdot_z_zzzi.xml", "sudot_z_zzzi.xml", "cdot_z_zzz.xml",
+    "cdot_z_zzzi.xml", "fmlalb_z_z8z8z8.xml", "fmlalb_z_z8z8z8i.xml", "fmlalt_z_z8z8z8.xml",
+    "fmlalt_z_z8z8z8i.xml", "fmlallbb_z32_z8z8z8.xml", "fmlallbb_z32_z8z8z8i.xml", "fmlallbt_z32_z8z8z8.xml",
+    "fmlallbt_z32_z8z8z8i.xml", "fmlalltb_z32_z8z8z8.xml", "fmlalltb_z32_z8z8z8i.xml", "fmlalltt_z32_z8z8z8.xml",
+    "fmlalltt_z32_z8z8z8i.xml",
+  ], inst => {
+      const encoding = inst.encoding!;
       return inst.encoding!.fileName.startsWith("cdot_") ? sveCdotOperands(inst) : sveDotProductOperands(inst);
-    case "pmullb_z_zz.xml":
-    case "pmullt_z_zz.xml":
-      return svePmullOperands(inst);
-    case "fmmla_z_zzz.xml":
-    case "bfmmla_z_zzz.xml":
-    case "bfmmla_z16_zzz.xml":
-    case "smmla_z_zzz.xml":
-    case "ummla_z_zzz.xml":
-    case "usmmla_z_zzz.xml":
-      return sveMatrixMultiplyOperands(inst);
-    case "zip1_z_zz.xml":
-    case "uzp1_z_zz.xml":
-    case "trn1_z_zz.xml":
-      return svePermutationOperands(inst);
-    case "tbl_z_zz.xml":
-      return sveTableLookupOperands(inst);
-    case "luti2_z_zz.xml":
-    case "luti4_z_zz.xml":
-      return sveFp8LutiOperands(inst);
-    case "tblq_z_zz.xml":
-    case "tbxq_z_zz.xml":
-    case "zipq1_z_zz.xml":
-    case "zipq2_z_zz.xml":
-    case "uzpq1_z_zz.xml":
-    case "uzpq2_z_zz.xml":
-      return sveQVectorPermuteOperands(inst);
-    case "dupq_z_zi.xml":
-      return sveDupqIndexedOperands(inst);
-    case "rev_z_z.xml":
-      return sveUnaryPermutationOperands(inst);
-    case "compact_z_p_z.xml":
-      return sveCompactOperands(inst);
-    case "f1cvt_z_z8.xml":
-    case "bf1cvt_z_z8.xml":
-    case "f1cvtlt_z_z8.xml":
-    case "bf1cvtlt_z_z8.xml":
-      return sveFp8ConvertOperands(inst);
-    case "prfb_i_p_bi.xml":
-    case "prfb_i_p_ai.xml":
-    case "prfb_i_p_bz.xml":
-    case "prfd_i_p_bi.xml":
-    case "prfd_i_p_ai.xml":
-    case "prfd_i_p_bz.xml":
-    case "prfh_i_p_bi.xml":
-    case "prfh_i_p_ai.xml":
-    case "prfh_i_p_bz.xml":
-    case "prfw_i_p_bi.xml":
-    case "prfw_i_p_ai.xml":
-    case "prfw_i_p_bz.xml":
-      return sveScalarImmediatePrefetchOperands(inst);
-    case "ldr_p_bi.xml":
-    case "ldr_z_bi.xml":
-    case "str_p_bi.xml":
-    case "str_z_bi.xml":
-      return svePredicateMemoryOperands(inst);
-    case "cntb_r_s.xml":
-    case "incb_r_rs.xml":
-    case "decb_r_rs.xml":
-    case "sqincb_r_rs.xml":
-    case "sqincd_r_rs.xml":
-    case "sqinch_r_rs.xml":
-    case "sqincw_r_rs.xml":
-    case "uqincb_r_rs.xml":
-    case "uqincd_r_rs.xml":
-    case "uqinch_r_rs.xml":
-    case "uqincw_r_rs.xml":
-    case "sqdecb_r_rs.xml":
-    case "sqdecd_r_rs.xml":
-    case "sqdech_r_rs.xml":
-    case "sqdecw_r_rs.xml":
-    case "uqdecb_r_rs.xml":
-    case "uqdecd_r_rs.xml":
-    case "uqdech_r_rs.xml":
-    case "uqdecw_r_rs.xml":
-      return sveIncDecScalarOperands(inst);
-    case "sqincp_r_p_r.xml":
-    case "uqincp_r_p_r.xml":
-    case "sqdecp_r_p_r.xml":
-    case "uqdecp_r_p_r.xml":
-    case "incp_r_p_r.xml":
-    case "decp_r_p_r.xml":
-      return sveIncDecPredicateScalarOperands(inst);
-    case "cntp_r_p_p.xml":
-    case "cntp_r_pn.xml":
-      return sveCountPredicateOperands(inst);
-    case "incd_z_zs.xml":
-    case "sqincd_z_zs.xml":
-    case "sqinch_z_zs.xml":
-    case "sqincw_z_zs.xml":
-    case "uqincd_z_zs.xml":
-    case "uqinch_z_zs.xml":
-    case "uqincw_z_zs.xml":
-    case "sqdecd_z_zs.xml":
-    case "sqdech_z_zs.xml":
-    case "sqdecw_z_zs.xml":
-    case "uqdecd_z_zs.xml":
-    case "uqdech_z_zs.xml":
-    case "uqdecw_z_zs.xml":
-      return sveIncDecVectorOperands(inst);
-    case "sqincp_z_p_z.xml":
-    case "uqincp_z_p_z.xml":
-    case "sqdecp_z_p_z.xml":
-    case "uqdecp_z_p_z.xml":
-    case "incp_z_p_z.xml":
-    case "decp_z_p_z.xml":
-      return sveIncDecPredicateVectorOperands(inst);
-    case "whilege_p_p_rr.xml":
-    case "whilegt_p_p_rr.xml":
-    case "whilehi_p_p_rr.xml":
-    case "whilehs_p_p_rr.xml":
-    case "whilele_p_p_rr.xml":
-    case "whilelo_p_p_rr.xml":
-    case "whilels_p_p_rr.xml":
-    case "whilelt_p_p_rr.xml":
-    case "whilege_pp_rr.xml":
-    case "whilegt_pp_rr.xml":
-    case "whilehi_pp_rr.xml":
-    case "whilehs_pp_rr.xml":
-    case "whilele_pp_rr.xml":
-    case "whilelo_pp_rr.xml":
-    case "whilels_pp_rr.xml":
-    case "whilelt_pp_rr.xml":
-    case "whilege_pn_rr.xml":
-    case "whilegt_pn_rr.xml":
-    case "whilehi_pn_rr.xml":
-    case "whilehs_pn_rr.xml":
-    case "whilele_pn_rr.xml":
-    case "whilelo_pn_rr.xml":
-    case "whilels_pn_rr.xml":
-    case "whilelt_pn_rr.xml":
-    case "whilewr_p_rr.xml":
-    case "whilerw_p_rr.xml":
-      return sveWhileCompareOperands(inst);
-    case "irg.xml":
-      return mteInsertRandomTagOperands(inst);
-    case "addg.xml":
-    case "subg.xml":
-      return mteAddSubTagOperands(inst);
-    case "gmi.xml":
-      return mteTagMaskInsertOperands(inst);
-    case "stg.xml":
-    case "stzg.xml":
-    case "st2g.xml":
-    case "stz2g.xml":
-      return mteTagStoreOperands(inst);
-    case "stgp.xml":
-      return mteTagPairStoreOperands(inst);
-    case "cmpp_subps.xml":
-    case "subp.xml":
-    case "subps.xml":
-      return mteSubtractPointerOperands(inst);
-    case "ldg.xml":
-    case "ldgm.xml":
-    case "stgm.xml":
-    case "stzgm.xml":
-      return mteTagLoadOperands(inst);
-    case "add_addsub_imm.xml":
-    case "adds_addsub_imm.xml":
-    case "sub_addsub_imm.xml":
-    case "subs_addsub_imm.xml":
+    }),
+  operandFamily("sve-pmull", ["pmullb_z_zz.xml", "pmullt_z_zz.xml"], svePmullOperands),
+  operandFamily("sve-matrix-multiply", [
+    "fmmla_z_zzz.xml", "bfmmla_z_zzz.xml", "bfmmla_z16_zzz.xml", "smmla_z_zzz.xml",
+    "ummla_z_zzz.xml", "usmmla_z_zzz.xml",
+  ], sveMatrixMultiplyOperands),
+  operandFamily("sve-permutation", ["zip1_z_zz.xml", "uzp1_z_zz.xml", "trn1_z_zz.xml"], svePermutationOperands),
+  operandFamily("sve-table-lookup", ["tbl_z_zz.xml"], sveTableLookupOperands),
+  operandFamily("sve-fp8-luti", ["luti2_z_zz.xml", "luti4_z_zz.xml"], sveFp8LutiOperands),
+  operandFamily("sve-qvector-permute", [
+    "tblq_z_zz.xml", "tbxq_z_zz.xml", "zipq1_z_zz.xml", "zipq2_z_zz.xml",
+    "uzpq1_z_zz.xml", "uzpq2_z_zz.xml",
+  ], sveQVectorPermuteOperands),
+  operandFamily("sve-dupq-indexed", ["dupq_z_zi.xml"], sveDupqIndexedOperands),
+  operandFamily("sve-unary-permutation", ["rev_z_z.xml"], sveUnaryPermutationOperands),
+  operandFamily("sve-compact", ["compact_z_p_z.xml"], sveCompactOperands),
+  operandFamily("sve-fp8-convert", ["f1cvt_z_z8.xml", "bf1cvt_z_z8.xml", "f1cvtlt_z_z8.xml", "bf1cvtlt_z_z8.xml"], sveFp8ConvertOperands),
+  operandFamily("sve-scalar-immediate-prefetch", [
+    "prfb_i_p_bi.xml", "prfb_i_p_ai.xml", "prfb_i_p_bz.xml", "prfd_i_p_bi.xml",
+    "prfd_i_p_ai.xml", "prfd_i_p_bz.xml", "prfh_i_p_bi.xml", "prfh_i_p_ai.xml",
+    "prfh_i_p_bz.xml", "prfw_i_p_bi.xml", "prfw_i_p_ai.xml", "prfw_i_p_bz.xml",
+  ], sveScalarImmediatePrefetchOperands),
+  operandFamily("sve-predicate-memory", ["ldr_p_bi.xml", "ldr_z_bi.xml", "str_p_bi.xml", "str_z_bi.xml"], svePredicateMemoryOperands),
+  operandFamily("sve-inc-dec-scalar", [
+    "cntb_r_s.xml", "incb_r_rs.xml", "decb_r_rs.xml", "sqincb_r_rs.xml",
+    "sqincd_r_rs.xml", "sqinch_r_rs.xml", "sqincw_r_rs.xml", "uqincb_r_rs.xml",
+    "uqincd_r_rs.xml", "uqinch_r_rs.xml", "uqincw_r_rs.xml", "sqdecb_r_rs.xml",
+    "sqdecd_r_rs.xml", "sqdech_r_rs.xml", "sqdecw_r_rs.xml", "uqdecb_r_rs.xml",
+    "uqdecd_r_rs.xml", "uqdech_r_rs.xml", "uqdecw_r_rs.xml",
+  ], sveIncDecScalarOperands),
+  operandFamily("sve-inc-dec-predicate-scalar", [
+    "sqincp_r_p_r.xml", "uqincp_r_p_r.xml", "sqdecp_r_p_r.xml", "uqdecp_r_p_r.xml",
+    "incp_r_p_r.xml", "decp_r_p_r.xml",
+  ], sveIncDecPredicateScalarOperands),
+  operandFamily("sve-count-predicate", ["cntp_r_p_p.xml", "cntp_r_pn.xml"], sveCountPredicateOperands),
+  operandFamily("sve-inc-dec-vector", [
+    "incd_z_zs.xml", "sqincd_z_zs.xml", "sqinch_z_zs.xml", "sqincw_z_zs.xml",
+    "uqincd_z_zs.xml", "uqinch_z_zs.xml", "uqincw_z_zs.xml", "sqdecd_z_zs.xml",
+    "sqdech_z_zs.xml", "sqdecw_z_zs.xml", "uqdecd_z_zs.xml", "uqdech_z_zs.xml",
+    "uqdecw_z_zs.xml",
+  ], sveIncDecVectorOperands),
+  operandFamily("sve-inc-dec-predicate-vector", [
+    "sqincp_z_p_z.xml", "uqincp_z_p_z.xml", "sqdecp_z_p_z.xml", "uqdecp_z_p_z.xml",
+    "incp_z_p_z.xml", "decp_z_p_z.xml",
+  ], sveIncDecPredicateVectorOperands),
+  operandFamily("sve-while-compare", [
+    "whilege_p_p_rr.xml", "whilegt_p_p_rr.xml", "whilehi_p_p_rr.xml", "whilehs_p_p_rr.xml",
+    "whilele_p_p_rr.xml", "whilelo_p_p_rr.xml", "whilels_p_p_rr.xml", "whilelt_p_p_rr.xml",
+    "whilege_pp_rr.xml", "whilegt_pp_rr.xml", "whilehi_pp_rr.xml", "whilehs_pp_rr.xml",
+    "whilele_pp_rr.xml", "whilelo_pp_rr.xml", "whilels_pp_rr.xml", "whilelt_pp_rr.xml",
+    "whilege_pn_rr.xml", "whilegt_pn_rr.xml", "whilehi_pn_rr.xml", "whilehs_pn_rr.xml",
+    "whilele_pn_rr.xml", "whilelo_pn_rr.xml", "whilels_pn_rr.xml", "whilelt_pn_rr.xml",
+    "whilewr_p_rr.xml", "whilerw_p_rr.xml",
+  ], sveWhileCompareOperands),
+  operandFamily("mte-insert-random-tag", ["irg.xml"], mteInsertRandomTagOperands),
+  operandFamily("mte-add-sub-tag", ["addg.xml", "subg.xml"], mteAddSubTagOperands),
+  operandFamily("mte-tag-mask-insert", ["gmi.xml"], mteTagMaskInsertOperands),
+  operandFamily("mte-tag-store", ["stg.xml", "stzg.xml", "st2g.xml", "stz2g.xml"], mteTagStoreOperands),
+  operandFamily("mte-tag-pair-store", ["stgp.xml"], mteTagPairStoreOperands),
+  operandFamily("mte-subtract-pointer", ["cmpp_subps.xml", "subp.xml", "subps.xml"], mteSubtractPointerOperands),
+  operandFamily("mte-tag-load", ["ldg.xml", "ldgm.xml", "stgm.xml", "stzgm.xml"], mteTagLoadOperands),
+  operandFamily("add-sub-immediate", ["add_addsub_imm.xml", "adds_addsub_imm.xml", "sub_addsub_imm.xml", "subs_addsub_imm.xml"], inst => {
+      const encoding = inst.encoding!;
       return addSubImmediateOperands(inst, encoding);
-    case "add_addsub_shift.xml":
-    case "adds_addsub_shift.xml":
-    case "sub_addsub_shift.xml":
-    case "subs_addsub_shift.xml":
-      return addSubShiftedOperands(inst);
-    case "addpt.xml":
-    case "subpt.xml":
-      return checkedPointerAddSubOperands(inst);
-    case "add_addsub_ext.xml":
-    case "adds_addsub_ext.xml":
-    case "sub_addsub_ext.xml":
-    case "subs_addsub_ext.xml":
-    case "cmn_adds_addsub_ext.xml":
-    case "cmp_subs_addsub_ext.xml":
-      return addSubExtendedOperands(inst);
-    case "movz.xml":
-    case "movn.xml":
-    case "movk.xml":
-      return moveWideOperands(inst);
-    case "adr.xml":
+    }),
+  operandFamily("add-sub-shifted", ["add_addsub_shift.xml", "adds_addsub_shift.xml", "sub_addsub_shift.xml", "subs_addsub_shift.xml"], addSubShiftedOperands),
+  operandFamily("checked-pointer-add-sub", ["addpt.xml", "subpt.xml"], checkedPointerAddSubOperands),
+  operandFamily("add-sub-extended", [
+    "add_addsub_ext.xml", "adds_addsub_ext.xml", "sub_addsub_ext.xml", "subs_addsub_ext.xml",
+    "cmn_adds_addsub_ext.xml", "cmp_subs_addsub_ext.xml",
+  ], addSubExtendedOperands),
+  operandFamily("move-wide", ["movz.xml", "movn.xml", "movk.xml"], moveWideOperands),
+  operandFamily("adr", ["adr.xml"], inst => {
       return adrOperands(inst, false);
-    case "adrp.xml":
+    }),
+  operandFamily("adr-adrp", ["adrp.xml"], inst => {
       return adrOperands(inst, true);
-    case "b_uncond.xml":
-    case "bl.xml":
+    }),
+  operandFamily("branch-offset-operand", ["b_uncond.xml", "bl.xml"], inst => {
       return branchOffsetOperand(inst, "imm26");
-    case "b_cond.xml":
-      return bCondOperands(inst);
-    case "cbz.xml":
-    case "cbnz.xml":
-      return cbzOperands(inst);
-    case "tbz.xml":
-    case "tbnz.xml":
-      return tbzOperands(inst);
-    case "br.xml":
-    case "blr.xml":
-      return registerBranchOperands(inst);
-    case "ret.xml":
+    }),
+  operandFamily("b-cond", ["b_cond.xml"], bCondOperands),
+  operandFamily("cbz", ["cbz.xml", "cbnz.xml"], cbzOperands),
+  operandFamily("tbz", ["tbz.xml", "tbnz.xml"], tbzOperands),
+  operandFamily("register-branch", ["br.xml", "blr.xml"], registerBranchOperands),
+  operandFamily("register-branch-ret", ["ret.xml"], inst => {
       return registerBranchOperands(inst, true);
-    case "bra.xml":
-    case "blra.xml":
-      return authBranchOperands(inst);
-    case "ldra.xml":
-      return authLoadRegisterOperands(inst);
-    case "reta.xml":
-    case "ereta.xml":
-    case "autia171615.xml":
-    case "autib171615.xml":
-    case "pacia171615.xml":
-    case "pacib171615.xml":
-    case "autiasppcr.xml":
-    case "autibsppcr.xml":
-    case "paciasppc.xml":
-    case "pacibsppc.xml":
-    case "retasppcr_reg.xml":
-      return noOperands();
-    case "autiasppc_imm.xml":
-    case "autibsppc_imm.xml":
-    case "retasppc_imm.xml":
-      return labelFromImm16Negative(inst);
-    case "autia.xml":
-    case "autib.xml":
-    case "pacia.xml":
-    case "pacib.xml":
-    case "autda.xml":
-    case "autdb.xml":
-    case "pacda.xml":
-    case "pacdb.xml":
+    }),
+  operandFamily("auth-branch", ["bra.xml", "blra.xml"], authBranchOperands),
+  operandFamily("auth-load-register", ["ldra.xml"], authLoadRegisterOperands),
+  operandFamily("label-from-imm16-negative", ["autiasppc_imm.xml", "autibsppc_imm.xml", "retasppc_imm.xml"], labelFromImm16Negative),
+  operandFamily("auth-generic", [
+    "autia.xml", "autib.xml", "pacia.xml", "pacib.xml",
+    "autda.xml", "autdb.xml", "pacda.xml", "pacdb.xml",
+  ], inst => {
+      const encoding = inst.encoding!;
       return authGenericOperands(inst, encoding.mnemonic);
-    case "pacga.xml":
-      return authGenericThreeSourceOperands(inst);
-    case "fjcvtzs.xml":
-      return fjcvtzsOperands(inst);
-    case "tsb.xml":
+    }),
+  operandFamily("auth-generic-three-source", ["pacga.xml"], authGenericThreeSourceOperands),
+  operandFamily("fjcvtzs", ["fjcvtzs.xml"], fjcvtzsOperands),
+  operandFamily("tsb", ["tsb.xml"], inst => {
       return [{ kind: "text", text: "csync" }];
-    case "wfet.xml":
-    case "wfit.xml":
-      return wfxtOperands(inst);
-    case "udf_perm_undef.xml":
-      return udfOperands(inst);
-    case "xpac.xml":
+    }),
+  operandFamily("wfxt", ["wfet.xml", "wfit.xml"], wfxtOperands),
+  operandFamily("udf", ["udf_perm_undef.xml"], udfOperands),
+  operandFamily("xpac", ["xpac.xml"], inst => {
+      const encoding = inst.encoding!;
       if (encoding.mnemonic === "XPACLRI") {
         return noOperands();
       }
-      return [gpReg(64, inst.fields.Rd, "zr")];
-    case "rprfm_reg.xml":
-      return rprfmOperands(inst);
-    default:
-      throw new OperandDecodeError("unsupported", `unsupported operand family: ${encoding.fileName}`, encoding.fileName);
-  }
+      return [gpReg(64, inst.fields!.Rd, "zr")];
+    }),
+  operandFamily("rprfm", ["rprfm_reg.xml"], rprfmOperands),
+]);
+
+export function getOperandFamilyId(fileName: string): string | undefined {
+  return OPERAND_FAMILIES.familyIdForFile(fileName);
 }
 
+export function listOperandFamilies(): readonly OperandFamilyInfo[] {
+  return OPERAND_FAMILIES.list();
+}
+
+function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
+  return OPERAND_FAMILIES.dispatch(inst);
+}
 export function resolvePcRelativeOperands(operands: Operand[], pc: bigint | undefined): Operand[] {
   if (pc === undefined) {
     return operands;

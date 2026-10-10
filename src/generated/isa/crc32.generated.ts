@@ -100,7 +100,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "crc32"
   },
   {
     "instructionId": "CRC32",
@@ -201,7 +202,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "crc32"
   },
   {
     "instructionId": "CRC32",
@@ -302,7 +304,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "crc32"
   },
   {
     "instructionId": "CRC32",
@@ -403,6 +406,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
         ],
         "outcome": "undefined"
       }
-    ]
+    ],
+    "operandFamilyId": "crc32"
   }
 ];

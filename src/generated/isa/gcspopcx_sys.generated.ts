@@ -48,6 +48,7 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "featureGuards": [],
     "guards": [],
     "canonicalEncodingId": "SYS_CR_systeminstrs",
-    "canonicalFileName": "sys.xml"
+    "canonicalFileName": "sys.xml",
+    "operandFamilyId": "no-operands"
   }
 ];
