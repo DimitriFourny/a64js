@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famax_mz_zzw.xml",
     "mnemonic": "FAMAX",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "famin_mz_zzw.xml",
     "mnemonic": "FAMIN",
     "features": [
-      "FEAT_SME2 && FEAT_FAMINMAX",
       "FEAT_SME2",
       "FEAT_FAMINMAX"
     ]

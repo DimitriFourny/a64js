@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { decode, disasm, disasmBlock } from "../src/index.ts";
+import { createDecoder, decode, disasm, disasmBlock, format } from "../src/index.ts";
 
 test("instruction inputs reject truncation and normalize signed bitwise words", () => {
   for (const word of [NaN, Infinity, 1.5, 0x1_0000_0000, -0x8000_0001]) {
@@ -25,10 +25,20 @@ test("block feature iterators apply to every instruction", () => {
 });
 
 test("addresses preserve bigint precision and use the supplied options PC", () => {
+  assert.throws(() => format(decode(0x10000020), { pc: Number.MAX_SAFE_INTEGER + 1 }), /safe integers/);
   assert.throws(() => disasm(0x10000020, Number.MAX_SAFE_INTEGER + 1), /safe integers/);
   assert.throws(() => disasmBlock(new Uint8Array(), 1.5), /safe integers/);
   assert.equal(disasm(0x10000020, undefined, { pc: 0x1000n }), "adr x0, 0x1004");
   assert.equal(disasm(0x10000020, 0x2000n, { pc: 0x1000n }), "adr x0, 0x2004");
+});
+
+test("a prepared decoder snapshots target features without consuming them per instruction", () => {
+  const features = new Set(["FEAT_PAuth"]);
+  const decodeWord = createDecoder({ features });
+  features.clear();
+  assert.equal(decodeWord(0xd503233f).behavior, "instruction");
+  assert.equal(decodeWord(0xd503233f).behavior, "instruction");
+  assert.throws(() => decodeWord(0.5), RangeError);
 });
 
 test("shifted arithmetic immediates are shifted exactly once", () => {

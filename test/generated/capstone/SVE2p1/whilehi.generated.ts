@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -320,7 +296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -333,7 +308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -346,7 +320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -359,7 +332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -372,7 +344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -385,7 +356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -398,7 +368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -411,7 +380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -424,7 +392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -437,7 +404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -450,7 +416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -463,7 +428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -476,7 +440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -489,7 +452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -502,7 +464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -515,7 +476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -528,7 +488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -541,7 +500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -554,7 +512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -567,7 +524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -580,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -593,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -606,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -619,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -632,7 +584,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -645,7 +596,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -658,7 +608,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -671,7 +620,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -684,7 +632,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -697,7 +644,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -710,7 +656,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -723,7 +668,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -736,7 +680,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -749,7 +692,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -762,7 +704,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -775,7 +716,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pn_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -788,7 +728,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -801,7 +740,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -814,7 +752,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -827,7 +764,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "whilehi_pp_rr.xml",
     "mnemonic": "WHILEHI",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]

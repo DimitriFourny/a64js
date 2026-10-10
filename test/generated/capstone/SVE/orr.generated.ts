@@ -8,7 +8,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -19,7 +19,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -30,7 +30,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -41,7 +41,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -52,7 +52,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -63,7 +63,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -74,7 +74,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -85,7 +85,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -96,7 +96,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -107,7 +107,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -118,7 +118,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -131,7 +130,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -144,7 +142,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -157,7 +154,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -170,7 +166,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -181,7 +177,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -192,7 +188,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -203,7 +199,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -214,7 +210,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -225,7 +221,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -236,7 +232,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -247,7 +243,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -258,7 +254,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -269,7 +265,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_p_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -282,7 +277,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -295,7 +289,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -308,7 +301,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -321,7 +313,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -334,7 +325,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -345,7 +336,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -356,7 +347,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -367,7 +358,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -378,7 +369,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -389,7 +380,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -400,7 +391,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -411,7 +402,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -422,7 +413,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -433,7 +424,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -444,7 +435,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -455,7 +446,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -468,7 +458,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -481,7 +470,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -494,7 +482,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -507,7 +494,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -518,7 +505,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -529,7 +516,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -540,7 +527,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -551,7 +538,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -562,7 +549,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -573,7 +560,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -584,7 +571,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -595,7 +582,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_z_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -606,7 +593,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_p_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -619,7 +605,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -632,7 +617,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -645,7 +629,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orr_z_p_zz.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -658,7 +641,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -671,7 +653,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "orn_orr_z_zi.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   }
 ];

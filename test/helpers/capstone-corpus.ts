@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
+import { resolveCapstoneFeatures } from "./capstone-features.ts";
 
 export type CapstoneReferenceCase = {
   sourceFile: string;
@@ -30,6 +31,10 @@ export function loadCapstoneModulePaths(): string[] {
   const manifest = JSON.parse(readFileSync(new URL("manifest.json", REFERENCE_ROOT), "utf8")) as Manifest;
   if (new Set(manifest.modulePaths).size !== manifest.moduleCount) {
     throw new Error("Capstone reference module count mismatch");
+  }
+  if (manifest.modulePaths.some((path) => !/^(?:[\w.-]+\/)*[\w.-]+\.generated\.ts$/.test(path) ||
+      path === "index.generated.ts" || path.split("/").some((part) => part === "." || part === ".."))) {
+    throw new Error("Invalid Capstone reference module path");
   }
   return [...manifest.modulePaths];
 }
@@ -68,10 +73,11 @@ export function loadCapstoneReference(): ClassifiedCapstoneCase[] {
     if (!Number.isInteger(word) || word < 0 || word > 0xffff_ffff || !asmText.trim()) {
       throw new Error(`Invalid Capstone reference row: ${identity}`);
     }
-    if (!/^(?:[\w.-]+\/)*[\w.-]+\.generated\.ts$/.test(modulePath) || modulePath === "index.generated.ts") {
+    if (!/^(?:[\w.-]+\/)*[\w.-]+\.generated\.ts$/.test(modulePath) || modulePath === "index.generated.ts" ||
+        modulePath.split("/").some((part) => part === "." || part === "..")) {
       throw new Error(`Invalid Capstone output module: ${modulePath}`);
     }
-    return { sourceFile, caseIndex, word, asmText, modulePath, encodingFile, mnemonic, features };
+    return { sourceFile, caseIndex, word, asmText, modulePath, encodingFile, mnemonic, features: resolveCapstoneFeatures(features) };
   });
   const modules = new Set(loadCapstoneModulePaths());
   if (cases.some((item) => !modules.has(item.modulePath))) {

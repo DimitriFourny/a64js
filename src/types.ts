@@ -87,6 +87,7 @@ export type GeneratedEncoding = {
   className: string;
   fileName: string;
   operandSchemaId?: string;
+  operandFamilyId?: string;
   canonicalEncodingId?: string;
   canonicalFileName?: string;
   guardDiagnostics?: string[];

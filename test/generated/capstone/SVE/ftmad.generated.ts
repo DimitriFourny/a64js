@@ -41,7 +41,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]

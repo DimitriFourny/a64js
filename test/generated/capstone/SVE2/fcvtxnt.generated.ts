@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fcvtxnt_z_p_z.xml",
     "mnemonic": "FCVTXNT",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fcvtxnt_z_p_z.xml",
     "mnemonic": "FCVTXNT",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fcvtxnt_z_p_z.xml",
     "mnemonic": "FCVTXNT",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fcvtxnt_z_p_z.xml",
     "mnemonic": "FCVTXNT",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]

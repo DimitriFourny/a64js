@@ -1,4 +1,4 @@
-import { decode } from "./decode.ts";
+import { createDecoder, decode } from "./decode.ts";
 import { format } from "./format.ts";
 import { addressToBigInt } from "./input.ts";
 import type { BlockOptions, DecodedLine, DecodeOptions, FormatOptions } from "./types.ts";
@@ -22,7 +22,7 @@ export function disasmBlock(
     throw new RangeError("instruction block length must be a multiple of four bytes");
   }
   // Iterables may be single-use generators: consume them once for the whole block.
-  const blockOptions = { ...options, features: [...(options.features ?? [])] };
+  const decodeWord = createDecoder(options);
 
   for (let offset = 0; offset + 3 < bytes.length; offset += 4) {
     const word =
@@ -31,7 +31,7 @@ export function disasmBlock(
       (bytes[offset + 2] << 16) |
       (bytes[offset + 3] << 24);
     const address = base + BigInt(offset);
-    const decoded = decode(word >>> 0, blockOptions);
+    const decoded = decodeWord(word >>> 0);
     lines.push({
       address,
       word: word >>> 0,
@@ -43,4 +43,4 @@ export function disasmBlock(
   return lines;
 }
 
-export { decode, format };
+export { createDecoder, decode, format };

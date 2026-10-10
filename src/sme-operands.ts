@@ -1,5 +1,5 @@
 import { OperandDecodeError } from "./operand-errors.ts";
-import { vectorGroup } from "./operand-schemas.ts";
+import { operandField, operandFieldOneOf, vectorGroup } from "./operand-schemas.ts";
 import type { ZaOperand } from "./operand-types.ts";
 import type { DecodedInstruction, Operand, VectorRegisterOperand } from "./types.ts";
 
@@ -42,7 +42,6 @@ function smeDotSourceLane(inst: DecodedInstruction, accLane: "h" | "s" | "d"): "
     : "b";
 }
 
-
 function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
   const encoding = inst.encoding!;
   if (encoding.mnemonic.startsWith("BF") || encoding.className.includes("half-precision") || encoding.encodingId.endsWith("_16")) return "h";
@@ -51,31 +50,21 @@ function smeAccumulatorLane(inst: DecodedInstruction): "s" | "h" | "d" {
   return inst.fields?.sz === 1 ? "d" : "s";
 }
 
-
-
-function smeVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" | "d" | "q"): string {
-  const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
-  if (count === 4 && start <= 28) {
-    return `{ ${regs[0]} - ${regs[3]} }`;
-  }
-  return `{ ${regs.join(", ")} }`;
-}
-
 function smeMultiVectorArithmeticLane(inst: DecodedInstruction): "b" | "h" | "s" | "d" {
   if (inst.encoding!.mnemonic.startsWith("BF")) {
     return "h";
   }
-  return sveVectorLaneFromSize(inst.fields?.size);
+  return sveVectorLaneFromSize(operandField(inst, "size"));
 }
 
 export function smeMultiVectorArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const count = smeDotGroupCount(inst.encoding!.className);
   const lane = smeMultiVectorArithmeticLane(inst);
-  const group = vectorGroup((fields.Zdn ?? 0) * count, count, lane) satisfies Operand;
+  const group = vectorGroup((operandField(inst, "Zdn")) * count, count, lane) satisfies Operand;
   const second: Operand = inst.encoding!.fileName.endsWith("_zzw.xml")
-    ? vectorGroup((fields.Zm ?? 0) * count, count, lane)
-    : vecReg(fields.Zm ?? 0, lane);
+    ? vectorGroup((operandField(inst, "Zm")) * count, count, lane)
+    : vecReg(operandField(inst, "Zm"), lane);
   return [group, group, second];
 }
 
@@ -84,9 +73,9 @@ export function smeMultiVectorClampOperands(inst: DecodedInstruction): Operand[]
   const count = smeDotGroupCount(inst.encoding!.className);
   const lane = inst.encoding!.mnemonic.startsWith("BF") ? "h" : sveVectorLaneFromSize(fields.size);
   return [
-    vectorGroup((fields.Zd ?? 0) * count, count, lane),
-    vecReg(fields.Zn ?? 0, lane),
-    vecReg(fields.Zm ?? 0, lane),
+    vectorGroup((operandField(inst, "Zd")) * count, count, lane),
+    vecReg(operandField(inst, "Zn"), lane),
+    vecReg(operandField(inst, "Zm"), lane),
   ];
 }
 
@@ -94,42 +83,33 @@ export function smeIntFloatConvertOperands(inst: DecodedInstruction): Operand[] 
   const fields = inst.fields!;
   const count = smeDotGroupCount(inst.encoding!.className);
   return [
-    vectorGroup((fields.Zd ?? 0) * count, count, "s"),
-    vectorGroup((fields.Zn ?? 0) * count, count, "s"),
+    vectorGroup((operandField(inst, "Zd")) * count, count, "s"),
+    vectorGroup((operandField(inst, "Zn")) * count, count, "s"),
   ];
 }
 
-function smeLutiVectorGroupText(inst: DecodedInstruction, count: 1 | 2 | 4, lane: "b" | "h" | "s" | "d"): string {
-  const fields = inst.fields!;
-  if (count === 1) {
-    return `z${fields.Zd ?? 0}.${lane}`;
-  }
-
-  const encodingId = inst.encoding!.encodingId;
-  if (encodingId.endsWith("_1")) {
-    return smeVectorGroupText((fields.Zd ?? 0) * count, count, lane);
-  }
-
-  const start = ((fields.D ?? 0) << 4) | (fields.Zd ?? 0);
+function smeLutiVectorGroupOperand(inst: DecodedInstruction, count: 1 | 2 | 4, lane: "b" | "h" | "s" | "d"): Operand {
+  if (count === 1) return vecReg(operandField(inst, "Zd"), lane);
+  if (inst.encoding!.encodingId.endsWith("_1")) return vectorGroup(operandField(inst, "Zd") * count, count, lane);
+  const start = (operandField(inst, "D") << 4) | operandField(inst, "Zd");
   const stride = count === 2 ? 8 : 4;
-  const regs = Array.from({ length: count }, (_, index) => `z${start + stride * index}.${lane}`);
-  return `{ ${regs.join(", ")} }`;
+  return { kind: "vector-group", style: "list", registers: Array.from({ length: count }, (_, index) => vecReg(start + stride * index, lane)) };
 }
 
 function smeLutiIndex(inst: DecodedInstruction): number {
   const fields = inst.fields!;
   switch (inst.encoding!.fileName) {
     case "luti2_z_ztz.xml":
-      return fields.i4 ?? 0;
+      return operandField(inst, "i4");
     case "luti2_mz2_ztz.xml":
-      return fields.i3 ?? 0;
+      return operandField(inst, "i3");
     case "luti4_z_ztz.xml":
-      return fields.i3 ?? 0;
+      return operandField(inst, "i3");
     case "luti2_mz4_ztz.xml":
     case "luti4_mz2_ztz.xml":
-      return fields.i2 ?? 0;
+      return operandField(inst, "i2");
     case "luti4_mz4_ztz.xml":
-      return fields.i1 ?? 0;
+      return operandField(inst, "i1");
     default:
       return 0;
   }
@@ -139,33 +119,45 @@ export function smeLutiOperands(inst: DecodedInstruction, count: 1 | 2 | 4): Ope
   const fields = inst.fields!;
   const lane = sveVectorLaneFromSize(fields.size);
   return [
-    { kind: "text", text: smeLutiVectorGroupText(inst, count, lane) },
+    smeLutiVectorGroupOperand(inst, count, lane),
     { kind: "text", text: "zt0" },
-    { kind: "text", text: `z${fields.Zn ?? 0}[${smeLutiIndex(inst)}]` },
+    { kind: "vec", index: operandField(inst, "Zn"), laneIndex: smeLutiIndex(inst) },
   ];
 }
 
 export function smeFp8LutiMixedOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  const sourceStart = (fields.Zn ?? 0) * 2;
+  const sourceStart = (operandField(inst, "Zn")) * 2;
   return [
-    { kind: "text", text: smeLutiVectorGroupText(inst, 4, "b") },
+    smeLutiVectorGroupOperand(inst, 4, "b"),
     { kind: "text", text: "zt0" },
-    { kind: "text", text: `{ z${sourceStart}, z${(sourceStart + 1) & 31} }` },
+    { kind: "vector-group", style: "list", registers: [vecReg(sourceStart), vecReg((sourceStart + 1) & 31)] },
   ];
 }
 
 export function smeIndexedSourceOperand(inst: DecodedInstruction, lane: "b" | "s" | "h" | "d"): VectorRegisterOperand {
   const fields = inst.fields!;
   const widthByName = new Map(inst.encoding!.fields.map((field) => [field.name, field.width] as const));
-  let index = fields.i4 ?? fields.i3 ?? (fields.i1 === undefined ? fields.i2 ?? 0 : ((fields.i2 ?? 0) << 1) | fields.i1);
-  for (const bits of [4, 3, 2]) {
-    const high = fields[`i${bits}h`];
-    const low = fields[`i${bits}l`];
-    if (high !== undefined || low !== undefined) index = ((high ?? 0) << (widthByName.get(`i${bits}l`) ?? 0)) | (low ?? 0);
+  let index: number | undefined;
+  if (widthByName.has("i4A")) {
+    index = (operandField(inst, "i4A") << 3) | (operandField(inst, "i4B") << 1) | operandField(inst, "i4C");
+  } else {
+    for (const bits of [4, 3, 2]) {
+      const highName = `i${bits}h`;
+      const lowName = `i${bits}l`;
+      if (widthByName.has(highName) || widthByName.has(lowName)) {
+        const high = widthByName.has(highName) ? operandField(inst, highName) : 0;
+        const low = widthByName.has(lowName) ? operandField(inst, lowName) : 0;
+        index = (high << (widthByName.get(lowName) ?? 0)) | low;
+        break;
+      }
+    }
+    if (index === undefined) {
+      index = operandFieldOneOf(inst, ["i4", "i3", "i2", "i1"]);
+      if (widthByName.has("i2") && widthByName.has("i1")) index = (operandField(inst, "i2") << 1) | operandField(inst, "i1");
+    }
   }
-  if (fields.i4A !== undefined) index = (fields.i4A << 3) | (fields.i4B << 1) | fields.i4C;
-  return { kind: "vec", index: fields.Zm ?? 0, lane, laneIndex: index };
+  return { kind: "vec", index: operandField(inst, "Zm"), lane, laneIndex: index };
 }
 
 export function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" | "h" | "d"): string {
@@ -173,12 +165,12 @@ export function smeIndexedSourceText(inst: DecodedInstruction, lane: "b" | "s" |
   return `z${operand.index}.${operand.lane}[${operand.laneIndex}]`;
 }
 
-function smeFp8LongArithmeticZaText(inst: DecodedInstruction): ZaOperand {
+function smeFp8LongArithmeticZaOperand(inst: DecodedInstruction): ZaOperand {
   const fields = inst.fields!;
   const isHalf = inst.encoding!.fileName.startsWith("fmlal_za_z8z8");
-  const start = isHalf ? 2 * (fields.off3 ?? fields.off2 ?? 0) : 4 * (fields.off2 ?? 0);
+  const start = isHalf ? 2 * (operandFieldOneOf(inst, ["off3", "off2"])) : 4 * (operandFieldOneOf(inst, ["off2", "o1"]));
   const count = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  return { kind: "za", lane: isHalf ? "h" : "s", slice: { selector: 8 + (fields.Rv ?? 0), offset: start,
+  return { kind: "za", lane: isHalf ? "h" : "s", slice: { selector: 8 + (operandField(inst, "Rv")), offset: start,
     end: start + (isHalf ? 1 : 3), group: count === 1 ? undefined : count } };
 }
 
@@ -190,12 +182,11 @@ function smeLongArithmeticSourceLane(accLane: "s" | "d"): "b" | "h" {
   return accLane === "d" ? "h" : "b";
 }
 
-
-function smeFloatLongArithmeticZaText(inst: DecodedInstruction): ZaOperand {
+function smeFloatLongArithmeticZaOperand(inst: DecodedInstruction): ZaOperand {
   const fields = inst.fields!;
-  const start = 2 * (fields.off3 ?? fields.off2 ?? 0);
+  const start = 2 * (operandFieldOneOf(inst, ["off3", "off2"]));
   const count = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  return { kind: "za", lane: "s", slice: { selector: 8 + (fields.Rv ?? 0), offset: start,
+  return { kind: "za", lane: "s", slice: { selector: 8 + (operandField(inst, "Rv")), offset: start,
     end: start + 1, group: count === 1 ? undefined : count } };
 }
 
@@ -203,11 +194,11 @@ function smeFloatLongArithmeticSourceLane(): "h" {
   return "h";
 }
 
-function smeLongArithmeticZaText(inst: DecodedInstruction, lane: "s" | "d"): ZaOperand {
+function smeLongArithmeticZaOperand(inst: DecodedInstruction, lane: "s" | "d"): ZaOperand {
   const fields = inst.fields!;
-  const start = 4 * (fields.off2 ?? fields.o1 ?? 0);
+  const start = 4 * (operandFieldOneOf(inst, ["off2", "o1"]));
   const count = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  return { kind: "za", lane, slice: { selector: 8 + (fields.Rv ?? 0), offset: start,
+  return { kind: "za", lane, slice: { selector: 8 + (operandField(inst, "Rv")), offset: start,
     end: start + 3, group: count === 1 ? undefined : count } };
 }
 
@@ -244,19 +235,19 @@ function smeLongArithmeticGroupSize(encodingId: string): 1 | 2 | 4 {
 function smeGroupStart(inst: DecodedInstruction, fieldName: "Zn" | "Zm"): number {
   const field = inst.encoding!.fields.find((field) => field.name === fieldName);
   if (!field) throw new OperandDecodeError("invalid", `missing vector group field: ${fieldName}`, inst.encoding!.fileName);
-  return (inst.fields![fieldName] ?? 0) << (5 - field.width);
+  return operandField(inst, fieldName) << (5 - field.width);
 }
 
 function smeLongArithmeticSecondSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
   const encodingId = inst.encoding!.encodingId;
   if (/_zzi_|_z8z8i_/.test(encodingId)) return smeIndexedSourceOperand(inst, lane);
-  if (!/_zzw_|_z8z8w_/.test(encodingId)) return vecReg(inst.fields!.Zm ?? 0, lane);
+  if (!/_zzw_|_z8z8w_/.test(encodingId)) return vecReg(operandField(inst, "Zm"), lane);
   return vectorGroup(smeGroupStart(inst, "Zm"), smeLongArithmeticGroupSize(encodingId), lane);
 }
 
 function smeLongArithmeticFirstSource(inst: DecodedInstruction, lane: "b" | "h"): Operand {
   const groupSize = smeLongArithmeticGroupSize(inst.encoding!.encodingId);
-  return groupSize === 1 ? vecReg(inst.fields!.Zn ?? 0, lane) : vectorGroup(smeGroupStart(inst, "Zn"), groupSize, lane);
+  return groupSize === 1 ? vecReg(operandField(inst, "Zn"), lane) : vectorGroup(smeGroupStart(inst, "Zn"), groupSize, lane);
 }
 
 export function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
@@ -264,7 +255,7 @@ export function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const lane = smeLongArithmeticLane(inst);
   const srcLane = smeInt16LongArithmeticFiles(inst.encoding!.fileName) ? "h" : smeLongArithmeticSourceLane(lane);
   const za = smeInt16LongArithmeticFiles(inst.encoding!.fileName)
-    ? smeFloatLongArithmeticZaText(inst) : smeLongArithmeticZaText(inst, lane);
+    ? smeFloatLongArithmeticZaOperand(inst) : smeLongArithmeticZaOperand(inst, lane);
   const first = smeLongArithmeticFirstSource(inst, srcLane);
   const second = smeLongArithmeticSecondSource(inst, srcLane);
 
@@ -273,7 +264,7 @@ export function smeLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
 
 export function smeFloatLongArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const srcLane = smeFloatLongArithmeticSourceLane();
-  const za = smeFloatLongArithmeticZaText(inst);
+  const za = smeFloatLongArithmeticZaOperand(inst);
   const first = smeLongArithmeticFirstSource(inst, srcLane);
   const second = smeLongArithmeticSecondSource(inst, srcLane);
 
@@ -281,7 +272,7 @@ export function smeFloatLongArithmeticOperands(inst: DecodedInstruction): Operan
 }
 
 export function smeFp8LongArithmeticOperands(inst: DecodedInstruction): Operand[] {
-  const za = smeFp8LongArithmeticZaText(inst);
+  const za = smeFp8LongArithmeticZaOperand(inst);
   const first = smeLongArithmeticFirstSource(inst, "b");
   const second = smeLongArithmeticSecondSource(inst, "b");
 
@@ -294,16 +285,16 @@ export function smeArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const lane = inst.encoding!.fileName.includes("_mz_")
     ? smeMultiVectorArithmeticLane(inst) : smeAccumulatorLane(inst);
   if (inst.encoding!.fileName.includes("_mz_")) {
-    const group = vectorGroup((fields.Zdn ?? 0) * count, count, lane);
+    const group = vectorGroup((operandField(inst, "Zdn")) * count, count, lane);
     return [group, group, inst.encoding!.fileName.endsWith("_zzw.xml")
-      ? vectorGroup(smeGroupStart(inst, "Zm"), count, lane) : vecReg(fields.Zm ?? 0, lane)];
+      ? vectorGroup(smeGroupStart(inst, "Zm"), count, lane) : vecReg(operandField(inst, "Zm"), lane)];
   }
-  const za: Operand = { kind: "za", lane, slice: { selector: 8 + (fields.Rv ?? 0), offset: fields.off3 ?? 0, group: count } };
+  const za: Operand = { kind: "za", lane, slice: { selector: 8 + (operandField(inst, "Rv")), offset: operandField(inst, "off3"), group: count } };
   if (inst.encoding!.fileName.endsWith("_zw.xml")) return [za, vectorGroup(smeGroupStart(inst, "Zm"), count, lane)];
   const first = vectorGroup(smeGroupStart(inst, "Zn"), count, lane);
   if (inst.encoding!.fileName.endsWith("_zzi.xml")) return [za, first, smeIndexedSourceOperand(inst, lane)];
   return [za, first, inst.encoding!.fileName.endsWith("_zzw.xml")
-    ? vectorGroup(smeGroupStart(inst, "Zm"), count, lane) : vecReg(fields.Zm ?? 0, lane)];
+    ? vectorGroup(smeGroupStart(inst, "Zm"), count, lane) : vecReg(operandField(inst, "Zm"), lane)];
 }
 
 export function smeDotOperands(inst: DecodedInstruction): Operand[] {
@@ -320,10 +311,10 @@ export function smeDotOperands(inst: DecodedInstruction): Operand[] {
       : count;
   const accLane = smeDotAccumulatorLane(inst);
   const srcLane = smeDotSourceLane(inst, accLane);
-  const za: Operand = { kind: "za", lane: accLane, slice: { selector: 8 + (fields.Rv ?? 0), offset: fields.off3 ?? 0, group: count } };
+  const za: Operand = { kind: "za", lane: accLane, slice: { selector: 8 + (operandField(inst, "Rv")), offset: operandField(inst, "off3"), group: count } };
   const first = vectorGroup(smeGroupStart(inst, "Zn"), firstCount, srcLane);
 
   if (/(?:_zzi|_z8z8i)\.xml$/.test(inst.encoding!.fileName)) return [za, first, smeIndexedSourceOperand(inst, srcLane)];
   return [za, first, /(?:_zzw|_z8z8w)\.xml$/.test(inst.encoding!.fileName)
-    ? vectorGroup(smeGroupStart(inst, "Zm"), count, srcLane) : vecReg(fields.Zm ?? 0, srcLane)];
+    ? vectorGroup(smeGroupStart(inst, "Zm"), count, srcLane) : vecReg(operandField(inst, "Zm"), srcLane)];
 }

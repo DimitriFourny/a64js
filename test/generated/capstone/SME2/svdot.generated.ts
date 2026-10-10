@@ -536,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -549,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -562,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -575,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -588,7 +584,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -601,7 +596,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -614,7 +608,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -627,7 +620,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -640,7 +632,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -653,7 +644,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -666,7 +656,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -679,7 +668,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -692,7 +680,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -705,7 +692,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -718,7 +704,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -731,7 +716,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -744,7 +728,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -757,7 +740,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -770,7 +752,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -783,7 +764,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -796,7 +776,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -809,7 +788,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -822,7 +800,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -835,7 +812,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "svdot_za_zzi.xml",
     "mnemonic": "SVDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]

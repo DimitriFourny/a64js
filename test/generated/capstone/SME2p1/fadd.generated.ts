@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -320,7 +296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -333,7 +308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -346,7 +320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -359,7 +332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -372,7 +344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -385,7 +356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -398,7 +368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -411,7 +380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -424,7 +392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -437,7 +404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -450,7 +416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -463,7 +428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -476,7 +440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -489,7 +452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -502,7 +464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -515,7 +476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -528,7 +488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -541,7 +500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -554,7 +512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -567,7 +524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -580,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -593,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -606,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]
@@ -619,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_za_zw.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_SME_F16F16 || FEAT_SME_F8F16",
       "FEAT_SME_F16F16",
       "FEAT_SME_F8F16"
     ]

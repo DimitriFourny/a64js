@@ -8,7 +8,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8i.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -19,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -32,7 +32,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8i.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -43,7 +44,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8i.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -54,7 +56,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -65,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -78,7 +80,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -89,7 +92,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalb_z_z8z8z8.xml",
     "mnemonic": "FMLALB",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -100,7 +104,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8i.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -111,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -124,7 +128,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8i.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -135,7 +140,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8i.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -146,7 +152,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -157,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -170,7 +176,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   },
   {
@@ -181,7 +188,8 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmlalt_z_z8z8z8.xml",
     "mnemonic": "FMLALT",
     "features": [
-      "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
+      "FEAT_SVE2",
+      "FEAT_FP8FMA"
     ]
   }
 ];

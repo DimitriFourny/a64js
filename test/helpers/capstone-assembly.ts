@@ -39,8 +39,14 @@ function parseInteger(text: string): bigint | undefined {
 function canonicalNumber(text: string): string {
   const integer = parseInteger(text);
   if (integer !== undefined) return integer.toString();
-  // Decimal floating immediates in these fixtures are exact short decimal literals.
-  if (/^[+-]?\d+\.\d+$/.test(text)) return String(Number(text));
+  // Normalize decimal spelling exactly; Number rounding could conceal a wrong literal.
+  const decimal = /^([+-]?)(\d+)\.(\d+)$/.exec(text);
+  if (decimal) {
+    const integerPart = BigInt(decimal[2]).toString();
+    const fractionalPart = decimal[3].replace(/0+$/, "");
+    const sign = decimal[1] === "-" && (integerPart !== "0" || fractionalPart) ? "-" : "";
+    return `${sign}${integerPart}${fractionalPart ? `.${fractionalPart}` : ""}`;
+  }
   return text;
 }
 

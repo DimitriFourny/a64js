@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fexpa_z_z.xml",
     "mnemonic": "FEXPA",
     "features": [
-      "FEAT_SVE || FEAT_SSVE_FEXPA",
       "FEAT_SVE",
       "FEAT_SSVE_FEXPA"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fexpa_z_z.xml",
     "mnemonic": "FEXPA",
     "features": [
-      "FEAT_SVE || FEAT_SSVE_FEXPA",
       "FEAT_SVE",
       "FEAT_SSVE_FEXPA"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fexpa_z_z.xml",
     "mnemonic": "FEXPA",
     "features": [
-      "FEAT_SVE || FEAT_SSVE_FEXPA",
       "FEAT_SVE",
       "FEAT_SSVE_FEXPA"
     ]

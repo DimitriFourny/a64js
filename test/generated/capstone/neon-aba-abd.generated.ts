@@ -272,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fabd_advsimd.xml",
     "mnemonic": "FABD",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

@@ -296,7 +296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -309,7 +308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -322,7 +320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -335,7 +332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -348,7 +344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -361,7 +356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -374,7 +368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -387,7 +380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -400,7 +392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -413,7 +404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -426,7 +416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -439,7 +428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -452,7 +440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -465,7 +452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -478,7 +464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -491,7 +476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -504,7 +488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -517,7 +500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -530,7 +512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -543,7 +524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -556,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -569,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -582,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -595,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2024,7 +2000,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2037,7 +2012,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2050,7 +2024,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2063,7 +2036,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2076,7 +2048,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2089,7 +2060,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2102,7 +2072,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2115,7 +2084,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2128,7 +2096,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2141,7 +2108,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2154,7 +2120,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2167,7 +2132,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2180,7 +2144,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2193,7 +2156,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2206,7 +2168,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2219,7 +2180,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2232,7 +2192,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2245,7 +2204,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2258,7 +2216,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2271,7 +2228,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2284,7 +2240,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2297,7 +2252,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2310,7 +2264,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]
@@ -2323,7 +2276,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_za_zzi.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_SME2 && FEAT_SME_F64F64",
       "FEAT_SME2",
       "FEAT_SME_F64F64"
     ]

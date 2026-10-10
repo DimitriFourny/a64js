@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facge_advsimd.xml",
     "mnemonic": "FACGE",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facge_advsimd.xml",
     "mnemonic": "FACGE",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -67,7 +65,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facge_advsimd.xml",
     "mnemonic": "FACGE",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -80,7 +77,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facge_advsimd.xml",
     "mnemonic": "FACGE",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -126,7 +122,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facgt_advsimd.xml",
     "mnemonic": "FACGT",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -139,7 +134,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facgt_advsimd.xml",
     "mnemonic": "FACGT",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -185,7 +179,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facgt_advsimd.xml",
     "mnemonic": "FACGT",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -198,7 +191,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "facgt_advsimd.xml",
     "mnemonic": "FACGT",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

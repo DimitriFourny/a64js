@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "revd_z_p_z.xml",
     "mnemonic": "REVD",
     "features": [
-      "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "revd_z_p_z.xml",
     "mnemonic": "REVD",
     "features": [
-      "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "revd_z_p_z.xml",
     "mnemonic": "REVD",
     "features": [
-      "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "revd_z_p_z.xml",
     "mnemonic": "REVD",
     "features": [
-      "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "revd_z_p_z.xml",
     "mnemonic": "REVD",
     "features": [
-      "FEAT_SME || FEAT_SVE2p1",
       "FEAT_SME",
       "FEAT_SVE2p1"
     ]

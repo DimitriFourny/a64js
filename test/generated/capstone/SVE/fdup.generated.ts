@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -320,7 +296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -333,7 +308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -346,7 +320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -359,7 +332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -372,7 +344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -385,7 +356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -398,7 +368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -411,7 +380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -424,7 +392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -437,7 +404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -450,7 +416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -463,7 +428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -476,7 +440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -489,7 +452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -502,7 +464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -515,7 +476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -528,7 +488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -541,7 +500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -554,7 +512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -567,7 +524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -580,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -593,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -606,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -619,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -632,7 +584,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -645,7 +596,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -658,7 +608,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -671,7 +620,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -684,7 +632,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -697,7 +644,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -710,7 +656,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -723,7 +668,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -736,7 +680,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -749,7 +692,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -762,7 +704,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -775,7 +716,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -788,7 +728,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -801,7 +740,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -814,7 +752,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -827,7 +764,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -840,7 +776,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -853,7 +788,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -866,7 +800,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -879,7 +812,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -892,7 +824,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -905,7 +836,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -918,7 +848,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -931,7 +860,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -944,7 +872,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -957,7 +884,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -970,7 +896,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -983,7 +908,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -996,7 +920,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1009,7 +932,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1022,7 +944,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1035,7 +956,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1048,7 +968,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1061,7 +980,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1074,7 +992,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1087,7 +1004,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1100,7 +1016,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1113,7 +1028,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1126,7 +1040,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1139,7 +1052,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1152,7 +1064,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1165,7 +1076,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1178,7 +1088,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1191,7 +1100,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1204,7 +1112,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1217,7 +1124,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1230,7 +1136,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1243,7 +1148,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1256,7 +1160,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1269,7 +1172,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1282,7 +1184,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1295,7 +1196,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1308,7 +1208,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1321,7 +1220,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1334,7 +1232,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1347,7 +1244,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1360,7 +1256,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1373,7 +1268,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1386,7 +1280,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1399,7 +1292,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1412,7 +1304,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1425,7 +1316,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1438,7 +1328,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1451,7 +1340,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1464,7 +1352,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1477,7 +1364,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1490,7 +1376,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1503,7 +1388,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1516,7 +1400,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1529,7 +1412,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1542,7 +1424,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1555,7 +1436,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1568,7 +1448,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1581,7 +1460,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1594,7 +1472,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1607,7 +1484,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1620,7 +1496,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1633,7 +1508,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1646,7 +1520,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1659,7 +1532,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1672,7 +1544,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1685,7 +1556,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1698,7 +1568,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1711,7 +1580,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1724,7 +1592,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1737,7 +1604,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1750,7 +1616,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1763,7 +1628,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1776,7 +1640,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1789,7 +1652,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1802,7 +1664,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1815,7 +1676,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1828,7 +1688,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1841,7 +1700,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1854,7 +1712,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1867,7 +1724,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1880,7 +1736,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1893,7 +1748,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1906,7 +1760,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1919,7 +1772,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1932,7 +1784,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1945,7 +1796,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1958,7 +1808,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1971,7 +1820,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1984,7 +1832,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1997,7 +1844,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2010,7 +1856,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2023,7 +1868,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2036,7 +1880,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2049,7 +1892,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2062,7 +1904,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2075,7 +1916,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2088,7 +1928,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2101,7 +1940,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2114,7 +1952,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2127,7 +1964,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2140,7 +1976,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2153,7 +1988,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2166,7 +2000,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2179,7 +2012,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2192,7 +2024,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2205,7 +2036,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2218,7 +2048,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2231,7 +2060,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2244,7 +2072,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2257,7 +2084,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2270,7 +2096,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2283,7 +2108,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2296,7 +2120,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2309,7 +2132,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2322,7 +2144,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2335,7 +2156,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2348,7 +2168,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2361,7 +2180,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2374,7 +2192,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2387,7 +2204,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2400,7 +2216,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2413,7 +2228,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2426,7 +2240,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2439,7 +2252,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2452,7 +2264,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2465,7 +2276,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2478,7 +2288,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2491,7 +2300,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2504,7 +2312,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2517,7 +2324,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2530,7 +2336,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2543,7 +2348,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2556,7 +2360,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2569,7 +2372,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2582,7 +2384,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2595,7 +2396,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2608,7 +2408,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2621,7 +2420,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2634,7 +2432,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2647,7 +2444,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2660,7 +2456,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2673,7 +2468,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2686,7 +2480,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2699,7 +2492,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2712,7 +2504,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2725,7 +2516,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2738,7 +2528,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2751,7 +2540,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2764,7 +2552,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2777,7 +2564,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2790,7 +2576,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2803,7 +2588,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2816,7 +2600,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2829,7 +2612,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2842,7 +2624,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2855,7 +2636,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2868,7 +2648,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2881,7 +2660,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2894,7 +2672,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2907,7 +2684,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2920,7 +2696,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2933,7 +2708,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2946,7 +2720,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2959,7 +2732,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2972,7 +2744,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2985,7 +2756,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -2998,7 +2768,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3011,7 +2780,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3024,7 +2792,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3037,7 +2804,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3050,7 +2816,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3063,7 +2828,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3076,7 +2840,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3089,7 +2852,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3102,7 +2864,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3115,7 +2876,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3128,7 +2888,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3141,7 +2900,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3154,7 +2912,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3167,7 +2924,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3180,7 +2936,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3193,7 +2948,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3206,7 +2960,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3219,7 +2972,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3232,7 +2984,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3245,7 +2996,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3258,7 +3008,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3271,7 +3020,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3284,7 +3032,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3297,7 +3044,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3310,7 +3056,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3323,7 +3068,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3336,7 +3080,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3349,7 +3092,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3362,7 +3104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3375,7 +3116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3388,7 +3128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3401,7 +3140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3414,7 +3152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3427,7 +3164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3440,7 +3176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3453,7 +3188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3466,7 +3200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3479,7 +3212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3492,7 +3224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3505,7 +3236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3518,7 +3248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3531,7 +3260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3544,7 +3272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3557,7 +3284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3570,7 +3296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3583,7 +3308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3596,7 +3320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3609,7 +3332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3622,7 +3344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3635,7 +3356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3648,7 +3368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3661,7 +3380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3674,7 +3392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3687,7 +3404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3700,7 +3416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3713,7 +3428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3726,7 +3440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3739,7 +3452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3752,7 +3464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3765,7 +3476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3778,7 +3488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3791,7 +3500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3804,7 +3512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3817,7 +3524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3830,7 +3536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3843,7 +3548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3856,7 +3560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3869,7 +3572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3882,7 +3584,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3895,7 +3596,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3908,7 +3608,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3921,7 +3620,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3934,7 +3632,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3947,7 +3644,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3960,7 +3656,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3973,7 +3668,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3986,7 +3680,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -3999,7 +3692,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4012,7 +3704,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4025,7 +3716,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4038,7 +3728,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4051,7 +3740,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4064,7 +3752,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4077,7 +3764,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4090,7 +3776,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4103,7 +3788,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4116,7 +3800,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4129,7 +3812,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4142,7 +3824,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4155,7 +3836,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4168,7 +3848,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4181,7 +3860,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4194,7 +3872,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4207,7 +3884,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4220,7 +3896,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4233,7 +3908,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4246,7 +3920,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4259,7 +3932,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4272,7 +3944,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4285,7 +3956,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4298,7 +3968,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4311,7 +3980,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4324,7 +3992,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4337,7 +4004,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4350,7 +4016,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4363,7 +4028,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4376,7 +4040,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4389,7 +4052,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4402,7 +4064,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4415,7 +4076,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4428,7 +4088,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4441,7 +4100,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4454,7 +4112,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4467,7 +4124,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4480,7 +4136,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4493,7 +4148,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4506,7 +4160,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4519,7 +4172,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4532,7 +4184,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4545,7 +4196,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4558,7 +4208,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4571,7 +4220,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4584,7 +4232,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4597,7 +4244,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4610,7 +4256,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4623,7 +4268,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4636,7 +4280,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4649,7 +4292,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4662,7 +4304,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4675,7 +4316,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4688,7 +4328,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4701,7 +4340,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4714,7 +4352,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4727,7 +4364,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4740,7 +4376,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4753,7 +4388,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4766,7 +4400,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4779,7 +4412,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4792,7 +4424,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4805,7 +4436,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4818,7 +4448,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4831,7 +4460,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4844,7 +4472,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4857,7 +4484,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4870,7 +4496,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4883,7 +4508,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4896,7 +4520,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4909,7 +4532,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4922,7 +4544,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4935,7 +4556,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4948,7 +4568,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4961,7 +4580,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4974,7 +4592,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -4987,7 +4604,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5000,7 +4616,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5013,7 +4628,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5026,7 +4640,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5039,7 +4652,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5052,7 +4664,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5065,7 +4676,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5078,7 +4688,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5091,7 +4700,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5104,7 +4712,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5117,7 +4724,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5130,7 +4736,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5143,7 +4748,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5156,7 +4760,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5169,7 +4772,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5182,7 +4784,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5195,7 +4796,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5208,7 +4808,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5221,7 +4820,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5234,7 +4832,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5247,7 +4844,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5260,7 +4856,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5273,7 +4868,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5286,7 +4880,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5299,7 +4892,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5312,7 +4904,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5325,7 +4916,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5338,7 +4928,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5351,7 +4940,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5364,7 +4952,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5377,7 +4964,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5390,7 +4976,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5403,7 +4988,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5416,7 +5000,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5429,7 +5012,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5442,7 +5024,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5455,7 +5036,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5468,7 +5048,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5481,7 +5060,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5494,7 +5072,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5507,7 +5084,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5520,7 +5096,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5533,7 +5108,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5546,7 +5120,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5559,7 +5132,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5572,7 +5144,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5585,7 +5156,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5598,7 +5168,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5611,7 +5180,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5624,7 +5192,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5637,7 +5204,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5650,7 +5216,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5663,7 +5228,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5676,7 +5240,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5689,7 +5252,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5702,7 +5264,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5715,7 +5276,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5728,7 +5288,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5741,7 +5300,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5754,7 +5312,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5767,7 +5324,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5780,7 +5336,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5793,7 +5348,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5806,7 +5360,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5819,7 +5372,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5832,7 +5384,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5845,7 +5396,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5858,7 +5408,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5871,7 +5420,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5884,7 +5432,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5897,7 +5444,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5910,7 +5456,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5923,7 +5468,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5936,7 +5480,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5949,7 +5492,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5962,7 +5504,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5975,7 +5516,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -5988,7 +5528,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6001,7 +5540,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6014,7 +5552,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6027,7 +5564,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6040,7 +5576,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6053,7 +5588,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6066,7 +5600,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6079,7 +5612,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6092,7 +5624,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6105,7 +5636,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6118,7 +5648,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6131,7 +5660,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6144,7 +5672,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6157,7 +5684,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6170,7 +5696,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6183,7 +5708,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6196,7 +5720,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6209,7 +5732,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6222,7 +5744,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6235,7 +5756,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6248,7 +5768,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6261,7 +5780,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6274,7 +5792,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6287,7 +5804,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6300,7 +5816,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6313,7 +5828,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6326,7 +5840,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6339,7 +5852,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6352,7 +5864,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6365,7 +5876,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6378,7 +5888,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6391,7 +5900,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6404,7 +5912,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6417,7 +5924,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6430,7 +5936,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6443,7 +5948,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6456,7 +5960,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6469,7 +5972,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6482,7 +5984,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6495,7 +5996,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6508,7 +6008,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6521,7 +6020,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6534,7 +6032,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6547,7 +6044,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6560,7 +6056,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6573,7 +6068,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6586,7 +6080,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6599,7 +6092,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6612,7 +6104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6625,7 +6116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6638,7 +6128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6651,7 +6140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6664,7 +6152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6677,7 +6164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6690,7 +6176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -6703,7 +6188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fdup_z_i.xml",
     "mnemonic": "FDUP",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]

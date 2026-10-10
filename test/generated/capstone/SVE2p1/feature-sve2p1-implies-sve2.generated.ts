@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "cmla_z_zzz.xml",
     "mnemonic": "CMLA",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]

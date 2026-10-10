@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "frsqrts_advsimd.xml",
     "mnemonic": "FRSQRTS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "frsqrts_advsimd.xml",
     "mnemonic": "FRSQRTS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -67,7 +65,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "frecps_advsimd.xml",
     "mnemonic": "FRECPS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -80,7 +77,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "frecps_advsimd.xml",
     "mnemonic": "FRECPS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

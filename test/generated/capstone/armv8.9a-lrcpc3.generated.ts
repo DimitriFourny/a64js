@@ -294,7 +294,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -307,7 +306,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -320,7 +318,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -333,7 +330,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -346,7 +342,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -359,7 +354,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -372,7 +366,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -385,7 +378,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -398,7 +390,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -411,7 +402,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -424,7 +414,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -437,7 +426,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -450,7 +438,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -463,7 +450,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -476,7 +462,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -489,7 +474,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -502,7 +486,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -515,7 +498,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -814,7 +796,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -827,7 +808,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -840,7 +820,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -853,7 +832,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -866,7 +844,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -879,7 +856,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -892,7 +868,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -905,7 +880,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -918,7 +892,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -931,7 +904,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -944,7 +916,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -957,7 +928,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -970,7 +940,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -983,7 +952,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -996,7 +964,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1009,7 +976,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1022,7 +988,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1035,7 +1000,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1334,7 +1298,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1347,7 +1310,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1360,7 +1322,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1373,7 +1334,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1386,7 +1346,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stlur_fpsimd.xml",
     "mnemonic": "STLUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1399,7 +1358,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1412,7 +1370,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1425,7 +1382,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1438,7 +1394,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1451,7 +1406,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldapur_fpsimd.xml",
     "mnemonic": "LDAPUR",
     "features": [
-      "FEAT_FP && FEAT_LRCPC3",
       "FEAT_FP",
       "FEAT_LRCPC3"
     ]
@@ -1464,7 +1418,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1477,7 +1430,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1490,7 +1442,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1503,7 +1454,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "stl1_advsimd_sngl.xml",
     "mnemonic": "STL1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1516,7 +1466,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1529,7 +1478,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1542,7 +1490,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]
@@ -1555,7 +1502,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldap1_advsimd_sngl.xml",
     "mnemonic": "LDAP1",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LRCPC3",
       "FEAT_AdvSIMD",
       "FEAT_LRCPC3"
     ]

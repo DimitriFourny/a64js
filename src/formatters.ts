@@ -1131,7 +1131,7 @@ function scalarRegisterOffsetMemoryOperand(inst: DecodedInstruction): MemoryOper
   const fields = inst.fields!;
   const option = fields.option ?? 0;
   const shift = fields.S === 1
-    ? isFpSimdLoadStore(inst.encoding!.fileName) && (fields.opc ?? 0) === 3 ? 4 : (fields.size ?? 0)
+    ? isFpSimdLoadStore(inst.encoding!.fileName) && (fields.size ?? 0) === 0 && ((fields.opc ?? 0) & 2) !== 0 ? 4 : (fields.size ?? 0)
     : 0;
   const extendNames = ["uxtb", "uxth", "uxtw", "lsl", "sxtb", "sxth", "sxtw", "sxtx"] as const;
   return {
@@ -4741,7 +4741,9 @@ function sveDotIndexedSourceText(inst: DecodedInstruction, sourceLane: "b" | "h"
   const widthByName = new Map(inst.encoding!.fields.map((field) => [field.name, field.width] as const));
   let index = 0;
 
-  if (fields.i3h !== undefined || fields.i3l !== undefined) {
+  if (fields.i4h !== undefined || fields.i4l !== undefined) {
+    index = ((fields.i4h ?? 0) << (widthByName.get("i4l") ?? 0)) | (fields.i4l ?? 0);
+  } else if (fields.i3h !== undefined || fields.i3l !== undefined) {
     index = ((fields.i3h ?? 0) << (widthByName.get("i3l") ?? 0)) | (fields.i3l ?? 0);
   } else if (fields.i2 !== undefined) {
     index = fields.i2;
@@ -4774,7 +4776,7 @@ function sveFp8LutiRegisterCount(inst: DecodedInstruction): number {
   if (inst.encoding!.fileName === "luti2_z_zz.xml") {
     return 1;
   }
-  return ((inst.fields!.len ?? 0) & 0x1) + 1;
+  return inst.encoding!.encodingId.endsWith("_2x16") ? 2 : 1;
 }
 
 function sveFp8LutiIndex(inst: DecodedInstruction): number {
@@ -5365,7 +5367,7 @@ function smeMovtZtOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const offset = fields.off2 ?? fields.imm2 ?? 0;
   const destination = offset === 0 ? "zt0" : `zt0[${offset}, mul vl]`;
-  return [{ kind: "text", text: destination }, vecReg(fields.Zn ?? fields.Zm ?? 0)];
+  return [{ kind: "text", text: destination }, vecReg(fields.Zt ?? fields.Zn ?? fields.Zm ?? 0)];
 }
 
 function smeMovtScalarOperands(inst: DecodedInstruction): Operand[] {

@@ -85,7 +85,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "faddp_advsimd_vec.xml",
     "mnemonic": "FADDP",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -98,7 +97,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "faddp_advsimd_vec.xml",
     "mnemonic": "FADDP",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

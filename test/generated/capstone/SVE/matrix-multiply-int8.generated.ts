@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ummla_z_zzz.xml",
     "mnemonic": "UMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "smmla_z_zzz.xml",
     "mnemonic": "SMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usmmla_z_zzz.xml",
     "mnemonic": "USMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ummla_z_zzz.xml",
     "mnemonic": "UMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "smmla_z_zzz.xml",
     "mnemonic": "SMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usmmla_z_zzz.xml",
     "mnemonic": "USMMLA",
     "features": [
-      "FEAT_SVE && FEAT_I8MM",
       "FEAT_SVE",
       "FEAT_I8MM"
     ]
@@ -125,10 +116,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usdot_z_zzz.xml",
     "mnemonic": "USDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   },
   {
@@ -139,7 +129,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -152,10 +141,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usdot_z_zzz.xml",
     "mnemonic": "USDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   },
   {
@@ -166,10 +154,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usdot_z_zzzi.xml",
     "mnemonic": "USDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   },
   {
@@ -180,10 +167,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sudot_z_zzzi.xml",
     "mnemonic": "SUDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   },
   {
@@ -194,7 +180,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -207,10 +192,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "usdot_z_zzzi.xml",
     "mnemonic": "USDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   },
   {
@@ -221,7 +205,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -234,10 +217,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sudot_z_zzzi.xml",
     "mnemonic": "SUDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_I8MM",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_I8MM"
+      "FEAT_I8MM",
+      "FEAT_SME"
     ]
   }
 ];

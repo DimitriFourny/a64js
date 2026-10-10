@@ -173,3 +173,27 @@ test("malformed XML terminates with a diagnostic instead of accepting a partial 
   }
   assert.equal(parseXml('<root description="a > b"/>').attrs.description, "a > b");
 });
+
+test("immutable declaration aliases respect block scope and preserve wildcard literals", () => {
+  const guards = parseDecodeGuards("let x : integer = UInt(N); if sf == '0' then let x : integer = UInt(sf); end; if x == 1 && size IN {'xx'} then EndOfDecode(Decode_UNDEF); end;", widths);
+  assert.equal(Boolean(matchingGuard(guards, { sf: 0, N: 1, size: 3 })), true);
+  assert.equal(Boolean(matchingGuard(guards, { sf: 1, N: 0, size: 0 })), false);
+});
+
+test("derived REV and element-move bounds agree with XML integer expressions", async () => {
+  const enabled = new Set(["FEAT_AdvSIMD"]);
+  const [rev] = await parseEncodingFile(XML_ROOT, "rev32_advsimd.xml");
+  for (const o0 of [0, 1]) for (const U of [0, 1]) for (const size of [0, 1, 2, 3]) {
+    assert.equal(Boolean(matchingGuard(rev.guards, { o0, U, size }, enabled)), (64 >> (o0 * 2 + U)) <= (8 << size));
+  }
+  const [smov] = await parseEncodingFile(XML_ROOT, "smov_advsimd.xml");
+  const [umov] = await parseEncodingFile(XML_ROOT, "umov_advsimd.xml");
+  const lowestSetBit = (value: number) => Math.log2(value & -value);
+  for (const Q of [0, 1]) for (let imm5 = 0; imm5 < 32; imm5 += 1) {
+    const smovInvalid = (imm5 & 7) === 0 || (32 << Q) <= (8 << lowestSetBit(imm5 & 7));
+    const esize = 8 << lowestSetBit(imm5 & 15);
+    const umovInvalid = (imm5 & 15) === 0 || (Q === 1 && esize < 64) || (Q === 0 && esize >= 64);
+    assert.equal(Boolean(matchingGuard(smov.guards, { Q, imm5 }, enabled)), smovInvalid);
+    assert.equal(Boolean(matchingGuard(umov.guards, { Q, imm5 }, enabled)), umovInvalid);
+  }
+});

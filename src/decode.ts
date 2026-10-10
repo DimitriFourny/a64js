@@ -104,9 +104,6 @@ function splitTopLevel(expression: string, operator: "||" | "&&"): string[] {
 
 function evaluateFeatureExpression(expression: string, enabledFeatures: Set<string>): boolean {
   const normalized = stripOuterParentheses(expression);
-  if (enabledFeatures.has(normalized)) {
-    return true;
-  }
   const orParts = splitTopLevel(normalized, "||");
   if (orParts.length > 1) {
     return orParts.some((part) => evaluateFeatureExpression(part, enabledFeatures));
@@ -147,14 +144,6 @@ function missingFeatures(
   }
 
   return missing;
-}
-
-function hasFeatures(
-  encoding: GeneratedEncoding,
-  fields: Record<string, number>,
-  enabledFeatures: Set<string>,
-): boolean {
-  return missingFeatures(encoding, fields, enabledFeatures).length === 0;
 }
 
 const SUPPORTED_AT_SYS_KEYS = new Set([
@@ -334,8 +323,17 @@ function isUnsupportedSystemInstructionOverlap(
 }
 
 export function decode(word: number, options: DecodeOptions = {}): DecodedInstruction {
-  word = normalizeWord(word);
   const enabledFeatures = new Set(options.features ?? []);
+  return decodeWithFeatures(normalizeWord(word), enabledFeatures);
+}
+
+/** Capture a target's features once for repeated decoding or single-use iterables. */
+export function createDecoder(options: DecodeOptions = {}): (word: number) => DecodedInstruction {
+  const enabledFeatures = new Set(options.features ?? []);
+  return (word) => decodeWithFeatures(normalizeWord(word), enabledFeatures);
+}
+
+function decodeWithFeatures(word: number, enabledFeatures: Set<string>): DecodedInstruction {
 
   for (const index of OPCODE_BUCKETS[word >>> 24]) {
     const encoding = ENCODINGS[index];
@@ -370,8 +368,8 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
         };
       }
     }
-    if (!hasFeatures(encoding, fields, enabledFeatures)) {
-      const missing = missingFeatures(encoding, fields, enabledFeatures);
+    const missing = missingFeatures(encoding, fields, enabledFeatures);
+    if (missing.length > 0) {
       return {
         status: "undefined",
         availability: "unavailable",

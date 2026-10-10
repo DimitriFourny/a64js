@@ -64,10 +64,11 @@ class ExitParser {
     throw new Error(`missing ${terminator} in decode pseudocode`);
   }
   private expand(expression: string): string {
-    return expression.replace(/\b[A-Za-z_][A-Za-z0-9_]*\b/g, (name) => this.aliases.get(name) ?? name);
+    return expression.replace(/'[^']*'|"[^"]*"|\b[A-Za-z_][A-Za-z0-9_]*\b/g, (name) => this.aliases.get(name) ?? name);
   }
   parse(): DecodeExit[] { this.block([], new Set()); return this.exits; }
   private block(conditions: string[], stops: Set<string>): void {
+    const outerAliases = new Map(this.aliases);
     while (this.peek() && !stops.has(this.peek())) {
       if (this.peek() === "if") { this.ifStatement(conditions); continue; }
       if (this.peek() === "case") { this.caseStatement(conditions); continue; }
@@ -90,6 +91,8 @@ class ExitParser {
         }
       }
     }
+    this.aliases.clear();
+    for (const [name, value] of outerAliases) this.aliases.set(name, value);
   }
   private ifStatement(outer: string[]): void {
     this.take("if");

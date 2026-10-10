@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -320,7 +296,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -333,7 +308,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -346,7 +320,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -359,7 +332,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -372,7 +344,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -385,7 +356,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -398,7 +368,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -411,7 +380,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -424,7 +392,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -437,7 +404,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -450,7 +416,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -463,7 +428,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -476,7 +440,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -489,7 +452,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -502,7 +464,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -515,7 +476,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -528,7 +488,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -541,7 +500,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -554,7 +512,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -567,7 +524,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -580,7 +536,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -593,7 +548,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -606,7 +560,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -619,7 +572,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -632,7 +584,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -645,7 +596,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -658,7 +608,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -671,7 +620,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -684,7 +632,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -697,7 +644,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -710,7 +656,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -723,7 +668,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -736,7 +680,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -749,7 +692,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -762,7 +704,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -775,7 +716,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -788,7 +728,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -801,7 +740,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -814,7 +752,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -827,7 +764,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -840,7 +776,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -853,7 +788,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -866,7 +800,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -879,7 +812,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -892,7 +824,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -905,7 +836,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -918,7 +848,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -931,7 +860,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -944,7 +872,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -957,7 +884,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -970,7 +896,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -983,7 +908,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -996,7 +920,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -1009,7 +932,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqdecb_r_rs.xml",
     "mnemonic": "SQDECB",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]

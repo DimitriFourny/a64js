@@ -30,7 +30,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_mz4_ztmz2.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_SME2p1 && FEAT_SME_LUTv2",
       "FEAT_SME2p1",
       "FEAT_SME_LUTv2"
     ]
@@ -43,7 +42,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_mz4_ztmz2.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_SME2p1 && FEAT_SME_LUTv2",
       "FEAT_SME2p1",
       "FEAT_SME_LUTv2"
     ]

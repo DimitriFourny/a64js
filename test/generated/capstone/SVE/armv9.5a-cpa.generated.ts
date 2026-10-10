@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "addpt_z_zz.xml",
     "mnemonic": "ADDPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "addpt_z_p_zz.xml",
     "mnemonic": "ADDPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "subpt_z_zz.xml",
     "mnemonic": "SUBPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "subpt_z_p_zz.xml",
     "mnemonic": "SUBPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "madpt_z_zzz.xml",
     "mnemonic": "MADPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mlapt_z_zzz.xml",
     "mnemonic": "MLAPT",
     "features": [
-      "FEAT_SVE && FEAT_CPA",
       "FEAT_SVE",
       "FEAT_CPA"
     ]

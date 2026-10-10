@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "tbx_z_zz.xml",
     "mnemonic": "TBX",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -21,10 +20,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -35,7 +33,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "tbx_z_zz.xml",
     "mnemonic": "TBX",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -48,10 +45,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -62,7 +58,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "tbx_z_zz.xml",
     "mnemonic": "TBX",
     "features": [
-      "FEAT_SVE2 || FEAT_SME",
       "FEAT_SVE2",
       "FEAT_SME"
     ]
@@ -75,10 +70,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   }
 ];

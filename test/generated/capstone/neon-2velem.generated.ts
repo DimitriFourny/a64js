@@ -184,7 +184,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_advsimd_elt.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -197,7 +196,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmla_advsimd_elt.xml",
     "mnemonic": "FMLA",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -276,7 +274,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmls_advsimd_elt.xml",
     "mnemonic": "FMLS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -289,7 +286,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmls_advsimd_elt.xml",
     "mnemonic": "FMLS",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -830,7 +826,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmul_advsimd_elt.xml",
     "mnemonic": "FMUL",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -843,7 +838,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmul_advsimd_elt.xml",
     "mnemonic": "FMUL",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -922,7 +916,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmulx_advsimd_elt.xml",
     "mnemonic": "FMULX",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -935,7 +928,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmulx_advsimd_elt.xml",
     "mnemonic": "FMULX",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

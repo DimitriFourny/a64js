@@ -66,9 +66,9 @@ test("vector groups retain ordered members and handle wraparound", () => {
 });
 
 test("SME arithmetic preserves accumulator widths, encoded group alignment and split indices", () => {
-  for (const word of [0xc1d00000, 0xc1800000, 0xc1255955, 0xc1b44141, 0xc1508020, 0xc1cfefef, 0xc08b03dc, 0xc00800b7]) {
+  for (const word of [0xc1d00000, 0xc1800000, 0xc1255955, 0xc1b44141, 0xc1508020, 0xc1cfefef, 0xc08b03dc, 0xc00800b7, 0xc12f63e3, 0xc04f33ff]) {
     const entry = SUPPORTED_CAPSTONE_CASES.find((entry) => entry.word === word)!;
-    assert.equal(disasm(word, undefined, { features: entry.features }), entry.asmText);
+    assert.equal(disasm(word, undefined, { features: entry.features }), entry.asmText.replace(/\s+/g, " "));
   }
   const dot = decode(0xc1508020, { features: ["FEAT_SME2"] });
   assert.deepEqual(dot.operands?.[0], { kind: "za", lane: "s", slice: { selector: 8, offset: 0, group: 4 } });
@@ -89,6 +89,7 @@ test("scalar memory operands expose writeback, signed offsets, SIMD widths and r
   });
   assert.deepEqual(decode(1019224109, { features: ["FEAT_FP"] }).operands?.[0], { kind: "simd", index: 13, scalar: "q" });
   assert.equal(disasm(3088056336), "stur w16, [x0, #-0x100]");
+  assert.equal(disasm(0x3ca5fb6d, undefined, { features: ["FEAT_FP"] }), "str q13, [x27, x5, sxtx #4]");
 });
 
 function synthetic(fileName: string, fields: Record<string, number> = {}): DecodedInstruction {

@@ -52,7 +52,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmulx_advsimd_vec.xml",
     "mnemonic": "FMULX",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

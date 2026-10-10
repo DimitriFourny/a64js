@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_advsimd.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LUT",
       "FEAT_AdvSIMD",
       "FEAT_LUT"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_advsimd.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LUT",
       "FEAT_AdvSIMD",
       "FEAT_LUT"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_advsimd.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LUT",
       "FEAT_AdvSIMD",
       "FEAT_LUT"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_advsimd.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "FEAT_AdvSIMD && FEAT_LUT",
       "FEAT_AdvSIMD",
       "FEAT_LUT"
     ]

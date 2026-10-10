@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmul_advsimd_elt.xml",
     "mnemonic": "FMUL",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -87,7 +86,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmulx_advsimd_elt.xml",
     "mnemonic": "FMULX",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]

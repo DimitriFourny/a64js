@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzv.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfminnm_mz_zzw.xml",
     "mnemonic": "BFMINNM",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]

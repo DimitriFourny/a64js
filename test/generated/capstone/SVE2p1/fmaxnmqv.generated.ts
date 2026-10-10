@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -112,7 +104,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -125,7 +116,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -138,7 +128,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -151,7 +140,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -164,7 +152,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -177,7 +164,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -190,7 +176,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -203,7 +188,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -216,7 +200,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -229,7 +212,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -242,7 +224,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -255,7 +236,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -268,7 +248,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -281,7 +260,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -294,7 +272,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]
@@ -307,7 +284,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fmaxnmqv_z_p_z.xml",
     "mnemonic": "FMAXNMQV",
     "features": [
-      "FEAT_SVE2p1 || FEAT_SME2p1",
       "FEAT_SVE2p1",
       "FEAT_SME2p1"
     ]

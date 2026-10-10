@@ -1064,7 +1064,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1077,7 +1076,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1090,7 +1088,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1103,7 +1100,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1116,7 +1112,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1129,7 +1124,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1142,7 +1136,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1155,7 +1148,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1168,7 +1160,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1181,7 +1172,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1194,7 +1184,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1207,7 +1196,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1220,7 +1208,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1233,7 +1220,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1246,7 +1232,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1259,7 +1244,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1272,7 +1256,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1285,7 +1268,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1298,7 +1280,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1311,7 +1292,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1324,7 +1304,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1337,7 +1316,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1350,7 +1328,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -1363,7 +1340,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2432,7 +2408,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2445,7 +2420,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2458,7 +2432,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2471,7 +2444,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2484,7 +2456,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2497,7 +2468,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2510,7 +2480,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2523,7 +2492,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2536,7 +2504,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2549,7 +2516,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2562,7 +2528,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2575,7 +2540,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2588,7 +2552,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2601,7 +2564,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2614,7 +2576,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2627,7 +2588,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2640,7 +2600,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2653,7 +2612,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2666,7 +2624,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2679,7 +2636,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2692,7 +2648,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2705,7 +2660,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2718,7 +2672,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]
@@ -2731,7 +2684,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "udot_za_zzi.xml",
     "mnemonic": "UDOT",
     "features": [
-      "FEAT_SME2 && FEAT_SME_I16I64",
       "FEAT_SME2",
       "FEAT_SME_I16I64"
     ]

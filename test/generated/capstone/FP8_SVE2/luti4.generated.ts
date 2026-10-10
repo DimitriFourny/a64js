@@ -8,10 +8,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -22,10 +21,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -36,10 +34,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -50,10 +47,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -64,10 +60,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -78,10 +73,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -92,10 +86,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   },
   {
@@ -106,10 +99,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "luti4_z_zz.xml",
     "mnemonic": "LUTI4",
     "features": [
-      "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT",
       "FEAT_SVE2",
-      "FEAT_SME2",
-      "FEAT_LUT"
+      "FEAT_LUT",
+      "FEAT_SME2"
     ]
   }
 ];

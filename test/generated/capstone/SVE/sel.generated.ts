@@ -8,7 +8,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_p_p_pp.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -19,7 +19,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_p_p_pp.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -30,7 +30,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -41,7 +41,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -52,7 +52,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -63,7 +63,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -74,7 +74,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -85,7 +85,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -96,7 +96,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -107,7 +107,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -118,7 +118,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_p_p_pp.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -129,7 +129,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_p_p_pp.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -140,7 +140,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -151,7 +151,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -162,7 +162,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -173,7 +173,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -184,7 +184,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -195,7 +195,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -206,7 +206,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -217,7 +217,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_sel_z_p_zz.xml",
     "mnemonic": "SEL",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   }
 ];

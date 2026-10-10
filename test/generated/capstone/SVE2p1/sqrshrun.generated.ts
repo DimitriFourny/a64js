@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "sqrshrun_z_mz2.xml",
     "mnemonic": "SQRSHRUN",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]

@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldr_p_bi.xml",
     "mnemonic": "LDR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldr_p_bi.xml",
     "mnemonic": "LDR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "str_p_bi.xml",
     "mnemonic": "STR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "str_p_bi.xml",
     "mnemonic": "STR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -60,7 +56,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -71,7 +67,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "pfalse_p.xml",
     "mnemonic": "PFALSE",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -84,7 +79,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldr_p_bi.xml",
     "mnemonic": "LDR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -97,7 +91,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ldr_p_bi.xml",
     "mnemonic": "LDR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -110,7 +103,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "str_p_bi.xml",
     "mnemonic": "STR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -123,7 +115,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "str_p_bi.xml",
     "mnemonic": "STR",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -136,7 +127,7 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "mov_orr_p_p_pp.xml",
     "mnemonic": "ORR",
     "features": [
-      "FEAT_SVE || FEAT_SME"
+      "FEAT_SVE"
     ]
   },
   {
@@ -147,7 +138,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "pfalse_p.xml",
     "mnemonic": "PFALSE",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]

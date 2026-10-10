@@ -20,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ld1h_mz_p_br.xml",
     "mnemonic": "LD1H",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -44,7 +43,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ld1h_mz_p_br.xml",
     "mnemonic": "LD1H",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]
@@ -68,7 +66,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "ld1h_mz_p_br.xml",
     "mnemonic": "LD1H",
     "features": [
-      "FEAT_SME2 || FEAT_SVE2p1",
       "FEAT_SME2",
       "FEAT_SVE2p1"
     ]

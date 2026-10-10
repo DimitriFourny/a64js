@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "compact_z_p_z.xml",
     "mnemonic": "COMPACT",
     "features": [
-      "FEAT_SVE || FEAT_SME2p2",
       "FEAT_SVE",
       "FEAT_SME2p2"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "compact_z_p_z.xml",
     "mnemonic": "COMPACT",
     "features": [
-      "FEAT_SVE || FEAT_SME2p2",
       "FEAT_SVE",
       "FEAT_SME2p2"
     ]

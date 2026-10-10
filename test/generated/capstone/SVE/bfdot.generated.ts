@@ -8,10 +8,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -22,10 +21,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -36,10 +34,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -50,7 +47,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -63,10 +59,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -77,7 +72,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -90,10 +84,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -104,7 +97,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -117,10 +109,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -131,10 +122,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -145,10 +135,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -159,10 +148,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -173,7 +161,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -186,10 +173,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzz.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -200,7 +186,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -213,10 +198,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   },
   {
@@ -227,7 +211,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "movprfx_z_z.xml",
     "mnemonic": "MOVPRFX",
     "features": [
-      "FEAT_SVE || FEAT_SME",
       "FEAT_SVE",
       "FEAT_SME"
     ]
@@ -240,10 +223,9 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfdot_z_zzzi.xml",
     "mnemonic": "BFDOT",
     "features": [
-      "(FEAT_SVE || FEAT_SME) && FEAT_BF16",
       "FEAT_SVE",
-      "FEAT_SME",
-      "FEAT_BF16"
+      "FEAT_BF16",
+      "FEAT_SME"
     ]
   }
 ];

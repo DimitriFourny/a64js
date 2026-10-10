@@ -8,7 +8,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -21,7 +20,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -34,7 +32,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -47,7 +44,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -60,7 +56,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -73,7 +68,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -86,7 +80,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]
@@ -99,7 +92,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "bfclamp_mz_zz.xml",
     "mnemonic": "BFCLAMP",
     "features": [
-      "FEAT_SME2 && FEAT_SVE_B16B16",
       "FEAT_SME2",
       "FEAT_SVE_B16B16"
     ]

@@ -162,7 +162,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_advsimd.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -175,7 +174,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fadd_advsimd.xml",
     "mnemonic": "FADD",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -221,7 +219,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fsub_advsimd.xml",
     "mnemonic": "FSUB",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
@@ -234,7 +231,6 @@ export const SUPPORTED_CAPSTONE_CASES = [
     "encodingFile": "fsub_advsimd.xml",
     "mnemonic": "FSUB",
     "features": [
-      "FEAT_AdvSIMD && FEAT_FP16",
       "FEAT_AdvSIMD",
       "FEAT_FP16"
     ]
