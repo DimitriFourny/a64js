@@ -80,23 +80,45 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
       {
         "all": [
           {
-            "kind": "eq",
-            "field": "op",
-            "mask": 31,
-            "lsb": 0,
-            "value": 31
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "cmode",
+                "msb": 3,
+                "lsb": 0
+              },
+              {
+                "field": "op",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 31
+          },
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -180,7 +202,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD && FEAT_FP16"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "FMOV_advsimd",
@@ -261,23 +304,45 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
       {
         "all": [
           {
-            "kind": "eq",
-            "field": "op",
-            "mask": 31,
-            "lsb": 0,
-            "value": 31
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "cmode",
+                "msb": 3,
+                "lsb": 0
+              },
+              {
+                "field": "op",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 31
+          },
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   }

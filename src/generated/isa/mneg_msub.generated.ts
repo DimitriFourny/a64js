@@ -54,7 +54,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "MSUB_32A_dp_3src",
+    "canonicalFileName": "msub.xml"
   },
   {
     "instructionId": "MNEG_MSUB",
@@ -109,6 +111,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "MSUB_64A_dp_3src",
+    "canonicalFileName": "msub.xml"
   }
 ];

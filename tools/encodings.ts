@@ -1,7 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { FeatureGuard, GeneratedEncoding, GeneratedField, Guard, GuardCheck } from "../src/types.ts";
-import { children, firstChild, parseXml } from "./xml.ts";
+import type { GeneratedEncoding, GeneratedField, GuardCheck } from "../src/types.ts";
+import { children, firstChild, parseXml, rawTextContent } from "./xml.ts";
+import { parseDecodeGuards, type DecodeGuardDiagnostic } from "./decode-guards.ts";
+import { parseGuardAlternatives } from "./guards.ts";
 
 type BoxBits = Array<0 | 1 | "x">;
 
@@ -24,11 +26,10 @@ export type ParsedEncoding = GeneratedEncoding & {
   bitCount: number;
 };
 
-type ParseEncodingFileOptions = {
-  ignoreUnsupportedGuards?: boolean;
+export type ParseEncodingFileOptions = {
+  unsupportedExpressions?: ReadonlyMap<string, string>;
+  onDiagnostic?: (diagnostic: DecodeGuardDiagnostic) => void;
 };
-
-type FieldWidthMap = Map<string, number>;
 
 const SME2_FLOAT_MAXMIN_CONSTRAINT_FILES = new Set([
   "fmax_mz_zzv.xml",
@@ -39,6 +40,22 @@ const SME2_FLOAT_MAXMIN_CONSTRAINT_FILES = new Set([
   "fmin_mz_zzw.xml",
   "fminnm_mz_zzv.xml",
   "fminnm_mz_zzw.xml",
+]);
+
+// Exact reductions of derived integer predicates to their encoded bit fields.
+const DECODE_EXPRESSION_REWRITES = new Map<string, ReadonlyMap<string, string>>([
+  ["smov_advsimd.xml", new Map([["datasize <= esize", "Q == '0' && imm5[2:0] == '100'"]])],
+  ["umov_advsimd.xml", new Map([
+    ["datasize == 64 && esize < 64", "Q == '1' && imm5[3:0] != '1000'"],
+    ["datasize == 32 && esize >= 64", "Q == '0' && imm5[3:0] == '1000'"],
+  ])],
+  ...["rev16_advsimd.xml", "rev32_advsimd.xml", "rev64_advsimd.xml"].map((fileName): [string, ReadonlyMap<string, string>] => [fileName, new Map([
+    ["csize <= esize", "(o0::U == '00' && size == '11') || (o0::U == '01' && size IN {'10', '11'}) || (o0::U == '10' && size IN {'01', '10', '11'}) || o0::U == '11'"],
+  ])]),
+  ["fmov_float_gen.xml", new Map([
+    ["fltsize != 16 && fltsize != intsize", "(ftype == '00' && sf == '1') || (ftype IN {'01', '10'} && sf == '0')"],
+    ["intsize != 64 || ftype != '10'", "sf == '0' || ftype != '10'"],
+  ])],
 ]);
 
 function parseBoxBits(box: any): BoxBits {
@@ -117,232 +134,13 @@ function computeMaskValue(bits: BoxBits): { mask: number; value: number; bitCoun
   return { mask: mask >>> 0, value: value >>> 0, bitCount };
 }
 
-function parseGuardTerm(term: string, fieldWidths: FieldWidthMap): GuardCheck {
-  const concatMatch = /^([A-Za-z0-9_:\[\]]+)\s*(==|!=)\s*'([01x ]+)'$/.exec(term.trim());
-  if (concatMatch && concatMatch[1].includes("::")) {
-    const parts = concatMatch[1].split("::").map((part) => {
-      const slice = /^([A-Za-z0-9_]+)(?:\[(\d+)(?::(\d+))?\])?$/.exec(part.trim());
-      if (!slice) {
-        throw new Error(`unsupported guard term: ${term}`);
-      }
-      const width = fieldWidths.get(slice[1]);
-      if (width === undefined) {
-        throw new Error(`unknown guard field width: ${slice[1]}`);
-      }
-      const msb = slice[2] ? Number(slice[2]) : width - 1;
-      const lsb = slice[3] ? Number(slice[3]) : slice[2] ? Number(slice[2]) : 0;
-      return {
-        field: slice[1],
-        msb,
-        lsb,
-      };
-    });
-    const literal = concatMatch[3].replaceAll(" ", "");
-    return {
-      kind: concatMatch[2] === "==" ? "eq_concat" : "ne_concat",
-      parts,
-      value: Number.parseInt(literal.replaceAll("x", "0"), 2),
-    };
-  }
-
-  const fieldCompareMatch = /^([A-Za-z0-9_]+)\s*(==|!=)\s*([A-Za-z_][A-Za-z0-9_]*)$/.exec(term.trim());
-  if (fieldCompareMatch) {
-    return {
-      kind: fieldCompareMatch[2] === "==" ? "eq_field" : "ne_field",
-      field: fieldCompareMatch[1],
-      otherField: fieldCompareMatch[3],
-    };
-  }
-
-  const sliceMatch = /([A-Za-z0-9_]+)\[(\d+)\]\s*(==|!=)\s*'([01])'/.exec(term);
-  if (sliceMatch) {
-    const field = sliceMatch[1];
-    const bit = Number(sliceMatch[2]);
-    const operator = sliceMatch[3] === "==" ? "eq" : "ne";
-    return { kind: operator, field, mask: 1 << bit, lsb: bit, value: Number(sliceMatch[4]) };
-  }
-
-  const match = /([A-Za-z0-9_]+)\s*(==|!=)\s*('?)([01x]+|0x[0-9A-Fa-f]+)\3/.exec(term.trim());
-  if (!match) {
-    throw new Error(`unsupported guard term: ${term}`);
-  }
-  const field = match[1];
-  const operator = match[2] === "==" ? "eq" : "ne";
-  const literal = match[4];
-  const value = literal.startsWith("0x") ? Number.parseInt(literal, 16) : Number.parseInt(literal.replaceAll("x", "0"), 2);
-  const mask = literal.startsWith("0x")
-    ? -1
-    : Number.parseInt(
-        literal
-          .replaceAll("0", "1")
-          .replaceAll("1", "1")
-          .replaceAll("x", "0"),
-        2,
-      ) >>> 0;
-  return { kind: operator, field, mask, lsb: 0, value };
-}
-
-function parseGuardTermAlternatives(term: string, fieldWidths: FieldWidthMap): GuardCheck[][] {
-  const trimmed = term.trim();
-
-  if (trimmed === "size::sh == '001'") {
-    return [[
-      { kind: "eq", field: "size", mask: 0b11, lsb: 0, value: 0 },
-      { kind: "eq", field: "sh", mask: 0b1, lsb: 0, value: 1 },
-    ]];
-  }
-
-  const inMatch = /^([A-Za-z0-9_]+)\s+IN\s+\{(.+)\}$/.exec(trimmed);
-  if (inMatch) {
-    const field = inMatch[1];
-    const values = inMatch[2]
-      .split(",")
-      .map((value) => value.trim().replace(/^'+|'+$/g, ""))
-      .filter((value) => value.length > 0);
-    return values.map((value) => [{
-      kind: "eq",
-      field,
-      mask: value.startsWith("0x") ? -1 : ((1 << value.length) - 1) >>> 0,
-      lsb: 0,
-      value: value.startsWith("0x") ? Number.parseInt(value, 16) : Number.parseInt(value.replaceAll("x", "0"), 2),
-    }]);
-  }
-
-  return [[parseGuardTerm(trimmed, fieldWidths)]];
-}
-
-function invertGuardCheck(check: GuardCheck): GuardCheck {
-  switch (check.kind) {
-    case "eq":
-      return { ...check, kind: "ne" };
-    case "ne":
-      return { ...check, kind: "eq" };
-    case "eq_field":
-      return { ...check, kind: "ne_field" };
-    case "ne_field":
-      return { ...check, kind: "eq_field" };
-    case "eq_concat":
-      return { ...check, kind: "ne_concat" };
-    case "ne_concat":
-      return { ...check, kind: "eq_concat" };
-  }
-}
-
-function parseValidGuardTermAlternatives(term: string, fieldWidths: FieldWidthMap): GuardCheck[][] {
-  const trimmed = term.trim();
-  const inMatch = /^([A-Za-z0-9_]+)\s+IN\s+\{(.+)\}$/.exec(trimmed);
-  if (inMatch) {
-    const field = inMatch[1];
-    const values = inMatch[2]
-      .split(",")
-      .map((value) => value.trim().replace(/^'+|'+$/g, ""))
-      .filter((value) => value.length > 0);
-    return [[
-      ...values.map((value) => ({
-        kind: "ne" as const,
-        field,
-        mask: value.startsWith("0x") ? -1 : ((1 << value.length) - 1) >>> 0,
-        lsb: 0,
-        value: value.startsWith("0x") ? Number.parseInt(value, 16) : Number.parseInt(value.replaceAll("x", "0"), 2),
-      })),
-    ]];
-  }
-
-  return parseGuardTermAlternatives(trimmed, fieldWidths).map((alternative) => alternative.map(invertGuardCheck));
-}
-
-function parseDecodeGuards(source: string, fieldWidths: FieldWidthMap, options: ParseEncodingFileOptions = {}): Guard[] {
-  const guards: Guard[] = [];
-  const decodePreamble = source.split(/\nlet\s+/)[0] ?? source;
-  const regex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(decodePreamble)) !== null) {
-    const condition = match[1].trim();
-    if (condition.includes("IsFeatureImplemented(")) {
-      continue;
-    }
-    if (condition.includes("MaxImplementedSVL()")) {
-      continue;
-    }
-    const terms = condition
-      .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
-      .map((term) => term.trim())
-      .filter(
-        (term) =>
-          term.length > 0 &&
-          !term.includes("IsFeatureImplemented(") &&
-          !term.includes("()") &&
-          !term.startsWith("MaxImplementedSVL()") &&
-          term !== "!()" &&
-          term !== "()" &&
-          term !== "(" &&
-          term !== ")",
-      );
-    if (terms.length === 0) {
-      continue;
-    }
-    try {
-      let alternatives: GuardCheck[][] = [[]];
-      for (const term of terms) {
-        const termAlternatives = parseGuardTermAlternatives(term, fieldWidths);
-        alternatives = alternatives.flatMap((existing) => termAlternatives.map((next) => [...existing, ...next]));
-      }
-      guards.push(...alternatives.map((all) => ({ all })));
-    } catch (error) {
-      if (!options.ignoreUnsupportedGuards) {
-        throw error;
-      }
-    }
-  }
-  return guards;
-}
-
-function collectFeatures(iclass: any, decodeText: string, fileName: string): string[] {
+function collectFeatures(iclass: any): string[] {
   const features = new Set<string>();
-  for (const variant of children(firstChild(iclass, "arch_variants") ?? { children: [] }, "arch_variant")) {
-    if (variant.attrs.feature) {
-      features.add(variant.attrs.feature);
-    }
+  const variants = firstChild(iclass, "arch_variants");
+  for (const variant of variants ? children(variants, "arch_variant") : []) {
+    if (variant.attrs.feature) features.add(variant.attrs.feature);
   }
   return [...features];
-}
-
-function parseDecodeFeatureGuards(source: string, fieldWidths: FieldWidthMap): FeatureGuard[] {
-  if (source.includes("case CRm::op2 of")) {
-    return [];
-  }
-  const featureGuards: FeatureGuard[] = [];
-  const decodePreamble = source.split(/\nlet\s+/)[0] ?? source;
-  const regex = /if\s+(.+?)\s+then\s+EndOfDecode\(/gs;
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(decodePreamble)) !== null) {
-    const condition = match[1].trim();
-    if (!condition.includes("IsFeatureImplemented(")) {
-      continue;
-    }
-
-    const terms = condition
-      .split(/\s*&amp;&amp;\s*|\s*&&\s*/)
-      .map((term) => term.trim())
-      .filter((term) => term.length > 0);
-    const requiredFeatures = terms
-      .map((term) => /^!IsFeatureImplemented\((FEAT_[A-Za-z0-9_]+)\)$/.exec(term)?.[1] ?? null)
-      .filter((feature): feature is string => feature !== null);
-    const nonFeatureTerms = terms.filter((term) => !term.includes("IsFeatureImplemented("));
-    if (requiredFeatures.length === 0) {
-      continue;
-    }
-
-    let alternatives: GuardCheck[][] = [[]];
-    for (const term of nonFeatureTerms) {
-      const termAlternatives = parseGuardTermAlternatives(term, fieldWidths);
-      alternatives = alternatives.flatMap((existing) => termAlternatives.map((next) => [...existing, ...next]));
-    }
-
-    const feature = requiredFeatures.length === 1 ? requiredFeatures[0] : requiredFeatures.join(" || ");
-    featureGuards.push(...alternatives.map((all) => ({ feature, all })));
-  }
-  return featureGuards;
 }
 
 function collectEncodingMnemonic(encoding: any, instructionDocvars: any): string {
@@ -362,11 +160,69 @@ function collectEncodingMnemonic(encoding: any, instructionDocvars: any): string
   return encoding.attrs.name;
 }
 
+function inheritCanonical(alias: ParsedEncoding, canonical: ParsedEncoding): ParsedEncoding {
+  if (((alias.value ^ canonical.value) & alias.mask & canonical.mask) !== 0) {
+    throw new Error(`alias ${alias.encodingId} conflicts with canonical ${canonical.encodingId}`);
+  }
+  const fields = [...alias.fields];
+  const names = new Map<string, string>();
+  for (const field of canonical.fields) {
+    const existing = fields.find((candidate) => candidate.name === field.name);
+    if (!existing) {
+      fields.push({ ...field }); names.set(field.name, field.name);
+    } else if (existing.lsb === field.lsb && existing.width === field.width) {
+      names.set(field.name, field.name);
+    } else {
+      let name = `__canonical_${field.name}`;
+      while (fields.some((candidate) => candidate.name === name)) name = `_${name}`;
+      fields.push({ ...field, name }); names.set(field.name, name);
+    }
+  }
+  const remap = (check: GuardCheck): GuardCheck => {
+    if (check.kind === "feature") return { ...check };
+    if (check.kind === "eq_concat" || check.kind === "ne_concat") {
+      return { ...check, parts: check.parts.map((part) => ({ ...part, field: names.get(part.field)! })) };
+    }
+    if (check.kind === "eq_field" || check.kind === "ne_field") {
+      return { ...check, field: names.get(check.field)!, otherField: names.get(check.otherField)! };
+    }
+    return { ...check, field: names.get(check.field)! };
+  };
+  const mask = (alias.mask | canonical.mask) >>> 0;
+  let bitCount = 0;
+  for (let remaining = mask; remaining; remaining = (remaining & (remaining - 1)) >>> 0) bitCount += 1;
+  const diagnostics = [...new Set([...(alias.guardDiagnostics ?? []), ...(canonical.guardDiagnostics ?? [])])];
+  return {
+    ...alias,
+    mask,
+    value: (alias.value | canonical.value) >>> 0,
+    bitCount,
+    fields,
+    features: [...new Set([...alias.features, ...canonical.features])],
+    featureGuards: [...alias.featureGuards, ...canonical.featureGuards.map((guard) => ({ ...guard, all: guard.all.map(remap) }))],
+    guards: [...alias.guards, ...canonical.guards.map((guard) => ({ ...guard, all: guard.all.map(remap) }))],
+    canonicalEncodingId: canonical.canonicalEncodingId ?? canonical.encodingId,
+    canonicalFileName: canonical.canonicalFileName ?? canonical.fileName,
+    ...(diagnostics.length ? { guardDiagnostics: diagnostics } : {}),
+  };
+}
+
 export async function parseEncodingFile(
   xmlRoot: string,
   fileName: string,
   options: ParseEncodingFileOptions = {},
 ): Promise<ParsedEncoding[]> {
+  return parseEncodingFileInternal(xmlRoot, fileName, options, new Set());
+}
+
+async function parseEncodingFileInternal(
+
+  xmlRoot: string,
+  fileName: string,
+  options: ParseEncodingFileOptions,
+  ancestors: ReadonlySet<string>,
+): Promise<ParsedEncoding[]> {
+  if (ancestors.has(fileName)) throw new Error(`cyclic alias parent reference: ${[...ancestors, fileName].join(" -> ")}`);
   const fullPath = join(xmlRoot, fileName);
   const source = await readFile(fullPath, "utf8");
   const xml = parseXml(source);
@@ -378,6 +234,10 @@ export async function parseEncodingFile(
   }
 
   const parsed: ParsedEncoding[] = [];
+  const parentFileName = firstChild(xml, "aliasto")?.attrs.refiform;
+  const canonicalEncodings = parentFileName
+    ? await parseEncodingFileInternal(xmlRoot, parentFileName, options, new Set([...ancestors, fileName]))
+    : [];
 
   for (const iclass of children(classes, "iclass")) {
     const regdiagram = firstChild(iclass, "regdiagram");
@@ -388,23 +248,24 @@ export async function parseEncodingFile(
     const fieldWidths = new Map(base.fields.map((field) => [field.name, field.width]));
     const psSection = firstChild(iclass, "ps_section");
     const decodePs = psSection ? children(psSection, "ps")[0] : undefined;
-    const decodeText = decodePs ? children(decodePs, "pstext")[0]?.children.map((child) => (typeof child === "string" ? child : "")).join("") ?? "" : "";
-    const features = collectFeatures(iclass, decodeText, fileName);
-    const featureGuards = parseDecodeFeatureGuards(decodeText, fieldWidths);
-    const guards = parseDecodeGuards(decodeText, fieldWidths, options);
+    const decodeText = decodePs ? rawTextContent(children(decodePs, "pstext")[0]) : "";
+    const features = collectFeatures(iclass);
+    const guardDiagnostics: string[] = [];
+    const guards = parseDecodeGuards(decodeText, fieldWidths, {
+      unsupportedExpressions: options.unsupportedExpressions,
+      expressionRewrites: DECODE_EXPRESSION_REWRITES.get(fileName),
+      onDiagnostic(diagnostic) {
+        guardDiagnostics.push(`${diagnostic.expression}: ${diagnostic.reason}`);
+        options.onDiagnostic?.(diagnostic);
+      },
+    });
     for (const constraint of base.constraints) {
       if (!SME2_FLOAT_MAXMIN_CONSTRAINT_FILES.has(fileName) || constraint.field !== "size") {
         continue;
       }
       const term = `${constraint.field} ${constraint.expression}`;
-      try {
-        const alternatives = parseValidGuardTermAlternatives(term, fieldWidths);
-        guards.push(...alternatives.map((all) => ({ all })));
-      } catch (error) {
-        if (!options.ignoreUnsupportedGuards) {
-          throw error;
-        }
-      }
+      const alternatives = parseGuardAlternatives(term, fieldWidths, true);
+      guards.push(...alternatives.map((all) => ({ all, outcome: "undefined" as const })));
     }
     const className = iclass.attrs.name ?? "";
 
@@ -425,7 +286,7 @@ export async function parseEncodingFile(
         }
       }
 
-      parsed.push({
+      const result: ParsedEncoding = {
         instructionId,
         encodingId: encoding.attrs.name,
         mnemonic: collectEncodingMnemonic(encoding, instructionDocvars),
@@ -436,9 +297,19 @@ export async function parseEncodingFile(
         bitCount,
         fields,
         features,
-        featureGuards,
+        featureGuards: [],
         guards,
-      });
+        ...(guardDiagnostics.length ? { guardDiagnostics: [...new Set(guardDiagnostics)] } : {}),
+      };
+      if (parentFileName) {
+        const equivalent = firstChild(encoding, "equivalent_to");
+        const template = equivalent ? firstChild(equivalent, "asmtemplate") : undefined;
+        const reference = template ? children(template, "a").find((link) => link.attrs.href?.startsWith(`${parentFileName}#`))?.attrs.href : undefined;
+        const canonicalId = reference?.slice(parentFileName.length + 1);
+        const canonical = canonicalEncodings.find((candidate) => candidate.encodingId === canonicalId);
+        if (!canonical) throw new Error(`missing canonical encoding for ${fileName}:${result.encodingId}: ${reference ?? parentFileName}`);
+        parsed.push(inheritCanonical(result, canonical));
+      } else parsed.push(result);
     }
   }
 

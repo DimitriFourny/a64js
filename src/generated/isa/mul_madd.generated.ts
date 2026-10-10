@@ -54,7 +54,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "MADD_32A_dp_3src",
+    "canonicalFileName": "madd.xml"
   },
   {
     "instructionId": "MUL_MADD",
@@ -109,6 +111,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "MADD_64A_dp_3src",
+    "canonicalFileName": "madd.xml"
   }
 ];

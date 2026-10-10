@@ -35,12 +35,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE_B16MM"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE_B16MM",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE_B16MM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -50,12 +50,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8DOT4"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8DOT4",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8DOT4",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

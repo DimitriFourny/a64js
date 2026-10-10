@@ -41,7 +41,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2 && FEAT_SVE_B16B16"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE_B16B16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "bfmax_mz_zzv",
@@ -83,6 +104,27 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2 && FEAT_SVE_B16B16"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE_B16B16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   }
 ];

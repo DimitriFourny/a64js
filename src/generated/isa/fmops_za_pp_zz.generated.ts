@@ -45,13 +45,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F16F16"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F16F16",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F16F16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fmops_za_pp_zz",
@@ -97,13 +103,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fmops_za_pp_zz",
@@ -149,12 +161,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F64F64"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F64F64",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F64F64",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

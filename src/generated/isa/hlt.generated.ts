@@ -34,6 +34,10 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "guardDiagnostics": [
+      "HaltingAllowed(): debug halting permission is not configured; assumes the instruction is admitted by the implementation",
+      "EDSCR().HDE == '0': EDSCR.HDE is not configured; assumes the instruction is admitted by the implementation"
+    ]
   }
 ];

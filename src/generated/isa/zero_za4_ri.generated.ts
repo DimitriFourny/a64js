@@ -30,13 +30,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "zero_za4_ri",
@@ -67,13 +73,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "zero_za4_ri",
@@ -104,12 +116,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -41,7 +41,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz4_za_b1",
+    "canonicalFileName": "mova_mz4_za.xml"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -88,7 +101,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz4_za_h1",
+    "canonicalFileName": "mova_mz4_za.xml"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -130,7 +156,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz4_za_w1",
+    "canonicalFileName": "mova_mz4_za.xml"
   },
   {
     "instructionId": "mov_mova_mz4_za",
@@ -172,6 +211,22 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz4_za_d1",
+    "canonicalFileName": "mova_mz4_za.xml",
+    "guardDiagnostics": [
+      "MaxImplementedSVL() < 256: maximum streaming vector length is not configured; assumes the instruction is admitted by the implementation"
+    ]
   }
 ];

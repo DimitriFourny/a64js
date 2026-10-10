@@ -45,13 +45,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "BF12CVTL_advsimd",
@@ -97,12 +103,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

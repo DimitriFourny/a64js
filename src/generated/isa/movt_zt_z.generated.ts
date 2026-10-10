@@ -30,12 +30,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_LUTv2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_LUTv2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_LUTv2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

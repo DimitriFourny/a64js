@@ -35,13 +35,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   },
   {
     "instructionId": "LDAPR",
@@ -77,13 +87,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   },
   {
     "instructionId": "LDAPR",
@@ -144,13 +164,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "LDAPR",
@@ -211,12 +237,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

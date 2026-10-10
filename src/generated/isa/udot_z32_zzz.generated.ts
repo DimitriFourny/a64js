@@ -40,13 +40,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2p3 || FEAT_SME2p3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE2p3 || FEAT_SME2p3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p3",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "udot_z32_zzz",
@@ -82,12 +93,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2 || FEAT_SVE2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2 || FEAT_SVE2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

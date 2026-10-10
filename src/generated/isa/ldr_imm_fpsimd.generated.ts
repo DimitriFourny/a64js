@@ -45,13 +45,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -68,7 +73,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -116,13 +122,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -139,7 +150,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -187,13 +199,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -210,7 +227,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -258,13 +276,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -281,7 +304,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -329,13 +353,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -352,7 +381,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -400,13 +430,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -423,7 +458,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -471,13 +507,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -494,7 +535,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -542,13 +584,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -565,7 +612,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -613,13 +661,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -636,7 +689,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -684,13 +738,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -707,7 +766,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -755,13 +815,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -778,7 +843,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -826,13 +892,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -849,7 +920,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -897,13 +969,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -920,7 +997,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -968,13 +1046,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -991,7 +1074,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -1039,13 +1123,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -1062,7 +1151,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

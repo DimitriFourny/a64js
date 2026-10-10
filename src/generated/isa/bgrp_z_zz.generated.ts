@@ -40,12 +40,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE_BitPerm"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE_BitPerm",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE_BitPerm",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

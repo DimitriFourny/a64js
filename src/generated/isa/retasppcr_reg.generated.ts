@@ -40,13 +40,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth_LR"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth_LR",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth_LR",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "RETASPPCR_reg",
@@ -87,12 +93,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth_LR"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth_LR",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth_LR",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -62,7 +62,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "field": "N",
             "otherField": "sf"
           }
-        ]
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -80,7 +81,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 5,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -145,7 +147,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "field": "N",
             "otherField": "sf"
           }
-        ]
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -163,7 +166,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 5,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

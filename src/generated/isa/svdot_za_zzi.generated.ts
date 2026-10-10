@@ -51,7 +51,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2 && FEAT_SME_I16I64"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_I16I64",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "svdot_za_zzi",
@@ -102,12 +123,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

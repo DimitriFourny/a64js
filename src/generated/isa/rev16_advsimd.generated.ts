@@ -45,12 +45,207 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "o0",
+                "msb": 0,
+                "lsb": 0
+              },
+              {
+                "field": "U",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

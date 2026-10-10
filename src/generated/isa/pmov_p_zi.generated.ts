@@ -35,13 +35,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2p1 || FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p1",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "pmov_p_zi",
@@ -77,13 +88,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2p1 || FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p1",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "pmov_p_zi",
@@ -119,13 +141,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2p1 || FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p1",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "pmov_p_zi",
@@ -161,12 +194,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2p1 || FEAT_SME2p1"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE2p1 || FEAT_SME2p1",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p1",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

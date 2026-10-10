@@ -50,13 +50,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "ld1w_z_p_ai",
@@ -107,12 +113,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SVE",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

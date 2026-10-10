@@ -36,7 +36,33 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "luti2_z_zz",
@@ -78,6 +104,32 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   }
 ];

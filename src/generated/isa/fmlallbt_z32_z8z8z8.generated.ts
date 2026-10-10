@@ -36,6 +36,37 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 && FEAT_FP8FMA) || FEAT_SSVE_FP8FMA"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SSVE_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8FMA",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SSVE_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   }
 ];

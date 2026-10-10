@@ -64,7 +64,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 3
           }
-        ]
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -82,7 +83,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 5,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -149,7 +151,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 3
           }
-        ]
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -167,7 +170,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 5,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

@@ -25,13 +25,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "nop"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "XPAC",
@@ -77,13 +83,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "XPAC",
@@ -129,12 +141,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

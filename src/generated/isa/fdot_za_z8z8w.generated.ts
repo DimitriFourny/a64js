@@ -40,13 +40,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F8F16"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F8F16",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F8F16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fdot_za_z8z8w",
@@ -87,12 +93,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F8F16"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F8F16",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F8F16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

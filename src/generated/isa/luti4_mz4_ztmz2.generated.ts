@@ -35,13 +35,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_LUTv2"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_SME_LUTv2",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_LUTv2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -51,7 +56,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -99,13 +105,34 @@ export const ENCODINGS: GeneratedEncoding[] = [
       {
         "all": [
           {
+            "kind": "feature",
+            "feature": "FEAT_SME2p1",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_LUTv2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
             "kind": "ne",
             "field": "size",
             "mask": 3,
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

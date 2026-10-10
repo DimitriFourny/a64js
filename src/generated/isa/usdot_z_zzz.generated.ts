@@ -36,6 +36,32 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE || FEAT_SME) && FEAT_I8MM"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_I8MM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   }
 ];

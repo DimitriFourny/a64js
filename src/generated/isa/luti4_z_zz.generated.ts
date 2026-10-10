@@ -36,7 +36,33 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "luti4_z_zz",
@@ -78,7 +104,36 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "guardDiagnostics": [
+      "MaxImplementedAnyVL() < 256: maximum vector length is not configured; assumes the instruction is admitted by the implementation"
+    ]
   },
   {
     "instructionId": "luti4_z_zz",
@@ -120,6 +175,32 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "(FEAT_SVE2 || FEAT_SME2) && FEAT_LUT"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   }
 ];

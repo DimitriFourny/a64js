@@ -50,13 +50,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CSSC"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CSSC",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CSSC",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "SMAX_imm",
@@ -107,12 +113,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CSSC"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CSSC",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CSSC",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

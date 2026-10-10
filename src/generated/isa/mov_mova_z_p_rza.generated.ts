@@ -51,7 +51,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_z_p_rza_b",
+    "canonicalFileName": "mova_z_p_rza.xml"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -108,7 +121,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_z_p_rza_d",
+    "canonicalFileName": "mova_z_p_rza.xml"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -165,7 +191,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_z_p_rza_h",
+    "canonicalFileName": "mova_z_p_rza.xml"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -217,7 +256,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_z_p_rza_q",
+    "canonicalFileName": "mova_z_p_rza.xml"
   },
   {
     "instructionId": "mov_mova_z_p_rza",
@@ -274,6 +326,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_z_p_rza_w",
+    "canonicalFileName": "mova_z_p_rza.xml"
   }
 ];

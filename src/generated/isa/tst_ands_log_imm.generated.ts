@@ -49,7 +49,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ANDS_32S_log_imm",
+    "canonicalFileName": "ands_log_imm.xml"
   },
   {
     "instructionId": "TST_ANDS_log_imm",
@@ -99,6 +121,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ANDS_64S_log_imm",
+    "canonicalFileName": "ands_log_imm.xml"
   }
 ];

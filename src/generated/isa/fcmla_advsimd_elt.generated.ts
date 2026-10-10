@@ -65,25 +65,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FCMA"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FCMA",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "size",
-            "mask": 3,
-            "lsb": 0,
-            "value": 2
+            "kind": "feature",
+            "feature": "FEAT_FCMA",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -93,7 +86,37 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          },
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -111,7 +134,27 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
       },
       {
         "all": [
@@ -136,7 +179,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

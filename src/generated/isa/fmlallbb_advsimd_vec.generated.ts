@@ -50,13 +50,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8FMA"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8FMA",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -107,13 +113,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8FMA"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8FMA",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -164,13 +176,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8FMA"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8FMA",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "FMLALLBB_advsimd_vec",
@@ -221,12 +239,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8FMA"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8FMA",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8FMA",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

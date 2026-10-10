@@ -31,6 +31,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz_za2_1",
+    "canonicalFileName": "mova_mz_za2.xml"
   }
 ];

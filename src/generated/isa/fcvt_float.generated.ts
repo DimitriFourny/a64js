@@ -45,13 +45,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -61,7 +76,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -109,13 +137,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -125,7 +168,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -173,13 +229,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -189,7 +260,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -237,13 +321,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -253,7 +352,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -301,13 +413,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -317,7 +444,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -365,13 +505,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_field",
+            "field": "ftype",
+            "otherField": "opc"
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -381,7 +536,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "opc",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   }

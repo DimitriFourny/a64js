@@ -55,6 +55,26 @@ export const ENCODINGS: GeneratedEncoding[] = [
       {
         "all": [
           {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
             "kind": "eq",
             "field": "len",
             "mask": 1,
@@ -68,7 +88,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -126,6 +147,26 @@ export const ENCODINGS: GeneratedEncoding[] = [
       {
         "all": [
           {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LUT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
             "kind": "eq",
             "field": "len",
             "mask": 1,
@@ -139,7 +180,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

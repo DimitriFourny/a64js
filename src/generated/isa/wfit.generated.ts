@@ -30,12 +30,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_WFxT"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_WFxT",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_WFxT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

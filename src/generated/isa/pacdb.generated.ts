@@ -45,13 +45,38 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "ne",
+            "field": "Z",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "Rn",
+            "mask": 31,
+            "lsb": 0,
+            "value": 31
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "PACDB",
@@ -97,12 +122,37 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "ne",
+            "field": "Z",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "Rn",
+            "mask": 31,
+            "lsb": 0,
+            "value": 31
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

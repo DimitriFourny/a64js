@@ -55,13 +55,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FHM"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FHM",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FHM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -71,7 +76,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -129,13 +135,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FHM"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FHM",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FHM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -145,7 +156,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

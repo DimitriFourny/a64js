@@ -64,7 +64,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 1,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -131,7 +132,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 1,
             "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

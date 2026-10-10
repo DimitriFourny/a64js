@@ -50,13 +50,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP8",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "FSCALE_advsimd",
@@ -107,13 +113,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FP8"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FP8",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP8",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -130,7 +141,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 3
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

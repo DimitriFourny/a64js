@@ -60,13 +60,38 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "ne",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "SQDMLSL_advsimd_elt",
@@ -132,12 +157,37 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "ne",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "size",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

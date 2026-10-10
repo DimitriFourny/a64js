@@ -46,6 +46,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_MTE"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_MTE",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "SUBPS_64S_dp_2src",
+    "canonicalFileName": "subps.xml"
   }
 ];

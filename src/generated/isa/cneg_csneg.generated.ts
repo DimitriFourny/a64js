@@ -54,7 +54,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "CSNEG_32_condsel",
+    "canonicalFileName": "csneg.xml"
   },
   {
     "instructionId": "CNEG_CSNEG",
@@ -109,6 +111,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "CSNEG_64_condsel",
+    "canonicalFileName": "csneg.xml"
   }
 ];

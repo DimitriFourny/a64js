@@ -46,6 +46,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "NOT_asimdmisc_R",
+    "canonicalFileName": "not_advsimd.xml"
   }
 ];

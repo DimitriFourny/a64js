@@ -1,3 +1,4 @@
+// Generated from test/reference/capstone; do not use this file as reference input.
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "CSSC/smin_64_reg.s.yaml",

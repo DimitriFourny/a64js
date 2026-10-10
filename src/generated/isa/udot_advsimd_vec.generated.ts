@@ -50,13 +50,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_DotProd"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_DotProd",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_DotProd",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -66,7 +71,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

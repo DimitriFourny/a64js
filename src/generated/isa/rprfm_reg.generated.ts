@@ -55,12 +55,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_RPRFM"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_RPRFM",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_RPRFM",
+            "implemented": false
+          }
+        ],
+        "outcome": "nop"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -46,6 +46,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_GCS"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "SYSL_RC_systeminstrs",
+    "canonicalFileName": "sysl.xml"
   }
 ];

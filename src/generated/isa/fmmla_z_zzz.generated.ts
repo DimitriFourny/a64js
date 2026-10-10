@@ -35,13 +35,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_F64MM"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_F64MM",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_F64MM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fmmla_z_zzz",
@@ -78,7 +84,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SVE2p2 && FEAT_F16MM"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2p2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_F16MM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ]
   },
   {
     "instructionId": "fmmla_z_zzz",
@@ -114,12 +141,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_F32MM"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_F32MM",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_F32MM",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

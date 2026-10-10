@@ -54,7 +54,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "CSINV_32_condsel",
+    "canonicalFileName": "csinv.xml"
   },
   {
     "instructionId": "CINV_CSINV",
@@ -109,6 +111,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "CSINV_64_condsel",
+    "canonicalFileName": "csinv.xml"
   }
 ];

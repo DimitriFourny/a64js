@@ -41,7 +41,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz2_za_b1",
+    "canonicalFileName": "mova_mz2_za.xml"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -83,7 +96,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz2_za_d1",
+    "canonicalFileName": "mova_mz2_za.xml"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -130,7 +156,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz2_za_h1",
+    "canonicalFileName": "mova_mz2_za.xml"
   },
   {
     "instructionId": "mov_mova_mz2_za",
@@ -177,6 +216,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "mova_mz2_za_w1",
+    "canonicalFileName": "mova_mz2_za.xml"
   }
 ];

@@ -4,6 +4,7 @@ import type { GeneratedEncoding } from "../src/types.ts";
 import { parseEncodingFile } from "./encodings.ts";
 import { generateCapstoneFixtures } from "./generate-capstone.ts";
 import { SUPPORTED_FILES, XML_ROOT } from "./supported-files.ts";
+import { buildOpcodeBuckets } from "./dispatch.ts";
 
 const OPERAND_SCHEMA_BY_FILE = new Map<string, string>([
   ["adc.xml", "gp-rd-rn-rm-sf"],
@@ -80,6 +81,9 @@ ${imports}
 export const ENCODINGS: GeneratedEncoding[] = [
 ${entries}
 ];
+
+/** Generated candidate indexes keyed by instruction bits 31:24. */
+export const OPCODE_BUCKETS: readonly (readonly number[])[] = ${JSON.stringify(buildOpcodeBuckets(ordered))};
 `;
 }
 

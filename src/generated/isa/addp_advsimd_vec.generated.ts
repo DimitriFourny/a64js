@@ -50,13 +50,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -75,7 +80,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 6
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

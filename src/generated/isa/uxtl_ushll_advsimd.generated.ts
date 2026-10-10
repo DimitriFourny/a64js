@@ -51,6 +51,31 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "immh",
+            "mask": 8,
+            "lsb": 3,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "USHLL_asimdshf_L",
+    "canonicalFileName": "ushll_advsimd.xml"
   }
 ];

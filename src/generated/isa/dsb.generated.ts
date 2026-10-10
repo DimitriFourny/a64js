@@ -30,13 +30,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_XS"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_XS",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_XS",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "DSB",

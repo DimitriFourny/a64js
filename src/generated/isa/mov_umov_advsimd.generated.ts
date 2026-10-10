@@ -46,7 +46,70 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 8
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 8
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "UMOV_asimdins_X_x",
+    "canonicalFileName": "umov_advsimd.xml"
   },
   {
     "instructionId": "MOV_UMOV_advsimd",
@@ -93,6 +156,69 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 8
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "Q",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "imm5",
+            "mask": 15,
+            "lsb": 0,
+            "value": 8
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "UMOV_asimdins_W_w",
+    "canonicalFileName": "umov_advsimd.xml"
   }
 ];

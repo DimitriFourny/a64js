@@ -36,6 +36,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SVE || FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "orr_z_zz_",
+    "canonicalFileName": "orr_z_zz.xml"
   }
 ];

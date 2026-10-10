@@ -45,13 +45,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "LDIAPP",
@@ -97,13 +103,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "LDIAPP",
@@ -149,13 +161,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "LDIAPP",
@@ -201,12 +219,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC3"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC3",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC3",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

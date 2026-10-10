@@ -49,7 +49,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ORR_32_log_imm",
+    "canonicalFileName": "orr_log_imm.xml"
   },
   {
     "instructionId": "MOV_ORR_log_imm",
@@ -99,6 +121,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ORR_64_log_imm",
+    "canonicalFileName": "orr_log_imm.xml"
   }
 ];

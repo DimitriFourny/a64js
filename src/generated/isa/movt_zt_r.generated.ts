@@ -31,6 +31,20 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SME2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "guardDiagnostics": [
+      "Halted(): debug halt state is not configured; assumes the instruction is admitted by the implementation"
+    ]
   }
 ];

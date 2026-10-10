@@ -40,13 +40,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "LDAPUR_gen",
@@ -87,12 +93,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_LRCPC2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_LRCPC2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_LRCPC2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

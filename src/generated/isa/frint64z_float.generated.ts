@@ -45,23 +45,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FRINTTS"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FRINTTS",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FRINTTS",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
             "kind": "eq",
             "field": "ftype",
-            "mask": 3,
+            "mask": 2,
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -109,23 +115,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_FRINTTS"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_FRINTTS",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FRINTTS",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
             "kind": "eq",
             "field": "ftype",
-            "mask": 3,
+            "mask": 2,
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

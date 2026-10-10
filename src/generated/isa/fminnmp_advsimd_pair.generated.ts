@@ -50,13 +50,34 @@ export const ENCODINGS: GeneratedEncoding[] = [
       {
         "all": [
           {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
             "kind": "eq",
             "field": "sz",
             "mask": 1,
             "lsb": 0,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -104,12 +125,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_AdvSIMD"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_AdvSIMD",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

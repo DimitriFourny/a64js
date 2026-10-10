@@ -50,12 +50,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_JSCVT"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_JSCVT",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_JSCVT",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

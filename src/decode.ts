@@ -2,7 +2,7 @@ import { buildOperands } from "./formatters.ts";
 import { OperandDecodeError } from "./operand-errors.ts";
 import { normalizeWord } from "./input.ts";
 import type { DecodeOptions, DecodedInstruction, GeneratedEncoding, GuardCheck } from "./types.ts";
-import { ENCODINGS } from "./generated/isa/index.generated.ts";
+import { ENCODINGS, OPCODE_BUCKETS } from "./generated/isa/index.generated.ts";
 
 function extractField(word: number, lsb: number, width: number): number {
   if (width === 32) {
@@ -37,7 +37,7 @@ function guardCheckMatches(fields: Record<string, number>, guard: GuardCheck, en
       const value = (raw >>> part.lsb) & ((1 << width) - 1);
       actual = (actual << width) | value;
     }
-    return guard.kind === "eq_concat" ? actual === guard.value : actual !== guard.value;
+    return guard.kind === "eq_concat" ? (actual >>> 0) === guard.value : (actual >>> 0) !== guard.value;
   }
 
   const raw = fields[guard.field] ?? 0;
@@ -337,7 +337,8 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
   word = normalizeWord(word);
   const enabledFeatures = new Set(options.features ?? []);
 
-  for (const encoding of ENCODINGS) {
+  for (const index of OPCODE_BUCKETS[word >>> 24]) {
+    const encoding = ENCODINGS[index];
     if (((word & encoding.mask) >>> 0) !== encoding.value) {
       continue;
     }
@@ -347,11 +348,15 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     for (const guard of encoding.guards) {
       if (guard.all.every((check) => guardCheckMatches(fields, check, enabledFeatures))) {
         const nop = guard.outcome === "nop";
+        const missing = [...new Set([
+          ...missingFeatures(encoding, fields, enabledFeatures),
+          ...guard.all.flatMap((check) => check.kind === "feature" && !check.implemented ? [check.feature] : []),
+        ])];
         return {
           status: nop ? "ok" : "undefined", word, encoding, mnemonic: encoding.mnemonic, fields,
           ...(nop ? { operands: [], behavior: "nop" as const } : {}),
-          availability: hasFeatures(encoding, fields, enabledFeatures) ? "available" : "unavailable",
-          errors: nop ? undefined : ["decode guard failed"],
+          availability: missing.length === 0 ? "available" : "unavailable",
+          errors: nop ? undefined : [missing.length ? `missing features: ${missing.join(", ")}` : "decode guard failed"],
         };
       }
     }

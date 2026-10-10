@@ -51,6 +51,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_AdvSIMD"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_AdvSIMD",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ORR_asimdsame_only",
+    "canonicalFileName": "orr_advsimd_reg.xml"
   }
 ];

@@ -49,6 +49,85 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "immr",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "imms",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "SBFM_64M_bitfield",
+    "canonicalFileName": "sbfm.xml"
   }
 ];

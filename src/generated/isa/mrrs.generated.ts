@@ -50,13 +50,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SYSREG128"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_SYSREG128",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SYSREG128",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -66,7 +71,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 1
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

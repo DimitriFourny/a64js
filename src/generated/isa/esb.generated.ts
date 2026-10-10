@@ -25,12 +25,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_RAS"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_RAS",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_RAS",
+            "implemented": false
+          }
+        ],
+        "outcome": "nop"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

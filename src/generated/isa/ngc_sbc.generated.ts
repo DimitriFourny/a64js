@@ -45,6 +45,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [],
     "featureGuards": [],
     "guards": [],
+    "canonicalEncodingId": "SBC_32_addsub_carry",
+    "canonicalFileName": "sbc.xml",
     "operandSchemaId": "gp-rd-rn-rm-sf"
   },
   {
@@ -91,6 +93,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [],
     "featureGuards": [],
     "guards": [],
+    "canonicalEncodingId": "SBC_64_addsub_carry",
+    "canonicalFileName": "sbc.xml",
     "operandSchemaId": "gp-rd-rn-rm-sf"
   }
 ];

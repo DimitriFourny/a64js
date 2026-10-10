@@ -55,13 +55,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   },
   {
     "instructionId": "LDRA",
@@ -117,13 +127,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   },
   {
     "instructionId": "LDRA",
@@ -179,13 +199,23 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   },
   {
     "instructionId": "LDRA",
@@ -241,12 +271,22 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_PAuth"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_PAuth",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_PAuth",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ],
-    "guards": []
+    "guardDiagnostics": [
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_UNDEF}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction",
+      "wback && Rn == Rt && Rn != 31 && c IN {Constraint_NOP}: ConstrainUnpredictable selects an implementation-defined outcome; static decoding preserves the recognized instruction"
+    ]
   }
 ];

@@ -29,6 +29,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "DSB_BO_barriers",
+    "canonicalFileName": "dsb.xml"
   }
 ];

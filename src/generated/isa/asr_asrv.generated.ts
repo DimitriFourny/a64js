@@ -44,7 +44,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "ASRV_32_dp_2src",
+    "canonicalFileName": "asrv.xml"
   },
   {
     "instructionId": "ASR_ASRV",
@@ -89,6 +91,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "ASRV_64_dp_2src",
+    "canonicalFileName": "asrv.xml"
   }
 ];

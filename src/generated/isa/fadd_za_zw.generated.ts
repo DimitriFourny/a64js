@@ -40,13 +40,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F16F16 || FEAT_SME_F8F16"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F16F16 || FEAT_SME_F8F16",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F16F16",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F8F16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fadd_za_zw",
@@ -87,13 +98,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME_F16F16 || FEAT_SME_F8F16"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME_F16F16 || FEAT_SME_F8F16",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F16F16",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F8F16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fadd_za_zw",
@@ -134,13 +156,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       },
       {
-        "feature": "FEAT_SME_F64F64",
         "all": [
           {
             "kind": "eq",
@@ -148,11 +176,16 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "mask": 1,
             "lsb": 0,
             "value": 1
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F64F64",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "fadd_za_zw",
@@ -193,13 +226,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       },
       {
-        "feature": "FEAT_SME_F64F64",
         "all": [
           {
             "kind": "eq",
@@ -207,10 +246,15 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "mask": 1,
             "lsb": 0,
             "value": 1
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_F64F64",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

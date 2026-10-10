@@ -26,6 +26,24 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SVE || FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "dupm_z_i_",
+    "canonicalFileName": "dupm_z_i.xml"
   }
 ];

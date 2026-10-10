@@ -54,7 +54,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "imm6",
+            "mask": 32,
+            "lsb": 5,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ORR_32_log_shift",
+    "canonicalFileName": "orr_log_shift.xml"
   },
   {
     "instructionId": "MOV_ORR_log_shift",
@@ -109,6 +131,28 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "imm6",
+            "mask": 32,
+            "lsb": 5,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "ORR_64_log_shift",
+    "canonicalFileName": "orr_log_shift.xml"
   }
 ];

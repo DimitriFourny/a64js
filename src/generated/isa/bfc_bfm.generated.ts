@@ -51,7 +51,86 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_ASMv8p2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "immr",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "imms",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "BFM_32M_bitfield",
+    "canonicalFileName": "bfm.xml"
   },
   {
     "instructionId": "BFC_BFM",
@@ -103,6 +182,85 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_ASMv8p2"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "N",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "immr",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "ne",
+            "field": "imms",
+            "mask": 32,
+            "lsb": 5,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "BFM_64M_bitfield",
+    "canonicalFileName": "bfm.xml"
   }
 ];

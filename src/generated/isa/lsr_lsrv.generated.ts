@@ -44,7 +44,9 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "LSRV_32_dp_2src",
+    "canonicalFileName": "lsrv.xml"
   },
   {
     "instructionId": "LSR_LSRV",
@@ -89,6 +91,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "LSRV_64_dp_2src",
+    "canonicalFileName": "lsrv.xml"
   }
 ];

@@ -41,6 +41,45 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SVE || FEAT_SME"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE",
+            "implemented": false
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "size",
+                "msb": 1,
+                "lsb": 0
+              },
+              {
+                "field": "sh",
+                "msb": 0,
+                "lsb": 0
+              }
+            ],
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "dup_z_i_",
+    "canonicalFileName": "dup_z_i.xml"
   }
 ];

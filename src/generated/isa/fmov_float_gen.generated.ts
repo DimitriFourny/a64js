@@ -48,25 +48,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -92,7 +85,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -143,25 +315,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -187,7 +352,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -238,25 +582,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -282,7 +619,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -333,25 +849,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -377,7 +886,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -428,25 +1116,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -472,7 +1153,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -523,25 +1383,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -567,7 +1420,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -618,25 +1650,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -662,7 +1687,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -713,25 +1917,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -757,7 +1954,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -808,25 +2184,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -852,7 +2221,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -903,25 +2451,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -947,7 +2488,186 @@ export const ENCODINGS: GeneratedEncoding[] = [
             ],
             "value": 13
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 12
+          },
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq_concat",
+            "parts": [
+              {
+                "field": "opcode",
+                "msb": 2,
+                "lsb": 1
+              },
+              {
+                "field": "rmode",
+                "msb": 1,
+                "lsb": 0
+              }
+            ],
+            "value": 13
+          },
+          {
+            "kind": "ne",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 2
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   }

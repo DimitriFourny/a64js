@@ -55,13 +55,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       },
       {
-        "feature": "FEAT_SME_I16I64",
         "all": [
           {
             "kind": "eq",
@@ -69,11 +75,16 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "mask": 1,
             "lsb": 0,
             "value": 1
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_I16I64",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "umlsll_za_zzw",
@@ -129,13 +140,19 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SME2"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_SME2",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       },
       {
-        "feature": "FEAT_SME_I16I64",
         "all": [
           {
             "kind": "eq",
@@ -143,10 +160,15 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "mask": 1,
             "lsb": 0,
             "value": 1
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_SME_I16I64",
+            "implemented": false
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -40,23 +40,29 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_SVE2"
     ],
-    "featureGuards": [
-      {
-        "feature": "FEAT_SVE2",
-        "all": []
-      }
-    ],
+    "featureGuards": [],
     "guards": [
+      {
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_SVE2",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
             "kind": "eq",
             "field": "size",
-            "mask": -1,
+            "mask": 2,
             "lsb": 0,
-            "value": null
+            "value": 0
           }
-        ]
+        ],
+        "outcome": "undefined"
       }
     ]
   }

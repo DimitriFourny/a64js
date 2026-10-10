@@ -59,7 +59,46 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 5
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 6
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 7
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "SUBS_32S_addsub_ext",
+    "canonicalFileName": "subs_addsub_ext.xml"
   },
   {
     "instructionId": "CMP_SUBS_addsub_ext",
@@ -119,6 +158,45 @@ export const ENCODINGS: GeneratedEncoding[] = [
     ],
     "features": [],
     "featureGuards": [],
-    "guards": []
+    "guards": [
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 5
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 6
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "imm3",
+            "mask": 7,
+            "lsb": 0,
+            "value": 7
+          }
+        ],
+        "outcome": "undefined"
+      }
+    ],
+    "canonicalEncodingId": "SUBS_64S_addsub_ext",
+    "canonicalFileName": "subs_addsub_ext.xml"
   }
 ];

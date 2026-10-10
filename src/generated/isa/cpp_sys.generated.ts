@@ -46,6 +46,8 @@ export const ENCODINGS: GeneratedEncoding[] = [
       "FEAT_SPECRES"
     ],
     "featureGuards": [],
-    "guards": []
+    "guards": [],
+    "canonicalEncodingId": "SYS_CR_systeminstrs",
+    "canonicalFileName": "sys.xml"
   }
 ];

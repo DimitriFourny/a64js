@@ -50,13 +50,57 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CRC32",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CRC32",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "CRC32C",
@@ -107,13 +151,57 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CRC32",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CRC32",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "CRC32C",
@@ -164,13 +252,57 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CRC32",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CRC32",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   },
   {
     "instructionId": "CRC32C",
@@ -221,12 +353,56 @@ export const ENCODINGS: GeneratedEncoding[] = [
     "features": [
       "FEAT_CRC32"
     ],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_CRC32",
-        "all": []
+        "all": [
+          {
+            "kind": "feature",
+            "feature": "FEAT_CRC32",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 1
+          },
+          {
+            "kind": "ne",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "sf",
+            "mask": 1,
+            "lsb": 0,
+            "value": 0
+          },
+          {
+            "kind": "eq",
+            "field": "sz",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          }
+        ],
+        "outcome": "undefined"
       }
-    ],
-    "guards": []
+    ]
   }
 ];

@@ -48,25 +48,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -76,7 +69,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -127,25 +138,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -155,7 +159,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   },
@@ -206,25 +228,18 @@ export const ENCODINGS: GeneratedEncoding[] = [
       }
     ],
     "features": [],
-    "featureGuards": [
+    "featureGuards": [],
+    "guards": [
       {
-        "feature": "FEAT_FP",
-        "all": []
-      },
-      {
-        "feature": "FEAT_FP16",
         "all": [
           {
-            "kind": "eq",
-            "field": "ftype",
-            "mask": 3,
-            "lsb": 0,
-            "value": 3
+            "kind": "feature",
+            "feature": "FEAT_FP",
+            "implemented": false
           }
-        ]
-      }
-    ],
-    "guards": [
+        ],
+        "outcome": "undefined"
+      },
       {
         "all": [
           {
@@ -234,7 +249,25 @@ export const ENCODINGS: GeneratedEncoding[] = [
             "lsb": 0,
             "value": 2
           }
-        ]
+        ],
+        "outcome": "undefined"
+      },
+      {
+        "all": [
+          {
+            "kind": "eq",
+            "field": "ftype",
+            "mask": 3,
+            "lsb": 0,
+            "value": 3
+          },
+          {
+            "kind": "feature",
+            "feature": "FEAT_FP16",
+            "implemented": false
+          }
+        ],
+        "outcome": "undefined"
       }
     ]
   }

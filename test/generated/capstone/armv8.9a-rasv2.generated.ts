@@ -1,3 +1,4 @@
+// Generated from test/reference/capstone; do not use this file as reference input.
 export const SUPPORTED_CAPSTONE_CASES = [
   {
     "sourceFile": "armv8.9a-rasv2.s.yaml",
