@@ -1,4 +1,6 @@
 import { buildOperands } from "./formatters.ts";
+import { OperandDecodeError } from "./operand-errors.ts";
+import { normalizeWord } from "./input.ts";
 import type { DecodeOptions, DecodedInstruction, GeneratedEncoding, GuardCheck } from "./types.ts";
 import { ENCODINGS } from "./generated/isa/index.generated.ts";
 
@@ -17,7 +19,10 @@ function extractFields(word: number, encoding: GeneratedEncoding): Record<string
   return result;
 }
 
-function guardCheckMatches(fields: Record<string, number>, guard: GuardCheck): boolean {
+function guardCheckMatches(fields: Record<string, number>, guard: GuardCheck, enabledFeatures: Set<string>): boolean {
+  if (guard.kind === "feature") {
+    return evaluateFeatureExpression(guard.feature, enabledFeatures) === guard.implemented;
+  }
   if (guard.kind === "eq_field" || guard.kind === "ne_field") {
     const actual = fields[guard.field] ?? 0;
     const expected = fields[guard.otherField] ?? 0;
@@ -133,7 +138,7 @@ function missingFeatures(
   }
 
   for (const featureGuard of encoding.featureGuards) {
-    if (!featureGuard.all.every((check) => guardCheckMatches(fields, check))) {
+    if (!featureGuard.all.every((check) => guardCheckMatches(fields, check, enabledFeatures))) {
       continue;
     }
     if (!evaluateFeatureExpression(featureGuard.feature, enabledFeatures)) {
@@ -329,6 +334,7 @@ function isUnsupportedSystemInstructionOverlap(
 }
 
 export function decode(word: number, options: DecodeOptions = {}): DecodedInstruction {
+  word = normalizeWord(word);
   const enabledFeatures = new Set(options.features ?? []);
 
   for (const encoding of ENCODINGS) {
@@ -338,10 +344,22 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
 
     const fields = extractFields(word, encoding);
 
+    for (const guard of encoding.guards) {
+      if (guard.all.every((check) => guardCheckMatches(fields, check, enabledFeatures))) {
+        const nop = guard.outcome === "nop";
+        return {
+          status: nop ? "ok" : "undefined", word, encoding, mnemonic: encoding.mnemonic, fields,
+          ...(nop ? { operands: [], behavior: "nop" as const } : {}),
+          availability: hasFeatures(encoding, fields, enabledFeatures) ? "available" : "unavailable",
+          errors: nop ? undefined : ["decode guard failed"],
+        };
+      }
+    }
     if (!hasFeatures(encoding, fields, enabledFeatures)) {
       const missing = missingFeatures(encoding, fields, enabledFeatures);
       return {
         status: "undefined",
+        availability: "unavailable",
         word,
         encoding,
         mnemonic: encoding.mnemonic,
@@ -364,27 +382,25 @@ export function decode(word: number, options: DecodeOptions = {}): DecodedInstru
     if (isMultiplyAliasOverlap(encoding, fields)) {
       continue;
     }
-    for (const guard of encoding.guards) {
-      if (guard.all.every((check) => guardCheckMatches(fields, check))) {
-        return {
-          status: "undefined",
-          word,
-          encoding,
-          mnemonic: encoding.mnemonic,
-          fields,
-          errors: ["decode guard failed"],
-        };
-      }
-    }
-
     const decoded: DecodedInstruction = {
       status: "ok",
+      availability: "available",
+      behavior: "instruction",
       word,
       encoding,
       mnemonic: encoding.mnemonic,
       fields,
     };
-    decoded.operands = buildOperands(decoded);
+    try {
+      decoded.operands = buildOperands(decoded);
+    } catch (error) {
+      if (!(error instanceof OperandDecodeError)) throw error;
+      return {
+        ...decoded,
+        status: error.reason === "invalid" ? "undefined" : "unknown",
+        errors: [error.message],
+      };
+    }
     return decoded;
   }
 

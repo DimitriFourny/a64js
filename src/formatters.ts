@@ -2,13 +2,15 @@ import type {
   DecodedInstruction,
   GeneratedEncoding,
   Operand,
-  OperandAction,
-  OperandSchema,
   PredicateRegisterOperand,
   RegisterName,
   SystemRegisterOperand,
   VectorRegisterOperand,
 } from "./types.ts";
+import { OperandDecodeError } from "./operand-errors.ts";
+import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
+import { buildRegisteredSchema } from "./operand-schemas.ts";
+import { buildFamilyOperands } from "./operand-families.ts";
 
 const COND_NAMES = [
   "eq",
@@ -169,41 +171,6 @@ function gpReg(width: 32 | 64, index: number, zeroName: "zr" | "sp" = "zr"): Reg
   return reg(width, index, zeroName);
 }
 
-const OPERAND_SCHEMAS: Record<string, OperandSchema> = {
-  "gp-rd-rn-rm-sf": {
-    id: "gp-rd-rn-rm-sf",
-    actions: [
-      { kind: "gp-reg", field: "Rd", width: "sf", zeroName: "zr" },
-      { kind: "gp-reg", field: "Rn", width: "sf", zeroName: "zr" },
-      { kind: "gp-reg", field: "Rm", width: "sf", zeroName: "zr" },
-    ],
-  },
-};
-
-function widthFromSchemaAction(action: OperandAction, fields: Record<string, number>): 32 | 64 {
-  return action.width === "sf" ? widthFromSf(fields.sf) : action.width;
-}
-
-function buildSchemaActionOperand(action: OperandAction, fields: Record<string, number>): Operand {
-  switch (action.kind) {
-    case "gp-reg":
-      return gpReg(widthFromSchemaAction(action, fields), fields[action.field], action.zeroName);
-  }
-}
-
-function buildSchemaOperands(inst: DecodedInstruction, encoding: GeneratedEncoding): Operand[] | undefined {
-  const schemaId = encoding.operandSchemaId;
-  if (!schemaId) {
-    return undefined;
-  }
-  const schema = OPERAND_SCHEMAS[schemaId];
-  if (!schema) {
-    return undefined;
-  }
-  const fields = inst.fields!;
-  return schema.actions.map((action) => buildSchemaActionOperand(action, fields));
-}
-
 function sysReg(op0: number, op1: number, CRn: number, CRm: number, op2: number): SystemRegisterOperand {
   return { kind: "sysreg", op0, op1, CRn, CRm, op2 };
 }
@@ -221,7 +188,7 @@ function labelFromOffset(offset: bigint): Operand {
 }
 
 function labelFromPc(offset: bigint, pc: bigint, pageRelative = false): Operand {
-  return { kind: "label", offset, absolute: pc + offset, pageRelative };
+  return { kind: "label", offset, absolute: (pageRelative ? pc & ~0xfffn : pc) + offset, pageRelative };
 }
 
 function addSubImmediateOperands(inst: DecodedInstruction, encoding: GeneratedEncoding): Operand[] {
@@ -229,7 +196,7 @@ function addSubImmediateOperands(inst: DecodedInstruction, encoding: GeneratedEn
   const width = widthFromSf(fields.sf);
   const mnemonic = encoding.mnemonic;
   const shift = fields.sh === 1 ? 12 : 0;
-  const imm = BigInt(fields.imm12) << BigInt(shift);
+  const imm = BigInt(fields.imm12);
   const rdZero = mnemonic === "ADD" || mnemonic === "SUB" ? "sp" : "zr";
   const rnZero = "sp";
   const ops: Operand[] = [
@@ -471,7 +438,7 @@ function logicalImmediateOperands(inst: DecodedInstruction): Operand[] {
   const imm = decodeLogicalImmediate(fields, width);
 
   if (imm === null) {
-    return [];
+    throw new OperandDecodeError("invalid", "invalid logical immediate", inst.encoding!.fileName);
   }
 
   if (inst.encoding!.fileName === "tst_ands_log_imm.xml") {
@@ -516,12 +483,14 @@ function btiOperands(inst: DecodedInstruction): Operand[] {
     case 0b11:
       return [{ kind: "text", text: "jc" }];
     default:
-      return [];
+      return noOperands();
   }
 }
 
+const INTENTIONAL_ZERO_OPERANDS: Operand[] = [];
+
 function noOperands(): Operand[] {
-  return [];
+  return INTENTIONAL_ZERO_OPERANDS;
 }
 
 function setfOperands(inst: DecodedInstruction): Operand[] {
@@ -570,8 +539,8 @@ function branchOffsetOperand(inst: DecodedInstruction, field: "imm26" | "imm19" 
 function adrOperands(inst: DecodedInstruction, pageRelative: boolean): Operand[] {
   const fields = inst.fields!;
   const imm = (fields.immhi << 2) | fields.immlo;
-  const bits = pageRelative ? 33 : 21;
-  const offset = pageRelative ? signExtend(imm << 12, bits) : signExtend(imm, bits);
+  const signed = signExtend(imm, 21);
+  const offset = pageRelative ? signed << 12n : signed;
   return [gpReg(64, fields.Rd, "zr"), { kind: "label", offset, pageRelative }];
 }
 
@@ -597,7 +566,7 @@ function tbzOperands(inst: DecodedInstruction): Operand[] {
 function registerBranchOperands(inst: DecodedInstruction, omitDefaultRet = false): Operand[] {
   const fields = inst.fields!;
   if (omitDefaultRet && fields.Rn === 30) {
-    return [];
+    return noOperands();
   }
   return [gpReg(64, fields.Rn, "zr")];
 }
@@ -618,6 +587,9 @@ function authGenericOperands(inst: DecodedInstruction, mnemonic: string): Operan
   }
   if (fields.Rd !== undefined && (mnemonic.endsWith("ZA") || mnemonic.endsWith("ZB"))) {
     return [gpReg(64, fields.Rd, "zr")];
+  }
+  if (fields.Rd === undefined && fields.Rn === undefined) {
+    return noOperands();
   }
   return [];
 }
@@ -731,12 +703,12 @@ function barrierOperands(inst: DecodedInstruction): Operand[] {
 
 function clrexOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  return (fields.CRm ?? 0) === 15 ? [] : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
+  return (fields.CRm ?? 0) === 15 ? noOperands() : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
 }
 
 function isbOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  return (fields.CRm ?? 0) === 15 ? [] : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
+  return (fields.CRm ?? 0) === 15 ? noOperands() : [{ kind: "text", text: `#${fields.CRm ?? 0}` }];
 }
 
 function pstateFieldName(fields: Record<string, number>): string | null {
@@ -825,7 +797,7 @@ function smstartSmstopOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
   const CRm = fields.CRm ?? 0;
   if ((CRm & 0b0110) === 0b0110) {
-    return [];
+    return noOperands();
   }
   if ((CRm & 0b0110) === 0b0010) {
     return [{ kind: "text", text: "sm" }];
@@ -838,7 +810,7 @@ function smstartSmstopOperands(inst: DecodedInstruction): Operand[] {
 
 function gcsSyslAliasOperands(inst: DecodedInstruction): Operand[] {
   const fields = inst.fields!;
-  return fields.Rt === 31 ? [] : [gpReg(64, fields.Rt, "zr")];
+  return fields.Rt === 31 ? noOperands() : [gpReg(64, fields.Rt, "zr")];
 }
 
 function chkfeatOperands(): Operand[] {
@@ -1821,13 +1793,7 @@ function advsimdArrangementFromSizeQ(
   size: number | undefined,
   q: number | undefined,
 ): "8b" | "16b" | "4h" | "8h" | "2s" | "4s" | "1d" | "2d" {
-  const lane = advsimdLaneFromSize(size);
-  const count =
-    lane === "b" ? (q === 1 ? 16 : 8) :
-    lane === "h" ? (q === 1 ? 8 : 4) :
-    lane === "s" ? (q === 1 ? 4 : 2) :
-    q === 1 ? 2 : 1;
-  return `${count}${lane}`;
+  return (q === 1 ? ["16b", "8h", "4s", "2d"] as const : ["8b", "4h", "2s", "1d"] as const)[size ?? 0];
 }
 
 function advsimdScalarRegisterText(index: number, size: number | undefined): string {
@@ -3644,8 +3610,8 @@ function sveLongMultiplyLanes(inst: DecodedInstruction): { destination: "h" | "s
   }
 
   return {
-    destination: sveVectorLaneFromSize(size),
-    source: sveVectorLaneFromSize(size === undefined ? undefined : Math.max(0, size - 1)),
+    destination: sveVectorLaneFromSize(size) as "h" | "s" | "d",
+    source: sveVectorLaneFromSize(size === undefined ? undefined : Math.max(0, size - 1)) as "b" | "h" | "s",
   };
 }
 
@@ -4809,7 +4775,7 @@ function sveTableLookupOperands(inst: DecodedInstruction): Operand[] {
       vecReg(fields.Zm ?? 0, lane),
     ];
   }
-  return [vecReg(fields.Zd ?? 0, lane), sveSingleVectorListText(fields.Zn ?? 0, lane), vecReg(fields.Zm ?? 0, lane)];
+  return [vecReg(fields.Zd ?? 0, lane), { kind: "vector-group", registers: [vecReg(fields.Zn ?? 0, lane)], style: "list" }, vecReg(fields.Zm ?? 0, lane)];
 }
 
 function sveHistcntOperands(inst: DecodedInstruction): Operand[] {
@@ -5362,7 +5328,7 @@ function smeZaText(fields: Record<string, number>, count: 2 | 4, lane: "s" | "h"
   return `za.${lane}[w${8 + (fields.Rv ?? 0)}, ${fields.off3 ?? 0}, vgx${count}]`;
 }
 
-function smeDotVectorGroupText(start: number, count: 2 | 4, lane: "b" | "h" | "s" | "d"): string {
+function smeDotVectorGroupText(start: number, count: 1 | 2 | 4, lane: "b" | "h" | "s" | "d"): string {
   const regs = Array.from({ length: count }, (_, index) => `z${(start + index) & 31}.${lane}`);
   if (count === 4 && start <= 28) {
     return `{ ${regs[0]} - ${regs[3]} }`;
@@ -5390,7 +5356,7 @@ function smeMultiVectorArithmeticOperands(inst: DecodedInstruction): Operand[] {
   const count = smeDotGroupCount(inst.encoding!.className);
   const lane = smeMultiVectorArithmeticLane(inst);
   const group = { kind: "text", text: smeVectorGroupText((fields.Zdn ?? 0) * count, count, lane) } satisfies Operand;
-  const second = inst.encoding!.fileName.endsWith("_zzw.xml")
+  const second: Operand = inst.encoding!.fileName.endsWith("_zzw.xml")
     ? { kind: "text", text: smeVectorGroupText((fields.Zm ?? 0) * count, count, lane) }
     : { kind: "text", text: `z${fields.Zm ?? 0}.${lane}` };
   return [group, group, second];
@@ -6113,7 +6079,7 @@ function smeUnpackOperands(inst: DecodedInstruction): Operand[] {
   const count = smeDotGroupCount(inst.encoding!.className);
   const lane = sveVectorLaneFromSize(fields.size) as "h" | "s" | "d";
   const sourceLane = smeUnpackSourceLane(lane);
-  const source = count === 4
+  const source: Operand = count === 4
     ? { kind: "text", text: smeVectorGroupText((fields.Zn ?? 0) * 2, 2, sourceLane) }
     : vecReg(fields.Zn ?? 0, sourceLane);
   return [
@@ -6416,12 +6382,20 @@ function svePredicateAsCounterOperands(inst: DecodedInstruction): Operand[] {
 }
 
 export function buildOperands(inst: DecodedInstruction): Operand[] {
+  const operands = buildEncodingOperands(inst);
+  if (operands.length === 0 && operands !== INTENTIONAL_ZERO_OPERANDS) {
+    throw new OperandDecodeError("unsupported", `unsupported operands for ${inst.encoding?.encodingId ?? "missing encoding"}`, inst.encoding?.fileName);
+  }
+  return operands;
+}
+
+function buildEncodingOperands(inst: DecodedInstruction): Operand[] {
   const encoding = inst.encoding;
   if (!encoding || !inst.fields) {
-    return [];
+    throw new OperandDecodeError("invalid", "operand construction requires encoding and fields", encoding?.fileName);
   }
 
-  const schemaOperands = buildSchemaOperands(inst, encoding);
+  const schemaOperands = buildRegisteredSchema(inst) ?? buildFamilyOperands(inst);
   if (schemaOperands) {
     return schemaOperands;
   }
@@ -6827,6 +6801,10 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "sb.xml":
     case "eret.xml":
     case "drps.xml":
+    case "clrbhb.xml":
+    case "pacnbiasppc.xml":
+    case "pacnbibsppc.xml":
+    case "pacm.xml":
       return noOperands();
     case "rev.xml":
       return oneSourceIntegerOperands(inst);
@@ -8453,7 +8431,7 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
     case "paciasppc.xml":
     case "pacibsppc.xml":
     case "retasppcr_reg.xml":
-      return [];
+      return noOperands();
     case "autiasppc_imm.xml":
     case "autibsppc_imm.xml":
     case "retasppc_imm.xml":
@@ -8480,13 +8458,13 @@ export function buildOperands(inst: DecodedInstruction): Operand[] {
       return udfOperands(inst);
     case "xpac.xml":
       if (encoding.mnemonic === "XPACLRI") {
-        return [];
+        return noOperands();
       }
       return [gpReg(64, inst.fields.Rd, "zr")];
     case "rprfm_reg.xml":
       return rprfmOperands(inst);
     default:
-      return [];
+      throw new OperandDecodeError("unsupported", `unsupported operand family: ${encoding.fileName}`, encoding.fileName);
   }
 }
 
@@ -8528,6 +8506,49 @@ function formatFloatingImmediate(value: number): string {
   return `#${normalized.toFixed(8)}`;
 }
 
+function formatSimdRegister(register: SimdRegisterOperand): string {
+  if (register.scalar) {
+    return `${register.scalar}${register.index}`;
+  }
+  const arrangement = register.arrangement
+    ? `${register.arrangement.lanes}${register.arrangement.element}`
+    : register.element;
+  const lane = register.laneIndex === undefined ? "" : `[${register.laneIndex}]`;
+  return `v${register.index}.${arrangement}${lane}`;
+}
+
+function formatVectorGroup(group: VectorGroupOperand): string {
+  const registers = group.registers.map(formatVectorRegister);
+  return group.style === "range" && registers.length > 1
+    ? `{ ${registers[0]} - ${registers[registers.length - 1]} }`
+    : `{ ${registers.join(", ")} }`;
+}
+
+function formatMemoryOperand(memory: MemoryOperand): string {
+  const base = formatOperand(memory.base);
+  const mode = memory.mode ?? "offset";
+  let offset: string | undefined;
+  if (memory.offset?.kind === "imm") {
+    if (memory.offset.value !== 0n || mode !== "offset" || memory.modifier) {
+      offset = memory.immediateFormat === "hex"
+        ? formatSignedHexImmediate(memory.offset.value)
+        : formatSignedDecimalImmediate(memory.offset.value);
+    }
+  } else if (memory.offset) {
+    offset = formatOperand(memory.offset);
+  }
+  const modifier = memory.modifier
+    ? memory.modifier.amount === undefined
+      ? memory.modifier.kind
+      : `${memory.modifier.kind} #${memory.modifier.amount}`
+    : undefined;
+  const suffix = [offset, modifier].filter((part) => part !== undefined).join(", ");
+  if (mode === "post-index") {
+    return `[${base}], ${suffix}`;
+  }
+  return `[${base}${suffix ? `, ${suffix}` : ""}]${mode === "pre-index" ? "!" : ""}`;
+}
+
 export function formatOperand(operand: Operand): string {
   switch (operand.kind) {
     case "reg":
@@ -8556,6 +8577,12 @@ export function formatOperand(operand: Operand): string {
       return formatPredicateRegister(operand);
     case "fpimm":
       return formatFloatingImmediate(operand.value);
+    case "simd":
+      return formatSimdRegister(operand);
+    case "vector-group":
+      return formatVectorGroup(operand);
+    case "mem":
+      return formatMemoryOperand(operand);
     case "text":
       return operand.text;
   }

@@ -1,6 +1,10 @@
+import type { MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
+export type { ElementSize, MemoryModifier, MemoryOperand, SimdRegisterOperand, VectorGroupOperand } from "./operand-types.ts";
+
 export type FeatureName = string;
 
 export type GuardCheck =
+  | { kind: "feature"; feature: string; implemented: boolean }
   | {
       kind: "eq";
       field: string;
@@ -46,6 +50,7 @@ export type GuardCheck =
 
 export type Guard = {
   all: GuardCheck[];
+  outcome?: "undefined" | "nop";
 };
 
 export type GeneratedField = {
@@ -82,6 +87,10 @@ export type GeneratedEncoding = {
   className: string;
   fileName: string;
   operandSchemaId?: string;
+  canonicalEncodingId?: string;
+  canonicalFileName?: string;
+  guardDiagnostics?: string[];
+  bitCount?: number;
   mask: number;
   value: number;
   fields: GeneratedField[];
@@ -158,6 +167,9 @@ export type Operand =
   | VectorRegisterOperand
   | PredicateRegisterOperand
   | FloatingImmediateOperand
+  | SimdRegisterOperand
+  | VectorGroupOperand
+  | MemoryOperand
   | TextOperand;
 
 export type DecodeStatus = "ok" | "unknown" | "undefined";
@@ -170,18 +182,22 @@ export type DecodedInstruction = {
   fields?: Record<string, number>;
   operands?: Operand[];
   errors?: string[];
+  availability?: "available" | "unavailable";
+  behavior?: "instruction" | "nop";
 };
 
 export type DecodeOptions = {
   features?: Iterable<FeatureName>;
 };
 
-export type ProfileName = "arm-a64-canonical" | "apple-arm64e";
-
 export type FormatOptions = {
-  profile?: ProfileName;
   pc?: bigint | number;
   onUnknown?: "error" | "raw";
+};
+
+export type BlockOptions = DecodeOptions & FormatOptions & {
+  /** Reject incomplete words by default; ignore only when explicitly requested. */
+  trailingBytes?: "error" | "ignore";
 };
 
 export type DecodedLine = {

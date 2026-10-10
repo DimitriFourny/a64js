@@ -680,6 +680,10 @@ export function format(decoded: DecodedInstruction, options: FormatOptions = {})
     return formatUnknown(decoded.word);
   }
 
+  if (decoded.behavior === "nop") {
+    return "nop";
+  }
+
   const pc = options.pc === undefined ? undefined : BigInt(options.pc);
   const operands = resolvePcRelativeOperands(decoded.operands ?? [], pc);
 
