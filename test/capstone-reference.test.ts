@@ -5,10 +5,23 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { generateCapstoneFixtures } from "../tools/generate-capstone.ts";
+import { decode } from "../src/index.ts";
 import { loadCapstoneModulePaths, loadCapstoneReference } from "./helpers/capstone-corpus.ts";
+import { resolveCapstoneFeatures } from "./helpers/capstone-features.ts";
 import { SUPPORTED_CAPSTONE_CASES, UNSUPPORTED_CAPSTONE_CASES } from "./generated/capstone/index.generated.ts";
 
 const identity = (item: { sourceFile: string; caseIndex: number }) => `${item.sourceFile}#${item.caseIndex}`;
+
+test("reference execution profiles contain concrete enabled features and retain linked XML requirements", () => {
+  const reference = loadCapstoneReference();
+  assert.ok(reference.every((item) => item.features.every((feature) => /^FEAT_\w+$/.test(feature))));
+  const fp8 = reference.find((item) => item.sourceFile === "FP8_SVE2/fmlal.s.yaml" && item.caseIndex === 2)!;
+  assert.ok(fp8.features.includes("FEAT_SVE2"));
+  assert.ok(fp8.features.includes("FEAT_FP8FMA"));
+  assert.equal(decode(fp8.word, { features: fp8.features }).status, "ok");
+  assert.equal(decode(fp8.word, { features: fp8.features.filter((feature) => feature !== "FEAT_FP8FMA") }).status, "undefined");
+  assert.throws(() => resolveCapstoneFeatures(["FEAT_FUTURE_A || FEAT_FUTURE_B"]), /Unreviewed/);
+});
 
 test("support accounting preserves every immutable reference word and assembly string", () => {
   const reference = loadCapstoneReference(); // Verifies both input SHA-256 checksums before use.
