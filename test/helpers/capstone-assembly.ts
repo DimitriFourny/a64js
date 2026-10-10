@@ -44,7 +44,7 @@ function canonicalNumber(text: string): string {
   if (decimal) {
     const integerPart = BigInt(decimal[2]).toString();
     const fractionalPart = decimal[3].replace(/0+$/, "");
-    const sign = decimal[1] === "-" && (integerPart !== "0" || fractionalPart) ? "-" : "";
+    const sign = decimal[1] === "-" ? "-" : "";
     return `${sign}${integerPart}${fractionalPart ? `.${fractionalPart}` : ""}`;
   }
   return text;

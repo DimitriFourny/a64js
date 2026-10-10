@@ -45,6 +45,7 @@ test("omitted, extra, and wrong operands are rejected", () => {
     ["ld1w {z0.s,z1.s}, p0/z, [x0]", "ld1w {z0.s,z2.s}, p0/z, [x0]"],
     ["dcps1", "dcps1 #1"],
     ["fmov s0, #1.0", "fmov s0, #1.00000000000000001"],
+    ["fmov s0, #0.0", "fmov s0, #-0.0"],
   ]) assert.equal(compare(expected, actual).matches, false, `${expected} must differ from ${actual}`);
 });
 
