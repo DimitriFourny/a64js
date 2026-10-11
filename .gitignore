@@ -1,3 +1,5 @@
-# Generated runtime/test snapshots are committed.
+# Generated ISA tables are committed.
 node_modules/
-.codex-loop/
+
+# Downloaded Arm reference data stays local.
+/arm_ref/

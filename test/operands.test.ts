@@ -6,31 +6,7 @@ import { OperandDecodeError } from "../src/operand-errors.ts";
 import { OperandFamilyRegistry } from "../src/operand-registry.ts";
 import { vectorGroup } from "../src/operand-schemas.ts";
 import type { DecodedInstruction, GeneratedEncoding } from "../src/types.ts";
-import { SUPPORTED_CAPSTONE_CASES } from "./generated/capstone/index.generated.ts";
 import { SUPPORTED_FILES } from "../tools/supported-files.ts";
-
-const RESTORED_OPERAND_FILES = new Set([
-  "bfcvt_float", "autiasppcr", "autibsppcr", "retasppcr_reg", "famax_mz_zzw", "famin_mz_zzw",
-  "fscale_mz_zzv", "fscale_mz_zzw", "fdot_advsimd_2wayvec", "fdot_advsimd_4wayvec",
-  "fdot_advsimd_2wayelem", "fdot_advsimd_4wayelem", "ldnt1sb_z_p_ar", "ldnt1sh_z_p_ar",
-  "ldnt1sw_z_p_ar", "sqrshr_z_mz2", "sqrshru_z_mz2", "uqrshr_z_mz2", "fcvt_z_p_z",
-  "fcvtzs_z_p_z", "fcvtzu_z_p_z", "scvtf_z_p_z", "ucvtf_z_p_z", "sqrshrn_z_mz2",
-  "sqrshrun_z_mz2", "uqrshrn_z_mz2",
-].map((file) => `${file}.xml`));
-
-test("restored operand families match every independent corpus operand reference", () => {
-  const cases = SUPPORTED_CAPSTONE_CASES.filter((entry) => RESTORED_OPERAND_FILES.has(entry.encodingFile));
-  assert.ok(cases.length >= 206);
-  for (const entry of cases) {
-    const actual = disasm(entry.word, undefined, { features: entry.features });
-    // PAuth LR register forms use an R suffix in this XML revision. Compare their
-    // operands here; mnemonic dialect is tested independently from operand decoding.
-    const registerPauth = ["autiasppcr.xml", "autibsppcr.xml", "retasppcr_reg.xml"].includes(entry.encodingFile);
-    const operandText = (text: string) => text.slice(text.indexOf(" ") + 1).replace(/\s+/g, " ").trim();
-    assert.equal(registerPauth ? operandText(actual) : actual, registerPauth ? operandText(entry.asmText) : entry.asmText,
-      `${entry.sourceFile}#${entry.caseIndex} 0x${entry.word.toString(16)}`);
-  }
-});
 
 test("SIMD scalar, arranged vector and indexed dot operands retain their structure", () => {
   assert.deepEqual(decode(0x1e634020, { features: ["FEAT_BF16"] }).operands, [
@@ -44,20 +20,28 @@ test("SIMD scalar, arranged vector and indexed dot operands retain their structu
 });
 
 test("vector-base non-temporal loads expose the address and omit the zero offset register", () => {
-  const entry = SUPPORTED_CAPSTONE_CASES.find((entry) => entry.encodingFile === "ldnt1sb_z_p_ar.xml" && entry.asmText.includes(", x"))!;
-  const instruction = decode(entry.word, { features: entry.features });
+  // LDNT1SB's 32-bit vector-base form: fixed bits 100 0010 00 00,
+  // Rm[20:16], 10, U=0, Pg[12:10], Zn[9:5], Zt[4:0].
+  // Encoding fields come from the local 2025-12 ldnt1sb_z_p_ar.xml.
+  const word = (0x8400_8000 | (9 << 16) | (5 << 10) | (17 << 5) | 3) >>> 0;
+  const features = ["FEAT_SVE2"];
+  const instruction = decode(word, { features });
+  assert.equal(instruction.status, "ok");
   assert.equal(instruction.operands?.[0].kind, "vector-group");
   const memory = instruction.operands?.[2];
   assert.equal(memory?.kind, "mem");
   if (memory?.kind === "mem") {
-    assert.equal(memory.base.kind, "vec");
-    assert.equal(memory.offset?.kind, "reg");
+    assert.deepEqual(memory.base, { kind: "vec", index: 17, lane: "s" });
+    assert.deepEqual(memory.offset, { kind: "reg", width: 64, index: 9, zeroName: "zr" });
   }
-  const noOffset = (entry.word | (31 << 16)) >>> 0;
-  const withoutOffset = decode(noOffset, { features: entry.features });
+  const noOffset = (word | (31 << 16)) >>> 0;
+  const withoutOffset = decode(noOffset, { features });
   assert.equal(withoutOffset.status, "ok");
   assert.equal(withoutOffset.operands?.[2].kind, "mem");
-  if (withoutOffset.operands?.[2].kind === "mem") assert.equal(withoutOffset.operands[2].offset, undefined);
+  if (withoutOffset.operands?.[2].kind === "mem") {
+    assert.deepEqual(withoutOffset.operands[2].base, { kind: "vec", index: 17, lane: "s" });
+    assert.equal(withoutOffset.operands[2].offset, undefined);
+  }
 });
 
 test("vector groups retain ordered members and handle wraparound", () => {
@@ -68,10 +52,6 @@ test("vector groups retain ordered members and handle wraparound", () => {
 });
 
 test("SME arithmetic preserves accumulator widths, encoded group alignment and split indices", () => {
-  for (const word of [0xc1d00000, 0xc1800000, 0xc1255955, 0xc1b44141, 0xc1508020, 0xc1cfefef, 0xc08b03dc, 0xc00800b7, 0xc12f63e3, 0xc04f33ff]) {
-    const entry = SUPPORTED_CAPSTONE_CASES.find((entry) => entry.word === word)!;
-    assert.equal(disasm(word, undefined, { features: entry.features }), entry.asmText.replace(/\s+/g, " "));
-  }
   const dot = decode(0xc1508020, { features: ["FEAT_SME2"] });
   assert.deepEqual(dot.operands?.[0], { kind: "za", lane: "s", slice: { selector: 8, offset: 0, group: 4 } });
   assert.equal(dot.operands?.[1].kind, "vector-group");

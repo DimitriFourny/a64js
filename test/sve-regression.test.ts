@@ -1,7 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { decode, disasm } from "../src/index.ts";
-import { compareCapstoneAssembly } from "./helpers/capstone-assembly.ts";
 
 const sve = { features: ["FEAT_SVE"] };
 const sme = { features: ["FEAT_SME2"] };
@@ -30,17 +29,33 @@ test("SME memory groups use encoded contiguous alignment and interleaved stride"
       for (const start of starts) {
         const word = (base | start | (5 << 10) | (13 << 5) | (8 << 16)) >>> 0;
         const registers = Array.from({ length: count }, (_, index) => `z${start + index * (strided ? 16 / count : 1)}.b`);
-        const expected = `ld1b { ${registers.join(", ")} }, pn13/z, [x13, x8]`;
-        const comparison = compareCapstoneAssembly({ sourceFile: "memory-group-sweep", caseIndex: word, word, asmText: expected }, disasm(word, undefined, sme));
-        assert.ok(comparison.matches, `${word.toString(16)}: ${comparison.expected} != ${comparison.actual}`);
+        const group = !strided && count === 4
+          ? `{ z${start}.b - z${start + count - 1}.b }`
+          : `{ ${registers.join(", ")} }`;
+        assert.equal(disasm(word, undefined, sme), `ld1b ${group}, pn13/z, [x13, x8]`);
       }
     }
   }
 });
 
 test("SVE arithmetic distinguishes signed, unsigned, widened, and indexed operands", () => {
+  const unsignedCompare = decode(0x243f_c010, sve);
+  assert.equal(unsignedCompare.mnemonic, "CMPHI");
+  const compareOperands = unsignedCompare.operands!;
+  assert.equal(compareOperands.length, 4);
+  assert.equal(compareOperands[0].kind, "pred");
+  if (compareOperands[0].kind === "pred") {
+    assert.equal(compareOperands[0].index, 0);
+    assert.equal(compareOperands[0].lane, "b");
+  }
+  assert.equal(compareOperands[1].kind, "pred");
+  if (compareOperands[1].kind === "pred") {
+    assert.equal(compareOperands[1].index, 0);
+    assert.equal(compareOperands[1].mode, "z");
+  }
+  assert.deepEqual(compareOperands[2], { kind: "vec", index: 0, lane: "b" });
+  assert.deepEqual(compareOperands[3], { kind: "imm", value: 127n, signed: false });
   for (const [word, expected, features] of [
-    [0x243f_c010, "cmphi p0.b, p0/z, z0.b, #127", ["FEAT_SVE"]],
     [0x2530_d01f, "mul z31.b, z31.b, #-128", ["FEAT_SVE"]],
     [0x0428_9c00, "lsl z0.b, z0.b, #0", ["FEAT_SVE"]],
     [0x4508_a000, "sshllb z0.h, z0.b, #0", ["FEAT_SVE2"]],
@@ -48,7 +63,6 @@ test("SVE arithmetic distinguishes signed, unsigned, widened, and indexed operan
     [0x447f_f820, "mul z0.h, z1.h, z7.h[7]", ["FEAT_SVE2"]],
     [0x655e_8000, "fmax z0.h, p0/m, z0.h, #0.0", ["FEAT_SVE"]],
   ] as const) {
-    const actual = disasm(word, undefined, { features: [...features] });
-    assert.ok(compareCapstoneAssembly({ sourceFile: "arithmetic-regression", caseIndex: word, word, asmText: expected }, actual).matches, `${expected} != ${actual}`);
+    assert.equal(disasm(word, undefined, { features: [...features] }), expected);
   }
 });

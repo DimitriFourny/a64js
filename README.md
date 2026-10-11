@@ -1,6 +1,6 @@
 # a64js
 
-A TypeScript AArch64 decoder and disassembler, with encoding data generated from the bundled Arm XML reference.
+A TypeScript AArch64 decoder and disassembler, with encoding data generated from Arm's XML reference. Generated tables are committed; the reference itself is downloaded separately for development.
 
 - `decode()` returns encoding identity, fields, typed operands, and target availability.
 - `disasm()` and `format()` render assembly, resolving PC-relative operands when supplied a PC.
@@ -9,19 +9,16 @@ A TypeScript AArch64 decoder and disassembler, with encoding data generated from
 
 The generated table currently contains **3,507 encodings from 1,908 XML files**. This is a recognition inventory, not a claim of exhaustive architectural correctness.
 
-## Development
+## Getting started
 
-Use Bun 1.4.3, or Node 24+ for executing the TypeScript library and tests. Bun is used for dependency installation and development scripts.
+The repository is currently a source-only project, not a published npm package. Import [src/index.ts](src/index.ts) directly; there is no JavaScript build step or runtime dependency. The `private` flag in `package.json` prevents accidental npm publication, not public hosting of the repository.
+
+Use Bun 1.4.3 for dependency installation and development scripts. The TypeScript library, CLI, and tests also run directly on Node 24+.
 
 ```sh
 bun install --frozen-lockfile
-bun run check       # TypeScript, tests, independent corpus audit
-bun run generate    # rebuild encoding tables and corpus support accounting
-bun run bench       # repeatable warm decoding benchmark
-node --test test/*.test.ts
+bun src/cli.ts --disasm 0xd65f03c0   # ret
 ```
-
-CI checks both runtimes and rejects generated-file drift. Generated files are committed; edit their source definitions rather than the snapshots.
 
 ## Usage
 
@@ -33,11 +30,14 @@ console.log(disasm(0x10000020, 0x1000n));    // adr x0, 0x1004
 console.log(disasm(0x90000000, 0x1234n));    // adrp x0, 0x1000
 
 const decodeWord = createDecoder({ features: ["FEAT_PAuth"] });
+console.log(decode(0xd65f03c0).status);      // ok
+
 const decoded = decodeWord(0xd503233f);
 console.log(decoded.mnemonic);              // PACIASP
 console.log(format(decoded));               // paciasp
 
 const lines = disasmBlock(new Uint8Array([0xc0, 0x03, 0x5f, 0xd6]), 0x1000n);
+console.log(lines[0].text);                  // ret
 ```
 
 Instruction words accept unsigned 32-bit integers and signed 32-bit results of JavaScript bitwise operations. Other numbers are rejected instead of silently truncated. Use `bigint` for addresses outside JavaScript's safe-integer range.
@@ -45,6 +45,27 @@ Instruction words accept unsigned 32-bit integers and signed 32-bit results of J
 For `disasm(word, pc, options)`, the positional PC takes precedence over `options.pc`. ADRP aligns the PC to its page before applying the signed page offset.
 
 Blocks with trailing incomplete words throw by default. Opt into truncation with `{ trailingBytes: "ignore" }`. Feature iterables, including generators, are consumed once per block or prepared decoder.
+
+### API reference
+
+All functions and public types are exported by [src/index.ts](src/index.ts). Full result and option definitions are in [src/types.ts](src/types.ts).
+
+| Function | Result | Purpose |
+| --- | --- | --- |
+| `decode(word, options?)` | `DecodedInstruction` | Recognize a word, extract fields and operands, and check target features. |
+| `createDecoder(options?)` | `(word: number) => DecodedInstruction` | Snapshot target features for repeated decoding. |
+| `format(decoded, options?)` | `string` | Render an already decoded instruction. |
+| `disasm(word, pc?, options?)` | `string` | Decode and format one word. |
+| `disasmBlock(bytes, basePc, options?)` | `DecodedLine[]` | Decode little-endian words at successive four-byte addresses. |
+
+A `DecodedLine` contains `address` (`bigint`), `word` (unsigned 32-bit number), `text`, and `decoded`. A `DecodedInstruction` contains `status` and `word`; recognized instructions also expose encoding metadata, fields, and, when implemented, operands. Inspect `errors` for decode diagnostics rather than relying on an assembly string alone.
+
+| Option | Default | Accepted by |
+| --- | --- | --- |
+| `features: Iterable<string>` | No optional features enabled | `decode`, `createDecoder`, `disasm`, `disasmBlock` |
+| `pc: bigint \| number` | Relative labels remain relative | `format`, `disasm`; block addresses are supplied by `basePc` |
+| `onUnknown: "raw" \| "error"` | `"raw"` | `format`, `disasm`, `disasmBlock` |
+| `trailingBytes: "error" \| "ignore"` | `"error"` | `disasmBlock` |
 
 ## Recognition, availability, and behavior
 
@@ -60,7 +81,7 @@ For example, without `FEAT_BTI`, a BTI encoding retains its recognized mnemonic 
 
 Pass atomic architectural feature names such as `FEAT_SVE` and `FEAT_FP16`, not Boolean expression strings. Features are explicit; there is no implicit target-CPU feature database.
 
-Unknown and invalid instructions format as `.inst 0x????????`. Set `onUnknown: "error"` to throw with the decode diagnostic. The previously unused `profile` option has been removed; Apple proprietary instruction dialects are outside the supported formatting contract.
+Unknown and invalid instructions format as `.inst 0x????????`. Set `onUnknown: "error"` to throw with the decode diagnostic. Named system registers use encoded `S<op0>_<op1>_C<CRn>_C<CRm>_<op2>` tuples rather than a symbolic-name database. Apple proprietary instruction dialects are outside the supported formatting contract.
 
 ## Architecture
 
@@ -73,23 +94,11 @@ Unknown and invalid instructions format as `.inst 0x????????`. Set `onUnknown: "
 
 Implementation-dependent conditions which cannot be evaluated without CPU state are exposed in generated `guardDiagnostics`, with their assumptions. This is a targeted guard compiler, not a complete Arm pseudocode interpreter.
 
-## Independent validation
+## Validation
 
-The immutable reference lives in [test/reference/capstone](test/reference/capstone), separately from [generated support accounting](test/generated/capstone). Its manifest records checksums, source identities, and the original repository commit. The original upstream Capstone revision was not recorded; the manifest explicitly preserves that uncertainty.
+The local tests check assembly examples and operand structure, reserved encodings, immediate boundaries, target-feature behavior, XML parser failures, and equivalence of generated dispatch to exhaustive matching. XML-dependent tests use the separately downloaded Arm reference.
 
-The audit currently accounts for all **34,621** reference cases:
-
-- **31,190** match assembly, including operands, after narrow documented syntax and alias equivalences.
-- **3,425** use named system registers whose name mapping is outside scope. Their encoded register tuple and GP operands are still checked.
-- **6** Apple proprietary dialect cases overlap standard Arm encodings and are explicitly excluded.
-
-There are no remaining corpus assembly mismatches. These are finite reference examples, not coverage of all possible instruction words. Additional tests exercise reserved-bit combinations, immediate boundaries, feature conditions, operand structure, parser failure modes, and dispatch equivalence.
-
-```sh
-bun tools/audit-capstone.ts --check --json=/tmp/a64js-audit.json
-```
-
-The original imported feature-context expressions are retained with checksums. A separately reviewed profile map supplies concrete atomic features for executing each reference test. Corpus normalization never derives expected assembly from this decoder's current output.
+There is no bundled external assembly corpus or differential audit. Passing tests and recognition counts are not a claim of complete architecture conformance.
 
 ## CLI
 
@@ -97,9 +106,12 @@ The original imported feature-context expressions are retained with checksums. A
 bun src/cli.ts --disasm 0xd65f03c0
 bun src/cli.ts --disasm 0x10000020 --pc 0x1000
 bun src/cli.ts --disasm 0xd503233f --feature FEAT_PAuth
+node src/cli.ts --disasm 0xd65f03c0
 ```
 
 `--feature` is repeatable. `--help` prints usage.
+
+The CLI accepts decimal or `0x`-prefixed hexadecimal words and addresses. Words must be unsigned 32-bit values. Invalid arguments print a diagnostic and usage, then exit with status 1.
 
 ## Source layout
 
@@ -111,4 +123,56 @@ bun src/cli.ts --disasm 0xd503233f --feature FEAT_PAuth
 - [src/formatters.ts](src/formatters.ts), [src/format.ts](src/format.ts): operand dispatch and assembly rendering
 - [tools/encodings.ts](tools/encodings.ts), [tools/guards.ts](tools/guards.ts), [tools/decode-guards.ts](tools/decode-guards.ts): XML compilation
 - [tools/generate.ts](tools/generate.ts): generated runtime tables
-- [tools/audit-capstone.ts](tools/audit-capstone.ts): independent correctness and coverage report
+
+## Development workflow
+
+Validation is local; this repository does not run a GitHub Actions workflow.
+
+### Obtain the Arm XML reference
+
+The full test suite and `bun run generate` require the **2025-12 A-profile A64 XML release**. The library, CLI, and benchmark use committed generated tables and do not require the XML download.
+
+Download [the 2025-12 archive directly from Arm](https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-A64-ISA/ISA_A64/ISA_A64_xml_A_profile-2025-12.tar.gz). From the repository root:
+
+```sh
+mkdir -p arm_ref
+curl -fL --output arm_ref/ISA_A64_xml_A_profile-2025-12.tar.gz \
+  https://developer.arm.com/-/cdn-downloads/permalink/Exploration-Tools-A64-ISA/ISA_A64/ISA_A64_xml_A_profile-2025-12.tar.gz
+tar -xzf arm_ref/ISA_A64_xml_A_profile-2025-12.tar.gz -C arm_ref
+```
+
+The archive already contains the versioned directory. After extraction, `arm_ref/ISA_A64_xml_A_profile-2025-12/adc.xml` must exist; do not add an extra directory level. The entire `arm_ref/` directory, including archives, XML, HTML, and release notes, is ignored by Git. Keep it local and do not force-add it.
+
+The release is pinned in [tools/supported-files.ts](tools/supported-files.ts). Using a newer Arm release is a separate update to generation inputs, not a substitute for this setup.
+
+### Local checks
+
+```sh
+bun run check       # TypeScript and Bun tests
+node --test test/*.test.ts
+bun run generate    # rebuild encoding tables
+git diff --exit-code -- src/generated
+bun run bench       # repeatable curated-sample decoding benchmark
+```
+
+The benchmark uses a fixed 16-word instruction sample and explicit target features. It warms up for 10,000 passes, then times 250,000 passes (4,000,000 decodes) with a prepared decoder. Timing includes field, guard, and operand decoding, not assembly formatting or setup. It is a performance workload, not correctness evidence; compare runs using the same sample, features, and runtime.
+
+Generated files are committed. Generation uses `arm_ref/ISA_A64_xml_A_profile-2025-12`, selected in [tools/supported-files.ts](tools/supported-files.ts). Edit source definitions rather than generated snapshots. After changing generation inputs, review and commit the regenerated files; rerun generation and the diff check to verify reproducibility, then rerun `bun run check` and the Node tests against the new snapshots.
+
+For instruction changes:
+
+1. Implement an operand family/schema or a reviewed specialized handler before adding its XML file to recognition scope.
+2. Use independently sourced expected assembly and relevant reserved-bit/boundary cases. Never derive expected assembly from the decoder under test.
+3. Keep alias selection separate from canonical validity; do not compensate for missing decode guards in formatting.
+4. Reject unknown guard syntax during generation. Implementation-state assumptions need a documented diagnostic or exact override.
+5. Prefer structured operands for common families; preserve assembly behavior when replacing specialized text operands.
+6. Record the upstream source, version/commit, applicable license, and import command for new reference evidence. Keep recognition, operand implementation, and verified assembly separate.
+
+Candidate future work is tracked in [TODO.md](TODO.md); it is not an automated task queue.
+
+## License
+
+The project code is [MIT licensed](LICENSE). You may use, modify, redistribute, or sell it, provided you retain the copyright and license notice. It is provided without warranty.
+
+Arm's XML and HTML reference files are downloaded separately and excluded from the current repository tree. Follow the terms included with the Arm download; a project-code license does not cover third-party material.
+

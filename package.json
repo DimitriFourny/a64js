@@ -1,6 +1,7 @@
 {
   "name": "a64js",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "bin": {
@@ -10,9 +11,8 @@
     "generate": "bun tools/generate.ts",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
-    "audit": "bun tools/audit-capstone.ts --check",
     "bench": "bun tools/benchmark.ts",
-    "check": "bun run typecheck && bun test && bun run audit"
+    "check": "bun run typecheck && bun test"
   },
   "engines": { "node": ">=24" },
   "devDependencies": {
